@@ -24,6 +24,7 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
+        
         "darkPurple": "#5E165B",
         "bgLightPeach": "#FFFDF7",
         "bgGray5": "#F0F0F2",
@@ -34,8 +35,6 @@ const config: Config = {
         "gray80":"#323538",
         "gray50":"#6A6D75",
         "footerGray":"#DFE0E580",
-        "bgSlatePurple":"#F0F0F21A",
-        
       },
       fontFamily: {
         inter: "var(--inter)",

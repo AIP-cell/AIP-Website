@@ -1,7 +1,8 @@
 import OvalPurple from "@/components/ovals/OvalPurple";
 import Image from "next/image";
 import React from "react";
-import Bg from "../../../public/svg/membersBg.svg"
+import Bg from "../../../public/svg/membersBg.svg";
+import OvalPurpleSvg from "@/components/svg/OvalPurpleSvg";
 
 const Founders = () => {
   return (
@@ -12,6 +13,7 @@ const Founders = () => {
           alt=""
           className="object-cover absolute inset-x-0 -bottom-[5rem]"
         />
+        {/* <OvalPurpleSvg className="-top-[4rem] right-[11.85rem]"/> */}
         <OvalPurple
           title="4"
           desc="Core Founders"
@@ -31,8 +33,7 @@ const Founders = () => {
         <h2 className="text-h2Heading2 w-[38rem] text-gray50 leading-[52.8px] pl-[7.8rem]">
           Accelerate Indian Philanthropy is a peer network set up
           <i className="text-textPurple">
-            {" "}
-            by philanthropists,for philanthropists{" "}
+            by philanthropists,for philanthropists
           </i>
           to support their giving efforts.
         </h2>
