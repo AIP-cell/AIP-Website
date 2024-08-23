@@ -2,16 +2,14 @@ import React from 'react'
 import InputField from './InputField'
 import SelectField from './SelectField'
 
-
-
-
 const Form = () => {
 
   // const options =[1,2,3];
   return (
-    <form className="">
+    <form className="flex flex-col gap-7">
 
     <InputField type="text" label="Name" placeholder='John Doe' />
+
     <InputField type="email" label=" Email ID" placeholder='john@xyz.com' />
 
 
@@ -21,11 +19,12 @@ const Form = () => {
     <SelectField label="I want to get in touch with" placeholder='Philanthropist' />
 
     <div>
-      <label className="text-[.875rem]  font-inter leading-[1.225rem] text-gray80">
+      <label 
+         className="font-inter leading-[1.225rem] text-sm font-semibold text-gray80">
         Message
       </label>
       <textarea
-        className="w-full border border-gray-300 rounded-md text-gray80 font-inter"
+        className="w-full border border-gray-300 rounded-md text-gray80 font-inter h-28"
       />
     </div> 
 

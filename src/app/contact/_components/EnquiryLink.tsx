@@ -1,0 +1,25 @@
+import React from 'react'
+import Image, { StaticImageData } from 'next/image';
+
+type Props={
+    alt:string,
+    name?: string;
+    image:StaticImageData,
+    data:string|number,
+}
+
+const EnquiryLink =  ({ image,  alt ,data,name}:Props) => {
+  return (
+    <div className="flex items-center justify-content-center pt-3">
+      <div className='bg-blue-200 w-[2.5rem] h-[2.5rem] rounded-full flex items-center justify-center me-1'>
+    <Image src={image} className='w-[1.125rem] h-[0.875rem]' alt={alt} />
+      </div>
+<div>
+{name && <p className="font-inter leading-[1.4rem] font-bold mb-1 text-gray80">{name}</p>} 
+    <p className="font-inter leading-[1.4rem] text-gray80">{data}</p>
+</div>
+  </div>
+  )
+}
+
+export default EnquiryLink

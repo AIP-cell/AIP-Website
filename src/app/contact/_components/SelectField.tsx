@@ -6,9 +6,9 @@ type Props={
 }
 const SelectField = ({ label, placeholder}:Props ) => {
   return (
-    <> 
+    <div> 
     <label
-      className="block text-[.875rem] font-inter leading-[1.225rem] text-gray-800"
+       className="font-inter leading-[1.225rem] text-sm font-semibold text-gray80"
     >
       {label}
     </label>
@@ -25,7 +25,7 @@ const SelectField = ({ label, placeholder}:Props ) => {
         </option>
       ))} */}
     </select>
-    </>
+    </div>
   )
 }
 
