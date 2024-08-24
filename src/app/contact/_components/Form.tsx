@@ -33,7 +33,7 @@ const Form = () => {
       type="submit"
       className="text-white leading-[1.225rem] bg-darkPurple w-[8.0625rem] 
         h-[2.75rem]
-        rounded-[1.5rem]" 
+        rounded-[1.5rem] cursor-pointer" 
     >
       Send Email
     </button>
