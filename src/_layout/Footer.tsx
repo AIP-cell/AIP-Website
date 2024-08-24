@@ -42,7 +42,7 @@ const Footer = () => {
         {/* <div className="tw-absolute   "> */}
         {/* <Image src={FooterBg} alt="" fill className="tw-inset-x-0 tw-object-cover" /> */}
         <Wave
-          fill="purpleToBlue"
+          fill="url(#gradient)"
           paused={false}
           className="tw-inset-0 tw-object-cover tw-absolute "
           options={{

@@ -15,19 +15,25 @@ const Members = () => {
         />
         {/* <OvalPurpleSvg className="-top-[4rem] right-[11.85rem]"/> */}
         <OvalPurple
+          textClass1="tw-text-h3Heading3"
+          textClass2="tw-text-h9BodyCopy4"
           title="4"
           desc="Core Founders"
-          absoluteClass=" tw--top-[4rem] tw-right-[11.85rem]"
+          Class=" tw-absolute tw--top-[4rem] tw-right-[11.85rem]"
         />
         <OvalPurple
+          textClass1="tw-text-h3Heading3"
+          textClass2="tw-text-h9BodyCopy4"
           title="31"
           desc="Founders"
-          absoluteClass=" tw-top-[15.5rem] tw-right-[6.48rem]"
+          Class=" tw-absolute tw-top-[15.5rem] tw-right-[6.48rem]"
         />
         <OvalPurple
+          textClass1="tw-text-h3Heading3"
+          textClass2="tw-text-h9BodyCopy4"
           title="150 +"
           desc="Members"
-          absoluteClass=" tw-top-[20rem] tw-right-[26rem]"
+          Class=" tw-absolute tw-top-[20rem] tw-right-[26rem]"
         />
         {/* <div className=""> */}
         <h2 className="tw-text-h2Heading2 tw-w-[38rem] tw-text-gray50 tw-leading-[52.8px] tw-pl-[7.8rem]">

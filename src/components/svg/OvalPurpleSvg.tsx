@@ -9,7 +9,7 @@ const OvalPurpleSvg = (props: SVGProps<SVGSVGElement>) => (
         // height={191}
         fill="none"
         {...props}
-        className="tk-blob absolute inset-0"
+        className=" absolute inset-0"
       >
         <path
           fill="url(#a)"
