@@ -7,15 +7,15 @@ import BlueCurveSvg from "../../../public/svg/blueBgCurve.svg";
 import Image from "next/image";
 const Founder = () => {
   return (
-    <div className=" container mx-auto relative h-[110rem]">
-      <Image src={FounderBg} alt="" className="absolute -top-[18rem]" />
-      <Image src={PurPleCurveSvg} alt="" className="absolute top-[18rem] right-0" />
-      <Image src={BlueCurveSvg} alt="" className="absolute bottom-[5rem] left-0" />
-      <div className="px-[7.8rem]">
-        <h3 className="text-h2Heading2 text-white/80 pt-[10.3rem] relative font-playFair">
-          From our <i className="text-white">Core-Founders</i>
+    <div className=" container tw-mx-auto tw-relative tw-h-[110rem]">
+      <Image src={FounderBg} alt="" className="tw-absolute tw--top-[18rem]" />
+      <Image src={PurPleCurveSvg} alt="" className="tw-absolute tw-top-[18rem] tw-right-0" />
+      <Image src={BlueCurveSvg} alt="" className="tw-absolute tw-bottom-[5rem] tw-left-0" />
+      <div className="tw-px-[7.8rem]">
+        <h3 className="tw-text-h2Heading2 tw-text-white/80 tw-pt-[10.3rem] tw-relative tw-font-playFair">
+          From our <i className="tw-text-white">Core-Founders</i>
         </h3>
-        <div className="relative">
+        <div className="tw-relative">
           <Image src={ASvg} alt="" />
           {/* <div className="relative w-[18.4rem] h-[21.5rem] ">
             <Image

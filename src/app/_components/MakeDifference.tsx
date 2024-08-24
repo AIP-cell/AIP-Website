@@ -14,14 +14,14 @@ const dataS = [
 ];
 const MakeDifference = () => {
   return (
-    <div className="container mx-auto overflow-hidden pt-[13rem] flex flex-col items-center justify-center">
-      <h3 className="text-h2Heading2 text-gray80 leading-[52.8px] font-playFair">
+    <div className="container tw-mx-auto tw-overflow-hidden tw-pt-[13rem] tw-flex tw-flex-col tw-items-center tw-justify-center">
+      <h3 className="tw-text-h2Heading2 tw-text-gray80 tw-leading-[52.8px] tw-font-playFair">
         How we are trying to
       </h3>
-      <i className="text-h2Heading2 text-textPurple leading-[52.8px] font-playFair">
+      <i className="tw-text-h2Heading2 tw-text-textPurple tw-leading-[52.8px] tw-font-playFair">
         make a difference
       </i>
-      <div className="grid grid-cols-2 gap-[1.25rem] px-[7.8rem] pt-[5rem]">
+      <div className="tw-grid tw-grid-cols-2 tw-gap-[1.25rem] tw-px-[7.8rem] tw-pt-[5rem]">
         {dataS.map((items, i) => (
           <ImgTitleDescHor
             key={i}

@@ -1,61 +1,87 @@
-import React from 'react'
-import Form from './_components/Form'
-import Link from 'next/link'
+import React from "react";
+import Form from "./_components/Form";
+import Link from "next/link";
 import MessageSvg from "@public/svg/message.svg";
 import PhoneSvg from "@public/svg/phone.svg";
-import EnquiryLink from './_components/EnquiryLink';
+import EnquiryLink from "./_components/EnquiryLink";
 
 const page = () => {
   return (
+    <div className="container tw-mx-auto tw-grid md:tw-grid-cols-2">
+      <div>
+        <div className="tw-flex tw-flex-col tw-gap-14 tw-pr-[6.625rem]">
+          <div>
+            <p className="tw-font-playFair tw-text-h3Heading3 tw-leading-[3.3rem]">
+              Get in Touch
+            </p>
+            <p className="tw-font-inter tw-leading-[1.4rem] tw-mt-5 tw-text-gray60">
+              Please fill the form below to connect with a specific office or
+              department that can best meet your needs. Need to talk to our
+              team, please use the below information to connect with them.
+            </p>
+          </div>
 
-    <div className="container mx-auto grid md:grid-cols-2">
-
-     <div>
-     <div className="flex flex-col gap-14 pr-[6.625rem]">
-        <div >
-        <p className="font-playFair text-h3Heading3 leading-[3.3rem]" >Get in Touch</p>
-        <p className="font-inter leading-[1.4rem] mt-5 text-gray60">
-          Please fill the form below to connect with a specific office or department that can best meet your needs. Need to talk to our team, please use the below information to connect with them.
-        </p>
+          <div className="tw-flex tw-flex-col tw-gap-5">
+            <h2 className="tw-italic tw-font-playFair tw-text-h4Heading4 tw-leading-[2.6rem] tw-text-gray50">
+              Reach us at
+            </h2>
+            <p className="tw-font-inter tw-leading-[1.4rem] tw-flex tw-flex-col tw-text-midGray">
+              <span className="tw-font-bold">
+                {" "}
+                Foundation For Accelerating Philanthropy
+              </span>
+              Ananda, 242 Okhla Industrial Estate Phase III
+              <br />
+              New Delhi, India 110020
+            </p>
+            <Link
+              className="tw-font-inter tw-bg-bgGray5 tw-px-5 tw-pt-3 tw-pb-3 tw-w-[13.8rem] tw-h-[2.8rem] tw-rounded-[3.125rem] tw-leading-[1.4rem] tw-text-gray80"
+              href=""
+            >
+              Open Link on Maps
+            </Link>
+          </div>
         </div>
 
-        <div className="flex flex-col gap-5">
-          <h2 className="italic font-playFair text-h4Heading4 leading-[2.6rem] text-gray50">Reach us at</h2>
-          <p className="font-inter leading-[1.4rem] flex flex-col text-midGray">
-          <span className="font-bold" > Foundation For Accelerating Philanthropy</span>
-            Ananda, 242 Okhla Industrial Estate Phase III<br />
-            New Delhi, India 110020
+        <div className="tw-bg-bgGray5 tw-p-[2rem] tw-rounded-[1.25rem] tw-mt-14 tw-w-[22.5rem] tw-h-[29.25 rem]">
+          <p className="tw-font-playFair tw-italic tw-font-medium tw-text-gray50 tw-text-xl tw-tracking-[.02rem]">
+            General Inquiry
           </p>
-          <Link className="font-inter bg-bgGray5 px-5 pt-3 pb-3 w-[221px] h-[46px] rounded-[3.125rem] leading-[1.4rem] text-gray80" 
-            href=""
-          >
-            Open Link on Maps
-          </Link>
+
+          <EnquiryLink
+            image={MessageSvg}
+            alt="email"
+            data="info@indianphilanthropy.org"
+          />
+          <EnquiryLink image={PhoneSvg} alt="phone" data="+91 9876543210" />
+          <div className="tw-h-px tw-bg-footerGray tw-mt-5 tw-mb-5"></div>
+
+          <p className="tw-font-playFair tw-italic tw-font-medium tw-text-gray50 tw-text-xl tw-tracking-[.02rem]">
+            Network Team
+          </p>
+          <EnquiryLink
+            image={MessageSvg}
+            alt="email"
+            data="sabhyata@indianphilanthropy.org"
+            name="Sabhayata Prakash"
+          />
+          <div className="tw-h-px tw-bg-footerGray tw-mt-5 tw-mb-5"></div>
+
+          <p className="tw-font-playFair tw-italic tw-font-medium tw-text-gray50 tw-text-xl tw-tracking-[.02rem]">
+            Knowledge Team
+          </p>
+          <EnquiryLink
+            image={MessageSvg}
+            alt="email"
+            data="vishal@indianphilanthropy.org"
+            name="Vishal Dutta"
+          />
         </div>
-</div>
-
-      <div className="bg-bgGray5 p-[2rem] rounded-[1.25rem] mt-14 w-[22.5rem] h-[29.25 rem]">
-      <p className="font-playFair italic font-medium text-gray50 text-xl tracking-[.02rem]" >General Inquiry</p>
-
-<EnquiryLink image={MessageSvg} alt="email" data="info@indianphilanthropy.org"/>
-<EnquiryLink image={PhoneSvg} alt="phone" data="+91 9876543210"/>
-          <div className='h-px bg-footerGray mt-5 mb-5'></div>
-
-          <p className="font-playFair italic font-medium text-gray50 text-xl tracking-[.02rem]">Network Team</p>
-<EnquiryLink image={MessageSvg} alt="email" data="sabhyata@indianphilanthropy.org" name="Sabhayata Prakash"/>
-<div className='h-px bg-footerGray mt-5 mb-5'></div>
-
-          <p className="font-playFair italic font-medium text-gray50 text-xl tracking-[.02rem]">Knowledge Team</p>
-<EnquiryLink image={MessageSvg} alt="email" data="vishal@indianphilanthropy.org"  name="Vishal Dutta"/>
-
-      </div>
       </div>
 
-     <Form/>
+      <Form />
     </div>
+  );
+};
 
-
-  )
-}
-
-export default page
+export default page;

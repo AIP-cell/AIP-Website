@@ -1,22 +1,21 @@
-import React from 'react'
-type Props={
-    type:string,
-    label:string,
-    placeholder:string,
-}
-const InputField = ({ type,  label ,placeholder}:Props) => {
+import React from "react";
+type Props = {
+  type: string;
+  label: string;
+  placeholder: string;
+};
+const InputField = ({ type, label, placeholder }: Props) => {
   return (
     <div>
-          <label
-        className="font-inter leading-[1.225rem] text-sm font-semibold text-gray80"
-      >
+      <label className="tw-font-inter tw-leading-[1.225rem] tw-text-sm tw-font-semibold tw-text-gray80">
         {label}
       </label>
       <input
         type={type}
         placeholder={placeholder}
-        className="w-full h-[3.25rem] font-inter p-5 border border-gray-300 rounded-md text-gray80" />
+        className="tw-w-full tw-h-[3.25rem] tw-font-inter tw-p-5 tw-border tw-border-gray-300 tw-rounded-md tw-text-gray80"
+      />
     </div>
-  )
-}
-export default InputField
+  );
+};
+export default InputField;

@@ -24,9 +24,9 @@ const giveData = [
 ];
 const GiveSection = () => {
   return (
-    <div className="container mx-auto  pt-[3.5rem] px-[7.8rem] relative">
-      <Image src={Bg} alt="give-section-Bg" className="absolute -top-[10.5rem] right-0 " />
-      <div className=" flex gap-[4.56rem]">
+    <div className="container tw-mx-auto  tw-pt-[3.5rem] tw-px-[7.8rem] tw-relative">
+      <Image src={Bg} alt="give-section-Bg" className="tw-absolute tw--top-[10.5rem] tw-right-0 " />
+      <div className=" tw-flex tw-gap-[4.56rem]">
         {giveData.map((item, i) => (
           <ImgTitleDescVer
             key={i}

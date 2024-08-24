@@ -8,12 +8,12 @@ const SelectField = ({ label, placeholder}:Props ) => {
   return (
     <div> 
     <label
-       className="font-inter leading-[1.225rem] text-sm font-semibold text-gray80"
+       className="tw-font-inter tw-leading-[1.225rem] tw-text-sm tw-font-semibold tw-text-gray80"
     >
       {label}
     </label>
     <select
-      className="w-full h-[3.25rem] p-2 border border-gray-300 rounded-md"
+      className="tw-w-full tw-h-[3.25rem] tw-p-2 tw-border tw-border-gray-300 tw-rounded-md"
       defaultValue=""
     >
       <option value="" disabled hidden>

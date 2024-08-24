@@ -8,12 +8,12 @@ import Wave from "react-wavify";
 
 const HeroSection = () => {
   return (
-    <div className="relative w-full ">
-      <div className="absolute  inset-0 ">
+    <div className="tw-relative tw-w-full ">
+      <div className="tw-absolute  tw-inset-0 ">
         <Wave
           fill="#F5B195"
           paused={false}
-          className="h-[--h] !block"
+          className="tw-h-[--h] !tw-block"
           options={{
             amplitude: 60,
             speed: 0.15,
@@ -25,11 +25,11 @@ const HeroSection = () => {
             <stop offset="90%" stopColor="#F7E0A1" />
           </linearGradient>
         </Wave>
-        <div className="h-[calc(100%-var(--h)*2)] bg-[#F5B195]"></div>
+        <div className="tw-h-[calc(100%-var(--h)*2)] tw-bg-[#F5B195]"></div>
         <Wave
           fill="#F5B195"
           paused={false}
-          className="h-[--h] rotate-180 !block"
+          className="tw-h-[--h] tw-rotate-180 !tw-block"
           options={{
             amplitude: 60,
             speed: 0.15,
@@ -42,20 +42,20 @@ const HeroSection = () => {
           </linearGradient>
         </Wave>
       </div>
-      {/* <HeroBgSVg className="absolute "/> */}
-      {/* <Image src={HeroBg1} alt="" fill className="z-40 " />
-      <Image src={HeroBg2} alt="" fill className="z-10 " /> */}
-      <div className="absolute left-[7.8rem] font-inter top-[1.25rem]">
-        <Link href="" className="text-gray50 text-h9BodyCopy5 leading-[19.6px]">
+      {/* <HeroBgSVg className="tw-absolute "/> */}
+      {/* <Image src={HeroBg1} alt="" fill className="tw-z-40 " />
+      <Image src={HeroBg2} alt="" fill className="tw-z-10 " /> */}
+      <div className="tw-absolute tw-left-[7.8rem] tw-font-inter tw-top-[1.25rem]">
+        <Link href="" className="tw-text-gray50 tw-text-h9BodyCopy5 tw-leading-[19.6px]">
           {"<"} About Us
         </Link>
         /<Link href=""> AIP Journey</Link>
       </div>
-      <div className="relative">
+      <div className="tw-relative">
           <Wave
             fill="#faecc894"
             paused={false}
-            className="h-[--h] !block"
+            className="tw-h-[--h] !tw-block"
             options={{
               amplitude: 60,
               speed: 0.15,
@@ -63,12 +63,12 @@ const HeroSection = () => {
             }}
           />
     
-          <div className=" bg-[#faecc894] pt-[6.25rem] pb-[7.6rem] w-full ">
-            <div className="container mx-auto flex justify-center flex-col items-center relative z-50 px-[20.9rem] ">
-              <h3 className=" leading-[20.64px] font-inter text-[#121314] font-semibold">
+          <div className=" tw-bg-[#faecc894] tw-pt-[6.25rem] tw-pb-[7.6rem] tw-w-full ">
+            <div className="container tw-mx-auto tw-flex tw-justify-center tw-flex-col tw-items-center tw-relative tw-z-50 tw-px-[20.9rem] ">
+              <h3 className=" tw-leading-[20.64px] tw-font-inter tw-text-[#121314] tw-font-semibold">
                 PHILANTHROPY IS WHAT IT DOES.
               </h3>
-              <h2 className="pt-[1.25rem] text-center text-h3Heading3 leading-[52px] font-playFair text-gray80">
+              <h2 className="tw-pt-[1.25rem] tw-text-center tw-text-h3Heading3 tw-leading-[52px] tw-font-playFair tw-text-gray80">
                 A philanthropist’s wealth is the origin. Philanthropy is the river.
                 No two rivers are the same; No two philanthropists are the same; No
                 two journeys are alike. And AIP helps channel the flow.
@@ -78,7 +78,7 @@ const HeroSection = () => {
           <Wave
             fill="#faecc894"
             paused={false}
-            className="h-[--h] rotate-180 !block"
+            className="tw-h-[--h] tw-rotate-180 !tw-block"
             options={{
               amplitude: 60,
               speed: 0.15,

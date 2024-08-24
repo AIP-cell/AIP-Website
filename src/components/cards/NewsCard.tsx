@@ -6,11 +6,11 @@ type Props = {
 };
 const NewsCard = ({ src, text }: Props) => {
   return (
-    <div className="flex flex-col w-[25rem] gap-[1.25rem] ">
-      <div className="relative w-full h-[22.5rem] rounded-2xl overflow-hidden">
+    <div className="tw-flex tw-flex-col tw-w-[25rem] tw-gap-[1.25rem] ">
+      <div className="tw-relative tw-w-full tw-h-[22.5rem] tw-rounded-2xl tw-overflow-hidden">
         <Image src={src} alt="" fill />
       </div>
-      <div className={`font-inter text-h8BodyCopy3`}>{text}</div>
+      <div className={`tw-font-inter tw-text-h8BodyCopy3`}>{text}</div>
     </div>
   );
 };

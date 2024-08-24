@@ -1,9 +1,10 @@
 import fluid, { extract, screens, fontSize } from "fluid-tailwind";
 import type { Config } from "tailwindcss";
 const config: Config = {
+  prefix: 'tw-',
   content: {
     files: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
-    extract,
+    extract:extract({ prefix: "tw-" }),
   },
   theme: {
     screens,
@@ -18,7 +19,9 @@ const config: Config = {
         // "bgLightPeach": "#D9D9D9",
         // "bgGray5": "#F0F0F2",
         // "bgSlatePurple":"#F0F0F21A",
+        
         "purpleToPink":"linear-gradient(to right, #E24BDE , #A17FF0)",
+        "purpleToBlue":"linear-gradient(to bottom, #91298C , #224193)",
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",

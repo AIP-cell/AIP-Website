@@ -4,35 +4,35 @@ import React from "react";
 import Bg from "../../../public/svg/membersBg.svg";
 import OvalPurpleSvg from "@/components/svg/OvalPurpleSvg";
 
-const Founders = () => {
+const Members = () => {
   return (
-    <div className="overflow-hidden container mx-auto pt-[13.25rem]">
-      <div className="relative h-[120vh]">
+    <div className="tw-overflow-hidden container tw-mx-auto tw-pt-[13.25rem]">
+      <div className="tw-relative tw-h-[120vh]">
         <Image
           src={Bg}
           alt=""
-          className="object-cover absolute inset-x-0 -bottom-[5rem]"
+          className="tw-object-cover tw-absolute tw-inset-x-0 tw--bottom-[5rem]"
         />
         {/* <OvalPurpleSvg className="-top-[4rem] right-[11.85rem]"/> */}
         <OvalPurple
           title="4"
           desc="Core Founders"
-          absoluteClass=" -top-[4rem] right-[11.85rem]"
+          absoluteClass=" tw--top-[4rem] tw-right-[11.85rem]"
         />
         <OvalPurple
           title="31"
           desc="Founders"
-          absoluteClass=" top-[15.5rem] right-[6.48rem]"
+          absoluteClass=" tw-top-[15.5rem] tw-right-[6.48rem]"
         />
         <OvalPurple
           title="150 +"
           desc="Members"
-          absoluteClass=" top-[20rem] right-[26rem]"
+          absoluteClass=" tw-top-[20rem] tw-right-[26rem]"
         />
         {/* <div className=""> */}
-        <h2 className="text-h2Heading2 w-[38rem] text-gray50 leading-[52.8px] pl-[7.8rem]">
+        <h2 className="tw-text-h2Heading2 tw-w-[38rem] tw-text-gray50 tw-leading-[52.8px] tw-pl-[7.8rem]">
           Accelerate Indian Philanthropy is a peer network set up
-          <i className="text-textPurple">
+          <i className="tw-text-textPurple">
             by philanthropists,for philanthropists
           </i>
           to support their giving efforts.
@@ -43,4 +43,4 @@ const Founders = () => {
   );
 };
 
-export default Founders;
+export default Members;

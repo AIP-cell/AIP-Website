@@ -5,8 +5,8 @@ type Props = {
 };
 const BgButton = ({ text, className }: Props) => {
   return (
-    <button className="bg-darkPurple rounded-full ">
-      <p className={`${className} text-white`}>{text}</p>
+    <button className="tw-bg-darkPurple tw-rounded-full ">
+      <p className={`${className} tw-text-white`}>{text}</p>
     </button>
   );
 };

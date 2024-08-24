@@ -6,6 +6,8 @@ import X from "../../public/svg/footer/x.svg";
 import In from "../../public/svg/footer/in.svg";
 import Youtube from "../../public/svg/footer/youtube.svg";
 import FooterFish from "../../public/svg/footer/fish/footerFish.svg";
+import Wave from "react-wavify";
+
 import Link from "next/link";
 const footerLinks = [
   {
@@ -36,60 +38,75 @@ const footerLinks = [
 const Footer = () => {
   return (
     <div className="">
-      <div className="relative h-[34rem] w-full">
-        {/* <div className="absolute   "> */}
-        <Image src={FooterBg} alt="" fill className="inset-x-0 object-cover" />
-        <div className="absolute w-[45.6rem] h-[10.3rem] bottom-0 right-0 z-50">
+      <div className="tw-relative tw-h-[31rem] tw-w-full">
+        {/* <div className="tw-absolute   "> */}
+        {/* <Image src={FooterBg} alt="" fill className="tw-inset-x-0 tw-object-cover" /> */}
+        <Wave
+          fill="purpleToBlue"
+          paused={false}
+          className="tw-inset-0 tw-object-cover tw-absolute "
+          options={{
+            amplitude: 60,
+            speed: 0.15,
+            points: 2,
+          }}
+        >
+          <linearGradient id="gradient" gradientTransform="rotate(90)">
+            <stop offset="10%" stopColor="#91298C" />
+            <stop offset="90%" stopColor="#224193" />
+          </linearGradient>
+        </Wave>
+        <div className="tw-absolute tw-w-[45.6rem] tw-h-[10.3rem] tw-bottom-0 tw-right-0 tw-z-50">
           <Image src={FooterFish} alt="" className="" fill />
         </div>
         {/* </div> */}
-        <div className="flex container mx-auto relative">
-          <div className="pt-[12.5rem] flex flex-wrap">
-            <div className="basis-1/4 ">
-              <div className="relative h-[3.6rem] w-[6rem]">
+        <div className="tw-flex container tw-mx-auto tw-relative">
+          <div className="tw-pt-[12.5rem] tw-flex tw-flex-wrap">
+            <div className="tw-basis-1/4 ">
+              <div className="tw-relative tw-h-[3.6rem] tw-w-[6rem]">
                 <Image src={Logo} alt="" fill />
               </div>
             </div>
-            <div className="basis-3/4 flex items-center justify-end">
-              <div className=" flex gap-[1.75rem]">
+            <div className="tw-basis-3/4 tw-flex tw-items-center tw-justify-end">
+              <div className=" tw-flex tw-gap-[1.75rem]">
                 {footerLinks.map((items, i) => (
                   <Link
                     key={i}
                     href={items.link}
-                    className="text-h9BodyCopy5 leading-[19.6px] font-inter text-white"
+                    className="tw-text-h9BodyCopy5 tw-leading-[19.6px] tw-font-inter tw-text-white"
                   >
                     {items.name}
                   </Link>
                 ))}
               </div>
             </div>
-            <div className="basis-1/4 ">
-              <h3 className="pt-[2rem] font-playFair leading-[22.4px] text-white">
+            <div className="tw-basis-1/4 ">
+              <h3 className="tw-pt-[2rem] tw-font-playFair tw-leading-[22.4px] tw-text-white">
                 Accelerate Indian Philanthropy
               </h3>
-              <p className="pt-[0.75rem] text-h9BodyCopy5 font-inter text-white/60">
+              <p className="tw-pt-[0.75rem] tw-text-h9BodyCopy5 tw-font-inter tw-text-white/60">
                 Ananda, 242 Okhla Industrial Estate Phase III, New Delhi, India
                 110020 info@indianphilanthropy.org
               </p>
-              <div className="flex gap-[1.25rem] pt-[2rem]">
-                <div className="relative size-[2.5rem]">
+              <div className="tw-flex tw-gap-[1.25rem] tw-pt-[2rem]">
+                <div className="tw-relative tw-size-[2.5rem]">
                   <Image src={X} alt="" />
                 </div>
-                <div className="relative size-[2.5rem]">
+                <div className="tw-relative tw-size-[2.5rem]">
                   <Image src={In} alt="" />
                 </div>
-                <div className="relative size-[2.5rem]">
+                <div className="tw-relative tw-size-[2.5rem]">
                   <Image src={Youtube} alt="" />
                 </div>
               </div>
             </div>
-            <div className="basis-3/4 flex  justify-end pt-[2rem]">
-              <div className="w-[25rem] h-[2.8rem]  flex rounded-full  relative   rounded-br-full   items-center justify-end">
-                <div className="pr-[2.56rem] pl-[4rem] text-textPurple flex items-center justify-end bg-white  h-full rounded-full text-right text-h9BodyCopy5 font-inter">
+            <div className="tw-basis-3/4 tw-flex  tw-justify-end tw-pt-[2rem]">
+              <div className="tw-w-[25rem] tw-h-[2.8rem]  tw-flex tw-rounded-full  tw-relative   tw-rounded-br-full   tw-items-center tw-justify-end">
+                <div className="tw-pr-[2.56rem] tw-pl-[4rem] tw-text-textPurple tw-flex tw-items-center tw-justify-end tw-bg-white tw-h-full tw-rounded-full tw-text-right tw-text-h9BodyCopy5 tw-font-inter">
                   Join
                 </div>
-                <div className="rounded-full bg-bgSlatePurple absolute top-0 left-0 z-[100] flex items-center border-2 border-footerGray pl-[1.5rem] pr-[6rem]  h-full ">
-                  <h3 className="text-footerGray">
+                <div className="tw-rounded-full tw-bg-bgSlatePurple tw-absolute tw-top-0 tw-left-0 tw-z-[100] tw-flex tw-items-center tw-border-2 tw-border-footerGray tw-pl-[1.5rem] tw-pr-[6rem]  tw-h-full ">
+                  <h3 className="tw-text-footerGray">
                     Sign up for our newsletter
                   </h3>
                 </div>

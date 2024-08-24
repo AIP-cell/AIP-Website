@@ -3,31 +3,31 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <div className="overflow-hidden container mx-auto relative h-screen ">
+    <div className="tw-overflow-hidden container tw-mx-auto tw-relative tw-h-screen ">
       <Image src="/svg/heroBg.svg" alt="" className="" fill />
 
-      <div className="absolute top-[4rem] left-[1.25rem]">
-        <div className="relative size-[11.875rem] ">
+      <div className="tw-absolute tw-top-[4rem] tw-left-[1.25rem]">
+        <div className="tw-relative tw-size-[11.875rem] ">
           <Image src="/svg/ovalPeach.svg" alt="" fill className="" />
         </div>
       </div>
-      <div className="flex items-center  justify-center pt-[5.56rem] relative">
+      <div className="tw-flex tw-items-center  tw-justify-center tw-pt-[5.56rem] tw-relative">
         <div className="">
-          <h2 className="text-h1Heading1 font-playFair leading-[3.7rem] w-[38.125rem] ">
-            AIP is a peer network that <i className="text-textPurple">channels the flow</i> to
+          <h2 className="tw-text-h1Heading1 tw-font-playFair tw-leading-[3.7rem] tw-w-[38.125rem] ">
+            AIP is a peer network that <i className="tw-text-textPurple">channels the flow</i> to
             accelerate strategic giving in India - a movement{" "}
-            <i className="text-textPurple">by and for philanthropists</i>
+            <i className="tw-text-textPurple">by and for philanthropists</i>
           </h2>
         </div>
-        <div className="relative w-[29.6rem] h-[27.8rem] ">
-          <Image src="/svg/vecto30.svg" alt="" fill className="z-20"/>
-          <div className="absolute inset-0 z-10">
-            <div className="relative w-[27.846rem] h-[29.17rem]">
+        <div className="tw-relative tw-w-[29.6rem] tw-h-[27.8rem] ">
+          <Image src="/svg/vecto30.svg" alt="" fill className="tw-z-20"/>
+          <div className="tw-absolute tw-inset-0 tw-z-10">
+            <div className="tw-relative tw-w-[27.846rem] tw-h-[29.17rem]">
               <Image
                 src="/svg/ellipsePeach.svg"
                 alt=""
                 fill
-                className="z-[-2] rotate-[-109.42deg]"
+                className="tw-z-[-2] tw-rotate-[-109.42deg]"
               />
             </div>
           </div>
