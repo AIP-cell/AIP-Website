@@ -1,9 +1,9 @@
 import React from 'react'
 
-const JourneyArchetype = () => {
+const JourneyArchetype1 = () => {
   return (
     <div
-    className="flex flex-col gap-10 px-[6.531rem] text-center mb-[6.125rem]"
+    className="flex flex-col gap-10 px-[6.531rem] text-center"
     >
      <div>
        <p className="">Where are you in your </p>
@@ -44,4 +44,4 @@ Are you at a discovery stage? Are you giving for 4 - 5 years? Or are you
   )
 }
 
-export default JourneyArchetype
+export default JourneyArchetype1
