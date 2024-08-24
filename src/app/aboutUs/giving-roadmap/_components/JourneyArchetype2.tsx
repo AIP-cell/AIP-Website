@@ -1,47 +1,39 @@
-import React from 'react'
+import React from "react";
 
 const JourneyArchetype1 = () => {
   return (
-    <div
-    className="flex flex-col gap-10 px-[6.531rem] text-center"
-    >
-     <div>
-       <p className="">Where are you in your </p>
-        <p className="">
-          <i>Giving Journey?</i>
-        </p>
-      </div>  
+    <div className="flex flex-col px-[14.438rem] text-center pb-[4.125rem]">
+      <div className="px-[7.75rem] space-y-[2.5rem]">
+        <div className="font-playFair text-[3rem] leading-[3.3rem] ">
+        What’s your 
+          <p className="italic text-textPurple">Giving Archetype?</p>
+        </div>
 
-      
-          <p className="">
-          We can organise philanthropic inputs intro three categories: 
-Treasure, Involvement, and Evangelisation. Recognising the giving journey of 
-philanthropists is the first step to understanding your current stage. 
-Are you at a discovery stage? Are you giving for 4 - 5 years? Or are you
- thinking of it? Or are you looking to organize and structure it? 
+        <div className="leading-[1.4rem] text-inter">
+          <p className=" pb-10">
+            Our research identifies six distinct archetypes among Indian
+            philanthropists: inspiration seekers, emerging givers, strategic
+            enablers, cause champions, core givers, and rainmakers. Each
+            archetype reflects unique values, motivations and approaches to
+            giving, it is important to note that these identities are not
+            static, with many philanthropists transitioning between archetypes
+            as their philanthropic journeys evolve.
           </p>
+        </div>
 
-          <p className="">
-            Log In to answer a few questions and understand where you are in
-            your giving journey. Click below to begin.
-          </p>
-
-<div>
-<button
-      type="submit"
-      className="text-white leading-[1.225rem] bg-darkPurple w-[11.375rem] 
-        h-[2.75rem]
-        rounded-[1.5rem] cursor-pointer" 
-    >
-       Discover Your Path
-    </button>
-</div>
-
-       
-
-       
+        <div>
+          <button
+            type="submit"
+            className="text-white leading-[1.225rem] bg-darkPurple w-[11.375rem] 
+      h-[2.75rem]
+      rounded-[1.5rem] cursor-pointer"
+          >
+          Find Your Archetype
+          </button>
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default JourneyArchetype1
+export default JourneyArchetype1;
