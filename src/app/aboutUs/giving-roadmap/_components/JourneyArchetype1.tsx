@@ -2,36 +2,38 @@ import React from "react";
 
 const JourneyArchetype = () => {
   return (
-    <div className="flex flex-col gap-10 px-[6.531rem] text-center mb-[6.125rem]">
-      <div>
-        <p className="">Where are you in your </p>
+    <div className="flex flex-col gap-10 px-[14.438rem] text-center ">
+      <div className="px-[6.531rem">
+        <div className="">
+          <p className="">Where are you in your </p>
+          <p className="">
+            <i>Giving Journey?</i>
+          </p>
+        </div>
+
         <p className="">
-          <i>Giving Journey?</i>
+          We can organise philanthropic inputs intro three categories: Treasure,
+          Involvement, and Evangelisation. Recognising the giving journey of
+          philanthropists is the first step to understanding your current stage.
+          Are you at a discovery stage? Are you giving for 4 - 5 years? Or are
+          you thinking of it? Or are you looking to organize and structure it?
         </p>
-      </div>
 
-      <p className="">
-        We can organise philanthropic inputs intro three categories: Treasure,
-        Involvement, and Evangelisation. Recognising the giving journey of
-        philanthropists is the first step to understanding your current stage.
-        Are you at a discovery stage? Are you giving for 4 - 5 years? Or are you
-        thinking of it? Or are you looking to organize and structure it?
-      </p>
+        <p className="">
+          Log In to answer a few questions and understand where you are in your
+          giving journey. Click below to begin.
+        </p>
 
-      <p className="">
-        Log In to answer a few questions and understand where you are in your
-        giving journey. Click below to begin.
-      </p>
-
-      <div>
-        <button
-          type="submit"
-          className="text-white leading-[1.225rem] bg-darkPurple w-[11.375rem] 
+        <div>
+          <button
+            type="submit"
+            className="text-white leading-[1.225rem] bg-darkPurple w-[11.375rem] 
         h-[2.75rem]
         rounded-[1.5rem] cursor-pointer"
-        >
-          Discover Your Path
-        </button>
+          >
+            Discover Your Path
+          </button>
+        </div>
       </div>
     </div>
   );
