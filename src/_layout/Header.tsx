@@ -50,7 +50,7 @@ const headerData = [
 ];
 const Header = () => {
   return (
-    <div className="tw-flex tw-justify-between tw-py-[1.1rem] tw-px-[1.25rem]">
+    <div className="tw-relative  tw-bg-white tw-flex tw-justify-between tw-py-[1.1rem] tw-px-[1.25rem] tw-overflow-hidden">
       <div>
         <LogoHeaderSvg />
       </div>

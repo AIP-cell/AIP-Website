@@ -1,7 +1,7 @@
 import OvalPurple from "@/components/ovals/OvalPurple";
 import Image from "next/image";
 import React from "react";
-import Bg from "../../../public/svg/membersBg.svg";
+import Bg from "@public/svg/wavePeachRight.svg";
 import OvalPurpleSvg from "@/components/svg/OvalPurpleSvg";
 
 const Members = () => {
@@ -15,25 +15,28 @@ const Members = () => {
         />
         {/* <OvalPurpleSvg className="-top-[4rem] right-[11.85rem]"/> */}
         <OvalPurple
+          sizeClass="tw-size-[17.3rem]"
           textClass1="tw-text-h3Heading3"
           textClass2="tw-text-h9BodyCopy4"
-          title="4"
-          desc="Core Founders"
-          Class=" tw-absolute tw--top-[4rem] tw-right-[11.85rem]"
+          text1="4"
+          text2="Core Founders"
+          mainClass=" tw-absolute tw--top-[4rem] tw-right-[11.85rem]"
         />
         <OvalPurple
+          sizeClass="tw-size-[17.3rem]"
           textClass1="tw-text-h3Heading3"
           textClass2="tw-text-h9BodyCopy4"
-          title="31"
-          desc="Founders"
-          Class=" tw-absolute tw-top-[15.5rem] tw-right-[6.48rem]"
+          text1="31"
+          text2="Founders"
+          mainClass=" tw-absolute tw-top-[15.5rem] tw-right-[6.48rem]"
         />
         <OvalPurple
+          sizeClass="tw-size-[17.3rem]"
           textClass1="tw-text-h3Heading3"
           textClass2="tw-text-h9BodyCopy4"
-          title="150 +"
-          desc="Members"
-          Class=" tw-absolute tw-top-[20rem] tw-right-[26rem]"
+          text1="150 +"
+          text2="Members"
+          mainClass=" tw-absolute tw-top-[20rem] tw-right-[26rem]"
         />
         {/* <div className=""> */}
         <h2 className="tw-text-h2Heading2 tw-w-[38rem] tw-text-gray50 tw-leading-[52.8px] tw-pl-[7.8rem]">

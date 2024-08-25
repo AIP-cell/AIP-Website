@@ -42,7 +42,7 @@ const Footer = () => {
         {/* <div className="tw-absolute   "> */}
         {/* <Image src={FooterBg} alt="" fill className="tw-inset-x-0 tw-object-cover" /> */}
         <Wave
-          fill="url(#gradient)"
+          fill="url(#footerGradient)"
           paused={false}
           className="tw-inset-0 tw-object-cover tw-absolute "
           options={{
@@ -51,7 +51,7 @@ const Footer = () => {
             points: 2,
           }}
         >
-          <linearGradient id="gradient" gradientTransform="rotate(90)">
+          <linearGradient id="footerGradient" gradientTransform="rotate(90)">
             <stop offset="10%" stopColor="#91298C" />
             <stop offset="90%" stopColor="#224193" />
           </linearGradient>

@@ -1,14 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import HeroSection from "./_components/HeroSection";
+import JourneyHeroSection from "./_components/JourneyHeroSection";
 import OurValueSection from "./_components/OurValueSection";
+import ValueSlick from "./_components/ValueSlick";
+import OurThreeIs from "./_components/OurThreeIs";
 const page = () => {
   return (
     <div>
-      <HeroSection />   
+      <JourneyHeroSection />   
       <OurValueSection/>
-      
+      <ValueSlick/>
+      <OurThreeIs/>
     </div>
   );
 };
