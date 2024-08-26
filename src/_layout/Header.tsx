@@ -1,11 +1,14 @@
+import CustomSelect from "@/components/custom/CustomSelect";
 import LogoHeaderSvg from "@/components/svg/LogoHeaderSvg";
 import SearchHeaderSvg from "@/components/svg/SearchHeaderSvg";
+import Link from "next/link";
 import React from "react";
 const headerData = [
   {
     selectName: "About Us",
     width: " tw-w-[6rem] ",
     options: [
+      { option: "About Us" },
       { option: "The AIP Journey" },
       { option: "Our Approach" },
       { option: "AIP Impact" },
@@ -19,6 +22,7 @@ const headerData = [
     selectName: "People of AIP",
     width: " tw-w-[8rem] ",
     options: [
+      { option: "People of AIP" },
       { option: "Our Offerings" },
       { option: "NPO Registry" },
       { option: "Projects and Programs" },
@@ -29,6 +33,7 @@ const headerData = [
     selectName: "Products & Services",
     width: " tw-w-[10.5rem] ",
     options: [
+      { option: "Products & Services" },
       { option: "Our Offerings" },
       { option: "NPO Registry" },
       { option: "Projects and Programs" },
@@ -39,6 +44,7 @@ const headerData = [
     selectName: "Resource Center",
     width: " tw-w-[9rem] ",
     options: [
+      { option: "Resource Center" },
       { option: "Our Offerings" },
       { option: "NPO Registry" },
       { option: "Projects and Programs" },
@@ -51,30 +57,29 @@ const headerData = [
 const Header = () => {
   return (
     <div className="tw-relative  tw-bg-white tw-flex tw-justify-between tw-py-[1.1rem] tw-px-[1.25rem] tw-overflow-hidden">
-      <div>
+      <Link href="/">
         <LogoHeaderSvg />
-      </div>
+      </Link>
       <div className="tw-flex tw-gap-[2.5rem]">
         {headerData.map((items, index) => (
           <div key={index} className="tw-flex  tw-items-center ">
             {items.selectName && (
               <div className="tw-flex tw-gap-[2.5rem]">
-                <select name={items.selectName} id="" className={items.width}>
-                  <option selected>{items.selectName}</option>
-                  {/* {items.options && */}
-                  {/* <div className="flex flex-col gap-[1.625rem]"> */}
+                <CustomSelect options={items.options}/> 
+                {/* <select name={items.selectName} id="" className={`${items.width} tw-bg-purpleToBlue `}>
+                  <option selected >{items.selectName}</option>
+                  
                   {items.options.map((opt, i) => (
                     <option
                       key={i}
-                      value={items.selectName}
+                      // value={items.selectName}
                       className="tw-pt-[1.625rem]"
                     >
                       {opt.option}
                     </option>
                   ))}
-                  {/* </div> */}
-                  {/* } */}
-                </select>
+                  
+                </select> */}
               </div>
             )}
             <div>{items.name}</div>

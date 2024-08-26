@@ -40,8 +40,9 @@ const config: Config = {
         "gray50":"#6A6D75",
         "gray60":"#575A61",
         "footerGray":"#DFE0E580",
-        "purple10":"#E1CCED"
-       
+        "purple10":"#E1CCED",
+        "lightPurplePink":"#E0ABDE"
+        
       },
       fontFamily: {
         inter: "var(--inter)",

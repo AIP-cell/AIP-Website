@@ -7,6 +7,7 @@ import Members from "./_components/Members";
 import Story from "./_components/Story";
 import Founder from "./_components/Founder";
 import News from "./_components/News";
+import CustomSelect from "@/components/custom/CustomSelect";
 
 const page = () => {
   return (

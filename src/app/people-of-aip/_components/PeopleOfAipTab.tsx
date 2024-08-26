@@ -1,8 +1,8 @@
 import React from "react";
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
-import OurCoreFoundersContent from "./OurCoreFoundersContent";
+import OurCoreFoundersContent from "../founders/_components/OurCoreFoundersContent";
 
-const FoundersTab = () => {
+const PeopleOfAipTab = () => {
   return (
     <div className="tw-flex tw-justify-center tw-pt-[4.75rem] ">
       <TabGroup className="tw-flex tw-flex-col tw-items-center tw-justify-center">
@@ -33,4 +33,4 @@ const FoundersTab = () => {
   );
 };
 
-export default FoundersTab;
+export default PeopleOfAipTab;
