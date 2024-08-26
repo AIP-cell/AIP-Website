@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${playfairDisplay.variable}`}>
+      <body className={`${inter.variable} ${playfairDisplay.variable} no-scrollbar tw-overflow-x-hidden`}>
         <Header />
         {children}
         <Footer />
