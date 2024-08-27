@@ -3,7 +3,10 @@ import Form from "./_components/Form";
 import Link from "next/link";
 import MessageSvg from "@public/svg/message.svg";
 import PhoneSvg from "@public/svg/phone.svg";
+import LocationSvg from "@public/svg/location.svg";
+import Layer_1Svg from "@public/svg/Layer_1.svg";
 import EnquiryLink from "./_components/EnquiryLink";
+import Image from "next/image";
 
 const page = () => {
   return (
@@ -35,47 +38,56 @@ const page = () => {
               New Delhi, India 110020
             </p>
             <Link
-              className="tw-font-inter tw-bg-bgGray5 tw-px-5 tw-pt-3 tw-pb-3 tw-w-[13.8rem] tw-h-[2.8rem] tw-rounded-[3.125rem] tw-leading-[1.4rem] tw-text-gray80"
+              className="tw-font-inter tw-flex tw-gap-[1.144rem] tw-bg-bgGray5 tw-px-5 tw-py-3 tw-w-[13.8rem] tw-h-[2.8rem] tw-rounded-[3.125rem] tw-leading-[1.4rem] tw-text-gray80"
               href=""
             >
-              Open Link on Maps
+              <Image
+                src={LocationSvg}
+                className="tw-w-[.766rem] tw-h-[0.971rem] tw-mt-[.2rem]"
+                alt="location"
+              />
+              <p> Open Link on Maps</p>
             </Link>
           </div>
         </div>
+        <div className=" relative  ">
+          <Image src={Layer_1Svg} alt="" className="left-0 absolute " />
+          <div className="tw-bg-bgGray5 tw-p-[2rem] tw-rounded-[1.25rem] tw-mt-14 tw-w-[22.5rem] tw-h-[29.25 rem]">
+            <p className="tw-font-playFair tw-italic tw-font-medium tw-text-gray50 tw-text-xl tw-tracking-[.02rem]">
+              General Inquiry
+            </p>
 
-        <div className="tw-bg-bgGray5 tw-p-[2rem] tw-rounded-[1.25rem] tw-mt-14 tw-w-[22.5rem] tw-h-[29.25 rem]">
-          <p className="tw-font-playFair tw-italic tw-font-medium tw-text-gray50 tw-text-xl tw-tracking-[.02rem]">
-            General Inquiry
-          </p>
+            <EnquiryLink
+              image={MessageSvg}
+              alt="email"
+              data="info@indianphilanthropy.org"
+            />
 
-          <EnquiryLink
-            image={MessageSvg}
-            alt="email"
-            data="info@indianphilanthropy.org"
-          />
-          <EnquiryLink image={PhoneSvg} alt="phone" data="+91 9876543210" />
-          <div className="tw-h-px tw-bg-footerGray tw-mt-5 tw-mb-5"></div>
+            <EnquiryLink image={PhoneSvg} alt="phone" data="+91 9876543210" />
 
-          <p className="tw-font-playFair tw-italic tw-font-medium tw-text-gray50 tw-text-xl tw-tracking-[.02rem]">
-            Network Team
-          </p>
-          <EnquiryLink
-            image={MessageSvg}
-            alt="email"
-            data="sabhyata@indianphilanthropy.org"
-            name="Sabhayata Prakash"
-          />
-          <div className="tw-h-px tw-bg-footerGray tw-mt-5 tw-mb-5"></div>
+            <div className="tw-h-px tw-bg-footerGray tw-mt-5 tw-mb-5"></div>
 
-          <p className="tw-font-playFair tw-italic tw-font-medium tw-text-gray50 tw-text-xl tw-tracking-[.02rem]">
-            Knowledge Team
-          </p>
-          <EnquiryLink
-            image={MessageSvg}
-            alt="email"
-            data="vishal@indianphilanthropy.org"
-            name="Vishal Dutta"
-          />
+            <p className="tw-font-playFair tw-italic tw-font-medium tw-text-gray50 tw-text-xl tw-tracking-[.02rem]">
+              Network Team
+            </p>
+            <EnquiryLink
+              image={MessageSvg}
+              alt="email"
+              data="sabhyata@indianphilanthropy.org"
+              name="Sabhayata Prakash"
+            />
+            <div className="tw-h-px tw-bg-footerGray tw-mt-5 tw-mb-5"></div>
+
+            <p className="tw-font-playFair tw-italic tw-font-medium tw-text-gray50 tw-text-xl tw-tracking-[.02rem]">
+              Knowledge Team
+            </p>
+            <EnquiryLink
+              image={MessageSvg}
+              alt="email"
+              data="vishal@indianphilanthropy.org"
+              name="Vishal Dutta"
+            />
+          </div>
         </div>
       </div>
 
