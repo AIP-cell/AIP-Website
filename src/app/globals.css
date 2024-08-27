@@ -116,7 +116,7 @@
     transform: skewY(0deg);
   }
 }
-
+ 
 @keyframes blob-scale {
   0% {
     transform: scaleX(.9) scaleY(1);

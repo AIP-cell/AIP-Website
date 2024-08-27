@@ -15,7 +15,7 @@ const HeroSection = () => {
         <div className="">
           <h2 className="tw-text-h1Heading1 tw-font-playFair tw-leading-[3.7rem] tw-w-[38.125rem] ">
             AIP is a peer network that <i className="tw-text-textPurple">channels the flow</i> to
-            accelerate strategic giving in India - a movement{" "}
+            accelerate strategic giving in India - a movement
             <i className="tw-text-textPurple">by and for philanthropists</i>
           </h2>
         </div>

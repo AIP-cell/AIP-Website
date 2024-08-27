@@ -5,8 +5,8 @@ const JourneyArchetype1 = () => {
     <div className="tw-flex tw-flex-col tw-px-[14.438rem] tw-text-center tw-pb-[4.125rem]">
       <div className="tw-px-[7.75rem] tw-space-y-[2.5rem]">
         <div className="tw-font-playFair tw-text-h2Heading2 tw-leading-[3.3rem] ">
-        What’s your 
-          <i className=" tw-text-textPurple">Giving Archetype?</i>
+        What&apos;s your 
+          <p className="tw-italic tw-text-textPurple"> Giving Archetype?</p>
         </div>
 
         <div className="tw-leading-[1.4rem] tw-font-inter">
