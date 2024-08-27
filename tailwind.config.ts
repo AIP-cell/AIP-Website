@@ -42,7 +42,6 @@ const config: Config = {
         "footerGray":"#DFE0E580",
         "purple10":"#E1CCED",
         "lightPurplePink":"#E0ABDE"
-        
       },
       fontFamily: {
         inter: "var(--inter)",

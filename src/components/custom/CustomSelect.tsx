@@ -13,7 +13,7 @@ type Props = {
   options: any;
 };
 const CustomSelect = ({ options }: Props) => {
-  console.log("options::", options);
+  // console.log("options::", options);
   const [selected, setSelected] = useState(options?.at(0));
   return (
     <Listbox value={selected} onChange={setSelected}>
