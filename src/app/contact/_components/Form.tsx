@@ -6,9 +6,13 @@ const Form = () => {
   // const options =[1,2,3];
   return (
     <form className="tw-flex tw-flex-col tw-gap-7">
-      <InputField type="text" label="Name" placeholder="John Doe" />
+      <InputField type="text" label="Name" placeholder="Enter your name" />
 
-      <InputField type="email" label=" Email ID" placeholder="john@xyz.com" />
+      <InputField
+        type="email"
+        label=" Email ID"
+        placeholder="Enter your email"
+      />
 
       <SelectField
         label="I'm a"
@@ -24,7 +28,10 @@ const Form = () => {
         <label className="tw-font-inter tw-leading-[1.225rem] tw-text-sm tw-font-semibold tw-text-gray80">
           Message
         </label>
-        <textarea className=" tw-w-full tw-border tw-border-gray-300 tw-rounded-md tw-text-gray80 tw-font-inter tw-h-28" />
+        <textarea
+          placeholder="Please type your message"
+          className=" tw-pt-[1rem] tw-pl-[1.25rem] tw-w-full tw-border tw-border-gray-300 tw-rounded-md tw-text-gray80 tw-font-inter tw-h-28"
+        />
       </div>
 
       <button

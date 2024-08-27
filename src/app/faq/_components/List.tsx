@@ -7,12 +7,12 @@ type Props={
 
 const List = ({ name}:Props) => {
   return (
-    <div className='bg-bgGray5 hover:bg-textPurple hover:text-white hover:italic p-5 rounded-[1.25rem] flex justify-between mb-3 group'>
-        <p className="font-playFair font-medium group-hover:italic text-xl tracking-[.02rem] ">
+    <div className='tw-bg-bgGray5 hover:tw-bg-textPurple hover:tw-text-white hover:tw-italic tw-p-5 tw-rounded-[1.25rem] tw-flex tw-justify-between tw-mb-3 tw-group'>
+        <p className="tw-font-playFair tw-font-medium group-hover:tw-italic tw-text-xl tw-tracking-[.02rem] ">
   {name}
 </p>
-<div className='p-[0.375rem]' >
-<ChevronRightIcon className="w-[0.438rem] h-[0.875rem] group-hover:text-white" />
+<div className='tw-p-[0.375rem]' >
+<ChevronRightIcon className="tw-w-[0.438rem] tw-h-[0.875rem] group-hover:tw-text-white" />
 </div>
 
 

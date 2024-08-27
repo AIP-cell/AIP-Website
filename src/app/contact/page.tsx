@@ -4,14 +4,23 @@ import Link from "next/link";
 import MessageSvg from "@public/svg/message.svg";
 import PhoneSvg from "@public/svg/phone.svg";
 import LocationSvg from "@public/svg/location.svg";
-import Layer_1Svg from "@public/svg/Layer_1.svg";
+import WaveBg from "@public/svg/contact/peachWaveBg.svg";
 import EnquiryLink from "./_components/EnquiryLink";
 import Image from "next/image";
 
 const page = () => {
   return (
-    <div className="container tw-mx-auto tw-grid md:tw-grid-cols-2">
-      <div>
+    <div className="tw-relative container tw-mx-auto tw-px-[7.8rem] tw-pt-[5rem] tw-grid md:tw-grid-cols-2">
+        <Image src={WaveBg} alt="" className="tw-absolute tw-inset-x-0 -tw-bottom-[15rem]" />
+      <div className="tw-absolute tw-left-[7.8rem] tw-font-inter tw-top-[1.25rem]">
+        <Link
+          href=""
+          className="tw-text-gray50 tw-text-h9BodyCopy5 tw-leading-[19.6px]"
+        >
+          {"<"} Contacts
+        </Link>
+      </div>
+      <div className="tw-col-span-1 ">
         <div className="tw-flex tw-flex-col tw-gap-14 tw-pr-[6.625rem]">
           <div>
             <p className="tw-font-playFair tw-text-h3Heading3 tw-leading-[3.3rem]">
@@ -50,9 +59,8 @@ const page = () => {
             </Link>
           </div>
         </div>
-        <div className=" relative  ">
-          <Image src={Layer_1Svg} alt="" className="left-0 absolute " />
-          <div className="tw-bg-bgGray5 tw-p-[2rem] tw-rounded-[1.25rem] tw-mt-14 tw-w-[22.5rem] tw-h-[29.25 rem]">
+        <div className=" tw-relative tw-pb-[5rem] tw-pt-[5rem]  ">
+          <div className="tw-bg-bgGray5 tw-p-[2rem] tw-rounded-[1.25rem]  tw-w-[22.5rem] tw-h-[29.25 rem]">
             <p className="tw-font-playFair tw-italic tw-font-medium tw-text-gray50 tw-text-xl tw-tracking-[.02rem]">
               General Inquiry
             </p>
@@ -91,7 +99,9 @@ const page = () => {
         </div>
       </div>
 
-      <Form />
+      <div className="tw-col-span-1">
+        <Form />
+      </div>
     </div>
   );
 };
