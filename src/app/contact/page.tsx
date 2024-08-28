@@ -60,7 +60,7 @@ const page = () => {
           </div>
         </div>
         <div className=" tw-relative tw-pb-[5rem] tw-pt-[5rem]  ">
-          <div className="tw-bg-bgGray5 tw-p-[2rem] tw-rounded-[1.25rem]  tw-w-[22.5rem] tw-h-[29.25 rem]">
+          <div className="tw-bg-bgGray5 tw-p-[2rem] tw-rounded-[1.25rem]  tw-w-[22.9rem] tw-h-[29.25 rem]">
             <p className="tw-font-playFair tw-italic tw-font-medium tw-text-gray50 tw-text-xl tw-tracking-[.02rem]">
               General Inquiry
             </p>

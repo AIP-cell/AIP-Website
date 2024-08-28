@@ -35,6 +35,7 @@ const config: Config = {
         "darkGray": "#282A20",
         "midGray": "#45484D",
         "textPurple":"#91298C",
+        "gray10":"#DFE0E5",
         "gray20":"#C0C3CC",
         "gray40":"#81848F",
         "gray80":"#323538",
