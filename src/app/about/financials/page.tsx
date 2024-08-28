@@ -1,10 +1,14 @@
 import React from "react";
+import BgFaq from "@public/svg/bg-faq.svg";
 import Link from "next/link";
+import Image from "next/image";
 import FinancialTabs from "./_components/FinancialTabs";
 
 const page = () => {
   return (
-    <div className="container tw-mx-auto tw-relative  tw-pl-[7.8rem] tw-pt-[5rem]">
+    <div className=" tw-relative  tw-overflow-hidden">
+      <Image src={BgFaq} alt="" className="tw-left-0 tw-absolute tw-top-[5rem] " />
+    <div className="tw-relative container tw-mx-auto  tw-pl-[7.8rem] tw-pt-[5rem]">
       <div className="tw-absolute tw-left-[7.8rem] tw-font-inter tw-top-[1.25rem]">
         <Link
           href=""
@@ -24,6 +28,7 @@ const page = () => {
       </div>
 
       <FinancialTabs />
+    </div>
     </div>
   );
 };

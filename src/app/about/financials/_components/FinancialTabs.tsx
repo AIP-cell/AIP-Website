@@ -41,14 +41,18 @@ const FinancialTabs = () => {
 
       <TabPanels className=" tw-w-full tw-pt-[5rem]">
         <TabPanel className="tw-flex tw-flex-col tw-gap-[3rem]">
-          <p className="tw-text-center">FY 2024-25</p>
+          <p className="tw-text-center tw-font-playFair tw-text-h2Heading2 leading-[2.6rem] tw-tracking-[-0.02rem] tw-text-gray80">
+            FY 2024-25
+          </p>
           <div>
             {datas.map((item, i) => (
               <div
                 key={i}
-                className="tw-flex tw-justify-between tw-py-[2.063rem] tw-w-full tw-px-[1.25rem] tw-border-b tw-border-footerGray"
+                className="tw-flex tw-justify-between tw-py-[2.063rem] tw-w-full tw-px-[1.25rem] tw-border-b tw-border-footerGray "
               >
-                {item.title}
+                <p className="tw-leading-[1.4rem] tw-text-gray80">
+                  {item.title}
+                </p>
                 <Image
                   src={Download}
                   className="tw-w-[1.167rem] tw-h-[1.5rem]"
@@ -57,16 +61,17 @@ const FinancialTabs = () => {
               </div>
             ))}
           </div>
-          {/* <div className="tw-text-end tw-flex tw-justify-center tw-border tw-border-darkPurple tw-w-[10.75rem] tw-rounded-md">
-            <p className="">
+          <div className=" tw-flex tw-gap-2 0 tw-rounded-3xl tw-py-3 tw-px-7 tw-border tw-border-darkPurple">
+            <p className="tw-font-playFair tw-text-h9BodyCopy5 leading-[1.225rem]  tw-text-darkPurple ">
               Download All
             </p>
             <Image
-              src={Download}
-              className="tw-w-[1.167rem] tw-h-[1.5rem]"
-              alt="download"
-            />
-          </div> */}
+                src={Download}
+                className="tw-w-[1.167rem] tw-h-[1.5rem]"
+                alt="download"
+              />
+          </div>
+
         </TabPanel>
 
         <TabPanel>Content 4</TabPanel>
