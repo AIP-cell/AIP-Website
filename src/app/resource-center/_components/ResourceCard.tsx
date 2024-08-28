@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Download from "@public/svg/resourcePage/download.svg";
+import Download from "@public/svg/download.svg";
 import View from "@public/svg/resourcePage/view.svg";
 import React from "react";
 type Props = {
@@ -11,7 +11,6 @@ type Props = {
 const ResourceCard = ({
   src,
   title,
-
   desc,
 }: Props) => {
   return (

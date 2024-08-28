@@ -4,7 +4,7 @@ import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 import ResourceCard from "./ResourceCard";
 import Image from "next/image";
 
-const threeP = [
+const datas = [
   {
     src: "/svg/resourcePage/resource1.svg",
     title: "Wealth with Purpose- a report on Indian Philanthropy",
@@ -73,7 +73,7 @@ const ResourcesTabs = () => {
 
         <TabPanel>
           <div className="tw-pt-[3.25rem] tw-grid md:tw-grid-cols-3 tw-gap-[4.5rem]">
-            {threeP.map((item, i) => (
+            {datas.map((item, i) => (
               <ResourceCard
                 key={i}
                 src={item.src}
