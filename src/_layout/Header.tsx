@@ -10,7 +10,7 @@ const headerData = [
       { option: "About Us", link: "#" },
       { option: "The AIP Journey", link: "/about/aip-journey" },
       { option: "Our Approach", link: "/about/our-journey" },
-      { option: "AIP Impact", link: "/about/aip-journey" },
+      { option: "AIP Impact", link: "/about/aip-impact" },
       { option: "Giving Roadmap", link: "/about/giving-roadmap" },
       { option: "Financial Reports", link: "#" },
       { option: "AIP Founder Network", link: "#" },
