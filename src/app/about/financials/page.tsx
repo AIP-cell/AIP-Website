@@ -22,7 +22,7 @@ const page = () => {
           </Link>
           <Link href="#">Financials</Link>
         </div>
-        <div className="tw-pt-[2.5rem] tw-pb-[5rem] tw-text-h2Heading2 tw-leading-[3.3rem] tw-font-playFair">
+        <div className="tw-pt-[2.5rem] tw-pb-[5rem] tw-text-h2 tw-leading-[3.3rem] tw-font-playFair">
           <p className=" tw-text-gray80">
             Financial report of the{" "}
             <span className=" tw-text-textPurple tw-italic tw-tracking-[-4%]">

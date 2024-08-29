@@ -41,7 +41,7 @@ const FinancialTabs = () => {
 
       <TabPanels className=" tw-w-full tw-pt-[5rem]">
         <TabPanel className="tw-flex tw-flex-col tw-gap-[3rem]">
-          <p className="tw-text-center tw-font-playFair tw-text-h2Heading2 leading-[2.6rem] tw-tracking-[-0.02rem] tw-text-gray80">
+          <p className="tw-text-center tw-font-playFair tw-text-h2 leading-[2.6rem] tw-tracking-[-0.02rem] tw-text-gray80">
             FY 2024-25
           </p>
           <div>

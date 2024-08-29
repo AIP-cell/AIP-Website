@@ -35,7 +35,7 @@ const PositionsGrid = () => {
           className="tw-flex tw-justify-between tw-items-center tw-py-8  tw-border-b tw-border-gray10"
         >
           <div className="">
-            <p className="tw-font-playFair tw-text-h4Heading4 tw-text-gray80 tw-leading-[2.6rem]">
+            <p className="tw-font-playFair tw-text-h4 tw-text-gray80 tw-leading-[2.6rem]">
               {item.title}
             </p>
             <p className="tw-py-4 tw-leading-[1.4rem] tw-font-inter tw-text-midGray">

@@ -27,10 +27,10 @@ const page = () => {
         <p className="tw-font-inter tw-font-semibold tw-uppercase tw-leading-[1.3rem] tw-text-purple40">
           All Positions
         </p>
-        <p className="tw-leading-[2.6rem] tw-font-playFair tw-text-h4Heading4 tw-text-gray80 tw-pt-5 tracking-[0.02rem]">
+        <p className="tw-leading-[2.6rem] tw-font-playFair tw-text-h4 tw-text-gray80 tw-pt-5 tracking-[0.02rem]">
           See where you fit into the movement!{" "}
         </p>
-        <p className="tw-leading-[2.6rem] tw-font-playFair tw-text-h4Heading4 tw-text-gray80 tw-pb-[5rem]">Apply now. We’ll surely get back to you at the soonest.</p>
+        <p className="tw-leading-[2.6rem] tw-font-playFair tw-text-h4 tw-text-gray80 tw-pb-[5rem]">Apply now. We’ll surely get back to you at the soonest.</p>
 
         <div className="tw-flex tw-pt-[2rem] tw-gap-[.75rem]">
           <p className="tw-py-3 tw-text-gray40 ">Filter by:</p>

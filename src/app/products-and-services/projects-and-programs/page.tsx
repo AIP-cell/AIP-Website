@@ -45,7 +45,7 @@ const page = () => {
       <p className="tw-font-inter tw-font-semibold tw-uppercase tw-leading-[1.3rem] tw-text-purple40">
       Projects and Programs
       </p>
-      <p className="tw-leading-[2.6rem] tw-font-playFair tw-text-h4Heading4 tw-text-gray80 tw-pt-5 tw-pb-[5rem] tw-tracking-[-0.02rem]">
+      <p className="tw-leading-[2.6rem] tw-font-playFair tw-text-h4 tw-text-gray80 tw-pt-5 tw-pb-[5rem] tw-tracking-[-0.02rem]">
        Through our projects and programs, we inspire and
         influence each other by sharing their motivations, knowledge, ideas and
         experiences. All to enable shared learning and collaboration with

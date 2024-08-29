@@ -27,7 +27,7 @@ const page = () => {
         <p className="tw-font-inter  tw-font-semibold tw-uppercase tw-leading-[1.3rem] tw-text-purple40">
           Collaborations
         </p>
-        <p className="tw-leading-[2.6rem] tw-font-playFair tw-text-h4Heading4 tw-text-gray80 tw-pt-5 tw-pb-[5rem] tw-tracking-[-0.02rem]">
+        <p className="tw-leading-[2.6rem] tw-font-playFair tw-text-h4 tw-text-gray80 tw-pt-5 tw-pb-[5rem] tw-tracking-[-0.02rem]">
           Collaborative philanthropy is a powerful catalyst for change.
           <br /> When we
           unite our resources and expertise, we pave the way for resilient

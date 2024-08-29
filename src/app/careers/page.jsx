@@ -18,7 +18,7 @@ const page = () => {
           <Link href="#"> All Positions</Link>
         </div>
         <div className="tw-max-w-[38.125rem] tw-mx-auto  tw-text-center">
-          <p className="tw-text-h2Heading2 tw-text-gray80 tw-leading-[3.713rem] tw-font-playFair tw-tracking-[-.04rem]">
+          <p className="tw-text-h2 tw-text-gray80 tw-leading-[3.713rem] tw-font-playFair tw-tracking-[-.04rem]">
             AIP is a peer network that
             <span className="tw-italic tw-text-textPurple">
               channels the flow{" "}
@@ -39,7 +39,7 @@ const page = () => {
     
 
       <div className="tw-max-w-[38.125rem] tw-relative  tw-pt-[12.5rem] tw-text-center container tw-mx-auto">
-          <p className="tw-text-h2Heading2 tw-text-gray80 tw-leading-[3.713rem] tw-font-playFair tw-tracking-[-.04rem]">
+          <p className="tw-text-h2 tw-text-gray80 tw-leading-[3.713rem] tw-font-playFair tw-tracking-[-.04rem]">
           Why Work With 
             <span className="tw-italic tw-text-textPurple">
             AIP?
