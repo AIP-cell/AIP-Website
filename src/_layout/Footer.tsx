@@ -73,7 +73,7 @@ const Footer = () => {
                   <Link
                     key={i}
                     href={items.link}
-                    className="tw-text-h9BodyCopy5 tw-leading-[19.6px] tw-font-inter tw-text-white"
+                    className="tw-text-h9Copy5 tw-leading-[19.6px] tw-font-inter tw-text-white"
                   >
                     {items.name}
                   </Link>
@@ -84,7 +84,7 @@ const Footer = () => {
               <h3 className="tw-pt-[2rem] tw-font-playFair tw-leading-[22.4px] tw-text-white">
                 Accelerate Indian Philanthropy
               </h3>
-              <p className="tw-pt-[0.75rem] tw-text-h9BodyCopy5 tw-font-inter tw-text-white/60">
+              <p className="tw-pt-[0.75rem] tw-text-h9Copy5 tw-font-inter tw-text-white/60">
                 Ananda, 242 Okhla Industrial Estate Phase III, New Delhi, India
                 110020 info@indianphilanthropy.org
               </p>
@@ -102,10 +102,10 @@ const Footer = () => {
             </div>
             <div className="tw-basis-3/4 tw-flex  tw-justify-end tw-pt-[2rem]">
               <div className="tw-w-[25rem] tw-h-[2.8rem]  tw-flex tw-rounded-full  tw-relative   tw-rounded-br-full   tw-items-center tw-justify-end">
-                <div className="tw-pr-[2.56rem] tw-pl-[4rem] tw-text-textPurple tw-flex tw-items-center tw-justify-end tw-bg-white tw-h-full tw-rounded-full tw-text-right tw-text-h9BodyCopy5 tw-font-inter">
+                <div className="tw-absolute tw-pr-[2.56rem] tw-z-50 tw-pl-[4rem] tw-text-textPurple tw-flex tw-items-center tw-justify-end tw-bg-white tw-h-full tw-rounded-full tw-text-right tw-text-h9Copy5 tw-font-inter">
                   Join
                 </div>
-                <div className="tw-rounded-full tw-bg-bgSlatePurple tw-absolute tw-top-0 tw-left-0 tw-z-[100] tw-flex tw-items-center tw-border-2 tw-border-footerGray tw-pl-[1.5rem] tw-pr-[6rem]  tw-h-full ">
+                <div className="tw-rounded-full  tw-bg-bgSlatePurple tw-absolute tw-top-0 tw-left-0 tw-z-[100] tw-flex tw-items-center tw-border-2 tw-border-footerGray tw-pl-[1.5rem] tw-pr-[6rem]  tw-h-full ">
                   <h3 className="tw-text-footerGray">
                     Sign up for our newsletter
                   </h3>

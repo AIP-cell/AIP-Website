@@ -47,7 +47,7 @@ const FivePModel = () => {
         className="tw-absolute tw-inset-0 tw-w-full tw-h-full"
       />
       <div className="tw-relative tw-pt-[21.25rem] tw-pb-[21.625rem] container tw-mx-auto">
-        <h3 className="tw-text-h3Heading3 tw-text-center tw-text-gray80 tw-leading-[3.1rem] tw-font-playFair ">
+        <h3 className="tw-text-h3 tw-text-center tw-text-gray80 tw-leading-[3.1rem] tw-font-playFair ">
           Our <i className="tw-text-textPurple">Five P Model</i>
         </h3>
         <div className="tw-pt-[5rem] tw-grid tw-grid-cols-3 tw-gap-[4.56rem] tw-px-[6.43rem]">

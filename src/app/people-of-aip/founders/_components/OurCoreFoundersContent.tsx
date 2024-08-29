@@ -1,12 +1,24 @@
 import ACardWithButton from "@/components/cards/aCards/ACardWithButton";
 import PCardWithButton from "@/components/cards/pCards/PCardWithButton";
+import Image from "next/image";
+import Bg from "@public/svg/PeachBgCurveFounders.svg";
 import React from "react";
 
 const OurCoreFoundersContent = () => {
   return (
-    <div className="tw-pt-[3rem]">
+    <div className="tw-pt-[3rem] tw-relative">
+      <Image
+        src={Bg}
+        alt=""
+        className="tw-absolute  tw-top-[15.5rem]  tw-right-0"
+      />
+      <Image
+        src={Bg}
+        alt=""
+        className="tw-absolute  tw-bottom-0  tw-left-0 tw-rotate-180"
+      />
       <div className="tw-flex tw-flex-col tw-items-center tw-justify-center">
-        <h2 className="tw-text-h2Heading2 tw-text-center tw-text-gray80 tw-leading-[3.2rem] tw-font-playFair">
+        <h2 className="tw-text-h2 tw-text-center tw-text-gray80 tw-leading-[3.2rem] tw-font-playFair">
           Our <i className="tw-text-textPurple">Core-Founders</i>
         </h2>
         <p className="tw-font-inter tw-px-[20.938rem] tw-text-center tw-text-midGray tw-leading-[1.4rem] tw-pt-[1.25rem]">

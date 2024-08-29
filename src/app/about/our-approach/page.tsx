@@ -17,7 +17,7 @@ const page = () => {
         <div className="tw-absolute  tw-left-[7.8rem] tw-font-inter tw-top-[1.25rem]">
           <Link
             href=""
-            className="tw-text-gray50 tw-text-h9BodyCopy5 tw-leading-[19.6px]"
+            className="tw-text-gray50 tw-text-h9Copy5 tw-leading-[19.6px]"
           >
             {"<"} About Us &nbsp;/&nbsp;
           </Link>
@@ -27,7 +27,7 @@ const page = () => {
           <h4 className="tw-pt-[6.5rem] tw-leading-[1.3rem] tw-font-inter tw-font-semibold tw-text-textPurple">
             The AIP Approach
           </h4>
-          <h3 className="tw-pt-[0.75rem] tw-text-gray80 tw-text-h4Heading4 tw-font-playFair tw-leading-[2.6rem]">
+          <h3 className="tw-pt-[0.75rem] tw-text-gray80 tw-text-h4 tw-font-playFair tw-leading-[2.6rem]">
             Personal Philanthropy is almost never linear, it goes through its
             twists and turns, from initiation to experimentation, slowly
             gathering conviction and strength, and finally maturing into a
@@ -43,7 +43,7 @@ const page = () => {
             alt=""
             className="tw-absolute tw-top-[4.5rem] tw-size-[17.62rem]  tw-left-[18rem]"
           />
-          <h3 className="tw-relative tw-text-gray80 tw-text-h4Heading4 tw-font-playFair tw-leading-[2.6rem]">
+          <h3 className="tw-relative tw-text-gray80 tw-text-h4 tw-font-playFair tw-leading-[2.6rem]">
             Founded in 2021 with an objective to transform the strategic giving
             landscape in India. AIP works with ultra-high net worth individuals
             and families (in India and the diaspora) to create sustainable

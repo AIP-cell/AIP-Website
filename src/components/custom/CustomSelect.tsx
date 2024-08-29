@@ -8,6 +8,7 @@ import {
   ListboxOptions,
 } from "@headlessui/react";
 import Image from "next/image";
+import Link from "next/link";
 
 type Props = {
   options: any;
@@ -30,7 +31,7 @@ const CustomSelect = ({ options }: Props) => {
             value={items}
             className="data-[focus]:bg-blue-100 tw-text-white tw-cursor-pointer"
           >
-            {items.option}
+            <Link href={items?.link}>{items.option}</Link>
           </ListboxOption>
         ))}
       </ListboxOptions>

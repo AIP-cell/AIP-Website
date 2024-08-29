@@ -16,30 +16,30 @@ const Members = () => {
         {/* <OvalPurpleSvg className="-top-[4rem] right-[11.85rem]"/> */}
         <OvalPurple
           sizeClass="tw-size-[17.3rem]"
-          textClass1="tw-text-h3Heading3"
-          textClass2="tw-text-h9BodyCopy4"
+          textClass1="tw-text-h3"
+          textClass2="tw-text-h9Copy4"
           text1="4"
           text2="Core Founders"
           mainClass=" tw-absolute tw--top-[4rem] tw-right-[11.85rem]"
         />
         <OvalPurple
           sizeClass="tw-size-[17.3rem]"
-          textClass1="tw-text-h3Heading3"
-          textClass2="tw-text-h9BodyCopy4"
+          textClass1="tw-text-h3"
+          textClass2="tw-text-h9Copy4"
           text1="31"
           text2="Founders"
           mainClass=" tw-absolute tw-top-[15.5rem] tw-right-[6.48rem]"
         />
         <OvalPurple
           sizeClass="tw-size-[17.3rem]"
-          textClass1="tw-text-h3Heading3"
-          textClass2="tw-text-h9BodyCopy4"
+          textClass1="tw-text-h3"
+          textClass2="tw-text-h9Copy4"
           text1="150 +"
           text2="Members"
           mainClass=" tw-absolute tw-top-[20rem] tw-right-[26rem]"
         />
         {/* <div className=""> */}
-        <h2 className="tw-text-h2Heading2 tw-w-[38rem] tw-text-gray50 tw-leading-[52.8px] tw-pl-[7.8rem]">
+        <h2 className="tw-text-h2 tw-w-[38rem] tw-font-playFair tw-text-gray50 tw-leading-[52.8px] tw-pl-[7.8rem]">
           Accelerate Indian Philanthropy is a peer network set up
           <i className="tw-text-textPurple">
             by philanthropists,for philanthropists

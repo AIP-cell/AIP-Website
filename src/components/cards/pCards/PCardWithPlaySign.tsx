@@ -14,13 +14,13 @@ const PCardWithPlaySign = () => {
         />
       </div>
       <div className="tw-flex tw-flex-col tw-gap-[0.75rem]">
-        <h3 className="tw-text-h4Heading4 tw-leading-[2.6rem] tw-text-[#DFE0E5] tw-font-playFair">
+        <h3 className="tw-text-h4 tw-leading-[2.6rem] tw-text-[#DFE0E5] tw-font-playFair">
           Ashish Dhawan
         </h3>
-        <h4 className="tw-text-h5Heading5 tw-font-playFair tw-text-lightPurplePink tw-font-medium tw-italic">
+        <h4 className="tw-text-h5 tw-font-playFair tw-text-lightPurplePink tw-font-medium tw-italic">
           The Convergence Foundation
         </h4>
-        <p className="tw-text-h9BodyCopy4 tw-leading-[1.4rem] tw-font-inter tw-text-[#DFE0E5] ">
+        <p className="tw-text-h9Copy4 tw-leading-[1.4rem] tw-font-inter tw-text-[#DFE0E5] ">
           “I believe a lot more needs to be done particularly to encourage
           first-time givers. AIP aims to fill this gap and spur philanthropy in
           a very structured manner.’’

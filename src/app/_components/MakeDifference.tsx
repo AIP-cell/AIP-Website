@@ -15,10 +15,10 @@ const dataS = [
 const MakeDifference = () => {
   return (
     <div className="container tw-mx-auto tw-overflow-hidden tw-pt-[13rem] tw-flex tw-flex-col tw-items-center tw-justify-center">
-      <h3 className="tw-text-h2Heading2 tw-text-gray80 tw-leading-[52.8px] tw-font-playFair">
+      <h3 className="tw-text-h2 tw-text-gray80 tw-leading-[52.8px] tw-font-playFair">
         How we are trying to
       </h3>
-      <i className="tw-text-h2Heading2 tw-text-textPurple tw-leading-[52.8px] tw-font-playFair">
+      <i className="tw-text-h2 tw-text-textPurple tw-leading-[52.8px] tw-font-playFair">
         make a difference
       </i>
       <div className="tw-grid tw-grid-cols-2 tw-gap-[1.25rem] tw-px-[7.8rem] tw-pt-[5rem]">

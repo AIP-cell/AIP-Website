@@ -20,7 +20,7 @@ const threeIs = [
 const OurThreeIs = () => {
   return (
     <div className="container tw-mx-auto  tw-pt-[12.5rem] tw-pb-[7.5rem] tw-px-[7.8rem] tw-relative">
-      <h3 className="tw-text-h2Heading2 tw-font-playFair tw-text-center">
+      <h3 className="tw-text-h2 tw-font-playFair tw-text-center">
         Our <i className="tw-text-textPurple">Three I-s</i>
       </h3>
       <div className="tw-pt-[5rem] tw-flex tw-gap-[4.56rem]">
