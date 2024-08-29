@@ -13,7 +13,7 @@ const page = () => {
         alt=""
         className="tw-left-48 tw-absolute tw-top-[0rem] "
       />
-      <div className="container tw-mx-auto tw-relative  tw-pl-[7.8rem] tw-pt-[5rem]">
+      <div className="container tw-mx-auto tw-relative  tw-px-[7.8rem] tw-pt-[5rem]">
         <div className="tw-absolute tw-left-[7.8rem] tw-font-inter tw-top-[1.25rem]">
           <Link
             href=""
@@ -24,10 +24,10 @@ const page = () => {
           <Link href="#"> All Positions</Link>
         </div>
 
-        <p className="tw-font-inter tw-uppercase tw-leading-[1.3rem] tw-text-purple40">
+        <p className="tw-font-inter tw-font-semibold tw-uppercase tw-leading-[1.3rem] tw-text-purple40">
           All Positions
         </p>
-        <p className="tw-leading-[2.6rem] tw-font-playFair tw-text-h4Heading4 tw-text-gray80 tw-pt-5 ">
+        <p className="tw-leading-[2.6rem] tw-font-playFair tw-text-h4Heading4 tw-text-gray80 tw-pt-5 tracking-[0.02rem]">
           See where you fit into the movement!{" "}
         </p>
         <p className="tw-leading-[2.6rem] tw-font-playFair tw-text-h4Heading4 tw-text-gray80 tw-pb-[5rem]">Apply now. We’ll surely get back to you at the soonest.</p>

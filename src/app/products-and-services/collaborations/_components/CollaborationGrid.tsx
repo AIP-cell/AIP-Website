@@ -37,11 +37,11 @@ const CollaborationGrid = () => {
           </p>
         </button>
       </div>
-      <div className="tw-text-end tw-leading-[1.4rem] tw-font-inter tw-w-full">
+      <div className="tw-flex tw-flex-col tw-items-end tw-leading-[1.4rem] tw-font-inter tw-w-full">
         <p className="tw-font-bold tw-text-midGray">11 Jul 2024</p>
         <p className="tw-pt-3 tw-pb-[2.125rem] tw-text-midGray">Report</p>
         <p className="tw-text-gray50 tw-pb-3">In Collaboration with:</p>
-        <div className="tw-py-3 tw-px-[.875rem] tw-bg-bgCollab tw-rounded-[1.25rem] ">
+        <div className="tw-py-3 tw-px-[.875rem] tw-w-fit tw-bg-bgCollab tw-rounded-[1.25rem] ">
       <Image src={bcgSvg} alt="bcg" className="tw-w-14 tw-h-14" />
         </div>
       </div>
