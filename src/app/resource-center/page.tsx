@@ -8,7 +8,7 @@ const page = () => {
       <div className="tw-absolute tw-left-[7.8rem] tw-font-inter tw-top-[1.25rem]">
         <Link
           href=""
-          className="tw-text-gray50 tw-text-h9BodyCopy5 tw-leading-[19.6px]"
+          className="tw-text-gray50 tw-text-h9Copy5 tw-leading-[19.6px]"
         >
           {"<"} Resource Center / AIP Resources / &nbsp;/&nbsp;
         </Link>

@@ -50,7 +50,7 @@ const JourneyHeroSection = () => {
       <div className="tw-absolute tw-left-[7.8rem] tw-font-inter tw-top-[1.25rem]">
         <Link
           href=""
-          className="tw-text-gray50 tw-text-h9BodyCopy5 tw-leading-[19.6px]"
+          className="tw-text-gray50 tw-text-h9Copy5 tw-leading-[19.6px]"
         >
           {"<"} About Us &nbsp;/&nbsp;
         </Link>
@@ -73,7 +73,7 @@ const JourneyHeroSection = () => {
             <h3 className=" tw-leading-[20.64px] tw-font-inter tw-text-[#121314] tw-font-semibold">
               PHILANTHROPY IS WHAT IT DOES.
             </h3>
-            <h2 className="tw-pt-[1.25rem] tw-text-center tw-text-h3Heading3 tw-leading-[52px] tw-font-playFair tw-text-gray80">
+            <h2 className="tw-pt-[1.25rem] tw-text-center tw-text-h3 tw-leading-[52px] tw-font-playFair tw-text-gray80">
               A philanthropist’s wealth is the origin. Philanthropy is the
               river. No two rivers are the same; No two philanthropists are the
               same; No two journeys are alike. And AIP helps channel the flow.

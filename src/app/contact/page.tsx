@@ -15,7 +15,7 @@ const page = () => {
       <div className="tw-absolute tw-left-[7.8rem] tw-font-inter tw-top-[1.25rem]">
         <Link
           href=""
-          className="tw-text-gray50 tw-text-h9BodyCopy5 tw-leading-[19.6px]"
+          className="tw-text-gray50 tw-text-h9Copy5 tw-leading-[19.6px]"
         >
           {"<"} Contacts
         </Link>
@@ -23,7 +23,7 @@ const page = () => {
       <div className="tw-col-span-1 ">
         <div className="tw-flex tw-flex-col tw-gap-14 tw-pr-[6.625rem]">
           <div>
-            <p className="tw-font-playFair tw-text-h3Heading3 tw-leading-[3.3rem]">
+            <p className="tw-font-playFair tw-text-h3 tw-leading-[3.3rem]">
               Get in Touch
             </p>
             <p className="tw-font-inter tw-leading-[1.4rem] tw-mt-5 tw-text-gray60">
@@ -34,7 +34,7 @@ const page = () => {
           </div>
 
           <div className="tw-flex tw-flex-col tw-gap-5">
-            <h2 className="tw-italic tw-font-playFair tw-text-h4Heading4 tw-leading-[2.6rem] tw-text-gray50">
+            <h2 className="tw-italic tw-font-playFair tw-text-h4 tw-leading-[2.6rem] tw-text-gray50">
               Reach us at
             </h2>
             <p className="tw-font-inter tw-leading-[1.4rem] tw-flex tw-flex-col tw-text-midGray">

@@ -25,10 +25,10 @@ const ResourceCard = ({
           className="tw-object-cover tw-rounded-[1.25rem]"
         />
       </div>
-      <p className=" tw-w-full tw-text-h6Heading6M tw-text-gray80 tw-font-inter tw-font-semibold tw-leading-[1.575rem]">
+      <p className=" tw-w-full tw-text-h6M tw-text-gray80 tw-font-inter tw-font-semibold tw-leading-[1.575rem]">
         {title}
       </p>
-      <p className="tw-text-h9BodyCopy5 tw-text-gray50 tw-font-inter tw-leading-[1.225rem]">
+      <p className="tw-text-h9Copy5 tw-text-gray50 tw-font-inter tw-leading-[1.225rem]">
         {desc}
       </p>
       <div className="tw-h-px tw-bg-footerGray tw-w-full"></div>

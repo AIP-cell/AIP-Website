@@ -10,7 +10,7 @@ const NewsCard = ({ src, text }: Props) => {
       <div className="tw-relative tw-w-full tw-h-[22.5rem] tw-rounded-2xl tw-overflow-hidden">
         <Image src={src} alt="" fill />
       </div>
-      <div className={`tw-font-inter tw-text-h8BodyCopy3`}>{text}</div>
+      <div className={`tw-font-inter tw-text-h8Copy3`}>{text}</div>
     </div>
   );
 };

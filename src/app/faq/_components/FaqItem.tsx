@@ -15,7 +15,7 @@ const FaqItem = () => {
         <>
           <DisclosureButton className="tw-py-7 tw-px-5 tw-flex tw-justify-between tw-w-full">
             <p
-              className={`tw-text-h6Heading6M ${
+              className={`tw-text-h6M ${
                 open ? "tw-text-textPurple" : "tw-text-gray80"
               }`}
             >
@@ -33,7 +33,7 @@ const FaqItem = () => {
               )}
             </div>
           </DisclosureButton>
-          <DisclosurePanel className="tw-text-midGray tw-bg-bgGray5 tw-p-5  tw-rounded-t-[1.25rem] tw-font-inter tw-text-h9BodyCopy5 tw-leading-[1.225rem]">
+          <DisclosurePanel className="tw-text-midGray tw-bg-bgGray5 tw-p-5  tw-rounded-t-[1.25rem] tw-font-inter tw-text-h9Copy5 tw-leading-[1.225rem]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
             facilisi. Phasellus imperdiet, neque at consequat malesuada, lorem
             lectus ullamcorper nunc, at scelerisque erat risus at nulla. Integer

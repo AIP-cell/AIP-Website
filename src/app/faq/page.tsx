@@ -13,13 +13,13 @@ const page = () => {
         <div className="tw-absolute tw-left-[7.8rem] tw-font-inter tw-top-[1.25rem]">
           <Link
             href=""
-            className="tw-text-gray50 tw-text-h9BodyCopy5 tw-leading-[19.6px]"
+            className="tw-text-gray50 tw-text-h9Copy5 tw-leading-[19.6px]"
           >
             {"<"} FAQ&apos;s
           </Link>
         </div>
         <div>
-          <p className="tw-leading-[3.3rem] tw-text-h2Heading2 tw-pb-[3rem] tw-font-playFair">
+          <p className="tw-leading-[3.3rem] tw-text-h2 tw-pb-[3rem] tw-font-playFair">
             FAQS
           </p>
           <List name="General Inquiry" />

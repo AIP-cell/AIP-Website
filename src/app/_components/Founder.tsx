@@ -14,7 +14,7 @@ const Founder = () => {
       <Image src={PurPleCurveSvg} alt="" className="tw-absolute tw-top-[18rem] tw-right-0" />
       <Image src={BlueCurveSvg} alt="" className="tw-absolute tw-bottom-[5rem] tw-left-0" />
       <div className="tw-px-[7.8rem] tw-pt-[10.3rem]">
-        <h3 className="tw-text-h2Heading2 tw-text-white/80  tw-relative tw-font-playFair">
+        <h3 className="tw-text-h2 tw-text-white/80  tw-relative tw-font-playFair">
           From our <i className="tw-text-white">Core-Founders</i>
         </h3>
         <div className="tw-relative tw-pt-[3.43rem] ">

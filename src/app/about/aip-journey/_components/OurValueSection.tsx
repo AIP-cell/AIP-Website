@@ -33,7 +33,7 @@ const OurValueSection = () => {
           className=" tw-absolute -tw-top-[2.5rem] tw-inset-x-0 tw-object-cover"
         />
       <div className="tw-flex tw-flex-col tw-justify-center tw-items-center ">
-        <h3 className="tw-text-h2Heading2 tw-text-darkGray tw-font-playFair tw-leading-[52.8px]">
+        <h3 className="tw-text-h2 tw-text-darkGray tw-font-playFair tw-leading-[52.8px]">
           Our <i className="tw-text-textPurple">Values</i>
         </h3>
         <p className="tw-pt-[1.25rem] tw-text-midGray tw-font-inter">
@@ -49,8 +49,8 @@ const OurValueSection = () => {
               mainClass=""
               text1={items.text1}
               text2={items.text2}
-              textClass1="tw-text-h4Heading4 tw-font-playFair tw-text-purple10 leading-[41.6px]"
-              textClass2=" tw-italic tw-font-playFair tw-text-h4Heading4 leading-[41.6px]"
+              textClass1="tw-text-h4 tw-font-playFair tw-text-purple10 leading-[41.6px]"
+              textClass2=" tw-italic tw-font-playFair tw-text-h4 leading-[41.6px]"
             />
           ))}
          

@@ -15,7 +15,7 @@ const page = () => {
       <div className="tw-absolute tw-left-[7.8rem] tw-font-inter tw-top-[1.25rem]">
         <Link
           href=""
-          className="tw-text-gray50 tw-text-h9BodyCopy5 tw-leading-[19.6px]"
+          className="tw-text-gray50 tw-text-h9Copy5 tw-leading-[19.6px]"
         >
           {"<"} About Us &nbsp;/&nbsp;
         </Link>
@@ -28,7 +28,7 @@ const page = () => {
           alt=""
           className="tw-absolute tw-bottom-[4rem] tw-right-[7.8rem]"
         />
-        <p className="tw-px-[7.813rem] tw-pt-[7.5rem] tw-pb-[19.5rem] tw-text-h3Heading3 tw-text-gray80 tw-font-playFair tw-leading-[3.25rem] ">
+        <p className="tw-px-[7.813rem] tw-pt-[7.5rem] tw-pb-[19.5rem] tw-text-h3 tw-text-gray80 tw-font-playFair tw-leading-[3.25rem] ">
           At AIP we believe: Philanthropists can make a difference.
           Philanthropists want to make a difference. And philanthropists, are
           best at inspiring each other. After chatting with you, we build a plan

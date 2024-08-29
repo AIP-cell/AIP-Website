@@ -5,54 +5,50 @@ import Link from "next/link";
 import React from "react";
 const headerData = [
   {
-    selectName: "About Us",
     width: " tw-w-[6rem] ",
     options: [
-      { option: "About Us" },
-      { option: "The AIP Journey" },
-      { option: "Our Approach" },
-      { option: "AIP Impact" },
-      { option: "Giving Roadmap" },
-      { option: "Financial Reports" },
-      { option: "AIP Founder Network" },
-      { option: "Philanthropist Network" },
+      { option: "About Us", link: "#" },
+      { option: "The AIP Journey", link: "/about/aip-journey" },
+      { option: "Our Approach", link: "/about/our-journey" },
+      { option: "AIP Impact", link: "/about/aip-journey" },
+      { option: "Giving Roadmap", link: "/about/giving-roadmap" },
+      { option: "Financial Reports", link: "#" },
+      { option: "AIP Founder Network", link: "#" },
+      { option: "Philanthropist Network", link: "#" },
     ],
   },
   {
-    selectName: "People of AIP",
     width: " tw-w-[8rem] ",
     options: [
-      { option: "People of AIP" },
-      { option: "Our Offerings" },
-      { option: "NPO Registry" },
-      { option: "Projects and Programs" },
-      { option: "Collaborations" },
+      { option: "People of AIP", link: "/people-of-aip/founders" },
+      { option: "Our Offerings", link: "#" },
+      { option: "NPO Registry", link: "#" },
+      { option: "Projects and Programs", link: "#" },
+      { option: "Collaborations", link: "#" },
     ],
   },
   {
-    selectName: "Products & Services",
     width: " tw-w-[10.5rem] ",
     options: [
-      { option: "Products & Services" },
-      { option: "Our Offerings" },
-      { option: "NPO Registry" },
-      { option: "Projects and Programs" },
-      { option: "Collaborations" },
+      { option: "Products & Services", link: "#" },
+      { option: "Our Offerings", link: "#" },
+      { option: "NPO Registry", link: "#" },
+      { option: "Projects and Programs", link: "#" },
+      { option: "Collaborations", link: "#" },
     ],
   },
   {
-    selectName: "Resource Center",
     width: " tw-w-[9rem] ",
     options: [
-      { option: "Resource Center" },
-      { option: "Our Offerings" },
-      { option: "NPO Registry" },
-      { option: "Projects and Programs" },
-      { option: "Collaborations" },
+      { option: "Resource Center", link: "#" },
+      { option: "Our Offerings", link: "#" },
+      { option: "NPO Registry", link: "#" },
+      { option: "Projects and Programs", link: "#" },
+      { option: "Collaborations", link: "#" },
     ],
   },
-  { name: "Careers" },
-  { name: "Contact" },
+  { name: "Careers", link: "#" },
+  { name: "Contact", link: "#" },
 ];
 const Header = () => {
   return (
@@ -61,28 +57,15 @@ const Header = () => {
         <LogoHeaderSvg />
       </Link>
       <div className="tw-flex tw-gap-[2.5rem]">
-        {headerData.map((items, index) => (
+        {headerData.map((items: any, index: number) => (
           <div key={index} className="tw-flex  tw-items-center ">
-            {items.selectName && (
+            {items.options ? (
               <div className="tw-flex tw-gap-[2.5rem]">
-                <CustomSelect options={items.options}/> 
-                {/* <select name={items.selectName} id="" className={`${items.width} tw-bg-purpleToBlue `}>
-                  <option selected >{items.selectName}</option>
-                  
-                  {items.options.map((opt, i) => (
-                    <option
-                      key={i}
-                      // value={items.selectName}
-                      className="tw-pt-[1.625rem]"
-                    >
-                      {opt.option}
-                    </option>
-                  ))}
-                  
-                </select> */}
+                <CustomSelect options={items.options} />
               </div>
+            ) : (
+              <Link href={items.link}>{items.name}</Link>
             )}
-            <div>{items.name}</div>
           </div>
         ))}
       </div>
