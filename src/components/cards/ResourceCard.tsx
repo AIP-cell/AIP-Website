@@ -5,13 +5,14 @@ import React from "react";
 type Props = {
   src: string;
   title: string;
-
   desc: string;
+  category: string;
 };
 const ResourceCard = ({
   src,
   title,
   desc,
+  category,
 }: Props) => {
   return (
     // tw-justify-center
@@ -24,7 +25,7 @@ const ResourceCard = ({
           className="tw-object-cover tw-rounded-[1.25rem]"
         />
       </div>
-      <p className="tw-text-h6Heading6M tw-text-gray80 tw-font-inter tw-font-semibold tw-leading-[1.575rem]">
+      <p className=" tw-w-full tw-text-h6Heading6M tw-text-gray80 tw-font-inter tw-font-semibold tw-leading-[1.575rem]">
         {title}
       </p>
       <p className="tw-text-h9BodyCopy5 tw-text-gray50 tw-font-inter tw-leading-[1.225rem]">
@@ -33,7 +34,7 @@ const ResourceCard = ({
       <div className="tw-h-px tw-bg-footerGray tw-w-full"></div>
       <div className="tw-flex tw-justify-between tw-w-full tw-text-h9BodyCopy5 tw-text-gray50 tw-font-inter tw-leading-[1.225rem]">
         <p>11 Jul 2024</p>
-        <p>Field/Sector</p>
+        <p>{category}</p>
       </div>
       <div className="tw-h-px tw-bg-footerGray tw-w-full"></div>
       <div className="tw-flex tw-justify-start tw-w-full tw-gap-[.75rem]">

@@ -61,7 +61,8 @@ const FinancialTabs = () => {
               </div>
             ))}
           </div>
-          <div className=" tw-flex tw-gap-2 0 tw-rounded-3xl tw-py-3 tw-px-7 tw-border tw-border-darkPurple">
+          <div className="tw-flex tw-w-full tw-justify-end">
+          <button className=" tw-flex tw-gap-2 0 tw-rounded-3xl tw-py-3 tw-px-7 tw-border tw-bottom-2 tw-border-darkPurple tw-w-fit">
             <p className="tw-font-playFair tw-text-h9BodyCopy5 leading-[1.225rem]  tw-text-darkPurple ">
               Download All
             </p>
@@ -70,6 +71,7 @@ const FinancialTabs = () => {
                 className="tw-w-[1.167rem] tw-h-[1.5rem]"
                 alt="download"
               />
+          </button>
           </div>
 
         </TabPanel>

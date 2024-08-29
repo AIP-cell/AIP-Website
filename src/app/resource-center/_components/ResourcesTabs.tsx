@@ -1,7 +1,7 @@
 import React from "react";
 import ArrowDownSvg from "@public/svg/arrowDown.svg";
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
-import ResourceCard from "./ResourceCard";
+import ResourceCard from "../../../components/cards/ResourceCard";
 import Image from "next/image";
 
 const datas = [
@@ -9,31 +9,37 @@ const datas = [
     src: "/svg/resourcePage/resource1.svg",
     title: "Wealth with Purpose- a report on Indian Philanthropy",
     desc: "This report a collaborative effort between Accelerate India Philanthropy (AIP) and Boston Consulting Group (BCG) delves into the motivations, challenges, strategies and decision-making processes of UHNIs across various stages of philanthropy. We interviewed 100 UHNIs as part of a selective sample, ensuring diverse representation across net worth, geographical location, source of wealth and stage of giving.",
+    category: "Field/Sector",
   },
   {
     src: "/svg/resourcePage/resource2.svg",
     title: "Getting Non-profits in India Scale Ready",
     desc: "A primary research report by AIP that presents a nationally representative view of the challenges that 65+ non-profits face in their journey to scale impact and recommends principles for philanthropists in supporting their grantees.",
+    category: "Field/Sector",
   },
   {
     src: "/svg/resourcePage/resource2.svg",
     title: "Enabling Good Vol 11",
     desc: "A monthly roundup from the world of philanthropy. In this edition, we introduce our five new Founders-Radhika and Kartik Bharat Ram, Rati Forbes, Mathew Cyriac, Pankaj Gupta, and Swati Apte and Alok Kshirsagar-whose expertise and shared passion for philanthropy brings remarkable value to our community",
+    category: "Field/Sector",
   },
   {
     src: "/svg/resourcePage/resource1.svg",
     title: "Wealth with Purpose- a report on Indian Philanthropy",
     desc: "This report a collaborative effort between Accelerate India Philanthropy (AIP) and Boston Consulting Group (BCG) delves into the motivations, challenges, strategies and decision-making processes of UHNIs across various stages of philanthropy. We interviewed 100 UHNIs as part of a selective sample, ensuring diverse representation across net worth, geographical location, source of wealth and stage of giving.",
+    category: "Field/Sector",
   },
   {
     src: "/svg/resourcePage/resource2.svg",
     title: "Getting Non-profits in India Scale Ready",
     desc: "A primary research report by AIP that presents a nationally representative view of the challenges that 65+ non-profits face in their journey to scale impact and recommends principles for philanthropists in supporting their grantees.",
+    category: "Field/Sector",
   },
   {
     src: "/svg/resourcePage/resource2.svg",
     title: "Enabling Good Vol 11",
     desc: "A monthly roundup from the world of philanthropy. In this edition, we introduce our five new Founders-Radhika and Kartik Bharat Ram, Rati Forbes, Mathew Cyriac, Pankaj Gupta, and Swati Apte and Alok Kshirsagar-whose expertise and shared passion for philanthropy brings remarkable value to our community",
+    category: "Field/Sector",
   },
 ];
 
@@ -59,14 +65,18 @@ const ResourcesTabs = () => {
       </TabList>
       <TabPanels>
         <div className="tw-flex tw-pt-[2rem] tw-gap-[.75rem]">
-          <p className="tw-py-3 tw-text-gray40 " >Filter by:</p>
-         
+          <p className="tw-py-3 tw-text-gray40 ">Filter by:</p>
+
           <div className="tw-p-3 tw-border-2 tw-rounded-md tw-flex tw-gap-[.79rem]">
-           <p className=" tw-text-gray80 tw-font-inter tw-text[.875rem] leading-[1.225rem]"> Fields/Sector </p> 
+            <p className=" tw-text-gray80 tw-font-inter tw-text[.875rem] leading-[1.225rem]">
+              Fields/Sector
+            </p>
             <Image src={ArrowDownSvg} alt="arrow down" />
           </div>
           <div className="tw-p-3 tw-border-2 tw-rounded-md tw-flex tw-gap-[.79rem]">
-           <p className=" tw-text-gray80 tw-font-inter tw-text[.875rem] leading-[1.225rem]">Date</p> 
+            <p className=" tw-text-gray80 tw-font-inter tw-text[.875rem] leading-[1.225rem]">
+              Date
+            </p>
             <Image src={ArrowDownSvg} alt="arrow down" />
           </div>
         </div>
@@ -79,6 +89,7 @@ const ResourcesTabs = () => {
                 src={item.src}
                 title={item.title}
                 desc={item.desc}
+                category={item.category}
               />
             ))}
           </div>

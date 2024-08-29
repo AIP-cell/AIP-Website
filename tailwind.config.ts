@@ -35,6 +35,7 @@ const config: Config = {
         "darkGray": "#282A20",
         "midGray": "#45484D",
         "textPurple":"#91298C",
+        "gray10":"#DFE0E5",
         "gray20":"#C0C3CC",
         "gray40":"#81848F",
         "gray80":"#323538",
@@ -42,7 +43,11 @@ const config: Config = {
         "gray60":"#575A61",
         "footerGray":"#DFE0E580",
         "purple10":"#E1CCED",
-        "lightPurplePink":"#E0ABDE"
+        "purple40":"#B861B3",
+        "lightPurplePink":"#E0ABDE",
+        "bgCollab":"#F3F3F3"
+        
+        
       },
       fontFamily: {
         inter: "var(--inter)",
