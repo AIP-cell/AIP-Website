@@ -1,12 +1,14 @@
 "use client";
 import React from "react";
+import Image from "next/image";
+import PlusSvg from "@public/svg/faq/plus.svg";
+import MinusSvg from "@public/svg/faq/minus.svg";
 
 import {
   Disclosure,
   DisclosureButton,
   DisclosurePanel,
 } from "@headlessui/react";
-import { PlusIcon, MinusIcon } from "@heroicons/react/20/solid";
 
 const FaqItem = () => {
   return (
@@ -22,14 +24,14 @@ const FaqItem = () => {
               What is the mission of our organization?
             </p>
             <div
-              className={`tw-transform tw-transition-transform tw-duration-300 ${
+              className={`tw-transform tw-transition-transform tw-duration-300  ${
                 open ? "tw-rotate-180" : "tw-rotate-0"
               }`}
             >
               {open ? (
-                <MinusIcon className="tw-w-3 tw-h-3" />
+                <Image src={MinusSvg} alt="Minus Image"  />
               ) : (
-                <PlusIcon className="tw-w-3 tw-h-3" />
+                <Image src={PlusSvg} alt="Plus Image" className="" />
               )}
             </div>
           </DisclosureButton>

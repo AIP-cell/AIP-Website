@@ -1,6 +1,6 @@
 import React from "react";
 import ArrowDownSvg from "@public/svg/arrowDown.svg";
-import projectBg from "@public/svg/projectsPage/projectBg.svg";
+import careerBg from "@public/svg/careers/careerBg.svg";
 import Image from "next/image";
 import Link from "next/link";
 import PositionsGrid from "../_components/PositionsGrid";
@@ -9,11 +9,11 @@ const page = () => {
   return (
     <div className=" tw-relative  tw-overflow-hidden">
       <Image
-        src={projectBg}
+        src={careerBg}
         alt=""
-        className="tw-left-48 tw-absolute tw-top-[0rem] "
+        className="tw-left-[13.8rem] tw-absolute tw-top-[-3rem] "
       />
-      <div className="container tw-mx-auto tw-relative  tw-px-[7.8rem] tw-pt-[5rem]">
+      <div className="container tw-mx-auto tw-relative tw-px-[7.8rem] tw-pt-[5rem]">
         <div className="tw-absolute tw-left-[7.8rem] tw-font-inter tw-top-[1.25rem]">
           <Link
             href=""
@@ -24,7 +24,7 @@ const page = () => {
           <Link href="#"> All Positions</Link>
         </div>
 
-        <p className="tw-font-inter tw-font-semibold tw-uppercase tw-leading-[1.3rem] tw-text-purple40">
+        <p className="tw-font-inter tw-font-semibold tw-uppercase tw-leading-[1.3rem] tw-text-purple40 tw-tracking-[.02rem]">
           All Positions
         </p>
         <p className="tw-leading-[2.6rem] tw-font-playFair tw-text-h4 tw-text-gray80 tw-pt-5 tracking-[0.02rem]">

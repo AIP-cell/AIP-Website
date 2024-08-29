@@ -35,9 +35,6 @@ const page = () => {
         <Image src={projectBg} alt="" className=" " />
       </div>
 
-
-    
-
       <div className="tw-max-w-[38.125rem] tw-relative  tw-pt-[12.5rem] tw-text-center container tw-mx-auto">
           <p className="tw-text-h2 tw-text-gray80 tw-leading-[3.713rem] tw-font-playFair tw-tracking-[-.04rem]">
           Why Work With 
@@ -49,8 +46,6 @@ const page = () => {
             Philanthropy can impact India’s future. 
             And you can be a part of creating that impact.
             </p>
-       
-       
        
        <OurThreeIs/>
        
