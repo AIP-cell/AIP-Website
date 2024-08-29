@@ -1,5 +1,5 @@
 import React from "react";
-import bcgSvg from "@public/svg/projectsPage/bcg.svg";
+import UserCheck from "@public/svg/careers/User_Check.svg";
 import Image from "next/image";
 
 const datas = [
@@ -44,8 +44,9 @@ const PositionsGrid = () => {
           </div>
           <div className="tw-text-end tw-leading-[1.4rem] tw-font-inter tw-w-full">
             <button className=" tw-rounded-3xl tw-py-3 tw-px-7 tw-border tw-border-darkPurple">
-              <p className="tw-font-inter tw-text-h9BodyCopy5 leading-[1.225rem]  tw-text-darkPurple tw-font-medium ">
+              <p className="tw-font-inter tw-text-h9BodyCopy5 tw-flex tw-gap-2 leading-[1.225rem]  tw-text-darkPurple tw-font-medium ">
               Apply
+              <Image src={UserCheck} alt="arrow down" />
               </p>
             </button>
           </div>
