@@ -6,7 +6,7 @@ import Image from 'next/image'
 const ImpactHeroSection = () => {
   return (
     <div className="tw-relative tw-w-full ">
-      <div className="tw-absolute  tw-inset-0 ">
+      <div className="tw-absolute tw-inset-0 ">
         <Wave
           fill="#91298C"
           paused={false}

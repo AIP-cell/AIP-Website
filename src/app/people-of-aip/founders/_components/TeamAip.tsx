@@ -22,26 +22,26 @@ const TeamAip = () => {
         <Image src={Bg2} alt="" className="tw-absolute tw-bottom-0 tw-left-0"/>
         <Image src={OvalPeach} alt="" className="tw-absolute tw-bottom-[15.75rem] tw-left-[17rem] tw-size-[12rem]"/>
         <div className="tw-flex tw-gap-[5.6rem] ">
-            <ATeamCard/>
-            <PTeamCard/>
+            <ATeamCard linkedin={true}/>
+            <PTeamCard linkedin={true}/>
         </div>
         <div className="tw-pt-[4rem] tw-flex tw-gap-[5.6rem] ">
-            <ATeamCard/>
-            <PTeamCard/>
+            <ATeamCard linkedin={true}/>
+            <PTeamCard linkedin={true}/>
         </div>
         <div className="tw-pt-[4rem] tw-flex tw-gap-[5.6rem] ">
-            <ATeamCard/>
-            <PTeamCard/>
-            <ATeamCard/>
-            <PTeamCard/>
+            <ATeamCard linkedin={true}/>
+            <PTeamCard linkedin={true}/>
+            <ATeamCard linkedin={true}/>
+            <PTeamCard linkedin={true}/>
         </div>
         <div className="tw-pt-[4rem] tw-flex tw-justify-end tw-gap-[5.6rem] ">
-            <ATeamCard/>
-            <PTeamCard/>
+            <ATeamCard linkedin={true}/>
+            <PTeamCard linkedin={true}/>
         </div>
         <div className="tw-pt-[4rem] tw-flex tw-justify-end tw-gap-[5.6rem] ">
-            <ATeamCard/>
-            <PTeamCard/>
+            <ATeamCard linkedin={true}/>
+            <PTeamCard linkedin={true}/>
         </div>
       </div>
     </div>
