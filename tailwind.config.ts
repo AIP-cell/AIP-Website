@@ -45,7 +45,11 @@ const config: Config = {
         "purple10":"#E1CCED",
         "purple40":"#B861B3",
         "lightPurplePink":"#E0ABDE",
-        "bgCollab":"#F3F3F3"
+        "bgCollab":"#F3F3F3",
+        "lightgrey": "#D9D9D9",
+        "darkBlack": "#2A2820",
+
+
         
         
       },
