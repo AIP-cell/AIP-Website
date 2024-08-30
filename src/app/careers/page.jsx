@@ -4,6 +4,8 @@ import Image from "next/image";
 import OurThreeIs from "./_components/whyWork";
 import Bg from "@public/svg/aboutPage/giving-roadmap/givingRoadMapHeroSectionBg.svg";
 import OvalPurple from "@public/svg/ovalPurple.svg";
+import PositionsGrid from "./_components/PositionsGrid";
+import usersBg from "@public/svg/careers/users.svg";
 
 const page = () => {
   return (
@@ -37,7 +39,7 @@ const page = () => {
         </p>
       </div>
 
-      <div className="tw-max-w-[38.125rem] tw-relative tw-text-center container tw-mx-auto">
+      <div className="tw-text-center">
         <p className="tw-text-h2 tw-text-gray80 tw-leading-[3.713rem] tw-font-playFair tw-tracking-[-.04rem] tw-pb-5">
           Why Work With{" "}
           <span className="tw-italic tw-text-textPurple">AIP?</span>
@@ -49,15 +51,44 @@ const page = () => {
 
         <OurThreeIs />
 
-        <div className="tw-pt-[12.5rem]">
-          <p className="tw-font-playFair tw-tracking-[-.04rem] tw-text-h2 tw-text-gray80 tw-leading-[3.3rem] tw-pb-5">
-            {" "}
-            Open
-            <span className="tw-italic tw-text-textPurple">Roles</span>
+        <p className="tw-pt-[12.5rem] tw-font-playFair tw-tracking-[-.04rem] tw-text-h2 tw-text-gray80 tw-leading-[3.3rem] tw-pb-5">
+          {" "}
+          Open
+          <span className="tw-italic tw-text-textPurple">Roles</span>
+        </p>
+        <p className="tw-font-inter tw-text-midGray tw-leading-[1.4rem]">
+          Join the movement to bring about
+        </p>
+        <p className="tw-font-inter tw-text-midGray tw-leading-[1.4rem]">
+          strategic philanthropy impact India’s transformation.
+        </p>
+      </div>
+
+      <PositionsGrid />
+      <div className="tw-pt-8">
+        <Link
+          className="tw-bg-darkPurple tw-px-7 tw-py-3 tw-flex tw-gap-2 tw-w-fit tw-rounded-3xl"
+          href="#"
+        >
+          <p className=" tw-font-inter tw-text-white tw-text-h9Copy5 tw-leading-[1.225rem]">
+            See all open positions
           </p>
-          <p className="tw-font-inter tw-text-midGray tw-leading-[1.4rem]">Join the movement to bring about</p>
-          <p className="tw-font-inter tw-text-midGray tw-leading-[1.4rem]">strategic philanthropy impact India’s transformation.</p>
+          <Image src={usersBg} alt="arrow down" />
+        </Link>
+      </div>
+      <div className=" tw-px-[6.563rem] tw-pt-20 tw-pb-[12.5rem] ">
+        <div className="tw-px-[9.375rem] tw-py-[2.063rem] tw-rounded-[1.25rem] tw-text-center tw-bg-lightgrey">
+          <p className="tw-font-playFair tw-text-h4a tw-leading-[2.113rem] tw-text-gray80">Can’t Find what you are looking for?</p>
+          <p className="tw-font-inter tw-leading-[1.4rem] tw-pt-3 tw-text-midGray">
+            Send in your resume and portfolio at
+            <span className="tw-text-textPurple">careers@indianphilanthropy.org</span>
+          </p>
         </div>
+      </div>
+      <div>
+        <p className="tw-text-darkBlack tw-text-center tw-tracking-[0.04rem] tw-text-h2 tw-leading-[3.3rem] tw-font-playFair">
+          Testimonials
+        </p>
       </div>
     </div>
   );

@@ -46,7 +46,11 @@ const config: Config = {
         "purple40":"#B861B3",
         "lightPurplePink":"#E0ABDE",
         "bgCollab":"#F3F3F3",
-        "darkBrown":"#2A2820"
+        "lightgrey": "#D9D9D9",
+        "darkBlack": "#2A2820",
+
+
+        
         
       },
       fontFamily: {

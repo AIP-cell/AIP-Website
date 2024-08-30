@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import PositionsGrid from "../_components/PositionsGrid";
 
+
 const page = () => {
   return (
     <div className=" tw-relative  tw-overflow-hidden">
