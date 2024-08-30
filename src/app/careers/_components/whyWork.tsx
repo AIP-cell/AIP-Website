@@ -1,8 +1,8 @@
 import ImgTitleDescVer from "@/components/cards/ImgTitleDescVer";
 import React from "react";
-const threeIs = [
+const works = [
   {
-    src: "/svg/aboutPage/aip-journey/three-I-s/inform.svg",
+    src: "/svg/careers/career2.png",
     title: "Inclusive Diversity",
     desc: "Embracing diverse backgrounds and perspectives to create an inclusive and dynamic workplace.",
   },
@@ -17,16 +17,15 @@ const threeIs = [
     desc: "Fostering a culture of innovation where creativity and new ideas are encouraged and rewarded.",
   },
   {
-    src: "/svg/aboutPage/aip-journey/three-I-s/inspire.svg",
+    src: "/svg/careers/career3.png",
     title: "Career Development",
     desc: "Providing continuous learning and growth opportunities through training, mentorship, and career advancement programs.",
   },
 ];
-const OurThreeIs = () => {
+const whyWork = () => {
   return (
-    <div className="container tw-mx-auto tw-grid tw-grid-cols-2 tw-pt-[1.25rem] tw-relative">
-   
-        {threeIs.map((item, i) => (
+    <div className="tw-grid tw-grid-cols-2 tw-gap-20 tw-relative">
+        {works.map((item, i) => (
           <ImgTitleDescVer
             key={i}
             src={item.src}
@@ -40,4 +39,4 @@ const OurThreeIs = () => {
   );
 };
 
-export default OurThreeIs;
+export default whyWork;

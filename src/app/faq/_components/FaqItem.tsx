@@ -17,14 +17,14 @@ const FaqItem = () => {
         <>
           <DisclosureButton className="tw-py-7 tw-px-5 tw-flex tw-justify-between tw-w-full">
             <p
-              className={`tw-text-h6M ${
+              className={`tw-text-h6M tw-font-inter ${
                 open ? "tw-text-textPurple" : "tw-text-gray80"
               }`}
             >
               What is the mission of our organization?
             </p>
             <div
-              className={`tw-transform tw-transition-transform tw-duration-300  ${
+              className={`tw-transform tw-size-5 tw-flex tw-justify-center tw-items-center tw-transition-all tw-duration-300  ${
                 open ? "tw-rotate-180" : "tw-rotate-0"
               }`}
             >

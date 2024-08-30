@@ -21,6 +21,7 @@ const page = () => {
         </Link>
         <Link href="">Giving Roadmap</Link>
       </div>
+     
       <div className="tw-text-center tw-relative">
         <Image src={Bg} alt="" className="tw-absolute tw-top-[14rem]" />
         <Image

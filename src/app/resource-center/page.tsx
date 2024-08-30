@@ -10,7 +10,7 @@ const page = () => {
           href=""
           className="tw-text-gray50 tw-text-h9Copy5 tw-leading-[19.6px]"
         >
-          {"<"} Resource Center / AIP Resources / &nbsp;/&nbsp;
+          {"<"} Resource Center / AIP Resources / &nbsp;
         </Link>
         <Link href="#">Reports</Link>
       </div>
