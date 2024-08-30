@@ -4,8 +4,10 @@ import Linkedin from "@public/svg/grayLinkedin.svg";
 import Src from "@public/images/aTeamSample.png";
 type Props = {
   linkedin: boolean;
+  title: string
+  desc: string
 };
-const ATeamCard = ({ linkedin }: Props) => {
+const ATeamCard = ({ linkedin,title,desc }: Props) => {
   return (
     <div className="tw-w-[11.87rem] tw-relative">
       <Image src={Src} alt="" className="tw-w-full" />
@@ -18,10 +20,10 @@ const ATeamCard = ({ linkedin }: Props) => {
       )}
       <div className="tw-flex tw-flex-col tw-gap-[0.5rem]">
         <h3 className="tw-text-h4 tw-leading-[2.6rem] tw-text-gray80 tw-font-playFair">
-          Ashish Dhawan
+          {title}
         </h3>
         <p className="tw-italic tw-text-h5 tw-text-gray40 tw-leading-[1.75rem] tw-font-playFair ">
-          Operating Partner
+          {desc}
         </p>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import CaseStudy from "@/components/cards/CaseStudy";
-import React from "react";
+import CurveBg from "@public/svg/aboutPage/aip-impact/caseStudyPeachCurve.svg"
+import Image from "next/image";
 
 const caseStudyData = [
   {
@@ -21,7 +22,8 @@ const caseStudyData = [
 const CaseStudies = () => {
   return (
     <div>
-      <div className="container tw-mx-auto tw-pt-[12.5rem]">
+      <div className=" tw-relative container tw-mx-auto tw-py-[12.5rem]">
+        <Image src={CurveBg} alt="" className="tw-absolute tw-flex tw-items-center tw-h-full tw-left-0"/>
         <h2 className="tw-text-center tw-text-h2 tw-text-darkBrown tw-font-playFair">
           Case <i className="tw-text-textPurple"> Studies</i>
         </h2>

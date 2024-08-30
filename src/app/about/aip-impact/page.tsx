@@ -3,6 +3,7 @@ import React from "react";
 import ImpactHeroSection from "./_components/ImpactHeroSection";
 import CaseStudies from "./_components/CaseStudies";
 import FoundationFacts from "./_components/FoundationFacts";
+import PeopleWeWorkWith from "./_components/PeopleWeWorkWith";
 
 const page = () => {
   return (
@@ -10,6 +11,7 @@ const page = () => {
       <ImpactHeroSection/>
       <CaseStudies/>
       <FoundationFacts/>
+      <PeopleWeWorkWith/>
     </div>
   );
 };

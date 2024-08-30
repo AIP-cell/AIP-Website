@@ -31,7 +31,7 @@ const ValueSlick = () => {
         <p className="tw-w-[25rem]">{valueDescArray.at(change)}</p>
         <div
           onClick={previous}
-          className="tw-absolute tw-left-[8rem] tw-z-20 tw-text-midGray tw-leading-[22.4px] tw-font-inter tw-bg-darkPurple tw-rounded-tl-full tw-rounded-bl-full tw-rounded-tr-2xl tw-rounded-br-2xl tw-py-[1.15rem] tw-px-[0.92rem]"
+          className="tw-absolute tw-left-[8rem] tw-z-20 tw-text-midGray tw-leading-[22.4px] tw-font-inter tw-bg-darkPurple tw-rounded-tl-3xl tw-rounded-bl-3xl tw-rounded-tr-xl tw-rounded-br-xl tw-py-[1.15rem] tw-px-[0.92rem]"
         >
           <div className="tw-relative tw-w-[1rem] tw-h-[0.57rem]">
             <Image src={LeftArrow} alt="left-arrow" fill className="" />
@@ -39,7 +39,7 @@ const ValueSlick = () => {
         </div>
         <div
           onClick={next}
-          className="tw-absolute tw-right-[8rem]  tw-bg-darkPurple tw-rounded-tr-full tw-rounded-br-full tw-rounded-tl-2xl tw-rounded-bl-2xl tw-py-[1.15rem] tw-px-[0.92rem]"
+          className="tw-absolute tw-right-[8rem]  tw-bg-darkPurple tw-rounded-tr-3xl tw-rounded-br-3xl tw-rounded-tl-xl tw-rounded-bl-xl tw-py-[1.15rem] tw-px-[0.92rem]"
         >
           <div className="tw-relative tw-w-[1rem] tw-h-[0.57rem]">
             <Image src={RightArrow} alt="right-arrow" />

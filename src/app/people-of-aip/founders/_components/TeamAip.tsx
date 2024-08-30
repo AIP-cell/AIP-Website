@@ -22,26 +22,26 @@ const TeamAip = () => {
         <Image src={Bg2} alt="" className="tw-absolute tw-bottom-0 tw-left-0"/>
         <Image src={OvalPeach} alt="" className="tw-absolute tw-bottom-[15.75rem] tw-left-[17rem] tw-size-[12rem]"/>
         <div className="tw-flex tw-gap-[5.6rem] ">
-            <ATeamCard linkedin={true}/>
-            <PTeamCard linkedin={true}/>
+            <ATeamCard title="Piyush Doshi" desc="Operating Partner" linkedin={true}/>
+            <PTeamCard title="Amitabh Jaipuria" desc="CEO" linkedin={true}/>
         </div>
         <div className="tw-pt-[4rem] tw-flex tw-gap-[5.6rem] ">
-            <ATeamCard linkedin={true}/>
-            <PTeamCard linkedin={true}/>
+            <ATeamCard title="Radhika Jain" desc="Philanthropic Partner" linkedin={true}/>
+            <PTeamCard title="Aditi Ray" desc="Philanthropic Partner" linkedin={true}/>
         </div>
         <div className="tw-pt-[4rem] tw-flex tw-gap-[5.6rem] ">
-            <ATeamCard linkedin={true}/>
-            <PTeamCard linkedin={true}/>
-            <ATeamCard linkedin={true}/>
-            <PTeamCard linkedin={true}/>
+            <ATeamCard title="Dr. Preethi Jain" desc="Philanthropic Partner" linkedin={true}/>
+            <PTeamCard  title="Vishal Dutta" desc="Head, Knowledge" linkedin={true}/>
+            <ATeamCard title="Jhilmil Garg" desc="Program Manager" linkedin={true}/>
+            <PTeamCard title="Isha Mathur" desc="Program Manager" linkedin={true}/>
         </div>
         <div className="tw-pt-[4rem] tw-flex tw-justify-end tw-gap-[5.6rem] ">
-            <ATeamCard linkedin={true}/>
-            <PTeamCard linkedin={true}/>
+            <ATeamCard title="Bhavana S Resmi" desc="Program Associate" linkedin={true}/>
+            <PTeamCard title="Aparna Joshi" desc="Program Manager" linkedin={true}/>
         </div>
         <div className="tw-pt-[4rem] tw-flex tw-justify-end tw-gap-[5.6rem] ">
-            <ATeamCard linkedin={true}/>
-            <PTeamCard linkedin={true}/>
+            <ATeamCard title="Dr. Sabhyata Prakash" desc="Communication & Brand Manager" linkedin={true}/>
+            <PTeamCard title="Annie Bisht" desc="Executive Assistant" linkedin={true}/>
         </div>
       </div>
     </div>

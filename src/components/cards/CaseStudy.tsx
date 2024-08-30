@@ -9,7 +9,7 @@ type Props = {
 };
 const CaseStudy = ({ title, desc, image, index }: Props) => {
   return (
-    <div className="tw-grid tw-grid-cols-2 tw-gap-[7.81rem]">
+    <div className="tw-relative tw-grid tw-grid-cols-2 tw-gap-[7.81rem]">
       <div
         className={cn(
           "tw-col-span-1 tw-flex tw-flex-col tw-items-start tw-order-1",
