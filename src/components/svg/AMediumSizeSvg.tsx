@@ -1,15 +1,14 @@
-import * as React from "react";
 import { SVGProps } from "react";
 type Props = {
-  src:string
-  props?: SVGProps<any>
-  className:string
-}
-const ASvg = ({props,src,className}:Props) => (
+  src: string;
+  props?: SVGProps<any>;
+  className: string;
+};
+const AMediumSizeSvg = ({ props, src, className }: Props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    
-    className={className}
+    width={190}
+    height={223}
     fill="none"
     {...props}
   >
@@ -17,9 +16,8 @@ const ASvg = ({props,src,className}:Props) => (
       <mask id="shape">
         <path
           fill="#DFE0E5"
-          d="M295 147.5C295 66.038 228.962 0 147.5 0S0 66.038 0 147.5 66.038 295 147.5 295h89.657a20.002 20.002 0 0 1 14.213 5.929L295 345V147.5Z"
+          d="M190 95c0-52.467-42.533-95-95-95S0 42.533 0 95s42.533 95 95 95h55.282c5.015 0 9.822 2.005 13.35 5.569L190 222.203V95Z"
         />
-        
       </mask>
     </defs>
     <image
@@ -33,4 +31,4 @@ const ASvg = ({props,src,className}:Props) => (
     />
   </svg>
 );
-export default ASvg;
+export default AMediumSizeSvg;

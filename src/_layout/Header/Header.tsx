@@ -13,8 +13,8 @@ const headerData = [
       { option: "AIP Impact", link: "/about/aip-impact" },
       { option: "Giving Roadmap", link: "/about/giving-roadmap" },
       { option: "Financial Reports", link: "#" },
-      { option: "AIP Founder Network", link: "#" },
-      { option: "Philanthropist Network", link: "#" },
+      { option: "AIP Founder Network", link: "/about/aip-founder-network" },
+      { option: "Philanthropist Network", link: "/about/philanthropist-network" },
     ],
   },
   {
@@ -31,7 +31,7 @@ const headerData = [
     width: " tw-w-[10.5rem] ",
     options: [
       { option: "Products & Services", link: "#" },
-      { option: "Our Offerings", link: "#" },
+      { option: "Our Offerings", link: "/products-and-services/our-offerings" },
       { option: "NPO Registry", link: "#" },
       { option: "Projects and Programs", link: "#" },
       { option: "Collaborations", link: "#" },
@@ -52,11 +52,12 @@ const headerData = [
 ];
 const Header = () => {
   return (
-    <div className="tw-z-[10000] tw-sticky tw-top-0 tw-bg-white tw-flex tw-justify-between tw-py-[1.1rem] tw-px-[1.25rem] tw-overflow-hidden">
+    <div className="tw-z-[10000] tw-sticky tw-top-0 tw-bg-white tw-flex tw-justify-between tw-py-[1.1rem] tw-px-[1.25rem] ">
       <Link href="/">
         <LogoHeaderSvg />
       </Link>
-      <div className="tw-flex tw-gap-[2.5rem]">
+      {/* tw-relative */}
+      <div className="tw-flex tw-gap-[2.5rem] ">
         {headerData.map((items: any, index: number) => (
           <div key={index} className="tw-flex  tw-items-center ">
             {items.options ? (
@@ -69,7 +70,7 @@ const Header = () => {
           </div>
         ))}
       </div>
-      <div className=" tw-flex  tw-rounded-full tw-border-2 tw-border-darkPurple vrelative">
+      <div className=" tw-flex  tw-rounded-full tw-border-2 tw-border-darkPurple tw-relative">
         <div className="tw-rounded-full tw-bg-darkPurple  tw-px-[1.75rem] tw-py-[0.75rem] ">
           <h3 className="tw-text-white">Get Involved</h3>
         </div>

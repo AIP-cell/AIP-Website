@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
-import Header from "@/_layout/Header";
+import Header from "@/_layout/Header/Header";
 import Footer from "@/_layout/Footer";
 
 const inter = Inter({ subsets: ["latin"], variable: "--inter" });
@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${playfairDisplay.variable} tw-bg-bgLightPeach tw-font-inter no-scrollbar tw-overflow-x-hidden`}>
+      <body className={`${inter.variable} ${playfairDisplay.variable} !tw-overflow-y-auto tw-bg-bgLightPeach tw-font-inter no-scrollbar tw-overflow-x-hidden`}>
         <Header />
         {children}
         <Footer />

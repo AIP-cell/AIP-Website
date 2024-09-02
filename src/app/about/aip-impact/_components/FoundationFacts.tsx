@@ -4,15 +4,18 @@ import OvalPeach from "@/components/ovals/OvalPeach";
 import OvalPurple from "@/components/ovals/OvalPurple";
 import Bg from "@public/svg/aboutPage/aip-impact/foundationFactBg.svg";
 import Link from "next/link";
-const FoundationFacts = () => {
+type Props = {
+  button?: string;
+};
+const FoundationFacts = ({ button }: Props) => {
   return (
-    <div className=" tw-relative bg-container tw-mx-auto">
+    <div className=" tw-relative bg-container tw-mx-auto tw-pt-[12.5rem]">
       {/* <Image
         src={Bg}
         alt=""
         className="tw-absolute tw-top-0 tw-inset-x-0 tw-object-cover tw-w-full"
       /> */}
-      <div className="tw-relative container tw-mx-auto">
+      <div className="tw-relative container tw-mx-auto tw-pb-[47rem]">
         <h2 className=" tw-text-h2 tw-text-center tw-font-playFair">
           Foundation <i className="tw-text-textPurple"> Facts</i>
         </h2>
@@ -64,13 +67,19 @@ const FoundationFacts = () => {
           text2="Knowledge Products"
           textClass2=" tw-leading-[1.4rem]"
         />
-        <div className="tw-flex tw-justify-center tw-pt-[47rem]">
-          <Link href="/about/aip-impact/foundation-fact-sheet" className="tw-bg-darkPurple tw-rounded-full">
-            <p className="tw-px-[1.75rem] tw-py-[0.75rem] tw-text-white tw-leading-[1.4rem]">
-              View More
-            </p>
-          </Link>
-        </div>
+        {/* tw-pt-[47rem] */}
+        {button && (
+          <div className="tw-flex tw-justify-center tw-absolute tw-bottom-0 tw-w-full ">
+            <Link
+              href="/about/aip-impact/foundation-fact-sheet"
+              className="tw-bg-darkPurple tw-rounded-full"
+            >
+              <p className="tw-px-[1.75rem] tw-py-[0.75rem] tw-text-white tw-leading-[1.4rem]">
+                {button}
+              </p>
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );
