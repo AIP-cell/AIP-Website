@@ -2,13 +2,19 @@ import Image from "next/image";
 import React from "react";
 import Src from "@public/images/aSample.png";
 import PlayButtonPurple from "@public/svg/playButtonPurple.svg";
+import ASvg from "@/components/svg/ASvg";
 
 const ACardWithPlaySign = () => {
   return (
     <div className="tw-w-[18.43rem] tw-relative ">
       <div className="tw-relative tw-flex tw-justify-center">
-        <Image src={Src} alt="" />
-        <Image src={PlayButtonPurple} alt=""  className="tw-absolute tw-bottom-[4rem]"/>
+        {/* <Image src={Src} alt="" /> */}
+        <ASvg src="/images/aSample.png" />
+        <Image
+          src={PlayButtonPurple}
+          alt=""
+          className="tw-absolute tw-bottom-[4rem] hover:tw-scale-105 tw-transition-all tw-duration-150 tw-cursor-pointer"
+        />
       </div>
       <div className="tw-flex tw-flex-col tw-gap-[0.75rem]">
         <h3 className="tw-text-h4 tw-leading-[2.6rem] tw-text-[#DFE0E5] tw-font-playFair">

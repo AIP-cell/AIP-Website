@@ -10,14 +10,14 @@ type Props = {
 const FoundationFacts = ({ button }: Props) => {
   return (
     <div className=" tw-relative bg-container tw-mx-auto tw-pt-[12.5rem]">
-      {/* <Image
+      <Image
         src={Bg}
         alt=""
-        className="tw-absolute tw-top-0 tw-inset-x-0 tw-object-cover tw-w-full"
-      /> */}
+        className="tw-absolute tw-top-[-25rem] tw-w-full"
+      />
       <div className="tw-relative container tw-mx-auto tw-pb-[47rem]">
         <h2 className=" tw-text-h2 tw-text-center tw-font-playFair">
-          Foundation <i className="tw-text-textPurple"> Facts</i>
+          Foundation <span className="tw-text-textPurple tw-font-playFairItalic"> Facts</span>
         </h2>
         <OvalPeach
           mainClass="tw-absolute tw-top-[2.5rem] tw-left-[8.93rem]"
@@ -53,7 +53,7 @@ const FoundationFacts = ({ button }: Props) => {
         />
         <OvalPeach
           mainClass="tw-absolute tw-bottom-[6.81rem] tw-flex tw-w-full tw-justify-center tw-right-[3rem]"
-          text1="3 continents"
+          text1="continents"
           textClass1="tw-text-h3 tw-leading-[3.25rem] tw-font-semibold tw-text-black"
           sizeClass="tw-size-[17.38rem]"
           text2="Footprint"

@@ -6,7 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-  --h:6rem
+  --h: 6rem;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -16,16 +16,14 @@
     --background-end-rgb: 0, 0, 0;
   }
 } */
- 
 
-.container{
+.container {
   max-width: 1280px !important;
 }
-.bg-container{
+.bg-container {
   max-width: 2000px !important;
 }
 @layer utilities {
-
   /* Hide scrollbar for Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {
     display: none !important;
@@ -39,7 +37,16 @@
     /* Firefox */
   }
 }
-
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none !important;
+}
+html,
+body {
+  -ms-overflow-style: none !important;
+  /* IE and Edge */
+  scrollbar-width: none !important;
+}
 .tk-blob {
   animation: blob-turn var(--time, 30s) linear infinite;
   fill: var(--fill, #7600f8);
@@ -48,12 +55,12 @@
 }
 
 .tk-blob svg {
-  animation: blob-skew calc( var(--time, 30s) * 0.5 ) linear 0s infinite;
+  animation: blob-skew calc(var(--time, 30s) * 0.5) linear 0s infinite;
   transform-origin: center;
 }
 
 .tk-blob svg path {
-  animation: blob-scale calc( var(--time, 30s) * 0.5 ) ease-in-out 0s infinite;
+  animation: blob-scale calc(var(--time, 30s) * 0.5) ease-in-out 0s infinite;
   transform-origin: center;
 }
 
@@ -71,69 +78,69 @@
     transform: skewY(0deg);
   }
   13% {
-    transform: skewY( calc( (1.8deg) * var(--amount, 2)) );
+    transform: skewY(calc((1.8deg) * var(--amount, 2)));
   }
   18% {
-    transform: skewY( calc( (2.2deg) * var(--amount, 2)) );
+    transform: skewY(calc((2.2deg) * var(--amount, 2)));
   }
   24% {
-    transform: skewY( calc( (2.48deg) * var(--amount, 2)) );
+    transform: skewY(calc((2.48deg) * var(--amount, 2)));
   }
   25% {
-    transform: skewY( calc( (2.5deg) * var(--amount, 2)) );
+    transform: skewY(calc((2.5deg) * var(--amount, 2)));
   }
   26% {
-    transform: skewY( calc( (2.48deg) * var(--amount, 2)) );
+    transform: skewY(calc((2.48deg) * var(--amount, 2)));
   }
   32% {
-    transform: skewY( calc( (2.2deg) * var(--amount, 2)) );
+    transform: skewY(calc((2.2deg) * var(--amount, 2)));
   }
   37% {
-    transform: skewY( calc( (1.8deg) * var(--amount, 2)) );
+    transform: skewY(calc((1.8deg) * var(--amount, 2)));
   }
   50% {
     transform: skewY(0deg);
   }
   63% {
-    transform: skewY( calc( (-1.8deg) * var(--amount, 2)) );
+    transform: skewY(calc((-1.8deg) * var(--amount, 2)));
   }
   68% {
-    transform: skewY( calc( (-2.2deg) * var(--amount, 2)) );
+    transform: skewY(calc((-2.2deg) * var(--amount, 2)));
   }
   74% {
-    transform: skewY( calc( (-2.48deg) * var(--amount, 2)) );
+    transform: skewY(calc((-2.48deg) * var(--amount, 2)));
   }
   75% {
-    transform: skewY( calc( (-2.5deg) * var(--amount, 2)) );
+    transform: skewY(calc((-2.5deg) * var(--amount, 2)));
   }
   76% {
-    transform: skewY( calc( (-2.48deg) * var(--amount, 2)) );
+    transform: skewY(calc((-2.48deg) * var(--amount, 2)));
   }
   82% {
-    transform: skewY( calc( (-2.2deg) * var(--amount, 2)) );
+    transform: skewY(calc((-2.2deg) * var(--amount, 2)));
   }
   87% {
-    transform: skewY( calc( (-1.8deg) * var(--amount, 2)) );
+    transform: skewY(calc((-1.8deg) * var(--amount, 2)));
   }
   100% {
     transform: skewY(0deg);
   }
 }
- 
+
 @keyframes blob-scale {
   0% {
-    transform: scaleX(.9) scaleY(1);
+    transform: scaleX(0.9) scaleY(1);
   }
   25% {
-    transform: scaleX(.9) scaleY(.9);
+    transform: scaleX(0.9) scaleY(0.9);
   }
   50% {
-    transform: scaleX(1) scaleY(.9);
+    transform: scaleX(1) scaleY(0.9);
   }
   75% {
-    transform: scaleX(.9) scaleY(.9);
+    transform: scaleX(0.9) scaleY(0.9);
   }
   100% {
-    transform: scaleX(.9) scaleY(1);
+    transform: scaleX(0.9) scaleY(1);
   }
 }

@@ -20,8 +20,8 @@ const newsData = [
 const News = () => {
   return (
     <div className="tw-flex container tw-mx-auto tw-flex-col tw-justify-center tw-items-center tw-pb-[8.5rem]">
-      <div className="tw-text-h2 tw-px-[14.375rem] tw-text-midGray tw-pb-[3.5rem] tw-text-center tw-leading-[52.8px]">
-        Get the latest <i className="tw-text-textPurple">news and updates</i> on
+      <div className="tw-text-h2 tw-font-playFair tw-px-[14.375rem] tw-text-midGray tw-pb-[3.5rem] tw-text-center tw-leading-[52.8px]">
+        Get the latest <span className="tw-text-textPurple tw-font-playFairItalic">&nbsp;news and updates</span> on
         Accelerated India Philanthrophy
       </div>
       <div className="tw-bg-bgGray5 tw-flex tw-items-center tw-rounded-full tw-p-1">

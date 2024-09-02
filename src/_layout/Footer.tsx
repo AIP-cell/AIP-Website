@@ -9,6 +9,7 @@ import FooterFish from "../../public/svg/footer/fish/footerFish.svg";
 import Wave from "react-wavify";
 
 import Link from "next/link";
+import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 const footerLinks = [
   {
     name: "FAQ",
@@ -70,13 +71,15 @@ const Footer = () => {
             <div className="tw-basis-3/4 tw-flex tw-items-center tw-justify-end">
               <div className=" tw-flex tw-gap-[1.75rem]">
                 {footerLinks.map((items, i) => (
-                  <Link
-                    key={i}
-                    href={items.link}
-                    className="tw-text-h9Copy5 tw-leading-[19.6px] tw-font-inter tw-text-white"
-                  >
-                    {items.name}
-                  </Link>
+                  <ButtonAnimation>
+                    <Link
+                      key={i}
+                      href={items.link}
+                      className="tw-text-h9Copy5 tw-leading-[19.6px] tw-font-inter tw-text-white"
+                    >
+                      {items.name}
+                    </Link>
+                  </ButtonAnimation>
                 ))}
               </div>
             </div>
@@ -85,31 +88,39 @@ const Footer = () => {
                 Accelerate Indian Philanthropy
               </h3>
               <p className="tw-pt-[0.75rem] tw-text-h9Copy5 tw-font-inter tw-text-white/60">
-                Ananda, 242 Okhla Industrial Estate Phase III, New Delhi, India
-                110020 info@indianphilanthropy.org
+                Ananda, 242 Okhla Industrial Estate
               </p>
+              <p className=" tw-text-h9Copy5 tw-font-inter tw-text-white/60">Phase III, New Delhi, India 110020</p>
+              <ButtonAnimation>
+                <Link
+                  href="mailto:info@indianphilanthropy.org"
+                  className=" tw-text-h9Copy5 tw-font-inter tw-text-white/60"
+                >
+                  info@indianphilanthropy.org
+                </Link>
+              </ButtonAnimation>
               <div className="tw-flex tw-gap-[1.25rem] tw-pt-[2rem]">
-                <div className="tw-relative tw-size-[2.5rem]">
+                <ButtonAnimation className="tw-relative tw-size-[2.5rem]">
                   <Image src={X} alt="" />
-                </div>
-                <div className="tw-relative tw-size-[2.5rem]">
+                </ButtonAnimation>
+                <ButtonAnimation className="tw-relative tw-size-[2.5rem]">
                   <Image src={In} alt="" />
-                </div>
-                <div className="tw-relative tw-size-[2.5rem]">
+                </ButtonAnimation>
+                <ButtonAnimation className="tw-relative tw-size-[2.5rem]">
                   <Image src={Youtube} alt="" />
-                </div>
+                </ButtonAnimation>
               </div>
             </div>
-            <div className="tw-basis-3/4 tw-flex  tw-justify-end tw-pt-[2rem]">
-              <div className="tw-w-[25rem] tw-h-[2.8rem]  tw-flex tw-rounded-full  tw-relative   tw-rounded-br-full   tw-items-center tw-justify-end">
-                <button className="tw-absolute tw-pr-[2.56rem] tw-z-[50] tw-pl-[4rem] tw-text-textPurple tw-flex tw-items-center tw-justify-end tw-bg-white tw-h-full tw-rounded-full tw-text-right tw-text-h9Copy5 tw-font-inter">
-                  Join
-                </button>
+            <div className="tw-basis-3/4 tw-flex tw-w-full tw-justify-end tw-pt-[2rem]">
+              <div className="tw-w-[25rem] tw-h-[2.8rem] tw-bg-white tw-flex tw-rounded-full  tw-relative   tw-rounded-br-full   tw-items-center tw-justify-end">
                 <input
                   type="text"
                   placeholder=" Sign up for our newsletter"
-                  className="tw-outline-none tw-rounded-full tw-text-footerGray  tw-bg-[#5a4a9a] tw-absolute tw-top-0 tw-left-0 tw-z-[100] tw-flex tw-items-center tw-border-2 tw-border-footerGray tw-pl-[1.5rem] tw-pr-[4.5rem]  tw-h-full "
+                  className="tw-outline-none tw-rounded-full tw-text-footerGray tw-w-[75%]  tw-bg-[#5a4a9a] tw-absolute tw-top-0 tw-left-0 tw-z-[100] tw-flex tw-items-center tw-border-2 tw-border-footerGray tw-pl-[1.5rem]   tw-h-full "
                 ></input>
+                <button className="tw-absolute tw-w-[25%] tw-pr-[2.56rem] tw-z-[50] tw-pl-[4rem] tw-text-textPurple tw-flex tw-items-center tw-justify-end tw-bg-white tw-h-full tw-rounded-full tw-text-right tw-text-h9Copy5 tw-font-inter">
+                  Join
+                </button>
               </div>
             </div>
           </div>

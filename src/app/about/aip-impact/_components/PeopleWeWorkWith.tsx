@@ -49,7 +49,7 @@ const PeopleWeWorkWith = () => {
   return (
     <div className="tw-pt-[12.5rem] tw-pb-[7.5rem] container tw-mx-auto">
       <h2 className="tw-text-h2 tw-font-playFair tw-text-darkBrown tw-text-center">
-        People We <i className="tw-text-textPurple"> Work With</i>
+        People We <span className="tw-text-textPurple tw-font-playFairItalic"> Work With</span>
       </h2>
       <div className="tw-pt-[5rem]">
         <div className=" tw-flex tw-justify-center tw-flex-wrap tw-gap-[5.625rem]">

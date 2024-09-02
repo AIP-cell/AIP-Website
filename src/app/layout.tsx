@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
-import Header from "@/_layout/Header/Header";
+import Header from "@/_layout/Header";
 import Footer from "@/_layout/Footer";
 import localFont from "next/font/local";
 
@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${playfairDisplay.variable} ${playfairDisplayItalic.variable} !tw-overflow-y-auto tw-bg-bgLightPeach tw-font-inter no-scrollbar tw-overflow-x-hidden`}
+        className={`${inter.variable} ${playfairDisplay.variable} ${playfairDisplayItalic.variable} !tw-overflow-y-auto tw-bg-bgLightPeach tw-font-inter no-scrollbar tw-overflow-x-hidden  `}
       >
         <Header />
         {children}

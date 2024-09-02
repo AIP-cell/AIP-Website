@@ -25,7 +25,7 @@ const ImgTitleDescVer = ({
       <h3
         className={` ${titleClassName} tw-text-h3 tw-text-darkGray tw-font-playFair tw--tracking-[4%]`}
       >
-        {title} <i className="tw-text-textPurple">{span}</i>
+        {title} <span className="tw-text-textPurple tw-font-playFairItalic">{span}</span>
       </h3>
       <h4
         className={`${descClassName} tw-text-h9Copy4 tw-text-center tw-text-midGray`}

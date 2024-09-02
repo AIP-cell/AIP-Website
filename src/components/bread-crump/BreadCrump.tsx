@@ -51,7 +51,7 @@ const BreadCrump = ({
       {textThree && linkThree && (
         <Link
           href={linkThree}
-          className={cn("tw-text-black tw-text-h9Copy5 tw-leading-[19.6px]", {
+          className={cn("tw-text-black tw-text-h9Copy5 tw-flex tw-leading-[19.6px]", {
             "!tw-text-gray50": textFour,
           })}
         >

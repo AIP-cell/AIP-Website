@@ -12,8 +12,8 @@ const Story = () => {
         // fill
       />
       {/* </div> */}
-      <h2 className="tw-text-h2 tw-text-gray80 tw-flex tw-justify-center">
-        Our <i className="tw-text-textPurple"> Story</i>
+      <h2 className="tw-text-h2 tw-text-gray80 tw-font-playFair tw-flex tw-justify-center">
+        Our <span className="tw-text-textPurple tw-font-playFairItalic"> &nbsp;Story</span>
       </h2>
       <div className=" tw-pt-[3rem]  tw-flex tw-flex-col tw-justify-center tw-items-center tw-gap-[1rem]">
         <div className="tw-flex tw-flex-col tw-text-midGray tw-font-inter tw-items-center tw-justify-center tw-text-h9Copy4 tw-leading-[22.4px]">

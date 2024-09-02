@@ -1,6 +1,7 @@
 import cn from "@/utils/tailwind";
 import Image from "next/image";
 import React from "react";
+import { ButtonAnimation } from "../animations/ButtonAnimation";
 type Props = {
   title: string;
   desc: string;
@@ -23,11 +24,11 @@ const CaseStudy = ({ title, desc, image, index }: Props) => {
           {desc}
         </p>
         <div className="tw-pt-[2.5rem]">
-          <button className=" tw-rounded-full  tw-border-2 tw-border-darkPurple ">
+          <ButtonAnimation className=" tw-rounded-full  tw-border-2 tw-border-darkPurple ">
             <h3 className="tw-text-darkPurple tw-font-medium tw-text-h9Copy5 tw-leading-[1.225rem] tw-py-[0.75rem] tw-px-[1.75rem]">
               Read More
             </h3>
-          </button>
+          </ButtonAnimation>
         </div>
       </div>
       <div

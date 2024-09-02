@@ -5,6 +5,7 @@ import ArrowDownSvg from "@public/svg/arrowDown.svg";
 import projectBg from "@public/svg/projectsPage/projectBg.svg";
 import ResourceCard from "@/components/cards/ResourceCard";
 import BreadCrump from "@/components/bread-crump/BreadCrump";
+import CustomSelect from "@/components/custom/CustomSelect";
 
 const datas = [
   {
@@ -44,7 +45,8 @@ const datas = [
     category: "Report",
   },
 ];
-
+const categoryData = ["Category", "Category", "Category"];
+const dateData = ["Date", "Date", "Date"];
 const page = () => {
   return (
     <div className="tw-pt-[5rem]">
@@ -73,8 +75,9 @@ const page = () => {
 
           <div className="tw-flex tw-pt-[2rem] tw-gap-[.75rem]">
             <p className="tw-py-3 tw-text-gray40 ">Filter by:</p>
-
-            <div className="tw-p-3 tw-border-2 tw-rounded-md tw-flex tw-gap-[.79rem]">
+            <CustomSelect optionsArray={categoryData} />
+            <CustomSelect optionsArray={dateData} />
+            {/* <div className="tw-p-3 tw-border-2 tw-rounded-md tw-flex tw-gap-[.79rem]">
               <p className=" tw-text-gray80 tw-font-inter tw-text[.875rem] leading-[1.225rem]">
                 Category
               </p>
@@ -85,7 +88,7 @@ const page = () => {
                 Date
               </p>
               <Image src={ArrowDownSvg} alt="arrow down" />
-            </div>
+            </div> */}
           </div>
 
           <div className="tw-pt-[3.25rem] tw-grid md:tw-grid-cols-3 tw-gap-[4.5rem]">

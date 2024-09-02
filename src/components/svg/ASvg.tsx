@@ -3,27 +3,25 @@ import { SVGProps } from "react";
 type Props = {
   src:string
   props?: SVGProps<any>
-  className:string
 }
-const ASvg = ({props,src,className}:Props) => (
+const ASvg = ({props,src,}:Props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    
-    className={className}
+    viewBox="0 0 295 345"
     fill="none"
     {...props}
   >
     <defs>
-      <mask id="shape">
+      <mask id="aShape">
         <path
-          fill="#DFE0E5"
+          fill="#fff"
           d="M295 147.5C295 66.038 228.962 0 147.5 0S0 66.038 0 147.5 66.038 295 147.5 295h89.657a20.002 20.002 0 0 1 14.213 5.929L295 345V147.5Z"
         />
         
       </mask>
     </defs>
     <image
-      mask="url(#shape)"
+      mask="url(#aShape)"
       preserveAspectRatio="xMidYMid meet"
       x="0"
       y="0"

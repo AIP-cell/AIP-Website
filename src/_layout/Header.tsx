@@ -1,4 +1,4 @@
-import CustomSelect from "@/components/custom/CustomSelect";
+import CustomHeaderSelect from "@/components/custom/CustomHeaderSelect";
 import LogoHeaderSvg from "@/components/svg/LogoHeaderSvg";
 import SearchHeaderSvg from "@/components/svg/SearchHeaderSvg";
 import Link from "next/link";
@@ -7,12 +7,12 @@ const headerData = [
   {
     width: " tw-w-[6rem] ",
     options: [
-      { option: "About Us", link: "#" },
+      { option: "About Us", link: "/about/aip-journey" },
       { option: "The AIP Journey", link: "/about/aip-journey" },
       { option: "Our Approach", link: "/about/our-journey" },
       { option: "AIP Impact", link: "/about/aip-impact" },
       { option: "Giving Roadmap", link: "/about/giving-roadmap" },
-      { option: "Financial Reports", link: "#" },
+      { option: "Financial Reports", link: "/about/financials" },
       { option: "AIP Founder Network", link: "/about/aip-founder-network" },
       {
         option: "Philanthropist Network",
@@ -33,7 +33,7 @@ const headerData = [
   {
     width: " tw-w-[10.5rem] ",
     options: [
-      { option: "Products & Services", link: "#" },
+      { option: "Products & Services", link: "/products-and-services/our-offerings" },
       { option: "Our Offerings", link: "/products-and-services/our-offerings" },
       { option: "NPO Registry", link: "#" },
       {
@@ -49,15 +49,13 @@ const headerData = [
   {
     width: " tw-w-[9rem] ",
     options: [
-      { option: "Resource Center", link: "#" },
-      { option: "Our Offerings", link: "#" },
-      { option: "NPO Registry", link: "#" },
-      { option: "Projects and Programs", link: "#" },
-      { option: "Collaborations", link: "/resource-center/collaborations" },
+      { option: "Resource Center", link: "/resource-center" },
+      { option: "AIP Resources", link: "#" },
+      // { option: "Collaborations", link: "/resource-center/collaborations" },
     ],
   },
-  { name: "Careers", link: "#" },
-  { name: "Contact", link: "#" },
+  { name: "Careers", link: "/careers" },
+  { name: "Contact", link: "/contact" },
 ];
 const Header = () => {
   return (
@@ -71,7 +69,7 @@ const Header = () => {
           <div key={index} className="tw-flex  tw-items-center ">
             {items.options ? (
               <div className="tw-flex tw-gap-[2.5rem]">
-                <CustomSelect options={items.options} />
+                <CustomHeaderSelect options={items.options} />
               </div>
             ) : (
               <Link href={items.link}>{items.name}</Link>
@@ -79,7 +77,7 @@ const Header = () => {
           </div>
         ))}
       </div>
-      <div className=" tw-flex  tw-rounded-full tw-border-2 tw-border-darkPurple tw-relative">
+      <div className=" tw-flex tw-rounded-full tw-border-2 tw-border-darkPurple tw-relative">
         <div className="tw-rounded-full tw-bg-darkPurple  tw-px-[1.75rem] tw-py-[0.75rem] ">
           <h3 className="tw-text-white">Get Involved</h3>
         </div>

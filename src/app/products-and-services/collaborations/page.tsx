@@ -6,7 +6,17 @@ import Link from "next/link";
 import bottomRightWave from "@public/svg/products-and-services/project-and-programs/rightVertWave.svg";
 import CollaborationGrid from "./_components/CollaborationGrid";
 import BreadCrump from "@/components/bread-crump/BreadCrump";
-
+import CustomSelect from "@/components/custom/CustomSelect";
+const categoryData=[
+"Category",
+"Category",
+"Category",
+]
+const dateData=[
+"Date",
+"Date",
+"Date",
+]
 const page = () => {
   return (
     <div className="tw-pt-[5rem]">
@@ -17,11 +27,11 @@ const page = () => {
           className=" tw-absolute tw-top-[-5rem]  tw-w-full"
         />
         <div className="container tw-mx-auto tw-relative tw-px-[7.8rem] tw-pt-[5rem]">
-        <Image
-          src={bottomRightWave}
-          alt="bottom-right-wave"
-          className=" tw-absolute tw-bottom-[2.6rem] tw-left-0"
-        />
+          <Image
+            src={bottomRightWave}
+            alt="bottom-right-wave"
+            className=" tw-absolute tw-bottom-[2.6rem] tw-left-0"
+          />
           <BreadCrump
             textOne="Products & Services"
             linkOne="/products-and-services"
@@ -41,19 +51,20 @@ const page = () => {
 
           <div className="tw-flex tw-pt-[2rem] tw-gap-[.75rem]">
             <p className="tw-py-3 tw-text-gray40 ">Filter by:</p>
-
-            <div className="tw-p-3 tw-border-2 tw-rounded-md tw-flex tw-gap-[.79rem]">
+            <CustomSelect optionsArray={categoryData}/>
+            <CustomSelect optionsArray={dateData}/>
+            {/* <div className="tw-p-3 tw-border-2 tw-rounded-md tw-flex tw-gap-[.79rem]">
               <p className=" tw-text-gray80 tw-font-inter tw-text[.875rem] leading-[1.225rem]">
                 Category
               </p>
               <Image src={ArrowDownSvg} alt="arrow down" />
-            </div>
-            <div className="tw-p-3 tw-border-2 tw-rounded-md tw-flex tw-gap-[.79rem]">
+            </div> */}
+            {/* <div className="tw-p-3 tw-border-2 tw-rounded-md tw-flex tw-gap-[.79rem]">
               <p className=" tw-text-gray80 tw-font-inter tw-text[.875rem] leading-[1.225rem]">
                 Date
               </p>
               <Image src={ArrowDownSvg} alt="arrow down" />
-            </div>
+            </div> */}
           </div>
 
           <CollaborationGrid />

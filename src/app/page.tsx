@@ -7,11 +7,11 @@ import Members from "./_components/Members";
 import Story from "./_components/Story";
 import Founder from "./_components/Founder";
 import News from "./_components/News";
-import CustomSelect from "@/components/custom/CustomSelect";
+import CustomHeaderSelect from "@/components/custom/CustomHeaderSelect";
 
 const page = () => {
   return (
-    <div className="tw-bg-bgLightPeach tw-overflow-hidden">
+    <div className="tw-bg-bgLightPeach tw-pt-[5rem] tw-overflow-hidden">
       <HeroSection />
       <GiveSection />
       <UpcomingEvents />

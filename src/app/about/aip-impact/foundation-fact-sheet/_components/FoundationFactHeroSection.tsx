@@ -1,13 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
-import BreadCrumpSvg from "@public/svg/breadCrumps.svg";
 import Oval from "@public/svg/ovalPeach.svg";
+import HeroBg from "@public/svg/aboutPage/aip-impact/foundationFactHeroSvg.svg";
 import React from "react";
 import BreadCrump from "@/components/bread-crump/BreadCrump";
 
 const FoundationFactHeroSection = () => {
   return (
-    <div className="tw-relative tw-pb-[6.8rem]">
+    <div className="tw-relative bg-container tw-mx-auto tw-pb-[6.8rem] tw-pt-[5rem]">
+      <Image
+        src={HeroBg}
+        alt="oval-peach-color-svg"
+        className="tw-absolute  tw-w-full"
+      />
       <div className="tw-relative container tw-mx-auto">
       <Image
         src={Oval}

@@ -1,20 +1,28 @@
 import React from "react";
 import Link from "next/link";
 import ResourcesTabs from "./_components/ResourcesTabs";
+import BreadCrump from "@/components/bread-crump/BreadCrump";
 
 const page = () => {
   return (
     <div className="container tw-mx-auto tw-relative  tw-px-[7.8rem] tw-pt-[5rem]">
-      <div className="tw-absolute tw-left-[7.8rem] tw-font-inter tw-top-[1.25rem]">
+      {/* <div className="tw-absolute tw-left-[7.8rem] tw-font-inter tw-top-[1.25rem]">
         <Link
           href=""
           className="tw-text-gray50 tw-text-h9Copy5 tw-leading-[19.6px]"
         >
-          {"<"} Resource Center / AIP Resources / &nbsp;
+          {"<"} / AIP Resources / &nbsp;
         </Link>
         <Link href="#">Reports</Link>
-      </div>
-
+      </div> */}
+      <BreadCrump
+        textOne="Resource Center"
+        linkOne="/resource-center"
+        textTwo="AIP Resources"
+        linkTwo=""
+        textThree="Reports"
+        linkThree=""
+      />
       <div className="tw-max-w-[51.188rem] tw-pb-[4rem]">
         <p className="tw-font-playFair tw-leading-[3.3rem] tw-text-[3rem] tw-pb-[1.25rem] tw-text-gray80">
           AIP Resources
@@ -27,8 +35,7 @@ const page = () => {
           to give forward.
         </p>
       </div>
-
-      <ResourcesTabs  />
+      <ResourcesTabs />
     </div>
   );
 };

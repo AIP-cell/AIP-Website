@@ -16,28 +16,28 @@ const Gallery = () => {
             className="tw-absolute tw-w-full tw-h-full tw-object-cover"
           />
         </div>
-        <div className="col-start-4 col-end-5 row-start-1 row-end-2 tw-relative tw-rounded-lg tw-overflow-hidden">
+        <div className="col-span-1 tw-row-span-1 tw-relative tw-rounded-lg tw-overflow-hidden">
           <Image
             src={SampleImage}
             alt=""
             className="tw-absolute tw-w-full tw-h-full tw-object-cover"
           />
         </div>
-        <div className="col-start-5 col-end-6 row-start-1 row-end-2 tw-relative tw-rounded-lg tw-overflow-hidden">
+        <div className="col-span-1 tw-row-span-1 tw-relative tw-rounded-lg tw-overflow-hidden">
           <Image
             src={SampleImage}
             alt=""
             className="tw-absolute tw-w-full tw-h-full tw-object-cover"
           />
         </div>
-        <div className="col-start-5 col-end-6 row-start-2 row-end-3 tw-relative tw-rounded-lg tw-overflow-hidden">
+        <div className="col-span-1 tw-row-span-1 tw-relative tw-rounded-lg tw-overflow-hidden">
           <Image
             src={SampleImage}
             alt=""
             className="tw-absolute tw-w-full tw-h-full tw-object-cover"
           />
         </div>
-        <div className="col-start-4 col-end-5 row-start-2 row-end-3 tw-relative tw-rounded-lg tw-overflow-hidden">
+        <div className="col-span-1 tw-row-span-1 tw-relative tw-rounded-lg tw-overflow-hidden">
           <Image
             src={SampleImage}
             alt=""
