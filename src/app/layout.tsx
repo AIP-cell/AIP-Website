@@ -3,11 +3,20 @@ import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Header from "@/_layout/Header/Header";
 import Footer from "@/_layout/Footer";
+import localFont from "next/font/local";
 
 const inter = Inter({ subsets: ["latin"], variable: "--inter" });
-const playfairDisplay = Playfair_Display({
-  subsets: ["latin"],
+// const playfairDisplay = Playfair_Display({
+//   subsets: ["latin"],
+//   variable: "--playfairDisplay",
+// });
+const playfairDisplay = localFont({
+  src: "../fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf",
   variable: "--playfairDisplay",
+});
+const playfairDisplayItalic = localFont({
+  src: "../fonts/Playfair_Display/static/PlayfairDisplay-italic.ttf",
+  variable: "--playfairDisplayItalic",
 });
 
 export const metadata: Metadata = {
@@ -22,7 +31,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${playfairDisplay.variable} !tw-overflow-y-auto tw-bg-bgLightPeach tw-font-inter no-scrollbar tw-overflow-x-hidden`}>
+      <body
+        className={`${inter.variable} ${playfairDisplay.variable} ${playfairDisplayItalic.variable} !tw-overflow-y-auto tw-bg-bgLightPeach tw-font-inter no-scrollbar tw-overflow-x-hidden`}
+      >
         <Header />
         {children}
         <Footer />

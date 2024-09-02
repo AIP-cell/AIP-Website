@@ -14,9 +14,9 @@ const HeroSection = () => {
       <div className="tw-flex tw-items-center  tw-justify-center tw-pt-[5.56rem] tw-relative">
         <div className="">
           <h2 className="tw-text-h1 tw-font-playFair tw-leading-[3.7rem] tw-w-[38.125rem] ">
-            AIP is a peer network that <i className="tw-text-textPurple">channels the flow</i> to
+            AIP is a peer network that <span className=" tw-font-playFairItalic tw-text-textPurple">channels the flow</span> to
             accelerate strategic giving in India - a movement
-            <i className="tw-text-textPurple"> by and for philanthropists</i>
+            <span className="tw-text-textPurple tw-font-playFairItalic"> by and for philanthropists</span>
           </h2>
         </div>
         <div className="tw-relative tw-w-[29.6rem] tw-h-[27.8rem] ">

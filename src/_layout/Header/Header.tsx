@@ -14,7 +14,10 @@ const headerData = [
       { option: "Giving Roadmap", link: "/about/giving-roadmap" },
       { option: "Financial Reports", link: "#" },
       { option: "AIP Founder Network", link: "/about/aip-founder-network" },
-      { option: "Philanthropist Network", link: "/about/philanthropist-network" },
+      {
+        option: "Philanthropist Network",
+        link: "/about/philanthropist-network",
+      },
     ],
   },
   {
@@ -52,7 +55,7 @@ const headerData = [
 ];
 const Header = () => {
   return (
-    <div className="tw-z-[10000] tw-sticky tw-top-0 tw-bg-white tw-flex tw-justify-between tw-py-[1.1rem] tw-px-[1.25rem] ">
+    <div className="tw-z-[10000] tw-fixed tw-right-0 tw-left-0 tw-top-0 tw-bg-white tw-flex tw-justify-between tw-pt-[1rem] tw-pb-[0.9rem] tw-px-[1.25rem] ">
       <Link href="/">
         <LogoHeaderSvg />
       </Link>

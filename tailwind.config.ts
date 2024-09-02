@@ -56,6 +56,7 @@ const config: Config = {
       fontFamily: {
         inter: "var(--inter)",
         playFair: "var(--playfairDisplay)",
+        playFairItalic: "var(--playfairDisplayItalic)",
       },
       fontSize: {
         // Desktop

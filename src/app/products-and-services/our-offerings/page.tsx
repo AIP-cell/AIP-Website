@@ -4,7 +4,7 @@ import Offerings from "./_components/Offerings";
 
 const page = () => {
   return (
-    <div>
+    <div className="tw-pt-[5rem]">
       <OurOfferingHeroSection />
       <Offerings />
     </div>

@@ -9,10 +9,19 @@ type Props = {
   textClass2: string;
   sizeClass: string;
 };
-const OvalPurple = ({ text1, text2, mainClass, textClass1, textClass2 ,sizeClass}: Props) => {
+const OvalPurple = ({
+  text1,
+  text2,
+  mainClass,
+  textClass1,
+  textClass2,
+  sizeClass,
+}: Props) => {
   return (
     <div className={` ${mainClass} `}>
-      <div className={` ${sizeClass} tw-relative tw-shrink-0   tw-flex tw-flex-col tw-justify-center tw-items-center`}>
+      <div
+        className={` ${sizeClass} tw-relative tw-shrink-0   tw-flex tw-flex-col tw-justify-center tw-items-center`}
+      >
         <Image src="/svg/ovalPurple.svg" alt="image" fill />
         {/* <OvalPurpleSvg /> */}
         <div className={` ${textClass1}  tw-text-white tw-z-50`}>{text1}</div>
