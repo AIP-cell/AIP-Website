@@ -1,0 +1,60 @@
+import React from "react";
+import projectBg from "@public/svg/projectsPage/projectBg.svg";
+import Link from "next/link";
+import SampleImage from "@public/images/sample.png";
+
+import Image from "next/image";
+import BreadCrump from "@/components/bread-crump/BreadCrump";
+
+const page = () => {
+  return (
+    <div className="tw-pt-[5rem]">
+      <div className=" tw-relative bg-container tw-overflow-hidden">
+        <Image
+          src={projectBg}
+          alt="bg"
+          className=" tw-absolute tw-top-[-5rem] tw-w-full "
+        />
+        <div className="container tw-mx-auto tw-relative tw-px-[7.8rem] tw-pt-[5rem]">
+          <BreadCrump
+            textOne="Products & Services"
+            linkOne="/products-and-services"
+            textTwo="Collaborations"
+            linkTwo="/products-and-services/collaborations"
+            textThree="slug"
+            linkThree="/products-and-services/collaborations/slug"
+            textFour="Event Gallery"
+            linkFour="/products-and-services/collaborations/slug/event-gallery"
+          />
+          <p className="tw-font-inter  tw-font-semibold tw-uppercase tw-leading-[1.3rem] tw-text-purple40">
+            Systemic Impact Exemplars
+          </p>
+          <p className="tw-leading-[2.6rem] tw-font-playFair tw-text-h4 tw-text-gray80 tw-pt-5 tw-pb-[5rem] tw-tracking-[-0.02rem]">
+            AIP hosts events across cities in the world. AIP is continuously
+            bringing inspirational philanthropists together to help co-create
+            this network and establish personal philanthropy as a means for
+            India’s transformation.
+          </p>
+          {/* <div className="tw-grid tw-grid-cols-5 tw-grid-rows-3 tw-gap-[1.25rem]">
+            <div className="col-span-2 row-span-2">
+              <Image
+                src={SampleImage}
+                alt=""
+                className="tw-absolute tw-w-full tw-h-full tw-object-cover"
+              />
+            </div>
+            <div className="">
+              <Image
+                src={SampleImage}
+                alt=""
+                className="tw-absolute tw-w-full tw-h-full tw-object-cover"
+              />
+            </div>
+          </div> */}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default page;

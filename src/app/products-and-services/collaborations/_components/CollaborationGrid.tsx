@@ -25,27 +25,28 @@ const datas = [
 const CollaborationGrid = () => {
   return (
     <div>
-      {" "}
       {datas.map((item, i) => (
         <div
           key={i}
-          className="tw-flex tw-justify-between tw-py-8  tw-pb-9 tw-border-b tw-border-gray10"
+          className="tw-relative tw-flex tw-justify-between tw-py-8 tw-w-full  tw-pb-9 tw-border-b tw-border-gray10"
         >
-          <div className="">
+          <div className="tw-w-[64%]">
             <p className="tw-font-playFair tw-text-h4 tw-text-gray80 tw-leading-[2.6rem]">
               {item.title}
             </p>
-            <p className="tw-py-4 tw-leading-[1.4rem] tw-font-inter tw-text-midGray tw-pb-4">
+            <p className="tw-py-4 tw-line-clamp-4 tw-text-ellipsis tw-leading-[1.4rem] tw-font-inter tw-text-midGray tw-pb-4">
               {item.desc}
             </p>
-            <Link
-              href="#"
-              className="tw-bg-white tw-w-fit tw-rounded-3xl tw-py-3 tw-px-7 hover:tw-bg-darkPurple hover:tw-text-white tw-transition-all tw-border tw-border-1 tw-border-darkPurple tw-font-inter tw-text-h9BodyCopy5 leading-[1.225rem]  tw-text-darkPurple tw-font-medium"
-            >
-              View More
-            </Link>
+            <div className="tw-pt-[1rem]">
+              <Link
+                href="/products-and-services/collaborations/slug"
+                className="tw-bg-white tw-w-fit tw-rounded-3xl tw-py-3 tw-px-7 hover:tw-bg-darkPurple hover:tw-text-white tw-transition-all tw-border-2 tw-border-darkPurple tw-font-inter tw-text-h9Copy5 leading-[1.225rem]  tw-text-darkPurple tw-font-medium"
+              >
+                View More
+              </Link>
+            </div>
           </div>
-          <div className="tw-flex tw-flex-col tw-items-end tw-leading-[1.4rem] tw-font-inter tw-w-full">
+          <div className="tw-w-[36%] tw-flex tw-flex-col tw-items-end tw-leading-[1.4rem]">
             <p className="tw-font-bold tw-text-midGray">11 Jul 2024</p>
             <p className="tw-pt-3 tw-pb-[2.125rem] tw-text-midGray">Report</p>
             <p className="tw-text-gray50 tw-pb-3">In Collaboration with:</p>

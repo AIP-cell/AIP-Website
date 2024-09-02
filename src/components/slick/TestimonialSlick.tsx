@@ -7,6 +7,8 @@ import ASrc from "@public/images/aSample.png";
 
 import ACard from "@/components/cards/aCards/ACard";
 import PCard from "@/components/cards/pCards/PCard";
+import RightSlickArrow from "../svg/RightSlickArrow";
+import LeftSlickArrow from "../svg/LeftSlickArrow";
 type Props = {
   slickArray: any[];
 };
@@ -47,19 +49,21 @@ const TestimonialSlick = ({ slickArray }: Props) => {
         </div>
         <button
           onClick={previous}
-          className="tw-absolute tw-left-[8rem] tw-top-[9.375rem] tw-z-20 tw-text-midGray tw-leading-[22.4px] tw-font-inter tw-bg-darkPurple tw-rounded-tl-3xl tw-rounded-bl-3xl tw-rounded-tr-xl tw-rounded-br-xl tw-py-[1.15rem] tw-px-[0.92rem]"
+          className="tw-absolute tw-left-[8rem] tw-top-[9.375rem] tw-z-20 tw-text-white hover:tw-bg-white  hover:tw-text-darkPurple  tw-leading-[22.4px] tw-font-inter tw-bg-darkPurple tw-rounded-tl-3xl tw-rounded-bl-3xl tw-rounded-tr-xl tw-rounded-br-xl tw-py-[1.15rem] tw-px-[0.92rem]"
         >
-          <div className="tw-relative tw-w-[1rem] tw-h-[0.57rem]">
+          <LeftSlickArrow className="tw-w-[1rem] tw-h-[0.57rem]" />
+          {/* <div className="tw-relative tw-w-[1rem] tw-h-[0.57rem]">
             <Image src={LeftArrow} alt="left-arrow" fill className="" />
-          </div>
+          </div> */}
         </button>
         <button
           onClick={next}
-          className="tw-absolute tw-right-[8rem] tw-top-[9.375rem] tw-bg-darkPurple tw-rounded-tr-3xl tw-rounded-br-3xl tw-rounded-tl-xl tw-rounded-bl-xl tw-py-[1.15rem] tw-px-[0.92rem]"
+          className="tw-absolute tw-right-[8rem] tw-top-[9.375rem] tw-text-white hover:tw-bg-white tw-bg-darkPurple hover:tw-text-darkPurple tw-rounded-tr-3xl tw-rounded-br-3xl tw-rounded-tl-xl tw-rounded-bl-xl tw-py-[1.15rem] tw-px-[0.92rem]"
         >
-          <div className="tw-relative tw-w-[1rem] tw-h-[0.57rem]">
+          <RightSlickArrow className="tw-w-[1rem] tw-h-[0.57rem]" />
+          {/* <div className="tw-relative tw-w-[1rem] tw-h-[0.57rem]">
             <Image src={RightArrow} alt="right-arrow" />
-          </div>
+          </div> */}
         </button>
       </div>
     </div>

@@ -1,20 +1,14 @@
 import Image from "next/image";
-import Download from "@public/svg/download.svg";
-import View from "@public/svg/resourcePage/view.svg";
-import DownloadWhite from "@public/svg/projectsPage/downloadWhite.svg";
 import React from "react";
+import EyeSvg from "../svg/EyeSvg";
+import DownloadFileSvg from "../svg/DowloadFileSvg";
 type Props = {
   src: string;
   title: string;
   desc: string;
   category: string;
 };
-const ResourceCard = ({
-  src,
-  title,
-  desc,
-  category,
-}: Props) => {
+const ResourceCard = ({ src, title, desc, category }: Props) => {
   return (
     // tw-justify-center
     <div className="tw-flex tw-flex-col  tw-items-center tw-gap-[0.75rem]">
@@ -39,35 +33,13 @@ const ResourceCard = ({
       </div>
       <div className="tw-h-px tw-bg-footerGray tw-w-full"></div>
       <div className="tw-flex tw-justify-start tw-w-full tw-gap-[.75rem]">
-        
-        <div className="tw-group tw-bg-bgGray5 tw-w-[2.5rem]  hover:tw-bg-darkPurple  tw-transition-all  tw-h-[2.5rem] tw-rounded-full tw-flex tw-items-center tw-justify-center tw-p-[.5rem]">
-          <Image
-            src={View}
-            className="tw-w-[1.125rem] tw-h-[0.875rem] group-hover:tw-hidden "
-            alt="View"
-          />
-
-           <Image
-            src={View}
-            className="tw-hidden group-hover:tw-block tw-w-[1.125rem] tw-h-[0.875rem]"
-            alt="View"
-          />
+        <div className="tw-group tw-text-darkPurple tw-bg-bgGray5 tw-w-[2.5rem] hover:tw-text-white  hover:tw-bg-darkPurple  tw-transition-all  tw-h-[2.5rem] tw-rounded-full tw-flex tw-items-center tw-justify-center tw-p-[.5rem]">
+          <EyeSvg className="tw-size-[1.5rem]" />
         </div>
 
-        <div className="tw-group tw-bg-bgGray5 tw-w-[2.5rem]  hover:tw-bg-darkPurple  tw-transition-all  tw-h-[2.5rem] tw-rounded-full tw-flex tw-items-center tw-justify-center tw-p-[.5rem]">
-          <Image
-            src={Download}
-            className="tw-w-[1.125rem] tw-h-[0.875rem] group-hover:tw-hidden "
-            alt="download"
-          />
-
-           <Image
-            src={DownloadWhite}
-            className="tw-hidden group-hover:tw-block tw-w-[1.125rem] tw-h-[0.875rem]"
-            alt="download"
-          />
+        <div className="tw-group tw-text-darkPurple hover:tw-text-white tw-bg-bgGray5 tw-w-[2.5rem]  hover:tw-bg-darkPurple  tw-transition-all  tw-h-[2.5rem] tw-rounded-full tw-flex tw-items-center tw-justify-center tw-p-[.5rem]">
+          <DownloadFileSvg className="tw-size-[1.5rem]" />
         </div>
-     
       </div>
     </div>
   );

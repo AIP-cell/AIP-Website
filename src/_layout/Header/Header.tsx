@@ -36,8 +36,14 @@ const headerData = [
       { option: "Products & Services", link: "#" },
       { option: "Our Offerings", link: "/products-and-services/our-offerings" },
       { option: "NPO Registry", link: "#" },
-      { option: "Projects and Programs", link: "#" },
-      { option: "Collaborations", link: "#" },
+      {
+        option: "Projects and Programs",
+        link: "/products-and-services/projects-and-programs",
+      },
+      {
+        option: "Collaborations",
+        link: "/products-and-services/collaborations",
+      },
     ],
   },
   {
@@ -47,7 +53,7 @@ const headerData = [
       { option: "Our Offerings", link: "#" },
       { option: "NPO Registry", link: "#" },
       { option: "Projects and Programs", link: "#" },
-      { option: "Collaborations", link: "#" },
+      { option: "Collaborations", link: "/resource-center/collaborations" },
     ],
   },
   { name: "Careers", link: "#" },

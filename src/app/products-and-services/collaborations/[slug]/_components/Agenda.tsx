@@ -13,27 +13,26 @@ const datas = [
     date: "11 Jul 2024  ",
     time: "14:00 - 16:00 ",
     desc: "A short description on the what it is about. Giving has lagged behind despite a growing pool of first-generation wealth creators who have the ability to give forward. Giving has lagged behind despite a growing pool of first-generation wealth creators who have the ability to give forward.",
- category:"People, designation, Organisation" ,
-},
+    category: "People, designation, Organisation",
+  },
   {
     title: "Title",
     date: "11 Jul 2024  ",
     time: "14:00 - 16:00 ",
     desc: "A short description on the what it is about. Giving has lagged behind despite a growing pool of first-generation wealth creators who have the ability to give forward. Giving has lagged behind despite a growing pool of first-generation wealth creators who have the ability to give forward.",
- category:"People, designation, Organisation" ,
-},
+    category: "People, designation, Organisation",
+  },
   {
     title: "Title",
     date: "11 Jul 2024  ",
     time: "14:00 - 16:00 ",
     desc: "A short description on the what it is about. Giving has lagged behind despite a growing pool of first-generation wealth creators who have the ability to give forward. Giving has lagged behind despite a growing pool of first-generation wealth creators who have the ability to give forward.",
-    category:"People, designation, Organisation" ,
+    category: "People, designation, Organisation",
   },
 ];
 const Agenda = () => {
   return (
-    <div>
-      {" "}
+    <div className="container tw-mx-auto tw-relative tw-px-[7.8rem] ">
       {datas.map((item, i) => (
         <div
           key={i}
@@ -49,7 +48,9 @@ const Agenda = () => {
           </div>
 
           <div className="tw-w-[53.375rem]">
-            <p className=" tw-font-playFair  tw-text-gray80 tw-text-h4 tw-leading-[2.6rem] tw-tracking-[-0.02rem]"> {item.title}</p>
+            <p className=" tw-font-playFair  tw-text-gray80 tw-text-h4 tw-leading-[2.6rem] tw-tracking-[-0.02rem]">
+              {item.title}
+            </p>
             <p className=" tw-py-3 tw-font-inter tw-text-midGray tw-leading-[1.4rem]">
               {item.desc}
             </p>
