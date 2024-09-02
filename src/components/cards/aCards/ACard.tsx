@@ -1,3 +1,4 @@
+import ASvg from "@/components/svg/ASvg";
 import Image from "next/image";
 import React from "react";
 type Props = {
@@ -9,7 +10,12 @@ type Props = {
 const ACard = ({ image, name, work, desc }: Props) => {
   return (
     <div className="tw-w-[18.43rem] tw-relative ">
-      {image && <div className="tw-w-[18.43rem] tw-h-[21.56rem] tw-relative"><Image src={image} alt="" fill /></div>}
+      {image && (
+        <div className="tw-w-[18.43rem] tw-h-[21.56rem] tw-relative">
+          <ASvg src={image} className=" tw-w-[18.43rem] tw-h-[21.56rem]" />
+          {/* <Image src={image} alt="" fill /> */}
+        </div>
+      )}
       <div className="tw-flex tw-flex-col tw-gap-[0.75rem]">
         <h3 className="tw-text-h4 tw-leading-[2.6rem] tw-text-gray80 tw-font-playFair">
           {name}

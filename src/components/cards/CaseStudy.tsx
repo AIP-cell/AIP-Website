@@ -12,8 +12,8 @@ const CaseStudy = ({ title, desc, image, index }: Props) => {
     <div className="tw-relative tw-grid tw-grid-cols-2 tw-gap-[7.81rem]">
       <div
         className={cn(
-          "tw-col-span-1 tw-flex tw-flex-col tw-items-start tw-order-1",
-          { "tw-order-2": index % 2 === 0 }
+          "tw-col-span-1 tw-flex tw-flex-col tw-items-start tw-order-2",
+          { "!tw-order-1 ": index % 2 === 0 }
         )}
       >
         <h2 className="tw-font-playFair tw-text-h3 tw-leading-[3.25rem] tw-text-gray80">
@@ -31,8 +31,8 @@ const CaseStudy = ({ title, desc, image, index }: Props) => {
         </div>
       </div>
       <div
-        className={cn(" tw-col-span-1  tw-overflow-hidden tw-order-2", {
-          "tw-order-1": index % 2 === 0,
+        className={cn(" tw-col-span-1  tw-overflow-hidden tw-order-1", {
+          "!tw-order-2": index % 2 === 0,
         })}
       >
         <div className="tw-w-[25rem] tw-h-[20rem] tw-rounded-lg tw-relative ">

@@ -102,14 +102,14 @@ const Footer = () => {
             </div>
             <div className="tw-basis-3/4 tw-flex  tw-justify-end tw-pt-[2rem]">
               <div className="tw-w-[25rem] tw-h-[2.8rem]  tw-flex tw-rounded-full  tw-relative   tw-rounded-br-full   tw-items-center tw-justify-end">
-                <div className="tw-absolute tw-pr-[2.56rem] tw-z-50 tw-pl-[4rem] tw-text-textPurple tw-flex tw-items-center tw-justify-end tw-bg-white tw-h-full tw-rounded-full tw-text-right tw-text-h9Copy5 tw-font-inter">
+                <button className="tw-absolute tw-pr-[2.56rem] tw-z-[50] tw-pl-[4rem] tw-text-textPurple tw-flex tw-items-center tw-justify-end tw-bg-white tw-h-full tw-rounded-full tw-text-right tw-text-h9Copy5 tw-font-inter">
                   Join
-                </div>
-                <div className="tw-rounded-full  tw-bg-bgSlatePurple tw-absolute tw-top-0 tw-left-0 tw-z-[100] tw-flex tw-items-center tw-border-2 tw-border-footerGray tw-pl-[1.5rem] tw-pr-[6rem]  tw-h-full ">
-                  <h3 className="tw-text-footerGray">
-                    Sign up for our newsletter
-                  </h3>
-                </div>
+                </button>
+                <input
+                  type="text"
+                  placeholder=" Sign up for our newsletter"
+                  className="tw-outline-none tw-rounded-full tw-text-footerGray  tw-bg-[#5a4a9a] tw-absolute tw-top-0 tw-left-0 tw-z-[100] tw-flex tw-items-center tw-border-2 tw-border-footerGray tw-pl-[1.5rem] tw-pr-[4.5rem]  tw-h-full "
+                ></input>
               </div>
             </div>
           </div>

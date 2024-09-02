@@ -2,15 +2,21 @@ import Image from "next/image";
 import React from "react";
 import Linkedin from "@public/svg/grayLinkedin.svg";
 import Src from "@public/images/aTeamSample.png";
+import ASvg from "@/components/svg/ASvg";
+import AMediumSizeSvg from "@/components/svg/AMediumSizeSvg";
 type Props = {
   linkedin: boolean;
-  title: string
-  desc: string
+  title: string;
+  desc: string;
 };
-const ATeamCard = ({ linkedin,title,desc }: Props) => {
+const ATeamCard = ({ linkedin, title, desc }: Props) => {
   return (
     <div className="tw-w-[11.87rem] tw-relative">
-      <Image src={Src} alt="" className="tw-w-full" />
+      {/* <Image src={Src} alt="" className="tw-w-full" /> */}
+      <AMediumSizeSvg
+        src="/images/sample.png"
+        className="tw-w-[11.87rem] tw-h-[13.88rem]"
+      />
       {linkedin && (
         <Image
           src={Linkedin}

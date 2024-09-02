@@ -1,5 +1,5 @@
 import CaseStudy from "@/components/cards/CaseStudy";
-import CurveBg from "@public/svg/aboutPage/aip-impact/caseStudyPeachCurve.svg"
+import CurveBg from "@public/svg/aboutPage/aip-impact/caseStudyPeachCurve.svg";
 import Image from "next/image";
 
 const caseStudyData = [
@@ -19,19 +19,35 @@ const caseStudyData = [
     image: "/images/case-studies/caseStudy1.png",
   },
 ];
-const CaseStudies = () => {
+type Props={
+  bottomCaseStudyCurveSvg: string
+}
+const CaseStudies = ({bottomCaseStudyCurveSvg}:Props) => {
   return (
-    <div>
-      <div className=" tw-relative container tw-mx-auto tw-py-[12.5rem]">
-        <Image src={CurveBg} alt="" className="tw-absolute tw-flex tw-items-center tw-h-full tw-left-0"/>
-        <h2 className="tw-text-center tw-text-h2 tw-text-darkBrown tw-font-playFair">
-          Case <i className="tw-text-textPurple"> Studies</i>
-        </h2>
-        <div className="tw-pt-[6.56rem] tw-flex tw-flex-col tw-gap-[5.5rem] tw-px-[7.8rem]">
-          {caseStudyData.map((item, i) => (
-            <CaseStudy key={i} index={i} title={item.title} desc={item.desc} image={item.image}/>
-          ))}
-        </div>
+    <div className=" tw-relative container tw-mx-auto tw-pt-[12.5rem]">
+      <Image
+        src={CurveBg}
+        alt=""
+        className="tw-absolute tw-flex tw-items-center tw-h-full tw-left-0"
+      />
+      <Image
+        src={bottomCaseStudyCurveSvg}
+        alt=""
+        className="tw-absolute  tw-bottom-[-10.938rem]  tw-right-0"
+      />
+      <h2 className="tw-text-center tw-text-h2 tw-text-darkBrown tw-font-playFair">
+        Case <i className="tw-text-textPurple"> Studies</i>
+      </h2>
+      <div className="tw-pt-[6.56rem] tw-flex tw-flex-col tw-gap-[5.5rem] tw-px-[7.8rem]">
+        {caseStudyData.map((item, i) => (
+          <CaseStudy
+            key={i}
+            index={i}
+            title={item.title}
+            desc={item.desc}
+            image={item.image}
+          />
+        ))}
       </div>
     </div>
   );

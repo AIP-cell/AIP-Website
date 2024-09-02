@@ -1,5 +1,5 @@
+import TestimonialSlick from "@/components/slick/TestimonialSlick";
 import React from "react";
-import TestimonialSlick from "../../../../../components/slick/TestimonialSlick";
 const testimonialsArray: any[] = [
   {
     a: {
@@ -26,15 +26,19 @@ const testimonialsArray: any[] = [
     },
   },
 ];
-const Testimonials = () => {
+const TestimonialsFromFounders = () => {
   return (
     <div className="tw-pt-[12.5rem]">
-      <h2 className="tw-font-playFair tw-text-gray80 tw-text-h2 tw-text-center">
-        Testimonials
+      <h2 className="tw-font-playFair tw-leading-[3.3rem] tw-text-gray80 tw-text-h2 tw-text-center">
+        Testimonials from 
       </h2>
+      <h2 className="tw-italic tw-leading-[3.3rem] tw-font-playFair tw-text-textPurple tw-text-h2 tw-text-center">
+       Some of the Founders 
+      </h2>
+
       <TestimonialSlick slickArray={testimonialsArray} />
     </div>
   );
 };
 
-export default Testimonials;
+export default TestimonialsFromFounders;
