@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Download from "@public/svg/download.svg";
 import View from "@public/svg/resourcePage/view.svg";
+import DownloadWhite from "@public/svg/projectsPage/downloadWhite.svg";
 import React from "react";
 type Props = {
   src: string;
@@ -38,20 +39,35 @@ const ResourceCard = ({
       </div>
       <div className="tw-h-px tw-bg-footerGray tw-w-full"></div>
       <div className="tw-flex tw-justify-start tw-w-full tw-gap-[.75rem]">
-        <div className="tw-bg-bgGray5 tw-w-[2.5rem] tw-h-[2.5rem] tw-rounded-full tw-flex tw-items-center tw-justify-center tw-p-[.5rem]">
+        
+        <div className="tw-group tw-bg-bgGray5 tw-w-[2.5rem]  hover:tw-bg-darkPurple  tw-transition-all  tw-h-[2.5rem] tw-rounded-full tw-flex tw-items-center tw-justify-center tw-p-[.5rem]">
           <Image
             src={View}
-            className="tw-w-[1.125rem] tw-h-[0.875rem]"
-            alt="view"
+            className="tw-w-[1.125rem] tw-h-[0.875rem] group-hover:tw-hidden "
+            alt="View"
+          />
+
+           <Image
+            src={View}
+            className="tw-hidden group-hover:tw-block tw-w-[1.125rem] tw-h-[0.875rem]"
+            alt="View"
           />
         </div>
-        <div className="tw-bg-bgGray5 tw-w-[2.5rem] tw-h-[2.5rem] tw-rounded-full tw-flex tw-items-center tw-justify-center tw-p-[.5rem]">
+
+        <div className="tw-group tw-bg-bgGray5 tw-w-[2.5rem]  hover:tw-bg-darkPurple  tw-transition-all  tw-h-[2.5rem] tw-rounded-full tw-flex tw-items-center tw-justify-center tw-p-[.5rem]">
           <Image
             src={Download}
-            className="tw-w-[1.125rem] tw-h-[0.875rem]"
+            className="tw-w-[1.125rem] tw-h-[0.875rem] group-hover:tw-hidden "
+            alt="download"
+          />
+
+           <Image
+            src={DownloadWhite}
+            className="tw-hidden group-hover:tw-block tw-w-[1.125rem] tw-h-[0.875rem]"
             alt="download"
           />
         </div>
+     
       </div>
     </div>
   );

@@ -8,7 +8,7 @@ type Props = {
 
 const List = ({ name }: Props) => {
   return (
-    <div className="tw-bg-bgGray5 hover:tw-bg-textPurple hover:tw-text-white hover:tw-italic tw-p-5 tw-rounded-[1.25rem] tw-flex tw-justify-between tw-mb-3 tw-group">
+    <div className="tw-bg-bgGray5 hover:tw-bg-textPurple hover:tw-text-white hover:tw-italic  tw-transition-all tw-p-5 tw-rounded-[1.25rem] tw-flex tw-justify-between tw-mb-3 tw-group">
       <p className="tw-font-playFair tw-font-medium group-hover:tw-italic tw-text-xl tw-tracking-[.02rem] ">
         {name}
       </p>

@@ -58,6 +58,16 @@ const page = () => {
 
 
         <PositionsGrid />
+
+        <div className=" tw-px-[6.563rem] tw-pt-20 tw-pb-[12.5rem] ">
+        <div className="tw-px-[9.375rem] tw-py-[2.063rem] tw-rounded-[1.25rem] tw-text-center tw-bg-lightgrey">
+          <p className="tw-font-playFair tw-text-h4a tw-leading-[2.113rem] tw-text-gray80">Can’t Find what you are looking for?</p>
+          <p className="tw-font-inter tw-leading-[1.4rem] tw-pt-3 tw-text-midGray">
+            Send in your resume and portfolio at
+            <span className="tw-text-textPurple">careers@indianphilanthropy.org</span>
+          </p>
+        </div>
+      </div>
       </div>
     </div>
   );

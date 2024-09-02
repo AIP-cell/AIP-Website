@@ -10,7 +10,7 @@ const page = () => {
     <div className=" tw-relative tw-overflow-hidden">
       <Image
         src={projectBg}
-        alt=""
+        alt="bg"
         className="tw-left-60 tw-absolute tw-top-[-5rem] "
       />
       <div className="container tw-mx-auto tw-relative tw-px-[7.8rem] tw-pt-[5rem]">

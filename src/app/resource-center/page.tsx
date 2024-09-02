@@ -16,10 +16,10 @@ const page = () => {
       </div>
 
       <div className="tw-max-w-[51.188rem] tw-pb-[4rem]">
-        <p className="tw-font-playFair tw-leading-[3.3rem] tw-text-[3rem] tw-pb-[1.25rem]">
+        <p className="tw-font-playFair tw-leading-[3.3rem] tw-text-[3rem] tw-pb-[1.25rem] tw-text-gray80">
           AIP Resources
         </p>
-        <p className="tw-leading-[1.4rem] tw-font-inter">
+        <p className="tw-leading-[1.4rem] tw-font-inter tw-text-midGray">
           A short description on the what the page is about. Giving has lagged
           behind despite a growing pool of first-generation wealth creators who
           have the ability to give forward. Giving has lagged behind despite a
