@@ -20,8 +20,8 @@ const threeIs = [
 const OurThreeIs = () => {
   return (
     <div className="container tw-mx-auto  tw-pt-[12.5rem] tw-pb-[7.5rem] tw-px-[7.8rem] tw-relative">
-      <h3 className="tw-text-h2 tw-font-playFair tw-text-center">
-        Our <i className="tw-text-textPurple">Three I-s</i>
+      <h3 className="tw-text-h2 tw-font-playFair tw-text-center tw-text-gray80">
+        Our <span className="tw-text-textPurple tw-font-playFairItalic">Three I-s</span>
       </h3>
       <div className="tw-pt-[5rem] tw-flex tw-gap-[4.56rem]">
         {threeIs.map((item, i) => (
@@ -29,7 +29,7 @@ const OurThreeIs = () => {
             key={i}
             src={item.src}
             title={item.title}
-            titleClassName="tw-italic !tw-text-gray80"
+            titleClassName="tw-font-playFairItalic !tw-text-gray80"
             descClassName="tw-px-[0.5rem]"
             desc={item.desc}
           />

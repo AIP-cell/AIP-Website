@@ -34,7 +34,7 @@ const BreadCrump = ({
         )}
       >
         <Image src={BreadCrumpSvg} alt="bread-crump-Svg" /> {textOne}
-        &nbsp;/&nbsp;
+        {textTwo && <p>&nbsp;/&nbsp;</p>}
       </Link>
       {linkTwo && (
         <Link

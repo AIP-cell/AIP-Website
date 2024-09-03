@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Header from "@/_layout/Header";
-import Footer from "@/_layout/Footer";
+import Footer from "@/_layout/footer/Footer";
 import localFont from "next/font/local";
 
 const inter = Inter({ subsets: ["latin"], variable: "--inter" });

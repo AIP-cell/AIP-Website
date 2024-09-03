@@ -9,7 +9,7 @@ const headerData = [
     options: [
       { option: "About Us", link: "/about/aip-journey" },
       { option: "The AIP Journey", link: "/about/aip-journey" },
-      { option: "Our Approach", link: "/about/our-journey" },
+      { option: "Our Approach", link: "/about/our-approach" },
       { option: "AIP Impact", link: "/about/aip-impact" },
       { option: "Giving Roadmap", link: "/about/giving-roadmap" },
       { option: "Financial Reports", link: "/about/financials" },

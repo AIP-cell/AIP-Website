@@ -22,21 +22,35 @@ const works = [
     desc: "Providing continuous learning and growth opportunities through training, mentorship, and career advancement programs.",
   },
 ];
-const whyWork = () => {
+const WhyWork = () => {
   return (
-    <div className="tw-grid tw-grid-cols-2 tw-gap-20 tw-relative">
+    <div className="">
+      <div className="tw-flex tw-flex-col tw-w-full tw-justify-center tw-items-center">
+        <p className="tw-text-h2 tw-text-center tw-text-gray80 tw-leading-[3.713rem] tw-font-playFair tw-tracking-[-.04rem] tw-pb-5">
+          Why Work With
+          <span className="tw-font-playFairItalic tw-text-textPurple">
+            &nbsp;AIP?
+          </span>
+        </p>
+        <div className="tw-font-inter tw-text-center tw-text-midGray tw-pb-20">
+          <p >Philanthropy can impact India’s future.</p>
+          <p >And you can be a part of creating that impact.</p>
+        </div>
+      </div>
+      <div className="container tw-mx-auto tw-px-[8.438rem] tw-grid tw-grid-cols-2 tw-gap-20 tw-relative">
         {works.map((item, i) => (
           <ImgTitleDescVer
             key={i}
             src={item.src}
             title={item.title}
-            titleClassName="tw-italic !tw-text-gray80"
-            descClassName="tw-px-[0.5rem]"
+            titleClassName=" !tw-text-gray80 tw-text-h4 tw-leading-[2.6rem]"
+            descClassName="tw-px-[0.5rem] tw-leading-[1.4rem]"
             desc={item.desc}
           />
         ))}
+      </div>
     </div>
   );
 };
 
-export default whyWork;
+export default WhyWork;

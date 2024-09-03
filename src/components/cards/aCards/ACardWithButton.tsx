@@ -1,14 +1,16 @@
 import Image from "next/image";
 import React from "react";
-import Src from "@public/images/aSample.png";
+// import Src from "@public/images/aSample.png";
 import RightArrow from "@public/svg/rightTag.svg";
 import Linkedin from "@public/svg/grayLinkedin.svg";
+import ASvg from "@/components/svg/ASvg";
 const ACardWithButton = () => {
   return (
     <div className="tw-w-[18.43rem] tw-relative ">
 
       <Image src={Linkedin} alt="" className="tw-absolute tw-top-0 tw-right-0" />
-      <Image src={Src} alt="" />
+      {/* <Image src={Src} alt="" /> */}
+      <ASvg src="/images/aSample.png" />
       <div className="tw-flex tw-flex-col tw-gap-[0.75rem]">
           <div className="tw-flex tw-items-center tw-gap-[0.75rem]">
             <h3 className="tw-text-h4 tw-leading-[2.6rem] tw-text-gray80 tw-font-playFair">Ashish Dhawan</h3>

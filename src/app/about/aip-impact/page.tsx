@@ -4,7 +4,7 @@ import ImpactHeroSection from "./_components/ImpactHeroSection";
 import CaseStudies from "./_components/CaseStudies";
 import FoundationFacts from "./_components/FoundationFacts";
 import PeopleWeWorkWith from "./_components/PeopleWeWorkWith";
-import CurvePeach from "@public/svg/PeachBgCurveFounders.svg";
+import CurvePeach from "@public/svg/peachBgCurveFounders.svg";
 
 
 const page = () => {

@@ -1,7 +1,7 @@
 import ACardWithButton from "@/components/cards/aCards/ACardWithButton";
 import PCardWithButton from "@/components/cards/pCards/PCardWithButton";
 import Image from "next/image";
-import Bg from "@public/svg/PeachBgCurveFounders.svg";
+import Bg from "@public/svg/peachBgCurveFounders.svg";
 import React from "react";
 
 const OurCoreFoundersContent = () => {
@@ -19,7 +19,7 @@ const OurCoreFoundersContent = () => {
       />
       <div className="tw-flex tw-flex-col tw-items-center tw-justify-center">
         <h2 className="tw-text-h2 tw-text-center tw-text-gray80 tw-leading-[3.2rem] tw-font-playFair">
-          Our <i className="tw-text-textPurple">Core-Founders</i>
+          Our <span className="tw-text-textPurple tw-font-playFairItalic">Core-Founders</span>
         </h2>
         <p className="tw-font-inter tw-px-[20.938rem] tw-text-center tw-text-midGray tw-leading-[1.4rem] tw-pt-[1.25rem]">
           Our Founders are the foundations of the common purpose: create a

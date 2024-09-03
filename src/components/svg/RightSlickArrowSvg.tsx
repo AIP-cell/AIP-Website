@@ -1,8 +1,7 @@
 import { SVGProps } from "react";
 
-const LeftSlickArrow = (props: SVGProps<SVGSVGElement>) => {
-  return (
-    <svg
+const RightSlickArrowSvg = (props: SVGProps<SVGSVGElement>) => (
+  <svg
     xmlns="http://www.w3.org/2000/svg"
     // width={20}
     // height={12}
@@ -15,10 +14,8 @@ const LeftSlickArrow = (props: SVGProps<SVGSVGElement>) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2}
-      d="m1.75 6 4.583 4.583M1.75 6l4.583-4.583M1.75 6h16.5"
+      d="m18.25 6-4.583-4.583M18.25 6l-4.583 4.583M18.25 6H1.75"
     />
   </svg>
-  )
-}
-
-export default LeftSlickArrow
+);
+export default RightSlickArrowSvg;

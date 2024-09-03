@@ -1,15 +1,16 @@
 import Image from "next/image";
 import React from "react";
 import FooterBg from "../../public/svg/footer/footerBg.svg";
-import Logo from "../../public/svg/footer/footerLogo.svg";
-import X from "../../public/svg/footer/x.svg";
-import In from "../../public/svg/footer/in.svg";
-import Youtube from "../../public/svg/footer/youtube.svg";
-import FooterFish from "../../public/svg/footer/fish/footerFish.svg";
+import Logo from "@public/svg/footer/footerLogo.svg";
+import X from "@public/svg/footer/x.svg";
+import In from "@public/svg/footer/in.svg";
+import Youtube from "@public/svg/footer/youtube.svg";
+// import FooterFish from "../../public/svg/footer/fish/footerFish.svg";
 import Wave from "react-wavify";
 
 import Link from "next/link";
 import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
+import FooterFishes from "./FooterFishes";
 const footerLinks = [
   {
     name: "FAQ",
@@ -57,9 +58,7 @@ const Footer = () => {
             <stop offset="90%" stopColor="#224193" />
           </linearGradient>
         </Wave>
-        <div className="tw-absolute tw-w-[45.6rem] tw-h-[10.3rem] tw-bottom-0 tw-right-0 tw-z-50">
-          <Image src={FooterFish} alt="" className="" fill />
-        </div>
+        <FooterFishes/>
         {/* </div> */}
         <div className="tw-flex container tw-mx-auto tw-relative">
           <div className="tw-pt-[12.5rem] tw-flex tw-flex-wrap">
@@ -71,7 +70,7 @@ const Footer = () => {
             <div className="tw-basis-3/4 tw-flex tw-items-center tw-justify-end">
               <div className=" tw-flex tw-gap-[1.75rem]">
                 {footerLinks.map((items, i) => (
-                  <ButtonAnimation>
+                  <ButtonAnimation key={i}>
                     <Link
                       key={i}
                       href={items.link}
@@ -90,7 +89,9 @@ const Footer = () => {
               <p className="tw-pt-[0.75rem] tw-text-h9Copy5 tw-font-inter tw-text-white/60">
                 Ananda, 242 Okhla Industrial Estate
               </p>
-              <p className=" tw-text-h9Copy5 tw-font-inter tw-text-white/60">Phase III, New Delhi, India 110020</p>
+              <p className=" tw-text-h9Copy5 tw-font-inter tw-text-white/60">
+                Phase III, New Delhi, India 110020
+              </p>
               <ButtonAnimation>
                 <Link
                   href="mailto:info@indianphilanthropy.org"

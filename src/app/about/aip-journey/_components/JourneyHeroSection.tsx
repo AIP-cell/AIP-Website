@@ -5,10 +5,11 @@ import HeroBg1 from "@public/svg/aboutPage/aip-journey/heroBg1.svg";
 import HeroBg2 from "@public/svg/aboutPage/aip-journey/heroBg2.svg";
 import HeroBgSVg from "@/components/svg/HeroBgSVg";
 import Wave from "react-wavify";
+import BreadCrump from "@/components/bread-crump/BreadCrump";
 
 const JourneyHeroSection = () => {
   return (
-    <div className="tw-relative tw-w-full ">
+    <div className="tw-relative tw-w-full bg-container tw-mx-auto">
       <div className="tw-absolute  tw-inset-0 ">
         <Wave
           fill="#F5B195"
@@ -44,18 +45,13 @@ const JourneyHeroSection = () => {
           </linearGradient>
         </Wave>
       </div>
-      {/* <HeroBgSVg className="tw-absolute "/> */}
-      {/* <Image src={HeroBg1} alt="" fill className="tw-z-40 " />
-      <Image src={HeroBg2} alt="" fill className="tw-z-10 " /> */}
-      <div className="tw-absolute tw-left-[7.8rem] tw-font-inter tw-top-[1.25rem]">
-        <Link
-          href=""
-          className="tw-text-gray50 tw-text-h9Copy5 tw-leading-[19.6px]"
-        >
-          {"<"} About Us &nbsp;/&nbsp;
-        </Link>
-        <Link href=""> AIP Journey</Link>
-      </div>
+
+      <BreadCrump
+        textOne="About Us"
+        linkOne="/about"
+        textTwo="AIP Journey"
+        linkTwo="/about/aip-journey"
+      />
       <div className="tw-relative">
         <Wave
           fill="#faecc894"
@@ -69,7 +65,7 @@ const JourneyHeroSection = () => {
         />
 
         <div className=" tw-bg-[#faecc894] tw-pt-[6.25rem] tw-pb-[7.6rem] tw-w-full ">
-          <div className="container tw-mx-auto tw-flex tw-justify-center tw-flex-col tw-items-center tw-relative tw-z-50 tw-px-[20.9rem] ">
+          <div className="container tw-mx-auto tw-flex tw-justify-center tw-flex-col tw-items-center tw-relative tw-z-50 tw-px-[20.938rem] ">
             <h3 className=" tw-leading-[20.64px] tw-font-inter tw-text-[#121314] tw-font-semibold">
               PHILANTHROPY IS WHAT IT DOES.
             </h3>

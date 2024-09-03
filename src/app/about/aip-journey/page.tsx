@@ -13,7 +13,7 @@ const valueDescArray = [
 ];
 const page = () => {
   return (
-    <div>
+    <div className="tw-pt-[5rem]">
       <JourneyHeroSection />
       <OurValueSection />
       <ValueSlick slickArray={valueDescArray} />

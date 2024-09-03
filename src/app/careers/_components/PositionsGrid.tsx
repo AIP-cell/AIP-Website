@@ -1,5 +1,5 @@
 import React from "react";
-import UserCheck from "@public/svg/careers/User_Check.svg";
+import UserCheck from "@public/svg/careers/userCheck.svg";
 import Image from "next/image";
 
 const datas = [
@@ -27,8 +27,8 @@ const datas = [
 
 const PositionsGrid = () => {
   return (
-    <div>
-      {" "}
+    <div className="tw-relative">
+      
       {datas.map((item, i) => (
         <div
           key={i}
