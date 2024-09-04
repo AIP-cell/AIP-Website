@@ -1,6 +1,7 @@
 import { SVGProps } from "react";
 
-const AMediumSizeSvg = (props: SVGProps<SVGSVGElement> & { src:string }) => (
+
+const PMediumSizeSvg = ( props: SVGProps<SVGSVGElement> & {src: string;}) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={190}
@@ -9,15 +10,15 @@ const AMediumSizeSvg = (props: SVGProps<SVGSVGElement> & { src:string }) => (
     {...props}
   >
     <defs>
-      <mask id="aMediumShape">
+      <mask id="pMediumShape">
         <path
           fill="#DFE0E5"
-          d="M190 95c0-52.467-42.533-95-95-95S0 42.533 0 95s42.533 95 95 95h55.282c5.015 0 9.822 2.005 13.35 5.569L190 222.203V95Z"
+          d="M0 95C0 42.533 42.533 0 95 0s95 42.533 95 95-42.533 95-95 95H39.718a18.784 18.784 0 0 0-13.35 5.569L0 222.203V95Z"
         />
       </mask>
     </defs>
     <image
-      mask="url(#aMediumShape)"
+      mask="url(#pMediumShape)"
       preserveAspectRatio="xMidYMid meet"
       x="0"
       y="0"
@@ -27,4 +28,4 @@ const AMediumSizeSvg = (props: SVGProps<SVGSVGElement> & { src:string }) => (
     />
   </svg>
 );
-export default AMediumSizeSvg;
+export default PMediumSizeSvg;

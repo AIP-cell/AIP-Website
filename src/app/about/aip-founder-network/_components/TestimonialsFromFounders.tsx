@@ -32,7 +32,7 @@ const TestimonialsFromFounders = () => {
       <h2 className="tw-font-playFair tw-leading-[3.3rem] tw-text-gray80 tw-text-h2 tw-text-center">
         Testimonials from 
       </h2>
-      <h2 className="tw-italic tw-leading-[3.3rem] tw-font-playFair tw-text-textPurple tw-text-h2 tw-text-center">
+      <h2 className="tw-italic tw-leading-[3.3rem] tw-font-playFairItalic tw-text-textPurple tw-text-h2 tw-text-center">
        Some of the Founders 
       </h2>
 

@@ -2,6 +2,7 @@ import React from "react";
 import bcgSvg from "@public/svg/projectsPage/bcg.svg";
 import Image from "next/image";
 import Link from "next/link";
+import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 
 const datas = [
   {
@@ -37,14 +38,14 @@ const CollaborationGrid = () => {
             <p className="tw-py-4 tw-line-clamp-4 tw-text-ellipsis tw-leading-[1.4rem] tw-font-inter tw-text-midGray tw-pb-4">
               {item.desc}
             </p>
-            <div className="tw-pt-[1rem]">
+            <ButtonAnimation className="tw-pt-[1rem]">
               <Link
                 href="/products-and-services/collaborations/slug"
                 className="tw-bg-white tw-w-fit tw-rounded-3xl tw-py-3 tw-px-7 hover:tw-bg-darkPurple hover:tw-text-white tw-transition-all tw-border-2 tw-border-darkPurple tw-font-inter tw-text-h9Copy5 leading-[1.225rem]  tw-text-darkPurple tw-font-medium"
               >
                 View More
               </Link>
-            </div>
+            </ButtonAnimation>
           </div>
           <div className="tw-w-[36%] tw-flex tw-flex-col tw-items-end tw-leading-[1.4rem]">
             <p className="tw-font-bold tw-text-midGray">11 Jul 2024</p>

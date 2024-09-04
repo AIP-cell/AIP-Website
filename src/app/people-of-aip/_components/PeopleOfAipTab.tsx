@@ -2,6 +2,7 @@ import React from "react";
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 import OurCoreFoundersContent from "../founders/_components/OurCoreFoundersContent";
 import TeamAip from "../founders/_components/TeamAip";
+import Link from "next/link";
 
 const PeopleOfAipTab = () => {
   return (
@@ -15,7 +16,7 @@ const PeopleOfAipTab = () => {
             Founders
           </Tab>
           <Tab className="tw-px-[2.5rem] tw-py-[0.75rem] data-[selected]:tw-bg-darkPurple data-[selected]:tw-text-white data-[selected]:tw-rounded-full tw-text-h9Copy5 tw-leading-[1.22rem] tw-font-inter data-[selected]:tw-outline-none">
-            Our Advisory Board
+            <Link href="/people-of-aip/our-advisory-board/slug">Our Advisory Board</Link>
           </Tab>
           <Tab className="tw-px-[2.5rem] tw-py-[0.75rem] data-[selected]:tw-bg-darkPurple data-[selected]:tw-text-white data-[selected]:tw-rounded-full tw-text-h9Copy5 tw-leading-[1.22rem] tw-font-inter data-[selected]:tw-outline-none">
             Team AIP

@@ -9,7 +9,9 @@ import {
   DisclosureButton,
   DisclosurePanel,
 } from "@headlessui/react";
+// const faqData=[
 
+// ]
 const FaqItem = () => {
   return (
     <Disclosure>

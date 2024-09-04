@@ -1,5 +1,7 @@
 import React from "react";
 import TestimonialSlick from "../../../../../components/slick/TestimonialSlick";
+import RightWave from '@public/svg/aboutPage/aip-impact/testimonialLeftPeachWave.svg'
+import Image from "next/image";
 const testimonialsArray: any[] = [
   {
     a: {
@@ -29,10 +31,13 @@ const testimonialsArray: any[] = [
 const Testimonials = () => {
   return (
     <div className="tw-pt-[12.5rem]">
-      <h2 className="tw-font-playFair tw-text-gray80 tw-text-h2 tw-text-center">
-        Testimonials
-      </h2>
-      <TestimonialSlick slickArray={testimonialsArray} />
+      <div className="tw-relative container tw-mx-auto">
+        <Image src={RightWave} alt="" className="tw-left-0 tw-absolute tw-top-0"/>
+        <h2 className="tw-font-playFair tw-text-gray80 tw-text-h2 tw-text-center">
+          Testimonials
+        </h2>
+        <TestimonialSlick slickArray={testimonialsArray} />
+      </div>
     </div>
   );
 };

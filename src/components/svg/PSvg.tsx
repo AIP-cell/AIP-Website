@@ -1,9 +1,6 @@
 import { SVGProps } from "react";
-type Props = {
-  src: string;
-  props?: SVGProps<SVGSVGElement>;
-};
-const PSvg = ({ props, src }: Props) => {
+
+const PSvg = (props: SVGProps<SVGSVGElement> & { src: string;}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -25,7 +22,7 @@ const PSvg = ({ props, src }: Props) => {
         preserveAspectRatio="xMidYMid meet"
         x="0"
         y="0"
-        href={src}
+        href={props.src}
         width="100%"
         height="100%"
       />

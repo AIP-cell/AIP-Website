@@ -1,6 +1,7 @@
 import React from "react";
 import OvalPurple from "../ovals/OvalPurple";
 import cn from "@/utils/tailwind";
+import { ButtonAnimation } from "../animations/ButtonAnimation";
 type Props = {
   text1: string;
   text2: string;
@@ -17,7 +18,7 @@ const OfferingCard = ({ text1, text2, text3, index }: Props) => {
             "tw-order-2 ": index % 2 == 1,
           }
         )}
-      >
+        >
         <OvalPurple
           textClass2="tw-font-playFair tw-text-h4"
           textClass1="tw-font-playFair tw-text-h4 "
@@ -41,9 +42,9 @@ const OfferingCard = ({ text1, text2, text3, index }: Props) => {
           </p>
         )}
         <div className=" tw-pt-[2.5rem]">
-          <button className="tw-border-2 tw-rounded-full tw-font-medium tw-border-darkPurple tw-text-darkPurple tw-py-[0.75rem] tw-px-[1.75rem]">
+          <ButtonAnimation className="tw-border-2 hover:tw-text-white hover:tw-bg-darkPurple tw-bg-white tw-rounded-full tw-font-medium tw-border-darkPurple tw-text-darkPurple tw-py-[0.75rem] tw-px-[1.75rem]">
             Read More
-          </button>
+          </ButtonAnimation>
         </div>
       </div>
     </div>

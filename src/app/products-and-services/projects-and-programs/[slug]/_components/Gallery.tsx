@@ -4,7 +4,7 @@ import React from "react";
 
 const Gallery = () => {
   return (
-    <div className="tw-pt-[7.563rem] tw-px-[7.8rem]">
+    <div className="tw-pt-[7.563rem] container tw-mx-auto tw-px-[7.8rem]">
       <p className="tw-text-center tw-font-playFair tw-pb-20 tw-leading-[3.3rem] tw-tracking-[-.04rem] tw-text-h2 tw-text-gray80">
         Gallery
       </p>

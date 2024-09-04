@@ -1,7 +1,7 @@
 "use client";
 import MediaCard from "@/components/cards/MediaCard";
-import LeftSlickArrow from "@/components/svg/LeftSlickArrow";
-import RightSlickArrow from "@/components/svg/RightSlickArrow";
+import LeftSlickArrowSvg from "@/components/svg/LeftSlickArrowSvg";
+import RightSlickArrowSvg from "@/components/svg/RightSlickArrowSvg";
 import React from "react";
 
 const Media = () => {
@@ -13,14 +13,14 @@ const Media = () => {
             // onClick={() => {}}
             className="  tw-text-white tw-leading-[22.4px] tw-font-inter tw-bg-darkPurple tw-rounded-tl-3xl tw-rounded-bl-3xl tw-rounded-tr-xl tw-rounded-br-xl tw-py-[1.15rem] tw-px-[0.92rem]"
           >
-            <LeftSlickArrow className="tw-w-[1rem] tw-h-[0.57rem]" />
+            <LeftSlickArrowSvg className="tw-w-[1rem] tw-h-[0.57rem]" />
             {/* <Image src={LeftArrow} alt="left-arrow" fill className="" /> */}
           </button>
           <button
             // onClick={() => {}}
             className=" tw-text-white tw-leading-[22.4px] tw-font-inter tw-bg-darkPurple tw-rounded-tr-3xl tw-rounded-br-3xl tw-rounded-tl-xl tw-rounded-bl-xl tw-py-[1.15rem] tw-px-[0.92rem]"
           >
-            <RightSlickArrow className="tw-w-[1rem] tw-h-[0.57rem]" />
+            <RightSlickArrowSvg className="tw-w-[1rem] tw-h-[0.57rem]" />
             {/* <Image src={LeftArrow} alt="left-arrow" fill className="" /> */}
           </button>
         </div>

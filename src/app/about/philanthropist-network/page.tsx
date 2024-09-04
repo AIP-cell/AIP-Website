@@ -7,7 +7,7 @@ import CurvePurple from "@public/svg/purpleCurveCaseStudy.svg"
 import PhilanthropistHeroSection from "./_components/PhilanthropistHeroSection";
 const page = () => {
   return (
-    <div>
+    <div className="tw-pt-[5rem]">
       <PhilanthropistHeroSection/>
       <ServiceWeProvide />
       <JoinTheFlow/>

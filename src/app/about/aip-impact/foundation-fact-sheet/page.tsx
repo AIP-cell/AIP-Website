@@ -10,7 +10,6 @@ const page = () => {
     <div>
       <FoundationFactHeroSection />
       <FoundationFacts />
-
       <Testimonials />
       <AipFootprints />
     </div>

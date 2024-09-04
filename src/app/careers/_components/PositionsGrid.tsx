@@ -1,6 +1,9 @@
 import React from "react";
 import UserCheck from "@public/svg/careers/userCheck.svg";
 import Image from "next/image";
+import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
+import UserCheckSvg from "@/components/svg/UserCheckSvg";
+import Link from "next/link";
 
 const datas = [
   {
@@ -28,7 +31,6 @@ const datas = [
 const PositionsGrid = () => {
   return (
     <div className="tw-relative">
-      
       {datas.map((item, i) => (
         <div
           key={i}
@@ -43,12 +45,16 @@ const PositionsGrid = () => {
             </p>
           </div>
           <div className="tw-text-end tw-leading-[1.4rem] tw-font-inter tw-w-full">
-            <button className=" tw-rounded-3xl tw-py-3 tw-px-7 tw-border tw-border-darkPurple">
-              <p className="tw-font-inter tw-text-h9BodyCopy5 tw-flex tw-gap-2 leading-[1.225rem]  tw-text-darkPurple tw-font-medium ">
-              Apply
-              <Image src={UserCheck} alt="arrow down" />
-              </p>
-            </button>
+            <ButtonAnimation className="  ">
+              <Link
+                href=""
+                className="tw-font-inter tw-border-2 tw-border-darkPurple tw-text-h9BodyCopy5 tw-rounded-3xl tw-flex tw-items-center tw-gap-2 leading-[1.225rem]  tw-text-darkPurple tw-font-medium hover:tw-text-white tw-bg-white tw-px-[1.75rem] tw-py-[0.75rem] hover:tw-bg-darkPurple"
+              >
+                <p>Apply</p>
+                <UserCheckSvg className="tw-size-[1.25rem]" />
+                {/* <Image src={UserCheck} alt="arrow down" /> */}
+              </Link>
+            </ButtonAnimation>
           </div>
         </div>
       ))}

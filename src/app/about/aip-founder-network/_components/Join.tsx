@@ -5,6 +5,7 @@ import JoinCirclesOne from "@public/svg/aboutPage/aip-founder-network/JoinCircle
 import JoinCirclesRight from "@public/svg/aboutPage/aip-founder-network/JoinCirclesRight.svg";
 import PeachMaskedSemiCircle from "@public/svg/aboutPage/aip-founder-network/semiMaskedCircles.svg";
 import React from "react";
+import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 
 const Join = () => {
   return (
@@ -26,19 +27,24 @@ const Join = () => {
       />
       <div className="tw-relative tw-flex tw-flex-col tw-items-center tw-justify-center tw-pt-[12.5rem]">
         <h2 className="tw-font-playFair tw-text-gray80 tw-text-h2 tw-leading-[3.3rem]">
-          <i className="tw-text-textPurple">Join</i> Us
+          <span className="tw-text-textPurple tw-font-playFairItalic">
+            Join
+          </span>{" "}
+          Us
         </h2>
         <p className="tw-text-midGray tw-text-center tw-px-[20.94rem] tw-pt-[1.25rem]">
           We invite you to join our Core Founders, Founders, and our growing
           network of philanthropists and sector experts to see strategic
           philanthropy impact India’s transformation.
         </p>
-        <Link
-          href=""
-          className=" tw-text-white tw-rounded-full tw-mt-[2.5rem] tw-bg-darkPurple tw-flex tw-gap-[0.5rem] tw-py-[0.75rem] tw-px-[1.75rem]"
-        >
-          Join The Flow
-        </Link>
+        <ButtonAnimation>
+          <Link
+            href=""
+            className=" tw-text-white hover:tw-text-darkPurple tw-bg-darkPurple hover:tw-bg-white tw-rounded-full tw-mt-[2.5rem]  tw-flex tw-gap-[0.5rem] tw-py-[0.75rem] tw-px-[1.75rem]"
+          >
+            Join The Flow
+          </Link>
+        </ButtonAnimation>
       </div>
       <div className=" tw-flex tw-flex-col tw-items-center tw-justify-center tw-pt-[7.5rem]">
         <h2 className="tw-font-playFair tw-text-gray80 tw-text-h2 tw-leading-[3.3rem]">
@@ -50,15 +56,15 @@ const Join = () => {
           strong legacy and an exceptional network.
         </p>
 
-        <Link
-          href=""
-          className=" tw-mt-[2.5rem] tw-bg-darkPurple tw-rounded-full  tw-py-[0.75rem] tw-px-[1.75rem]"
-        >
-          <div className="tw-text-white tw-flex tw-gap-[0.5rem]">
+        <ButtonAnimation className="tw-mt-[2.5rem] tw-bg-darkPurple hover:tw-bg-white tw-rounded-full  tw-py-[0.75rem] tw-px-[1.75rem]">
+          <Link
+            href="/contact"
+            className="tw-text-white hover:tw-text-darkPurple tw-items-center tw-flex tw-gap-[0.5rem]"
+          >
             <p className="">Contact Us</p>
             <MailSvg />
-          </div>
-        </Link>
+          </Link>
+        </ButtonAnimation>
       </div>
     </div>
   );

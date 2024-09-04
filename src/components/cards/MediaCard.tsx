@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Src from "@public/images/sample.png";
+import Src from "@public/images/mediaImage.png";
 import React from "react";
 
 const MediaCard = () => {

@@ -9,7 +9,7 @@ import TestimonialsFromFounders from "./_components/TestimonialsFromFounders";
 
 const page = () => {
   return (
-    <div>
+    <div className="tw-pt-[5rem]">
       <FounderNetworkHeroSection />
       <Join />
       <TestimonialsFromFounders/>

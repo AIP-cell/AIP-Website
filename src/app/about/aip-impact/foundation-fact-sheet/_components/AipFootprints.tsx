@@ -1,7 +1,7 @@
 "use client";
 import Blob from "@/components/blob/Blob";
 import ASvg from "@/components/svg/ASvg";
-import Map from "@public/svg/mapSvg.svg";
+import Map from "@public/svg/map.svg";
 import MailSvg from "@/components/svg/MailSvg";
 import MapSvg from "@/components/svg/MapSvg";
 import Mail from "@public/svg/mailPurple.svg";
@@ -12,13 +12,11 @@ const AipFootprints = () => {
   return (
     <div className="tw-pt-[12.5rem] tw-pb-[7.5rem]">
       <h3 className="tw-font-playFair tw-text-h2 tw-text-center tw-text-gray80 tw-pb-[2.734rem] ">
-        AIP{" "}
+        AIP
         <span className="tw-text-textPurple tw-font-playFairItalic">
-          {" "}
           Footprint
         </span>
       </h3>
-      {/* <div className="tw-h-screen"> */}
       {/* <MapSvg className="tw-w-full"/> */}
       <Image src={Map} alt="" className="tw-w-full" />
       {/* <Blob
@@ -34,9 +32,9 @@ const AipFootprints = () => {
       <div className="tw-flex tw-flex-col tw-items-center tw-pt-[5.32rem]">
         <h2 className="tw-text-h2 tw-text-center tw-text-gray80 tw-font-playFair">
           <span className="tw-text-textPurple tw-font-playFairItalic">
-            Connect{" "}
-          </span>{" "}
-          with Us
+            Connect
+          </span>
+          &nbsp;with Us
         </h2>
         <div className="tw-mt-[2.5rem] tw-bg-[#F0F0F299] tw-rounded-xl tw-w-[38rem] tw-flex tw-justify-between tw-px-[1.68rem] tw-py-[2rem] ">
           <div>

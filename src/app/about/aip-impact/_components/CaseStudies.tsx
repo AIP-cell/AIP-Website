@@ -36,7 +36,7 @@ const CaseStudies = ({bottomCaseStudyCurveSvg}:Props) => {
         className="tw-absolute  tw-bottom-[-10.938rem]  tw-right-0"
       />
       <h2 className="tw-text-center tw-text-h2 tw-text-darkBrown tw-font-playFair">
-        Case <i className="tw-text-textPurple"> Studies</i>
+        Case <span className="tw-text-textPurple tw-font-playFairItalic"> Studies</span>
       </h2>
       <div className="tw-pt-[6.56rem] tw-flex tw-flex-col tw-gap-[5.5rem] tw-px-[7.8rem]">
         {caseStudyData.map((item, i) => (

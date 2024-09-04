@@ -5,37 +5,32 @@ import BreadCrump from "@/components/bread-crump/BreadCrump";
 
 const page = () => {
   return (
-    <div className="container tw-mx-auto tw-relative  tw-px-[7.8rem] tw-pt-[5rem]">
-      {/* <div className="tw-absolute tw-left-[7.8rem] tw-font-inter tw-top-[1.25rem]">
-        <Link
-          href=""
-          className="tw-text-gray50 tw-text-h9Copy5 tw-leading-[19.6px]"
-        >
-          {"<"} / AIP Resources / &nbsp;
-        </Link>
-        <Link href="#">Reports</Link>
-      </div> */}
-      <BreadCrump
-        textOne="Resource Center"
-        linkOne="/resource-center"
-        textTwo="AIP Resources"
-        linkTwo=""
-        textThree="Reports"
-        linkThree=""
-      />
-      <div className="tw-max-w-[51.188rem] tw-pb-[4rem]">
-        <p className="tw-font-playFair tw-leading-[3.3rem] tw-text-[3rem] tw-pb-[1.25rem] tw-text-gray80">
-          AIP Resources
-        </p>
-        <p className="tw-leading-[1.4rem] tw-font-inter tw-text-midGray">
-          A short description on the what the page is about. Giving has lagged
-          behind despite a growing pool of first-generation wealth creators who
-          have the ability to give forward. Giving has lagged behind despite a
-          growing pool of first-generation wealth creators who have the ability
-          to give forward.
-        </p>
+    <div className="tw-pt-[5rem]">
+      <div className="container tw-mx-auto tw-relative tw-pt-[5rem]">
+        <div className="tw-px-[7.8rem]">
+          <BreadCrump
+            textOne="Resource Center"
+            linkOne="/resource-center"
+            textTwo="AIP Resources"
+            linkTwo="/resource-center"
+            textThree="Reports"
+            linkThree="/resource-center"
+          />
+          <div className="tw-max-w-[51.188rem] tw-pb-[4rem]">
+            <p className="tw-font-playFair tw-leading-[3.3rem] tw-text-[3rem] tw-pb-[1.25rem] tw-text-gray80">
+              AIP Resources
+            </p>
+            <p className="tw-leading-[1.4rem] tw-font-inter tw-text-midGray">
+              A short description on the what the page is about. Giving has lagged
+              behind despite a growing pool of first-generation wealth creators who
+              have the ability to give forward. Giving has lagged behind despite a
+              growing pool of first-generation wealth creators who have the ability
+              to give forward.
+            </p>
+          </div>
+        </div>
+        <ResourcesTabs />
       </div>
-      <ResourcesTabs />
     </div>
   );
 };

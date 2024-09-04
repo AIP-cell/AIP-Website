@@ -7,11 +7,12 @@ import { usePathname } from "next/navigation";
 const FooterFishes = () => {
   // const [fish,setFish] = useState()
   const pathname = usePathname();
-  console.log("pathname:::", pathname);
-  const productsAndServicesPath = pathname.startsWith(
-    "/products-and-services" || "/careers"
-  );
-  const aboutFish = pathname.startsWith("/about" || "/financials");
+  const productsAndServicesPath =
+    pathname.startsWith("/products-and-services") ||
+    pathname.startsWith("/careers");
+  const aboutFish =
+    pathname.startsWith("/about") || pathname.startsWith("/financials");
+  // console.log("aboutFish:::", aboutFish);
   const contactFish = pathname.startsWith("/contact");
   const faqFish = pathname.startsWith("/faq");
   let fish: any;

@@ -61,7 +61,7 @@ const Offerings = () => {
       <h2 className="tw-font-playFair tw-text-gray80 tw-text-h2 tw-leading-[3.3rem] tw-text-center">
         Our
         <span className="tw-font-playFairItalic tw-text-textPurple">
-          Offerings
+          &nbsp;Offerings
         </span>
       </h2>
       <div className="tw-px-[7.8rem] tw-pt-[8.5rem] tw-flex tw-flex-col tw-gap-[5rem]">

@@ -24,8 +24,8 @@ const CaseStudy = ({ title, desc, image, index }: Props) => {
           {desc}
         </p>
         <div className="tw-pt-[2.5rem]">
-          <ButtonAnimation className=" tw-rounded-full  tw-border-2 tw-border-darkPurple ">
-            <h3 className="tw-text-darkPurple tw-font-medium tw-text-h9Copy5 tw-leading-[1.225rem] tw-py-[0.75rem] tw-px-[1.75rem]">
+          <ButtonAnimation className=" tw-rounded-full  tw-border-2 tw-border-darkPurple hover:tw-bg-darkPurple ">
+            <h3 className="tw-text-darkPurple hover:tw-text-white tw-font-medium tw-text-h9Copy5 tw-leading-[1.225rem] tw-py-[0.75rem] tw-px-[1.75rem]">
               Read More
             </h3>
           </ButtonAnimation>

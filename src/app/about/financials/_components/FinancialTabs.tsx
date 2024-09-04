@@ -2,6 +2,8 @@ import React from "react";
 import Download from "@public/svg/download.svg";
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 import Image from "next/image";
+import DownloadFileSvg from "@/components/svg/DowloadFileSvg";
+import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 
 const datas = [
   {
@@ -40,7 +42,7 @@ const FinancialTabs = () => {
       </TabList>
 
       <TabPanels className=" tw-w-full tw-pt-[5rem]">
-        <TabPanel className="tw-flex tw-flex-col tw-gap-[3rem]">
+        <TabPanel className="tw-flex tw-flex-col tw-gap-[3rem] tw-px-[14.375rem] tw-pb-[7.5rem]">
           <p className="tw-text-center tw-font-playFair tw-text-h2 leading-[2.6rem] tw-tracking-[-0.02rem] tw-text-gray80">
             FY 2024-25
           </p>
@@ -48,32 +50,28 @@ const FinancialTabs = () => {
             {datas.map((item, i) => (
               <div
                 key={i}
-                className="tw-flex tw-justify-between tw-py-[2.063rem] tw-w-full tw-px-[1.25rem] tw-border-b tw-border-footerGray "
+                className="tw-flex tw-justify-between tw-text-darkPurple tw-py-[2.063rem] tw-w-full tw-px-[1.25rem] tw-border-b-2 tw-border-footerGray "
               >
                 <p className="tw-leading-[1.4rem] tw-text-gray80">
                   {item.title}
                 </p>
-                <Image
-                  src={Download}
-                  className="tw-w-[1.167rem] tw-h-[1.5rem]"
-                  alt="download"
-                />
+                <DownloadFileSvg className="tw-size-[2rem]" />
               </div>
             ))}
           </div>
           <div className="tw-flex tw-w-full tw-justify-end">
-          <button className=" tw-flex tw-gap-2 0 tw-rounded-3xl tw-py-3 tw-px-7 tw-border tw-bottom-2 tw-border-darkPurple tw-w-fit">
-            <p className="tw-font-playFair tw-text-h9BodyCopy5 leading-[1.225rem]  tw-text-darkPurple ">
-              Download All
-            </p>
-            <Image
+            <ButtonAnimation className=" tw-flex tw-gap-2 0 tw-rounded-3xl tw-items-center tw-text-darkPurple hover:tw-text-white tw-bg-white hover:tw-bg-darkPurple tw-py-[0.75rem] tw-px-[1.75rem] tw-border-2 tw-bottom-2 tw-border-darkPurple tw-w-fit">
+              <p className="tw-text-h9Copy5 tw-font-medium leading-[1.225rem]  ">
+                Download All
+              </p>
+              <DownloadFileSvg className="tw-size-[1.25rem]" />
+              {/* <Image
                 src={Download}
                 className="tw-w-[1.167rem] tw-h-[1.5rem]"
                 alt="download"
-              />
-          </button>
+              /> */}
+            </ButtonAnimation>
           </div>
-
         </TabPanel>
 
         <TabPanel>Content 4</TabPanel>

@@ -1,3 +1,4 @@
+import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 import React from "react";
 
 const JourneyArchetype = () => {
@@ -6,7 +7,9 @@ const JourneyArchetype = () => {
       <div className="tw-px-[6.531rem] tw-space-y-[2.5rem]">
         <div className="tw-font-playFair tw-text-h2 tw-text-gray80 tw-leading-[3.3rem] ">
           Where are you in your
-          <p className="tw-italic tw-text-textPurple">Giving Journey?</p>
+          <p className="tw-font-playFairItalic tw-text-textPurple">
+            Giving Journey?
+          </p>
         </div>
 
         <div className="tw-leading-[1.4rem] tw-font-inter tw-text-midGray">
@@ -27,12 +30,12 @@ const JourneyArchetype = () => {
         </div>
 
         <div>
-          <button
+          <ButtonAnimation
             type="submit"
-            className="tw-text-white tw-leading-[1.225rem] tw-bg-darkPurple tw-w-[11.375rem] tw-h-[2.75rem] tw-rounded-[1.5rem] tw-cursor-pointer"
+            className="tw-text-white hover:tw-text-darkPurple tw-leading-[1.225rem] hover:tw-bg-white tw-bg-darkPurple tw-px-[1.75rem] tw-py-[0.75rem] tw-rounded-[1.5rem] tw-cursor-pointer"
           >
             Discover Your Path
-          </button>
+          </ButtonAnimation>
         </div>
       </div>
     </div>
