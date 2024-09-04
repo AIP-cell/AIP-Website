@@ -32,7 +32,7 @@ const CustomHeaderSelect = ({ options }: Props) => {
       <ListboxOptions
         // transition
         anchor="bottom"
-        className="  tw-transition-all tw-duration-150 tw-ml-[5.6rem] tw-mt-[1rem] tw-z-[10000] tw-bg-purpleToBlue tw-flex tw-flex-col tw-gap-[1.625rem] tw-rounded-md tw-pl-[1.75rem] tw-w-[16.625rem] tw-py-[1.313rem]"
+        className="   tw-ml-[5.6rem] tw-mt-[1rem] tw-z-[10000] tw-bg-purpleToBlue tw-flex tw-flex-col tw-gap-[1.625rem] tw-rounded-md tw-pl-[1.75rem] tw-w-[16.625rem] tw-py-[1.313rem]"
       >
         {options?.map((items: any, i: number) => (
           <ListboxOption
