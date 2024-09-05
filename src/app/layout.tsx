@@ -1,21 +1,17 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/_layout/Header";
 import Footer from "@/_layout/footer/Footer";
 import localFont from "next/font/local";
 
 const inter = Inter({ subsets: ["latin"], variable: "--inter" });
-// const playfairDisplay = Playfair_Display({
-//   subsets: ["latin"],
-//   variable: "--playfairDisplay",
-// });
 const playfairDisplay = localFont({
   src: "./../fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf",
   variable: "--playfairDisplay",
 });
 const playfairDisplayItalic = localFont({
-  src: "./../fonts/Playfair_Display/static/PlayfairDisplay-italic.ttf",
+  src: "./../fonts/Playfair_Display/static/PlayfairDisplay-Italic.ttf",
   variable: "--playfairDisplayItalic",
 });
 

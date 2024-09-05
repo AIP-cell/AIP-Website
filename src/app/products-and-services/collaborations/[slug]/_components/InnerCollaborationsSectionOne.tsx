@@ -12,7 +12,7 @@ import BottomBg from "@public/svg/products-and-services/project-and-programs/bot
 
 import Systemic from "@public/svg/projectsPage/systemic.png";
 
-import Impact from "@public/svg/projectsPage/Impact.png";
+import Impact from "@public/svg/projectsPage/impact.png";
 
 import Link from "next/link";
 import React from "react";
