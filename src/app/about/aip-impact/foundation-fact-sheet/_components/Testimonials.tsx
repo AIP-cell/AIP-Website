@@ -1,6 +1,6 @@
 import React from "react";
 import TestimonialSlick from "../../../../../components/slick/TestimonialSlick";
-import RightWave from '@public/svg/aboutPage/aip-impact/testimonialLeftPeachWave.svg'
+import RightWave from '@public/svg/about/aip-impact/testimonialLeftPeachWave.svg'
 import Image from "next/image";
 const testimonialsArray: any[] = [
   {

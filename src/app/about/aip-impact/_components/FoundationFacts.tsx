@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import OvalPeach from "@/components/ovals/OvalPeach";
 import OvalPurple from "@/components/ovals/OvalPurple";
-import Bg from "@public/svg/aboutPage/aip-impact/foundationFactBg.svg";
+import Bg from "@public/svg/about/aip-impact/foundationFactBg.svg";
 import Link from "next/link";
 type Props = {
   button?: string;

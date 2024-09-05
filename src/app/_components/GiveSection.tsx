@@ -1,22 +1,22 @@
 import ImgTitleDescVer from "@/components/cards/ImgTitleDescVer";
 import Image from "next/image";
-import Bg from "../../../public/svg/giveSection/giveBg.svg";
+import Bg from "../../../public/svg/give-section/giveBg.svg";
 import React from "react";
 const giveData = [
   {
-    src: "/svg/giveSection/giveMore.svg",
+    src: "/svg/give-section/giveMore.svg",
     title: "Give",
     span: "More",
     desc: "Giving has lagged behind despite a growing pool of first-generation wealth creators who have the ability to give forward.",
   },
   {
-    src: "/svg/giveSection/giveSooner.svg",
+    src: "/svg/give-section/giveSooner.svg",
     title: "Give",
     span: "Sooner",
     desc: "Individuals tend to engage in philanthropy later in life (between 60-75 years of age), though they often have resources to give sooner.",
   },
   {
-    src: "/svg/giveSection/giveBetter.svg",
+    src: "/svg/give-section/giveBetter.svg",
     title: "Give",
     span: "Better",
     desc: "A robust ecosystem of knowledge, learnings, and peer networks is required to support individuals to give better.",

@@ -1,6 +1,6 @@
 import BreadCrump from "@/components/bread-crump/BreadCrump";
 import Image from "next/image";
-import Bg from "@public/svg/aboutPage/giving-roadmap/givingRoadMapHeroSectionBg.svg";
+import Bg from "@public/svg/about/giving-roadmap/givingRoadMapHeroSectionBg.svg";
 import OvalPurple from "@public/svg/ovalPurple.svg";
 import React from "react";
 

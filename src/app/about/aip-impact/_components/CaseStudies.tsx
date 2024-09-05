@@ -1,5 +1,5 @@
 import CaseStudy from "@/components/cards/CaseStudy";
-import CurveBg from "@public/svg/aboutPage/aip-impact/caseStudyPeachCurve.svg";
+import CurveBg from "@public/svg/about/aip-impact/caseStudyPeachCurve.svg";
 import Image from "next/image";
 
 const caseStudyData = [

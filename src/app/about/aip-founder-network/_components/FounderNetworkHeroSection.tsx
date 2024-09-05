@@ -1,6 +1,6 @@
 import BreadCrump from "@/components/bread-crump/BreadCrump";
 import Image from "next/image";
-import PurpleWave from "@public/svg/aboutPage/aip-founder-network/heroSectionPurpleBg.svg";
+import PurpleWave from "@public/svg/about/aip-founder-network/heroSectionPurpleBg.svg";
 import OvalPeach from "@public/svg/ovalPeach.svg";
 import React from "react";
 

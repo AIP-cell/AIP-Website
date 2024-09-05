@@ -3,16 +3,16 @@ import EyeSvg from "@/components/svg/EyeSvg";
 import XSvg from "@/components/svg/XSvg";
 import YoutubeSvg from "@/components/svg/YoutubeSvg";
 import Image from "next/image";
-import Foundation1 from "@public/svg/projectsPage/foundation1.png";
-import Foundation2 from "@public/svg/projectsPage/foundation2.png";
-import Foundation3 from "@public/svg/projectsPage/foundation3.png";
-import Foundation4 from "@public/svg/projectsPage/foundation4.png";
+import Foundation1 from "@public/svg/projects-page/foundation1.png";
+import Foundation2 from "@public/svg/projects-page/foundation2.png";
+import Foundation3 from "@public/svg/projects-page/foundation3.png";
+import Foundation4 from "@public/svg/projects-page/foundation4.png";
 import PurpleTopSvg from "@public/svg/products-and-services/project-and-programs/topRightPurpleCurve.svg";
 import BottomBg from "@public/svg/products-and-services/project-and-programs/bottomBgHeroSection.svg";
 
-import Systemic from "@public/svg/projectsPage/systemic.png";
+import Systemic from "@public/svg/projects-page/systemic.png";
 
-import Impact from "@public/svg/projectsPage/impact.png";
+import Impact from "@public/svg/projects-page/impact.png";
 
 import Link from "next/link";
 import React from "react";

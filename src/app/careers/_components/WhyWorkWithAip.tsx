@@ -7,12 +7,12 @@ const works = [
     desc: "Embracing diverse backgrounds and perspectives to create an inclusive and dynamic workplace.",
   },
   {
-    src: "/svg/aboutPage/aip-journey/three-I-s/influence.svg",
+    src: "/svg/about/aip-journey/three-I-s/influence.svg",
     title: "Networking Opportunities",
     desc: "Offering ample opportunities for employees to build professional connections and collaborate across departments.",
   },
   {
-    src: "/svg/aboutPage/aip-journey/three-I-s/inform.svg",
+    src: "/svg/about/aip-journey/three-I-s/inform.svg",
     title: "Innovative Environment",
     desc: "Fostering a culture of innovation where creativity and new ideas are encouraged and rewarded.",
   },

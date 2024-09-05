@@ -1,9 +1,9 @@
 import MailSvg from "@/components/svg/MailSvg";
 import Image from "next/image";
 import Link from "next/link";
-import JoinCirclesOne from "@public/svg/aboutPage/aip-founder-network/JoinCirclesOne.svg";
-import JoinCirclesRight from "@public/svg/aboutPage/aip-founder-network/JoinCirclesRight.svg";
-import PeachMaskedSemiCircle from "@public/svg/aboutPage/aip-founder-network/semiMaskedCircles.svg";
+import JoinCirclesOne from "@public/svg/about/aip-founder-network/JoinCirclesOne.svg";
+import JoinCirclesRight from "@public/svg/about/aip-founder-network/JoinCirclesRight.svg";
+import PeachMaskedSemiCircle from "@public/svg/about/aip-founder-network/semiMaskedCircles.svg";
 import React from "react";
 import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 

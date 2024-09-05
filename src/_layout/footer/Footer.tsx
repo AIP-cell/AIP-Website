@@ -14,7 +14,7 @@ import FooterFishes from "./FooterFishes";
 const footerLinks = [
   {
     name: "FAQ",
-    link: "",
+    link: "/faq",
   },
   {
     name: "Fact Sheet",

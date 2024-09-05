@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Oval from "@public/svg/ovalPeach.svg";
-import HeroBg from "@public/svg/aboutPage/aip-impact/foundationFactHeroSvg.svg";
+import HeroBg from "@public/svg/about/aip-impact/foundationFactHeroSvg.svg";
 import React from "react";
 import BreadCrump from "@/components/bread-crump/BreadCrump";
 

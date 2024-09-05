@@ -2,17 +2,17 @@ import ImgTitleDescVer from "@/components/cards/ImgTitleDescVer";
 import React from "react";
 const threeIs = [
   {
-    src: "/svg/aboutPage/aip-journey/three-I-s/inform.svg",
+    src: "/svg/about/aip-journey/three-I-s/inform.svg",
     title: "Inform",
     desc: "Guide philanthropists to make informed decisions",
   },
   {
-    src: "/svg/aboutPage/aip-journey/three-I-s/influence.svg",
+    src: "/svg/about/aip-journey/three-I-s/influence.svg",
     title: "Influence",
     desc: "Influence change with strategic philanthropy",
   },
   {
-    src: "/svg/aboutPage/aip-journey/three-I-s/inspire.svg",
+    src: "/svg/about/aip-journey/three-I-s/inspire.svg",
     title: "Inspire",
     desc: "Inspire philanthropists to give more, give better, give sooner",
   },

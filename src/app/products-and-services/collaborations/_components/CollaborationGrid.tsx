@@ -1,5 +1,5 @@
 import React from "react";
-import bcgSvg from "@public/svg/projectsPage/bcg.svg";
+import bcgSvg from "@public/svg/projects-page/bcg.svg";
 import Image from "next/image";
 import Link from "next/link";
 import { ButtonAnimation } from "@/components/animations/ButtonAnimation";

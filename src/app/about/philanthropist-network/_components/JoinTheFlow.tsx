@@ -1,9 +1,9 @@
 import MailSvg from "@/components/svg/MailSvg";
 import Image from "next/image";
 import Link from "next/link";
-import JoinCirclesOne from "@public/svg/aboutPage/circlesPeach.svg";
-import JoinCirclesRight from "@public/svg/aboutPage/aip-founder-network/JoinCirclesRight.svg";
-import PeachLeftSemiCircle from "@public/svg/aboutPage/philanthropist-network/leftCircles.svg";
+import JoinCirclesOne from "@public/svg/about/circlesPeach.svg";
+import JoinCirclesRight from "@public/svg/about/aip-founder-network/JoinCirclesRight.svg";
+import PeachLeftSemiCircle from "@public/svg/about/philanthropist-network/leftCircles.svg";
 import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 
 const JoinTheFlow = () => {

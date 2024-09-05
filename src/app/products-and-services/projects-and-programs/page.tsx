@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 import Image from "next/image";
 import ArrowDownSvg from "@public/svg/arrowDown.svg";
-import projectBg from "@public/svg/projectsPage/projectBg.svg";
+import projectBg from "@public/svg/projects-page/projectBg.svg";
 import ResourceCard from "@/components/cards/ResourceCard";
 import BreadCrump from "@/components/bread-crump/BreadCrump";
 import CustomSelect from "@/components/custom/CustomSelect";
@@ -15,13 +15,13 @@ const datas = [
     category: "Report",
   },
   {
-    src: "/svg/projectsPage/report1.svg",
+    src: "/svg/projects-page/report1.svg",
     title: "Systemic Impact Exemplars",
     desc: "Unique Approaches Towards Solving India’s Development Challenges by identifying and learning from organisations with systems change.",
     category: "Report",
   },
   {
-    src: "/svg/projectsPage/report2.svg",
+    src: "/svg/projects-page/report2.svg",
     title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Phasellus imperdiet, neque at consequat malesuada Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Phasellus imperdiet, neque at consequat",
     category: "Report",
@@ -33,13 +33,13 @@ const datas = [
     category: "Report",
   },
   {
-    src: "/svg/projectsPage/report1.svg",
+    src: "/svg/projects-page/report1.svg",
     title: "Systemic Impact Exemplars",
     desc: "Unique Approaches Towards Solving India’s Development Challenges by identifying and learning from organisations with systems change.",
     category: "Report",
   },
   {
-    src: "/svg/projectsPage/report2.svg",
+    src: "/svg/projects-page/report2.svg",
     title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Phasellus imperdiet, neque at consequat malesuada Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Phasellus imperdiet, neque at consequat",
     category: "Report",

@@ -1,6 +1,6 @@
 import BreadCrump from "@/components/bread-crump/BreadCrump";
 import Image from "next/image";
-import PeachVertWave from "@public/svg/aboutPage/philanthropist-network/peachVertWaveLeft.tsx.svg";
+import PeachVertWave from "@public/svg/about/philanthropist-network/peachVertWaveLeft.tsx.svg";
 import OvalPeach from "@public/svg/ovalPeach.svg";
 const PhilanthropistHeroSection = () => {
   return (

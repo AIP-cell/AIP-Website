@@ -1,5 +1,5 @@
 import React from "react";
-import projectBg from "@public/svg/projectsPage/projectBg.svg";
+import projectBg from "@public/svg/projects-page/projectBg.svg";
 import Link from "next/link";
 import SampleImage from "@public/images/sample.png";
 

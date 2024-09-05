@@ -1,34 +1,34 @@
 import React from "react";
-import Bg from "@public/svg/aboutPage/our-approach/fivePModelBg.svg";
+import Bg from "@public/svg/about/our-approach/fivePModelBg.svg";
 import ImgTitleDescVer from "@/components/cards/ImgTitleDescVer";
 import PurpleBgCurve from "@public/svg/purpleBgCurveMasked.svg";
 
 import Image from "next/image";
 const threeP = [
   {
-    src: "/svg/aboutPage/our-approach/perspectiveModel.svg",
+    src: "/svg/about/our-approach/perspectiveModel.svg",
     title: "Perspective",
     desc: "Host idea and experience sharing convening and focus group discussions with peers and mentors, to curate and develop insightful knowledge resources",
   },
   {
-    src: "/svg/aboutPage/our-approach/purposeModel.svg",
+    src: "/svg/about/our-approach/purposeModel.svg",
     title: "Purpose",
     desc: "Workshops to support philanthropist in discovering a mission and vision for their giving. ",
   },
   {
-    src: "/svg/aboutPage/our-approach/processModel.svg",
+    src: "/svg/about/our-approach/processModel.svg",
     title: "Process",
     desc: "Identify best practices and benchmarks that show a way forward for effective giving Help in setting up a giving vehicle",
   },
 ];
 const twoP = [
   {
-    src: "/svg/aboutPage/our-approach/portfolioModel.svg",
+    src: "/svg/about/our-approach/portfolioModel.svg",
     title: "Portfolio",
     desc: "Design evidence-based giving roadmap Search and match NPOs across the matrix of sectors and intervention",
   },
   {
-    src: "/svg/aboutPage/our-approach/performanceModel.svg",
+    src: "/svg/about/our-approach/performanceModel.svg",
     title: "Performance",
     desc: "Draw frameworks template and toolkits for impact assessments Facilitate partnerships with M&E service providers to measure portfolio efficacy",
   },

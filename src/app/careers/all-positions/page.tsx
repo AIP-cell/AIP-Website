@@ -1,6 +1,6 @@
 import React from "react";
 import careerBg from "@public/svg/careers/careerBg.svg";
-import rightBottomWave from "@public/svg/aboutPage/philanthropist-network/peachVertWaveLeft.tsx.svg";
+import rightBottomWave from "@public/svg/about/philanthropist-network/peachVertWaveLeft.tsx.svg";
 import Image from "next/image";
 import Link from "next/link";
 import PositionsGrid from "../_components/PositionsGrid";
