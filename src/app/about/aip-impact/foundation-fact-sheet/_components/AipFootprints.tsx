@@ -1,13 +1,8 @@
 "use client";
-import Blob from "@/components/blob/Blob";
-import ASvg from "@/components/svg/ASvg";
 import Map from "@public/svg/map.svg";
 import MailSvg from "@/components/svg/MailSvg";
-import MapSvg from "@/components/svg/MapSvg";
-import Mail from "@public/svg/mailPurple.svg";
 import Image from "next/image";
 import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
-// import { Blob } from "react-interactive-blob"
 const AipFootprints = () => {
   return (
     <div className="tw-pt-[12.5rem] tw-pb-[7.5rem]">

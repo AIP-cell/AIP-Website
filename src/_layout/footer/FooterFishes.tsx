@@ -27,7 +27,6 @@ const FooterFishes = () => {
   } else {
     fish = "/svg/footer/fish/homePageFish.svg";
   }
-  console.log("fish:::::", fish);
   return (
     <div className="tw-absolute tw-w-[45.6rem] tw-h-[10.3rem] tw-bottom-0 tw-right-0 tw-z-50">
       <Image src={fish} alt="" className="" fill />

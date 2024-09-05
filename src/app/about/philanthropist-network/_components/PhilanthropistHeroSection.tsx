@@ -38,7 +38,7 @@ const PhilanthropistHeroSection = () => {
           <div className=" tw-text-h4 tw-text-gray80 tw-leading-[2.6rem] tw-font-playFair tw-pt-[3rem]">
             We pride ourselves on providing pro-bono support. This ensures our
             engagement remains neutral, unbiased, and devoid of conflicts. You
-            don't need to be a founder to engage with us.
+            don&apos;t need to be a founder to engage with us.
           </div>
         </div>
       </div>

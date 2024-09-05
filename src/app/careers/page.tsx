@@ -6,7 +6,7 @@ import PositionsGrid from "./_components/PositionsGrid";
 import usersBg from "@public/svg/careers/users.svg";
 import BreadCrump from "@/components/bread-crump/BreadCrump";
 import CareersHeroSection from "./_components/CareersHeroSection";
-import WhyWork from "./_components/WhyWork";
+import WhyWorkWithAip from "./_components/WhyWorkWithAip";
 import OpenRules from "./_components/OpenRules";
 import TestimonialSlick from "@/components/slick/TestimonialSlick";
 import bottomSvg from "@public/svg/careers/bottomPurpleVert.svg";
@@ -41,7 +41,7 @@ const CareerPage = () => {
   return (
     <div className="tw-pt-[5rem]">
       <CareersHeroSection />
-      <WhyWork />
+      <WhyWorkWithAip />
 
       <OpenRules />
 

@@ -22,7 +22,7 @@ const works = [
     desc: "Providing continuous learning and growth opportunities through training, mentorship, and career advancement programs.",
   },
 ];
-const WhyWork = () => {
+const WhyWorkWithAip = () => {
   return (
     <div className="">
       <div className="tw-flex tw-flex-col tw-w-full tw-justify-center tw-items-center">
@@ -33,8 +33,8 @@ const WhyWork = () => {
           </span>
         </p>
         <div className="tw-font-inter tw-text-center tw-text-midGray tw-pb-20">
-          <p >Philanthropy can impact India’s future.</p>
-          <p >And you can be a part of creating that impact.</p>
+          <p>Philanthropy can impact India’s future.</p>
+          <p>And you can be a part of creating that impact.</p>
         </div>
       </div>
       <div className="container tw-mx-auto tw-px-[8.438rem] tw-grid tw-grid-cols-2 tw-gap-20 tw-relative">
@@ -53,4 +53,4 @@ const WhyWork = () => {
   );
 };
 
-export default WhyWork;
+export default WhyWorkWithAip;
