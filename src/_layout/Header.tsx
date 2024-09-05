@@ -67,6 +67,9 @@ const Header = () => {
         <Link href="/" className="tw-hidden md:tw-block">
           <LogoHeaderSvg />
         </Link>
+        {/* <Link href="/" className="tw-hidden md:tw-block">
+          <LogoHeaderSvg />
+        </Link> */}
         <div className="tw-hidden md:tw-flex tw-gap-[2.5rem] ">
           {headerData.map((items: any, index: number) => (
             <div key={index} className="tw-flex  tw-items-center ">

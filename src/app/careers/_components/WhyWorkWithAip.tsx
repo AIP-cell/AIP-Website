@@ -2,7 +2,7 @@ import ImgTitleDescVer from "@/components/cards/ImgTitleDescVer";
 import React from "react";
 const works = [
   {
-    src: "/svg/careers/career2.png",
+    src: "/svg/careers/career2.svg",
     title: "Inclusive Diversity",
     desc: "Embracing diverse backgrounds and perspectives to create an inclusive and dynamic workplace.",
   },
@@ -17,7 +17,7 @@ const works = [
     desc: "Fostering a culture of innovation where creativity and new ideas are encouraged and rewarded.",
   },
   {
-    src: "/svg/careers/career3.png",
+    src: "/svg/careers/career3.svg",
     title: "Career Development",
     desc: "Providing continuous learning and growth opportunities through training, mentorship, and career advancement programs.",
   },

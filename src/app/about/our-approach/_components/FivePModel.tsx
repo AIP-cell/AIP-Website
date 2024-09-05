@@ -1,7 +1,7 @@
 import React from "react";
 import Bg from "@public/svg/about/our-approach/fivePModelBg.svg";
 import ImgTitleDescVer from "@/components/cards/ImgTitleDescVer";
-import PurpleBgCurve from "@public/svg/purpleBgCurveMasked.svg";
+import PurpleBgCurve from "@public/svg/purple-Bg-Curve-Masked.svg";
 
 import Image from "next/image";
 const threeP = [
