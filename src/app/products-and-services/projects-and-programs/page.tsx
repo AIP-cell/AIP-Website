@@ -91,7 +91,7 @@ const page = () => {
             </div> */}
           </div>
 
-          <div className="tw-pt-[3.25rem] tw-grid md:tw-grid-cols-3 tw-gap-[4.5rem]">
+          <div className="tw-pt-[3.25rem] tw-pb-[5rem] tw-grid md:tw-grid-cols-3 tw-gap-[4.5rem]">
             {datas.map((item, i) => (
               <ResourceCard
                 key={i}

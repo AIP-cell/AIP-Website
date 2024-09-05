@@ -49,7 +49,7 @@ const Footer = () => {
           className="tw-inset-0 tw-object-cover tw-absolute "
           options={{
             amplitude: 60,
-            speed: 0.15,
+            speed: 0.1,
             points: 2,
           }}
         >
