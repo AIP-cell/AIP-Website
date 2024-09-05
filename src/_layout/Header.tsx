@@ -62,12 +62,12 @@ const headerData = [
 ];
 const Header = () => {
   return (
-    <div className="tw-z-[10000] tw-fixed tw-right-0 tw-left-0 tw-top-0 tw-bg-white  ">
+    <div className="tw-z-[10000] tw-fixed tw-right-0 tw-left-0 tw-top-0 max-md:tw-bg-toRightPurpleToBlue md:tw-bg-white  ">
       <div className="container tw-mx-auto tw-flex tw-justify-between tw-pt-[1rem] tw-pb-[0.9rem] tw-px-[1.25rem]">
-        <Link href="/">
+        <Link href="/" className="tw-hidden md:tw-block">
           <LogoHeaderSvg />
         </Link>
-        <div className="tw-flex tw-gap-[2.5rem] ">
+        <div className="tw-hidden md:tw-flex tw-gap-[2.5rem] ">
           {headerData.map((items: any, index: number) => (
             <div key={index} className="tw-flex  tw-items-center ">
               {items.options ? (
@@ -80,7 +80,7 @@ const Header = () => {
             </div>
           ))}
         </div>
-        <div className=" tw-flex tw-rounded-full tw-border-2 tw-border-darkPurple tw-relative">
+        <div className="tw-hidden md:tw-flex tw-rounded-full tw-border-2 tw-border-darkPurple tw-relative">
           <div className="tw-rounded-full tw-bg-darkPurple  tw-px-[1.75rem] tw-py-[0.75rem] ">
             <h3 className="tw-text-white">Get Involved</h3>
           </div>

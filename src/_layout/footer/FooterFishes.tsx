@@ -12,7 +12,6 @@ const FooterFishes = () => {
     pathname.startsWith("/careers");
   const aboutFish =
     pathname.startsWith("/about") || pathname.startsWith("/financials");
-  // console.log("aboutFish:::", aboutFish);
   const contactFish = pathname.startsWith("/contact");
   const faqFish = pathname.startsWith("/faq");
   let fish: any;

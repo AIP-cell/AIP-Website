@@ -22,6 +22,7 @@ const config: Config = {
         
         "purpleToPink":"linear-gradient(to right, #E24BDE , #A17FF0)",
         "purpleToBlue":"linear-gradient(to bottom, #91298C , #224193)",
+        "toRightPurpleToBlue":"linear-gradient(to right, #91298C , #224193)",
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",

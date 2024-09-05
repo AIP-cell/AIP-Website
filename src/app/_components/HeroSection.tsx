@@ -29,7 +29,7 @@ const HeroSection = () => {
             </h2>
           </div>
           <div className="tw-relative tw-w-[29.6rem] tw-h-[27.8rem] ">
-            <Image src="/svg/vecto30.svg" alt="" fill className="tw-z-20" />
+            <Image src="/svg/heroImage.svg" alt="" fill className="tw-z-20" />
             <div className="tw-absolute tw-inset-0 tw-z-10">
               <div className="tw-relative tw-w-[27.846rem] tw-h-[29.17rem]">
                 <Image
