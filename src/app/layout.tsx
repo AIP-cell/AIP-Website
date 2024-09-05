@@ -11,11 +11,11 @@ const inter = Inter({ subsets: ["latin"], variable: "--inter" });
 //   variable: "--playfairDisplay",
 // });
 const playfairDisplay = localFont({
-  src: "../fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf",
+  src: "./../fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf",
   variable: "--playfairDisplay",
 });
 const playfairDisplayItalic = localFont({
-  src: "../fonts/Playfair_Display/static/PlayfairDisplay-italic.ttf",
+  src: "./../fonts/Playfair_Display/static/PlayfairDisplay-italic.ttf",
   variable: "--playfairDisplayItalic",
 });
 
