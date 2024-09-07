@@ -1,6 +1,9 @@
 import CustomHeaderSelect from "@/components/custom/CustomHeaderSelect";
-import LogoHeaderSvg from "@/components/svg/LogoHeaderSvg";
+import LogoHeaderSvg from "@/components/svg/LogoHeaderSvg"; 
+import LogoSmSVG from "@/components/svg/LogoSmSVG";
+import MenuSvg from "@/components/svg/MenuSvg";
 import SearchHeaderSvg from "@/components/svg/SearchHeaderSvg";
+import SearchWhiteSvg from "@/components/svg/SearchWhiteSvg";
 import Link from "next/link";
 import React from "react";
 const headerData = [
@@ -63,13 +66,17 @@ const headerData = [
 const Header = () => {
   return (
     <div className="tw-z-[10000] tw-fixed tw-right-0 tw-left-0 tw-top-0 max-md:tw-bg-toRightPurpleToBlue md:tw-bg-white  ">
-      <div className="container tw-mx-auto tw-flex tw-justify-between tw-pt-[1rem] tw-pb-[0.9rem] tw-px-[1.25rem]">
+      <div className="container tw-mx-auto tw-flex tw-justify-between tw-items-center ~tw-pt-[0.875rem]/[1rem] ~tw-pb-[0.75rem]/[0.9rem] tw-px-[1.25rem]">
         <Link href="/" className="tw-hidden md:tw-block">
           <LogoHeaderSvg />
         </Link>
-        {/* <Link href="/" className="tw-hidden md:tw-block">
-          <LogoHeaderSvg />
-        </Link> */}
+        <Link href="/" className="tw-block md:tw-hidden">
+          <LogoSmSVG className="tw-h-[2.75rem] tw-w-[4.5rem]"/>
+        </Link>
+        <div className="tw-flex tw-gap-[1rem] md:tw-hidden">
+          <SearchWhiteSvg className="tw-size-[2rem]"/>
+          <MenuSvg className="tw-size-[2rem]"/>
+        </div>
         <div className="tw-hidden md:tw-flex tw-gap-[2.5rem] ">
           {headerData.map((items: any, index: number) => (
             <div key={index} className="tw-flex  tw-items-center ">

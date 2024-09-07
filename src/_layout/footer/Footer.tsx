@@ -113,7 +113,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="tw-basis-3/4 tw-flex tw-w-full tw-justify-end tw-pt-[2rem]">
-              <div className="tw-w-[25rem] tw-h-[2.8rem] tw-bg-white tw-flex tw-rounded-full  tw-relative   tw-rounded-br-full   tw-items-center tw-justify-end">
+              <div className="~tw-w-[21rem]/[25rem] tw-h-[2.8rem] tw-bg-white tw-flex tw-rounded-full  tw-relative   tw-rounded-br-full   tw-items-center tw-justify-end">
                 <input
                   type="text"
                   placeholder=" Sign up for our newsletter"
