@@ -9,7 +9,7 @@ type Props = {
 };
 const FoundationFacts = ({ button }: Props) => {
   return (
-    <div className=" tw-relative bg-container tw-mx-auto tw-pt-[12.5rem]">
+    <div className=" tw-relative bg-container tw-mx-auto ~tw-pt-[5rem]/[12.5rem]">
       <Image
         src={Bg}
         alt=""
@@ -17,7 +17,11 @@ const FoundationFacts = ({ button }: Props) => {
       />
       <div className="tw-relative container tw-mx-auto ">
         <h2 className=" tw-text-h2 tw-text-center tw-font-playFair">
-          Foundation <span className="tw-text-textPurple tw-font-playFairItalic"> Facts</span>
+          Foundation{" "}
+          <span className="tw-text-textPurple tw-font-playFairItalic">
+            {" "}
+            Facts
+          </span>
         </h2>
         <div className="tw-relative tw-pb-[50.8rem]">
           <OvalPeach

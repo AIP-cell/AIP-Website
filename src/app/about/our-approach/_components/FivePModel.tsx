@@ -39,18 +39,21 @@ const FivePModel = () => {
       <Image
         src={PurpleBgCurve}
         alt=""
-        className="tw-absolute -tw-top-[26rem]  tw-left-0"
+        className="tw-absolute -tw-top-[26rem]  ~tw-left-[-18rem]/0"
       />
       <Image
         src={Bg}
         alt="bg-svg"
-        className="tw-absolute tw-inset-0 tw-w-full tw-h-full"
+        className="tw-absolute w-inset-0 tw-w-full md:tw-h-full tw-top-0"
       />
-      <div className="tw-relative tw-pt-[21.25rem] tw-pb-[21.625rem] container tw-mx-auto">
-        <h3 className="tw-text-h3 tw-text-center tw-text-gray80 tw-leading-[3.1rem] tw-font-playFair ">
-          Our <span className="tw-text-textPurple tw-font-playFairItalic">Five P Model</span>
+      <div className="tw-relative ~tw-pt-[17.5rem]/[21.25rem] container tw-mx-auto">
+        <h3 className="~tw-text-h4/h3 tw-text-center tw-text-gray80 tw-leading-[3.1rem] tw-font-playFair ">
+          Our{" "}
+          <span className="tw-text-textPurple tw-font-playFairItalic">
+            Five P Model
+          </span>
         </h3>
-        <div className="tw-pt-[5rem] tw-grid tw-grid-cols-3 tw-gap-[4.56rem] tw-px-[6.43rem]">
+        <div className="~tw-pt-[2.5rem]/[5rem] tw-grid tw-grid-cols-1 md:tw-grid-cols-3 ~tw-gap-5/[4.56rem] ~tw-px-[4.25rem]/[6.43rem] max-md:tw-bg-[#fcf5e3]">
           {threeP.map((item, i) => (
             <ImgTitleDescVer
               key={i}
@@ -62,7 +65,7 @@ const FivePModel = () => {
             />
           ))}
         </div>
-        <div className="tw-pt-[3rem] tw-grid tw-grid-cols-2 tw-gap-[4.56rem] tw-px-[18.6rem]">
+        <div className="~tw-pt-5/[3rem] tw-grid tw-grid-cols-1 md:tw-grid-cols-2 ~tw-gap-5/[4.56rem] ~tw-px-[4.25rem]/[6.43rem] md:~tw-px-[4.25rem]/[18.6rem] max-md:tw-bg-[#fcf5e3] ~tw-pb-[5.313rem]/[21.625rem]">
           {twoP.map((item, i) => (
             <ImgTitleDescVer
               key={i}

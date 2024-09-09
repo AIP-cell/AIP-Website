@@ -25,7 +25,7 @@ const BreadCrump = ({
   linkFour,
 }: Props) => {
   return (
-    <div className="tw-absolute tw-z-[1000] tw-flex tw-items-center tw-left-[7.8rem] tw-font-inter tw-top-[1.25rem]">
+    <div className="tw-absolute tw-z-[1000] tw-flex tw-items-center ~tw-left-5/[7.8rem] tw-font-inter ~tw-top-[-2rem]/[1.25rem]">
       <Link
         href={linkOne}
         className={cn(
@@ -51,9 +51,12 @@ const BreadCrump = ({
       {textThree && linkThree && (
         <Link
           href={linkThree}
-          className={cn("tw-text-black tw-text-h9Copy5 tw-flex tw-leading-[19.6px]", {
-            "!tw-text-gray50": textFour,
-          })}
+          className={cn(
+            "tw-text-black tw-text-h9Copy5 tw-flex tw-leading-[19.6px]",
+            {
+              "!tw-text-gray50": textFour,
+            }
+          )}
         >
           <p className={cn({ "tw-underline": textFour })}>{textThree}</p>
           {textFour && <p>&nbsp;/&nbsp;</p>}

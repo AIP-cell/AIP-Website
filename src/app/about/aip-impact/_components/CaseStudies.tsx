@@ -19,12 +19,12 @@ const caseStudyData = [
     image: "/images/case-studies/caseStudy1.png",
   },
 ];
-type Props={
-  bottomCaseStudyCurveSvg: string
-}
-const CaseStudies = ({bottomCaseStudyCurveSvg}:Props) => {
+type Props = {
+  bottomCaseStudyCurveSvg: string;
+};
+const CaseStudies = ({ bottomCaseStudyCurveSvg }: Props) => {
   return (
-    <div className=" tw-relative container tw-mx-auto tw-pt-[12.5rem]">
+    <div className=" tw-relative container tw-mx-auto ~tw-pt-[4.702rem]/[12.5rem]">
       <Image
         src={CurveBg}
         alt=""
@@ -36,9 +36,13 @@ const CaseStudies = ({bottomCaseStudyCurveSvg}:Props) => {
         className="tw-absolute  tw-bottom-[-10.938rem]  tw-right-0"
       />
       <h2 className="tw-text-center tw-text-h2 tw-text-darkBrown tw-font-playFair">
-        Case <span className="tw-text-textPurple tw-font-playFairItalic"> Studies</span>
+        Case{" "}
+        <span className="tw-text-textPurple tw-font-playFairItalic">
+          {" "}
+          Studies
+        </span>
       </h2>
-      <div className="tw-pt-[6.56rem] tw-flex tw-flex-col tw-gap-[5.5rem] tw-px-[7.8rem]">
+      <div className="~tw-pt-10/[6.56rem] tw-flex tw-flex-col ~tw-gap-[3.5rem]/[5.5rem] ~tw-px-5/[7.8rem]">
         {caseStudyData.map((item, i) => (
           <CaseStudy
             key={i}
