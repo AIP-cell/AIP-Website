@@ -3,7 +3,7 @@ import StoryBg from "../../../public/svg/storyBg.svg";
 import Image from "next/image";
 const Story = () => {
   return (
-    <div className=" ~tw-pt-[2.5rem]/0 container tw-mx-auto tw-overflow-hidden tw-relative tw-h-screen tw-flex tw-flex-col tw-justify-center tw-items-center">
+    <div className=" ~tw-pt-[2.5rem]/0 container tw-mx-auto tw-overflow-hidden tw-relative  tw-flex tw-flex-col tw-justify-center tw-items-center">
       {/* <div className="tw-absolute -left-[23rem] h-[35rem] tw-w-full"> */}
       <Image
         src={StoryBg}
