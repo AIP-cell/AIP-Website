@@ -6,11 +6,9 @@ import {
   ListboxButton,
   ListboxOption,
   ListboxOptions,
-  Select,
 } from "@headlessui/react";
 import Image from "next/image";
 import Link from "next/link";
-import cn from "@/utils/tailwind";
 import { ButtonAnimation } from "../animations/ButtonAnimation";
 
 type Props = {

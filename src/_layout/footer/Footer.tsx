@@ -40,7 +40,7 @@ const footerLinks = [
 const Footer = () => {
   return (
     <div className="">
-      <div className="tw-relative tw-h-[31rem] tw-w-full">
+      <div className="tw-relative md:tw-h-[31rem] tw-w-full tw-overflow-hidden">
         {/* <div className="tw-absolute   "> */}
         {/* <Image src={FooterBg} alt="" fill className="tw-inset-x-0 tw-object-cover" /> */}
         <Wave
@@ -58,19 +58,19 @@ const Footer = () => {
             <stop offset="90%" stopColor="#224193" />
           </linearGradient>
         </Wave>
-        <FooterFishes/>
+        <FooterFishes />
         {/* </div> */}
-        <div className="tw-flex container tw-mx-auto tw-relative">
-          <div className="tw-pt-[12.5rem] tw-flex tw-flex-wrap">
-            <div className="tw-basis-1/4 ">
+        <div className="tw-flex container tw-mx-auto tw-relative tw-w-full ~tw-px-5/[7.813rem]">
+          <div className="~tw-pt-[6.5rem]/[12.5rem] ~tw-pb-[12.5rem]/[0rem] tw-flex max-md:tw-flex-col md:tw-flex-wrap tw-w-full">
+            <div className="tw-w-full md:tw-basis-1/4 max-md:tw-order-1">
               <div className="tw-relative tw-h-[3.6rem] tw-w-[6rem]">
                 <Image src={Logo} alt="" fill />
               </div>
             </div>
-            <div className="tw-basis-3/4 tw-flex tw-items-center tw-justify-end">
-              <div className=" tw-flex tw-gap-[1.75rem]">
+            <div className="tw-w-full  md:tw-basis-3/4 tw-flex tw-items-center md:tw-justify-end max-md:tw-order-3">
+              <div className=" md:tw-flex tw-grid tw-grid-cols-2 ~tw-gap-5/[1.75rem] max-md:tw-w-full">
                 {footerLinks.map((items, i) => (
-                  <ButtonAnimation key={i}>
+                  <ButtonAnimation className="max-md:tw-text-start" key={i}>
                     <Link
                       key={i}
                       href={items.link}
@@ -82,7 +82,7 @@ const Footer = () => {
                 ))}
               </div>
             </div>
-            <div className="tw-basis-1/4 ">
+            <div className="tw-w-full md:tw-basis-1/4 max-md:tw-order-4">
               <h3 className="tw-pt-[2rem] tw-font-playFair tw-leading-[22.4px] tw-text-white">
                 Accelerate Indian Philanthropy
               </h3>
@@ -112,14 +112,14 @@ const Footer = () => {
                 </ButtonAnimation>
               </div>
             </div>
-            <div className="tw-basis-3/4 tw-flex tw-w-full tw-justify-end tw-pt-[2rem]">
-              <div className="~tw-w-[21rem]/[25rem] tw-h-[2.8rem] tw-bg-white tw-flex tw-rounded-full  tw-relative   tw-rounded-br-full   tw-items-center tw-justify-end">
+            <div className=" md:tw-basis-3/4 tw-flex tw-w-full md:tw-justify-end  ~tw-pb-10/[0rem] ~tw-pt-10/[2rem] max-md:tw-order-2">
+              <div className="tw-w-full md:~tw-w-[21rem]/[25rem] tw-h-[2.8rem] tw-bg-white tw-flex tw-rounded-full tw-relative tw-rounded-br-full   tw-items-center tw-justify-end">
                 <input
                   type="text"
                   placeholder=" Sign up for our newsletter"
-                  className="tw-outline-none tw-rounded-full tw-text-footerGray tw-w-[75%]  tw-bg-[#5a4a9a] tw-absolute tw-top-0 tw-left-0 tw-z-[100] tw-flex tw-items-center tw-border-2 tw-border-footerGray tw-pl-[1.5rem]   tw-h-full "
+                  className="tw-outline-none tw-rounded-full tw-text-footerGray tw-w-[75%]  tw-bg-[#5a4a9a] tw-absolute tw-top-0 tw-left-0 tw-z-[100] tw-flex tw-items-center tw-border-2 tw-border-footerGray tw-pl-[1.5rem] tw-text-h9Copy5  tw-h-full "
                 ></input>
-                <button className="tw-absolute tw-w-[25%] tw-pr-[2.56rem] tw-z-[50] tw-pl-[4rem] tw-text-textPurple tw-flex tw-items-center tw-justify-end tw-bg-white tw-h-full tw-rounded-full tw-text-right tw-text-h9Copy5 tw-font-inter">
+                <button className="tw-absolute tw-w-[25%] tw-pr-[2.56rem] tw-z-[50] ~tw-pl-[3rem]/[4rem] tw-text-textPurple tw-flex tw-items-center tw-justify-center md:tw-justify-end tw-bg-white tw-h-full tw-rounded-full tw-text-right tw-text-h9Copy5 tw-font-inter">
                   Join
                 </button>
               </div>

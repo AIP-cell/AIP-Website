@@ -3,16 +3,16 @@ import React from "react";
 
 const JourneyArchetype = () => {
   return (
-    <div className="tw-flex tw-flex-col tw-px-[14.437rem] tw-text-center tw-pb-[6.125rem]">
-      <div className="tw-px-[6.531rem] tw-space-y-[2.5rem]">
-        <div className="tw-font-playFair tw-text-h2 tw-text-gray80 tw-leading-[3.3rem] ">
+    <div className="tw-flex tw-flex-col ~tw-px-5/[20.967rem] tw-text-center tw-pb-[6.125rem]">
+      <div className="~tw-space-y-4/[2.5rem]">
+        <div className="tw-font-playFair ~tw-text-h4/h2 tw-text-gray80 tw-leading-[3.3rem]">
           Where are you in your
           <p className="tw-font-playFairItalic tw-text-textPurple">
             Giving Journey?
           </p>
         </div>
 
-        <div className="tw-leading-[1.4rem] tw-font-inter tw-text-midGray">
+        <div className="tw-leading-[1.4rem]  tw-font-inter tw-text-midGray  max-lg:~tw-px-[2.875rem]/0">
           <p>We can organise philanthropic inputs intro three categories:</p>
 
           <p className=" tw-pb-10">
