@@ -31,7 +31,7 @@ const Members = () => {
               textClass2="tw-text-h9Copy4"
               text1="4"
               text2="Core Founders"
-              mainClass=" tw-absolute ~tw-top-0/[-4rem] tw-left-0 md:tw-right-[11.85rem]"
+              mainClass=" tw-absolute ~tw-top-0/[-4rem] tw-left-0 md:tw-right-[11.8rem]"
             />
             <OvalPurple
               sizeClass="~tw-size-[13rem]/[17.3rem]"
@@ -47,7 +47,7 @@ const Members = () => {
               textClass2="tw-text-h9Copy4"
               text1="150 +"
               text2="Members"
-              mainClass=" tw-absolute ~tw-top-[14.3rem]/[20rem] tw-left-0 md:tw-right-[26rem]"
+              mainClass=" tw-absolute ~tw-top-[14.3rem]/[20rem] tw-left-0 md:tw-left-auto md:tw-right-[26rem]"
             />
           </div>
         </div>

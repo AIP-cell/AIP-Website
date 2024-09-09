@@ -12,14 +12,14 @@ const Founder = () => {
     <div className="bg-container tw-mx-auto tw-relative">
         {/* <Image src={FounderBg} alt="" className="tw-absolute tw-w-full tw-top-[-22rem]" /> */}
 
-      <div className=" container tw-mx-auto tw-relative tw-h-[110rem]">
-        <Image src={FounderBg} alt="" className="tw-absolute tw--top-[18rem]" />
-        <Image src={PurPleCurveSvg} alt="" className="tw-absolute tw-top-[18rem] tw-right-0" />
-        <Image src={BlueCurveSvg} alt="" className="tw-absolute tw-bottom-[5rem] tw-left-0" />
-        <div className="tw-px-[7.8rem] tw-pt-[10.3rem]">
-          <h3 className="tw-text-h2 tw-text-white/80  tw-relative tw-font-playFair">
-            From our <i className="tw-text-white">Core-Founders</i>
-          </h3>
+      <div className=" container tw-mx-auto tw-relative ~tw-h-[70rem]/[110rem]">
+        <Image src={FounderBg} alt="" className="tw-absolute tw-h-full tw-object-cover ~tw-top-[0rem]/[-18rem]" />
+        <Image src={PurPleCurveSvg} alt="" className="tw-hidden md:tw-block tw-absolute tw-top-[18rem] tw-right-0" />
+        <Image src={BlueCurveSvg} alt="" className="tw-hidden md:tw-block tw-absolute tw-bottom-[5rem] tw-left-0" />
+        <div className="~tw-px-[1.25rem]/[7.8rem] tw-pt-[10.3rem]">
+          <h3 className="~tw-text-h4/h2 tw-text-white/80 ~tw-leading-[2.6rem]/[3.3rem] tw-relative tw-font-playFair">
+            From our <span className="tw-text-white tw-font-playFairItalic">Core-Founders</span>
+          </h3> 
           <div className="tw-relative tw-pt-[3.43rem] ">
            <div className="tw-flex tw-gap-[4.56rem]">
               <ACardWithPlaySign/>
@@ -29,21 +29,6 @@ const Founder = () => {
               <ACardWithPlaySign/>
               <PCardWithPlaySign/>
            </div>
-            {/* <div className="relative w-[18.4rem] h-[21.5rem] ">
-              <Image
-                src="/images/upcoming.png"
-                alt="upcom"
-                fill
-                style={{
-                  objectFit: "cover",
-                  objectPosition: "center top",
-                  clipPath:
-                    "polygon(295% 148%, 148% 0%, 0% 148%, 148% 295%, 237% 295%, 251% 301%, 295% 345%, 295% 148%)",
-                  WebkitClipPath:
-                    "polygon(295% 148%, 148% 0%, 0% 148%, 148% 295%, 237% 295%, 251% 301%, 295% 345%, 295% 148%)",
-                }}
-              />
-            </div> */}
           </div>
         </div>
       </div>
