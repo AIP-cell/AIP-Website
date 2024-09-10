@@ -10,7 +10,7 @@ type Props = {
   title2: string;
   desc: string;
 };
-const ATeamCard = ({ linkedin, title,title2, desc }: Props) => {
+const ATeamCard = ({ linkedin, title, title2, desc }: Props) => {
   return (
     <div className="tw-w-[11.87rem] tw-relative">
       {/* <Image src={Src} alt="" className="tw-w-full" /> */}

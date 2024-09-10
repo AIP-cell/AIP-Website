@@ -31,13 +31,16 @@ const JoinTheFlow = () => {
           </span>{" "}
           The Flow
         </h2>
-        <p className="tw-text-midGray tw-text-center tw-px-[20.94rem] tw-pt-[1.25rem]">
+        <p className="tw-text-midGray tw-text-center ~tw-px-5/[20.94rem] tw-pt-[1.25rem]">
           We invite you to join our Core Founders, Founders, and our growing
           network of philanthropists and sector experts to see strategic
           philanthropy impact India’s transformation.
         </p>
         <ButtonAnimation className=" tw-mt-[2.5rem] tw-text-white hover:tw-text-darkPurple tw-bg-darkPurple hover:tw-bg-white tw-rounded-full  tw-py-[0.75rem] tw-px-[1.75rem]">
-          <Link href="" className=" tw-flex tw-items-center tw-text-h9Copy5 tw-gap-[0.5rem]">
+          <Link
+            href=""
+            className=" tw-flex tw-items-center tw-text-h9Copy5 tw-gap-[0.5rem]"
+          >
             <p className="">Contact Us</p>
             <MailSvg />
           </Link>

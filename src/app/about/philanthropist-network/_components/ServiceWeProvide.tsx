@@ -35,9 +35,9 @@ const ServiceWeProvide = () => {
       <Image
         src={Bg}
         alt=""
-        className=" tw-absolute -tw-top-[11.5rem] tw-w-full"
+        className=" tw-absolute -tw-top-[11.5rem] tw-w-full tw-z-[-1]"
       />
-      <div className="tw-pt-[12.5rem] tw-px-[7.8rem] container tw-mx-auto">
+      <div className="tw-pt-[12.5rem] ~tw-px-5/[7.8rem] container tw-mx-auto">
         <h2 className="tw-font-playFair tw-text-center tw-text-gray80 tw-text-h2 tw-leading-[3.3rem]">
           <span className="tw-text-textPurple tw-font-playFairItalic">
             Services

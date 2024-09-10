@@ -21,8 +21,8 @@ const PhilanthropistHeroSection = () => {
         textTwo="Philanthropist Network"
         linkTwo="/about/philanthropist-network"
       />
-      <div className="tw-pl-[7.81rem] tw-pr-[14.375rem]">
-        <h4 className="tw-leading-[1.3rem] tw-font-semibold tw-uppercase tw-text-purple40 tw-pt-[6.5rem]">
+      <div className="~tw-pl-5/[7.81rem] ~tw-pr-5/[14.375rem]">
+        <h4 className="tw-leading-[1.3rem] tw-font-semibold tw-uppercase tw-text-purple40 ~tw-pt-10/[6.5rem]">
           NETWORK {">"} NET WORTH
         </h4>
         <div className="tw-pt-[0.75rem] ">

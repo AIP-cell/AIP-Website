@@ -30,7 +30,7 @@ const OurValueSection = () => {
       <Image
         src={Bg}
         alt=""
-        className=" tw-absolute -tw-top-[11.5rem] tw-w-full"
+        className=" tw-absolute -tw-top-[11.5rem] tw-w-full "
       />
       <div className="~tw-pt-[4.625rem]/[12.5rem] tw-relative container tw-mx-auto ">
         <div className="tw-flex tw-flex-col tw-justify-center tw-items-center ">

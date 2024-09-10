@@ -3,54 +3,47 @@ import PTeamCard from "@/components/cards/pCards/PTeamCard";
 import React from "react";
 const peopleDataRow1 = [
   {
-    a: {
-      title1: "Aakash",
-      title2: "Chaudhry",
-      desc: "Aakash Educational Services",
-    },
-    p: {
-      title1: "Ambarish",
-      title2: "Raghuvanshi",
-      desc: "Info Edge India",
-    },
+    title1: "Aakash",
+    title2: "Chaudhry",
+    desc: "Aakash Educational Services",
   },
   {
-    a: {
-      title1: "GV",
-      title2: "Prasad",
-      desc: "Dr. Reddy's Lab",
-    },
-    p: {
-      title1: "Karishma",
-      title2: "Shanghvi",
-      desc: "Sun Pharma",
-    },
+    title1: "Ambarish",
+    title2: "Raghuvanshi",
+    desc: "Info Edge India",
   },
-];
-const peopleDataRow2 = [
+
   {
-    a: {
-      title1: "Mukul",
-      title2: "Agrawal",
-      desc: "Param Capital",
-    },
-    p: {
-      title1: "Aakash",
-      title2: "Chaudhry",
-      desc: "Newgen Software Tech",
-    },
+    title1: "GV",
+    title2: "Prasad",
+    desc: "Dr. Reddy's Lab",
   },
   {
-    a: {
-      title1: "Pia",
-      title2: "Singh",
-      desc: "DLF Foundation",
-    },
-    p: {
-      title1: "Ravindra",
-      title2: "Chamaria",
-      desc: "Infinity Infotech Parks",
-    },
+    title1: "Karishma",
+    title2: "Shanghvi",
+    desc: "Sun Pharma",
+  },
+
+  {
+    title1: "Mukul",
+    title2: "Agrawal",
+    desc: "Param Capital",
+  },
+  {
+    title1: "Aakash",
+    title2: "Chaudhry",
+    desc: "Newgen Software Tech",
+  },
+
+  {
+    title1: "Pia",
+    title2: "Singh",
+    desc: "DLF Foundation",
+  },
+  {
+    title1: "Ravindra",
+    title2: "Chamaria",
+    desc: "Infinity Infotech Parks",
   },
 ];
 const PeopleWeWorkWith = () => {
@@ -62,26 +55,29 @@ const PeopleWeWorkWith = () => {
           &nbsp;Work With
         </span>
       </h2>
-      <div className="tw-pt-[5rem]">
-        <div className=" tw-flex tw-justify-center tw-flex-wrap tw-gap-[5.625rem]">
+      <div className="tw-pt-[5rem] tw-px-5">
+        <div className=" tw-grid tw-grid-cols-2 md:tw-grid-cols-3 lg:tw-grid-cols-4 tw-justify-center ~tw-gap-5/[5.625rem]">
           {peopleDataRow1.map((people, i) => (
-            <div key={i} className="tw-flex tw-gap-[5.625rem]">
-              <ATeamCard
-                title={people.a.title1}
-                title2={people.a.title2}
-                desc={people.a.desc}
-                linkedin={false}
-              />
-              <PTeamCard
-                title={people.p.title1}
-                title2={people.p.title2}
-                desc={people.p.desc}
-                linkedin={false}
-              />
+            <div key={i} className="">
+              {i % 2 == 0 ? (
+                <ATeamCard
+                  title={people.title1}
+                  title2={people.title2}
+                  desc={people.desc}
+                  linkedin={false}
+                />
+              ) : (
+                <PTeamCard
+                  title={people.title1}
+                  title2={people.title2}
+                  desc={people.desc}
+                  linkedin={false}
+                />
+              )}
             </div>
           ))}
         </div>
-        <div className=" tw-pt-[4rem] tw-flex  tw-justify-center tw-flex-wrap tw-gap-[5.625rem]">
+        {/* <div className=" tw-pt-[4rem] tw-flex  tw-justify-center tw-flex-wrap tw-gap-[5.625rem]">
           {peopleDataRow2.map((people, i) => (
             <div key={i} className="tw-flex tw-gap-[5.625rem]">
               <ATeamCard
@@ -98,7 +94,7 @@ const PeopleWeWorkWith = () => {
               />
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   );

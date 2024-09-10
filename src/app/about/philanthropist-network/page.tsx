@@ -3,16 +3,16 @@ import ServiceWeProvide from "./_components/ServiceWeProvide";
 import JoinTheFlow from "./_components/JoinTheFlow";
 import CaseStudies from "../aip-impact/_components/CaseStudies";
 import PeopleWeWorkWith from "../aip-impact/_components/PeopleWeWorkWith";
-import CurvePurple from "@public/svg/purpleCurveCaseStudy.svg"
+import CurvePurple from "@public/svg/purpleCurveCaseStudy.svg";
 import PhilanthropistHeroSection from "./_components/PhilanthropistHeroSection";
 const page = () => {
   return (
-    <div className="tw-pt-[5rem]">
-      <PhilanthropistHeroSection/>
+    <div className="~tw-pt-[8rem]/[5rem]">
+      <PhilanthropistHeroSection />
       <ServiceWeProvide />
-      <JoinTheFlow/>
-      <CaseStudies bottomCaseStudyCurveSvg={CurvePurple}/>
-      <PeopleWeWorkWith/>
+      <JoinTheFlow />
+      <CaseStudies bottomCaseStudyCurveSvg={CurvePurple} />
+      <PeopleWeWorkWith />
     </div>
   );
 };

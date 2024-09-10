@@ -18,12 +18,12 @@ const Join = () => {
       <Image
         src={PeachMaskedSemiCircle}
         alt=""
-        className=" tw-absolute tw-bottom-[-2.43rem] tw-left-0 tw-w-[23.56rem] tw-h-[23.3rem]"
+        className=" tw-absolute tw-bottom-[-2.43rem] tw-left-0 tw-w-[23.56rem] tw-h-[23.3rem] tw-z-[-1]"
       />
       <Image
         src={JoinCirclesRight}
         alt=""
-        className=" tw-absolute tw-bottom-[-11.7rem] tw-right-0 tw-w-[20.875rem] tw-h-[20.62rem]"
+        className=" tw-absolute tw-bottom-[-11.7rem] tw-right-0 tw-w-[20.875rem] tw-h-[20.62rem] tw-z-[-1]"
       />
       <div className="tw-relative tw-flex tw-flex-col tw-items-center tw-justify-center tw-pt-[12.5rem]">
         <h2 className="tw-font-playFair tw-text-gray80 tw-text-h2 tw-leading-[3.3rem]">
@@ -32,7 +32,7 @@ const Join = () => {
           </span>{" "}
           Us
         </h2>
-        <p className="tw-text-midGray tw-text-center tw-px-[20.94rem] tw-pt-[1.25rem]">
+        <p className="tw-text-midGray tw-text-center ~tw-px-5/[20.94rem] tw-pt-[1.25rem]">
           We invite you to join our Core Founders, Founders, and our growing
           network of philanthropists and sector experts to see strategic
           philanthropy impact India’s transformation.
@@ -50,7 +50,7 @@ const Join = () => {
         <h2 className="tw-font-playFair tw-text-gray80 tw-text-h2 tw-leading-[3.3rem]">
           Why<i className="tw-text-textPurple"> Join</i>
         </h2>
-        <p className="tw-text-midGray tw-text-center tw-px-[20.94rem] tw-pt-[1.25rem]">
+        <p className="tw-text-midGray tw-text-center ~tw-px-5/[20.94rem] tw-pt-[1.25rem]">
           Our steadfast dedication to an independent, sector agnostic and deeply
           focused approach. We value long-lasting relationships built on a
           strong legacy and an exceptional network.

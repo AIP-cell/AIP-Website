@@ -24,7 +24,7 @@ const OurCoreFoundersContent = () => {
             Core-Founders
           </span>
         </h2>
-        <p className="tw-font-inter tw-px-[20.938rem] tw-text-center tw-text-midGray tw-leading-[1.4rem] tw-pt-[1.25rem]">
+        <p className="tw-font-inter ~tw-px-5/[20.938rem] tw-text-center tw-text-midGray tw-leading-[1.4rem] tw-pt-[1.25rem]">
           Our Founders are the foundations of the common purpose: create a
           transformative impact of philanthropic efforts across a range of
           sectors from education to healthcare to climate and the arts, with
@@ -32,11 +32,11 @@ const OurCoreFoundersContent = () => {
           founders are our banks, our north stars, all the same.
         </p>
       </div>
-      <div className="tw-flex tw-gap-[4.56rem] tw-pt-[5rem] tw-pl-[7.8rem]">
+      <div className="tw-flex tw-gap-[4.56rem] tw-pt-[5rem] ~tw-pl-5/[7.8rem]">
         <ACardWithButton />
         <PCardWithButton />
       </div>
-      <div className="tw-flex tw-justify-end tw-gap-[4.56rem] tw-pt-[5.25rem] tw-pb-[7.37rem] tw-pr-[7.8rem]">
+      <div className="tw-flex tw-justify-end tw-gap-[4.56rem] tw-pt-[5.25rem] tw-pb-[7.37rem] tw-pl-5 ~tw-pr-5/[7.8rem]">
         <ACardWithButton />
         <PCardWithButton />
       </div>

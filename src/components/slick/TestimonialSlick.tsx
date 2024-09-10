@@ -32,8 +32,8 @@ const TestimonialSlick = ({ slickArray }: Props) => {
   return (
     <div className="tw-pt-[5rem] container tw-mx-auto">
       <div className="tw-relative  tw-flex tw-justify-center tw-items-center">
-        <div className="tw-w-[25rem]">
-          <div className="tw-flex tw-justify-center tw-gap-[4.563rem]">
+        <div className="">
+          <div className="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 tw-justify-center tw-gap-[4.563rem]">
             <ACard
               image="/images/aSample.png"
               name={slickArray.at(change).a.name}
