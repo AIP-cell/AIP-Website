@@ -37,11 +37,11 @@ const offeringsData = [
 ];
 const Offerings = () => {
   return (
-    <div className="tw-pt-[6.63rem] tw-pb-[7.5rem] tw-relative container tw-mx-auto">
+    <div className="~tw-pt-[2.725rem]/[6.63rem] tw-pb-[7.5rem] tw-relative container tw-mx-auto">
       <Image
         src={TopLeftCurve}
         alt=""
-        className="tw-absolute tw-top-[4.233rem] tw-left-0"
+        className="tw-absolute tw-top-[4.233rem] tw-left-0 tw-z-[-1]"
       />
       <Image
         src={TopRightCurve}
@@ -64,7 +64,7 @@ const Offerings = () => {
           &nbsp;Offerings
         </span>
       </h2>
-      <div className="tw-px-[7.8rem] tw-pt-[8.5rem] tw-flex tw-flex-col tw-gap-[5rem]">
+      <div className="~tw-px-5/[7.8rem] ~tw-pt-[2.5rem]/[8.5rem] tw-flex tw-flex-col ~tw-gap-[3.5rem]/[5rem]">
         {offeringsData.map((items, i) => (
           <OfferingCard
             key={i}

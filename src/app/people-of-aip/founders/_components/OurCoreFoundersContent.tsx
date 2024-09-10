@@ -18,7 +18,7 @@ const OurCoreFoundersContent = () => {
         className="tw-absolute  tw-bottom-0  tw-left-0 tw-rotate-180"
       />
       <div className="tw-flex tw-flex-col tw-items-center tw-justify-center">
-        <h2 className="tw-text-h2 tw-text-center tw-text-gray80 tw-leading-[3.2rem] tw-font-playFair">
+        <h2 className="~tw-text-h4/h2 tw-text-center tw-text-gray80 tw-leading-[3.2rem] tw-font-playFair">
           Our{" "}
           <span className="tw-text-textPurple tw-font-playFairItalic">
             Core-Founders
@@ -32,11 +32,11 @@ const OurCoreFoundersContent = () => {
           founders are our banks, our north stars, all the same.
         </p>
       </div>
-      <div className="tw-flex tw-gap-[4.56rem] tw-pt-[5rem] ~tw-pl-5/[7.8rem]">
+      <div className="sm:tw-flex-row tw-flex-col tw-flex ~tw-gap-[3.5rem]/[4.56rem] tw-pt-[5rem] tw-pr-12 ~tw-pl-12/[7.8rem] ">
         <ACardWithButton />
         <PCardWithButton />
       </div>
-      <div className="tw-flex tw-justify-end tw-gap-[4.56rem] tw-pt-[5.25rem] tw-pb-[7.37rem] tw-pl-5 ~tw-pr-5/[7.8rem]">
+      <div className="sm:tw-flex-row tw-flex-col tw-flex ~tw-gap-[3.5rem]/[4.56rem] ~tw-pt-14/[5.25rem] tw-justify-end tw-pb-[7.37rem] tw-pl-12 ~tw-pr-12/[7.8rem]">
         <ACardWithButton />
         <PCardWithButton />
       </div>

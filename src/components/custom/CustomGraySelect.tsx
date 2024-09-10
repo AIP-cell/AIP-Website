@@ -18,7 +18,7 @@ export default function CustomGraySelect({
   setSelected: (value: any) => void;
 }) {
   return (
-    <div className="tw-mx-auto  tw-w-full ">
+    <div className="tw-mx-auto tw-w-full tw-px-5">
       <Listbox value={selected} onChange={setSelected}>
         <ListboxButton
           className={clsx(

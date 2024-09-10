@@ -14,9 +14,9 @@ const CareersHeroSection = () => {
           <Image
             src={OvalPurple}
             alt=""
-            className="tw-absolute tw-bottom-[7rem] tw-right-[7.8rem]"
+            className="tw-absolute ~tw-bottom-[3rem]/[7rem] tw-right-[7.8rem]"
           />
-          <p className=" tw-px-[20.938rem] tw-pt-[7.5rem] tw-pb-[21.531rem] tw-text-h1 tw-text-gray80 tw-leading-[3.713rem] tw-font-playFair tw-tracking-[-.04rem]">
+          <p className=" ~tw-px-5/[20.938rem] ~tw-pt-[3.5rem]/[7.5rem] ~tw-pb-[15rem]/[21.531rem] tw-text-h1 tw-text-gray80 tw-leading-[3.713rem] tw-font-playFair tw-tracking-[-.04rem]">
             AIP is a peer network that
             <span className="tw-font-playFairItalic tw-text-textPurple">
               &nbsp;channels the flow

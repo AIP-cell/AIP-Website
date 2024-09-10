@@ -1,18 +1,18 @@
 import React from "react";
 import PositionsGrid from "./PositionsGrid";
 import usersBg from "@public/svg/careers/users.svg";
-import PeachCurve from "@public/svg/careers/peachCurveRight.svg"
+import PeachCurve from "@public/svg/careers/peachCurveRight.svg";
 import Link from "next/link";
 import Image from "next/image";
 
 const OpenRules = () => {
   return (
-    <div className="container tw-relative tw-mx-auto tw-px-[7.581rem] ">
-        <Image
-          src={PeachCurve}
-          alt=""
-          className="tw-absolute tw-right-0 tw-top-[-6rem]"
-        />
+    <div className="container tw-relative tw-mx-auto ~tw-px-5/[7.581rem] ">
+      <Image
+        src={PeachCurve}
+        alt=""
+        className="tw-absolute tw-right-0 tw-top-[-6rem]"
+      />
       <div className="tw-flex tw-flex-col tw-justify-center tw-items-center">
         <p className="tw-pt-[12.5rem] tw-font-playFair tw-tracking-[-.04rem] tw-text-h2 tw-text-gray80 tw-leading-[3.3rem] tw-pb-5">
           Open
@@ -40,8 +40,8 @@ const OpenRules = () => {
           <Image src={usersBg} alt="arrow down" />
         </Link>
       </div>
-      <div className=" tw-px-[6.563rem] tw-pt-20  ">
-        <div className="tw-px-[9.375rem] tw-py-[2.063rem] tw-rounded-[1.25rem] tw-text-center tw-bg-lightgrey">
+      <div className=" ~tw-px-5/[6.563rem] tw-pt-20  ">
+        <div className="~tw-px-5/[9.375rem] tw-py-[2.063rem] tw-rounded-[1.25rem] tw-text-center tw-bg-lightgrey">
           <p className="tw-font-playFair tw-text-h4a tw-leading-[2.113rem] tw-text-gray80">
             Can’t Find what you are looking for?
           </p>

@@ -10,26 +10,23 @@ type Props = {
 };
 const OfferingCard = ({ text1, text2, text3, index }: Props) => {
   return (
-    <div className=" tw-grid tw-grid-cols-5 tw-gap-[1.25rem]">
+    <div className=" tw-grid tw-grid-cols-1 md:tw-grid-cols-5 tw-gap-[1.25rem]">
       <div
-        className={cn(
-          "tw-col-span-2 tw-justify-center tw-items-center  ",
-          {
-            "tw-order-2 ": index % 2 == 1,
-          }
-        )}
-        >
+        className={cn("tw-col-span-2 tw-justify-center tw-items-center", {
+          "md:tw-order-2 ": index % 2 == 1,
+        })}
+      >
         <OvalPurple
-          textClass2="tw-font-playFair tw-text-h4"
-          textClass1="tw-font-playFair tw-text-h4 "
+          textClass2="tw-font-playFair ~tw-text-h4a/h4"
+          textClass1="tw-font-playFair ~tw-text-h4a/h4 "
           text1="Networking &"
           text2="Convening"
-          sizeClass="tw-size-[24.938rem]"
+          sizeClass="tw-aspect-square"
         />
       </div>
       <div
-        className={cn("tw-col-span-3 tw-relative ", {
-          "tw-order-1": index % 2 === 1,
+        className={cn("tw-col-span-3  tw-relative ", {
+          "md:tw-order-1": index % 2 === 1,
         })}
       >
         <p className="tw-leading-[1.4rem]  tw-text-gray80">{text1}</p>

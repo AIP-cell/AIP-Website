@@ -30,7 +30,7 @@ const years = [
 const FinancialSm = () => {
   const [selected, setSelected] = useState(years[1]);
   return (
-    <div className="md:tw-hidden tw-pt-10 tw-px-5">
+    <div className="md:tw-hidden tw-pt-10">
       <CustomGraySelect
         data={years}
         selected={selected}

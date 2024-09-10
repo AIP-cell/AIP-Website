@@ -16,9 +16,9 @@ import InnerCollaborationsVideo from "@/app/products-and-services/collaborations
 
 const page = () => {
   return (
-    <div className="tw-pt-[5rem]">
+    <div className="~tw-pt-[8rem]/[5rem]">
       <div className="tw-relative container tw-mx-auto">
-        <div className="tw-px-[7.8rem] tw-pb-[7.5rem]">
+        <div className="~tw-px-5/[7.8rem] ~tw-pb-[4rem]/[7.5rem]">
           {/* <div className="tw-absolute  tw-left-[7.8rem] tw-font-inter tw-top-[1.25rem]">
             <Link
               href=""
@@ -37,15 +37,15 @@ const page = () => {
             textThree="slug"
             linkThree="/people-of-aip/our-advisory-board/slug"
           />
-          <div className="tw-pt-[5rem]  tw-grid tw-grid-cols-3 tw-gap-[1.238rem]">
+          <div className="~tw-pt-10/[5rem] tw-flex tw-flex-col-reverse md:tw-grid tw-grid-cols-3 tw-gap-[1.238rem]">
             <div className="tw-col-span-2  tw-relative">
-              <h2 className="tw-text-h2 tw-text-midGray tw-leading-[3.3rem] tw-font-playFair">
+              <h2 className="~tw-text-h4/h2 tw-text-midGray tw-leading-[3.3rem] tw-font-playFair">
                 Ashish Dhawan
               </h2>
-              <h4 className="tw-pt-[1rem] tw-text-h5 tw-text-gray40 tw-font-playFairItalic">
+              <h4 className="tw-pt-[1rem] ~tw-text-h6/h5 tw-text-gray40 tw-font-playFairItalic">
                 Founder-CEO, The Convergence Foundation
               </h4>
-              <div className="tw-pt-[2.5rem] tw-text-midGray tw-pr-[6.56rem]">
+              <div className="tw-pt-[2.5rem] tw-text-midGray ~tw-pr-5/[6.56rem]">
                 <p className="tw-leading-[1.4rem]">
                   Ashish Dhawan is the Founder-CEO of The Convergence Foundation
                   (TCF) which is focused on accelerating India’s economic growth
@@ -82,16 +82,22 @@ const page = () => {
                   firm. Ashish graduated from Yale University and received his
                   MBA from Harvard Business School.
                 </p>
-                <div className=" tw-pt-[2.5rem] tw-flex tw-gap-[1rem]">
-                  <ButtonAnimation className="tw-rounded-full tw-p-[0.875rem] tw-bg-bgGray5">
-                    {/* <LinkedinSvg className="tw-size-[1.5rem]"/> */}
-                    <Image src={Linkedin} alt="" className="tw-w-[1.375rem]" />
-                  </ButtonAnimation>
-                  <ButtonAnimation className="tw-rounded-full tw-flex tw-justify-center tw-items-center tw-text-textPurple hover:tw-text-white tw-p-[0.93rem] tw-bg-bgGray5 hover:tw-bg-textPurple">
-                    <XSvg className="tw-size-[1.063rem]" />
-                    {/* <Image src={X} alt="" className="" /> */}
-                  </ButtonAnimation>
-                  <div className="tw-flex tw-gap-[0.98rem] tw-px-[1.25rem] tw-py-[0.76rem] tw-bg-bgGray5 tw-rounded-full">
+                <div className=" tw-pt-[2.5rem] md:tw-flex-row tw-flex-col tw-flex tw-gap-[1rem]">
+                  <div className="tw-flex tw-gap-[1rem]">
+                    <ButtonAnimation className="tw-rounded-full tw-p-[0.875rem] tw-bg-bgGray5">
+                      {/* <LinkedinSvg className="tw-size-[1.5rem]"/> */}
+                      <Image
+                        src={Linkedin}
+                        alt=""
+                        className="tw-w-[1.375rem]"
+                      />
+                    </ButtonAnimation>
+                    <ButtonAnimation className="tw-rounded-full tw-flex tw-justify-center tw-items-center tw-text-textPurple hover:tw-text-white tw-p-[0.93rem] tw-bg-bgGray5 hover:tw-bg-textPurple">
+                      <XSvg className="tw-size-[1.063rem]" />
+                      {/* <Image src={X} alt="" className="" /> */}
+                    </ButtonAnimation>
+                  </div>
+                  <div className="tw-flex tw-w-fit tw-gap-[0.98rem] tw-px-[1.25rem] tw-py-[0.76rem] tw-bg-bgGray5 tw-rounded-full">
                     <Image src={LinkSvg} alt="" className="" />
                     <p className="tw-text-gray80 tw-leading-[1.4rem]">
                       theconvergencefoundation
@@ -101,16 +107,16 @@ const page = () => {
               </div>
             </div>
             <div className="tw-col-span-1 tw-relative">
-              <PSvg src="/images/sample.png" className="tw-relative tw-z-10"/>
+              <PSvg src="/images/sample.png" className="tw-relative tw-z-10" />
               <Image
                 src={Bg}
                 alt="background-svg"
-                className="tw-absolute tw-top-0 tw-right-0"
+                className="tw-absolute tw-top-0 tw-right-0 tw-z-[-1]"
               />
             </div>
           </div>
           <div className="">
-            <InnerCollaborationsVideo/>
+            <InnerCollaborationsVideo />
             {/* <Image
               src={SampleVideo}
               alt="background-svg"

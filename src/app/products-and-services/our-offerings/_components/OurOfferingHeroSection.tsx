@@ -63,12 +63,12 @@ const OurOfferingHeroSection = () => {
           }}
         />
 
-        <div className=" tw-bg-[#faecc894] tw-pt-[11rem] tw-pb-[10.798rem] tw-w-full ">
-          <div className="container tw-mx-auto tw-flex tw-justify-center tw-flex-col tw-items-center tw-relative tw-z-50 tw-px-[14.375rem] ">
+        <div className=" tw-bg-[#faecc894] ~tw-pt-[5.5rem]/[11rem] ~tw-pb-[5.5rem]/[10.798rem] tw-w-full ">
+          <div className="container tw-mx-auto tw-flex tw-justify-center tw-flex-col tw-items-center tw-relative tw-z-50 ~tw-px-5/[14.375rem] ">
             <h3 className=" tw-leading-[20.64px] tw-uppercase tw-font-inter tw-text-[#121314] tw-font-semibold">
               previous sectors engaged
             </h3>
-            <h2 className="tw-pt-[1.25rem] tw-text-center tw-text-h3 tw-leading-[2.6rem] tw-font-playFair tw-text-gray80">
+            <h2 className="tw-pt-[1.25rem] tw-text-center ~tw-text-h4/h3 tw-leading-[2.6rem] tw-font-playFair tw-text-gray80">
               AIP is sector-agnostic, offering our network members services
               across a diverse range of sectors driven by their own
               philanthropic motivations and passions. While many of our members

@@ -1,11 +1,12 @@
 import { SVGProps } from "react";
 
-const PSvg = (props: SVGProps<SVGSVGElement> & { src: string;}) => {
+const PSvg = (props: SVGProps<SVGSVGElement> & { src: string }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={295}
-      height={345}
+      // width={295}
+      // height={345}
+      viewBox="0 0 295 345"
       fill="none"
       {...props}
     >

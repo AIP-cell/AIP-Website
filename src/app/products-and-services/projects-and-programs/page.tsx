@@ -56,7 +56,7 @@ const page = () => {
           alt="bg"
           className="tw-inset-x-0 tw-object-cover tw-w-full tw-absolute tw-top-[-6rem] "
         />
-        <div className="container tw-mx-auto tw-relative tw-px-[7.8rem] tw-pt-[5rem]">
+        <div className="container tw-mx-auto tw-relative ~tw-px-5/[7.8rem] tw-pt-[5rem]">
           <BreadCrump
             textOne="Products & Services"
             linkOne="/products-and-services"

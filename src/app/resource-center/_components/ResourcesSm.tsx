@@ -1,10 +1,19 @@
+"use client";
+import { useState } from "react";
+import CustomGraySelect from "@/components/custom/CustomGraySelect";
+import { useRouter } from "next/navigation";
+
 import React from "react";
-import ArrowDownSvg from "@public/svg/arrowDown.svg";
-import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 import ResourceCard from "../../../components/cards/ResourceCard";
-import Image from "next/image";
 import CustomSelect from "@/components/custom/CustomSelect";
 
+const list = [
+  { id: 1, title: "Reports" },
+  { id: 2, title: "Knowledge Resources" },
+  { id: 3, title: "Inspirational Stories" },
+  { id: 4, title: "News & Media AIP" },
+  { id: 5, title: "Event & Interviews Gallery" },
+];
 const datas = [
   {
     src: "/svg/resource-page/resource1.svg",
@@ -45,27 +54,17 @@ const datas = [
 ];
 const fieldsArray = ["Fields/Sector", "Fields/Sector"];
 const dateArray = ["Date", "Date"];
-const ResourcesTabs = () => {
+const ResourcesSm = () => {
+  const [selected, setSelected] = useState(list[0]);
+
   return (
-    <TabGroup className="md:tw-flex tw-hidden tw-flex-col tw-justify-center ">
-      <TabList className="tw-flex tw-bg-[#F0F0F2] tw-rounded-full tw-w-fit tw-p-[.25rem] ">
-        <Tab className="~tw-px-4/[2rem] tw-py-[.75rem] data-[selected]:tw-bg-darkPurple data-[selected]:tw-text-white data-[selected]:tw-rounded-full tw-text-h9Copy5 tw-leading-[1.22rem] tw-font-inter data-[selected]:tw-outline-none">
-          Reports
-        </Tab>
-        <Tab className="~tw-px-4/[2rem] tw-py-[.75rem] data-[selected]:tw-bg-darkPurple data-[selected]:tw-text-white data-[selected]:tw-rounded-full tw-text-h9Copy5 tw-leading-[1.22rem] tw-font-inter data-[selected]:tw-outline-none">
-          Knowledge Resources
-        </Tab>
-        <Tab className="~tw-px-4/[2rem] tw-py-[.75rem] data-[selected]:tw-bg-darkPurple data-[selected]:tw-text-white data-[selected]:tw-rounded-full tw-text-h9Copy5 tw-leading-[1.22rem] tw-font-inter data-[selected]:tw-outline-none">
-          Inspirational Stories
-        </Tab>
-        <Tab className="~tw-px-4/[2rem] tw-py-[.75rem] data-[selected]:tw-bg-darkPurple data-[selected]:tw-text-white data-[selected]:tw-rounded-full tw-text-h9Copy5 tw-leading-[1.22rem] tw-font-inter data-[selected]:tw-outline-none">
-          News & Media AIP
-        </Tab>
-        <Tab className="~tw-px-4/[2rem] tw-py-[.75rem] data-[selected]:tw-bg-darkPurple data-[selected]:tw-text-white data-[selected]:tw-rounded-full tw-text-h9Copy5 tw-leading-[1.22rem] tw-font-inter data-[selected]:tw-outline-none">
-          Event & Interviews Gallery
-        </Tab>
-      </TabList>
-      <TabPanels className="">
+    <div className="tw-flex md:tw-hidden tw-flex-col tw-justify-center ">
+      <CustomGraySelect
+        data={list}
+        selected={selected}
+        setSelected={setSelected}
+      />
+      <div className="">
         <div className="tw-flex tw-pt-[2rem] tw-gap-[.75rem]">
           <p className="tw-py-3 tw-text-gray40 ">Filter by:</p>
 
@@ -74,8 +73,8 @@ const ResourcesTabs = () => {
           <CustomSelect optionsArray={dateArray} />
         </div>
 
-        <TabPanel>
-          <div className="tw-pt-[3.25rem] tw-pb-[7.5rem] tw-grid md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-[4.5rem]">
+        <div>
+          <div className="tw-pt-[3.25rem] tw-pb-[7.5rem] tw-gap-[4.5rem]">
             {datas.map((item, i) => (
               <ResourceCard
                 key={i}
@@ -86,14 +85,10 @@ const ResourcesTabs = () => {
               />
             ))}
           </div>
-        </TabPanel>
-        <TabPanel>Content 3</TabPanel>
-        <TabPanel>Content 4</TabPanel>
-        <TabPanel>Content 4</TabPanel>
-        <TabPanel>Content 4</TabPanel>
-      </TabPanels>
-    </TabGroup>
+        </div>
+      </div>
+    </div>
   );
 };
 
-export default ResourcesTabs;
+export default ResourcesSm;

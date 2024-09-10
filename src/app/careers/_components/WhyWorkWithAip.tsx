@@ -37,7 +37,7 @@ const WhyWorkWithAip = () => {
           <p>And you can be a part of creating that impact.</p>
         </div>
       </div>
-      <div className="container tw-mx-auto tw-px-[8.438rem] tw-grid tw-grid-cols-2 tw-gap-20 tw-relative">
+      <div className="container tw-mx-auto ~tw-px-5/[8.438rem] tw-grid tw-grid-cols-2 tw-gap-20 tw-relative">
         {works.map((item, i) => (
           <ImgTitleDescVer
             key={i}

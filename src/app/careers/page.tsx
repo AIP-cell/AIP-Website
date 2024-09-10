@@ -39,7 +39,7 @@ const testimonialsArray: any[] = [
 ];
 const CareerPage = () => {
   return (
-    <div className="tw-pt-[5rem]">
+    <div className="~tw-pt-[8rem]/[5rem]">
       <CareersHeroSection />
       <WhyWorkWithAip />
 
