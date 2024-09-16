@@ -20,7 +20,7 @@ const CustomSelect = ({ optionsArray }: Props) => {
     <Listbox value={selected} onChange={setSelected}>
       <ListboxButton className="tw-border-2 tw-border-[#DFE0E5] tw-rounded-md tw-flex tw-items-center  tw-py-[0.75rem] tw-pl-[1.75rem] tw-pr-[1.25rem]">
         <div className="tw-flex tw-gap-[.79rem] tw-items-center">
-          <p className="tw-text-gray80 tw-font-inter tw-text-h9Copy5 leading-[1.225rem]">
+          <p className="tw-text-gray80 tw-font-inter tw-text-h9Copy5 leading-[1.225rem] tw-capitalize">
             {selected}
           </p>
           <Image src={ArrowDownSvg} alt="arrow down" />

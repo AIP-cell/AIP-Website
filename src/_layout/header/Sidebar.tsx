@@ -6,12 +6,14 @@ import Link from "next/link";
 import Jelly from "@public/svg/footer/jelly.svg";
 import { useState } from "react";
 import Image from "next/image";
+import cn from "@/utils/tailwind";
 
 const headerData = [
   {
     width: " tw-w-[6rem] ",
+    label: "About Us",
     options: [
-      { option: "About Us", link: "/about/aip-journey" },
+      // { option: "About Us", link: "/about/aip-journey" },
       { option: "The AIP Journey", link: "/about/aip-journey" },
       { option: "Our Approach", link: "/about/our-approach" },
       { option: "AIP Impact", link: "/about/aip-impact" },
@@ -26,9 +28,10 @@ const headerData = [
   },
   {
     width: " tw-w-[8rem] ",
+    label: "People of AIP",
     options: [
-      { option: "People of AIP", link: "/people-of-aip/founders" },
-      { option: "Our Offerings", link: "#" },
+      // { option: "People of AIP", link: "/people-of-aip/founders" },
+      { option: "Our Offerings", link: "/people-of-aip/founders" },
       { option: "NPO Registry", link: "#" },
       { option: "Projects and Programs", link: "#" },
       { option: "Collaborations", link: "#" },
@@ -36,11 +39,12 @@ const headerData = [
   },
   {
     width: " tw-w-[10.5rem] ",
+    label: "Products & Services",
     options: [
-      {
-        option: "Products & Services",
-        link: "/products-and-services/our-offerings",
-      },
+      // {
+      //   option: "Products & Services",
+      //   link: "/products-and-services/our-offerings",
+      // },
       { option: "Our Offerings", link: "/products-and-services/our-offerings" },
       { option: "NPO Registry", link: "#" },
       {
@@ -55,9 +59,11 @@ const headerData = [
   },
   {
     width: " tw-w-[9rem] ",
+    label: "Resource Center",
     options: [
-      { option: "Resource Center", link: "/resource-center" },
-      { option: "AIP Resources", link: "#" },
+      // { option: "Resource Center", link: "/resource-center" },
+      { option: "AIP Resources", link: "/resource-center" },
+      { option: "Curated Resources", link: "#" },
       // { option: "Collaborations", link: "/resource-center/collaborations" },
     ],
   },
@@ -86,19 +92,22 @@ const Sidebar = () => {
                 {index === 0 && (
                   <Link
                     href="/"
-                    className="tw-pb-[1.25rem] tw-border-b-2 tw-w-full tw-border-[#B861B3] "
+                    className="tw-pb-[1.25rem] tw-border-b-2 tw-w-full tw-border-[#B861B3]"
                   >
                     Home
                   </Link>
                 )}
                 {items.options ? (
                   <div className="tw-flex tw-w-full tw-gap-[2.5rem]">
-                    <CustomHeaderSelect options={items.options} />
+                    <CustomHeaderSelect items={items} />
                   </div>
                 ) : (
                   <Link
                     href={items.link}
-                    className=" tw-border-b-2 tw-w-full tw-border-[#B861B3] ~tw-py-[1.25rem]/0"
+                    className={cn(
+                      " tw-border-b-2 tw-w-full tw-border-[#B861B3] ~tw-py-[1.25rem]/0",
+                      { "tw-border-none": index === headerData.length - 1 }
+                    )}
                   >
                     {items.name}
                   </Link>

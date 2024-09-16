@@ -77,18 +77,6 @@ const page = () => {
             <p className="tw-py-3 tw-text-gray40 ">Filter by:</p>
             <CustomSelect optionsArray={categoryData} />
             <CustomSelect optionsArray={dateData} />
-            {/* <div className="tw-p-3 tw-border-2 tw-rounded-md tw-flex tw-gap-[.79rem]">
-              <p className=" tw-text-gray80 tw-font-inter tw-text[.875rem] leading-[1.225rem]">
-                Category
-              </p>
-              <Image src={ArrowDownSvg} alt="arrow down" />
-            </div>
-            <div className="tw-p-3 tw-border-2 tw-rounded-md tw-flex tw-gap-[.79rem]">
-              <p className=" tw-text-gray80 tw-font-inter tw-text[.875rem] leading-[1.225rem]">
-                Date
-              </p>
-              <Image src={ArrowDownSvg} alt="arrow down" />
-            </div> */}
           </div>
 
           <div className="tw-pt-[3.25rem] tw-pb-[5rem] tw-grid md:tw-grid-cols-3 tw-gap-[4.5rem]">
