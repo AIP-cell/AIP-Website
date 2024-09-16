@@ -56,7 +56,7 @@ const page = () => {
                   className="tw-w-[.766rem] tw-h-[0.971rem] tw-mt-[.2rem]"
                   alt="location"
                 />
-                <p> Open Link on Maps</p>
+                <p>Open Link on Maps</p>
               </Link>
             </div>
             <div className=" tw-relative ~tw-py-10/[5rem]  ">
