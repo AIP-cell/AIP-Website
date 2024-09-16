@@ -17,7 +17,7 @@ const dataS = [
 const MakeDifference = () => {
   return (
     <div className="container tw-mx-auto tw-relative ~tw-pt-[4.8rem]/[13rem] tw-flex tw-flex-col tw-items-center tw-justify-center">
-      <Image src={LeftHomePagePeachCurve} alt="" className="tw-left-0 tw-absolute tw-bottom-0 ~tw-w-[6.956rem]/[13.125rem] ~tw-h-[37.5rem]/[19.875rem]"/>
+      <Image src={LeftHomePagePeachCurve} alt="" className="tw-left-0 tw-absolute ~tw-bottom-[7rem]/0 ~tw-w-[6.956rem]/[13.125rem] ~tw-h-[37.5rem]/[19.875rem]"/>
       <h3 className="~tw-text-h4/h2 tw-text-gray80 ~tw-leading-[2rem]/[3.3rem] tw-font-playFair">
         How we are trying to
       </h3>

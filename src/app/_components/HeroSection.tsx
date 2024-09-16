@@ -1,5 +1,6 @@
 import Image from "next/image";
 import HeroBg from "@public/svg/heroBg.svg";
+import SmHeroBg from "@public/svg/home/smHeroPurpleBg.svg";
 import OvalPeach from "@public/svg/ovalPeach.svg";
 import React from "react";
 
@@ -9,7 +10,7 @@ const HeroSection = () => {
       <Image
         src={HeroBg}
         alt=""
-        className="tw-absolute  tw-w-full tw-h-[50rem] tw-object-cover"
+        className="tw-hidden md:tw-block tw-absolute  tw-w-full tw-h-[50rem] tw-object-cover"
       />
       <div className="container tw-mx-auto tw-relative tw-h-screen ">
         <div className="tw-hidden md:block tw-absolute tw-top-[3.125rem] tw-left-[1.25rem]">
@@ -26,18 +27,25 @@ const HeroSection = () => {
               &nbsp;by and for philanthropists
             </span>
           </h2>
-          <div className="tw-relative ~tw-w-[19rem]/[29.6rem] ~tw-h-[18rem]/[27.8rem] tw-shrink-0">
-            <div className="tw-absolute tw-inset-0 tw-z-10">
-              <div className="tw-relative ~tw-w-[19.2rem]/[27.846rem] ~tw-h-[16rem]/[29.17rem]">
-                <Image
-                  src="/svg/ellipsePeach.svg"
-                  alt=""
-                  fill
-                  className="tw-z-[-2] tw-rotate-[-109.42deg]"
-                />
+          <Image
+            src={SmHeroBg}
+            alt="sm-hero-bg"
+            className="tw-block md:tw-hidden tw-absolute tw-bottom-[-2rem]  tw-w-full tw-object-cover"
+          />
+          <div className="">
+            <div className="tw-relative ~tw-w-[19rem]/[29.6rem] ~tw-h-[18rem]/[27.8rem] tw-shrink-0">
+              <div className="tw-absolute tw-inset-0 tw-z-10">
+                <div className="tw-relative ~tw-w-[19.2rem]/[27.846rem] ~tw-h-[16rem]/[29.17rem]">
+                  <Image
+                    src="/svg/ellipsePeach.svg"
+                    alt=""
+                    fill
+                    className="tw-z-[-2] tw-rotate-[-109.42deg]"
+                  />
+                </div>
               </div>
+              <Image src="/svg/heroImage.svg" alt="" fill className="tw-z-20" />
             </div>
-            <Image src="/svg/heroImage.svg" alt="" fill className="tw-z-20" />
           </div>
         </div>
       </div>

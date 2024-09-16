@@ -37,11 +37,11 @@ const CarouselNews = () => {
       className="tw-relative tw-w-full tw-flex tw-justify-center  md:container tw-mx-auto"
     >
       <CarouselContent>
-        <div className="~tw-pl-[2rem]/0 tw-flex  tw-pt-[2.5rem]  md:tw-overflow-x-auto no-scrollbar ">
+        <div className="~tw-pl-[1.25rem]/0 tw-flex  tw-pt-[2.5rem]  md:tw-overflow-x-auto no-scrollbar ">
           {newsData.map((items, i) => (
             <CarouselItem
               key={i}
-              className="  tw-basis-[80%] sm:tw-basis-[50%]  md:tw-basis-1/3 lg:tw-basis-1/3"
+              className="  !tw-basis-[80%] sm:!tw-basis-[50%]  md:!tw-basis-1/3 lg:!tw-basis-1/3"
             >
               <NewsCard src={items.src} text={items.text} />
             </CarouselItem>
