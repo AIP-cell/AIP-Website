@@ -1,6 +1,7 @@
 import fluid, { extract, screens, fontSize } from "fluid-tailwind";
 import type { Config } from "tailwindcss";
 const config: Config = {
+  darkMode: ["class"],
   prefix: "tw-",
   content: {
     files: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
@@ -15,11 +16,6 @@ const config: Config = {
     }),
     extend: {
       backgroundImage: {
-        // "darkPurple": "#5E165B",
-        // "bgLightPeach": "#D9D9D9",
-        // "bgGray5": "#F0F0F2",
-        // "bgSlatePurple":"#F0F0F21A",
-
         purpleToPink: "linear-gradient(to right, #E24BDE , #A17FF0)",
         purpleToBlue: "linear-gradient(to bottom, #91298C , #224193)",
         toRightPurpleToBlue: "linear-gradient(to right, #91298C , #224193)",
@@ -48,6 +44,46 @@ const config: Config = {
         bgCollab: "#F3F3F3",
         lightgrey: "#D9D9D9",
         darkBlack: "#2A2820",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        chart: {
+          "1": "hsl(var(--chart-1))",
+          "2": "hsl(var(--chart-2))",
+          "3": "hsl(var(--chart-3))",
+          "4": "hsl(var(--chart-4))",
+          "5": "hsl(var(--chart-5))",
+        },
       },
       fontFamily: {
         inter: "var(--inter)",
@@ -55,7 +91,6 @@ const config: Config = {
         playFairItalic: "var(--playfairDisplayItalic)",
       },
       fontSize: {
-        // Desktop
         h1: "3.375rem",
         h2: "3rem",
         h3: "2.5rem",
@@ -63,7 +98,6 @@ const config: Config = {
         h4a: "1.625rem",
         h5: "1.25rem",
         h6M: "1.125rem",
-
         h6Copy1: "1.5rem",
         h7Copy2: "1.25rem",
         h8Copy3: "1.125rem",
@@ -71,8 +105,13 @@ const config: Config = {
         h9Copy5: "0.875rem",
         h10Copy6: "0.75rem",
       },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
     },
   },
-  plugins: [fluid],
+  plugins: [fluid, require("tailwindcss-animate")],
 };
 export default config;

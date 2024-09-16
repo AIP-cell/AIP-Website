@@ -3,13 +3,18 @@ import React from "react";
 import Src from "@public/images/aSample.png";
 import PlayButtonPurple from "@public/svg/playButtonPurple.svg";
 import ASvg from "@/components/svg/ASvg";
-
-const ACardWithPlaySign = () => {
+type Props={
+  image: string
+  name: string
+  post: string
+  desc: string
+}
+// "  "
+const ACardWithPlaySign = ({image,name,post,desc}:Props) => {
   return (
     <div className="tw-w-[18.43rem] tw-relative ">
       <div className="tw-relative tw-flex tw-justify-center">
-        {/* <Image src={Src} alt="" /> */}
-        <ASvg src="/images/aSample.png" />
+        <ASvg src={image} />
         <Image
           src={PlayButtonPurple}
           alt=""
@@ -18,15 +23,13 @@ const ACardWithPlaySign = () => {
       </div>
       <div className="tw-flex tw-flex-col tw-gap-[0.75rem]">
         <h3 className="tw-text-h4 tw-leading-[2.6rem] tw-text-[#DFE0E5] tw-font-playFair">
-          Ashish Dhawan
+          {name}
         </h3>
         <h4 className="tw-text-h5 tw-font-playFair tw-text-lightPurplePink tw-font-medium tw-italic">
-          The Convergence Foundation
+          {post}
         </h4>
-        <p className="tw-text-h9Copy4 tw-leading-[1.4rem] tw-font-inter tw-text-[#DFE0E5] ">
-          “I believe a lot more needs to be done particularly to encourage
-          first-time givers. AIP aims to fill this gap and spur philanthropy in
-          a very structured manner.’’
+        <p className="tw-text-h9Copy4 tw-leading-[1.4rem] tw-font-inter tw-line-clamp-4 md:tw-line-clamp-5 tw-text-ellipsis tw-text-[#DFE0E5] ">
+          {desc}
         </p>
       </div>
     </div>

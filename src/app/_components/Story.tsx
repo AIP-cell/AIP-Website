@@ -3,12 +3,12 @@ import StoryBg from "../../../public/svg/storyBg.svg";
 import Image from "next/image";
 const Story = () => {
   return (
-    <div className=" ~tw-pt-[2.5rem]/0 container tw-mx-auto tw-overflow-hidden tw-relative  tw-flex tw-flex-col tw-justify-center tw-items-center">
+    <div className=" ~tw-pt-[2.5rem]/0 container tw-mx-auto  tw-relative  tw-flex tw-flex-col tw-justify-center tw-items-center">
       {/* <div className="tw-absolute -left-[23rem] h-[35rem] tw-w-full"> */}
       <Image
         src={StoryBg}
         alt="bg-image"
-        className="tw-absolute tw-left-0 tw--bottom-[5rem]"
+        className="tw-hidden md:tw-block tw-absolute tw-left-0 ~tw-top-[10rem]/[2rem]"
         // fill
       />
       {/* </div> */}
@@ -22,17 +22,17 @@ const Story = () => {
           <p>To everyone on its way</p>
         </div>
 
-        <div className="tw-flex tw-flex-col tw-items-center tw-text-midGray  tw-justify-center tw-text-h9Copy4 tw-leading-[22.4px]">
+        <div className="tw-flex tw-flex-col tw-items-center tw-text-midGray  tw-justify-center ~tw-text-h9Copy5/h9Copy4 ~tw-leading-[1.22rem]/[1.4rem]">
           <p>It nurtures ecosystems;</p>
           <p> connects communities</p> <p>and sculpts the landscape</p>
         </div>
 
-        <div className="tw-flex tw-flex-col tw-items-center tw-text-midGray  tw-justify-center tw-text-h9Copy4 tw-leading-[22.4px]">
+        <div className="tw-flex tw-flex-col tw-items-center tw-text-midGray  tw-justify-center ~tw-text-h9Copy5/h9Copy4 ~tw-leading-[1.22rem]/[1.4rem]">
           <p>To enable conversations.</p> <p>To foster understanding.</p>
           <p>That inspires change.</p>
         </div>
 
-        <div className="tw-flex tw-flex-col tw-items-center tw-text-midGray  tw-justify-center tw-text-h9Copy4 tw-leading-[22.4px]">
+        <div className="tw-flex tw-flex-col tw-items-center tw-text-midGray  tw-justify-center ~tw-text-h9Copy5/h9Copy4 ~tw-leading-[1.22rem]/[1.4rem]">
           <p>AIP is the gentle uplifting spirit,</p>
           <p>The bank that holds, that shapes it all.</p>
           <p>To form & connect networks.</p> <p>That bridge gaps.</p>
