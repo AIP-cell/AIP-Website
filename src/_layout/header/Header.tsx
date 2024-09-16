@@ -1,11 +1,13 @@
+"use client";
 import CustomHeaderSelect from "@/components/custom/CustomHeaderSelect";
-import LogoHeaderSvg from "@/components/svg/LogoHeaderSvg"; 
+import LogoHeaderSvg from "@/components/svg/LogoHeaderSvg";
 import LogoSmSVG from "@/components/svg/LogoSmSVG";
 import MenuSvg from "@/components/svg/MenuSvg";
 import SearchHeaderSvg from "@/components/svg/SearchHeaderSvg";
 import SearchWhiteSvg from "@/components/svg/SearchWhiteSvg";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
+import Sidebar from "./Sidebar";
 const headerData = [
   {
     width: " tw-w-[6rem] ",
@@ -71,15 +73,15 @@ const Header = () => {
           <LogoHeaderSvg />
         </Link>
         <Link href="/" className="tw-block md:tw-hidden">
-          <LogoSmSVG className="tw-h-[2.75rem] tw-w-[4.5rem]"/>
+          <LogoSmSVG className="tw-h-[2.75rem] tw-w-[4.5rem]" />
         </Link>
         <div className="tw-flex tw-gap-[1rem] md:tw-hidden">
-          <SearchWhiteSvg className="tw-size-[2rem]"/>
-          <MenuSvg className="tw-size-[2rem]"/>
+          <SearchWhiteSvg className="tw-size-[2rem]" />
+          <Sidebar />
         </div>
         <div className="tw-hidden md:tw-flex tw-gap-[2.5rem] ">
           {headerData.map((items: any, index: number) => (
-            <div key={index} className="tw-flex  tw-items-center ">
+            <div key={index} className="tw-flex tw-items-center ">
               {items.options ? (
                 <div className="tw-flex tw-gap-[2.5rem]">
                   <CustomHeaderSelect options={items.options} />
@@ -90,6 +92,7 @@ const Header = () => {
             </div>
           ))}
         </div>
+
         <div className="tw-hidden md:tw-flex tw-rounded-full tw-border-2 tw-border-darkPurple tw-relative">
           <div className="tw-rounded-full tw-bg-darkPurple  tw-px-[1.75rem] tw-py-[0.75rem] ">
             <h3 className="tw-text-white">Get Involved</h3>
