@@ -2,6 +2,7 @@ import OvalPurple from "@/components/ovals/OvalPurple";
 import Image from "next/image";
 import React from "react";
 import Bg from "@public/svg/wavePeachRight.svg";
+import SmBg from "@public/svg/home/smMemberBg.svg";
 import OvalPurpleSvg from "@/components/svg/OvalPurpleSvg";
 
 const Members = () => {
@@ -10,7 +11,7 @@ const Members = () => {
       <Image
         src={Bg}
         alt=""
-        className="tw-object-cover tw-absolute tw-w-full tw-bottom-[-10.5rem]"
+        className="tw-hidden lg:tw-block tw-object-cover tw-absolute tw-w-full tw-bottom-[-10.5rem]"
       />
       <div className=" container tw-mx-auto ~tw-pt-[5rem]/[13.25rem]">
         <div className="tw-relative tw-flex tw-flex-col md:tw-flex-row tw-w-ful tw-h-[120vh] ~tw-gap-[2rem]/0">
@@ -25,6 +26,11 @@ const Members = () => {
           </div>
           {/* <OvalPurpleSvg className="-top-[4rem] right-[11.85rem]"/> */}
           <div className="tw-w-full md:tw-w-[38.5%] tw-relative">
+            <Image
+              src={SmBg}
+              alt=""
+              className="tw-block lg:tw-hidden tw-object-cover tw-absolute tw-w-full tw-bottom-[-32rem]"
+            />
             <OvalPurple
               sizeClass="~tw-size-[13rem]/[17.3rem]"
               textClass1="tw-text-h3"

@@ -10,27 +10,27 @@ const HeroSection = () => {
       <Image
         src={HeroBg}
         alt=""
-        className="tw-hidden md:tw-block tw-absolute  tw-w-full tw-h-[50rem] tw-object-cover"
+        className="tw-hidden lg:tw-block tw-absolute tw-top-[-5rem] tw-w-full tw-h-[50rem] tw-object-cover"
       />
       <div className="container tw-mx-auto tw-relative tw-h-screen ">
-        <div className="tw-hidden md:block tw-absolute tw-top-[3.125rem] tw-left-[1.25rem]">
+        <div className="tw-hidden lg:block tw-absolute tw-top-[3.125rem] tw-left-[1.25rem]">
           <Image src={OvalPeach} alt="" className="tw-size-[11.875rem]" />
         </div>
-        <div className="tw-flex tw-flex-col md:tw-flex-row ~tw-gap-[3.25rem]/0 tw-items-center  ~tw-pt-[2.5rem]/[5.56rem] ~tw-pl-[1rem]/[7.8rem] ~tw-pr-[1rem]/[5rem] tw-relative">
-          <h2 className=" ~tw-text-h4/h1 tw-font-playFair ~tw-leading-[2.6rem]/[3.7rem]  ">
+        <div className="tw-flex tw-flex-col lg:tw-flex-row ~tw-gap-[3.25rem]/0 tw-items-center  ~tw-pt-[2.5rem]/[5.56rem] ~tw-pl-[1rem]/[7.8rem] ~tw-pr-[1rem]/[5rem] tw-relative">
+          <div className="tw-relative tw-z-[1000] ~tw-text-h4/h1 tw-font-playFair ~tw-leading-[2.6rem]/[3.7rem]  ">
             AIP is a peer network that
             <span className=" tw-font-playFairItalic tw-text-textPurple">
-              &nbsp;channels the flow
+              &nbsp;channels the flow&nbsp;
             </span>
             to accelerate strategic giving in India - a movement
             <span className="tw-text-textPurple tw-font-playFairItalic">
               &nbsp;by and for philanthropists
             </span>
-          </h2>
+          </div>
           <Image
             src={SmHeroBg}
             alt="sm-hero-bg"
-            className="tw-block md:tw-hidden tw-absolute tw-bottom-[-2rem]  tw-w-full tw-object-cover"
+            className="tw-block lg:tw-hidden tw-absolute ~/lg:tw-bottom-[-2rem]/0  tw-w-full tw-object-cover"
           />
           <div className="">
             <div className="tw-relative ~tw-w-[19rem]/[29.6rem] ~tw-h-[18rem]/[27.8rem] tw-shrink-0">

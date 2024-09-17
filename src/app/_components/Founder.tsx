@@ -62,17 +62,17 @@ const Founder = () => {
         <Image
           src={FounderBg}
           alt="founder-bg"
-          className="tw-absolute tw-h-full md:tw-h-auto tw-object-cover md:tw-object-none tw-w-full  ~tw-top-[-5rem]/[-18rem]"
+          className="tw-absolute tw-h-full lg:tw-h-auto tw-object-cover lg:tw-object-none tw-w-full  ~tw-top-[-5rem]/[-18rem]"
         />
         <Image
           src={PurPleCurveSvg}
           alt=""
-          className="tw-hidden md:tw-block tw-absolute tw-top-[18rem] tw-right-0"
+          className="tw-hidden lg:tw-block tw-absolute tw-top-[18rem] tw-right-0"
         />
         <Image
           src={BlueCurveSvg}
           alt=""
-          className="tw-hidden md:tw-block tw-absolute tw-bottom-[5rem] tw-left-0"
+          className="tw-hidden lg:tw-block tw-absolute tw-bottom-[5rem] tw-left-0"
         />
         <div className="~tw-px-[1.25rem]/[7.8rem] tw-pt-[10.3rem]">
           <div className="tw-flex tw-justify-between tw-items-center">
@@ -82,7 +82,7 @@ const Founder = () => {
                 Core-Founders
               </span>
             </h3>
-            <div className=" tw-flex md:tw-hidden tw-gap-[1.25rem] tw-relative">
+            <div className=" tw-flex lg:tw-hidden tw-gap-[1.25rem] tw-relative">
               <ButtonAnimation
                 onClick={previous}
                 className="  tw-text-darkPurple tw-leading-[22.4px] tw-font-inter tw-bg-white tw-rounded-tl-3xl tw-rounded-bl-3xl tw-rounded-tr-xl tw-rounded-br-xl tw-py-[1.15rem] tw-px-[0.92rem] tw-h-fit"
@@ -97,7 +97,7 @@ const Founder = () => {
               </ButtonAnimation>
             </div>
           </div>
-          <div className="tw-block md:tw-hidden tw-relative tw-pt-[3.43rem]">
+          <div className="tw-block lg:tw-hidden tw-relative tw-pt-[3.43rem]">
             <>
               <div
                 className={cn("tw-flex tw-justify-center tw-items-center", {
@@ -125,7 +125,7 @@ const Founder = () => {
               </div>
             </>
           </div>
-          <div className="tw-hidden md:tw-block tw-relative tw-pt-[3.43rem] ">
+          <div className="tw-hidden lg:tw-block tw-relative tw-pt-[3.43rem] ">
             <div className="tw-flex tw-gap-[4.56rem]">
               <ACardWithPlaySign
                 image="/images/aSample.png"
