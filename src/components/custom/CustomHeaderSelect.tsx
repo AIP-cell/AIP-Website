@@ -65,8 +65,8 @@ const CustomHeaderSelect = ({ items }: Props) => {
             value={items}
             className="data-[focus]:bg-blue-100 tw-text-white tw-cursor-pointer"
           >
-            <ButtonAnimation>
-              <Link href={items?.link}>{items.option}</Link>
+            <ButtonAnimation className=" ">
+              <Link href={items?.link} className="hover:tw-font-playFairItalic ">{items.option}</Link>
             </ButtonAnimation>
           </ListboxOption>
         ))}
