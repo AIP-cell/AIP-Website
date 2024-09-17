@@ -30,28 +30,28 @@ const OurValueSection = () => {
       <Image
         src={Bg}
         alt=""
-        className=" tw-absolute -tw-top-[11.5rem] tw-w-full "
+        className=" tw-hidden lg:tw-block tw-absolute -tw-top-[11.5rem] tw-w-full "
       />
       <div className="~tw-pt-[4.625rem]/[12.5rem] tw-relative container tw-mx-auto ">
         <div className="tw-flex tw-flex-col tw-justify-center tw-items-center ">
-          <h3 className="tw-text-h2 tw-text-darkGray tw-font-playFair tw-leading-[52.8px]">
+          <h3 className="~tw-text-h4/h2 tw-text-darkGray tw-font-playFair tw-leading-[52.8px]">
             Our <i className="tw-text-textPurple">Values</i>
           </h3>
-          <p className="tw-pt-[1.25rem] tw-text-midGray tw-font-inter">
+          <p className="~tw-pt-[0.5rem]/[1.25rem] ~tw-px-[4.1rem]/0 tw-text-center tw-text-midGray tw-font-inter ~tw-text-h9Copy5/h9Copy4 ~tw-leading-[1.4rem]/[1.225rem]">
             The foundations that drive AIP to drive positive change
           </p>
         </div>
-        <div className="tw-pt-[5rem] tw-px-[7.5rem] ">
+        <div className="~tw-pt-[2.5rem]/[5rem] ~tw-px-0/[7.5rem] ">
           <div className="tw-flex tw-gap-[5rem]  tw-overflow-x-auto no-scrollbar">
             {ourValues.map((items, i) => (
               <OvalPurple
                 key={i}
-                sizeClass="tw-size-[18.4rem]"
+                sizeClass="~tw-size-[14.25rem]/[18.4rem]"
                 mainClass=""
                 text1={items.text1}
                 text2={items.text2}
-                textClass1="tw-text-h4 tw-font-playFair tw-text-purple10 leading-[41.6px]"
-                textClass2=" tw-italic tw-font-playFairItalic tw-text-h4 leading-[41.6px]"
+                textClass1="~tw-text-h5/h4 tw-font-playFair tw-text-purple10 ~tw-leading-[1.75rem]/[2.6rem]"
+                textClass2=" tw-font-playFairItalic ~tw-text-h5/h4 ~tw-leading-[1.75rem]/[2.6rem]"
               />
             ))}
           </div>

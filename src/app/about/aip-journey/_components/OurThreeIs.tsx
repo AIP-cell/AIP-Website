@@ -20,10 +20,10 @@ const threeIs = [
 const OurThreeIs = () => {
   return (
     <div className="container tw-mx-auto  ~tw-pt-[5rem]/[12.5rem] ~tw-pb-[5rem]/[7.5rem] ~tw-px-5/[7.8rem] tw-relative">
-      <h3 className="tw-text-h2 tw-font-playFair tw-text-center tw-text-gray80">
+      <h3 className="~tw-text-h4/h2 tw-font-playFair tw-text-center tw-text-gray80">
         Our
         <span className="tw-text-textPurple tw-font-playFairItalic">
-          Three I-s
+          &nbsp;Three I-s
         </span>
       </h3>
       <div className="~tw-pt-10/[5rem] md:tw-flex  tw-gap-[4.56rem]">

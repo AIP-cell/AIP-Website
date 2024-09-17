@@ -14,7 +14,7 @@ const JourneyHeroSection = () => {
         <Wave
           fill="#F5B195"
           paused={false}
-          className="tw-h-[--h] !tw-block"
+          className="tw-h-[--h] !tw-block "
           options={{
             // height:40,
             amplitude: 60,
@@ -31,7 +31,7 @@ const JourneyHeroSection = () => {
         <Wave
           fill="#F5B195"
           paused={false}
-          className="tw-h-[--h] tw-rotate-180 !tw-block"
+          className="tw-h-[--h] tw-rotate-180 !tw-block "
           options={{
             // height:40,
             amplitude: 60,
