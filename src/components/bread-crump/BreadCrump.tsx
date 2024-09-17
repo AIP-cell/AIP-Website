@@ -4,6 +4,7 @@ import BreadCrumpSvg from "@public/svg/breadCrumps.svg";
 
 import React from "react";
 import cn from "@/utils/tailwind";
+import LeftOPenSvg from "../svg/LeftOpenSvg";
 type Props = {
   textOne: string;
   linkOne: string;
@@ -33,6 +34,9 @@ const BreadCrump = ({
           { "!tw-text-gray50": textTwo }
         )}
       >
+        <div className="tw-text-[#6A6D75]">
+          <LeftOPenSvg />
+        </div>
         <Image src={BreadCrumpSvg} alt="bread-crump-Svg" /> {textOne}
         {textTwo && <p>&nbsp;/&nbsp;</p>}
       </Link>

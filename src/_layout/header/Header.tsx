@@ -4,15 +4,16 @@ import LogoHeaderSvg from "@/components/svg/LogoHeaderSvg";
 import LogoSmSVG from "@/components/svg/LogoSmSVG";
 import MenuSvg from "@/components/svg/MenuSvg";
 import SearchHeaderSvg from "@/components/svg/SearchHeaderSvg";
-import SearchWhiteSvg from "@/components/svg/SearchWhiteSvg";
 import Link from "next/link";
 import React, { useState } from "react";
 import Sidebar from "./Sidebar";
+import SearchSvg from "@/components/svg/SearchSvg";
 const headerData = [
   {
     width: " tw-w-[6rem] ",
+    label:"About Us",
     options: [
-      { option: "About Us", link: "/about/aip-journey" },
+      // { option: "About Us", link: "/about/aip-journey" },
       { option: "The AIP Journey", link: "/about/aip-journey" },
       { option: "Our Approach", link: "/about/our-approach" },
       { option: "AIP Impact", link: "/about/aip-impact" },
@@ -27,9 +28,10 @@ const headerData = [
   },
   {
     width: " tw-w-[8rem] ",
+    label:"People of AIP",
     options: [
-      { option: "People of AIP", link: "/people-of-aip/founders" },
-      { option: "Our Offerings", link: "#" },
+      // { option: "People of AIP", link: "/people-of-aip/founders" },
+      { option: "Our Offerings", link: "/people-of-aip/founders" },
       { option: "NPO Registry", link: "#" },
       { option: "Projects and Programs", link: "#" },
       { option: "Collaborations", link: "#" },
@@ -37,11 +39,12 @@ const headerData = [
   },
   {
     width: " tw-w-[10.5rem] ",
+    label:"Products & Services",
     options: [
-      {
-        option: "Products & Services",
-        link: "/products-and-services/our-offerings",
-      },
+      // {
+      //   option: "Products & Services",
+      //   link: "/products-and-services/our-offerings",
+      // },
       { option: "Our Offerings", link: "/products-and-services/our-offerings" },
       { option: "NPO Registry", link: "#" },
       {
@@ -56,9 +59,11 @@ const headerData = [
   },
   {
     width: " tw-w-[9rem] ",
+    label:"Resource Center",
     options: [
-      { option: "Resource Center", link: "/resource-center" },
-      { option: "AIP Resources", link: "#" },
+      // { option: "Resource Center", link: "/resource-center" },
+      { option: "AIP Resources", link: "/resource-center" },
+      { option: "Curated Resources", link: "#" },
       // { option: "Collaborations", link: "/resource-center/collaborations" },
     ],
   },
@@ -75,8 +80,8 @@ const Header = () => {
         <Link href="/" className="tw-block md:tw-hidden">
           <LogoSmSVG className="tw-h-[2.75rem] tw-w-[4.5rem]" />
         </Link>
-        <div className="tw-flex tw-gap-[1rem] md:tw-hidden">
-          <SearchWhiteSvg className="tw-size-[2rem]" />
+        <div className="tw-flex tw-items-center tw-text-white tw-gap-[1rem] md:tw-hidden">
+          <SearchSvg className="tw-size-[1.5rem]" />
           <Sidebar />
         </div>
         <div className="tw-hidden md:tw-flex tw-gap-[2.5rem] ">
@@ -84,7 +89,7 @@ const Header = () => {
             <div key={index} className="tw-flex tw-items-center ">
               {items.options ? (
                 <div className="tw-flex tw-gap-[2.5rem]">
-                  <CustomHeaderSelect options={items.options} />
+                  <CustomHeaderSelect items={items} />
                 </div>
               ) : (
                 <Link href={items.link}>{items.name}</Link>

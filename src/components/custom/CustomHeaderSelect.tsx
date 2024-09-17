@@ -10,20 +10,27 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { ButtonAnimation } from "../animations/ButtonAnimation";
+import DownTagSvg from "../svg/DownTagSvg";
 
 type Props = {
-  options: any;
+  items: any;
 };
-const CustomHeaderSelect = ({ options }: Props) => {
-  const [selected, setSelected] = useState(options?.at(0));
-
+const CustomHeaderSelect = ({ items }: Props) => {
+  const [selected, setSelected] = useState(items.label);
+  const options = items.options;
   return (
-    <Listbox value={selected?.option} onChange={setSelected} as="div" className="tw-w-full">
+    <Listbox
+      value={selected?.option}
+      onChange={setSelected}
+      as="div"
+      className="tw-w-full"
+    >
       <ButtonAnimation className="tw-w-full">
         <ListboxButton as="div" className="tw-w-full ">
-          <div className="tw-flex tw-justify-between tw-border-b-2 tw-w-full md:tw-w-auto tw-border-[#B861B3] md:tw-border-none tw-gap-[0.5rem] tw-items-center">
-            <p className="~tw-py-[1.25rem]/0 ">{selected?.option}</p>
-            <Image src={DownArrow} alt="down-arrow" />
+          <div className="tw-text-white md:tw-text-gray80 tw-flex tw-justify-between tw-border-b-2 tw-w-full md:tw-w-auto tw-border-[#B861B3] md:tw-border-none tw-gap-[0.5rem] tw-items-center">
+            <p className="~tw-py-[1.25rem]/0 ">{selected}</p>
+            <DownTagSvg className="~tw-w-[1.25rem]/[0.55rem] ~tw-h-[1.25rem]/[0.3rem]"/>
+            {/* <Image src={DownArrow} alt="down-arrow" /> */}
           </div>
         </ListboxButton>
       </ButtonAnimation>
