@@ -46,12 +46,14 @@ const JourneyHeroSection = () => {
         </Wave>
       </div>
 
-      <BreadCrump
-        textOne="About Us"
-        linkOne="/about"
-        textTwo="AIP Journey"
-        linkTwo="/about/aip-journey"
-      />
+      <div className="tw-relative container tw-mx-auto">
+        <BreadCrump
+          textOne="About Us"
+          linkOne="/about"
+          textTwo="AIP Journey"
+          linkTwo="/about/aip-journey"
+        />
+      </div>
       <div className="tw-relative">
         <Wave
           fill="#faecc894"
@@ -65,8 +67,8 @@ const JourneyHeroSection = () => {
         />
 
         <div className=" tw-bg-[#faecc894] ~tw-pt-[3.1rem]/[6.25rem] ~tw-pb-[3.8rem]/[7.6rem] tw-w-full ">
-          <div className="container tw-mx-auto tw-flex tw-justify-center tw-flex-col tw-items-center tw-relative tw-z-50 ~tw-px-5/[20.938rem] ">
-            <h3 className=" tw-leading-[20.64px] tw-font-inter tw-text-[#121314] tw-font-semibold">
+          <div className="container tw-mx-auto tw-flex tw-justify-center tw-flex-col tw-items-center tw-relative tw-z-50 ~tw-px-[1.375rem]/[20.938rem] ">
+            <h3 className="~tw-text-h9Copy5/h9Copy4 tw-leading-[20.64px] tw-font-inter tw-text-[#121314] tw-font-semibold">
               PHILANTHROPY IS WHAT IT DOES.
             </h3>
             <h2 className="tw-pt-[1.25rem] tw-text-center ~tw-text-h4/h3 ~tw-leading-[2.563rem]/[3.25rem] tw-font-playFair tw-text-gray80">

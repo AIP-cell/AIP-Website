@@ -7,11 +7,13 @@ import Jelly from "@public/svg/footer/jelly.svg";
 import { useState } from "react";
 import Image from "next/image";
 import cn from "@/utils/tailwind";
+import CrossSvg from "@/components/svg/CrossSvg";
 
 const headerData = [
   {
     width: " tw-w-[6rem] ",
     label: "About Us",
+    id: "about",
     options: [
       // { option: "About Us", link: "/about/aip-journey" },
       { option: "The AIP Journey", link: "/about/aip-journey" },
@@ -27,19 +29,14 @@ const headerData = [
     ],
   },
   {
-    width: " tw-w-[8rem] ",
-    label: "People of AIP",
-    options: [
-      // { option: "People of AIP", link: "/people-of-aip/founders" },
-      { option: "Our Offerings", link: "/people-of-aip/founders" },
-      { option: "NPO Registry", link: "#" },
-      { option: "Projects and Programs", link: "#" },
-      { option: "Collaborations", link: "#" },
-    ],
+    id: "people-of-aip",
+    name: "People of AIP",
+    link: "/people-of-aip/founders",
   },
   {
     width: " tw-w-[10.5rem] ",
     label: "Products & Services",
+    id: "products-and-services",
     options: [
       // {
       //   option: "Products & Services",
@@ -60,6 +57,7 @@ const headerData = [
   {
     width: " tw-w-[9rem] ",
     label: "Resource Center",
+    id: "resource-center",
     options: [
       // { option: "Resource Center", link: "/resource-center" },
       { option: "AIP Resources", link: "/resource-center" },
@@ -67,8 +65,8 @@ const headerData = [
       // { option: "Collaborations", link: "/resource-center/collaborations" },
     ],
   },
-  { name: "Careers", link: "/careers" },
-  { name: "Contact", link: "/contact" },
+  { id: "careers", name: "Careers", link: "/careers" },
+  { id: "contact", name: "Contact", link: "/contact" },
 ];
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -105,7 +103,7 @@ const Sidebar = () => {
                   <Link
                     href={items.link}
                     className={cn(
-                      " tw-border-b-2 tw-w-full tw-border-[#B861B3] ~tw-py-[1.25rem]/0",
+                      " tw-border-b-2 tw-w-full tw-border-[#B861B3] ~tw-py-[1.25rem]/0 ",
                       { "tw-border-none": index === headerData.length - 1 }
                     )}
                   >
@@ -127,8 +125,17 @@ const Sidebar = () => {
             onClick={() => {
               setIsOpen(false);
             }}
-            className="tw-w-[30%] tw-bg-gray80 "
-          ></div>
+            className="tw-w-[30%] tw-bg-[#FFFDF7] tw-relative"
+          >
+            <ButtonAnimation className="tw-absolute tw-top-[1.23rem] tw-right-[1.25rem]">
+              <CrossSvg
+                onClick={() => {
+                  setIsOpen(false);
+                }}
+                className=" tw-cursor-pointer tw-size-[2rem] "
+              />
+            </ButtonAnimation>
+          </div>
         </div>
       )}
     </>

@@ -7,6 +7,7 @@ import {
 import { CheckIcon, ChevronDownIcon } from "@heroicons/react/20/solid";
 import clsx from "clsx";
 import { useState } from "react";
+import DownTagSvg from "../svg/DownTagSvg";
 
 export default function CustomGraySelect({
   selected,
@@ -18,19 +19,16 @@ export default function CustomGraySelect({
   setSelected: (value: any) => void;
 }) {
   return (
-    <div className="tw-mx-auto tw-w-full tw-px-5">
+    <div className="tw-mx-auto tw-w-full ">
       <Listbox value={selected} onChange={setSelected}>
         <ListboxButton
           className={clsx(
-            "tw-relative tw-block tw-w-full tw-rounded-full tw-bg-[#F0F0F2] tw-py-1.5 tw-pr-8 tw-pl-3 tw-text-left tw-text-h9Copy4 tw-text-darkPurple",
+            "tw-relative  tw-flex tw-items-center tw-justify-between tw-w-full tw-rounded-full tw-bg-[#F0F0F2] tw-py-[1rem] tw-pr-[1.25rem] tw-pl-[1.75rem] tw-text-left tw-text-h9Copy4 tw-text-darkPurple",
             "focus:tw-outline-none data-[focus]:tw-outline-2 data-[focus]:-tw-outline-offset-2 data-[focus]:tw-outline-white/25"
           )}
         >
           {selected.title}
-          <ChevronDownIcon
-            className="tw-group tw-pointer-events-none tw-absolute tw-top-2.5 tw-right-2.5 tw-size-4 tw-fill-darkPurple"
-            aria-hidden="true"
-          />
+          <DownTagSvg className="~tw-w-[1.25rem]/[0.6rem] ~tw-h-[1.25rem]/[0.4rem]" />
         </ListboxButton>
         <ListboxOptions
           anchor="bottom"

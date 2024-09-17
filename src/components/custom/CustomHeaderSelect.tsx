@@ -10,6 +10,7 @@ import Link from "next/link";
 import { ButtonAnimation } from "../animations/ButtonAnimation";
 import DownTagSvg from "../svg/DownTagSvg";
 import { usePathname } from "next/navigation";
+import cn from "@/utils/tailwind";
 
 type Props = {
   items: any;
@@ -43,13 +44,13 @@ const CustomHeaderSelect = ({ items }: Props) => {
     >
       <ButtonAnimation className="tw-w-full">
         <ListboxButton as="div" className="tw-w-full ">
-          <div className="tw-flex tw-flex-col tw-gap-[0.25rem]">
-            <div className="tw-text-white md:tw-text-gray80 tw-flex tw-justify-between tw-border-b-2 tw-w-full md:tw-w-auto tw-border-[#B861B3] md:tw-border-none tw-gap-[0.5rem] tw-items-center">
-              <p className="~tw-py-[1.25rem]/0 ">{selected}</p>
-              <DownTagSvg className="~tw-w-[1.25rem]/[0.55rem] ~tw-h-[1.25rem]/[0.3rem]" />
+          <div className="tw-flex tw-flex-col ">
+            <div className="tw-text-white tw-mb-[0.25rem] md:tw-text-gray80 tw-flex tw-justify-between tw-border-b-2 tw-w-full md:tw-w-auto tw-border-[#B861B3] md:tw-border-none tw-gap-[0.5rem] tw-items-center">
+              <p className={cn("~tw-py-[1.25rem]/0 tw-text-h9Copy5 tw-leading-[1.225rem]",{"tw-font-bold":isPathname == items.id})}>{selected}</p>
+              <DownTagSvg className="~tw-w-[1.25rem]/[0.6rem] ~tw-h-[1.25rem]/[0.4rem]" />
             </div>
             {isPathname == items.id && (
-              <div className="tw-h-[0.25rem] tw-w-full tw-rounded-full tw-bg-purple40"></div>
+              <div className="tw-hidden md:tw-block tw-h-[0.25rem]  tw-w-full tw-rounded-full tw-bg-purple40"></div>
             )}
           </div>
         </ListboxButton>
@@ -57,7 +58,7 @@ const CustomHeaderSelect = ({ items }: Props) => {
       <ListboxOptions
         // transition
         anchor="bottom"
-        className="tw-ml-[5.6rem] tw-mt-[1rem] tw-z-[10000] tw-bg-purpleToBlue tw-flex tw-flex-col tw-gap-[1.625rem] tw-rounded-md tw-pl-[1.75rem] tw-w-[16.625rem] tw-py-[1.313rem]"
+        className="tw-ml-[5.6rem] no-scrollbar tw-mt-[1rem] tw-z-[10000] tw-bg-purpleToBlue tw-flex tw-flex-col tw-rounded-2xl tw-w-[16.625rem] tw-p-[0.5rem]"
       >
         {options?.map((items: any, i: number) => (
           <ListboxOption
@@ -65,8 +66,13 @@ const CustomHeaderSelect = ({ items }: Props) => {
             value={items}
             className="data-[focus]:bg-blue-100 tw-text-white tw-cursor-pointer"
           >
-            <ButtonAnimation className=" ">
-              <Link href={items?.link} className="hover:tw-font-playFairItalic ">{items.option}</Link>
+            <ButtonAnimation className="tw-w-full tw-rounded-2xl hover:tw-bg-[#2B092A4D] tw-flex">
+              <Link
+                href={items?.link}
+                className="hover:tw-font-playFairItalic tw-text-left tw-pl-[1.25rem]  tw-transition-all tw-duration-150 tw-py-[0.8rem] tw-w-full"
+              >
+                {items.option}
+              </Link>
             </ButtonAnimation>
           </ListboxOption>
         ))}

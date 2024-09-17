@@ -74,7 +74,7 @@ const ResourcesSm = () => {
         </div>
 
         <div>
-          <div className="tw-pt-[3.25rem] tw-pb-[7.5rem] tw-gap-[4.5rem]">
+          <div className="tw-pt-[3.25rem] tw-pb-[7.5rem] tw-flex tw-flex-col tw-gap-[2.5rem]">
             {datas.map((item, i) => (
               <ResourceCard
                 key={i}

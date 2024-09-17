@@ -41,7 +41,7 @@ const page = () => {
             <Image
               src={ovalPeach}
               alt=""
-              className="tw-absolute tw-top-[4.5rem] tw-size-[17.62rem]  tw-left-[18rem]"
+              className="tw-absolute ~tw-top-0/[4.5rem] ~tw-size-[11.563rem]/[17.62rem]  ~tw-left-[16rem]/[18rem]"
             />
             <h3 className="tw-relative tw-text-gray80 ~tw-text-h4a/h4 tw-font-playFair tw-leading-[2.6rem]">
               Founded in 2021 with an objective to transform the strategic

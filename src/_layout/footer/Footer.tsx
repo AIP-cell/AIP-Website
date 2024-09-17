@@ -132,7 +132,7 @@ const Footer = () => {
                   </button>
                 </div>
               </div>
-              <p className=" tw-text-h10Copy6 tw-pt-[2.875rem] tw-font-inter tw-text-white/60">
+              <div className=" tw-text-h10Copy6 tw-pt-[2.875rem] tw-font-inter tw-text-white/60">
                 <span className="tw-pr-2">
                   ©2024-25 Accelerate Indian Philanthropy
                 </span>
@@ -142,8 +142,8 @@ const Footer = () => {
                 <Link href={""} className="tw-border-s tw-bottom-1 tw-ps-2">
                   Privacy Policy
                 </Link>
-                <span>Designed with ❤️ by Sane Difference</span>
-              </p>
+                <p>Designed with ❤️ by Sane Difference</p>
+              </div>
             </div>
             <div>
               <p className="tw-pt-[0.75rem] tw-text-h9Copy5 tw-font-inter tw-font-bold tw-text-white">

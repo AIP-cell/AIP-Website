@@ -18,17 +18,12 @@ const page = () => {
   return (
     <div className="~tw-pt-[8rem]/[5rem]">
       <div className="tw-relative container tw-mx-auto">
+        <Image
+          src={Bg}
+          alt="background-svg"
+          className="tw-absolute tw-top-0 tw-right-0 tw-z-[-1]"
+        />
         <div className="~tw-px-5/[7.8rem] ~tw-pb-[4rem]/[7.5rem]">
-          {/* <div className="tw-absolute  tw-left-[7.8rem] tw-font-inter tw-top-[1.25rem]">
-            <Link
-              href=""
-              className="tw-text-gray50 tw-text-h9Copy5 tw-leading-[19.6px]"
-            >
-              {"<"} People of AIP &nbsp;/&nbsp;
-            </Link>
-            <Link href="#">Our Advisory Board &nbsp;/&nbsp;</Link>
-            <Link href="#"> Ashish Dhawan</Link>
-          </div> */}
           <BreadCrump
             textOne="People of AIP"
             linkOne="/people-of-aip"
@@ -108,11 +103,6 @@ const page = () => {
             </div>
             <div className="tw-col-span-1 tw-relative">
               <PSvg src="/images/sample.png" className="tw-relative tw-z-10" />
-              <Image
-                src={Bg}
-                alt="background-svg"
-                className="tw-absolute tw-top-0 tw-right-0 tw-z-[-1]"
-              />
             </div>
           </div>
           <div className="">

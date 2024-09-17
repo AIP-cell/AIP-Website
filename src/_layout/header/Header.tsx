@@ -7,11 +7,12 @@ import Link from "next/link";
 import React, { useState } from "react";
 import Sidebar from "./Sidebar";
 import SearchSvg from "@/components/svg/SearchSvg";
+import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 const headerData = [
   {
     width: " tw-w-[6rem] ",
-    label:"About Us",
-    id:"about",
+    label: "About Us",
+    id: "about",
     options: [
       // { option: "About Us", link: "/about/aip-journey" },
       { option: "The AIP Journey", link: "/about/aip-journey" },
@@ -27,21 +28,14 @@ const headerData = [
     ],
   },
   {
-    width: " tw-w-[8rem] ",
-    label:"People of AIP",
-    id:"people-of-aip",
-    options: [
-      // { option: "People of AIP", link: "/people-of-aip/founders" },
-      { option: "Our Offerings", link: "/people-of-aip/founders" },
-      { option: "NPO Registry", link: "#" },
-      { option: "Projects and Programs", link: "#" },
-      { option: "Collaborations", link: "#" },
-    ],
+    id: "people-of-aip",
+    name: "People of AIP",
+    link: "/people-of-aip/founders",
   },
   {
     width: " tw-w-[10.5rem] ",
-    label:"Products & Services",
-    id:"products-and-services",
+    label: "Products & Services",
+    id: "products-and-services",
     options: [
       // {
       //   option: "Products & Services",
@@ -61,8 +55,8 @@ const headerData = [
   },
   {
     width: " tw-w-[9rem] ",
-    label:"Resource Center",
-    id:"resource-center",
+    label: "Resource Center",
+    id: "resource-center",
     options: [
       // { option: "Resource Center", link: "/resource-center" },
       { option: "AIP Resources", link: "/resource-center" },
@@ -70,8 +64,8 @@ const headerData = [
       // { option: "Collaborations", link: "/resource-center/collaborations" },
     ],
   },
-  { id:"careers", name: "Careers", link: "/careers" },
-  { id:"contact", name: "Contact", link: "/contact" },
+  { id: "careers", name: "Careers", link: "/careers" },
+  { id: "contact", name: "Contact", link: "/contact" },
 ];
 const Header = () => {
   return (
@@ -95,7 +89,14 @@ const Header = () => {
                   <CustomHeaderSelect items={items} />
                 </div>
               ) : (
-                <Link href={items.link}>{items.name}</Link>
+                <ButtonAnimation>
+                  <Link
+                    href={items.link}
+                    className="md:tw-text-gray80 tw-text-h9Copy5 tw-leading-[1.225rem]"
+                  >
+                    {items.name}
+                  </Link>
+                </ButtonAnimation>
               )}
             </div>
           ))}
@@ -103,12 +104,14 @@ const Header = () => {
 
         <div className="tw-hidden lg:tw-flex tw-rounded-full tw-border-2 tw-border-darkPurple tw-relative">
           <div className="tw-rounded-full tw-bg-darkPurple  tw-px-[1.75rem] tw-py-[0.75rem] ">
-            <h3 className="tw-text-white">Get Involved</h3>
+            <h3 className="tw-text-white tw-text-h9Copy5 tw-leading-[1.225rem]">
+              Get Involved
+            </h3>
           </div>
           <div className="tw-bg-white tw-rounded-tr-full tw-rounded-br-full tw-flex tw-items-center tw-justify-center">
-            <div className="tw-px-[1.46rem] ">
+            <Link href="/search" className="tw-px-[1.46rem] ">
               <SearchHeaderSvg />
-            </div>
+            </Link>
           </div>
         </div>
       </div>
