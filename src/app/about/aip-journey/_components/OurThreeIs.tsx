@@ -19,21 +19,21 @@ const threeIs = [
 ];
 const OurThreeIs = () => {
   return (
-    <div className="container tw-mx-auto  ~tw-pt-[5rem]/[12.5rem] ~tw-pb-[5rem]/[7.5rem] ~tw-px-5/[7.8rem] tw-relative">
+    <div className="container tw-mx-auto  ~tw-pt-[5rem]/[12.5rem] ~tw-pb-[5rem]/[7.5rem] ~tw-px-[2.938rem]/[7.8rem] tw-relative">
       <h3 className="~tw-text-h4/h2 tw-font-playFair tw-text-center tw-text-gray80">
         Our
         <span className="tw-text-textPurple tw-font-playFairItalic">
           &nbsp;Three I-s
         </span>
       </h3>
-      <div className="~tw-pt-10/[5rem] md:tw-flex  tw-gap-[4.56rem]">
+      <div className="~tw-pt-10/[5rem] md:tw-flex  ~tw-gap-[1.25rem]/[4.56rem]">
         {threeIs.map((item, i) => (
           <ImgTitleDescVer
             key={i}
             src={item.src}
             title={item.title}
             titleClassName="tw-font-playFairItalic !tw-text-gray80"
-            descClassName="tw-px-[0.5rem]"
+            descClassName="~tw-px-[1.15rem]/[0.5rem]"
             desc={item.desc}
           />
         ))}

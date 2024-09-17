@@ -1,22 +1,38 @@
 "use client";
-import { Fragment, useState } from "react";
-import DownArrow from "@public/svg/downArrow.svg";
+import { useState } from "react";
 import {
   Listbox,
   ListboxButton,
   ListboxOption,
   ListboxOptions,
 } from "@headlessui/react";
-import Image from "next/image";
 import Link from "next/link";
 import { ButtonAnimation } from "../animations/ButtonAnimation";
 import DownTagSvg from "../svg/DownTagSvg";
+import { usePathname } from "next/navigation";
 
 type Props = {
   items: any;
 };
 const CustomHeaderSelect = ({ items }: Props) => {
   const [selected, setSelected] = useState(items.label);
+  // const [isPathname, setIsPathname] = useState(false);
+
+  const pathname = usePathname();
+  let isPathname = "";
+  if (pathname.startsWith("/about")) {
+    isPathname = "about";
+  } else if (pathname.startsWith("/people-of-aip")) {
+    isPathname = "people-of-aip";
+  } else if (pathname.startsWith("/products-and-services")) {
+    isPathname = "products-and-services";
+  } else if (pathname.startsWith("/resource-center")) {
+    isPathname = "resource-center";
+  } else if (pathname.startsWith("/careers")) {
+    isPathname = "careers";
+  } else if (pathname.startsWith("/contact")) {
+    isPathname = "contact";
+  }
   const options = items.options;
   return (
     <Listbox
@@ -27,10 +43,14 @@ const CustomHeaderSelect = ({ items }: Props) => {
     >
       <ButtonAnimation className="tw-w-full">
         <ListboxButton as="div" className="tw-w-full ">
-          <div className="tw-text-white md:tw-text-gray80 tw-flex tw-justify-between tw-border-b-2 tw-w-full md:tw-w-auto tw-border-[#B861B3] md:tw-border-none tw-gap-[0.5rem] tw-items-center">
-            <p className="~tw-py-[1.25rem]/0 ">{selected}</p>
-            <DownTagSvg className="~tw-w-[1.25rem]/[0.55rem] ~tw-h-[1.25rem]/[0.3rem]"/>
-            {/* <Image src={DownArrow} alt="down-arrow" /> */}
+          <div className="tw-flex tw-flex-col tw-gap-[0.25rem]">
+            <div className="tw-text-white md:tw-text-gray80 tw-flex tw-justify-between tw-border-b-2 tw-w-full md:tw-w-auto tw-border-[#B861B3] md:tw-border-none tw-gap-[0.5rem] tw-items-center">
+              <p className="~tw-py-[1.25rem]/0 ">{selected}</p>
+              <DownTagSvg className="~tw-w-[1.25rem]/[0.55rem] ~tw-h-[1.25rem]/[0.3rem]" />
+            </div>
+            {isPathname == items.id && (
+              <div className="tw-h-[0.25rem] tw-w-full tw-rounded-full tw-bg-purple40"></div>
+            )}
           </div>
         </ListboxButton>
       </ButtonAnimation>

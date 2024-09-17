@@ -1,4 +1,3 @@
-"use client";
 import CustomHeaderSelect from "@/components/custom/CustomHeaderSelect";
 import LogoHeaderSvg from "@/components/svg/LogoHeaderSvg";
 import LogoSmSVG from "@/components/svg/LogoSmSVG";
@@ -12,6 +11,7 @@ const headerData = [
   {
     width: " tw-w-[6rem] ",
     label:"About Us",
+    id:"about",
     options: [
       // { option: "About Us", link: "/about/aip-journey" },
       { option: "The AIP Journey", link: "/about/aip-journey" },
@@ -29,6 +29,7 @@ const headerData = [
   {
     width: " tw-w-[8rem] ",
     label:"People of AIP",
+    id:"people-of-aip",
     options: [
       // { option: "People of AIP", link: "/people-of-aip/founders" },
       { option: "Our Offerings", link: "/people-of-aip/founders" },
@@ -40,6 +41,7 @@ const headerData = [
   {
     width: " tw-w-[10.5rem] ",
     label:"Products & Services",
+    id:"products-and-services",
     options: [
       // {
       //   option: "Products & Services",
@@ -60,6 +62,7 @@ const headerData = [
   {
     width: " tw-w-[9rem] ",
     label:"Resource Center",
+    id:"resource-center",
     options: [
       // { option: "Resource Center", link: "/resource-center" },
       { option: "AIP Resources", link: "/resource-center" },
@@ -67,8 +70,8 @@ const headerData = [
       // { option: "Collaborations", link: "/resource-center/collaborations" },
     ],
   },
-  { name: "Careers", link: "/careers" },
-  { name: "Contact", link: "/contact" },
+  { id:"careers", name: "Careers", link: "/careers" },
+  { id:"contact", name: "Contact", link: "/contact" },
 ];
 const Header = () => {
   return (

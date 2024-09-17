@@ -1,6 +1,7 @@
 import OvalPurple from "@/components/ovals/OvalPurple";
 import React from "react";
 import Bg from "@public/svg/wavePeachLeft.svg";
+import SmBg from "@public/svg/about/aip-journey/smValueBg.svg";
 import Image from "next/image";
 const ourValues = [
   {
@@ -29,8 +30,13 @@ const OurValueSection = () => {
     <div className="bg-container tw-mx-auto tw-relative">
       <Image
         src={Bg}
-        alt=""
+        alt="bg"
         className=" tw-hidden lg:tw-block tw-absolute -tw-top-[11.5rem] tw-w-full "
+      />
+      <Image
+        src={SmBg}
+        alt="sm-bg"
+        className=" tw-block lg:tw-hidden tw-absolute tw-top-[9rem] tw-w-full "
       />
       <div className="~tw-pt-[4.625rem]/[12.5rem] tw-relative container tw-mx-auto ">
         <div className="tw-flex tw-flex-col tw-justify-center tw-items-center ">
