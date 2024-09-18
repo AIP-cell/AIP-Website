@@ -10,7 +10,7 @@ const HeroSection = () => {
       <Image
         src={HeroBg}
         alt=""
-        className="tw-hidden lg:tw-block tw-absolute tw-top-[-2rem] tw-w-full  tw-object-cover"
+        className="tw-hidden lg:tw-block tw-absolute tw-top-[-2rem] tw-w-full tw-h-full  tw-object-fill"
       />
       <div className="container tw-mx-auto tw-relative tw-h-screen ">
         <div className="tw-hidden lg:tw-block tw-absolute tw-top-[3.125rem] tw-left-[1.25rem]">
