@@ -37,16 +37,23 @@ const CustomHeaderSelect = ({ items }: Props) => {
   const options = items.options;
   return (
     <Listbox
-      value={selected?.option}
+      value={selected}
       onChange={setSelected}
       as="div"
       className="tw-w-full"
     >
       <ButtonAnimation className="tw-w-full">
-        <ListboxButton as="div" className="tw-w-full ">
+        <ListboxButton as="div" className={cn("tw-w-full ")}>
           <div className="tw-flex tw-flex-col ">
             <div className="tw-text-white tw-mb-[0.25rem] md:tw-text-gray80 tw-flex tw-justify-between tw-border-b-2 tw-w-full md:tw-w-auto tw-border-[#B861B3] md:tw-border-none tw-gap-[0.5rem] tw-items-center">
-              <p className={cn("~tw-py-[1.25rem]/0 tw-text-h9Copy5 tw-leading-[1.225rem]",{"tw-font-bold":isPathname == items.id})}>{selected}</p>
+              <p
+                className={cn(
+                  "~tw-py-[1.25rem]/0 tw-text-h9Copy5 tw-leading-[1.225rem]",
+                  { "tw-font-bold": isPathname == items.id }
+                )}
+              >
+                {selected}
+              </p>
               <DownTagSvg className="~tw-w-[1.25rem]/[0.6rem] ~tw-h-[1.25rem]/[0.4rem]" />
             </div>
             {isPathname == items.id && (
@@ -56,9 +63,11 @@ const CustomHeaderSelect = ({ items }: Props) => {
         </ListboxButton>
       </ButtonAnimation>
       <ListboxOptions
-        // transition
+        transition
         anchor="bottom"
-        className="tw-ml-[5.6rem] no-scrollbar tw-mt-[1rem] tw-z-[10000] tw-bg-purpleToBlue tw-flex tw-flex-col tw-rounded-2xl tw-w-[16.625rem] tw-p-[0.5rem]"
+        className={cn(
+          "tw-ml-[5.6rem] no-scrollbar tw-mt-[1rem] tw-z-[10000] tw-bg-purpleToBlue tw-flex tw-flex-col tw-rounded-2xl tw-w-[16.625rem] tw-p-[0.5rem]"
+        )}
       >
         {options?.map((items: any, i: number) => (
           <ListboxOption

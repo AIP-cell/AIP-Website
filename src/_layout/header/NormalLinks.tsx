@@ -1,5 +1,6 @@
 "use client";
 import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
+import cn from "@/utils/tailwind";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
@@ -13,7 +14,7 @@ const NormalLinks = ({ items }: Props) => {
       <ButtonAnimation>
         <Link
           href={items.link}
-          className="md:tw-text-gray80 tw-text-h9Copy5 tw-leading-[1.225rem]"
+          className={cn("md:tw-text-gray80 tw-text-h9Copy5 tw-leading-[1.225rem]",{"tw-font-bold":items.link == pathname})}
         >
           {items.name}
         </Link>
