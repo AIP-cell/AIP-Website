@@ -41,9 +41,10 @@ const WhyWorkWithAip = () => {
         {works.map((item, i) => (
           <ImgTitleDescVer
             key={i}
+            imageWidth="!~tw-w-[10rem]/[11.9rem]"
             src={item.src}
             title={item.title}
-            titleClassName=" !tw-text-gray80 tw-text-h4 tw-leading-[2.6rem]"
+            titleClassName=" !tw-text-gray80 !tw-text-h4 tw-leading-[2.6rem]"
             descClassName="tw-px-[0.5rem] tw-leading-[1.4rem]"
             desc={item.desc}
           />

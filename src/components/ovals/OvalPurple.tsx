@@ -20,7 +20,7 @@ const OvalPurple = ({
   return (
     <div className={` ${mainClass} `}>
       <div
-        className={` ${sizeClass} tw-relative tw-shrink-0   tw-flex tw-flex-col tw-justify-center tw-items-center`}
+        className={` ${sizeClass} tw-relative tw-shrink-0 tw-flex tw-flex-col tw-justify-center tw-items-center`}
       >
         <Image src="/svg/ovalPurple.svg" alt="image" fill />
         {/* <OvalPurpleSvg /> */}

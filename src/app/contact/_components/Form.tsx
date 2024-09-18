@@ -1,6 +1,7 @@
 import React from "react";
 import InputField from "./InputField";
 import SelectField from "./SelectField";
+import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 
 const Form = () => {
   // const options =[1,2,3];
@@ -34,12 +35,12 @@ const Form = () => {
         />
       </div>
 
-      <button
+      <ButtonAnimation
         type="submit"
-        className="tw-text-white tw-leading-[1.225rem] tw-bg-darkPurple tw-w-[8.0625rem] tw-h-[2.75rem] tw-rounded-[1.5rem] tw-cursor-pointer"
+        className="tw-text-white hover:tw-text-darkPurple tw-leading-[1.225rem] tw-bg-darkPurple hover:tw-bg-white tw-w-[8.0625rem] tw-h-[2.75rem] tw-rounded-[1.5rem] tw-cursor-pointer"
       >
         Send Email
-      </button>
+      </ButtonAnimation>
     </form>
   );
 };

@@ -19,7 +19,7 @@ const PeopleOfAipSm = () => {
     router.push("/people-of-aip/our-advisory-board/slug");
   }
   return (
-    <div className="tw-flex md:tw-hidden tw-justify-center ~tw-pt-8/[4.75rem] ">
+    <div className="tw-flex md:tw-hidden tw-justify-center ~tw-pt-[4.3rem]/[4.75rem] ">
       <div className="tw-flex tw-flex-col tw-items-center tw-justify-center tw-w-full">
         <CustomGraySelect
           data={list}

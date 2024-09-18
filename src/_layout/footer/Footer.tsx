@@ -275,13 +275,13 @@ const Footer = () => {
               </div>
 
               <div className="tw-pt-[2.25rem] tw-text-h9Copy5 tw-font-inter tw-font-bold tw-text-white">
-                <Link href={""}>Career</Link>
+                <Link href="/career">Career</Link>
               </div>
               <div className="tw-pt-[2.25rem] tw-text-h9Copy5 tw-font-inter tw-font-bold tw-text-white">
-                <Link href={""}>Contact</Link>
+                <Link href="/contact">Contact</Link>
               </div>
               <div className="tw-pt-[2.25rem] tw-text-h9Copy5 tw-font-inter tw-font-bold tw-text-white">
-                <Link href={""}>FAQs</Link>
+                <Link href="/faq">FAQs</Link>
               </div>
               <div className="tw-pt-[2.25rem] tw-text-h9Copy5 tw-font-inter tw-font-bold tw-text-white">
                 <Link href={""}>Foundation Fact Sheet</Link>

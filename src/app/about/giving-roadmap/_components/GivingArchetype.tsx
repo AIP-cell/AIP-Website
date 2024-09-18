@@ -5,7 +5,7 @@ const JourneyArchetype1 = () => {
   return (
     <div className="tw-flex tw-flex-col ~tw-px-5/[22.138rem] tw-text-center tw-pb-[4.125rem] ">
       <div className="~tw-space-y-4/[2.5rem]">
-        <div className="tw-font-playFair tw-text-h2 tw-leading-[3.3rem] ">
+        <div className="tw-font-playFair ~tw-text-h4/h2 ~tw-leading-[2.6rem]/[3.3rem] ">
           What&apos;s your
           <p className="tw-font-playFairItalic tw-text-textPurple">
             {" "}
@@ -13,7 +13,7 @@ const JourneyArchetype1 = () => {
           </p>
         </div>
 
-        <div className="tw-leading-[1.4rem] max-lg:~tw-px-[2.875rem]/0 tw-font-inter">
+        <div className="~tw-leading-[1.225rem]/[1.4rem] tw-text-midGray max-lg:~tw-px-[2.875rem]/0 tw-font-inter">
           <p className=" tw-pb-10">
             Our research identifies six distinct archetypes among Indian
             philanthropists: inspiration seekers, emerging givers, strategic

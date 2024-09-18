@@ -29,7 +29,7 @@ const serviceSlickData = [
   "2The whole idea is to get philanthropists together, to share their stories, share their learnings and share their experience. This helps to inspire people and build a sense of community amongst the philanthropists.",
   "3The whole idea is to get philanthropists together, to share their stories, share their learnings and share their experience. This helps to inspire people and build a sense of community amongst the philanthropists.",
 ];
-const ServiceWeProvide = () => {
+const FourPillars = () => {
   return (
     <div className="tw-relative bg-container tw-mx-auto">
       <Image
@@ -40,9 +40,9 @@ const ServiceWeProvide = () => {
       <div className="tw-pt-[12.5rem] ~tw-px-5/[7.8rem] container tw-mx-auto">
         <h2 className="tw-font-playFair tw-text-center tw-text-gray80 tw-text-h2 tw-leading-[3.3rem]">
           <span className="tw-text-textPurple tw-font-playFairItalic">
-            Services
+            Four
           </span>
-          &nbsp;We Provide
+          &nbsp;Pillars
         </h2>
         <div className="tw-pt-[5rem] tw-flex no-scrollbar tw-gap-[4.5rem] tw-overflow-x-auto">
           {serviceData.map((items, i) => (
@@ -63,4 +63,4 @@ const ServiceWeProvide = () => {
   );
 };
 
-export default ServiceWeProvide;
+export default FourPillars;

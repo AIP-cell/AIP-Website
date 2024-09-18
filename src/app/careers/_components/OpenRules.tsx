@@ -47,9 +47,9 @@ const OpenRules = () => {
           </p>
           <p className="tw-font-inter tw-leading-[1.4rem] tw-pt-3 tw-text-midGray">
             Send in your resume and portfolio at
-            <span className="tw-text-textPurple">
+            <Link href="mailto:careers@indianphilanthropy.org" className="tw-text-textPurple tw-inline-block tw-underline">
               &nbsp;careers@indianphilanthropy.org
-            </span>
+            </Link>
           </p>
         </div>
       </div>

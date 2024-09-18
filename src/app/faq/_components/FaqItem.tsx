@@ -17,21 +17,21 @@ const FaqItem = () => {
     <Disclosure>
       {({ open }) => (
         <>
-          <DisclosureButton className="tw-py-7 tw-px-5 tw-flex tw-justify-between tw-w-full">
-            <p
-              className={`tw-text-h6M tw-font-inter ${
+          <DisclosureButton className="~tw-py-[1.25rem]/[1.75rem] tw-px-[1.25rem] tw-flex tw-justify-between tw-w-full">
+            <div
+              className={`tw-text-h6M tw-font-inter tw-text-left ${
                 open ? "tw-text-textPurple" : "tw-text-gray80"
               }`}
             >
               What is the mission of our organization?
-            </p>
+            </div>
             <div
               className={`tw-transform tw-size-5 tw-flex tw-justify-center tw-items-center tw-transition-all tw-duration-300  ${
                 open ? "tw-rotate-180" : "tw-rotate-0"
               }`}
             >
               {open ? (
-                <Image src={MinusSvg} alt="Minus Image"  />
+                <Image src={MinusSvg} alt="Minus Image" />
               ) : (
                 <Image src={PlusSvg} alt="Plus Image" className="" />
               )}

@@ -1,33 +1,9 @@
-import React from "react";
-import Link from "next/link";
-import ResourcesTabs from "./_components/ResourcesTabs";
-import BreadCrump from "@/components/bread-crump/BreadCrump";
-import ResourcesSm from "./_components/ResourcesSm";
+import React from 'react'
 
 const page = () => {
   return (
-    <div className="tw-pt-[5rem]">
-      <div className="container tw-mx-auto tw-relative ~tw-px-5/[7.8rem]">
-        <div className="~tw-px-5/tw-flex ~tw-pt-0/[1.25rem] tw-gap-[.75rem][7.8rem]">
-          <BreadCrump
-            textOne="Resource Center"
-            linkOne="/resource-center"
-            textTwo="AIP Resources"
-            linkTwo="/resource-center"
-            textThree="Reports"
-            linkThree="/resource-center"
-          />
-          <div className="tw-max-w-[51.188rem] ~tw-pt-[4.3rem]/[5rem] ~tw-pb-[2.5rem]/[4rem]">
-            <p className="tw-font-playFair tw-leading-[3.3rem] ~tw-text-h4/[3rem] tw-text-gray80">
-              AIP Resources
-            </p>
-          </div>
-        </div>
-        <ResourcesSm />
-        <ResourcesTabs />
-      </div>
-    </div>
-  );
-};
+    <div>page</div>
+  )
+}
 
-export default page;
+export default page

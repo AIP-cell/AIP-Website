@@ -43,15 +43,14 @@ const ImpactHeroSection = () => {
             </linearGradient>
           </Wave>
         </div>
-        {/* <HeroBgSVg className="tw-absolute "/> */}
-        {/* <Image src={HeroBg1} alt="" fill className="tw-z-40 " />
-        <Image src={HeroBg2} alt="" fill className="tw-z-10 " /> */}
-        <BreadCrump
-          textOne="About Us"
-          linkOne="/about"
-          textTwo="AIP Impact"
-          linkTwo="/about/aip-impact"
-        />
+        <div className="tw-relative container tw-mx-auto ">
+          <BreadCrump
+            textOne="About Us"
+            linkOne="/about"
+            textTwo="AIP Impact"
+            linkTwo="/about/aip-impact"
+          />
+        </div>
         <div className="tw-relative">
           <Wave
             fill="#b861b4a6"

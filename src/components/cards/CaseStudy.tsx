@@ -10,7 +10,7 @@ type Props = {
 };
 const CaseStudy = ({ title, desc, image, index }: Props) => {
   return (
-    <div className="tw-relative tw-grid tw-grid-cols-1 lg:tw-grid-cols-2 ~tw-gap-4/[7.81rem]">
+    <div className="tw-relative tw-grid tw-grid-cols-1 lg:tw-grid-cols-2 ~tw-gap-[1rem]/[7.81rem]">
       <div
         className={cn(
           " tw-col-span-1 tw-flex tw-justify-center  tw-overflow-hidden lg:tw-order-1",
@@ -34,13 +34,13 @@ const CaseStudy = ({ title, desc, image, index }: Props) => {
           { "lg:!tw-order-1 ": index % 2 === 0 }
         )}
       >
-        <h2 className="tw-font-playFair ~tw-text-h4a/h3 tw-leading-[3.25rem] tw-text-gray80">
+        <h2 className="tw-font-playFair ~tw-text-h4a/h3 ~tw-leading-[2.113rem]/[3.25rem] tw-text-gray80">
           {title}
         </h2>
-        <p className="tw-text-midGray tw-pt-[1.25rem] tw-leading-[1.4rem]">
+        <p className="tw-text-midGray ~tw-pt-[1rem]/[1.25rem] ~tw-leading-[1.225rem]/[1.4rem]">
           {desc}
         </p>
-        <div className="tw-pt-[2.5rem]">
+        <div className="~tw-pt-[2rem]/[2.5rem]">
           <ButtonAnimation className=" tw-rounded-full  tw-border-2 tw-border-darkPurple hover:tw-bg-darkPurple ">
             <h3 className="tw-text-darkPurple hover:tw-text-white tw-font-medium tw-text-h9Copy5 tw-leading-[1.225rem] tw-py-[0.75rem] tw-px-[1.75rem]">
               Read More

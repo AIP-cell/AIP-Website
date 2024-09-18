@@ -1,5 +1,6 @@
 import React from "react";
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 
 type Props = {
   alt: string;
@@ -16,11 +17,11 @@ const EnquiryLink = ({ image, alt, data, name }: Props) => {
       </div>
       <div>
         {name && (
-          <p className="tw-font-inter tw-leading-[1.4rem] tw-font-bold tw-mb-1 tw-text-gray80">
+          <p className="tw-font-inter  tw-font-bold tw-mb-1 tw-text-gray80 ~tw-text-h9Copy5/h9Copy4 ~tw-leading-[1.225rem]/[1.4rem]">
             {name}
           </p>
         )}
-        <p className="tw-font-inter tw-leading-[1.4rem] tw-text-gray80">{data}</p>
+        <Link href="" className="tw-font-inter ~tw-text-h9Copy5/h9Copy4 ~tw-leading-[1.225rem]/[1.4rem] tw-text-gray80">{data}</Link>
       </div>
     </div>
   );

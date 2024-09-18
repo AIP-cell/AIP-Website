@@ -68,11 +68,6 @@ const FinancialTabs = () => {
                   Download All
                 </p>
                 <DownloadFileSvg className="tw-size-[1.25rem]" />
-                {/* <Image
-                  src={Download}
-                  className="tw-w-[1.167rem] tw-h-[1.5rem]"
-                  alt="download"
-                /> */}
               </ButtonAnimation>
             </div>
           </TabPanel>

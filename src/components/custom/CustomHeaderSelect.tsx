@@ -63,7 +63,7 @@ const CustomHeaderSelect = ({ items }: Props) => {
         {options?.map((items: any, i: number) => (
           <ListboxOption
             key={i}
-            value={items}
+            value={items.option}
             className="data-[focus]:bg-blue-100 tw-text-white tw-cursor-pointer"
           >
             <ButtonAnimation className="tw-w-full tw-rounded-2xl hover:tw-bg-[#2B092A4D] tw-flex">

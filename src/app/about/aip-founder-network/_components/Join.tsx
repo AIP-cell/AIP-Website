@@ -56,7 +56,7 @@ const Join = () => {
           strong legacy and an exceptional network.
         </p>
 
-        <ButtonAnimation className="tw-mt-[2.5rem] tw-bg-darkPurple hover:tw-bg-white tw-rounded-full  tw-py-[0.75rem] tw-px-[1.75rem]">
+        <ButtonAnimation className="tw-mt-[2.5rem] tw-text-white hover:tw-text-darkPurple tw-bg-darkPurple hover:tw-bg-white tw-rounded-full  tw-py-[0.75rem] tw-px-[1.75rem]">
           <Link
             href="/contact"
             className="tw-text-white hover:tw-text-darkPurple tw-items-center tw-flex tw-gap-[0.5rem]"

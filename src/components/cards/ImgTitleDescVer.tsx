@@ -6,6 +6,7 @@ type Props = {
   titleClassName?: string;
   descClassName?: string;
   span?: string;
+  imageWidth?: string;
   desc: string;
 };
 const ImgTitleDescVer = ({
@@ -15,11 +16,12 @@ const ImgTitleDescVer = ({
   desc,
   titleClassName,
   descClassName,
+  imageWidth,
 }: Props) => {
   return (
     // tw-justify-center
     <div className="tw-flex tw-flex-col  tw-items-center ~tw-gap-[0.5rem]/[0.75rem]">
-      <div className="tw-relative ~tw-w-[10rem]/[11.87rem] ~tw-h-[7.5rem]/[8.75rem]">
+      <div className={` ${imageWidth} tw-relative ~tw-w-[10rem]/[11.87rem] ~tw-h-[7.5rem]/[8.75rem]`}>
         <Image src={src} alt="svg" fill />
       </div>
       <h3

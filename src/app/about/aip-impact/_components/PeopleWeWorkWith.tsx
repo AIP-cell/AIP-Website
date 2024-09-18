@@ -48,15 +48,15 @@ const peopleDataRow1 = [
 ];
 const PeopleWeWorkWith = () => {
   return (
-    <div className="tw-pt-[12.5rem] tw-pb-[7.5rem] container tw-mx-auto">
-      <h2 className="tw-text-h2 tw-font-playFair tw-text-darkBrown tw-text-center">
+    <div className="~tw-pt-[5rem]/[12.5rem] tw-pb-[7.5rem] container tw-mx-auto">
+      <h2 className="~tw-text-h4/h2 ~tw-leading-[2.6rem]/[3.3rem] tw-font-playFair tw-text-darkBrown tw-text-center">
         People We
         <span className="tw-text-textPurple tw-font-playFairItalic">
           &nbsp;Work With
         </span>
       </h2>
-      <div className="tw-pt-[5rem] tw-px-5">
-        <div className=" tw-grid tw-grid-cols-2 md:tw-grid-cols-3 lg:tw-grid-cols-4 tw-justify-center ~tw-gap-5/[5.625rem]">
+      <div className="tw-pt-[5rem] tw-px-[1.25rem]">
+        <div className=" tw-grid tw-grid-cols-2 md:tw-grid-cols-3 lg:tw-grid-cols-4 tw-justify-center ~tw-gap-[1.25rem]/[5.625rem]">
           {peopleDataRow1.map((people, i) => (
             <div key={i} className="">
               {i % 2 == 0 ? (

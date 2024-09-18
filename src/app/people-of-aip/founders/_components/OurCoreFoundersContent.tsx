@@ -10,21 +10,21 @@ const OurCoreFoundersContent = () => {
       <Image
         src={Bg}
         alt=""
-        className="tw-absolute  tw-top-[15.5rem]  tw-right-0"
+        className="tw-hidden lg:tw-block tw-absolute  tw-top-[15.5rem]  tw-right-0"
       />
       <Image
         src={Bg}
         alt=""
-        className="tw-absolute  tw-bottom-0  tw-left-0 tw-rotate-180"
+        className="tw-hidden lg:tw-block tw-absolute  tw-bottom-0  tw-left-0 tw-rotate-180"
       />
-      <div className="tw-flex tw-flex-col tw-items-center tw-justify-center">
+      <div className="tw-flex tw-flex-col tw-items-start md:tw-items-center tw-justify-center ~tw-px-[1.25rem]/[20.938rem]">
         <h2 className="~tw-text-h4/h2 tw-text-center tw-text-gray80 tw-leading-[3.2rem] tw-font-playFair">
-          Our{" "}
+          Our
           <span className="tw-text-textPurple tw-font-playFairItalic">
-            Core-Founders
+            &nbsp;Core-Founders
           </span>
         </h2>
-        <p className="tw-font-inter ~tw-px-5/[20.938rem] tw-text-center tw-text-midGray tw-leading-[1.4rem] tw-pt-[1.25rem]">
+        <p className="tw-font-inter  tw-text-left md:tw-text-center tw-text-midGray tw-leading-[1.4rem] tw-pt-[1.25rem]">
           Our Founders are the foundations of the common purpose: create a
           transformative impact of philanthropic efforts across a range of
           sectors from education to healthcare to climate and the arts, with

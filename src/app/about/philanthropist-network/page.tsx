@@ -1,5 +1,5 @@
 import React from "react";
-import ServiceWeProvide from "./_components/ServiceWeProvide";
+import FourPillars from "./_components/FourPillars";
 import JoinTheFlow from "./_components/JoinTheFlow";
 import CaseStudies from "../aip-impact/_components/CaseStudies";
 import PeopleWeWorkWith from "../aip-impact/_components/PeopleWeWorkWith";
@@ -9,7 +9,7 @@ const page = () => {
   return (
     <div className="~tw-pt-[8rem]/[5rem]">
       <PhilanthropistHeroSection />
-      <ServiceWeProvide />
+      <FourPillars />
       <JoinTheFlow />
       <CaseStudies bottomCaseStudyCurveSvg={CurvePurple} />
       <PeopleWeWorkWith />

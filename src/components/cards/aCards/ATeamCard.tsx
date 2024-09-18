@@ -16,7 +16,7 @@ const ATeamCard = ({ linkedin, title, title2, desc }: Props) => {
       {/* <Image src={Src} alt="" className="tw-w-full" /> */}
       <AMediumSizeSvg
         src="/images/sample.png"
-        className="tw-w-[11.87rem] tw-h-[13.88rem]"
+        // className="tw-w-[11.87rem] tw-h-[13.88rem]"
       />
       {linkedin && (
         <Image
@@ -26,13 +26,13 @@ const ATeamCard = ({ linkedin, title, title2, desc }: Props) => {
         />
       )}
       <div className="tw-flex tw-flex-col tw-gap-[0.5rem]">
-        <h3 className="~tw-text-h4a/h4 tw-leading-[2.6rem] tw-text-gray80 tw-font-playFair">
+        <h3 className="~tw-text-h4a/h4 tw-leading-[2.113rem]/[2.6rem] tw-text-gray80 tw-font-playFair">
           {title}
         </h3>
-        <h3 className="~tw-text-h4a/h4 tw-leading-[2.6rem] tw-text-gray80 tw-font-playFair">
+        <h3 className="~tw-text-h4a/h4 tw-leading-[2.113rem]/[2.6rem] tw-text-gray80 tw-font-playFair">
           {title2}
         </h3>
-        <p className="tw-italic ~tw-text-h6/h5 tw-text-gray40 tw-leading-[1.75rem] tw-font-playFair ">
+        <p className=" ~tw-text-h6/h5 tw-text-gray40 tw-leading-[1.75rem] tw-font-playFairItalic ">
           {desc}
         </p>
       </div>

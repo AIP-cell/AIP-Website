@@ -3,11 +3,12 @@ import Form from "./_components/Form";
 import Link from "next/link";
 import MessageSvg from "@public/svg/message.svg";
 import PhoneSvg from "@public/svg/phone.svg";
-import LocationSvg from "@public/svg/location.svg";
 import WaveBg from "@public/svg/contact/peachWaveBg.svg";
 import EnquiryLink from "./_components/EnquiryLink";
 import Image from "next/image";
 import BreadCrump from "@/components/bread-crump/BreadCrump";
+import LocationSvg from "@/components/svg/LocationSvg";
+import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 
 const page = () => {
   return (
@@ -39,25 +40,26 @@ const page = () => {
               <h2 className=" tw-font-playFairItalic tw-text-h4 tw-leading-[2.6rem] tw-text-gray50">
                 Reach us at
               </h2>
-              <p className="tw-font-inter tw-leading-[1.4rem] tw-flex tw-flex-col tw-text-midGray">
+              <div className="~tw-text-h9Copy5/h9Copy4 ~tw-leading-[1.225rem]/[1.4rem] tw-flex tw-flex-col tw-text-midGray">
                 <span className="tw-font-bold">
                   Foundation For Accelerating Philanthropy
                 </span>
                 Ananda, 242 Okhla Industrial Estate Phase III
                 <br />
                 New Delhi, India 110020
-              </p>
-              <Link
-                className="tw-font-inter tw-flex tw-gap-[1.144rem] tw-bg-bgGray5 tw-px-5 tw-py-3 tw-w-[13.8rem] tw-h-[2.8rem] tw-rounded-[3.125rem] tw-leading-[1.4rem] tw-text-gray80"
-                href=""
-              >
-                <Image
-                  src={LocationSvg}
-                  className="tw-w-[.766rem] tw-h-[0.971rem] tw-mt-[.2rem]"
-                  alt="location"
-                />
-                <p>Open Link on Maps</p>
-              </Link>
+              </div>
+              <ButtonAnimation>
+                <Link
+                  className="tw-font-inter tw-text-textPurple hover:tw-text-white tw-flex tw-items-center tw-gap-[0.875rem] tw-bg-bgGray5 hover:tw-bg-textPurple  tw-py-3 tw-w-fit tw-h-[2.8rem] tw-rounded-[3.125rem] tw-px-[1.25rem] "
+                  href=""
+                >
+                  <div className=""><LocationSvg className="tw-size-[1.313rem] " /></div>
+                  
+                  <p className="tw-text-gray80 hover:tw-text-white ~tw-text-h9Copy5/h9Copy4 ~tw-leading-[1.225rem]/[1.4rem]">
+                    Open Link on Maps
+                  </p>
+                </Link>
+              </ButtonAnimation>
             </div>
             <div className=" tw-relative ~tw-py-10/[5rem]  ">
               <div className="tw-bg-bgGray5 ~tw-p-5/[2rem] tw-rounded-[1.25rem]  tw-w-full md:tw-w-[22.9rem] tw-h-[29.25 rem]">

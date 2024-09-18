@@ -14,7 +14,7 @@ const SelectField = ({ label, placeholder }: Props) => {
         className="tw-w-full tw-h-[3.25rem] tw-p-2 tw-border tw-border-gray-300 tw-rounded-md"
         defaultValue=""
       >
-        <option value="" disabled hidden>
+        <option value="" disabled hidden className="tw-text-gray80">
           {placeholder}
         </option>
         {/* {options.map((option, index) => (
