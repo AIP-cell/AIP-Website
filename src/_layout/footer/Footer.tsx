@@ -151,43 +151,43 @@ const Footer = () => {
               </p>
               <div className="tw-flex tw-flex-col tw-gap-4 tw-pt-[0.75rem]">
                 <Link
-                  href={""}
+                  href="/about/aip-journey"
                   className=" tw-text-h9Copy5 tw-font-inter tw-text-white/60"
                 >
                   The AIP Journey
                 </Link>
                 <Link
-                  href={""}
+                  href="/about/our-approach"
                   className=" tw-text-h9Copy5 tw-font-inter tw-text-white/60"
                 >
                   Our Approach
                 </Link>
                 <Link
-                  href={""}
+                  href="/about/aip-impact"
                   className=" tw-text-h9Copy5 tw-font-inter tw-text-white/60"
                 >
                   AIP Impact
                 </Link>
                 <Link
-                  href={""}
+                  href="/about/giving-roadmap"
                   className=" tw-text-h9Copy5 tw-font-inter tw-text-white/60"
                 >
                   Giving Roadmap
                 </Link>
                 <Link
-                  href={""}
+                  href="/about/financials"
                   className=" tw-text-h9Copy5 tw-font-inter tw-text-white/60"
                 >
                   Financial Reports
                 </Link>
                 <Link
-                  href={""}
+                  href="/about/aip-founder-network"
                   className=" tw-text-h9Copy5 tw-font-inter tw-text-white/60"
                 >
                   AIP Founder Network
                 </Link>
                 <Link
-                  href={""}
+                  href="/about/philanthropist-network"
                   className=" tw-text-h9Copy5 tw-font-inter tw-text-white/60"
                 >
                   Philanthropist Network
@@ -200,25 +200,25 @@ const Footer = () => {
               </p>
               <div className="tw-flex tw-flex-col tw-gap-4 tw-pt-[0.75rem]">
                 <Link
-                  href={""}
+                  href="/people-of-aip/founders"
                   className=" tw-text-h9Copy5 tw-font-inter tw-text-white/60"
                 >
                   Core-Founders
                 </Link>
                 <Link
-                  href={""}
+                  href="/people-of-aip/founders"
                   className=" tw-text-h9Copy5 tw-font-inter tw-text-white/60"
                 >
                   Founders
                 </Link>
                 <Link
-                  href={""}
+                  href="/people-of-aip/our-advisory-board/inner"
                   className=" tw-text-h9Copy5 tw-font-inter tw-text-white/60"
                 >
                   Advisory Board
                 </Link>
                 <Link
-                  href={""}
+                  href="/people-of-aip/founders"
                   className=" tw-text-h9Copy5 tw-font-inter tw-text-white/60"
                 >
                   Team AIP
@@ -230,25 +230,25 @@ const Footer = () => {
               </p>
               <div className="tw-flex tw-flex-col tw-gap-4 tw-pt-[0.75rem]">
                 <Link
-                  href={""}
+                  href="/products-and-services/our-offerings"
                   className=" tw-text-h9Copy5 tw-font-inter tw-text-white/60"
                 >
                   Our Offerings
                 </Link>
                 <Link
-                  href={""}
+                  href="#"
                   className=" tw-text-h9Copy5 tw-font-inter tw-text-white/60"
                 >
                   NPO Registry
                 </Link>
                 <Link
-                  href={""}
+                  href="/products-and-services/projects-and-programs"
                   className=" tw-text-h9Copy5 tw-font-inter tw-text-white/60"
                 >
                   Projects and Programs
                 </Link>
                 <Link
-                  href={""}
+                  href="/products-and-services/collaborations"
                   className=" tw-text-h9Copy5 tw-font-inter tw-text-white/60"
                 >
                   Collaborations
@@ -261,13 +261,13 @@ const Footer = () => {
               </p>
               <div className="tw-flex tw-flex-col tw-gap-4 tw-pt-[0.75rem]">
                 <Link
-                  href={""}
+                  href="/resource-center/aip-resources"
                   className=" tw-text-h9Copy5 tw-font-inter tw-text-white/60"
                 >
                   AIP Resources
                 </Link>
                 <Link
-                  href={""}
+                  href="/resource-center/curated-resources"
                   className=" tw-text-h9Copy5 tw-font-inter tw-text-white/60"
                 >
                   Curated Resources
@@ -284,10 +284,10 @@ const Footer = () => {
                 <Link href="/faq">FAQs</Link>
               </div>
               <div className="tw-pt-[2.25rem] tw-text-h9Copy5 tw-font-inter tw-font-bold tw-text-white">
-                <Link href={""}>Foundation Fact Sheet</Link>
+                <Link href="/about/aip-impact/foundation-fact-sheet">Foundation Fact Sheet</Link>
               </div>
               <div className="tw-pt-[2.25rem] tw-text-h9Copy5 tw-font-inter tw-font-bold tw-text-white">
-                <Link href={""}>Join our learning circle</Link>
+                <Link href="#">Join our learning circle</Link>
               </div>
             </div>
           </div>
