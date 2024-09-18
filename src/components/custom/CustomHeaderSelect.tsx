@@ -77,6 +77,7 @@ const CustomHeaderSelect = ({ items }: Props) => {
           >
             <ButtonAnimation className="tw-w-full tw-rounded-2xl hover:tw-bg-[#2B092A4D] tw-flex">
               <Link
+                // onClick={() => setSelected(items.option)}
                 href={items?.link}
                 className="hover:tw-font-playFairItalic tw-text-left tw-pl-[1.25rem]  tw-transition-all tw-duration-150 tw-py-[0.8rem] tw-w-full"
               >
