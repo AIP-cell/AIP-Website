@@ -6,11 +6,11 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <div className="bg-container tw-mx-auto  tw-relative lg:tw-h-[50rem]">
+    <div className="bg-container tw-mx-auto  tw-relative lg:tw-h-screen">
       <Image
         src={HeroBg}
         alt=""
-        className="tw-hidden lg:tw-block tw-absolute tw-top-[-2rem] tw-w-full tw-h-full  tw-object-fill"
+        className="tw-hidden lg:tw-block tw-absolute tw-top-[-2rem] tw-w-[120rem] tw-h-full  tw-object-fill"
       />
       <div className="container tw-mx-auto tw-relative tw-h-screen ">
         <div className="tw-hidden lg:tw-block tw-absolute tw-top-[3.125rem] tw-left-[1.25rem]">

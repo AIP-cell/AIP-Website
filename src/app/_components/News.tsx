@@ -5,7 +5,7 @@ import TabNews from "./TabNews";
 
 const News = () => {
   return (
-    <div className="tw-flex container tw-mx-auto tw-flex-col tw-justify-center tw-items-center tw-pb-[8.5rem]">
+    <div className="tw-flex container tw-mx-auto tw-flex-col tw-justify-center  tw-pb-[8.5rem]">
       <div className="~tw-text-h4/h2 tw-font-playFair ~tw-px-[1.25rem]/[14.375rem] tw-text-midGray tw-pb-[3.5rem] tw-text-center ~tw-leading-[2.6rem]/[3.3rem]">
         Get the latest
         <span className="tw-text-textPurple tw-font-playFairItalic">

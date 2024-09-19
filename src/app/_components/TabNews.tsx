@@ -20,15 +20,17 @@ const newsData = [
 const TabNews = () => {
   return (
     <div className=" ">
-      <TabGroup className="tw-flex tw-flex-col container tw-mx-auto tw-items-center tw-justify-center">
-        <TabList className="tw-flex tw-bg-[#F0F0F2] tw-p-1 tw-rounded-full tw-w-fit">
-          <Tab className="~tw-px-[1rem]/[2.5rem]  ~tw-py-[1rem]/[0.75rem] data-[selected]:tw-bg-darkPurple data-[selected]:tw-text-white data-[selected]:tw-rounded-full tw-text-h9Copy5 tw-leading-[1.22rem] tw-font-inter data-[selected]:tw-outline-none">
-            Accelerate India Philanthropy
-          </Tab>
-          <Tab className="~tw-px-[1rem]/[2.5rem] ~tw-py-[1rem]/[0.75rem] data-[selected]:tw-bg-darkPurple data-[selected]:tw-text-white data-[selected]:tw-rounded-full tw-text-h9Copy5 tw-leading-[1.22rem] tw-font-inter data-[selected]:tw-outline-none">
-            AIP - Partners
-          </Tab>
-        </TabList>
+      <TabGroup className="tw-flex tw-flex-col container tw-mx-auto ">
+        <div className="tw-flex tw-justify-center">
+          <TabList className="tw-flex tw-bg-[#F0F0F2] tw-p-1 tw-rounded-full tw-w-fit">
+            <Tab className="~tw-px-[1rem]/[2.5rem]  ~tw-py-[1rem]/[0.75rem] data-[selected]:tw-bg-darkPurple data-[selected]:tw-text-white data-[selected]:tw-rounded-full tw-text-h9Copy5 tw-leading-[1.22rem] tw-font-inter data-[selected]:tw-outline-none">
+              Accelerate India Philanthropy
+            </Tab>
+            <Tab className="~tw-px-[1rem]/[2.5rem] ~tw-py-[1rem]/[0.75rem] data-[selected]:tw-bg-darkPurple data-[selected]:tw-text-white data-[selected]:tw-rounded-full tw-text-h9Copy5 tw-leading-[1.22rem] tw-font-inter data-[selected]:tw-outline-none">
+              AIP - Partners
+            </Tab>
+          </TabList>
+        </div>
         <TabPanels>
           <TabPanel>
             <CarouselNews/>
