@@ -18,12 +18,14 @@ const config: Config = {
       backgroundImage: {
         purpleToPink: "linear-gradient(to right, #E24BDE , #A17FF0)",
         purpleToBlue: "linear-gradient(to bottom, #91298C , #224193)",
+        founderGradient: "linear-gradient(to bottom, #792e8e , #3a3b91)",
         toRightPurpleToBlue: "linear-gradient(to right, #91298C , #224193)",
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
+        fivePBackground:"#fcf6e4", 
         darkPurple: "#5E165B",
         bgLightPeach: "#FFFDF7",
         bgGray5: "#F0F0F2",

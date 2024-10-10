@@ -49,12 +49,12 @@ const categoryData = ["Category", "Category", "Category"];
 const dateData = ["Date", "Date", "Date"];
 const page = () => {
   return (
-    <div className="tw-pt-[5rem]">
-      <div className=" tw-relative bg-container tw-mx-auto tw-overflow-hidden ">
+    <div className="~tw-pt-[4.4rem]/[5rem]">
+      <div className=" tw-relative tw-w-full tw-overflow-hidden ">
         <Image
           src={projectBg}
           alt="bg"
-          className="tw-inset-x-0 tw-object-cover tw-w-full tw-absolute tw-top-[-6rem] "
+          className=" tw-hidden md:tw-block tw-inset-x-0 tw-object-cover tw-w-full tw-absolute tw-top-[-9rem] tw-h-[30rem]"
         />
         <div className="container tw-mx-auto tw-relative ~tw-px-5/[7.8rem] tw-pt-[5rem]">
           <BreadCrump

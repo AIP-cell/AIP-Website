@@ -1,5 +1,5 @@
 import TestimonialSlick from "@/components/slick/TestimonialSlick";
-import PeachCurve from "@public/svg/products-and-services/project-and-programs/testimonialRightPeachCurve.svg"
+import PeachCurve from "@public/svg/products-and-services/project-and-programs/testimonialRightPeachCurve.svg";
 import Image from "next/image";
 import React from "react";
 const testimonialsArray: any[] = [
@@ -30,12 +30,18 @@ const testimonialsArray: any[] = [
 ];
 const InnerCollaborationTestimonials = () => {
   return (
-    <div className="tw-py-[7.563rem] tw-relative container tw-mx-auto">
-        <Image src={PeachCurve} alt="peach-curve-testimonial" className="tw-absolute tw-top-0 tw-right-0"/>
-      <p className="tw-text-center tw-font-playFair tw-pb-20 tw-leading-[3.3rem] tw-tracking-[-.04rem] tw-text-h2 tw-text-gray80">
-        Testimonials
-      </p>
-      <TestimonialSlick slickArray={testimonialsArray} />
+    <div className="tw-relative tw-w-full">
+        <Image
+          src={PeachCurve}
+          alt="peach-curve-testimonial"
+          className="tw-absolute tw-top-0 tw-right-0"
+        />
+      <div className="tw-py-[7.563rem] tw-relative container tw-mx-auto">
+        <p className="tw-text-center tw-font-playFair tw-pb-20 tw-leading-[3.3rem] tw-tracking-[-.04rem] tw-text-h2 tw-text-gray80">
+          Testimonials
+        </p>
+        <TestimonialSlick slickArray={testimonialsArray} />
+      </div>
     </div>
   );
 };

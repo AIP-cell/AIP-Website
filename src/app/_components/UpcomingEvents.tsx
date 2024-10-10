@@ -48,7 +48,12 @@ const UpcomingEvents = () => {
       </div>
       <div className="tw-relative tw-col-span-2 lg:tw-col-span-1">
         <div className="tw-relative tw-z-[10] tw-shrink-0  ~tw-h-[14rem]/[22.1rem] tw-rounded-2xl tw-overflow-hidden">
-          <Image src="/images/upcoming.png" alt="upcoming-Image" fill className="tw-object-cover"/>
+          <Image
+            src="/images/upcoming.png"
+            alt="upcoming-Image"
+            fill
+            className="tw-object-cover"
+          />
         </div>
         <div className="tw-absolute ~tw-bottom-[-1.5rem]/[0.5rem]  ~tw-right-[-1.6rem]/[-4.5rem] ~tw-size-[10.3rem]/[18.4rem]">
           <Image src={ShapelessBrown} alt="" fill />

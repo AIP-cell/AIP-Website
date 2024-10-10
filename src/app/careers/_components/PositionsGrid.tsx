@@ -14,18 +14,18 @@ const datas = [
     title: "Program Manager ",
     desc: "Design, implement, and manage philanthropic programs, ensuring they meet their objectives and deliver measurable impact. Coordinate with stakeholders, and monitor progress.",
   },
-  {
-    title: "Manager ",
-    desc: "Oversee the daily operations of the philanthropic organization, ensuring efficient workflows and achieving strategic goals. Lead and mentor a team, and manage budgets.",
-  },
-  {
-    title: "Program Associate ",
-    desc: "Assist in the planning and execution of philanthropic programs, including data collection, analysis, and reporting. Provide administrative support, And coordinate events.",
-  },
-  {
-    title: "Operating Partner",
-    desc: "Support the organization's leadership by implementing strategic initiatives and operational improvements. Provide guidance on best practices, And monitor key performance indicators.",
-  },
+  // {
+  //   title: "Manager ",
+  //   desc: "Oversee the daily operations of the philanthropic organization, ensuring efficient workflows and achieving strategic goals. Lead and mentor a team, and manage budgets.",
+  // },
+  // {
+  //   title: "Program Associate ",
+  //   desc: "Assist in the planning and execution of philanthropic programs, including data collection, analysis, and reporting. Provide administrative support, And coordinate events.",
+  // },
+  // {
+  //   title: "Operating Partner",
+  //   desc: "Support the organization's leadership by implementing strategic initiatives and operational improvements. Provide guidance on best practices, And monitor key performance indicators.",
+  // },
 ];
 
 const PositionsGrid = () => {

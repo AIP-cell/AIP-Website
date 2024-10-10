@@ -30,17 +30,19 @@ const testimonialsArray: any[] = [
 ];
 const TestimonialsProjectProgram = () => {
   return (
-    <div className="tw-py-[7.53rem] tw-relative container tw-mx-auto">
-      <Image
-        src={PurpleBottomSvg}
-        alt="purple-curve"
-        className="tw-absolute tw-top-[-1rem] tw-right-0"
-      />
-      <h2 className="tw-font-playFair tw-text-gray80 tw-text-h2 tw-text-center">
-        Testimonials
-      </h2>
-      <TestimonialSlick slickArray={testimonialsArray} />
-    </div>
+   <div className="tw-w-full tw-relative">
+        <Image
+          src={PurpleBottomSvg}
+          alt="purple-curve"
+          className="tw-absolute tw-top-[-1rem] tw-right-0"
+        />
+      <div className="tw-py-[7.53rem] tw-relative container tw-mx-auto">
+        <h2 className="tw-font-playFair tw-text-gray80 tw-text-h2 tw-text-center">
+          Testimonials
+        </h2>
+        <TestimonialSlick slickArray={testimonialsArray} />
+      </div>
+   </div>
   );
 };
 

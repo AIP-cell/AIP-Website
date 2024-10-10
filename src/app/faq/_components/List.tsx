@@ -2,13 +2,15 @@ import React from "react";
 import Image from "next/image";
 import arrowWhiteSvg from "@public/svg/faq/arrowWhite.svg";
 import arrowSvg from "@public/svg/faq/arrow.svg";
+import cn from "@/utils/tailwind";
 type Props = {
   name: string;
+  className?: string;
 };
 
-const List = ({ name }: Props) => {
+const List = ({ name ,className}: Props) => {
   return (
-    <div className="tw-bg-bgGray5 hover:tw-bg-textPurple hover:tw-text-white hover:tw-font-playFairItalic  tw-transition-all tw-p-5 tw-rounded-[1.25rem] tw-flex tw-justify-between tw-mb-3 tw-group">
+    <div className={cn("tw-bg-bgGray5 hover:tw-bg-textPurple hover:tw-text-white hover:tw-font-playFairItalic  tw-transition-all tw-p-5 tw-rounded-[1.25rem] tw-flex tw-justify-between tw-mb-3 tw-group",className)}>
       <p className="tw-font-playFair tw-font-medium group-hover:tw-italic tw-text-xl tw-tracking-[.02rem] ">
         {name}
       </p>

@@ -13,11 +13,11 @@ import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 const page = () => {
   return (
     <div className="tw-pt-[5rem]">
-      <div className="tw-relative bg-container tw-mx-auto">
+      <div className="tw-relative tw-w-full">
         <Image
           src={WaveBg}
           alt="wave-peach"
-          className="tw-absolute tw-w-full -tw-bottom-[16rem]"
+          className="tw-absolute tw-w-[400rem] -tw-bottom-[16rem] tw-h-[65rem] "
         />
         <div className="tw-relative container tw-mx-auto ~tw-px-5/[7.8rem] tw-pt-[5rem] tw-grid md:tw-grid-cols-2">
           <BreadCrump textOne="Contacts" linkOne="/contact" />
@@ -53,8 +53,10 @@ const page = () => {
                   className="tw-font-inter tw-text-textPurple hover:tw-text-white tw-flex tw-items-center tw-gap-[0.875rem] tw-bg-bgGray5 hover:tw-bg-textPurple  tw-py-3 tw-w-fit tw-h-[2.8rem] tw-rounded-[3.125rem] tw-px-[1.25rem] "
                   href=""
                 >
-                  <div className=""><LocationSvg className="tw-size-[1.313rem] " /></div>
-                  
+                  <div className="">
+                    <LocationSvg className="tw-size-[1.313rem] " />
+                  </div>
+
                   <p className="tw-text-gray80 hover:tw-text-white ~tw-text-h9Copy5/h9Copy4 ~tw-leading-[1.225rem]/[1.4rem]">
                     Open Link on Maps
                   </p>

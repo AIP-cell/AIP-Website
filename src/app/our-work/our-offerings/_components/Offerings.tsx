@@ -37,43 +37,45 @@ const offeringsData = [
 ];
 const Offerings = () => {
   return (
-    <div className="~tw-pt-[2.725rem]/[6.63rem] tw-pb-[7.5rem] tw-relative container tw-mx-auto">
-      <Image
-        src={TopLeftCurve}
-        alt=""
-        className="tw-absolute tw-top-[4.233rem] tw-left-0 tw-z-[-1]"
-      />
-      <Image
-        src={TopRightCurve}
-        alt=""
-        className="tw-absolute tw-top-[32.639rem] tw-right-0"
-      />
-      <Image
-        src={BottomLeftCurve}
-        alt=""
-        className="tw-absolute tw-bottom-[28.8rem] tw-left-0"
-      />
-      <Image
-        src={BottomRightCurve}
-        alt=""
-        className="tw-absolute tw-bottom-0 tw-right-0"
-      />
-      <h2 className="tw-font-playFair tw-text-gray80 tw-text-h2 tw-leading-[3.3rem] tw-text-center">
-        Our
-        <span className="tw-font-playFairItalic tw-text-textPurple">
-          &nbsp;Offerings
-        </span>
-      </h2>
-      <div className="~tw-px-5/[7.8rem] ~tw-pt-[2.5rem]/[8.5rem] tw-flex tw-flex-col ~tw-gap-[3.5rem]/[5rem]">
-        {offeringsData.map((items, i) => (
-          <OfferingCard
-            key={i}
-            index={i}
-            text1={items.text1}
-            text2={items.text2}
-            text3={items.text3}
-          />
-        ))}
+    <div className="tw-w-full tw-relative">
+        <Image
+          src={TopLeftCurve}
+          alt=""
+          className="tw-hidden md:tw-block tw-absolute tw-top-[4.233rem] tw-left-0 tw-z-[-1]"
+        />
+        <Image
+          src={TopRightCurve}
+          alt=""
+          className="tw-hidden md:block tw-absolute tw-top-[32.639rem] tw-right-0"
+        />
+        <Image
+          src={BottomLeftCurve}
+          alt=""
+          className="tw-hidden md:block tw-absolute tw-bottom-[28.8rem] tw-left-0"
+        />
+        <Image
+          src={BottomRightCurve}
+          alt=""
+          className="tw-hidden md:block tw-absolute tw-bottom-0 tw-right-0"
+        />
+      <div className="~tw-pt-[2.725rem]/[6.63rem] tw-pb-[7.5rem] tw-relative container tw-mx-auto">
+        <h2 className="tw-font-playFair tw-text-gray80 tw-text-h2 tw-leading-[3.3rem] tw-text-center">
+          Our
+          <span className="tw-font-playFairItalic tw-text-textPurple">
+            &nbsp;Offerings
+          </span>
+        </h2>
+        <div className="~tw-px-5/[7.8rem] ~tw-pt-[2.5rem]/[8.5rem] tw-flex tw-flex-col ~tw-gap-[3.5rem]/[5rem]">
+          {offeringsData.map((items, i) => (
+            <OfferingCard
+              key={i}
+              index={i}
+              text1={items.text1}
+              text2={items.text2}
+              text3={items.text3}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

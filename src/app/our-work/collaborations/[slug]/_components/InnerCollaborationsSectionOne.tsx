@@ -20,25 +20,25 @@ import BreadCrump from "@/components/bread-crump/BreadCrump";
 
 const InnerCollaborationsSectionOne = () => {
   return (
-    <div className="tw-relative bg-container tw-mx-auto tw-pb-[7.563rem]">
+    <div className="tw-relative tw-w-full tw-pb-[7.563rem]">
       <Image
         src={BottomBg}
         alt="purple-curve"
-        className="tw-absolute tw-bottom-[-35rem] tw-w-full"
+        className="tw-absolute tw-bottom-[-39rem] tw-h-[75rem] tw-w-full"
       />
-      <div className="container tw-mx-auto tw-relative tw-px-[7.8rem] tw-pt-[5rem]">
         <Image
           src={PurpleTopSvg}
           alt="purple-curve"
           className="tw-absolute tw-top-[8rem] tw-right-0"
         />
+      <div className="container tw-mx-auto tw-relative tw-px-[7.8rem] tw-pt-[5rem]">
         <BreadCrump
-          textOne="Products & Services"
-          linkOne="/products-and-services"
+          textOne="Our Work"
+          linkOne="/our-work"
           textTwo="Collaborations"
-          linkTwo="/products-and-services/collaborations"
+          linkTwo="/our-work/collaborations"
           textThree="slug"
-          linkThree="/products-and-services/collaborations/slug"
+          linkThree="/our-work/collaborations/slug"
         />
         <div className="tw-relative tw-grid tw-grid-cols-3 tw-gap-5">
           <div className="tw-col-span-2 tw-flex tw-flex-col tw-gap-10  tw-pe-[6.563rem]">

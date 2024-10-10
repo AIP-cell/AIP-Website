@@ -45,16 +45,18 @@ const CareerPage = () => {
 
       <OpenRules />
 
-      <div className="tw-relative container tw-mx-auto">
+      <div className="tw-w-full tw-relative">
         <Image
           src={bottomSvg}
           alt=""
           className="tw-absolute tw-left-0 tw-top-[-12rem]"
         />
-        <p className="tw-pt-[12.5rem] tw-text-darkBlack tw-text-center tw-tracking-[0.04rem] tw-text-h2 tw-leading-[3.3rem] tw-font-playFair">
-          Testimonials
-        </p>
-        <TestimonialSlick slickArray={testimonialsArray} />
+        <div className="tw-relative container tw-mx-auto">
+          <p className="tw-pt-[12.5rem] tw-text-darkBlack tw-text-center tw-tracking-[0.04rem] tw-text-h2 tw-leading-[3.3rem] tw-font-playFair">
+            Testimonials
+          </p>
+          <TestimonialSlick slickArray={testimonialsArray} />
+        </div>
       </div>
     </div>
   );

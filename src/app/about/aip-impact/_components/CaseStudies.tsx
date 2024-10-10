@@ -24,33 +24,35 @@ type Props = {
 };
 const CaseStudies = ({ bottomCaseStudyCurveSvg }: Props) => {
   return (
-    <div className=" tw-relative container tw-mx-auto ~tw-pt-[4.702rem]/[12.5rem]">
-      <Image
-        src={CurveBg}
-        alt=""
-        className="tw-hidden lg:tw-flex tw-absolute tw-items-center tw-h-full tw-left-0"
-      />
-      <Image
-        src={bottomCaseStudyCurveSvg}
-        alt=""
-        className="tw-hidden lg:tw-block tw-absolute  tw-bottom-[-10.938rem]  tw-right-0"
-      />
-      <h2 className="tw-text-center tw-text-h2 tw-text-darkBrown tw-font-playFair">
-        Case{" "}
-        <span className="tw-text-textPurple tw-font-playFairItalic">
-          Studies
-        </span>
-      </h2>
-      <div className="~tw-pt-10/[6.56rem] tw-flex tw-flex-col ~tw-gap-[3.5rem]/[5.5rem] ~tw-px-[1.25rem]/[7.8rem]">
-        {caseStudyData.map((item, i) => (
-          <CaseStudy
-            key={i}
-            index={i}
-            title={item.title}
-            desc={item.desc}
-            image={item.image}
-          />
-        ))}
+    <div className="tw-relative tw-w-full">
+        <Image
+          src={CurveBg}
+          alt=""
+          className="tw-hidden lg:tw-flex tw-absolute tw-items-center tw-h-full tw-left-0"
+        />
+        <Image
+          src={bottomCaseStudyCurveSvg}
+          alt=""
+          className="tw-hidden lg:tw-block tw-absolute  tw-bottom-[-10.938rem]  tw-right-0"
+        />
+      <div className=" tw-relative container tw-mx-auto ~tw-pt-[4.702rem]/[12.5rem]">
+        <h2 className="tw-text-center tw-text-h2 tw-text-darkBrown tw-font-playFair">
+          Case{" "}
+          <span className="tw-text-textPurple tw-font-playFairItalic">
+            Studies
+          </span>
+        </h2>
+        <div className="~tw-pt-10/[6.56rem] tw-flex tw-flex-col ~tw-gap-[3.5rem]/[5.5rem] ~tw-px-[1.25rem]/[7.8rem]">
+          {caseStudyData.map((item, i) => (
+            <CaseStudy
+              key={i}
+              index={i}
+              title={item.title}
+              desc={item.desc}
+              image={item.image}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

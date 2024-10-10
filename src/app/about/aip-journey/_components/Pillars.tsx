@@ -17,15 +17,18 @@ const threeIs = [
     desc: "Inspire philanthropists to give more, give better, give sooner",
   },
 ];
-const OurThreeIs = () => {
+const Pillars = () => {
   return (
     <div className="container tw-mx-auto  ~tw-pt-[5rem]/[12.5rem] ~tw-pb-[5rem]/[7.5rem] ~tw-px-[2.938rem]/[7.8rem] tw-relative">
       <h3 className="~tw-text-h4/h2 tw-font-playFair tw-text-center tw-text-gray80">
-        Our
+        The
         <span className="tw-text-textPurple tw-font-playFairItalic">
-          &nbsp;Three I-s
+          &nbsp;Pillars
         </span>
       </h3>
+      <p className="tw-text-midGray tw-text-center tw-pt-[1.25rem]">
+        Our commitment towards philanthropy that define our role in the journey
+      </p>
       <div className="~tw-pt-10/[5rem] md:tw-flex  ~tw-gap-[1.25rem]/[4.56rem]">
         {threeIs.map((item, i) => (
           <ImgTitleDescVer
@@ -42,4 +45,4 @@ const OurThreeIs = () => {
   );
 };
 
-export default OurThreeIs;
+export default Pillars;

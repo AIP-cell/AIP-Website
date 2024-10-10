@@ -12,23 +12,23 @@ const dateData = ["Date", "Date", "Date"];
 const page = () => {
   return (
     <div className="tw-pt-[5rem]">
-      <div className="tw-relative bg-container tw-mx-auto tw-pb-[7.5rem]">
+      <div className="tw-relative tw-w-full  tw-pb-[7.5rem]">
         <Image
           src={projectBg}
           alt="bg"
-          className=" tw-absolute tw-top-[-5rem]  tw-w-full"
+          className=" tw-absolute tw-top-[-9rem] tw-h-[30rem] tw-w-full"
+        />
+        <Image
+          src={bottomRightWave}
+          alt="bottom-right-wave"
+          className=" tw-absolute tw-bottom-[2.6rem] tw-left-0"
         />
         <div className="container tw-mx-auto tw-relative tw-px-[7.8rem] tw-pt-[5rem]">
-          <Image
-            src={bottomRightWave}
-            alt="bottom-right-wave"
-            className=" tw-absolute tw-bottom-[2.6rem] tw-left-0"
-          />
           <BreadCrump
-            textOne="Products & Services"
-            linkOne="/products-and-services"
+            textOne="Our Work"
+            linkOne="/our-work"
             textTwo="Collaborations"
-            linkTwo="/products-and-services/collaborations"
+            linkTwo="/our-work/collaborations"
           />
           <p className="tw-font-inter  tw-font-semibold tw-uppercase tw-leading-[1.3rem] tw-text-purple40">
             Collaborations

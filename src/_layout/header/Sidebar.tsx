@@ -35,22 +35,22 @@ const headerData = [
   },
   {
     width: " tw-w-[10.5rem] ",
-    label: "Products & Services",
-    id: "products-and-services",
+    label: "Our Work",
+    id: "our-work",
     options: [
       // {
       //   option: "Products & Services",
-      //   link: "/products-and-services/our-offerings",
+      //   link: "/our-work/our-offerings",
       // },
-      { option: "Our Offerings", link: "/products-and-services/our-offerings" },
+      { option: "Our Offerings", link: "/our-work/our-offerings" },
       { option: "NPO Registry", link: "#" },
       {
         option: "Projects and Programs",
-        link: "/products-and-services/projects-and-programs",
+        link: "/our-work/projects-and-programs",
       },
       {
         option: "Collaborations",
-        link: "/products-and-services/collaborations",
+        link: "/our-work/collaborations",
       },
     ],
   },

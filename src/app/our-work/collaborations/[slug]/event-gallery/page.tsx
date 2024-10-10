@@ -9,22 +9,22 @@ import BreadCrump from "@/components/bread-crump/BreadCrump";
 const page = () => {
   return (
     <div className="tw-pt-[5rem]">
-      <div className=" tw-relative bg-container tw-overflow-hidden">
+      <div className=" tw-relative tw-w-full tw-overflow-hidden">
         <Image
           src={projectBg}
           alt="bg"
-          className=" tw-absolute tw-top-[-5rem] tw-w-full "
+          className=" tw-absolute tw-top-[-8.5rem] tw-w-full tw-h-[30rem] "
         />
         <div className="container tw-mx-auto tw-relative tw-px-[7.8rem] tw-pt-[5rem]">
           <BreadCrump
-            textOne="Products & Services"
-            linkOne="/products-and-services"
+            textOne="Our Work"
+            linkOne="/our-work"
             textTwo="Collaborations"
-            linkTwo="/products-and-services/collaborations"
+            linkTwo="/our-work/collaborations"
             textThree="slug"
-            linkThree="/products-and-services/collaborations/slug"
+            linkThree="/our-work/collaborations/slug"
             textFour="Event Gallery"
-            linkFour="/products-and-services/collaborations/slug/event-gallery"
+            linkFour="/our-work/collaborations/slug/event-gallery"
           />
           <p className="tw-font-inter  tw-font-semibold tw-uppercase tw-leading-[1.3rem] tw-text-purple40">
             Systemic Impact Exemplars

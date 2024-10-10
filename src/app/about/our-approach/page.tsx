@@ -8,7 +8,7 @@ import BreadCrump from "@/components/bread-crump/BreadCrump";
 const page = () => {
   return (
     <div className="tw-pt-[5rem]">
-      <div className="tw-relative bg-container tw-mx-auto">
+      <div className="tw-relative tw-w-full">
         <Image
           src={Bg}
           alt=""

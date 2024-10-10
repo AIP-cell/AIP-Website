@@ -7,7 +7,7 @@ import OvalPurpleSvg from "@/components/svg/OvalPurpleSvg";
 
 const Members = () => {
   return (
-    <div className="bg-container tw-relative tw-mx-auto">
+    <div className=" tw-relative tw-w-full">
       <Image
         src={Bg}
         alt=""

@@ -9,7 +9,7 @@ import BreadCrump from "@/components/bread-crump/BreadCrump";
 
 const JourneyHeroSection = () => {
   return (
-    <div className="tw-relative tw-w-full bg-container tw-mx-auto">
+    <div className="tw-relative tw-w-full ">
       <div className="tw-absolute  tw-inset-0 ">
         <Wave
           fill="#F5B195"

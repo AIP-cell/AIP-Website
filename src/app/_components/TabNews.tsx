@@ -24,16 +24,22 @@ const TabNews = () => {
         <div className="tw-flex tw-justify-center">
           <TabList className="tw-flex tw-bg-[#F0F0F2] tw-p-1 tw-rounded-full tw-w-fit">
             <Tab className="~tw-px-[1rem]/[2.5rem]  ~tw-py-[1rem]/[0.75rem] data-[selected]:tw-bg-darkPurple data-[selected]:tw-text-white data-[selected]:tw-rounded-full tw-text-h9Copy5 tw-leading-[1.22rem] tw-font-inter data-[selected]:tw-outline-none">
-              Accelerate India Philanthropy
+              About AIP
             </Tab>
             <Tab className="~tw-px-[1rem]/[2.5rem] ~tw-py-[1rem]/[0.75rem] data-[selected]:tw-bg-darkPurple data-[selected]:tw-text-white data-[selected]:tw-rounded-full tw-text-h9Copy5 tw-leading-[1.22rem] tw-font-inter data-[selected]:tw-outline-none">
-              AIP - Partners
+              From Partners
+            </Tab>
+            <Tab className="~tw-px-[1rem]/[2.5rem] ~tw-py-[1rem]/[0.75rem] data-[selected]:tw-bg-darkPurple data-[selected]:tw-text-white data-[selected]:tw-rounded-full tw-text-h9Copy5 tw-leading-[1.22rem] tw-font-inter data-[selected]:tw-outline-none">
+              In the Media
+            </Tab>
+            <Tab className="~tw-px-[1rem]/[2.5rem] ~tw-py-[1rem]/[0.75rem] data-[selected]:tw-bg-darkPurple data-[selected]:tw-text-white data-[selected]:tw-rounded-full tw-text-h9Copy5 tw-leading-[1.22rem] tw-font-inter data-[selected]:tw-outline-none">
+              World of Philanthropy
             </Tab>
           </TabList>
         </div>
         <TabPanels>
           <TabPanel>
-            <CarouselNews/>
+            <CarouselNews />
           </TabPanel>
           <TabPanel>
             <div className="tw-pt-[2.5rem]">AIP - Partners content</div>

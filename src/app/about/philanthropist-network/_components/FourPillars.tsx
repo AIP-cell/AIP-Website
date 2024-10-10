@@ -35,7 +35,7 @@ const FourPillars = () => {
       <Image
         src={Bg}
         alt=""
-        className=" tw-absolute -tw-top-[11.5rem] tw-w-full tw-z-[-1]"
+        className=" tw-absolute -tw-top-[11.5rem]  tw-z-[-1] tw-h-[70rem]  tw-w-[400rem]"
       />
       <div className="tw-pt-[12.5rem] ~tw-px-5/[7.8rem] container tw-mx-auto">
         <h2 className="tw-font-playFair tw-text-center tw-text-gray80 tw-text-h2 tw-leading-[3.3rem]">

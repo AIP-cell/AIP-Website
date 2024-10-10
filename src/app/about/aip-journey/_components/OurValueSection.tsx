@@ -27,11 +27,11 @@ const ourValues = [
 ];
 const OurValueSection = () => {
   return (
-    <div className="bg-container tw-mx-auto tw-relative">
+    <div className="tw-w-full tw-relative">
       <Image
         src={Bg}
         alt="bg"
-        className=" tw-hidden lg:tw-block tw-absolute -tw-top-[11.5rem] tw-w-full "
+        className=" tw-hidden lg:tw-block tw-absolute -tw-top-[9.5rem] tw-h-[70rem]  tw-w-[400rem] "
       />
       <Image
         src={SmBg}

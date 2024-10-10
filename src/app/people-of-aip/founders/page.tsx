@@ -14,9 +14,9 @@ const page = () => {
           textTwo="Our Core Founders"
           linkTwo="/people-of-aip/founders"
         />
-        <PeopleOfAipTab />
-        <PeopleOfAipSm />
       </div>
+      <PeopleOfAipTab />
+      <PeopleOfAipSm />
     </div>
   );
 };

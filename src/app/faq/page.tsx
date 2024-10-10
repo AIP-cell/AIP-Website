@@ -30,7 +30,7 @@ const FaqPage = () => {
               FAQS
             </p>
             <div className="tw-hidden md:tw-block">
-              <List name="General Inquiry" />
+              <List name="General Inquiry" className="tw-bg-textPurple tw-text-white"/>
               <List name="Founder Network" />
               <List name="Philanthropic Network" />
               <List name="NPO" />
