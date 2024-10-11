@@ -36,6 +36,7 @@ const PeopleOfAipTab = () => {
           <TabPanel>
             <TeamAip />
           </TabPanel>
+          <TabPanel>Content 5</TabPanel>
         </TabPanels>
       </TabGroup>
     </div>

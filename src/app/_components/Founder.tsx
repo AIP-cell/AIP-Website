@@ -64,7 +64,7 @@ const Founder = () => {
         className="tw-absolute tw-inset-0 tw-w-full tw-top-[-13rem]"
       /> */}
       <Image src={TopImage} alt="" className="tw-w-full " />
-      <div className="tw-w-full tw-bg-founderGradient ~tw-h-[50rem]/[68rem] tw-relative">
+      <div className="tw-w-full tw-bg-founderGradient ~tw-h-[50rem]/[68rem] tw-relative tw-mt-[-1px]">
         <div className="tw-absolute tw-top-0 tw-w-full">
           <div className="tw-w-full  tw-relative">
             <Image
@@ -171,7 +171,7 @@ const Founder = () => {
           </div>
         </div>
       </div>
-      <Image src={BottomImage} alt="" className="tw-w-full " />
+      <Image src={BottomImage} alt="" className="tw-w-full tw-mt-[-2px]" />
     </div>
   );
 };
