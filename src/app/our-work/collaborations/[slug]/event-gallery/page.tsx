@@ -5,6 +5,8 @@ import SampleImage from "@public/images/sample.png";
 
 import Image from "next/image";
 import BreadCrump from "@/components/bread-crump/BreadCrump";
+import GalleryVideos from "./_components/GalleryVideos";
+import GalleryImages from "./_components/GalleryImages";
 
 const page = () => {
   return (
@@ -35,127 +37,8 @@ const page = () => {
             this network and establish personal philanthropy as a means for
             India’s transformation.
           </p>
-          <div className="tw-grid tw-grid-cols-5 tw-grid-rows-4 tw-gap-[1.25rem] tw-pb-[7.5rem]">
-            <div className="tw-col-span-3 tw-relative tw-h-[25rem] tw-row-span-2 tw-overflow-hidden tw-rounded-xl">
-              <Image
-                src={SampleImage}
-                alt=""
-                className="tw-absolute tw-inset-0 tw-w-full tw-h-full tw-object-cover"
-              />
-            </div>
-            <div className="tw-col-span-1 tw-relative tw-row-span-1 tw-overflow-hidden tw-rounded-xl">
-              <Image
-                src={SampleImage}
-                alt=""
-                className="tw-absolute tw-inset-0 tw-w-full tw-h-full tw-object-cover"
-              />
-            </div>
-            <div className="tw-col-span-1 tw-relative tw-row-span-1 tw-overflow-hidden tw-rounded-xl">
-              <Image
-                src={SampleImage}
-                alt=""
-                className=" tw-absolute tw-inset-0 tw-w-full tw-h-full tw-object-cover"
-              />
-            </div>
-            <div className="tw-col-span-1 tw-relative tw-row-span-1 tw-overflow-hidden tw-rounded-xl">
-              <Image
-                src={SampleImage}
-                alt=""
-                className=" tw-absolute tw-inset-0 tw-w-full tw-h-full tw-object-cover"
-              />
-            </div>
-            <div className="tw-col-span-1 tw-relative tw-row-span-1 tw-overflow-hidden tw-rounded-xl">
-              <Image
-                src={SampleImage}
-                alt=""
-                className=" tw-absolute tw-inset-0 tw-w-full tw-h-full tw-object-cover"
-              />
-            </div>
-            <div className="tw-col-span-1 tw-relative tw-row-span-1 tw-overflow-hidden tw-rounded-xl">
-              <Image
-                src={SampleImage}
-                alt=""
-                className=" tw-absolute tw-inset-0 tw-w-full tw-h-full tw-object-cover"
-              />
-            </div>
-            <div className="tw-col-span-1 tw-relative tw-row-span-1 tw-overflow-hidden tw-rounded-xl">
-              <Image
-                src={SampleImage}
-                alt=""
-                className=" tw-absolute tw-inset-0 tw-w-full tw-h-full tw-object-cover"
-              />
-            </div>
-            <div className="tw-col-span-1 tw-relative tw-row-span-1 tw-overflow-hidden tw-rounded-xl">
-              <Image
-                src={SampleImage}
-                alt=""
-                className=" tw-absolute tw-inset-0 tw-w-full tw-h-full tw-object-cover"
-              />
-            </div>
-            <div className="tw-col-span-1 tw-relative tw-row-span-1 tw-overflow-hidden tw-rounded-xl">
-              <Image
-                src={SampleImage}
-                alt=""
-                className=" tw-absolute tw-inset-0 tw-w-full tw-h-full tw-object-cover"
-              />
-            </div>
-            <div className="tw-col-span-1 tw-relative tw-row-span-1 tw-overflow-hidden tw-rounded-xl">
-              <Image
-                src={SampleImage}
-                alt=""
-                className=" tw-absolute tw-inset-0 tw-w-full tw-h-full tw-object-cover"
-              />
-            </div>
-            <div className="tw-col-span-1 tw-relative tw-row-span-1 tw-overflow-hidden tw-rounded-xl">
-              <Image
-                src={SampleImage}
-                alt=""
-                className=" tw-absolute tw-inset-0 tw-w-full tw-h-full tw-object-cover"
-              />
-            </div>
-            <div className="tw-col-span-1 tw-relative tw-row-span-1 tw-overflow-hidden tw-rounded-xl">
-              <Image
-                src={SampleImage}
-                alt=""
-                className=" tw-absolute tw-inset-0 tw-w-full tw-h-full tw-object-cover"
-              />
-            </div>
-            <div className="tw-col-span-1 tw-relative tw-row-span-1 tw-overflow-hidden tw-rounded-xl">
-              <Image
-                src={SampleImage}
-                alt=""
-                className=" tw-absolute tw-inset-0 tw-w-full tw-h-full tw-object-cover"
-              />
-            </div>
-            <div className="tw-col-span-1 tw-relative tw-row-span-1 tw-overflow-hidden tw-rounded-xl">
-              <Image
-                src={SampleImage}
-                alt=""
-                className=" tw-absolute tw-inset-0 tw-w-full tw-h-full tw-object-cover"
-              />
-            </div>
-            <div className="tw-col-span-1 tw-relative tw-row-span-1 tw-overflow-hidden tw-rounded-xl">
-              <Image
-                src={SampleImage}
-                alt=""
-                className=" tw-absolute tw-inset-0 tw-w-full tw-h-full tw-object-cover"
-              />
-            </div>
-            <div className="tw-col-span-1 tw-relative tw-row-span-1 tw-overflow-hidden tw-rounded-xl">
-              <Image
-                src={SampleImage}
-                alt=""
-                className=" tw-absolute tw-inset-0 tw-w-full tw-h-full tw-object-cover"
-              />
-            </div>
-            <div className="tw-col-span-1 tw-relative tw-row-span-1 tw-overflow-hidden tw-rounded-xl">
-              <Image
-                src={SampleImage}
-                alt=""
-                className=" tw-absolute tw-inset-0 tw-w-full tw-h-full tw-object-cover"
-              />
-            </div>
-          </div>
+          <GalleryVideos />
+          <GalleryImages src="" desc="" ddmmyy="" />
         </div>
       </div>
     </div>

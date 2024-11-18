@@ -284,7 +284,9 @@ const Footer = () => {
                 <Link href="/faq">FAQs</Link>
               </div>
               <div className="tw-pt-[2.25rem] tw-text-h9Copy5 tw-font-inter tw-font-bold tw-text-white">
-                <Link href="/about/aip-impact/foundation-fact-sheet">Foundation Fact Sheet</Link>
+                <Link href="/about/aip-impact/foundation-fact-sheet">
+                  Foundation Fact Sheet
+                </Link>
               </div>
               <div className="tw-pt-[2.25rem] tw-text-h9Copy5 tw-font-inter tw-font-bold tw-text-white">
                 <Link href="#">Join our learning circle</Link>

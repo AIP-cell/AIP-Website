@@ -12,17 +12,17 @@ import YoutubeSvg from "@/components/svg/YoutubeSvg";
 const InnerSectionOne = () => {
   return (
     <div className="tw-w-full tw-relative">
-        <Image
-          src={PurpleTopSvg}
-          alt="purple-curve"
-          className="tw-absolute tw-top-[8rem] tw-right-0"
-        />
+      <Image
+        src={PurpleTopSvg}
+        alt="purple-curve"
+        className="tw-absolute tw-top-[8rem] tw-right-0"
+      />
       <div className="container tw-mx-auto tw-relative tw-px-[7.8rem] tw-pt-[4.875rem]">
         <BreadCrump
-          textOne="Products & Services"
-          linkOne="/products-and-services"
+          textOne="Our Work"
+          linkOne="/our-work"
           textTwo="Projects and Programs"
-          linkTwo="/products-and-services/projects-and-programs"
+          linkTwo="/our-work/projects-and-programs"
         />
         <div className="tw-grid tw-grid-cols-3 tw-gap-5">
           <div className="tw-col-span-2 tw-flex tw-flex-col tw-gap-10  tw-pe-[6.563rem]">
@@ -44,7 +44,7 @@ const InnerSectionOne = () => {
               sectors from education to healthcare to climate and the arts, with
               innovative initiatives and their profound effects on communities.
             </p>
-  
+
             <div>
               <p className="tw-font-playFair tw-pb-[1rem] tw-leading-[1.75rem] tw-font-medium tw-tracking-[-.02rem] tw-text-h5 tw-text-gray80">
                 In Partnership With
@@ -55,9 +55,9 @@ const InnerSectionOne = () => {
                 alt="bcg"
               />
             </div>
-  
+
             <div className="tw-h-px tw-bg-gray10 tw-w-[31.563rem]"></div>
-            <div>
+            {/* <div>
               <p className="tw-font-playFair tw-pb-4 tw-leading-[1.75rem] tw-font-medium tw-tracking-[-.02rem] tw-text-h5 tw-text-gray80">
                 Launch Details
               </p>
@@ -79,8 +79,8 @@ const InnerSectionOne = () => {
                   </p>
                 </div>
               </div>
-            </div>
-  
+            </div> */}
+
             <div className="tw-flex tw-gap-5">
               {/* <button className=""> */}
               <button className="tw-group tw-bg-darkPurple tw-border-2 tw-border-darkPurple tw-transition-all  hover:tw-bg-white hover:tw-text-darkPurple tw-text-white hover:tw-border-2   hover:tw-border-darkPurple tw-px-7 tw-py-3 tw-flex tw-items-center tw-gap-[0.75rem] tw-w-fit tw-rounded-3xl">
@@ -91,8 +91,8 @@ const InnerSectionOne = () => {
                   <DownloadFileSvg className="tw-size-[1.25rem]" />
                 </div>
               </button>
-  
-              <Link
+
+              {/* <Link
                 className=" hover:tw-bg-darkPurple tw-border-2 hover:tw-text-white  tw-transition-all  tw-bg-white tw-text-darkPurple  tw-border-darkPurple tw-px-7 tw-py-3 tw-flex tw-items-center tw-gap-[0.75rem] tw-w-fit tw-rounded-3xl"
                 href="#"
               >
@@ -100,36 +100,26 @@ const InnerSectionOne = () => {
                   Visit Gallery
                 </p>
                 <EyeSvg className="tw-size-[1.25rem]" />
-              </Link>
+              </Link> */}
             </div>
-  
-            <div className="tw-h-px tw-bg-gray10"></div>
-  
-            <div>
+
+            {/* <div className="tw-h-px tw-bg-gray10"></div> */}
+
+            {/* <div>
               <p className="tw-font-playFair tw-pb-4 tw-leading-[1.75rem] tw-font-medium tw-tracking-[-.02rem] tw-text-h5 tw-text-gray80">
                 Catch up on Event Updates
               </p>
-  
+
               <div className="tw-flex tw-gap-4">
                 <div className="tw-bg-bgGray5 tw-text-darkPurple hover:tw-text-white hover:tw-bg-darkPurple tw-p-[0.5rem] tw-rounded-full tw-flex tw-items-center tw-justify-center">
                   <YoutubeSvg className="tw-size-[2rem]" />
-                  {/* <Image
-                    src={Youtube}
-                    className=" tw-w-[1.833rem] tw-h-[1.288rem] "
-                    alt="Youtube Image"
-                  /> */}
                 </div>
-  
+
                 <div className="tw-bg-bgGray5 tw-text-darkPurple hover:tw-text-white hover:tw-bg-darkPurple tw-w-[3rem] tw-h-[3rem] tw-rounded-full tw-flex tw-items-center tw-justify-center ">
                   <XSvg className="tw-w-[1.063rem] tw-h-[1.125rem]" />
-                  {/* <Image
-                    src={Ex}
-                    className=" tw-w-[1.063rem] tw-h-[1.125rem]"
-                    alt="Ex Image"
-                  /> */}
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
           <Image
             src={WealthView}

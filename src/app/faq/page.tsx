@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import FaqItem from "./_components/FaqItem";
 import BgFaq from "@public/svg/bg-faq.svg";
@@ -7,6 +7,8 @@ import Image from "next/image";
 import Link from "next/link";
 import BreadCrump from "@/components/bread-crump/BreadCrump";
 import CustomGraySelect from "@/components/custom/CustomGraySelect";
+import FaqTab from "./_components/FaqTab";
+import { TabGroup, TabPanel, TabPanels } from "@headlessui/react";
 const list = [
   { id: 1, title: "General Inquiry" },
   { id: 2, title: "Founder Network" },
@@ -23,17 +25,16 @@ const FaqPage = () => {
           alt=""
           className="tw-left-0 tw-absolute tw-top-[5rem] "
         />
-        <div className="tw-relative container tw-mx-auto ~tw-px-[1.25rem]/[7.75rem] tw-pt-[5rem] tw-grid md:tw-grid-cols-3 tw-gap-[3.75rem] tw-h-screen">
+
+        <TabGroup className="tw-relative container tw-mx-auto ~tw-px-[1.25rem]/[7.75rem] tw-pt-[5rem] tw-grid md:tw-grid-cols-3 tw-gap-[3.75rem] tw-h-screen">
           <BreadCrump textOne="FAQ's" linkOne="/faq" />
+
           <div>
             <p className="tw-leading-[3.3rem] tw-text-h2 tw-pb-[3rem] tw-font-playFair">
               FAQS
             </p>
             <div className="tw-hidden md:tw-block">
-              <List name="General Inquiry" className="tw-bg-textPurple tw-text-white"/>
-              <List name="Founder Network" />
-              <List name="Philanthropic Network" />
-              <List name="NPO" />
+              <FaqTab />
             </div>
             <div className="tw-block md:tw-hidden">
               <CustomGraySelect
@@ -43,10 +44,15 @@ const FaqPage = () => {
               />
             </div>
           </div>
-          <div className="md:tw-col-span-2">
-            <FaqItem />
-          </div>
-        </div>
+          <TabPanels className="md:tw-col-span-2">
+            <TabPanel>
+              <FaqItem />
+            </TabPanel>
+            <TabPanel>Content 2</TabPanel>
+            <TabPanel>Content 3</TabPanel>
+            <TabPanel>Content 4</TabPanel>
+          </TabPanels>
+        </TabGroup>
       </div>
     </div>
   );

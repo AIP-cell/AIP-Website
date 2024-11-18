@@ -27,7 +27,7 @@ const ValueSlick = ({ slickArray }: Props) => {
     }
   };
   return (
-    <div className="tw-pt-[5rem] container tw-mx-auto">
+    <div className="tw-pt-[5rem] container tw-mx-auto tw-pb-[9.25rem]">
       <div className="tw-relative  tw-flex tw-justify-center tw-items-center">
         <p className="~tw-w-[16.1rem]/[25rem] tw-text-center tw-text-midGray ~tw-leading-[1.225rem]/[1.4rem]">
           {slickArray.at(change)}

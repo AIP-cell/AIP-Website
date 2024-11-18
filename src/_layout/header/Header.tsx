@@ -36,7 +36,7 @@ const headerData = [
     options: [
       
       { option: "Our Offerings", link: "/our-work/our-offerings" },
-      { option: "NPO Registry", link: "#" },
+      { option: "NPO Registry", link: "/our-work/npo" },
       {
         option: "Projects and Programs",
         link: "/our-work/projects-and-programs",

@@ -58,10 +58,10 @@ const page = () => {
         />
         <div className="container tw-mx-auto tw-relative ~tw-px-5/[7.8rem] tw-pt-[5rem]">
           <BreadCrump
-            textOne="Products & Services"
-            linkOne="/products-and-services"
+            textOne="Our Work"
+            linkOne="/our-work"
             textTwo="Projects and Programs"
-            linkTwo="/products-and-services/projects-and-programs"
+            linkTwo="/our-work/projects-and-programs"
           />
           <p className="tw-font-inter tw-font-semibold tw-uppercase tw-leading-[1.3rem] tw-text-purple40">
             Projects and Programs
@@ -75,19 +75,24 @@ const page = () => {
 
           <div className="tw-flex tw-pt-[2rem] tw-gap-[.75rem]">
             <p className="tw-py-3 tw-text-gray40 ">Filter by:</p>
-            <CustomSelect optionsArray={categoryData} />
-            <CustomSelect optionsArray={dateData} />
+            <CustomSelect optionsArray={["Domain"]} ListboxButtonClassName="!tw-w-fit"/>
+            <CustomSelect optionsArray={["Type of Content"]} ListboxButtonClassName="!tw-w-fit" />
+            <CustomSelect optionsArray={["Organisation Type"]} ListboxButtonClassName="!tw-w-fit" />
+            <CustomSelect optionsArray={["Events"]} ListboxButtonClassName="!tw-w-fit" />
+            <CustomSelect optionsArray={["Date"]} ListboxButtonClassName="!tw-w-fit" />
           </div>
 
           <div className="tw-pt-[3.25rem] tw-pb-[5rem] tw-grid md:tw-grid-cols-3 tw-gap-[4.5rem]">
             {datas.map((item, i) => (
-              <ResourceCard
-                key={i}
-                src={item.src}
-                title={item.title}
-                desc={item.desc}
-                category={item.category}
-              />
+             <Link href={`/our-work/projects-and-programs/${item.title}`} key={i}>
+                <ResourceCard
+                  
+                  src={item.src}
+                  title={item.title}
+                  desc={item.desc}
+                  category={item.category}
+                />
+             </Link>
             ))}
           </div>
         </div>

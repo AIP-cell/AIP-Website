@@ -4,6 +4,7 @@ import FoundationFacts from "../_components/FoundationFacts";
 import TestimonialSlick from "../../../../components/slick/TestimonialSlick";
 import AipFootprints from "./_components/AipFootprints";
 import Testimonials from "./_components/Testimonials";
+import ContactSection from "@/app/about/aip-impact/foundation-fact-sheet/_components/ContactSection";
 
 const page = () => {
   return (
@@ -11,7 +12,8 @@ const page = () => {
       <FoundationFactHeroSection />
       <FoundationFacts />
       <Testimonials />
-      <AipFootprints />
+      {/* <AipFootprints /> */}
+      <ContactSection/>
     </div>
   );
 };

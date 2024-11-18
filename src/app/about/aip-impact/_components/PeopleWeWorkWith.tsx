@@ -55,7 +55,7 @@ const PeopleWeWorkWith = () => {
           &nbsp;Work With
         </span>
       </h2>
-      <div className="tw-pt-[5rem] tw-px-[1.25rem]">
+      <div className="tw-pt-[5rem] ~tw-px-[1.25rem]/[7.8rem]">
         <div className=" tw-grid tw-grid-cols-2 md:tw-grid-cols-3 lg:tw-grid-cols-4 tw-justify-center ~tw-gap-[1.25rem]/[5.625rem]">
           {peopleDataRow1.map((people, i) => (
             <div key={i} className="">
@@ -77,24 +77,6 @@ const PeopleWeWorkWith = () => {
             </div>
           ))}
         </div>
-        {/* <div className=" tw-pt-[4rem] tw-flex  tw-justify-center tw-flex-wrap tw-gap-[5.625rem]">
-          {peopleDataRow2.map((people, i) => (
-            <div key={i} className="tw-flex tw-gap-[5.625rem]">
-              <ATeamCard
-                title={people.a.title1}
-                title2={people.a.title2}
-                desc={people.a.desc}
-                linkedin={false}
-              />
-              <PTeamCard
-                title={people.p.title1}
-                title2={people.p.title2}
-                desc={people.p.desc}
-                linkedin={false}
-              />
-            </div>
-          ))}
-        </div> */}
       </div>
     </div>
   );

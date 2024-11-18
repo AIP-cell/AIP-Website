@@ -4,12 +4,13 @@ import FoundationFacts from "./_components/FoundationFacts";
 import PeopleWeWorkWith from "./_components/PeopleWeWorkWith";
 import CurvePeach from "@public/svg/peach-bg-curve-founders.svg";
 
+
 const page = () => {
   return (
     <div className="tw-relative">
       <ImpactHeroSection />
-      <CaseStudies bottomCaseStudyCurveSvg={CurvePeach} />
-      <FoundationFacts button="view more" />
+      <CaseStudies  bottomCaseStudyCurveSvg={CurvePeach} />
+      <FoundationFacts button="Know more" />
       <PeopleWeWorkWith />
     </div>
   );

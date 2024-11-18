@@ -45,10 +45,10 @@ const OurOfferingHeroSection = () => {
       {/* <Image src={HeroBg1} alt="" fill className="tw-z-40 " />
       <Image src={HeroBg2} alt="" fill className="tw-z-10 " /> */}
       <BreadCrump
-        textOne="Products & Services"
-        linkOne="/products-and-services"
-        textTwo="Our Offering"
-        linkTwo="/products-and-services/our-offerings"
+        textOne="Our Work"
+        linkOne="/our-work"
+        textTwo="What We Do"
+        linkTwo="/our-work/what-we-do"
       />
 
       <div className="tw-relative">
@@ -68,15 +68,8 @@ const OurOfferingHeroSection = () => {
             <h3 className=" tw-leading-[20.64px] tw-uppercase tw-font-inter tw-text-[#121314] tw-font-semibold">
               previous sectors engaged
             </h3>
-            <h2 className="tw-pt-[1.25rem] tw-text-center ~tw-text-h4/h3 tw-leading-[2.6rem] tw-font-playFair tw-text-gray80">
-              AIP is sector-agnostic, offering our network members services
-              across a diverse range of sectors driven by their own
-              philanthropic motivations and passions. While many of our members
-              continue supporting traditional sectors for widespread impact,
-              we’ve also noticed a growing interest among
-              philanthropists–particularly from the younger generation–in
-              specific sub-sectors. This trend is not only diversifying our
-              giving pool but also enriching our collective efforts.
+            <h2 className="tw-pt-[1.25rem] tw-tracking-[-1px] tw-text-center ~tw-text-h4/h3 tw-leading-[2.6rem] tw-font-playFair tw-text-gray80">
+            AIP is sector-agnostic, offering our network members services across a diverse range of sectors driven by their own philanthropic motivations and passions. While many of our members continue supporting traditional sectors for widespread impact, we’ve also noticed a growing interest among philanthropists–particularly from the younger generation–in specific sub-sectors. This trend is not only diversifying our giving pool but also enriching our collective efforts.
             </h2>
           </div>
         </div>

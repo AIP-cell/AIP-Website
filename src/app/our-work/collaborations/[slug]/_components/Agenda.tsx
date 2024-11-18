@@ -1,61 +1,35 @@
 import React from "react";
 
-const datas = [
-  {
-    title: "Title",
-    date: "11 Jul 2024  ",
-    time: "14:00 - 16:00 ",
-    desc: "A short description on the what it is about. Giving has lagged behind despite a growing pool of first-generation wealth creators who have the ability to give forward. Giving has lagged behind despite a growing pool of first-generation wealth creators who have the ability to give forward.",
-    category: "People, designation, Organisation",
-  },
-  {
-    title: "Title",
-    date: "11 Jul 2024  ",
-    time: "14:00 - 16:00 ",
-    desc: "A short description on the what it is about. Giving has lagged behind despite a growing pool of first-generation wealth creators who have the ability to give forward. Giving has lagged behind despite a growing pool of first-generation wealth creators who have the ability to give forward.",
-    category: "People, designation, Organisation",
-  },
-  {
-    title: "Title",
-    date: "11 Jul 2024  ",
-    time: "14:00 - 16:00 ",
-    desc: "A short description on the what it is about. Giving has lagged behind despite a growing pool of first-generation wealth creators who have the ability to give forward. Giving has lagged behind despite a growing pool of first-generation wealth creators who have the ability to give forward.",
-    category: "People, designation, Organisation",
-  },
-  {
-    title: "Title",
-    date: "11 Jul 2024  ",
-    time: "14:00 - 16:00 ",
-    desc: "A short description on the what it is about. Giving has lagged behind despite a growing pool of first-generation wealth creators who have the ability to give forward. Giving has lagged behind despite a growing pool of first-generation wealth creators who have the ability to give forward.",
-    category: "People, designation, Organisation",
-  },
-];
-const Agenda = () => {
+
+type Props={
+  agendaArray:any
+}
+const Agenda = ({agendaArray}:Props) => {
   return (
     <div className="container tw-mx-auto tw-relative tw-px-[7.8rem] ">
-      {datas.map((item, i) => (
+      {agendaArray.map((item:any, i:number) => (
         <div
           key={i}
           className="tw-flex tw-border-b tw-gap-[3.5rem] tw-border-gray10 tw-py-6"
         >
-          <div className="tw-w-[7.5rem] tw-pt-7">
-            <p className="tw-pb-3 tw-leading-[1.4rem] tw-font-bold tw-font-inter tw-text-midGray">
+          <div className="tw-w-[7.5rem] tw-pt-[0.75rem]">
+            <p className="tw-pb-[0.25rem] tw-leading-[1.4rem]  tw-font-inter tw-text-midGray">
               {item.date}
             </p>
-            <p className=" tw-leading-[1.4rem] tw-font-inter tw-text-midGray">
+            <p className=" tw-leading-[1.4rem] tw-font-inter tw-font-bold tw-text-midGray">
               {item.time}
             </p>
           </div>
 
           <div className="tw-w-[53.375rem]">
-            <p className=" tw-font-playFair  tw-text-gray80 tw-text-h4 tw-leading-[2.6rem] tw-tracking-[-0.02rem]">
+            <p className=" tw-font-playFair tw-text-h4 tw-text-gray80  tw-leading-[2.6rem] tw-tracking-[-0.02rem]">
               {item.title}
             </p>
             <p className=" tw-py-3 tw-font-inter tw-text-midGray tw-leading-[1.4rem]">
-              {item.desc}
+              {item?.desc}
             </p>
             <p className=" tw-font-inter tw-leading-[1.4rem] tw-text-gray50">
-              {item.category}
+              {item?.category}
             </p>
           </div>
         </div>

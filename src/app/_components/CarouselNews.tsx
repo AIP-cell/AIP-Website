@@ -4,6 +4,7 @@ import { useRef } from "react";
 import NewsCard from "@/components/cards/NewsCard";
 import RightSlickArrowSvg from "@/components/svg/RightSlickArrowSvg";
 import LeftSlickArrowSvg from "@/components/svg/LeftSlickArrowSvg";
+import OutlineButton from "@/components/buttons/OutlineButton";
 
 const newsData = [
   {
@@ -41,8 +42,8 @@ const CarouselNews = () => {
     }
   };
   return (
-    <div className="tw-flex tw-flex-col tw-relative">
-      <div className="tw-absolute tw-top-[-5rem] tw-right-[7rem] tw-hidden  tw-pt-[2rem] lg:tw-flex tw-justify-center tw-gap-[1.25rem] ">
+    <div className="tw-flex tw-flex-col tw-relative tw-items-center">
+      <div className="tw-absolute tw-top-[-15rem] tw-right-[7rem] tw-hidden   lg:tw-flex tw-justify-center tw-gap-[1.25rem] ">
         <button
           onClick={previous}
           className="  tw-text-white tw-leading-[22.4px] tw-font-inter tw-bg-darkPurple tw-rounded-tl-3xl tw-rounded-bl-3xl tw-rounded-tr-xl tw-rounded-br-xl tw-py-[1.15rem] tw-px-[0.92rem]"
@@ -64,6 +65,11 @@ const CarouselNews = () => {
           <NewsCard key={i} src={items.src} text={items.text} />
         ))}
       </div>
+      <OutlineButton
+        buttonClassName="!tw-rounded-full !tw-w-fit tw-mt-[2.5rem]"
+        className=" !tw-px-[1.75rem]  tw-py-[0.75rem] "
+        text="Read More"
+      />
       <div className=" tw-pt-[2rem] tw-flex tw-justify-center lg:tw-hidden tw-gap-[1.25rem] ">
         <button
           onClick={previous}

@@ -7,8 +7,19 @@ type Props = {
   desc: string;
   image: string;
   index: number;
+  foundationName?: string;
+  foundationNameClassName?: string;
+  initiativeName?: string;
 };
-const CaseStudy = ({ title, desc, image, index }: Props) => {
+const CaseStudy = ({
+  title,
+  desc,
+  image,
+  index,
+  foundationName,
+  foundationNameClassName,
+  initiativeName,
+}: Props) => {
   return (
     <div className="tw-relative tw-grid tw-grid-cols-1 lg:tw-grid-cols-2 ~tw-gap-[1rem]/[7.81rem]">
       <div
@@ -37,6 +48,16 @@ const CaseStudy = ({ title, desc, image, index }: Props) => {
         <h2 className="tw-font-playFair ~tw-text-h4a/h3 ~tw-leading-[2.113rem]/[3.25rem] tw-text-gray80">
           {title}
         </h2>
+        <h3
+          className={` tw-text-gray40 tw-font-playFairItalic ~tw-text-h4a/h5 ~tw-leading-[2.113rem]/[1.75rem] tw-pt-[0.25rem] ${foundationNameClassName}`}
+        >
+          {foundationName}
+        </h3>
+        {initiativeName && (
+          <h3 className=" tw-text-gray80 tw-font-playFair tw-font-medium ~tw-text-h4a/h5 ~tw-leading-[2.113rem]/[1.75rem] tw-pt-[1.25rem]">
+            {initiativeName}
+          </h3>
+        )}
         <p className="tw-text-midGray ~tw-pt-[1rem]/[1.25rem] ~tw-leading-[1.225rem]/[1.4rem]">
           {desc}
         </p>

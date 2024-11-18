@@ -9,11 +9,11 @@ type Props = {
 };
 const FoundationFacts = ({ button }: Props) => {
   return (
-    <div className="tw-relative tw-w-full ~tw-pt-[5rem]/[12.5rem]">
+    <div className="tw-relative tw-w-full ~tw-pt-[5rem]/[16rem]">
       <Image
         src={Bg}
         alt=""
-        className="tw-hidden lg:tw-block tw-h-[100rem]  tw-absolute tw-top-[-20rem] tw-w-[400rem]"
+        className="tw-hidden lg:tw-block tw-h-[95rem]  tw-absolute tw-top-[-15rem] tw-w-[500rem]"
       />
       <div className="tw-relative container tw-mx-auto ">
         <h2 className=" ~tw-text-h4/h2 tw-text-center tw-font-playFair ~tw-leading-[2.6rem]/[3.3rem]">

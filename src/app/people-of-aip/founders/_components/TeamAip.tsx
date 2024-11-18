@@ -4,7 +4,52 @@ import Image from "next/image";
 import Bg1 from "@public/svg/people-of-aip/peachCurveRightTeamAip.svg";
 import OvalPeach from "@public/svg/ovalPeach.svg";
 import Bg2 from "@public/svg/people-of-aip/peachCurveLeftTeamAip.svg";
+import Link from "next/link";
 
+const TeamArray = [
+  {
+    titleClassName: " tw-underline tw-decoration-[1px] tw-underline-offset-4",
+    title2ClassName: " tw-underline tw-decoration-[1px] tw-underline-offset-4",
+    title: "Piyush",
+    title2: "Doshi",
+    desc: "Operating Partner",
+  },
+  {
+    titleClassName: " tw-underline tw-decoration-[1px] tw-underline-offset-4",
+    title2ClassName: " tw-underline tw-decoration-[1px] tw-underline-offset-4",
+    title: "Piyush",
+    title2: "Doshi",
+    desc: "Operating Partner",
+  },
+  {
+    titleClassName: " tw-underline tw-decoration-[1px] tw-underline-offset-4",
+    title2ClassName: " tw-underline tw-decoration-[1px] tw-underline-offset-4",
+    title: "Piyush",
+    title2: "Doshi",
+    desc: "Operating Partner",
+  },
+  {
+    titleClassName: " tw-underline tw-decoration-[1px] tw-underline-offset-4",
+    title2ClassName: " tw-underline tw-decoration-[1px] tw-underline-offset-4",
+    title: "Piyush",
+    title2: "Doshi",
+    desc: "Operating Partner",
+  },
+  {
+    titleClassName: " tw-underline tw-decoration-[1px] tw-underline-offset-4",
+    title2ClassName: " tw-underline tw-decoration-[1px] tw-underline-offset-4",
+    title: "Piyush",
+    title2: "Doshi",
+    desc: "Operating Partner",
+  },
+  {
+    titleClassName: " tw-underline tw-decoration-[1px] tw-underline-offset-4",
+    title2ClassName: " tw-underline tw-decoration-[1px] tw-underline-offset-4",
+    title: "Piyush",
+    title2: "Doshi",
+    desc: "Operating Partner",
+  },
+];
 const TeamAip = () => {
   return (
     <div className="tw-w-full tw-relative">
@@ -46,13 +91,19 @@ const TeamAip = () => {
         </div>
         <div className="~tw-pt-[4.83rem]/[7.875rem] tw-flex md:tw-block tw-flex-col tw-items-center ~tw-px-[1.25rem]/[7.8rem] tw-relative">
           <div className="tw-flex ~tw-gap-[1.25rem]/[5.6rem] ">
-            <ATeamCard
-              title="Piyush"
-              title2="Doshi"
-              desc="Operating Partner"
-              linkedin={true}
-            />
+            <Link href='/people-of-aip/our-advisory-board/slug' >
+              <ATeamCard
+                titleClassName=" tw-underline tw-decoration-[1px] tw-underline-offset-4"
+                title2ClassName=" tw-underline tw-decoration-[1px] tw-underline-offset-4"
+                title="Piyush"
+                title2="Doshi"
+                desc="Operating Partner"
+                linkedin={true}
+              />
+            </Link>
             <PTeamCard
+              titleClassName=" tw-underline tw-decoration-[1px] tw-underline-offset-4"
+              title2ClassName=" tw-underline tw-decoration-[1px] tw-underline-offset-4"
               title="Amitabh"
               title2="Jaipuria"
               desc="CEO"
@@ -61,12 +112,16 @@ const TeamAip = () => {
           </div>
           <div className="tw-pt-[4rem] tw-flex ~tw-gap-[1.25rem]/[5.6rem] ">
             <ATeamCard
+              titleClassName=" tw-underline tw-decoration-[1px] tw-underline-offset-4"
+              title2ClassName=" tw-underline tw-decoration-[1px] tw-underline-offset-4"
               title="Radhika"
               title2="Jain"
               desc="Philanthropic Partner"
               linkedin={true}
             />
             <PTeamCard
+              titleClassName=" tw-underline tw-decoration-[1px] tw-underline-offset-4"
+              title2ClassName=" tw-underline tw-decoration-[1px] tw-underline-offset-4"
               title="Aditi"
               title2="Ray"
               desc="Philanthropic Partner"
@@ -75,24 +130,32 @@ const TeamAip = () => {
           </div>
           <div className="tw-justify-center tw-pt-[4rem] tw-flex tw-flex-wrap ~tw-gap-[1.25rem]/[5.6rem]  ">
             <ATeamCard
+              titleClassName=" tw-underline tw-decoration-[1px] tw-underline-offset-4"
+              title2ClassName=" tw-underline tw-decoration-[1px] tw-underline-offset-4"
               title="Dr. Preethi"
               title2="Jain"
               desc="Philanthropic Partner"
               linkedin={true}
             />
             <PTeamCard
+              titleClassName=" tw-underline tw-decoration-[1px] tw-underline-offset-4"
+              title2ClassName=" tw-underline tw-decoration-[1px] tw-underline-offset-4"
               title="Vishal"
               title2="Dutta"
               desc="Head, Knowledge"
               linkedin={true}
             />
             <ATeamCard
+              titleClassName=" tw-underline tw-decoration-[1px] tw-underline-offset-4"
+              title2ClassName=" tw-underline tw-decoration-[1px] tw-underline-offset-4"
               title="Jhilmil"
               title2="Garg"
               desc="Program Manager"
               linkedin={true}
             />
             <PTeamCard
+              titleClassName=" tw-underline tw-decoration-[1px] tw-underline-offset-4"
+              title2ClassName=" tw-underline tw-decoration-[1px] tw-underline-offset-4"
               title="Isha"
               title2="Mathur"
               desc="Program Manager"
@@ -101,12 +164,16 @@ const TeamAip = () => {
           </div>
           <div className="tw-pt-[4rem] tw-flex tw-justify-start md:tw-justify-end ~tw-gap-[1.25rem]/[5.6rem]  ">
             <ATeamCard
+              titleClassName=" tw-underline tw-decoration-[1px] tw-underline-offset-4"
+              title2ClassName=" tw-underline tw-decoration-[1px] tw-underline-offset-4"
               title="Bhavana S"
               title2="Resmi"
               desc="Program Associate"
               linkedin={true}
             />
             <PTeamCard
+              titleClassName=" tw-underline tw-decoration-[1px] tw-underline-offset-4"
+              title2ClassName=" tw-underline tw-decoration-[1px] tw-underline-offset-4"
               title="Aparna"
               title2="Joshi"
               desc="Program Manager"
@@ -115,12 +182,16 @@ const TeamAip = () => {
           </div>
           <div className="tw-pt-[4rem] tw-flex tw-justify-start md:tw-justify-end ~tw-gap-[1.25rem]/[5.6rem] ">
             <ATeamCard
+              titleClassName=" tw-underline tw-decoration-[1px] tw-underline-offset-4"
+              title2ClassName=" tw-underline tw-decoration-[1px] tw-underline-offset-4"
               title="Dr. Sabhyata"
               title2="Prakash"
               desc="Communication & Brand Manager"
               linkedin={true}
             />
             <PTeamCard
+              titleClassName=" tw-underline tw-decoration-[1px] tw-underline-offset-4"
+              title2ClassName=" tw-underline tw-decoration-[1px] tw-underline-offset-4"
               title="Annie"
               title2="Bisht"
               desc="Executive Assistant"

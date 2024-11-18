@@ -7,19 +7,19 @@ const giveData = [
     src: "/svg/give-section/giveMore.svg",
     title: "Give",
     span: "More",
-    desc: "Giving has lagged behind despite a growing pool of first-generation wealth creators who have the ability to give forward.",
+    desc: "As the wealth of Indian UHNIs continues to grow, so does their capacity to amplify their impact. By increasing the quantum of their giving, philanthropists can unlock greater possibilities for transformative change in society.",
   },
   {
     src: "/svg/give-section/giveSooner.svg",
     title: "Give",
     span: "Sooner",
-    desc: "Individuals tend to engage in philanthropy later in life (between 60-75 years of age), though they often have resources to give sooner.",
+    desc: "With an increasing number of younger Indians achieving affluence earlier in life, there is an unparalleled opportunity to start giving in the prime of their years. Early philanthropy allows for sustained contributions, fostering long-term impact over a lifetime of giving.",
   },
   {
     src: "/svg/give-section/giveBetter.svg",
     title: "Give",
     span: "Better",
-    desc: "A robust ecosystem of knowledge, learnings, and peer networks is required to support individuals to give better.",
+    desc: "Strategic philanthropy has the potential to solve some of the toughest challenges of our time. By being flexible, innovative, and bold, Indian philanthropists can fuel systems change, drive breakthrough innovations, and contribute to India’s social and economic transformation.",
   },
 ];
 const GiveSection = () => {

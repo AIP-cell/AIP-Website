@@ -12,20 +12,20 @@ const JoinTheFlow = () => {
       <Image
         src={JoinCirclesOne}
         alt=""
-        className=" tw-absolute tw-top-[5.75rem] tw-left-[3.938rem] tw-w-[18.625rem] tw-h-[18.438rem]"
+        className=" tw-absolute tw-top-[0rem] tw-left-[3.938rem] tw-w-[18.625rem] tw-h-[18.438rem]"
       />
       <Image
         src={PeachLeftSemiCircle}
         alt=""
-        className=" tw-absolute tw-bottom-[-8.5rem] tw-left-0  tw-w-[18.625rem] tw-h-[18.438rem]"
+        className=" tw-absolute tw-bottom-[-9.2rem] tw-left-0  tw-w-[18.625rem] tw-h-[18.438rem]"
       />
-      <Image
+      {/* <Image
         src={JoinCirclesRight}
         alt=""
         className=" tw-absolute tw-bottom-[-3.9rem] tw-right-0 tw-w-[15.313rem] tw-h-[15.125rem]"
-      />
+      /> */}
       <div className="tw-relative container tw-mx-auto">
-        <div className="tw-relative tw-flex tw-flex-col tw-items-center tw-justify-center tw-pt-[12.5rem]">
+        <div className="tw-relative tw-flex tw-flex-col tw-items-center tw-justify-center tw-pt-[8.43rem]">
           <h2 className="tw-font-playFair tw-text-gray80 tw-text-h2 tw-leading-[3.3rem]">
             <span className="tw-text-textPurple tw-font-playFairItalic">
               Join

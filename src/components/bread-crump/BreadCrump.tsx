@@ -45,10 +45,10 @@ const BreadCrump = ({
           href={linkTwo}
           className={cn(
             " tw-text-black tw-flex tw-gap-[0.5rem] tw-text-h9Copy5 tw-leading-[19.6px]",
-            { "!tw-text-gray50": textThree }
+            { "!tw-text-gray50 ": textThree }
           )}
         >
-          <p className={cn({ "tw-underline": textThree })}>{textTwo}</p>
+          <p className={cn({ "tw-underline tw-underline-offset-4": textThree })}>{textTwo}</p>
           {textThree && <p>&nbsp;/&nbsp;</p>}
         </Link>
       )}
@@ -62,7 +62,7 @@ const BreadCrump = ({
             }
           )}
         >
-          <p className={cn({ "tw-underline": textFour })}>{textThree}</p>
+          <p className={cn({ "tw-underline tw-underline-offset-4": textFour })}>{textThree}</p>
           {textFour && <p>&nbsp;/&nbsp;</p>}
         </Link>
       )}

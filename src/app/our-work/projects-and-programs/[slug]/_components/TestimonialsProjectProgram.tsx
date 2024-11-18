@@ -11,7 +11,7 @@ const testimonialsArray: any[] = [
     },
     p: {
       name: "0Pritihi Jain",
-      work: "Philanthrophy Partner, BLR, South",
+      work: "Rohini Nilekani Philanthropies",
       desc: "“I believe those who are already in philanthropy and enjoying it and making a difference have a responsibility to share their stories widely, and to be very transparent about their giving. By promoting such accountability, AIP is playing an essential role in building trust with the communities we serve.” ",
     },
   },
@@ -30,19 +30,22 @@ const testimonialsArray: any[] = [
 ];
 const TestimonialsProjectProgram = () => {
   return (
-   <div className="tw-w-full tw-relative">
-        <Image
-          src={PurpleBottomSvg}
-          alt="purple-curve"
-          className="tw-absolute tw-top-[-1rem] tw-right-0"
-        />
+    <div className="tw-w-full tw-relative">
+      <Image
+        src={PurpleBottomSvg}
+        alt="purple-curve"
+        className="tw-absolute tw-top-[-1rem] tw-right-0"
+      />
       <div className="tw-py-[7.53rem] tw-relative container tw-mx-auto">
         <h2 className="tw-font-playFair tw-text-gray80 tw-text-h2 tw-text-center">
-          Testimonials
+          <i className="tw-text-textPurple ">Gallery</i>&nbsp;Of Voices
         </h2>
+        <p className="tw-leading-[1.4rem] tw-text-center tw-pt-[1.25rem] tw-text-midGray">
+        Some words from the launch.
+        </p>
         <TestimonialSlick slickArray={testimonialsArray} />
       </div>
-   </div>
+    </div>
   );
 };
 

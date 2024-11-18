@@ -3,6 +3,9 @@ import PCardWithButton from "@/components/cards/pCards/PCardWithButton";
 import Image from "next/image";
 import Bg from "@public/svg/peach-bg-curve-founders.svg";
 import React from "react";
+import ACard from "@/components/cards/aCards/ACard";
+import SampleImage from "@public/images/sample.png";
+import PCard from "@/components/cards/pCards/PCard";
 
 const OurCoreFoundersContent = () => {
   return (
@@ -20,7 +23,6 @@ const OurCoreFoundersContent = () => {
       <div className="tw-pt-[3rem] container tw-mx-auto tw-relative">
         <div className="tw-flex tw-flex-col tw-items-start md:tw-items-center tw-justify-center ~tw-px-[1.25rem]/[20.938rem]">
           <h2 className="~tw-text-h4/h2 tw-text-center tw-text-gray80 tw-leading-[3.2rem] tw-font-playFair">
-            Our
             <span className="tw-text-textPurple tw-font-playFairItalic">
               &nbsp;Core-Founders
             </span>
@@ -34,12 +36,44 @@ const OurCoreFoundersContent = () => {
           </p>
         </div>
         <div className="sm:tw-flex-row tw-flex-col tw-flex ~tw-gap-[3.5rem]/[4.56rem] tw-pt-[5rem] tw-pr-12 ~tw-pl-12/[7.8rem] ">
-          <ACardWithButton />
-          <PCardWithButton />
+          <ACard
+            linkedin
+            nameClass=" tw-underline tw-decoration-[1px] tw-underline-offset-4 "
+            name="Ashish Dhawan"
+            desc="“I believe a lot more needs to be done particularly to encourage first-time givers. AIP aims to fill this gap and spur philanthropy in a very structured manner.’’"
+            work="The Convergence Foundation"
+            image="/images/sample.png"
+          />
+          <PCard
+            linkedin
+            nameClass=" tw-underline tw-decoration-[1px] tw-underline-offset-4 "
+            name="Ashish Dhawan"
+            desc="“I believe a lot more needs to be done particularly to encourage first-time givers. AIP aims to fill this gap and spur philanthropy in a very structured manner.’’"
+            work="The Convergence Foundation"
+            image="/images/sample.png"
+          />
+          {/* <ACardWithButton />
+          <PCardWithButton /> */}
         </div>
         <div className="sm:tw-flex-row tw-flex-col tw-flex ~tw-gap-[3.5rem]/[4.56rem] ~tw-pt-14/[5.25rem] tw-justify-end tw-pb-[7.37rem] tw-pl-12 ~tw-pr-12/[7.8rem]">
-          <ACardWithButton />
-          <PCardWithButton />
+          <ACard
+            linkedin
+            nameClass=" tw-underline tw-decoration-[1px] tw-underline-offset-4 "
+            name="Ashish Dhawan"
+            desc="“I believe a lot more needs to be done particularly to encourage first-time givers. AIP aims to fill this gap and spur philanthropy in a very structured manner.’’"
+            work="The Convergence Foundation"
+            image="/images/sample.png"
+          />
+          <PCard
+            linkedin
+            nameClass=" tw-underline tw-decoration-[1px] tw-underline-offset-4 "
+            name="Ashish Dhawan"
+            desc="“I believe a lot more needs to be done particularly to encourage first-time givers. AIP aims to fill this gap and spur philanthropy in a very structured manner.’’"
+            work="The Convergence Foundation"
+            image="/images/sample.png"
+          />
+          {/* <ACardWithButton />
+          <PCardWithButton /> */}
         </div>
       </div>
     </div>

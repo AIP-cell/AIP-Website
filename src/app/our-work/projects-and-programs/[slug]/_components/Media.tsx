@@ -4,6 +4,23 @@ import LeftSlickArrowSvg from "@/components/svg/LeftSlickArrowSvg";
 import RightSlickArrowSvg from "@/components/svg/RightSlickArrowSvg";
 import React from "react";
 
+const mediaArray = [
+  {
+    title: "Lorem ipsum dolor sit amet, ",
+    desc: "Unique Approaches Towards Solving India’s Development Challenges by identifying and learning from organisations with systems change.",
+    ddmmyy: "11 Jul 2024",
+  },
+  {
+    title: "Lorem ipsum dolor sit amet",
+    desc: "This report is the result of a collaborative effort between Accelerate Indian Philanthropy (AIP) and the Boston Consulting Group (BCG).",
+    ddmmyy: "11 Jul 2024",
+  },
+  {
+    title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Phasellus imperdiet, neque at consequat malesuada Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Phasellus imperdiet, neque at consequat",
+    ddmmyy: "11 Jul 2024",
+  },
+];
 const Media = () => {
   return (
     <div className="tw-pt-[7.53rem]">
@@ -28,9 +45,14 @@ const Media = () => {
           In the Media
         </div>
         <div className="tw-flex tw-gap-[4.5rem] tw-justify-center">
-          <MediaCard />
-          <MediaCard />
-          <MediaCard />
+          {mediaArray.map((media, i) => (
+            <MediaCard
+              key={i}
+              title={media.title}
+              desc={media.desc}
+              ddmmyy={media.ddmmyy}
+            />
+          ))}
         </div>
       </div>
     </div>

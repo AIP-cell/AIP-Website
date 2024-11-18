@@ -63,6 +63,7 @@ const Founder = () => {
         alt=""
         className="tw-absolute tw-inset-0 tw-w-full tw-top-[-13rem]"
       /> */}
+      
       <Image src={TopImage} alt="" className="tw-w-full " />
       <div className="tw-w-full tw-bg-founderGradient ~tw-h-[50rem]/[68rem] tw-relative tw-mt-[-1px]">
         <div className="tw-absolute tw-top-0 tw-w-full">
@@ -83,10 +84,10 @@ const Founder = () => {
                   <h3 className="~tw-text-h4/h2 tw-text-white/80 ~tw-leading-[2.6rem]/[3.3rem] tw-relative tw-font-playFair">
                     From our
                     <span className="tw-text-white tw-font-playFairItalic tw-block md:tw-inline-block">
-                      Core-Founders
+                      &nbsp;Core-Founders
                     </span>
                   </h3>
-                  <div className=" tw-flex lg:tw-hidden tw-gap-[1.25rem] tw-relative">
+                  <div className=" tw-flex tw-gap-[1.25rem] tw-relative">
                     <ButtonAnimation
                       onClick={previous}
                       className="  tw-text-darkPurple tw-leading-[22.4px] tw-font-inter tw-bg-white tw-rounded-tl-3xl tw-rounded-bl-3xl tw-rounded-tr-xl tw-rounded-br-xl tw-py-[1.15rem] tw-px-[0.92rem] tw-h-fit"

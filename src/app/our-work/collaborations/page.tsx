@@ -46,8 +46,9 @@ const page = () => {
           </div>
           <div className="tw-flex tw-pt-[2rem] tw-gap-[.75rem]">
             <p className="tw-py-3 tw-text-gray40 ">Filter by:</p>
-            <CustomSelect optionsArray={categoryData} />
-            <CustomSelect optionsArray={dateData} />
+            <CustomSelect optionsArray={["Type"]} ListboxButtonClassName="!tw-w-fit"/>
+            <CustomSelect optionsArray={["Partner Type"]} ListboxButtonClassName="!tw-w-fit"/>
+            <CustomSelect optionsArray={dateData} ListboxButtonClassName="!tw-w-fit"/>
           </div>
 
           <CollaborationGrid />

@@ -1,10 +1,10 @@
 import React from "react";
 import HeroSection from "./_components/HeroSection";
 import GiveSection from "./_components/GiveSection";
-import UpcomingEvents from "./_components/UpcomingEvents";
+import Spotlight from "./_components/Spotlight";
 import MakeDifference from "./_components/MakeDifference";
 import Members from "./_components/Members";
-import Story from "./_components/Story";
+import AipWay from "./_components/AipWay";
 import Founder from "./_components/Founder";
 import News from "./_components/News";
 import CustomHeaderSelect from "@/components/custom/CustomHeaderSelect";
@@ -15,10 +15,10 @@ const page = () => {
       {/* <ExampleListBox/> */}
       <HeroSection />
       <GiveSection />
-      <UpcomingEvents />
+      <Spotlight />
       <MakeDifference />
       <Members />
-      <Story />
+      <AipWay />
       <Founder />
       <News/>
     </div>

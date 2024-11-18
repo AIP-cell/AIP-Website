@@ -16,15 +16,15 @@ const ACardWithButton = ({ className }: { className?: string }) => {
       {/* <Image src={Src} alt="" /> */}
       <ASvg className="tw-w-full" src="/images/aSample.png" />
       <div className="tw-flex tw-flex-col tw-gap-[0.75rem]">
-        <div className="tw-flex tw-items-center tw-gap-[0.75rem]">
+        <div className="tw-flex tw-items-center ">
           <h3 className="~tw-text-h4a/h4 tw-leading-[2.6rem] tw-text-gray80 tw-font-playFair">
             Ashish Dhawan
           </h3>
-          <div className="tw-bg-darkPurple  tw-rounded-full">
+          {/* <div className="tw-bg-darkPurple  tw-rounded-full">
             <p className="tw-p-[0.25rem] ">
               <Image src={RightArrow} alt="" className="tw-size-[0.75rem] " />
             </p>
-          </div>
+          </div> */}
         </div>
         <h4 className="~tw-text-h6/h5 tw-font-playFair tw-text-gray50 tw-font-medium tw-italic">
           The Convergence Foundation

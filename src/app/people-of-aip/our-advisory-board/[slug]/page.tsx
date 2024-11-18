@@ -14,7 +14,7 @@ import ASvg from "@/components/svg/ASvg";
 import PSvg from "@/components/svg/PSvg";
 import InnerCollaborationsVideo from "@/app/our-work/collaborations/[slug]/_components/InnerCollaborationsVideo";
 
-const page = () => {
+const AdvisoryInnerPage = () => {
   return (
     <div className="tw-pt-[5rem]">
       <div className="tw-w-full tw-relative ">
@@ -28,7 +28,7 @@ const page = () => {
             <BreadCrump
               textOne="People of AIP"
               linkOne="/people-of-aip"
-              textTwo="Our Advisory Board"
+              textTwo="Advisory Board"
               linkTwo="/people-of-aip/our-advisory-board"
               textThree="slug"
               linkThree="/people-of-aip/our-advisory-board/slug"
@@ -78,7 +78,7 @@ const page = () => {
                     firm. Ashish graduated from Yale University and received his
                     MBA from Harvard Business School.
                   </p>
-                  <div className=" tw-pt-[2.5rem] md:tw-flex-row tw-flex-col tw-flex tw-gap-[1rem]">
+                  <div className=" tw-pt-[2.5rem]  tw-flex-col tw-flex tw-gap-[1rem]">
                     <div className="tw-flex tw-gap-[1rem]">
                       <ButtonAnimation className="tw-rounded-full tw-p-[0.875rem] tw-bg-bgGray5">
                         {/* <LinkedinSvg className="tw-size-[1.5rem]"/> */}
@@ -99,11 +99,20 @@ const page = () => {
                         theconvergencefoundation
                       </p>
                     </div>
+                    <div className="tw-flex tw-w-fit tw-gap-[0.98rem] tw-px-[1.25rem] tw-py-[0.76rem] tw-bg-bgGray5 tw-rounded-full">
+                      <Image src={LinkSvg} alt="" className="" />
+                      <p className="tw-text-gray80 tw-leading-[1.4rem]">
+                      abcdxyze_loremipsum
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
               <div className="tw-col-span-1 tw-relative">
                 <PSvg src="/images/sample.png" className="tw-relative tw-z-10" />
+                <p className="tw-text-h5 tw-pt-[2rem] tw-text-gray90 tw-font-playFair tw-font-medium tw-leading-[1.75rem]">
+                “I believe a lot more needs to be done particularly to encourage first-time givers. AIP aims to fill this gap and spur philanthropy in a very structured manner.”
+                </p>
               </div>
             </div>
             <div className="">
@@ -121,4 +130,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default AdvisoryInnerPage;

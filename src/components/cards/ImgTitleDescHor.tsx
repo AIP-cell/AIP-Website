@@ -12,7 +12,7 @@ const ImgTitleDescHor = ({ src, title, desc }: Props) => {
         <Image src={src} alt="" fill />
       </div>
       <div className="tw-flex tw-flex-col tw-gap-[0.75rem] tw-text-center md:tw-text-start">
-          <h3 className="~tw-text-h4a/h3 tw-text-gray80">{title}</h3>
+          <h3 className="~tw-text-h4a/h3 tw-text-gray80 tw-font-playFair">{title}</h3>
           <h4 className="~tw-text-h9Copy5/h9Copy4 tw-text-midGray">{desc}</h4>
       </div>
     </div>

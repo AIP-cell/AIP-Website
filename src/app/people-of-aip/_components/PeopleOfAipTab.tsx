@@ -3,6 +3,7 @@ import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 import OurCoreFoundersContent from "../founders/_components/OurCoreFoundersContent";
 import TeamAip from "../founders/_components/TeamAip";
 import Link from "next/link";
+import Experts from "../founders/_components/Experts";
 
 const PeopleOfAipTab = () => {
   return (
@@ -10,14 +11,14 @@ const PeopleOfAipTab = () => {
       <TabGroup className="tw-flex tw-w-full tw-flex-col tw-items-center tw-justify-center">
         <TabList className="tw-flex tw-bg-[#F0F0F2] tw-p-1 tw-rounded-full tw-w-fit">
           <Tab className="tw-px-[2.5rem] tw-py-[0.75rem] data-[selected]:tw-bg-darkPurple data-[selected]:tw-text-white data-[selected]:tw-rounded-full tw-text-h9Copy5 tw-leading-[1.22rem] tw-font-inter data-[selected]:tw-outline-none">
-            Our Core Founders
+            Core Founders
           </Tab>
           <Tab className="tw-px-[2.5rem] tw-py-[0.75rem] data-[selected]:tw-bg-darkPurple data-[selected]:tw-text-white data-[selected]:tw-rounded-full tw-text-h9Copy5 tw-leading-[1.22rem] tw-font-inter data-[selected]:tw-outline-none">
             Founders
           </Tab>
           <Tab className="tw-px-[2.5rem] tw-py-[0.75rem] data-[selected]:tw-bg-darkPurple data-[selected]:tw-text-white data-[selected]:tw-rounded-full tw-text-h9Copy5 tw-leading-[1.22rem] tw-font-inter data-[selected]:tw-outline-none">
             <Link href="/people-of-aip/our-advisory-board/slug">
-              Our Advisory Board
+              Advisory Board
             </Link>
           </Tab>
           <Tab className="tw-px-[2.5rem] tw-py-[0.75rem] data-[selected]:tw-bg-darkPurple data-[selected]:tw-text-white data-[selected]:tw-rounded-full tw-text-h9Copy5 tw-leading-[1.22rem] tw-font-inter data-[selected]:tw-outline-none">
@@ -36,7 +37,9 @@ const PeopleOfAipTab = () => {
           <TabPanel>
             <TeamAip />
           </TabPanel>
-          <TabPanel>Content 5</TabPanel>
+          <TabPanel>
+            <Experts />
+          </TabPanel>
         </TabPanels>
       </TabGroup>
     </div>

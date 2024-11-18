@@ -20,7 +20,7 @@ const ResourceCard = ({ src, title, desc, category }: Props) => {
           className="tw-object-cover tw-rounded-[1.25rem]"
         />
       </div>
-      <p className=" tw-w-full tw-text-h6M tw-text-gray80 tw-font-inter tw-font-semibold tw-leading-[1.575rem]">
+      <p className=" tw-w-full tw-text-h6M tw-text-gray80 tw-font-inter tw-font-semibold tw-leading-[1.575rem] tw-underline tw-underline-offset-4 tw-decoration-[1.5px]">
         {title}
       </p>
       <p className="tw-text-h9Copy5 tw-text-gray50 tw-font-inter tw-leading-[1.225rem]">
@@ -31,7 +31,7 @@ const ResourceCard = ({ src, title, desc, category }: Props) => {
         <p>11 Jul 2024</p>
         <p>{category}</p>
       </div>
-      <div className="tw-h-px tw-bg-footerGray tw-w-full"></div>
+      {/* <div className="tw-h-px tw-bg-footerGray tw-w-full"></div>
       <div className="tw-flex tw-justify-start tw-w-full tw-gap-[.75rem]">
         <div className="tw-group tw-text-darkPurple tw-bg-bgGray5 tw-w-[2.5rem] hover:tw-text-white  hover:tw-bg-darkPurple  tw-transition-all  tw-h-[2.5rem] tw-rounded-full tw-flex tw-items-center tw-justify-center tw-p-[.5rem]">
           <EyeSvg className="tw-size-[1.5rem]" />
@@ -40,7 +40,7 @@ const ResourceCard = ({ src, title, desc, category }: Props) => {
         <div className="tw-group tw-text-darkPurple hover:tw-text-white tw-bg-bgGray5 tw-w-[2.5rem]  hover:tw-bg-darkPurple  tw-transition-all  tw-h-[2.5rem] tw-rounded-full tw-flex tw-items-center tw-justify-center tw-p-[.5rem]">
           <DownloadFileSvg className="tw-size-[1.5rem]" />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

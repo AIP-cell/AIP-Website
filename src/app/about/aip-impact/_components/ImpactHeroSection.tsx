@@ -68,7 +68,7 @@ const ImpactHeroSection = () => {
               <h3 className=" tw-leading-[1.29rem] tw-font-inter tw-text-white/60 tw-font-semibold">
                 IMPACT BEGINS AT HOME
               </h3>
-              <h2 className="tw-pt-[1.25rem] tw-text-center ~tw-text-h4/h3 tw-leading-[52px] tw-font-playFair tw-text-white">
+              <h2 className="tw-pt-[1.25rem] tw-text-center ~tw-text-h4/h3 tw-leading-[3.25rem] tw-font-playFair tw-text-white">
                 India has made significant progress yet more needs to be done.
                 Philanthropy is clearly one of the means than can augment impact
                 and lead to transformational change. AIP believes strategic

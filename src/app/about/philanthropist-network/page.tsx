@@ -3,15 +3,22 @@ import FourPillars from "./_components/FourPillars";
 import JoinTheFlow from "./_components/JoinTheFlow";
 import CaseStudies from "../aip-impact/_components/CaseStudies";
 import PeopleWeWorkWith from "../aip-impact/_components/PeopleWeWorkWith";
-import CurvePurple from "@public/svg/purpleCurveCaseStudy.svg";
 import PhilanthropistHeroSection from "./_components/PhilanthropistHeroSection";
+import HelpingRivers from "./_components/HelpingRivers";
+import NetworkContactSection from "./_components/NetworkContactSection";
+import NetworkCaseStudies from "./_components/NetworkCaseStudies";
+
+
 const page = () => {
   return (
     <div className="~tw-pt-[8rem]/[5rem]">
       <PhilanthropistHeroSection />
-      <FourPillars />
+      {/* <FourPillars /> */}
+      <HelpingRivers/>
+      <NetworkContactSection/>
       <JoinTheFlow />
-      <CaseStudies bottomCaseStudyCurveSvg={CurvePurple} />
+      <NetworkCaseStudies/>
+      {/* <CaseStudies  bottomCaseStudyCurveSvg={CurvePurple} /> */}
       <PeopleWeWorkWith />
     </div>
   );

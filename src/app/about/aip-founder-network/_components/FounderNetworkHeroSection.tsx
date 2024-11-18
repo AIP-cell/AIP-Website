@@ -7,11 +7,11 @@ import React from "react";
 const FounderNetworkHeroSection = () => {
   return (
     <div className="tw-w-full  tw-relative">
-        <Image
-          src={PurpleWave}
-          alt=""
-          className="tw-absolute tw-top-0 tw-right-0"
-        />
+      <Image
+        src={PurpleWave}
+        alt=""
+        className="tw-absolute tw-top-0 tw-right-0"
+      />
       <div className="tw-relative container tw-mx-auto">
         <Image
           src={OvalPeach}
@@ -31,30 +31,19 @@ const FounderNetworkHeroSection = () => {
           <div className="tw-pt-[0.75rem] ">
             <div className=" tw-text-h4 tw-text-gray80 tw-leading-[2.6rem] tw-font-playFair">
               <p>AIP is by and for philanthropists - </p>
-              to{" "}
-              <span className="tw-text-textPurple tw-font-playFairItalic">
-                inspire, influence
-              </span>{" "}
-              and
-              <span className="tw-text-textPurple tw-font-playFairItalic">
-                &nbsp;inform
-              </span>{" "}
-              strategic giving.
+              to inspire, influence and inform strategic giving.
               <p> AIP’s Core Founders are Ashish and Manisha Dhawan</p>
               <p>(The Convergence Foundation), Rohini Nilekani </p>
               <p>(RohiniNilekani Philanthropies), Amit and Archana Chandra</p>
               (ATE Chandra Foundation) and Vishal Tulsyan.
             </div>
             <div className=" tw-text-h4 tw-text-gray80 tw-leading-[2.6rem] tw-font-playFair tw-pt-[3rem]">
-              They are joined by
-              <span className="tw-text-textPurple tw-font-playFairItalic">
-                ~30 Founders
-              </span>{" "}
-              who have committed to support AIP, help expand this movement, and
-              inspire others. The AIP umbrella has so far touched over 125
-              philanthropists, who are at different stages in their philanthropic
-              journey, yet are bound by a shared vision for meaningful
-              philanthropy that aids India’s transformation.
+              They are joined by ~30 Founders who have committed to support AIP,
+              help expand this movement, and inspire others. The AIP umbrella
+              has so far touched over 125 philanthropists, who are at different
+              stages in their philanthropic journey, yet are bound by a shared
+              vision for meaningful philanthropy that aids India’s
+              transformation.
             </div>
           </div>
         </div>

@@ -4,7 +4,8 @@ import React from "react";
 import JourneyHeroSection from "./_components/JourneyHeroSection";
 import OurValueSection from "./_components/OurValueSection";
 import ValueSlick from "../../../components/slick/ValueSlick";
-import Pillars from "./_components/Pillars";
+import ShapeTheFlow from "../our-approach/_components/ShapeTheFlow";
+import JourneySoFar from "./_components/JourneySoFar";
 const valueDescArray = [
   "1 believe in fostering an environment where every individual's voice is heard and respected, encouraging them to take ownership of their work, make independent decisions, and contribute to the organisation’s success.",
   "2 believe in fostering an environment where every individual's voice is heard and respected, encouraging them to take ownership of their work, make independent decisions, and contribute to the organisation’s success.",
@@ -15,9 +16,10 @@ const page = () => {
   return (
     <div className="tw-pt-[5rem]">
       <JourneyHeroSection />
+      <JourneySoFar/>
       <OurValueSection />
       <ValueSlick slickArray={valueDescArray} />
-      <Pillars />
+      {/* <Pillars /> */}
     </div>
   );
 };

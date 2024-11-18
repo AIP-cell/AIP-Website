@@ -18,7 +18,7 @@ const OvalPurple = ({
   sizeClass,
 }: Props) => {
   return (
-    <div className={` ${mainClass} `}>
+    <div className={` ${mainClass} tw-shrink-0`}>
       <div
         className={` ${sizeClass} tw-relative tw-shrink-0 tw-flex tw-flex-col tw-justify-center tw-items-center`}
       >

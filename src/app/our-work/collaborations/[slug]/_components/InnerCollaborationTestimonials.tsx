@@ -31,14 +31,20 @@ const testimonialsArray: any[] = [
 const InnerCollaborationTestimonials = () => {
   return (
     <div className="tw-relative tw-w-full">
-        <Image
-          src={PeachCurve}
-          alt="peach-curve-testimonial"
-          className="tw-absolute tw-top-0 tw-right-0"
-        />
+      <Image
+        src={PeachCurve}
+        alt="peach-curve-testimonial"
+        className="tw-absolute tw-top-0 tw-right-0"
+      />
       <div className="tw-py-[7.563rem] tw-relative container tw-mx-auto">
-        <p className="tw-text-center tw-font-playFair tw-pb-20 tw-leading-[3.3rem] tw-tracking-[-.04rem] tw-text-h2 tw-text-gray80">
-          Testimonials
+        <h2 className="tw-text-center tw-font-playFair tw-pb-[1.25rem] tw-leading-[3.3rem] tw-tracking-[-.04rem] tw-text-h2 tw-text-gray80">
+          <span className="tw-font-playFairItalic tw-text-textPurple">
+            Gallery&nbsp;
+          </span>
+          Of Voices
+        </h2>
+        <p className="tw-leading-[1.4rem] tw-text-midGray tw-text-center ">
+        Some words from the launch.
         </p>
         <TestimonialSlick slickArray={testimonialsArray} />
       </div>

@@ -20,28 +20,32 @@ const datas = [
     title: "ANNUAL REPORT 2023-2024 ",
   },
 ];
-
+const yearsArray = [
+  "2024-25",
+  "2023-24",
+  "2022-23",
+  "2021-22",
+  "2020-21",
+  "2019-20",
+  "2018-19",
+  "2017-18",
+  "2016-17",
+  "2015-16",
+];
 const FinancialTabs = () => {
   return (
     <>
       <FinancialSm />
       <TabGroup className="tw-hidden md:tw-flex tw-flex-col tw-justify-center tw-items-center">
         <TabList className="tw-flex tw-bg-[#F0F0F2]  tw-rounded-full tw-p-[.25rem]">
-          <Tab className="tw-px-[2.5rem] tw-py-[.75rem] data-[selected]:tw-bg-darkPurple data-[selected]:tw-text-white data-[selected]:tw-rounded-full tw-text-h9BodyCopy5 tw-leading-[1.22rem] tw-font-inter data-[selected]:tw-outline-none">
-            2024-25
-          </Tab>
-          <Tab className="tw-px-[2.5rem] tw-py-[.75rem] data-[selected]:tw-bg-darkPurple data-[selected]:tw-text-white data-[selected]:tw-rounded-full tw-text-h9BodyCopy5 tw-leading-[1.22rem] tw-font-inter data-[selected]:tw-outline-none">
-            2023-24
-          </Tab>
-          <Tab className="tw-px-[2.5rem] tw-py-[.75rem] data-[selected]:tw-bg-darkPurple data-[selected]:tw-text-white data-[selected]:tw-rounded-full tw-text-h9BodyCopy5 tw-leading-[1.22rem] tw-font-inter data-[selected]:tw-outline-none">
-            2022-23
-          </Tab>
-          <Tab className="tw-px-[2.5rem] tw-py-[.75rem] data-[selected]:tw-bg-darkPurple data-[selected]:tw-text-white data-[selected]:tw-rounded-full tw-text-h9BodyCopy5 tw-leading-[1.22rem] tw-font-inter data-[selected]:tw-outline-none">
-            2021-22
-          </Tab>
-          <Tab className="tw-px-[2.5rem] tw-py-[.75rem] data-[selected]:tw-bg-darkPurple data-[selected]:tw-text-white data-[selected]:tw-rounded-full tw-text-h9BodyCopy5 tw-leading-[1.22rem] tw-font-inter data-[selected]:tw-outline-none">
-            2020-21
-          </Tab>
+          {yearsArray.map((year, i) => (
+            <Tab
+              key={i}
+              className="tw-px-[1.394rem] tw-py-[.75rem] data-[selected]:tw-bg-darkPurple data-[selected]:tw-text-white data-[selected]:tw-rounded-full tw-text-h9BodyCopy5 tw-leading-[1.22rem] tw-font-inter data-[selected]:tw-outline-none"
+            >
+              {year}
+            </Tab>
+          ))}
         </TabList>
 
         <TabPanels className=" tw-w-full tw-pt-[5rem]">
@@ -53,7 +57,7 @@ const FinancialTabs = () => {
               {datas.map((item, i) => (
                 <div
                   key={i}
-                  className="tw-flex tw-justify-between tw-text-darkPurple tw-py-[2.063rem] tw-w-full tw-px-[1.25rem] tw-border-b-2 tw-border-footerGray "
+                  className="tw-flex tw-justify-between tw-text-textPurple tw-py-[2.063rem] tw-w-full tw-px-[1.25rem] tw-border-b-2 tw-border-footerGray "
                 >
                   <p className="tw-leading-[1.4rem] tw-text-gray80">
                     {item.title}

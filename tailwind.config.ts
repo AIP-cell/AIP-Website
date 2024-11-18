@@ -16,7 +16,7 @@ const config: Config = {
     }),
     extend: {
       backgroundImage: {
-        purpleToPink: "linear-gradient(to right, #E24BDE , #A17FF0)",
+        purpleToPink: "linear-gradient(to right, #A17FF0,#E24BDE)",
         purpleToBlue: "linear-gradient(to bottom, #91298C , #224193)",
         founderGradient: "linear-gradient(to bottom, #792e8e , #3a3b91)",
         toRightPurpleToBlue: "linear-gradient(to right, #91298C , #224193)",
@@ -25,6 +25,7 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
+        lightPeach:"#121314",
         fivePBackground:"#fcf6e4", 
         darkPurple: "#5E165B",
         bgLightPeach: "#FFFDF7",
@@ -37,6 +38,7 @@ const config: Config = {
         gray20: "#C0C3CC",
         gray40: "#81848F",
         gray80: "#323538",
+        gray90: "#222426",
         gray50: "#6A6D75",
         gray60: "#575A61",
         footerGray: "#DFE0E580",

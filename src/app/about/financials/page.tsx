@@ -24,10 +24,7 @@ const page = () => {
             />
             <div className="~tw-pb-0/[5rem]  ~tw-text-h4/h2 ~tw-leading-[2.6rem]/[3.3rem] tw-font-playFair">
               <p className=" tw-text-gray80">
-                Financial report of the
-                <span className=" tw-text-textPurple tw-font-playFairItalic tw-tracking-[-4%]">
-                  &nbsp;past financial years.
-                </span>
+                Financial Reports & Certificates
               </p>
             </div>
           </div>

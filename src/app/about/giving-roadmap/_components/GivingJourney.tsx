@@ -1,40 +1,79 @@
 import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
+import TitleDescCard from "@/components/cards/TitleDescCard";
+import DownloadFileSvg from "@/components/svg/DowloadFileSvg";
+import Image from "next/image";
+import PeachCurveBg from "@public/svg/about/giving-roadmap/givingRoadMapPeachCurveBg.svg";
+import PeachBigCircleBg from "@public/svg/about/giving-roadmap/givingRoadMapBigCircleBg.svg";
+import PeachSmallCircleBg from "@public/svg/about/giving-roadmap/givingRoadMapSmallCircleBg.svg";
 import React from "react";
-
-const JourneyArchetype = () => {
+const itemsArray = [
+  {
+    title: "Treasure",
+    desc: "How do you strategically allocate your financial resources to create the greatest impact?",
+  },
+  {
+    title: "Involvement",
+    desc: "How do you leverage your time, talent, and connections to amplify the change you wish to see?",
+  },
+  {
+    title: "Evangelisation",
+    desc: " How do you use your voice and influence to inspire others and advocate for meaningful causes?",
+  },
+];
+const GivingJourney = () => {
   return (
-    <div className="tw-flex tw-flex-col ~tw-px-5/[20.967rem] tw-text-center tw-pb-[6.125rem]">
-      <div className="~tw-space-y-[2rem]/[2.5rem]">
+    <div className="tw-flex tw-flex-col tw-text-center tw-pb-[12.5rem] tw-relative">
+      <Image
+        src={PeachCurveBg}
+        alt=""
+        className="tw-hidden lg:tw-block tw-absolute tw-z-[-1] tw-bottom-[7.6rem] tw-left-0"
+      />
+      <Image
+        src={PeachBigCircleBg}
+        alt=""
+        className="tw-hidden lg:tw-block tw-absolute tw-z-[-1] tw-bottom-[33.2rem] tw-right-0"
+      />
+      <Image
+        src={PeachSmallCircleBg}
+        alt=""
+        className="tw-hidden lg:tw-block tw-absolute tw-z-[-1] tw-bottom-[24.8rem] tw-right-[5.37rem]"
+      />
+      <div className="container tw-mx-auto tw-relative">
         <div className="tw-font-playFair ~tw-text-h4/h2 tw-text-gray80 ~tw-leading-[2.6rem]/[3.3rem]">
           Where are you in your
-          <p className="tw-font-playFairItalic tw-text-textPurple">
+          <h2 className="tw-font-playFairItalic tw-text-textPurple">
             Giving Journey?
-          </p>
+          </h2>
         </div>
 
-        <div className="~tw-leading-[1.225rem]/[1.4rem] tw-text-midGray  max-lg:~tw-px-[2.875rem]/0">
-          <p>We can organise philanthropic inputs intro three categories:</p>
-
-          <p className=" tw-pb-10">
-            Treasure, Involvement, and Evangelisation. Recognising the giving
-            journey of philanthropists is the first step to understanding your
-            current stage. Are you at a discovery stage? Are you giving for 4 -
-            5 years? Or are you thinking of it? Or are you looking to organize
-            and structure it?
-          </p>
-
-          <p>
-            Log In to answer a few questions and understand where you are in
-            your giving journey. Click below to begin.
-          </p>
+        <p className="~tw-leading-[1.225rem]/[1.4rem]  ~tw-px-5/[20.875rem] tw-text-midGray tw-pt-[2.5rem]">
+          Embark on a transformative journey with the TIE Model of Philanthropy.
+          At AIP, we categorise your philanthropic inputs into three impactful
+          areas:
+        </p>
+        <div className="tw-flex tw-gap-[2.5rem] tw-py-[3.5rem] tw-w-full tw-justify-center">
+          {itemsArray.map((items, i) => (
+            <TitleDescCard key={i} title={items.title} desc={items.desc} />
+          ))}
         </div>
-
-        <div>
+        <p className="~tw-leading-[1.225rem]/[1.4rem] tw-text-center ~tw-px-5/[20.875rem] tw-text-midGray  ">
+          Understanding where you stand is the first step towards a purposeful
+          journey in giving. Are you just starting to explore? Or are you
+          looking to organise and elevate your philanthropic efforts?
+        </p>
+        <p className="~tw-leading-[1.225rem]/[1.4rem] tw-text-center ~tw-px-5/[20.875rem] tw-text-midGray tw-pt-[1rem]">
+          Discover your unique path through our questionnaire. Download it here
+          to dive deeper into how AIP can support you in channelling your drive
+          for impact.
+        </p>
+        <div className="tw-pt-[2.5rem] tw-flex tw-w-full tw-justify-center">
           <ButtonAnimation
             type="submit"
-            className="tw-text-white hover:tw-text-darkPurple tw-leading-[1.225rem] hover:tw-bg-white tw-bg-darkPurple tw-px-[1.75rem] tw-py-[0.75rem] tw-rounded-[1.5rem] tw-cursor-pointer"
+            className="tw-text-white hover:tw-text-darkPurple tw-text-h9Copy5 tw-flex tw-gap-[0.5rem] tw-leading-[1.225rem] hover:tw-bg-white tw-bg-darkPurple tw-px-[1.75rem] tw-py-[0.75rem] tw-rounded-[1.5rem] tw-cursor-pointer"
           >
-            Discover Your Path
+            <p> Discover Your Path</p>
+
+            <DownloadFileSvg className="tw-size-[1.25rem]" />
           </ButtonAnimation>
         </div>
       </div>
@@ -42,4 +81,4 @@ const JourneyArchetype = () => {
   );
 };
 
-export default JourneyArchetype;
+export default GivingJourney;

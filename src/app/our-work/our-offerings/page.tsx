@@ -1,12 +1,12 @@
 import React from "react";
 import OurOfferingHeroSection from "./_components/OurOfferingHeroSection";
-import Offerings from "./_components/Offerings";
+import WeDo from "./_components/WeDo";
 
 const page = () => {
   return (
     <div className="~tw-pt-[8rem]/[5rem]">
       <OurOfferingHeroSection />
-      <Offerings />
+      <WeDo />
     </div>
   );
 };

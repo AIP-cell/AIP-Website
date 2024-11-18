@@ -7,8 +7,17 @@ type Props = {
   title: string;
   title2: string;
   desc: string;
+  titleClassName?: string;
+  title2ClassName?: string;
 };
-const PTeamCard = ({ linkedin, title, title2, desc }: Props) => {
+const PTeamCard = ({
+  linkedin,
+  title,
+  title2,
+  desc,
+  titleClassName,
+  title2ClassName,
+}: Props) => {
   return (
     <div className="~tw-w-[11rem]/[11.87rem] tw-relative">
       {/* <Image src={Src} alt="" className="tw-w-full" /> */}
@@ -21,10 +30,14 @@ const PTeamCard = ({ linkedin, title, title2, desc }: Props) => {
         />
       )}
       <div className="tw-flex tw-flex-col tw-gap-[0.5rem]">
-        <h3 className="~tw-text-h4a/h4 tw-leading-[2.6rem] tw-text-gray80 tw-font-playFair">
+        <h3
+          className={`~tw-text-h4a/h4 tw-leading-[2.6rem] tw-text-gray80 tw-font-playFair ${titleClassName}`}
+        >
           {title}
         </h3>
-        <h3 className="~tw-text-h4a/h4 tw-leading-[2.6rem] tw-text-gray80 tw-font-playFair">
+        <h3
+          className={`~tw-text-h4a/h4 tw-leading-[2.6rem] tw-text-gray80 tw-font-playFair ${title2ClassName}`}
+        >
           {title2}
         </h3>
         <p className="tw-font-playFairItalic ~tw-text-h6/h5 tw-text-gray40 tw-leading-[1.75rem]  ">

@@ -4,7 +4,7 @@ import cn from "@/utils/tailwind";
 import { ButtonAnimation } from "../animations/ButtonAnimation";
 type Props = {
   text1: string;
-  text2: string;
+  text2?: string;
   text3?: string;
   index: number;
 };
@@ -25,24 +25,24 @@ const OfferingCard = ({ text1, text2, text3, index }: Props) => {
         />
       </div>
       <div
-        className={cn("tw-col-span-3  tw-relative ", {
+        className={cn("tw-col-span-3  tw-relative  tw-h-full tw-flex tw-items-center", {
           "md:tw-order-1": index % 2 === 1,
         })}
       >
-        <p className="tw-leading-[1.4rem]  tw-text-gray80">{text1}</p>
-        <p className="tw-leading-[1.4rem] tw-text-gray80 tw-pt-[2rem]">
+        <p className="tw-leading-[1.4rem]  tw-text-midGray">{text1}</p>
+        {/* <p className="tw-leading-[1.4rem] tw-text-gray80 tw-pt-[2rem]">
           {text2}
         </p>
         {text3 && (
           <p className="tw-leading-[1.4rem] tw-text-gray80 tw-pt-[2rem]">
             {text3}
           </p>
-        )}
-        <div className=" tw-pt-[2.5rem]">
+        )} */}
+        {/* <div className=" tw-pt-[2.5rem]">
           <ButtonAnimation className="tw-border-2 hover:tw-text-white hover:tw-bg-darkPurple tw-bg-white tw-rounded-full tw-font-medium tw-border-darkPurple tw-text-darkPurple tw-py-[0.75rem] tw-px-[1.75rem]">
             Read More
           </ButtonAnimation>
-        </div>
+        </div> */}
       </div>
     </div>
   );
