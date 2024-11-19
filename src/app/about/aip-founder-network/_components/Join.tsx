@@ -7,28 +7,36 @@ import PeachMaskedSemiCircle from "@public/svg/about/aip-founder-network/semiMas
 import React from "react";
 import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 import ATeamCard from "@/components/cards/aCards/ATeamCard";
+import PTeamCard from "@/components/cards/pCards/PTeamCard";
 
 const joinArray = [
   {
     title1: "Aakash",
     title2: "Chaudhry",
-    desc: "Aakash Educational Services",
+    desc: "CEO",
+    email:"xyz@abcd.com"
   },
   {
     title1: "Ambarish",
     title2: "Raghuvanshi",
+    location: "West & International",
     desc: "Info Edge India",
+    email:"xyz@abcd.com"
   },
 
   {
     title1: "GV",
     title2: "Prasad",
+    location: "North & East",
     desc: "Dr. Reddy's Lab",
+    email:"xyz@abcd.com"
   },
   {
     title1: "Karishma",
     title2: "Shanghvi",
+    location: "South",
     desc: "Sun Pharma",
+    email:"xyz@abcd.com"
   },
 ];
 const Join = () => {
@@ -67,13 +75,31 @@ const Join = () => {
         </div>
         <div className="tw-flex tw-gap-[5.625rem] tw-w-full tw-justify-center tw-pt-[4rem]">
           {joinArray.map((join, i) => (
-            <ATeamCard
-              key={i}
-              title={join.title1}
-              title2={join.title2}
-              desc={join.desc}
-              linkedin={false}
-            />
+            <div key={i}>
+              {i % 2 == 0 ? (
+                <ATeamCard
+                  titleClassName="tw-underline tw-decoration-[1px] tw-underline-offset-4"
+                  title2ClassName="tw-underline tw-decoration-[1px] tw-underline-offset-4"
+                  location={join.location}
+                  email={join.email}
+                  title={join.title1}
+                  title2={join.title2}
+                  desc={join.desc}
+                  linkedin={false}
+                />
+              ) : (
+                <PTeamCard
+                  titleClassName="tw-underline tw-decoration-[1px] tw-underline-offset-4"
+                  title2ClassName="tw-underline tw-decoration-[1px] tw-underline-offset-4"
+                  location={join.location}
+                  email={join.email}
+                  title={join.title1}
+                  title2={join.title2}
+                  desc={join.desc}
+                  linkedin={false}
+                />
+              )}
+            </div>
           ))}
         </div>
       </div>

@@ -29,7 +29,7 @@ const itemsArray = [
 ];
 const NetworkContactSection = () => {
   return (
-    <div className="tw-flex tw-flex-col tw-items-center tw-pt-[6rem] tw-pb-[7.5rem] container tw-mx-auto">
+    <div className="tw-flex tw-flex-col tw-items-center tw-pt-[6rem] tw-pb-[1rem] container tw-mx-auto">
       <h2 className="tw-text-h2 tw-text-center tw-text-gray80 tw-font-playFair">
         Reason to
         <span className="tw-text-textPurple tw-font-playFairItalic">

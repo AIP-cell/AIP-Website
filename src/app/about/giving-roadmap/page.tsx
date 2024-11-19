@@ -40,7 +40,7 @@ const page = () => {
                 alt=""
                 className="tw-absolute ~tw-bottom-[4rem]/[3rem] ~tw-w-[10rem]/[11.875rem] ~tw-right-0/[7.8rem]"
               />
-              <p className="~tw-px-[1.25rem]/[7.813rem] ~tw-pt-[4.313rem]/[7.5rem] ~tw-pb-[15rem]/[19.5rem] ~tw-text-h4a/h3 tw-text-gray80 tw-font-playFair ~tw-leading-[2.113rem]/[2.6rem] ">
+              <p className="~tw-px-[1.25rem]/[7rem] ~tw-pt-[4.313rem]/[7.5rem] ~tw-pb-[15rem]/[19.5rem] ~tw-text-h4a/h3 tw-text-gray80 tw-font-playFair tw-tracking-[-0.5px] ~tw-leading-[2.113rem]/[2.6rem] ">
                 At AIP, we believe in the transformative power of philanthropy.
                 Philanthropists can make a difference. Philanthropists want to
                 make a difference, and philanthropists are the best at inspiring

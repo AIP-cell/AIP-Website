@@ -43,8 +43,9 @@ const OurValueSection = () => {
           <h3 className="~tw-text-h4/h2 tw-text-darkGray tw-font-playFair tw-leading-[52.8px]">
             Our <i className="tw-text-textPurple">Values</i>
           </h3>
-          <p className="~tw-pt-[0.5rem]/[1.25rem] ~tw-px-[4.1rem]/0 tw-text-center tw-text-midGray tw-font-inter ~tw-text-h9Copy5/h9Copy4 ~tw-leading-[1.4rem]/[1.225rem]">
-            The foundations that drive AIP to drive positive change
+          <p className="~tw-pt-[0.5rem]/[1.25rem] ~tw-px-[4.1rem]/[20.938rem] tw-text-center tw-text-midGray  tw-font-inter ~tw-text-h9Copy5/h9Copy4 ~tw-leading-[1.4rem]/[1.225rem]">
+          At AIP, our core values define who we are and guide every action we take. 
+          They are the foundation of our culture, shaping the way we work and the impact we seek to create.
           </p>
         </div>
         <div className="~tw-pt-[2.5rem]/[5rem] ~tw-px-0/[7.5rem] ">

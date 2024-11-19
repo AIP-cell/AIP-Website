@@ -63,7 +63,7 @@ const Founder = () => {
         alt=""
         className="tw-absolute tw-inset-0 tw-w-full tw-top-[-13rem]"
       /> */}
-      
+
       <Image src={TopImage} alt="" className="tw-w-full " />
       <div className="tw-w-full tw-bg-founderGradient ~tw-h-[50rem]/[68rem] tw-relative tw-mt-[-1px]">
         <div className="tw-absolute tw-top-0 tw-w-full">
@@ -113,6 +113,7 @@ const Founder = () => {
                       )}
                     >
                       <ACardWithPlaySign
+                        linkedin={true}
                         image={founderData.at(select).image}
                         desc={founderData.at(select).desc}
                         post={founderData.at(select).post}
@@ -139,12 +140,14 @@ const Founder = () => {
                 <div className="tw-hidden lg:tw-block tw-relative tw-pt-[3.43rem] ">
                   <div className="tw-flex tw-gap-[4.56rem]">
                     <ACardWithPlaySign
+                      linkedin
                       image="/images/aSample.png"
                       desc="“I believe a lot more needs to be done particularly to encourage first-time givers. AIP aims to fill this gap and spur philanthropy in a very structured manner.’’"
                       post="The Convergence Foundation"
                       name="Ashish Dhawan"
                     />
                     <PCardWithPlaySign
+                      linkedin
                       image="/images/pSample.png"
                       name="Rohini Nilekani"
                       post="Rohini Nilekani Philanthropies"
@@ -153,12 +156,14 @@ const Founder = () => {
                   </div>
                   <div className="tw-flex tw-justify-end tw-gap-[4.56rem] tw-pt-[3.5rem]">
                     <ACardWithPlaySign
+                      linkedin
                       image="/images/aSample.png"
                       name="Vishal Tulsyan"
                       post="Abhiyan Bharat Foundation India"
                       desc="Effective philanthropy is not just about the act of giving, but a commitment to social transformation. Like in businesses and in professional life, it is time that we think about philanthropy in terms of scale with a lasting and sustainable long term impact. AIP brings together a strong group of changemakers to enable this change in thought process."
                     />
                     <PCardWithPlaySign
+                      linkedin
                       image="/images/pSample.png"
                       name="Amit Chandra"
                       post="ATE Chandra Foundation"

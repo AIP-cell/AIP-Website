@@ -41,14 +41,14 @@ const FourPillars = () => {
               text1="Convening &"
               text2="Networking"
             />
-            <p className="tw-leading-[1.4rem] tw-text-h9Copy4">
+            <p className="tw-leading-[1.4rem] tw-text-h9Copy4 tw-text-midGray">
               By facilitating spaces for philanthropists to exchange
               motivations, ideas, and experiences, we create a community that
               inspires and influences strategic philanthropy.
             </p>
           </div>
           <div className="tw-flex tw-items-center tw-gap-[1rem] tw-pr-[8rem] tw-pl-[14.3rem]">
-            <p className="tw-leading-[1.4rem] tw-text-h9Copy4">
+            <p className="tw-leading-[1.4rem] tw-text-h9Copy4 tw-text-midGray">
               With our well-founded knowledge resources, we enable
               philanthropists to engage in shared learning, providing insights
               across sectors and highlighting effective giving practices.
@@ -69,14 +69,14 @@ const FourPillars = () => {
               text1="Bespoke"
               text2="Partnering"
             />
-            <p className="tw-leading-[1.4rem] tw-text-h9Copy4">
+            <p className="tw-leading-[1.4rem] tw-text-h9Copy4 tw-text-midGray">
               We collaborate with individual philanthropists and UHNIs to craft
               personalized giving plans and learning journeys tailored to their
               unique motivations.
             </p>
           </div>
           <div className="tw-flex tw-items-center tw-gap-[1rem] tw-pr-[8rem] tw-pl-[14.3rem]">
-            <p className="tw-leading-[1.4rem] tw-text-h9Copy4">
+            <p className="tw-leading-[1.4rem] tw-text-h9Copy4 tw-text-midGray">
               We champion a thriving philanthropic ecosystem, influencing the
               broader landscape to unlock catalytic funding and deepen the
               impact of philanthropy.

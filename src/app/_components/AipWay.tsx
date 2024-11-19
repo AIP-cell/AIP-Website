@@ -25,7 +25,7 @@ const AipWay = () => {
         textClass1="tw-text-h2 tw-leading-[3.3rem]   !tw-text-midGray !tw-font-playFair !text-center"
         sizeClass="~tw-size-[14.25rem]/[24.166rem]"
         text2="AIP Way"
-        textClass2=" tw-text-h2 tw-leading-[3.3rem] !tw-text-textPurple !tw-font-playFair"
+        textClass2=" tw-text-h2 tw-leading-[3.3rem] !tw-text-textPurple !tw-font-playFairItalic"
       />
       <div className="tw-absolute tw-bottom-[3.125rem] tw-right-[14.366rem]">
         <Image src={OvalPeachSvg} alt="" className="tw-size-[8.726rem]" />

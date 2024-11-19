@@ -15,7 +15,7 @@ const Members = () => {
       />
       <div className=" container tw-mx-auto ~tw-pt-[5rem]/[13.25rem]">
         <div className="tw-relative tw-flex tw-flex-col md:tw-flex-row tw-w-full tw-h-[120vh]  ~tw-gap-[2rem]/0">
-          <div className=" tw-w-full md:tw-w-[65%] ~tw-pl-[1.25rem]/[7.8rem] ~tw-pr-[1.25rem]/0">
+          <div className=" tw-w-full md:tw-w-[65%] ~tw-pl-[1.25rem]/[7rem] ~tw-pr-[1.25rem]/0">
             <h2 className="~tw-text-h4/h2  tw-font-playFair tw-text-gray50 ~tw-leading-[2.6rem]/[3.3rem]">
               Accelerate Indian
             </h2>
@@ -45,7 +45,7 @@ const Members = () => {
               textClass2="tw-text-h9Copy4"
               text1="4"
               text2="Core Founders"
-              mainClass=" tw-absolute ~tw-top-0/[-4rem] ~tw-left-0/[4.7rem] "
+              mainClass=" tw-absolute ~tw-top-0/[-4rem] ~tw-right-0/[11.862rem] "
             />
             <OvalPurple
               sizeClass="~tw-size-[13rem]/[17.3rem]"
@@ -53,7 +53,7 @@ const Members = () => {
               textClass2="tw-text-h9Copy4"
               text1="31"
               text2="Founders"
-              mainClass=" tw-absolute ~tw-top-[6.75rem]/[15.5rem] tw-right-0 md:tw-right-auto  md:tw-left-[10.25rem]"
+              mainClass=" tw-absolute ~tw-top-[6.75rem]/[15.5rem] tw-right-0 md:tw-right-auto  md:tw-right-[6.4rem] "
             />
             <OvalPurple
               sizeClass="~tw-size-[13rem]/[17.3rem]"

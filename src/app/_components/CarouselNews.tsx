@@ -43,7 +43,7 @@ const CarouselNews = () => {
   };
   return (
     <div className="tw-flex tw-flex-col tw-relative tw-items-center">
-      <div className="tw-absolute tw-top-[-15rem] tw-right-[7rem] tw-hidden   lg:tw-flex tw-justify-center tw-gap-[1.25rem] ">
+      <div className="tw-absolute tw-top-[-17rem] tw-right-[7rem] tw-hidden   lg:tw-flex tw-justify-center tw-gap-[1.25rem] ">
         <button
           onClick={previous}
           className="  tw-text-white tw-leading-[22.4px] tw-font-inter tw-bg-darkPurple tw-rounded-tl-3xl tw-rounded-bl-3xl tw-rounded-tr-xl tw-rounded-br-xl tw-py-[1.15rem] tw-px-[0.92rem]"

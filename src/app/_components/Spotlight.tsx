@@ -1,12 +1,12 @@
 import BgButton from "@/components/buttons/BgButton";
 import Image from "next/image";
-import ShapelessBrown from "../../../public/svg/shapelessBrown.svg";
-import Upcoming from '@public/images/upcoming.png'
+import ShapelessBrown from "@public/svg/shapelessBrown.svg";
+import Upcoming from "@public/images/upcoming.png";
 import React from "react";
 
 const Spotlight = () => {
   return (
-    <div className="tw-grid tw-grid-cols-2 tw-overflow-hidden container tw-mx-auto  ~tw-gap-[2rem]/0 ~tw-pt-[5rem]/[12.75rem] ~tw-pl-[1.2rem]/[7.8rem] ~tw-pr-[1.2rem]/[6.56rem]">
+    <div className="tw-grid tw-grid-cols-2  container tw-mx-auto  ~tw-gap-[2rem]/0 ~tw-pt-[5rem]/[12.75rem] ~tw-pl-[1.2rem]/[7.8rem] ~tw-pr-[1.2rem]/[6.56rem]">
       <div className=" md:tw-pr-[6rem] tw-col-span-2 lg:tw-col-span-1">
         <div className="tw-bg-purpleToPink tw-bg-clip-text ">
           <h3 className="tw-text-transparent ~tw-text-h9Copy5/h9Copy4 tw-font-inter tw-font-bold ~tw-leading-[1.2rem]/[1.4rem]">
@@ -33,14 +33,14 @@ const Spotlight = () => {
         </div>
       </div>
       <div className="tw-relative tw-col-span-2 lg:tw-col-span-1">
-        <div className="tw-relative tw-z-[10] tw-shrink-0  ~tw-h-[14rem]/[22.1rem] tw-rounded-2xl tw-overflow-hidden ">
-            <Image
-              src={Upcoming}
-              alt="upcoming-Image"
-              className="tw-object-cover tw-absolute tw-inset-0 tw-h-full tw-w-full"
-            />
+        <div className="tw-relative tw-z-[10] tw-shrink-0  ~tw-h-[14rem]/[22.1rem] tw-rounded-2xl tw-overflow-hidden">
+          <Image
+            src={Upcoming}
+            alt="upcoming-Image"
+            className="tw-object-cover tw-absolute tw-inset-0 tw-h-full tw-w-full"
+          />
         </div>
-        <div className="tw-absolute ~tw-bottom-[-1.5rem]/[0.5rem]  ~tw-right-[-1.6rem]/[-4.5rem] ~tw-size-[10.3rem]/[18.4rem]">
+        <div className="tw-absolute ~tw-bottom-[-1.5rem]/[-2.8rem]  ~tw-right-[-1.6rem]/[-4.5rem] ~tw-size-[10.3rem]/[18.4rem]">
           <Image src={ShapelessBrown} alt="" fill />
         </div>
       </div>

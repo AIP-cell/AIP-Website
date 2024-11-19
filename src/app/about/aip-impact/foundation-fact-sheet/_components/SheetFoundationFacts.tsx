@@ -8,7 +8,7 @@ import OvalPeachCount from "@/components/ovals/OvalPeachCount";
 type Props = {
   button?: string;
 };
-const FoundationFacts = ({ button }: Props) => {
+const SheetFoundationFacts = ({ button }: Props) => {
   return (
     <div className="tw-relative tw-w-full ~tw-pt-[5rem]/[16rem]">
       <Image
@@ -30,27 +30,28 @@ const FoundationFacts = ({ button }: Props) => {
             textClass1="tw-text-h3 tw-leading-[3.25rem]  tw-font-semibold !tw-text-black"
             sizeClass="~tw-size-[14.25rem]/[17.38rem]"
             text2="Events"
-            textClass2=" tw-leading-[1.4rem] "
+            textClass2=" tw-leading-[1.4rem] !tw-text-gray80"
           />
-          <OvalPurple
+          <OvalPeach
             mainClass="tw-absolute tw-flex tw-w-full tw-justify-center  tw-top-[8.8rem] tw-right-0 md:tw-right-auto"
             text1="4"
-            textClass1="tw-text-h3 tw-leading-[3.25rem] tw-font-semibold"
+            textClass1="tw-text-h3 tw-leading-[3.25rem] tw-font-semibold !tw-text-black"
             sizeClass="~tw-size-[14.25rem]/[17.38rem]"
-            text2="Core Founders"
-            textClass2=" tw-leading-[1.4rem] "
+            text2="Founders"
+            textClass2=" tw-leading-[1.4rem] !tw-text-gray80"
           />
+
           <OvalPeachCount
             mainClass="tw-absolute tw-top-[6.3rem] ~tw-right-0/[8rem]"
             countEnd={20}
             sizeClass="~tw-size-[14.25rem]/[17.38rem]"
             text2="Founders"
-            textClass2=" tw-leading-[1.4rem] !tw-text-black"
+            textClass2=" tw-leading-[1.4rem] "
           />
 
           <OvalPurple
-            mainClass="tw-absolute  tw-top-[19.75rem] tw-right-0 md:tw-right-auto md:tw-left-[7.18rem] "
-            text1="100"
+            mainClass="tw-absolute  tw-top-[21rem] tw-right-0 md:tw-right-auto md:tw-left-[16.24rem] "
+            text1="31"
             textClass1="tw-text-h3 tw-leading-[3.25rem] tw-font-semibold "
             sizeClass="~tw-size-[14.25rem]/[17.38rem]"
             text2="Network"
@@ -58,26 +59,16 @@ const FoundationFacts = ({ button }: Props) => {
             text3="Members"
             textClass3=" tw-leading-[1.4rem]"
           />
-          <OvalPeach
-            mainClass="tw-absolute tw-top-[26.688rem] tw-flex tw-w-full tw-justify-center tw-left-0 md:tw-left-auto md:tw-right-[3rem]"
+          <OvalPurple
+            mainClass="tw-absolute tw-top-[25rem] tw-flex   tw-left-0 md:tw-left-auto md:!tw-right-[21rem] "
             text1="3"
-            textClass1="tw-text-h3 tw-leading-[3.25rem] tw-font-semibold !tw-text-gray80"
+            textClass1="tw-text-h3 tw-leading-[3.25rem] tw-font-semibold "
             sizeClass="~tw-size-[14.25rem]/[17.38rem]"
             text2="Continents"
-            textClass2="tw-font-bold tw-text-h6Copy1 tw-leading-[2.1rem] tw-text-gray80 "
+            textClass2=" tw-font-bold tw-text-h6Copy1 tw-leading-[2.1rem]  "
             text3="Footprint"
-            textClass3=" tw-leading-[1.4rem] "
-            textParentClass="!tw-pt-0"
-          />
-          <OvalPurple
-            mainClass="tw-absolute  tw-top-[22.875rem] ~tw-right-0/[11.75rem]"
-            text1="7833"
-            textClass1="tw-text-h3 tw-leading-[3.25rem] tw-font-semibold"
-            sizeClass="~tw-size-[14.25rem]/[17.38rem]"
-            text2="Knowledge"
-            textClass2=" tw-leading-[1.4rem]"
-            text3="Products"
             textClass3=" tw-leading-[1.4rem]"
+            textParentClass="!tw-pt-0"
           />
         </div>
         {/* tw-pt-[47rem] */}
@@ -98,4 +89,4 @@ const FoundationFacts = ({ button }: Props) => {
   );
 };
 
-export default FoundationFacts;
+export default SheetFoundationFacts;

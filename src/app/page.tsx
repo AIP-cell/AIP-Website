@@ -12,7 +12,6 @@ import CustomHeaderSelect from "@/components/custom/CustomHeaderSelect";
 const page = () => {
   return (
     <div className="tw-bg-bgLightPeach tw-pt-[5rem] tw-overflow-hidden">
-      {/* <ExampleListBox/> */}
       <HeroSection />
       <GiveSection />
       <Spotlight />
