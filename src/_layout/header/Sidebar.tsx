@@ -42,8 +42,9 @@ const headerData = [
       //   option: "Products & Services",
       //   link: "/our-work/our-offerings",
       // },
-      { option: "Our Offerings", link: "/our-work/our-offerings" },
-      { option: "NPO Registry", link: "#" },
+      { option: "What We Do", link: "/our-work/what-we-do" },
+      { option: "NPO Registry", link: "/our-work/npo" },
+      { option: "Experts", link: "/our-work/experts" },
       {
         option: "Projects and Programs",
         link: "/our-work/projects-and-programs",
