@@ -13,28 +13,16 @@ const datas = [
   {
     title: "Program Manager ",
     desc: "Design, implement, and manage philanthropic programs, ensuring they meet their objectives and deliver measurable impact. Coordinate with stakeholders, and monitor progress.",
-  },
-  // {
-  //   title: "Manager ",
-  //   desc: "Oversee the daily operations of the philanthropic organization, ensuring efficient workflows and achieving strategic goals. Lead and mentor a team, and manage budgets.",
-  // },
-  // {
-  //   title: "Program Associate ",
-  //   desc: "Assist in the planning and execution of philanthropic programs, including data collection, analysis, and reporting. Provide administrative support, And coordinate events.",
-  // },
-  // {
-  //   title: "Operating Partner",
-  //   desc: "Support the organization's leadership by implementing strategic initiatives and operational improvements. Provide guidance on best practices, And monitor key performance indicators.",
-  // },
+  }
 ];
 
 const PositionsGrid = () => {
   return (
-    <div className="tw-relative">
+    <div className="tw-relative tw-pt-[3rem]">
       {datas.map((item, i) => (
         <div
           key={i}
-          className="tw-flex tw-justify-between tw-items-center tw-py-8  tw-border-b tw-border-gray10"
+          className="tw-flex tw-justify-between tw-gap-[5.4rem] tw-w-full  tw-py-8  tw-border-b tw-border-gray10"
         >
           <div className="">
             <p className="tw-font-playFair tw-text-h4 tw-text-gray80 tw-leading-[2.6rem]">
@@ -44,7 +32,7 @@ const PositionsGrid = () => {
               {item.desc}
             </p>
           </div>
-          <div className="tw-text-end tw-leading-[1.4rem] tw-font-inter tw-w-full">
+          <div className="tw-text-end tw-leading-[1.4rem] tw-font-inter tw-w-fit tw-flex tw-items-end tw-pb-4">
             <ButtonAnimation className="  ">
               <Link
                 href=""

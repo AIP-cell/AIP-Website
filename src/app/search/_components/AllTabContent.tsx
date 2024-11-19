@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import audio from "@public/images/audioSample.png";
+import audio from "@public/images/aSample.png";
 import cn from "@/utils/tailwind";
 import PlaySvg from "@/components/svg/PlaySvg";
 
@@ -36,6 +36,7 @@ const tabDatas = [
   },
   {
     title: "Amitabh Jaipuria",
+    image: "/images/aSample.png",
     desc: "an extremely versatile and experienced Organization and Business Leader with critical experiences across Business Sectors such as - Consumer Products, FMCG, ancillary Financial Services, Telecoms, Industrial and Commercial products, Agricultural products (Seeds and Biotech) as well as Business Services such as Sales Enablement, Audit and Assurance, Staffing, Facilities Management, Logistics, Training, Security, Etc.",
   },
   {
@@ -81,11 +82,12 @@ const AllTabContent = () => {
               )}
             >
               {content.image && (
-                <div className="tw-shrink-0">
+                <div className="tw-shrink-0 tw-relative tw-w-[3rem] tw-h-[4.3rem]">
                   <Image
-                    src={audio}
+                    src={content.image}
                     alt=""
-                    className="tw-w-[3rem] tw-h-[4.3rem]"
+                    className="tw-object-contain tw-w-full tw-h-full"
+                    fill
                   />
                 </div>
               )}
@@ -96,7 +98,7 @@ const AllTabContent = () => {
                   </div>
                 </div>
               )}
-              <p className="tw-leading-[1.4rem] tw-text-midGray  ">
+              <p className="tw-leading-[1.4rem] tw-text-midGray">
                 {content.desc}
               </p>
               {content.galleryImage && (

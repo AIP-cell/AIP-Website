@@ -31,9 +31,18 @@ const SearchTab = () => {
         </TabList>
         <div className="tw-flex tw-pt-[4rem] tw-gap-[0.75rem]">
           <p className="tw-py-3 tw-text-gray40 ">Filter by:</p>
-          <CustomSelect optionsArray={sectors} />
-          <CustomSelect optionsArray={dateData} />
-          <CustomSelect optionsArray={typeData} />
+          <CustomSelect
+            optionsArray={sectors}
+            ListboxButtonClassName="!tw-w-fit"
+          />
+          <CustomSelect
+            optionsArray={typeData}
+            ListboxButtonClassName="!tw-w-fit"
+          />
+          <CustomSelect
+            optionsArray={dateData}
+            ListboxButtonClassName="!tw-w-fit"
+          />
         </div>
         <TabPanels>
           <TabPanel>

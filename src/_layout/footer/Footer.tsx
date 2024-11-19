@@ -97,7 +97,6 @@ const Footer = () => {
               <p className=" tw-text-h9Copy5 tw-font-inter tw-text-white/60">
                 Phase III, New Delhi, India 110020
               </p>
-
               <ButtonAnimation>
                 <Link
                   href="mailto:info@indianphilanthropy.org"
@@ -107,7 +106,7 @@ const Footer = () => {
                 </Link>
               </ButtonAnimation>
               <p className="tw-pt-[1.75rem] tw-text-h9Copy5 tw-font-inter tw-text-white/60">
-                <span className="text-white"> CIN:</span> U85300DL202INPL384351
+                <span className="tw-text-white"> CIN:</span> U85300DL202INPL384351
               </p>
               <div className="tw-flex tw-gap-[1.25rem] tw-pt-[2rem]">
                 <ButtonAnimation className="tw-relative tw-size-[2.5rem]">
@@ -120,7 +119,7 @@ const Footer = () => {
                   <Image src={Youtube} alt="" />
                 </ButtonAnimation>
               </div>
-              <div className=" md:tw-basis-3/4 tw-flex tw-w-full md:tw-justify-end ~tw-pt-10/[2rem] max-md:tw-order-2">
+              <div className=" md:tw-basis-3/4 tw-flex tw-w-full md:tw-justify-start ~tw-pt-10/[2rem] max-md:tw-order-2">
                 <div className="tw-w-full md:~tw-w-[21rem]/[25rem] tw-h-[2.8rem] tw-bg-white tw-flex tw-rounded-full tw-relative tw-rounded-br-full   tw-items-center tw-justify-end">
                   <input
                     type="text"
@@ -142,7 +141,7 @@ const Footer = () => {
                 <Link href={""} className="tw-border-s tw-bottom-1 tw-ps-2">
                   Privacy Policy
                 </Link>
-                <p>Designed with ❤️ by Sane Difference</p>
+                <p className="tw-text-white/60">Designed with ❤ by Sane Difference</p>
               </div>
             </div>
             <div>
@@ -154,43 +153,43 @@ const Footer = () => {
                   href="/about/aip-journey"
                   className=" tw-text-h9Copy5 tw-font-inter tw-text-white/60"
                 >
-                  The AIP Journey
+                  <ButtonAnimation>The AIP Journey</ButtonAnimation>
                 </Link>
                 <Link
                   href="/about/our-approach"
                   className=" tw-text-h9Copy5 tw-font-inter tw-text-white/60"
                 >
-                  Our Approach
+                  <ButtonAnimation>Our Approach</ButtonAnimation>
                 </Link>
                 <Link
                   href="/about/aip-impact"
                   className=" tw-text-h9Copy5 tw-font-inter tw-text-white/60"
                 >
-                  AIP Impact
+                 <ButtonAnimation> AIP Impact</ButtonAnimation>
                 </Link>
                 <Link
                   href="/about/giving-roadmap"
                   className=" tw-text-h9Copy5 tw-font-inter tw-text-white/60"
                 >
-                  Giving Roadmap
+                  <ButtonAnimation>Giving Roadmap</ButtonAnimation>
                 </Link>
                 <Link
                   href="/about/financials"
                   className=" tw-text-h9Copy5 tw-font-inter tw-text-white/60"
                 >
-                  Financial Reports
+                  <ButtonAnimation>Financial Reports</ButtonAnimation>
                 </Link>
                 <Link
                   href="/about/aip-founder-network"
                   className=" tw-text-h9Copy5 tw-font-inter tw-text-white/60"
                 >
-                  AIP Founder Network
+                 <ButtonAnimation> AIP Founder Network</ButtonAnimation>
                 </Link>
                 <Link
                   href="/about/philanthropist-network"
                   className=" tw-text-h9Copy5 tw-font-inter tw-text-white/60"
                 >
-                  Philanthropist Network
+                  <ButtonAnimation>Philanthropist Network</ButtonAnimation>
                 </Link>
               </div>
             </div>
@@ -203,55 +202,55 @@ const Footer = () => {
                   href="/people-of-aip/founders"
                   className=" tw-text-h9Copy5 tw-font-inter tw-text-white/60"
                 >
-                  Core-Founders
+                  <ButtonAnimation>Core-Founders</ButtonAnimation>
                 </Link>
                 <Link
                   href="/people-of-aip/founders"
                   className=" tw-text-h9Copy5 tw-font-inter tw-text-white/60"
                 >
-                  Founders
+                  <ButtonAnimation>Founders</ButtonAnimation>
                 </Link>
                 <Link
                   href="/people-of-aip/our-advisory-board/inner"
                   className=" tw-text-h9Copy5 tw-font-inter tw-text-white/60"
                 >
-                  Advisory Board
+                  <ButtonAnimation>Advisory Board</ButtonAnimation>
                 </Link>
                 <Link
                   href="/people-of-aip/founders"
                   className=" tw-text-h9Copy5 tw-font-inter tw-text-white/60"
                 >
-                  Team AIP
+                  <ButtonAnimation>Team AIP</ButtonAnimation>
                 </Link>
               </div>
 
               <p className="tw-pt-[2.25rem] tw-text-h9Copy5 tw-font-inter tw-font-bold tw-text-white">
-                Products & Services
+              Our Work
               </p>
               <div className="tw-flex tw-flex-col tw-gap-4 tw-pt-[0.75rem]">
                 <Link
                   href="/products-and-services/our-offerings"
                   className=" tw-text-h9Copy5 tw-font-inter tw-text-white/60"
                 >
-                  Our Offerings
+                  <ButtonAnimation>Our Offerings</ButtonAnimation>
                 </Link>
                 <Link
                   href="#"
                   className=" tw-text-h9Copy5 tw-font-inter tw-text-white/60"
                 >
-                  NPO Registry
+                 <ButtonAnimation> NPO Registry</ButtonAnimation>
                 </Link>
                 <Link
                   href="/products-and-services/projects-and-programs"
                   className=" tw-text-h9Copy5 tw-font-inter tw-text-white/60"
                 >
-                  Projects and Programs
+                  <ButtonAnimation>Projects and Programs</ButtonAnimation>
                 </Link>
                 <Link
                   href="/products-and-services/collaborations"
                   className=" tw-text-h9Copy5 tw-font-inter tw-text-white/60"
                 >
-                  Collaborations
+                  <ButtonAnimation>Collaborations</ButtonAnimation>
                 </Link>
               </div>
             </div>
@@ -264,32 +263,32 @@ const Footer = () => {
                   href="/resource-center/aip-resources"
                   className=" tw-text-h9Copy5 tw-font-inter tw-text-white/60"
                 >
-                  AIP Resources
+                  <ButtonAnimation>AIP Resources</ButtonAnimation>
                 </Link>
                 <Link
                   href="/resource-center/curated-resources"
                   className=" tw-text-h9Copy5 tw-font-inter tw-text-white/60"
                 >
-                  Curated Resources
+                  <ButtonAnimation>Curated Resources</ButtonAnimation>
                 </Link>
               </div>
 
               <div className="tw-pt-[2.25rem] tw-text-h9Copy5 tw-font-inter tw-font-bold tw-text-white">
-                <Link href="/career">Career</Link>
+                <Link href="/career"><ButtonAnimation>Career</ButtonAnimation></Link>
               </div>
               <div className="tw-pt-[2.25rem] tw-text-h9Copy5 tw-font-inter tw-font-bold tw-text-white">
-                <Link href="/contact">Contact</Link>
+                <Link href="/contact"><ButtonAnimation>Contact</ButtonAnimation></Link>
               </div>
               <div className="tw-pt-[2.25rem] tw-text-h9Copy5 tw-font-inter tw-font-bold tw-text-white">
-                <Link href="/faq">FAQs</Link>
+                <Link href="/faq"><ButtonAnimation>FAQs</ButtonAnimation></Link>
               </div>
               <div className="tw-pt-[2.25rem] tw-text-h9Copy5 tw-font-inter tw-font-bold tw-text-white">
                 <Link href="/about/aip-impact/foundation-fact-sheet">
-                  Foundation Fact Sheet
+                  <ButtonAnimation>Foundation Fact Sheet</ButtonAnimation>
                 </Link>
               </div>
               <div className="tw-pt-[2.25rem] tw-text-h9Copy5 tw-font-inter tw-font-bold tw-text-white">
-                <Link href="#">Join our learning circle</Link>
+                <Link href="#"><ButtonAnimation>Join our learning circle</ButtonAnimation></Link>
               </div>
             </div>
           </div>

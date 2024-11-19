@@ -22,13 +22,16 @@ const datas = [
     category: "Field",
   },
 ];
-const Contribution = () => {
+const ExpertsShelves = () => {
   return (
-    <div className="tw-pt-[10rem] container tw-mx-auto tw-flex tw-flex-col tw-items-center">
-      <h2 className="tw-text-h2 tw-leading-[3.3rem] tw-pb-[5rem] tw-text-center tw-font-playFair tw-text-gray80">
-        Contribution
+    <div className="tw-pt-[12.5rem] container tw-mx-auto tw-flex tw-flex-col tw-items-center">
+      <h2 className="tw-text-h2 tw-leading-[3.3rem]  tw-text-center tw-font-playFair tw-text-gray80">
+        From Experts’ Shelves
       </h2>
-      <div className="tw-pt-[3.25rem] tw-pb-[7.5rem] tw-grid md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-[4.5rem] tw-px-[8.125rem]">
+      <p className="tw-text-midGray tw-leading-[1.4rem] tw-pt-[1.25rem] tw-text-center tw-pb-[5rem]">
+        A showcase of inspirational work done by collaborators in our network
+      </p>
+      <div className="  tw-grid md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-[4.5rem] tw-px-[8.125rem]">
         {datas.map((item, i) => (
           <ResourceCard
             key={i}
@@ -39,8 +42,11 @@ const Contribution = () => {
           />
         ))}
       </div>
+      <div className="tw-pt-[5rem] tw-pb-[7.5rem]">
+        <BgButton text="See All" className="tw-py-[0.75rem] tw-px-[1.75rem]" />
+      </div>
     </div>
   );
 };
 
-export default Contribution;
+export default ExpertsShelves;

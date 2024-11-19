@@ -13,6 +13,7 @@ import LinkedinSvg from "@/components/svg/LinkedinSvg";
 import ASvg from "@/components/svg/ASvg";
 import PSvg from "@/components/svg/PSvg";
 import InnerCollaborationsVideo from "@/app/our-work/collaborations/[slug]/_components/InnerCollaborationsVideo";
+import Contribution from "./_components/Contribution";
 
 const ExpertInnerPage = () => {
   return (
@@ -126,6 +127,7 @@ const ExpertInnerPage = () => {
         <div className="">
           <InnerCollaborationsVideo />
         </div>
+        <Contribution/>
       </div>
     </div>
   );

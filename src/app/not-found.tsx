@@ -2,6 +2,9 @@ import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 import LeftOPenSvg from "@/components/svg/LeftOpenSvg";
 import Link from "next/link";
 import React from "react";
+import ArrowDownSvg from "@public/svg/arrowDown.svg";
+import Image from "next/image";
+import ArrowSvg from "@/components/svg/ArrowSvg";
 
 const NotFound = () => {
   return (
@@ -13,9 +16,10 @@ const NotFound = () => {
         </span>
       </h1>
       <div className="tw-pt-[4.5rem] tw-flex tw-justify-center">
-        <ButtonAnimation className=" tw-py-[0.75rem] tw-px-[2rem]  tw-rounded-full tw-bg-darkPurple">
-          <Link href="/" className="tw-text-white tw-flex tw-gap-[0.5rem]">
-            <LeftOPenSvg className="tw-size-[1.25rem]" />
+        <ButtonAnimation className="  tw-py-[0.75rem] tw-px-[2rem]  tw-rounded-full tw-bg-darkPurple">
+          <Link href="/" className="tw-text-white tw-flex tw-items-center tw-gap-[0.5rem]">
+          {/* <Image src={ArrowDownSvg} alt="arrow down" className="tw-size-[1.25rem]"/> */}
+          <ArrowSvg className="tw-size-[1.25rem] tw-rotate-[180deg]"/>
             <p className=" tw-text-h9Copy5 tw-leading-[1.225rem]">Go Back</p>
           </Link>
         </ButtonAnimation>

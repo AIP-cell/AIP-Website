@@ -33,7 +33,7 @@ const OpenRules = () => {
         <div className="tw-pt-[2rem]">
           <Link
             className="tw-bg-darkPurple tw-px-7 tw-py-3 tw-flex tw-gap-2 tw-w-fit tw-rounded-3xl"
-            href="#"
+            href="/careers/all-positions"
           >
             <p className=" tw-font-inter tw-text-white tw-text-h9Copy5 tw-leading-[1.225rem]">
               See all open positions
