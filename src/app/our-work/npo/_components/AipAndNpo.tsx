@@ -39,28 +39,7 @@ const npos = [
     desc: "Engage with philanthropists interested in long-term partnerships that contribute to your organization’s sustainability and scalability.",
   },
 ];
-// const npos=[
-//   {
-//     src:"/svg/careers/career3.svg",
-//     title:"Heightened Visibility",
-//     desc:"Gain exposure to a network of UHNIs and philanthropists actively seeking credible and impactful organizations to support."
-//   },
-//   {
-//     src:"/svg/about/aip-journey/three-I-s/inspire.svg",
-//     title:"Partnership Opportunities",
-//     desc:"Increased chances to collaborate with philanthropists on projects and initiatives aligned with your organization’s mission."
-//   },
-//   {
-//     src:"/svg/about/aip-journey/three-I-s/inform.svg",
-//     title:"",
-//     desc:""
-//   },
-//   {
-//     src:"/svg/about/our-approach/purposeModel.svg",
-//     title:"",
-//     desc:""
-//   },
-// ]
+
 const AipAndNpo = () => {
   return (
     <div className="tw-pt-[6.688rem] tw-pb-[5rem] container tw-mx-auto">
