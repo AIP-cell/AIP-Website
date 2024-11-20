@@ -1,6 +1,7 @@
 import Image from "next/image";
 import SampleImage from "@public/images/sample.png";
 import React from "react";
+import Link from "next/link";
 
 const Gallery = () => {
   return (
@@ -46,13 +47,13 @@ const Gallery = () => {
             />
           </div>
         </div>
-        <div className="tw-pt-[2.5rem] tw-flex tw-justify-center">
+        <Link href="/ork-work/collaborations/" className="tw-pt-[2.5rem] tw-flex tw-justify-center">
             <button className="tw-rounded-full tw-border-2 tw-border-darkPurple hover:tw-text-white hover:tw-bg-darkPurple tw-text-darkPurple">
               <p className="tw-text-h9Copy5 tw-leading-[1.225rem] tw-font-medium tw-py-[0.75rem] tw-px-[1.75rem]">
                 View All Images
               </p>
             </button>
-        </div>
+        </Link>
       </div>
     </div>
   );

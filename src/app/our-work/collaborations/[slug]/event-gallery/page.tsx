@@ -38,7 +38,7 @@ const page = () => {
             India’s transformation.
           </p>
           <GalleryVideos />
-          <GalleryImages src="" desc="" ddmmyy="" />
+          <GalleryImages  />
         </div>
       </div>
     </div>
