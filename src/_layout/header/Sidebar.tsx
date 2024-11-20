@@ -31,7 +31,7 @@ const headerData = [
   {
     id: "people-of-aip",
     name: "People of AIP",
-    link: "/people-of-aip/founders",
+    link: "/people-of-aip/core-founders",
   },
   {
     width: " tw-w-[10.5rem] ",

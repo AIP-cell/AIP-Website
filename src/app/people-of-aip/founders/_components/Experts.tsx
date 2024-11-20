@@ -88,15 +88,12 @@ const Experts = () => {
         </div>
         <div className="~tw-pt-[4.83rem]/[7.875rem] tw-flex md:tw-block tw-flex-col tw-items-center ~tw-px-[1.25rem]/[7.8rem] tw-relative">
           <div className="tw-flex ~tw-gap-[1.25rem]/[5.6rem] ">
-            <Link href="/people-of-aip/experts/slug">
-              <ATeamCard
-                
-                title="Piyush"
-                title2="Doshi"
-                desc="Operating Partner"
-                linkedin={true}
-              />
-            </Link>
+            <ATeamCard
+              title="Piyush"
+              title2="Doshi"
+              desc="Operating Partner"
+              linkedin={true}
+            />
             <PTeamCard
               title="Amitabh"
               title2="Jaipuria"

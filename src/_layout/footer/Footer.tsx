@@ -199,7 +199,7 @@ const Footer = () => {
               </p>
               <div className="tw-flex tw-flex-col tw-gap-4 tw-pt-[0.75rem]">
                 <Link
-                  href="/people-of-aip/founders"
+                  href="/people-of-aip/core-founders"
                   className=" tw-text-h9Copy5 tw-font-inter tw-text-white/60"
                 >
                   <ButtonAnimation>Core-Founders</ButtonAnimation>
@@ -211,16 +211,22 @@ const Footer = () => {
                   <ButtonAnimation>Founders</ButtonAnimation>
                 </Link>
                 <Link
-                  href="/people-of-aip/our-advisory-board/inner"
+                  href="/people-of-aip/our-advisory-board/slug"
                   className=" tw-text-h9Copy5 tw-font-inter tw-text-white/60"
                 >
                   <ButtonAnimation>Advisory Board</ButtonAnimation>
                 </Link>
                 <Link
-                  href="/people-of-aip/founders"
+                  href="/people-of-aip/team-AIP"
                   className=" tw-text-h9Copy5 tw-font-inter tw-text-white/60"
                 >
                   <ButtonAnimation>Team AIP</ButtonAnimation>
+                </Link>
+                <Link
+                  href="/people-of-aip/experts"
+                  className=" tw-text-h9Copy5 tw-font-inter tw-text-white/60"
+                >
+                  <ButtonAnimation>Experts</ButtonAnimation>
                 </Link>
               </div>
 
@@ -229,25 +235,25 @@ const Footer = () => {
               </p>
               <div className="tw-flex tw-flex-col tw-gap-4 tw-pt-[0.75rem]">
                 <Link
-                  href="/products-and-services/our-offerings"
+                  href="/our-work/what-we-do"
                   className=" tw-text-h9Copy5 tw-font-inter tw-text-white/60"
                 >
-                  <ButtonAnimation>Our Offerings</ButtonAnimation>
+                  <ButtonAnimation>What We Do</ButtonAnimation>
                 </Link>
                 <Link
-                  href="#"
+                  href="/our-work/npo"
                   className=" tw-text-h9Copy5 tw-font-inter tw-text-white/60"
                 >
                  <ButtonAnimation> NPO Registry</ButtonAnimation>
                 </Link>
                 <Link
-                  href="/products-and-services/projects-and-programs"
+                  href="/our-work/projects-and-programs"
                   className=" tw-text-h9Copy5 tw-font-inter tw-text-white/60"
                 >
                   <ButtonAnimation>Projects and Programs</ButtonAnimation>
                 </Link>
                 <Link
-                  href="/products-and-services/collaborations"
+                  href="/our-work/collaborations"
                   className=" tw-text-h9Copy5 tw-font-inter tw-text-white/60"
                 >
                   <ButtonAnimation>Collaborations</ButtonAnimation>
@@ -288,7 +294,7 @@ const Footer = () => {
                 </Link>
               </div>
               <div className="tw-pt-[2.25rem] tw-text-h9Copy5 tw-font-inter tw-font-bold tw-text-white">
-                <Link href="#"><ButtonAnimation>Join our learning circle</ButtonAnimation></Link>
+                <Link href="/join-our-learning-circle"><ButtonAnimation>Join our learning circle</ButtonAnimation></Link>
               </div>
             </div>
           </div>

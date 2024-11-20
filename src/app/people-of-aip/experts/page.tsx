@@ -1,9 +1,8 @@
-import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 import PeopleOfAipTab from "../_components/PeopleOfAipTab";
-import BreadCrump from "@/components/bread-crump/BreadCrump";
 import PeopleOfAipSm from "../_components/PeopleOfAipSm";
+import BreadCrump from "@/components/bread-crump/BreadCrump";
+
 const page = () => {
   return (
     <div className="tw-pt-[5rem] tw-overflow-hidden">
@@ -11,11 +10,11 @@ const page = () => {
         <BreadCrump
           textOne="People of AIP"
           linkOne="/people-of-aip"
-          textTwo="Founders"
-          linkTwo="/people-of-aip/Founders"
+          textTwo="Experts"
+          linkTwo="/people-of-aip/experts"
         />
       </div>
-      <PeopleOfAipTab tabSelect="founders" />
+      <PeopleOfAipTab tabSelect="experts" />
       <PeopleOfAipSm />
     </div>
   );
