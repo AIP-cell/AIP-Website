@@ -21,6 +21,7 @@ const CustomHeaderSelect = ({ items }: Props) => {
   // const [isPathname, setIsPathname] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
+  console.log("pathname:::", pathname);
   let isPathname = "";
   if (pathname.startsWith("/about")) {
     isPathname = "about";
@@ -59,7 +60,6 @@ const CustomHeaderSelect = ({ items }: Props) => {
                 )}
               >
                 {items.label}
-                {/* {selected} */}
               </p>
               <DownTagSvg className="~tw-w-[1.25rem]/[0.6rem] ~tw-h-[1.25rem]/[0.4rem]" />
             </div>
@@ -83,7 +83,12 @@ const CustomHeaderSelect = ({ items }: Props) => {
               value={items.option}
               className="data-[focus]:bg-blue-100 tw-text-white tw-cursor-pointer"
             >
-              <ButtonAnimation className="tw-w-full tw-rounded-2xl hover:tw-bg-[#2B092A4D] tw-flex">
+              <ButtonAnimation
+                className={cn(
+                  "tw-w-full tw-rounded-2xl hover:tw-bg-[#2B092A4D] tw-flex",
+                  { "!tw-bg-[#2B092A4D]": pathname === items.link }
+                )}
+              >
                 <div
                   onClick={() => {
                     router.push(`${items.link}`);
@@ -92,7 +97,10 @@ const CustomHeaderSelect = ({ items }: Props) => {
                   //   setIsOpen(!isOpen);
                   // }}
                   // href={items?.link}
-                  className="hover:tw-font-playFairItalic tw-text-left tw-pl-[1.25rem]  tw-transition-all tw-duration-150 tw-py-[0.8rem] tw-w-full"
+                  className={cn(
+                    "hover:tw-font-playFairItalic tw-text-left tw-pl-[1.25rem] tw-transition-all tw-duration-150 tw-py-[0.8rem] tw-w-full",
+                    { "!tw-font-playFairItalic": pathname === items.link }
+                  )}
                 >
                   {items.option}
                 </div>
