@@ -5,7 +5,6 @@ type Props = {
   className?: string;
 };
 const ASvg = ({ src, ...props }: Props) => {
-  // console.log("props::", props);
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

@@ -27,7 +27,7 @@ const CarouselNews = () => {
       const card = carouselRef.current.querySelector("div");
       if (card) {
         const cardWidth = card.offsetWidth;
-        console.log("cardWidth::", cardWidth);
+        // console.log("cardWidth::", cardWidth);
         carouselRef.current.scrollBy({ left: -cardWidth, behavior: "smooth" });
       }
     }

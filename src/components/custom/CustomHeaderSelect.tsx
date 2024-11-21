@@ -21,7 +21,6 @@ const CustomHeaderSelect = ({ items }: Props) => {
   // const [isPathname, setIsPathname] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
-  console.log("pathname:::", pathname);
   let isPathname = "";
   if (pathname.startsWith("/about")) {
     isPathname = "about";

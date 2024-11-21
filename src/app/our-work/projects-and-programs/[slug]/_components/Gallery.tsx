@@ -50,7 +50,7 @@ const Gallery = ({galleryLink}:Props) => {
             />
           </div>
         </div>
-        <Link href={galleryLink} className="tw-pt-[2.5rem] tw-flex tw-justify-center">
+        <Link href={galleryLink || ""} className="tw-pt-[2.5rem] tw-flex tw-justify-center">
             <button className="tw-rounded-full tw-border-2 tw-border-darkPurple hover:tw-text-white hover:tw-bg-darkPurple tw-text-darkPurple">
               <p className="tw-text-h9Copy5 tw-leading-[1.225rem] tw-font-medium tw-py-[0.75rem] tw-px-[1.75rem]">
                 View All Images
