@@ -53,7 +53,7 @@ const page = () => {
       </div>
       <InnerCollaborationsVideo />
       <div className="container tw-mx-auto">
-        <Gallery />
+        <Gallery galleryLink="/our-work/collaborations/slug/event-gallery"/>
       </div>
       <Media />
       <InnerCollaborationTestimonials />

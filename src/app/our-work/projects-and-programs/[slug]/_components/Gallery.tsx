@@ -3,7 +3,10 @@ import SampleImage from "@public/images/sample.png";
 import React from "react";
 import Link from "next/link";
 
-const Gallery = () => {
+type Props={
+  galleryLink?:string
+} 
+const Gallery = ({galleryLink}:Props) => {
   return (
     <div className="tw-relative ">
       <div className="tw-pt-[12.5rem] container tw-mx-auto tw-px-[7.8rem]">
@@ -47,7 +50,7 @@ const Gallery = () => {
             />
           </div>
         </div>
-        <Link href="/ork-work/collaborations/" className="tw-pt-[2.5rem] tw-flex tw-justify-center">
+        <Link href={galleryLink} className="tw-pt-[2.5rem] tw-flex tw-justify-center">
             <button className="tw-rounded-full tw-border-2 tw-border-darkPurple hover:tw-text-white hover:tw-bg-darkPurple tw-text-darkPurple">
               <p className="tw-text-h9Copy5 tw-leading-[1.225rem] tw-font-medium tw-py-[0.75rem] tw-px-[1.75rem]">
                 View All Images

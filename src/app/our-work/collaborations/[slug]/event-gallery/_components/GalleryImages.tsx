@@ -9,6 +9,26 @@ const ImageArray = [
     desc: "Amitabh at Systemic Impact Exemplars launch",
     ddmmyy: "11 Jul 2024",
   },
+  {
+    src: "/images/galleryVideoThumbnail.png",
+    desc: "Amitabh at Systemic Impact Exemplars launch",
+    ddmmyy: "11 Jul 2024",
+  },
+  {
+    src: "/images/galleryVideoThumbnail.png",
+    desc: "Amitabh at Systemic Impact Exemplars launch",
+    ddmmyy: "11 Jul 2024",
+  },
+  {
+    src: "/images/galleryVideoThumbnail.png",
+    desc: "Amitabh at Systemic Impact Exemplars launch",
+    ddmmyy: "11 Jul 2024",
+  },
+  {
+    src: "/images/galleryVideoThumbnail.png",
+    desc: "Amitabh at Systemic Impact Exemplars launch",
+    ddmmyy: "11 Jul 2024",
+  },
 ];
 const GalleryImages = () => {
   return (
@@ -16,7 +36,7 @@ const GalleryImages = () => {
       <h2 className="tw-text-h2 tw-text-gray80 tw-leading-[3.3rem] tw-font-playFair !tw-text-center tw-w-full tw-pb-[5rem]">
         Images
       </h2>
-      <div className="tw-relative tw-w-full tw-flex tw-items-center tw-justify-center">
+      <div className="tw-relative tw-w-full tw-flex tw-flex-col tw-items-center tw-justify-center">
         <button className=" tw-absolute tw-left-0 tw-text-white tw-leading-[22.4px] tw-font-inter tw-bg-darkPurple tw-rounded-tl-3xl tw-rounded-bl-3xl tw-rounded-tr-xl tw-rounded-br-xl tw-py-[1.15rem] tw-px-[0.92rem]">
           <LeftSlickArrowSvg className="tw-w-[1rem] tw-h-[0.57rem]" />
         </button>
@@ -40,6 +60,16 @@ const GalleryImages = () => {
               {ImageArray.at(0)!.ddmmyy}
             </p>
           </div>
+        </div>
+        <div className="tw-flex tw-gap-[1.25rem] tw-pt-[1.761rem] tw-pb-[9.519rem] tw-justify-center tw-items-center">
+          {ImageArray.map((items, i) => (
+            <div
+              key={i}
+              className="tw-relative tw-size-[11.875rem] tw-rounded-xl tw-overflow-hidden"
+            >
+              <Image src={items.src} alt="" fill className="tw-object-cover " />
+            </div>
+          ))}
         </div>
       </div>
     </div>
