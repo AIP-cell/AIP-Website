@@ -8,10 +8,10 @@ import CustomSelect from "@/components/custom/CustomSelect";
 import ResourceCard from "@/components/cards/ResourceCard";
 const resourcesArray = [
   "Featured",
-  "Philanthropists",
-  " Partners",
   "Experts",
+  "Philanthropists",
   " NPO",
+  " Partners",
   " World of Philanthropy",
 ];
 const datas = [
@@ -79,6 +79,7 @@ const CuratedResourcesPage = () => {
             resourcesArray={resourcesArray}
           />
           <TabPanels className="">
+            <TabPanel>Content 1</TabPanel>
             <TabPanel>
               <div className="tw-flex tw-pt-[2rem] tw-gap-[.75rem]">
                 <p className="tw-py-3 tw-text-gray40 ">Filter by:</p>
@@ -107,17 +108,17 @@ const CuratedResourcesPage = () => {
               </div>
               <div className="tw-pt-[3.25rem] tw-pb-[7.5rem] tw-grid md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-[4.5rem]">
                 {datas.map((item, i) => (
-                  <ResourceCard
-                    key={i}
-                    src={item.src}
-                    title={item.title}
-                    desc={item.desc}
-                    category={item.category}
-                  />
+                  <Link key={i} href="/resource-center/curated-resources/experts/slug">
+                    <ResourceCard
+                      src={item.src}
+                      title={item.title}
+                      desc={item.desc}
+                      category={item.category}
+                    />
+                  </Link>
                 ))}
               </div>
             </TabPanel>
-            <TabPanel>Content 2</TabPanel>
             <TabPanel>Content 3</TabPanel>
             <TabPanel>
               <div className="tw-flex tw-pt-[2rem] tw-gap-[.75rem]">

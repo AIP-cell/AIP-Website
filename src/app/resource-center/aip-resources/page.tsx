@@ -56,7 +56,7 @@ const datas = [
 const AipResourcesPage = () => {
   return (
     <div className="tw-pt-[5rem]">
-      <div className="container tw-mx-auto tw-relative ~tw-px-5/[7.8rem]">
+      <div className="container tw-mx-auto tw-relative ~tw-px-5/[7.5rem]">
         <div className="~tw-px-5/tw-flex ~tw-pt-0/[1.25rem] tw-gap-[.75rem][7.8rem]">
           <BreadCrump
             textOne="Resource Center"
@@ -74,19 +74,21 @@ const AipResourcesPage = () => {
         </div>
         <ResourcesSm />
         <TabGroup className="md:tw-flex tw-hidden tw-flex-col tw-justify-center ">
-          <ResourcesTabs resourcesArray={resourcesArray} />
+          <ResourcesTabs
+            resourcesArray={resourcesArray}
+            textClassName=" !tw-px-0 "
+            listClassName="!tw-w-full"
+          />
           <TabPanels className="">
             <TabPanel></TabPanel>
             <TabPanel>
               <div className="tw-flex tw-pt-[2rem] tw-gap-[.75rem]">
                 <p className="tw-py-3 tw-text-gray40 ">Filter by:</p>
-
                 <CustomSelect
                   optionsArray={["Domain"]}
                   ListboxButtonClassName="!tw-w-fit"
                   selectedClassName="!tw-w-fit"
                 />
-
                 <CustomSelect
                   optionsArray={["Type of Content"]}
                   ListboxButtonClassName="!tw-w-fit"
