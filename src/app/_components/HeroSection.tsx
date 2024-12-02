@@ -17,7 +17,7 @@ const HeroSection = () => {
           <Image src={OvalPeach} alt="" className="tw-size-[11.875rem]" />
         </div>
         <div className="tw-flex tw-flex-col lg:tw-flex-row ~tw-gap-[3.25rem]/[1rem] tw-items-center  ~tw-pt-[2.5rem]/[5.56rem] ~tw-pl-[1rem]/[7.8rem] ~tw-pr-[1rem]/[5rem] tw-relative">
-          <div className="tw-relative tw-tracking-[-1px] tw-shrink-0 tw-w-auto lg:tw-w-[38.125rem] tw-z-[1000] ~tw-text-h4/h1 tw-font-playFair ~tw-leading-[2.6rem]/[3.7rem]  ">
+          <div className="tw-relative tw-tracking-[-1px] tw-shrink-0 tw-w-auto lg:tw-w-[38.125rem] tw-z-[1000] ~tw-text-h4/h1 tw-font-playFair ~tw-leading-[2.6rem]/[3.7rem] tw-px-[0.6rem] md:tw-px-0  tw-text-gray80">
             AIP is a peer network that
             <span className=" tw-font-playFairItalic tw-text-textPurple">
               &nbsp;channels the flow&nbsp;
@@ -30,7 +30,7 @@ const HeroSection = () => {
           <Image
             src={SmHeroBg}
             alt="sm-hero-bg"
-            className="tw-block lg:tw-hidden tw-absolute tw-bottom-0  tw-w-full tw-object-cover"
+            className="tw-block lg:tw-hidden tw-absolute ~/lg:~tw-bottom-0/[-15rem]  tw-w-[100rem] tw-inset-x-0 tw-object-cover"
           />
           <div className="tw-relative ~tw-w-[19rem]/[29.6rem] ~tw-h-[18rem]/[27.8rem] tw-shrink-0">
             <div className="tw-absolute tw-inset-0 tw-z-10">

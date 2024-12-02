@@ -137,6 +137,19 @@ const Founder = () => {
                     </div>
                   </>
                 </div>
+                <div className="md:tw-hidden tw-flex tw-justify-center tw-w-full  tw-pt-[2.5rem]">
+                  <div className=" tw-w-[4.5rem] tw-flex tw-gap-[0.5rem] ">
+                    {founderData.map((items: any, index: number) => (
+                      <div
+                        key={index}
+                        className={cn(
+                          " tw-rounded-full tw-h-[0.5rem] tw-bg-[#E1CCED80] tw-basis-1/5",
+                          { "tw-basis-2/4 tw-bg-[#E1CCED]": index === select }
+                        )}
+                      ></div>
+                    ))}
+                  </div>
+                </div>
                 <div className="tw-hidden lg:tw-block tw-relative tw-pt-[3.43rem] ">
                   <div className="tw-flex tw-gap-[4.56rem]">
                     <ACardWithPlaySign

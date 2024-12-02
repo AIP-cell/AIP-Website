@@ -11,11 +11,11 @@ const Members = () => {
       <Image
         src={Bg}
         alt=""
-        className="tw-hidden lg:tw-block tw-object-cover tw-absolute tw-w-full tw-bottom-[-10.5rem]"
+        className="tw-hidden md:tw-block tw-object-cover tw-absolute tw-w-full ~md:~tw-bottom-[0rem]/[-10.5rem]"
       />
       <div className=" container tw-mx-auto ~tw-pt-[5rem]/[13.25rem]">
-        <div className="tw-relative tw-flex tw-flex-col md:tw-flex-row tw-w-full tw-h-[120vh]  ~tw-gap-[2rem]/0">
-          <div className=" tw-w-full md:tw-w-[65%] ~tw-pl-[1.25rem]/[7rem] ~tw-pr-[1.25rem]/0">
+        <div className="tw-relative tw-flex tw-flex-col lg:tw-flex-row tw-w-full tw-h-[120vh]  ~tw-gap-[2rem]/0">
+          <div className=" tw-w-full lg:tw-w-[65%] ~tw-pl-[1.25rem]/[7rem] ~/md:~tw-pr-[1.25rem]/[2rem] lg:tw-pr-0">
             <h2 className="~tw-text-h4/h2  tw-font-playFair tw-text-gray50 ~tw-leading-[2.6rem]/[3.3rem]">
               Accelerate Indian
             </h2>
@@ -33,35 +33,35 @@ const Members = () => {
             </h2>
           </div>
           {/* <OvalPurpleSvg className="-top-[4rem] right-[11.85rem]"/> */}
-          <div className="tw-w-full md:tw-w-[35%] tw-relative">
+          <div className="tw-w-full lg:tw-w-[35%] tw-relative">
             <Image
               src={SmBg}
               alt=""
-              className="tw-block lg:tw-hidden tw-object-cover tw-absolute tw-w-full tw-bottom-[-32rem]"
+              className="tw-block md:tw-hidden tw-object-cover tw-absolute tw-w-full tw-bottom-[-32rem]"
             />
             <OvalPurple
               sizeClass="~tw-size-[13rem]/[17.3rem]"
-              textClass1="tw-text-h3"
-              textClass2="tw-text-h9Copy4"
+              textClass1="~tw-text-h4/h3"
+              textClass2="~tw-text-h9Copy5/h9Copy4"
               text1="4"
               text2="Core Founders"
-              mainClass=" tw-absolute ~tw-top-0/[-4rem] ~tw-right-0/[11.862rem] "
+              mainClass=" tw-absolute ~tw-top-0/[-4rem] tw-left-0 md:tw-left-auto ~md:~tw-right-[20rem]/[11.862rem] "
             />
             <OvalPurple
               sizeClass="~tw-size-[13rem]/[17.3rem]"
-              textClass1="tw-text-h3"
-              textClass2="tw-text-h9Copy4"
+              textClass1="~tw-text-h4/h3"
+              textClass2="~tw-text-h9Copy5/h9Copy4"
               text1="31"
               text2="Founders"
-              mainClass=" tw-absolute ~tw-top-[6.75rem]/[15.5rem] tw-right-0 md:tw-right-auto  md:tw-right-[6.4rem] "
+              mainClass=" tw-absolute ~tw-top-[6.75rem]/[15.5rem] tw-right-0  md:tw-right-[6.4rem] "
             />
             <OvalPurple
               sizeClass="~tw-size-[13rem]/[17.3rem]"
-              textClass1="tw-text-h3"
-              textClass2="tw-text-h9Copy4"
+              textClass1="~tw-text-h4/h3"
+              textClass2="~tw-text-h9Copy5/h9Copy4"
               text1="150 +"
               text2="Members"
-              mainClass=" tw-absolute ~tw-top-[14.3rem]/[20rem] tw-left-0 md:tw-left-auto md:tw-right-[26rem]"
+              mainClass=" tw-absolute ~tw-top-[14.3rem]/[20rem] tw-left-0 md:tw-left-auto ~md:~tw-right-[25rem]/[26rem]"
             />
           </div>
         </div>

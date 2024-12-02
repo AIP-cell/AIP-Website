@@ -13,12 +13,19 @@ const Spotlight = () => {
             IN THE SPOTLIGHT
           </h3>
         </div>
-        <h4 className="~tw-text-h4/h2 tw-text-darkBlack tw-pt-[0.75rem] tw-leading-[52.8px] tw-font-playFair">
-          Wealth with
-        </h4>
-        <h4 className="~tw-text-h4/h2 tw-text-darkBlack tw-font-playFair tw-leading-[52.8px]">
-          Purpose
-        </h4>
+        <div className="tw-hidden sm:tw-block">
+          <h4 className="~tw-text-h4/h2 tw-text-darkBlack tw-pt-[0.75rem] ~tw-leading-[2.6rem]/[3.3rem] tw-font-playFair">
+            Wealth with
+          </h4>
+          <h4 className="~tw-text-h4/h2 tw-text-darkBlack tw-font-playFair ~tw-leading-[2.6rem]/[3.3rem]">
+            Purpose
+          </h4>
+        </div>
+        <div className="tw-block sm:tw-hidden">
+          <h4 className="~tw-text-h4/h2 tw-text-darkBlack tw-pt-[0.75rem] ~tw-leading-[2.6rem]/[3.3rem] tw-font-playFair">
+            Wealth with Purpose
+          </h4>
+        </div>
         <p className="tw-text-h9Copy4 tw-leading-[1.4rem] tw-text-midGray tw-font-inter tw-pt-[0.75rem]">
           It gives us great pleasure to invite you for the launch of our report
           - Systemic Impact Exemplars: Unique Approaches Towards Solving India’s
@@ -28,7 +35,7 @@ const Spotlight = () => {
         <div className="tw-pt-[1.25rem]">
           <BgButton
             text="Read More"
-            className="tw-px-[2rem] tw-py-[0.75rem] ~tw-text-h9Copy5/h9Copy4 tw-leading-[1.4rem]"
+            className="tw-px-[2rem] tw-py-[0.75rem] ~tw-text-h9Copy5/h9Copy4 ~tw-leading-[1.225rem]/[1.4rem]"
           />
         </div>
       </div>

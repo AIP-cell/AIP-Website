@@ -44,7 +44,7 @@ const Media = () => {
         <div className="tw-text-center tw-font-playFair tw-pb-20 tw-leading-[3.3rem] tw-tracking-[-.04rem] tw-text-h2 tw-text-gray80">
           In the Media
         </div>
-        <div className="tw-flex tw-gap-[4.5rem] tw-justify-center">
+        <div className="tw-flex tw-gap-[4.5rem] tw-justify-center ">
           {mediaArray.map((media, i) => (
             <MediaCard
               key={i}

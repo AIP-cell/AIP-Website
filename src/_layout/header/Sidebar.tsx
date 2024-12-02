@@ -81,12 +81,12 @@ const Sidebar = () => {
           className="tw-size-[2rem]"
         />
       ) : (
-        <div className="tw-fixed tw-h-full tw-top-0 tw-left-0 tw-flex tw-w-full">
-          <div className="tw-relative tw-w-[70%] tw-pt-[2.5rem] tw-px-[1.25rem] tw-bg-purpleToBlue md:tw-hidden tw-gap-[2.5rem] ">
+        <div className="tw-fixed tw-h-full tw-top-0 tw-left-0 tw-flex tw-w-full tw-bg-gray80">
+          <div className="tw-relative tw-w-[70%] tw-pt-[2.5rem] tw-px-[1.25rem] tw-rounded-tr-lg  tw-rounded-br-lg tw-overflow-hidden tw-bg-purpleToBlue md:tw-hidden tw-gap-[2.5rem] ">
             {headerData.map((items: any, index: number) => (
               <div
                 key={index}
-                className="tw-flex tw-flex-col tw-text-white tw-items-start "
+                className="tw-flex tw-flex-col tw-text-white tw-items-start"
               >
                 {index === 0 && (
                   <Link
@@ -116,7 +116,7 @@ const Sidebar = () => {
             <div className="">
               <ButtonAnimation className="tw-mt-[2.5rem] tw-w-full tw-bg-white tw-rounded-full">
                 <p className="tw-py-[0.75rem] tw-text-h9Copy5 tw-text-textPurple">
-                  Register
+                Get Involved
                 </p>
               </ButtonAnimation>
             </div>
@@ -126,7 +126,7 @@ const Sidebar = () => {
             onClick={() => {
               setIsOpen(false);
             }}
-            className="tw-w-[30%] tw-bg-[#FFFDF7] tw-relative"
+            className="tw-w-[30%] tw-bg-gray80 tw-relative"
           >
             <ButtonAnimation className="tw-absolute tw-top-[1.23rem] tw-right-[1.25rem]">
               <CrossSvg
