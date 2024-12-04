@@ -24,10 +24,10 @@ const ShapeTheFlow = () => {
         <span className="tw-text-textPurple tw-font-playFairItalic">Shape</span>
         &nbsp;The Flow
       </h3>
-      <p className="tw-text-midGray tw-text-center tw-pt-[1.25rem]">
+      <p className="tw-text-midGray tw-text-center ~tw-pt-[0.75rem]/[1.25rem] ~tw-leading-[1.225rem]/[1.4rem]">
         Our commitment towards philanthropy that define our role in the journey
       </p>
-      <div className="~tw-pt-10/[5rem] md:tw-flex  ~tw-gap-[1.25rem]/[4.56rem]">
+      <div className="~tw-pt-10/[5rem] tw-flex tw-flex-col lg:tw-flex-row  ~tw-gap-[1.25rem]/[4.56rem]">
         {threeIs.map((item, i) => (
           <ImgTitleDescVer
             key={i}

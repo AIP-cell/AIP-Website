@@ -3,9 +3,9 @@ import { SVGProps } from "react";
 const AMediumSizeSvg = (props: SVGProps<SVGSVGElement> & { src: string }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={190}
-    height={223}
-    // viewBox="0 0 190 223"
+    // width={160}
+    // height={223}
+    viewBox="0 0 190 223"
     fill="none"
     {...props}
   >

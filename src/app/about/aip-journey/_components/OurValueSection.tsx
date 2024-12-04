@@ -114,9 +114,9 @@ const OurValueSection = () => {
                 {ourValues.map((items, i) => (
                   <div
                     key={i}
-                    className=" tw-snap-center tw-w-full tw-flex tw-justify-center tw-shrink-0  container tw-mx-auto tw-pb-[9.25rem]"
+                    className=" tw-snap-center tw-w-full tw-flex tw-justify-center tw-shrink-0  container tw-mx-auto tw-pb-[5rem]"
                   >
-                    <div className="tw-relative ~tw-w-[16.1rem]/[38rem] tw-flex tw-justify-center tw-items-center">
+                    <div className="tw-relative ~tw-w-[16.125rem]/[38rem] tw-flex tw-justify-center tw-items-center">
                       <p className=" tw-text-center ~tw-text-h9Copy5/h9Copy4 tw-text-midGray ~tw-leading-[1.225rem]/[1.4rem]">
                         {items.desc}
                       </p>

@@ -30,25 +30,30 @@ const BreadCrump = ({
       <Link
         href={linkOne}
         className={cn(
-          "tw-text-black tw-flex tw-gap-[0.5rem] tw-text-h9Copy5 tw-leading-[19.6px]",
+          "tw-text-black tw-flex tw-items-center tw-gap-[0.5rem] ~tw-text-h10Copy6/h9Copy5 ~tw-leading-[1rem]/[1.225rem]",
           { "!tw-text-gray50": textTwo }
         )}
       >
         <div className="tw-text-[#6A6D75]">
-          <LeftOPenSvg />
+          <LeftOPenSvg className="~tw-size-[0.8rem]/[1rem]" />
         </div>
-        <Image src={BreadCrumpSvg} alt="bread-crump-Svg" /> {textOne}
+        {/* <Image src={BreadCrumpSvg} alt="bread-crump-Svg" /> */}
+        {textOne}
         {textTwo && <p>&nbsp;/&nbsp;</p>}
       </Link>
       {linkTwo && (
         <Link
           href={linkTwo}
           className={cn(
-            " tw-text-black tw-flex tw-gap-[0.5rem] tw-text-h9Copy5 tw-leading-[19.6px]",
+            " tw-text-black tw-flex tw-gap-[0.5rem] ~tw-text-h10Copy6/h9Copy5 ~tw-leading-[1rem]/[1.225rem]",
             { "!tw-text-gray50 ": textThree }
           )}
         >
-          <p className={cn({ "tw-underline tw-underline-offset-4": textThree })}>{textTwo}</p>
+          <p
+            className={cn({ "tw-underline tw-underline-offset-4": textThree })}
+          >
+            {textTwo}
+          </p>
           {textThree && <p>&nbsp;/&nbsp;</p>}
         </Link>
       )}
@@ -56,20 +61,22 @@ const BreadCrump = ({
         <Link
           href={linkThree}
           className={cn(
-            "tw-text-black tw-text-h9Copy5 tw-flex tw-leading-[19.6px]",
+            "tw-text-black ~tw-text-h10Copy6/h9Copy5 tw-flex ~tw-leading-[1rem]/[1.225rem]",
             {
               "!tw-text-gray50": textFour,
             }
           )}
         >
-          <p className={cn({ "tw-underline tw-underline-offset-4": textFour })}>{textThree}</p>
+          <p className={cn({ "tw-underline tw-underline-offset-4": textFour })}>
+            {textThree}
+          </p>
           {textFour && <p>&nbsp;/&nbsp;</p>}
         </Link>
       )}
       {textFour && linkFour && (
         <Link
           href={linkFour}
-          className="tw-text-black tw-text-h9Copy5 tw-leading-[19.6px]"
+          className="tw-text-black ~tw-text-h10Copy6/h9Copy5 ~tw-leading-[1rem]/[1.225rem]"
         >
           {textFour}
         </Link>

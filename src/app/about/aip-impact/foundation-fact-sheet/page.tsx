@@ -5,12 +5,14 @@ import AipFootprints from "./_components/AipFootprints";
 import Testimonials from "./_components/Testimonials";
 import ContactSection from "@/app/about/aip-impact/foundation-fact-sheet/_components/ContactSection";
 import SheetFoundationFacts from "./_components/SheetFoundationFacts";
+import FoundationFacts from "../_components/FoundationFacts";
 
 const page = () => {
   return (
     <div>
       <FoundationFactHeroSection />
-      <SheetFoundationFacts />
+      <FoundationFacts/>
+      {/* <SheetFoundationFacts /> */}
       <Testimonials />
       {/* <AipFootprints /> */}
       <ContactSection />

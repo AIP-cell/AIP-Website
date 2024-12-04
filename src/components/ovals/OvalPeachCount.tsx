@@ -36,10 +36,10 @@ const OvalPeachCount = ({
               start={0}
               end={countEnd}
               duration={2.75}
-              className="tw-text-h3 tw-leading-[3.25rem] tw-font-semibold "
+              className="~tw-text-h4/h3 ~tw-leading-[2.6rem]/[3.25rem] tw-font-semibold "
             />
           )}
-          <span className=" tw-text-h3 tw-leading-[3.25rem] tw-font-semibold">
+          <span className=" ~tw-text-h4/h3 ~tw-leading-[2.6rem]/[3.25rem] tw-font-semibold">
             +
           </span>
         </div>

@@ -22,7 +22,7 @@ const itemsArray = [
 ];
 const GivingJourney = () => {
   return (
-    <div className="tw-flex tw-flex-col tw-text-center tw-pb-[12.5rem] tw-relative">
+    <div className="tw-flex tw-flex-col tw-text-center ~tw-pb-[7.5rem]/[12.5rem] tw-relative">
       <Image
         src={PeachCurveBg}
         alt=""
@@ -38,7 +38,7 @@ const GivingJourney = () => {
         alt=""
         className="tw-hidden lg:tw-block tw-absolute tw-z-[-1] tw-bottom-[24.8rem] tw-right-[5.37rem]"
       />
-      <div className="container tw-mx-auto tw-relative tw-px-[9.844rem]">
+      <div className="container tw-mx-auto tw-relative ~tw-px-[1.25rem]/[9.844rem]">
         <div className="tw-font-playFair ~tw-text-h4/h2 tw-text-gray80 ~tw-leading-[2.6rem]/[3.3rem]">
           Where are you in your
           <h2 className="tw-font-playFairItalic tw-text-textPurple">
@@ -46,17 +46,17 @@ const GivingJourney = () => {
           </h2>
         </div>
 
-        <p className="~tw-leading-[1.225rem]/[1.4rem]  ~tw-px-5/[11rem] tw-text-midGray tw-pt-[2.5rem]">
+        <p className="~tw-leading-[1.225rem]/[1.4rem] ~tw-text-h9Copy5/h9Copy4 ~tw-px-[1.563rem]/[11rem] tw-text-midGray ~tw-pt-[2rem]/[2.5rem]">
           Embark on a transformative journey with the TIE Model of Philanthropy.
           At AIP, we categorise your philanthropic inputs into three impactful
           areas:
         </p>
-        <div className="tw-flex tw-gap-[2.5rem] tw-py-[3.5rem] tw-w-full tw-justify-center">
+        <div className="tw-flex tw-flex-col md:tw-flex-row ~tw-gap-[0.75rem]/[2.5rem] ~tw-py-[2rem]/[3.5rem] tw-w-full tw-justify-center ~tw-px-[1.563rem]/0">
           {itemsArray.map((items, i) => (
             <TitleDescCard key={i} title1={items.title1} desc={items.desc} />
           ))}
         </div>
-        <div className="~tw-leading-[1.225rem]/[1.4rem] tw-text-center ~tw-px-5/[11rem] tw-text-midGray ">
+        <div className="~tw-text-h9Copy5/h9Copy4 ~tw-leading-[1.225rem]/[1.4rem] tw-text-center ~tw-px-[1.56rem]/[11rem] tw-text-midGray ">
           <p className=" ">
             Understanding where you stand is the first step towards a purposeful
             journey in giving. Are you just starting to explore? Or are you
@@ -68,7 +68,7 @@ const GivingJourney = () => {
             drive for impact.
           </p>
         </div>
-        <div className="tw-pt-[2.5rem] tw-flex tw-w-full tw-justify-center">
+        <div className="~tw-pt-[2rem]/[2.5rem] tw-flex tw-w-full tw-justify-center">
           <ButtonAnimation
             type="submit"
             className="tw-text-white hover:tw-text-darkPurple tw-text-h9Copy5 tw-flex tw-gap-[0.5rem] tw-leading-[1.225rem] hover:tw-bg-white tw-bg-darkPurple tw-px-[1.75rem] tw-py-[0.75rem] tw-rounded-[1.5rem] tw-cursor-pointer"

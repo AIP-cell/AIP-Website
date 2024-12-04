@@ -30,7 +30,7 @@ const CaseStudy = ({
           }
         )}
       >
-        <div className="tw-w-full tw-h-[20rem] tw-rounded-3xl tw-overflow-hidden tw-relative ">
+        <div className="tw-w-full ~tw-h-[17.5rem]/[20rem] tw-rounded-3xl tw-overflow-hidden tw-relative ">
           <Image
             src={image}
             alt=""
@@ -49,16 +49,16 @@ const CaseStudy = ({
           {title}
         </h2>
         <h3
-          className={` tw-text-gray40 tw-font-playFairItalic ~tw-text-h4a/h5 ~tw-leading-[2.113rem]/[1.75rem] tw-pt-[0.25rem] ${foundationNameClassName}`}
+          className={` tw-text-gray40 tw-font-playFairItalic ~tw-text-h8Copy3/h5 ~tw-leading-[1.575rem]/[1.75rem] tw-pt-[0.25rem] ${foundationNameClassName}`}
         >
           {foundationName}
         </h3>
         {initiativeName && (
-          <h3 className=" tw-text-gray80 tw-font-playFair tw-font-medium ~tw-text-h4a/h5 ~tw-leading-[2.113rem]/[1.75rem] tw-pt-[1.25rem]">
+          <h3 className=" tw-text-gray80 tw-font-playFair tw-font-medium ~tw-text-h8Copy3/h5 ~tw-leading-[1.575rem]/[1.75rem] ~tw-pt-[1rem]/[1.25rem]">
             {initiativeName}
           </h3>
         )}
-        <p className="tw-text-midGray ~tw-pt-[1rem]/[1.25rem] ~tw-leading-[1.225rem]/[1.4rem]">
+        <p className="tw-text-midGray ~tw-pt-[1rem]/[1.25rem] ~tw-text-h9Copy5/h9Copy4 ~tw-leading-[1.225rem]/[1.4rem]">
           {desc}
         </p>
         <div className="~tw-pt-[2rem]/[2.5rem]">

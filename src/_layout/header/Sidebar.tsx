@@ -98,7 +98,11 @@ const Sidebar = () => {
                 )}
                 {items.options ? (
                   <div className="tw-flex tw-w-full tw-gap-[2.5rem]">
-                    <CustomHeaderSelect items={items} />
+                    <CustomHeaderSelect
+                      items={items}
+                      isOpen={isOpen}
+                      setIsOpen={setIsOpen}
+                    />
                   </div>
                 ) : (
                   <Link
@@ -116,7 +120,7 @@ const Sidebar = () => {
             <div className="">
               <ButtonAnimation className="tw-mt-[2.5rem] tw-w-full tw-bg-white tw-rounded-full">
                 <p className="tw-py-[0.75rem] tw-text-h9Copy5 tw-text-textPurple">
-                Get Involved
+                  Get Involved
                 </p>
               </ButtonAnimation>
             </div>

@@ -19,7 +19,7 @@ const page = () => {
             <BreadCrump
               textOne="About Us"
               linkOne="/about"
-              textTwo="Financials"
+              textTwo="Financial Reports"
               linkTwo="/about/financials"
             />
             <div className="~tw-pb-0/[5rem]  ~tw-text-h4/h2 ~tw-leading-[2.6rem]/[3.3rem] tw-font-playFair">

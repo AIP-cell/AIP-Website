@@ -1,3 +1,4 @@
+"use client";
 import CustomHeaderSelect from "@/components/custom/CustomHeaderSelect";
 import LogoHeaderSvg from "@/components/svg/LogoHeaderSvg";
 import LogoSmSVG from "@/components/svg/LogoSmSVG";
@@ -6,6 +7,7 @@ import Link from "next/link";
 import Sidebar from "./Sidebar";
 import SearchSvg from "@/components/svg/SearchSvg";
 import NormalLinks from "./NormalLinks";
+import { useState } from "react";
 const headerData = [
   {
     width: " tw-w-[6rem] ",
@@ -34,7 +36,6 @@ const headerData = [
     label: "Our Work",
     id: "our-work",
     options: [
-      
       { option: "What We Do", link: "/our-work/what-we-do" },
       { option: "NPO Registry", link: "/our-work/npo" },
       { option: "Experts", link: "/our-work/experts" },
@@ -64,7 +65,8 @@ const headerData = [
   { id: "contact", name: "Contact", link: "/contact" },
 ];
 const Header = () => {
-  
+  const [isOpen, setIsOpen] = useState(true);
+
   return (
     <div className="tw-z-[10000] tw-fixed tw-right-0 tw-left-0 tw-top-0 max-lg:tw-bg-toRightPurpleToBlue md:tw-bg-white  ">
       <div className="container tw-mx-auto tw-flex tw-justify-between tw-items-center ~tw-pt-[0.875rem]/[1rem] ~tw-pb-[0.75rem]/[0.9rem] tw-px-[1.25rem]">
@@ -83,10 +85,14 @@ const Header = () => {
             <div key={index} className="tw-flex tw-items-center ">
               {items.options ? (
                 <div className="tw-flex tw-gap-[2.5rem]">
-                  <CustomHeaderSelect items={items} />
+                  <CustomHeaderSelect
+                    items={items}
+                    isOpen={isOpen}
+                    setIsOpen={setIsOpen}
+                  />
                 </div>
               ) : (
-                <NormalLinks items={items}/>
+                <NormalLinks items={items} />
               )}
             </div>
           ))}

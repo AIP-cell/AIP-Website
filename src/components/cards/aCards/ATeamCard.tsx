@@ -28,7 +28,7 @@ const ATeamCard = ({
   locationClassName,
 }: Props) => {
   return (
-    <div className="~tw-w-[11rem]/[11.87rem] tw-relative">
+    <div className="~tw-w-[10.3rem]/[11.87rem] tw-relative">
       <AMediumSizeSvg
         src="/images/sample.png"
         // className="tw-w-[11.87rem] tw-h-[13.88rem]"
@@ -42,24 +42,29 @@ const ATeamCard = ({
       )}
       <div className="tw-flex tw-flex-col tw-gap-[0.5rem]">
         <h3
-          className={`~tw-text-h4a/h4 ~tw-leading-[2.113rem]/[2.6rem] tw-text-gray80 tw-font-playFair ${titleClassName}`}
+          className={`~tw-text-h4a/h4 ~tw-leading-[2.1rem]/[2.6rem] tw-text-gray80 tw-font-playFair ${titleClassName}`}
         >
           {title}
         </h3>
         <h3
-          className={`~tw-text-h4a/h4 ~tw-leading-[2.113rem]/[2.6rem] tw-text-gray80 tw-font-playFair ${title2ClassName}`}
+          className={`~tw-text-h4a/h4 ~tw-leading-[2.1rem]/[2.6rem] tw-text-gray80 tw-font-playFair ${title2ClassName}`}
         >
           {title2}
         </h3>
-        <p
-          className={`~tw-text-h4a/h5 ~tw-leading-[2.113rem]/[1.75rem] tw-text-gray80 tw-font-playFair ${locationClassName}`}
-        >
-          {location}
-        </p>
-        <p className=" ~tw-text-h6/h5 tw-text-gray40 tw-leading-[1.75rem] tw-font-playFairItalic ">
+        {location && (
+          <p
+            className={`~tw-text-h4a/h5 ~tw-leading-[2.113rem]/[1.75rem] tw-text-gray80 tw-font-playFair ${locationClassName}`}
+          >
+            {location}
+          </p>
+        )}
+        <p className=" ~tw-text-h6M/h5 tw-text-gray40 ~tw-leading-[1.575rem]/[1.75rem] tw-font-playFairItalic ">
           {desc}
         </p>
-        <Link href=""  className=" ~tw-text-h6/h8Copy3 tw-text-textPurple tw-leading-[1.575rem] tw-italic tw-underline tw-decoration-[1px] ">
+        <Link
+          href=""
+          className=" ~tw-text-h9Copy5/h8Copy3 tw-text-textPurple ~tw-leading-[1.225rem]/[1.575rem] tw-italic tw-underline tw-decoration-[1px] "
+        >
           {email}
         </Link>
       </div>

@@ -14,7 +14,7 @@ export default function CustomGraySelect({
   data,
   setSelected,
 }: {
-  selected: { id: number; title: string };
+  selected: any;
   data: { id: number; title: string }[];
   setSelected: (value: any) => void;
 }) {

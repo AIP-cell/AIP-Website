@@ -25,7 +25,7 @@ const ImgTitleDescVer = ({
   return (
     // tw-justify-center
     <div
-      className={`tw-flex tw-flex-col  tw-items-center ~tw-gap-[0.5rem]/[0.75rem] ${totalWidth}`}
+      className={`tw-flex tw-flex-col  tw-items-center tw-gap-[0.75rem] ${totalWidth}`}
     >
       <div
         className={` ${imageWidth} tw-relative ~tw-w-[10rem]/[20rem] ~tw-h-[7.5rem]/[8.75rem]`}

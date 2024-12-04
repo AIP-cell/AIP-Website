@@ -26,7 +26,7 @@ const PTeamCard = ({
   locationClassName,
 }: Props) => {
   return (
-    <div className="~tw-w-[11rem]/[11.87rem] tw-relative">
+    <div className="~tw-w-[10.3rem]/[11.87rem] tw-relative">
       <PMediumSizeSvg src="/images/pTeamSample.png" />
       {linkedin && (
         <Image
@@ -37,24 +37,29 @@ const PTeamCard = ({
       )}
       <div className="tw-flex tw-flex-col tw-gap-[0.5rem]">
         <h3
-          className={`~tw-text-h4a/h4 tw-leading-[2.6rem] tw-text-gray80 tw-font-playFair ${titleClassName}`}
+          className={`~tw-text-h4a/h4 ~tw-leading-[2.1rem]/[2.6rem] tw-text-gray80 tw-font-playFair ${titleClassName}`}
         >
           {title}
         </h3>
         <h3
-          className={`~tw-text-h4a/h4 tw-leading-[2.6rem] tw-text-gray80 tw-font-playFair ${title2ClassName}`}
+          className={`~tw-text-h4a/h4 ~tw-leading-[2.1rem]/[2.6rem] tw-text-gray80 tw-font-playFair ${title2ClassName}`}
         >
           {title2}
         </h3>
-        <p
-          className={`~tw-text-h4a/h5 ~tw-leading-[2.113rem]/[1.75rem] tw-text-gray80 tw-font-playFair ${locationClassName}`}
-        >
-          {location}
-        </p>
-        <p className="tw-font-playFairItalic ~tw-text-h6/h5 tw-text-gray40 tw-leading-[1.75rem]  ">
+        {location && (
+          <p
+            className={`~tw-text-h4a/h5 ~tw-leading-[2.113rem]/[1.75rem] tw-text-gray80 tw-font-playFair tw-font-medium ${locationClassName}`}
+          >
+            {location}
+          </p>
+        )}
+        <p className="~tw-text-h6M/h5 tw-font-playFairItalic  tw-text-gray40 ~tw-leading-[1.575rem]/[1.75rem]  ">
           {desc}
         </p>
-        <Link href=""  className=" ~tw-text-h6/h8Copy3 tw-text-textPurple tw-italic tw-leading-[1.575rem] tw-underline tw-decoration-[1px] ">
+        <Link
+          href=""
+          className=" ~tw-text-h9Copy5/h8Copy3 tw-text-textPurple tw-italic  ~tw-leading-[1.225rem]/[1.575rem] tw-underline tw-decoration-[1px] "
+        >
           {email}
         </Link>
       </div>

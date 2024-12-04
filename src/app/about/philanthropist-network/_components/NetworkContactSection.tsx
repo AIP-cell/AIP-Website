@@ -30,36 +30,36 @@ const itemsArray = [
 const NetworkContactSection = () => {
   return (
     <div className="tw-flex tw-flex-col tw-items-center tw-pt-[6rem] tw-pb-[1rem] container tw-mx-auto">
-      <h2 className="tw-text-h2 tw-text-center tw-text-gray80 tw-font-playFair">
+      <h2 className="~tw-text-h4/h2 tw-text-center ~tw-leading-[2.6rem]/[3.3rem] tw-text-gray80 tw-font-playFair">
         Reason to
         <span className="tw-text-textPurple tw-font-playFairItalic">
           &nbsp;Connect
         </span>
       </h2>
-      <p className="tw-leading-[1.4rem] tw-pt-[2.5rem] tw-px-[15.813rem] tw-text-center">
+      <p className="~tw-leading-[1.225rem]/[1.4rem] ~tw-text-h9Copy5/h9Copy4 ~tw-pt-[2rem]/[2.5rem] ~tw-px-[2.813rem]/[15.813rem] tw-text-center">
         We believe in dedicating to an independent, sector agnostic, and deeply
         focused approach, personally catering to how one defines their
         philanthropy and here they wish to take it to. Valuing long-lasting
         relationships built on a strong legacy and an inspiring network.
       </p>
-      <div className="tw-pt-[2.5rem] tw-flex tw-justify-center ">
-        <div className="tw-grid tw-grid-cols-2 tw-gap-x-[5rem] tw-gap-y-[3.5rem]">
+      <div className="~tw-pt-[2rem]/[2.5rem] tw-flex tw-justify-center ">
+        <div className="tw-grid  md:tw-grid-cols-2 ~tw-gap-x-[3]/[5rem] ~tw-gap-y-[1.75rem]/[3.5rem]">
           {itemsArray.map((item, i) => (
             <TitleDescCard
               key={i}
               title1={item.title1}
               title2={item.title2}
               desc={item.desc}
-              topClassName="tw-w-[29rem]"
+              topClassName="~tw-w-[18.438rem]/[29rem]"
             />
           ))}
         </div>
       </div>
-      <div className="tw-pt-[3rem]">
+      <div className="~tw-pt-[2rem]/[3rem]">
         <ButtonAnimation className="tw-text-white hover:tw-text-darkPurple tw-bg-darkPurple hover:tw-bg-white tw-rounded-full  tw-py-[0.75rem] tw-px-[1.75rem]">
           <Link
             href=""
-            className=" tw-flex tw-items-center tw-text-h9Copy5 tw-gap-[0.5rem]"
+            className=" tw-flex tw-items-center tw-text-h9Copy5 tw-leading-[1.225rem] tw-gap-[0.5rem]"
           >
             <p className="">Contact Us</p>
             <MailSvg />

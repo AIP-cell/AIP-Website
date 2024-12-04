@@ -14,10 +14,12 @@ import cn from "@/utils/tailwind";
 
 type Props = {
   items: any;
+  isOpen: boolean;
+  setIsOpen: (value: boolean) => void;
 };
-const CustomHeaderSelect = ({ items }: Props) => {
+const CustomHeaderSelect = ({ items, isOpen, setIsOpen }: Props) => {
   const [selected, setSelected] = useState(items.label);
-  const [isOpen, setIsOpen] = useState(true);
+  // const [isOpen, setIsOpen] = useState(true);
   // const [isPathname, setIsPathname] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
@@ -91,6 +93,7 @@ const CustomHeaderSelect = ({ items }: Props) => {
                 <div
                   onClick={() => {
                     router.push(`${items.link}`);
+                    setIsOpen(!isOpen);
                   }}
                   // onClick={() => {
                   //   setIsOpen(!isOpen);

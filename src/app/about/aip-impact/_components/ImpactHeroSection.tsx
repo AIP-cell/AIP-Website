@@ -6,9 +6,17 @@ import Image from "next/image";
 import BreadCrump from "@/components/bread-crump/BreadCrump";
 const ImpactHeroSection = () => {
   return (
-    <div className="~tw-pt-[8rem]/[5rem]">
+    <div className="">
+      <div className="tw-relative container tw-mx-auto ">
+        <BreadCrump
+          textOne="About Us"
+          linkOne="/about"
+          textTwo="AIP Impact"
+          linkTwo="/about/aip-impact"
+        />
+      </div>
       <div className="tw-relative tw-w-full ">
-        <div className="tw-absolute tw-inset-0 ">
+        <div className="tw-absolute tw-inset-0 tw-pt-[2.5rem]">
           <Wave
             fill="#91298C"
             paused={false}
@@ -29,7 +37,7 @@ const ImpactHeroSection = () => {
           <Wave
             fill="#91298C"
             paused={false}
-            className="tw-h-[--h] tw-rotate-180 !tw-block"
+            className="tw-h-[--h] tw-rotate-180 !tw-block "
             options={{
               // height:40,
               amplitude: 60,
@@ -43,15 +51,8 @@ const ImpactHeroSection = () => {
             </linearGradient>
           </Wave>
         </div>
-        <div className="tw-relative container tw-mx-auto ">
-          <BreadCrump
-            textOne="About Us"
-            linkOne="/about"
-            textTwo="AIP Impact"
-            linkTwo="/about/aip-impact"
-          />
-        </div>
-        <div className="tw-relative">
+
+        <div className="tw-relative tw-pt-[2.5rem]">
           <Wave
             fill="#b861b4a6"
             paused={false}
@@ -65,10 +66,10 @@ const ImpactHeroSection = () => {
 
           <div className=" tw-bg-[#b861b4a6] ~tw-pt-[3rem]/[6.25rem] ~tw-pb-[3rem]/[7.6rem] tw-w-full ">
             <div className="container tw-mx-auto tw-flex tw-justify-center tw-flex-col tw-items-center tw-relative tw-z-50 ~tw-px-5/[14.375rem] ">
-              <h3 className=" tw-leading-[1.29rem] tw-font-inter tw-text-white/60 tw-font-semibold">
+              <h3 className=" ~tw-leading-[1.129rem]/[1.29rem] ~tw-text-h9Copy5/h9Copy4 tw-font-inter tw-text-white/60 tw-font-semibold">
                 IMPACT BEGINS AT HOME
               </h3>
-              <h2 className="tw-pt-[1.25rem] tw-text-center ~tw-text-h4/h3 tw-leading-[3.25rem] tw-font-playFair tw-text-white">
+              <h2 className="tw-pt-[1.25rem] tw-text-center ~tw-text-h4/h3 ~tw-leading-[2.6rem]/[3.25rem] tw-font-playFair tw-text-white tw-tracking-[-0.5px]">
                 India has made significant progress yet more needs to be done.
                 Philanthropy is clearly one of the means than can augment impact
                 and lead to transformational change. AIP believes strategic

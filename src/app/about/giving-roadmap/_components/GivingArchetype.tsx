@@ -31,8 +31,8 @@ const itemsArray = [
 ];
 const GivingArchetype = () => {
   return (
-    <div className="tw-flex tw-flex-col tw-text-center tw-w-full tw-items-center tw-pb-[7.56rem] container tw-mx-auto tw-relative">
-      <div className="tw-px-[9.844rem]">
+    <div className="tw-flex tw-flex-col tw-text-center tw-w-full tw-items-center ~tw-pb-[5rem]/[7.56rem] container tw-mx-auto tw-relative">
+      <div className="~tw-px-[1.25rem]/[9.844rem]">
         <div className="tw-font-playFair ~tw-text-h4/h2 tw-text-gray80 ~tw-leading-[2.6rem]/[3.3rem]">
           What&apos;s your
           <h2 className="tw-font-playFairItalic tw-text-textPurple">
@@ -40,7 +40,7 @@ const GivingArchetype = () => {
           </h2>
         </div>
 
-        <p className="~tw-leading-[1.225rem]/[1.4rem]  ~tw-px-5/[11rem] tw-text-midGray tw-pt-[2.5rem]">
+        <p className=" ~tw-text-h9Copy5/h9Copy4 ~tw-leading-[1.225rem]/[1.4rem]  ~tw-px-[1.563rem]/[11rem] tw-text-midGray ~tw-pt-[1rem]/[2.5rem]">
           Our Wealth with Purpose report identifies six distinct archetypes
           among Indian philanthropists, each representing unique values and
           approaches to giving. These archetypes are fluid, evolving as you
@@ -48,15 +48,14 @@ const GivingArchetype = () => {
           Where do you see yourself? AIP can support you in navigating the
           giving landscape and elevating your impact in philanthropy.
         </p>
-        <div className="tw-grid tw-grid-cols-3 tw-gap-x-[2.5rem] tw-gap-y-[3.781rem] tw-py-[3.5rem] tw-w-full tw-justify-center">
+        <div className="tw-grid lg:tw-grid-cols-2 xl:tw-grid-cols-3 ~tw-gap-x-[2.5rem]/0 ~tw-gap-y-[0.75rem]/[3.781rem] ~tw-py-[2rem]/[3.5rem] tw-w-full tw-justify-center tw-px-[1.563rem] md:~tw-px-[4rem]/0">
           {itemsArray.map((items, i) => (
             <div key={i} className="tw-col-span-1 tw-flex tw-justify-center">
               <TitleDescCard key={i} title1={items.title1} desc={items.desc} />
             </div>
           ))}
         </div>
-
-        <div className="tw-pt-[2.5rem] tw-flex tw-w-full tw-justify-center">
+        <div className="~tw-pt-0/[2.5rem] tw-flex tw-w-full tw-justify-center">
           <BgButton
             className="tw-px-[1.75rem] tw-py-[0.75rem]"
             text="Join The Flow"
