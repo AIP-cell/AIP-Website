@@ -6,13 +6,14 @@ import { useRouter } from "next/navigation";
 import React from "react";
 import ResourceCard from "../../../components/cards/ResourceCard";
 import CustomSelect from "@/components/custom/CustomSelect";
+import CustomFilter from "@/components/custom/CustomFilter";
 
 const list = [
-  { id: 1, title: "Reports" },
-  { id: 2, title: "Knowledge Resources" },
-  { id: 3, title: "Inspirational Stories" },
-  { id: 4, title: "News & Media AIP" },
-  { id: 5, title: "Event & Interviews Gallery" },
+  "Reports & Publications",
+  "Knowledge Resources",
+  "Inspirational Stories",
+  "News & Media AIP",
+  "Event & Interviews Gallery",
 ];
 const datas = [
   {
@@ -53,8 +54,19 @@ const datas = [
   },
 ];
 const fieldsArray = ["Fields/Sector", "Fields/Sector"];
-const dateArray = ["Date", "Date"];
-const ResourcesSm = () => {
+
+type Props = {
+  filterDatas?: any;
+  domainArray: string[];
+  typeContentArray: string[];
+  dateArray: string[];
+};
+const ResourcesSm = ({
+  filterDatas,
+  domainArray,
+  typeContentArray,
+  dateArray,
+}: Props) => {
   const [selected, setSelected] = useState(list[0]);
 
   return (
@@ -63,18 +75,37 @@ const ResourcesSm = () => {
         data={list}
         selected={selected}
         setSelected={setSelected}
+        mainClassName="!tw-px-0"
       />
       <div className="">
-        <div className="tw-flex tw-pt-[2rem] tw-gap-[.75rem]">
-          <p className="tw-py-3 tw-text-gray40 ">Filter by:</p>
-
-          <CustomSelect optionsArray={fieldsArray} />
-
-          <CustomSelect optionsArray={dateArray} />
+        <div className="tw-flex tw-flex-col ~tw-pt-[1.25rem]/[2rem] tw-gap-[.75rem]">
+          <p className="tw-py-[0.75rem] tw-text-gray40 ">Filter by:</p>
+          <div className="tw-flex tw-gap-x-[0.75rem] tw-gap-y-[0.5rem] tw-flex-wrap">
+            <CustomFilter
+              optionsArray={domainArray}
+              ListboxButtonClassName="!tw-w-fit"
+              selectedClassName="!tw-w-fit"
+            />
+            {/* <CustomSelect
+              optionsArray={domainArray}
+              ListboxButtonClassName="!tw-w-fit"
+              selectedClassName="!tw-w-fit"
+            /> */}
+            {/* <CustomSelect
+              optionsArray={typeContentArray}
+              ListboxButtonClassName="!tw-w-fit"
+              selectedClassName="!tw-w-fit"
+            />
+            <CustomSelect
+              optionsArray={dateArray}
+              ListboxButtonClassName="!tw-w-fit"
+              selectedClassName="!tw-w-fit"
+            /> */}
+          </div>
         </div>
 
         <div>
-          <div className="tw-pt-[3.25rem] tw-pb-[7.5rem] tw-flex tw-flex-col tw-gap-[2.5rem]">
+          <div className="tw-pt-[3.25rem] ~tw-pb-[5rem]/[7.5rem] tw-flex tw-flex-col tw-gap-[2.5rem]">
             {datas.map((item, i) => (
               <ResourceCard
                 key={i}

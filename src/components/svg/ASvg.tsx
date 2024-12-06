@@ -5,6 +5,7 @@ type Props = {
   className?: string;
 };
 const ASvg = ({ src, ...props }: Props) => {
+  const id = React.useId();
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -13,7 +14,7 @@ const ASvg = ({ src, ...props }: Props) => {
       {...props}
     >
       <defs>
-        <mask id="aShape">
+        <mask id={id}>
           <path
             fill="#fff"
             d="M295 147.5C295 66.038 228.962 0 147.5 0S0 66.038 0 147.5 66.038 295 147.5 295h89.657a20.002 20.002 0 0 1 14.213 5.929L295 345V147.5Z"
@@ -21,7 +22,7 @@ const ASvg = ({ src, ...props }: Props) => {
         </mask>
       </defs>
       <image
-        mask="url(#aShape)"
+        mask={`url(#${id})`}
         preserveAspectRatio="xMidYMid meet"
         x="0"
         y="0"

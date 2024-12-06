@@ -33,8 +33,6 @@ const PeopleOfAipSm = ({ tabSelect }: Props) => {
         />
         <div>
           {selected === "Our Core Founders" && <OurCoreFoundersContent />}
-          {/* {selected.id == 2 && <div>Content 2</div>}
-          {selected.id == 3 && <div>Content 3</div>} */}
           {selected === "Team AIP" && <TeamAip />}
           {selected === "Experts" && <Experts />}
         </div>

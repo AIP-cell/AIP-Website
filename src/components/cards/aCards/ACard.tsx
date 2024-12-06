@@ -22,7 +22,7 @@ const ACard = ({ image, name, work, desc, nameClass,linkedin }: Props) => {
       )}
       {image && (
         <div className="tw-w-[18.43rem] tw-h-[21.56rem] tw-relative">
-          <ASvg src={image} className=" tw-w-[18.43rem] tw-h-[21.56rem]" />
+          <ASvg src={image} className=" " />
         </div>
       )}
       <div className="tw-flex tw-flex-col tw-gap-[0.75rem]">

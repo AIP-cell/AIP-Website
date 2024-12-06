@@ -25,9 +25,11 @@ const ResourceCard = ({ src, title, desc, category, name }: Props) => {
         <p className=" tw-w-full tw-text-h6M tw-text-gray80 tw-font-inter tw-font-semibold tw-leading-[1.575rem] tw-underline tw-underline-offset-4 tw-decoration-[1.5px]">
           {title}
         </p>
-        <p className=" tw-w-full tw-text-gray40 tw-font-playFairItalic tw-font-medium ~tw-leading-[1.4rem]/[1.575rem] ">
-          {name}
-        </p>
+        {name && (
+          <p className=" tw-w-full tw-text-gray40 tw-font-playFairItalic tw-font-medium ~tw-leading-[1.4rem]/[1.575rem] ">
+            {name}
+          </p>
+        )}
         <p className="tw-text-h9Copy5 tw-text-gray50 tw-font-inter tw-leading-[1.225rem]">
           {desc}
         </p>

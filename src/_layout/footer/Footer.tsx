@@ -106,7 +106,8 @@ const Footer = () => {
                 </Link>
               </ButtonAnimation>
               <p className="tw-pt-[1.75rem] tw-text-h9Copy5 tw-font-inter tw-text-white/60">
-                <span className="tw-text-white"> CIN:</span> U85300DL202INPL384351
+                <span className="tw-text-white"> CIN:</span>{" "}
+                U85300DL202INPL384351
               </p>
               <div className="tw-flex tw-gap-[1.25rem] tw-pt-[2rem]">
                 <ButtonAnimation className="tw-relative tw-size-[2.5rem]">
@@ -141,7 +142,9 @@ const Footer = () => {
                 <Link href={""} className="tw-border-s tw-bottom-1 tw-ps-2">
                   Privacy Policy
                 </Link>
-                <p className="tw-text-white/60">Designed with ❤ by Sane Difference</p>
+                <p className="tw-text-white/60">
+                  Designed with ❤ by Sane Difference
+                </p>
               </div>
             </div>
             <div>
@@ -165,7 +168,7 @@ const Footer = () => {
                   href="/about/aip-impact"
                   className=" tw-text-h9Copy5 tw-font-inter tw-text-white/60"
                 >
-                 <ButtonAnimation> AIP Impact</ButtonAnimation>
+                  <ButtonAnimation> AIP Impact</ButtonAnimation>
                 </Link>
                 <Link
                   href="/about/giving-roadmap"
@@ -183,7 +186,7 @@ const Footer = () => {
                   href="/about/aip-founder-network"
                   className=" tw-text-h9Copy5 tw-font-inter tw-text-white/60"
                 >
-                 <ButtonAnimation> AIP Founder Network</ButtonAnimation>
+                  <ButtonAnimation> AIP Founder Network</ButtonAnimation>
                 </Link>
                 <Link
                   href="/about/philanthropist-network"
@@ -231,7 +234,7 @@ const Footer = () => {
               </div>
 
               <p className="tw-pt-[2.25rem] tw-text-h9Copy5 tw-font-inter tw-font-bold tw-text-white">
-              Our Work
+                Our Work
               </p>
               <div className="tw-flex tw-flex-col tw-gap-4 tw-pt-[0.75rem]">
                 <Link
@@ -244,7 +247,7 @@ const Footer = () => {
                   href="/our-work/npo"
                   className=" tw-text-h9Copy5 tw-font-inter tw-text-white/60"
                 >
-                 <ButtonAnimation> NPO Registry</ButtonAnimation>
+                  <ButtonAnimation> NPO Registry</ButtonAnimation>
                 </Link>
                 <Link
                   href="/our-work/projects-and-programs"
@@ -280,13 +283,19 @@ const Footer = () => {
               </div>
 
               <div className="tw-pt-[2.25rem] tw-text-h9Copy5 tw-font-inter tw-font-bold tw-text-white">
-                <Link href="/career"><ButtonAnimation>Career</ButtonAnimation></Link>
+                <Link href="/career">
+                  <ButtonAnimation>Career</ButtonAnimation>
+                </Link>
               </div>
               <div className="tw-pt-[2.25rem] tw-text-h9Copy5 tw-font-inter tw-font-bold tw-text-white">
-                <Link href="/contact"><ButtonAnimation>Contact</ButtonAnimation></Link>
+                <Link href="/contact">
+                  <ButtonAnimation>Contact</ButtonAnimation>
+                </Link>
               </div>
               <div className="tw-pt-[2.25rem] tw-text-h9Copy5 tw-font-inter tw-font-bold tw-text-white">
-                <Link href="/faq"><ButtonAnimation>FAQs</ButtonAnimation></Link>
+                <Link href="/faq">
+                  <ButtonAnimation>FAQs</ButtonAnimation>
+                </Link>
               </div>
               <div className="tw-pt-[2.25rem] tw-text-h9Copy5 tw-font-inter tw-font-bold tw-text-white">
                 <Link href="/about/aip-impact/foundation-fact-sheet">
@@ -294,7 +303,9 @@ const Footer = () => {
                 </Link>
               </div>
               <div className="tw-pt-[2.25rem] tw-text-h9Copy5 tw-font-inter tw-font-bold tw-text-white">
-                <Link href="/join-our-learning-circle"><ButtonAnimation>Join our learning circle</ButtonAnimation></Link>
+                <Link href="/join-our-learning-circle">
+                  <ButtonAnimation>Join our learning circle</ButtonAnimation>
+                </Link>
               </div>
             </div>
           </div>

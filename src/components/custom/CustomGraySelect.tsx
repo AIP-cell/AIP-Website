@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import {
   Listbox,
   ListboxButton,
@@ -15,14 +15,16 @@ export default function CustomGraySelect({
   selected,
   data,
   setSelected,
+  mainClassName,
 }: {
   selected: any;
   data: string[];
+  mainClassName?: string;
   setSelected: (value: any) => void;
 }) {
   // const router = useRouter();
   return (
-    <div className="tw-mx-auto tw-w-full tw-px-[1.25rem]">
+    <div className={`tw-mx-auto tw-w-full tw-px-[1.25rem] ${mainClassName}`}>
       <Listbox value={selected} onChange={setSelected}>
         <ListboxButton
           className={clsx(
@@ -35,7 +37,6 @@ export default function CustomGraySelect({
         </ListboxButton>
         <ListboxOptions
           anchor="bottom"
-          tw-transition
           className={clsx(
             "w-[var(--button-width)] tw-rounded-3xl tw-border tw-border-white/5 tw-bg-white/5 tw-p-1 [--anchor-gap:var(--spacing-1)] focus:tw-outline-none  tw-w-full",
             "tw-transition tw-duration-100 tw-ease-in data-[leave]:data-[closed]:tw-opacity-0"
@@ -48,14 +49,7 @@ export default function CustomGraySelect({
               className="tw-group tw-flex tw-cursor-default tw-items-center tw-gap-2  tw-py-1.5 tw-px-3 tw-select-none tw-bg-gray-200 tw-text-black data-[focus]:tw-bg-gray-400 "
             >
               {/* <CheckIcon className="tw-invisible tw-size-4 tw-fill-darkPurple group-data-[selected]:tw-visible" /> */}
-              <div
-                // onClick={() => {
-                //   // router.push(`${items.link}`);
-                // }}
-                className="tw-text-h9Copy4 tw-text-black"
-              >
-                {item}
-              </div>
+              <div className="tw-text-h9Copy4 tw-text-black">{item}</div>
             </ListboxOption>
           ))}
         </ListboxOptions>

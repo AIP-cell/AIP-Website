@@ -1,12 +1,9 @@
-import React from "react";
-import Link from "next/link";
-import BreadCrump from "@/components/bread-crump/BreadCrump";
-import ResourcesSm from "../_components/ResourcesSm";
-import ResourcesTabs from "../_components/ResourcesTabs";
+"use client";
+import React, { useState } from "react";
 import { TabGroup, TabPanel, TabPanels } from "@headlessui/react";
+import ResourcesTabs from "../_components/ResourcesTabs";
 import CustomSelect from "@/components/custom/CustomSelect";
 import ResourceCard from "@/components/cards/ResourceCard";
-import AipResourceTabs from "./AipResourceTabs";
 
 const resourcesArray = [
   "AIP Updates",
@@ -88,36 +85,64 @@ const filterDatas = {
 };
 const typeContentArray = ["Type of Content", "Type of Content"];
 const dateArray = ["Date", "Date"];
-const AipResourcesPage = () => {
+const AipResourceTabs = () => {
+  const [selectedIndex, setSelectedIndex] = useState(0);
   return (
-    <div className="tw-pt-[5rem]">
-      <div className="container tw-mx-auto tw-relative ~tw-px-5/[7.5rem]">
-        <div className="~tw-px-5/tw-flex ~tw-pt-0/[1.25rem] tw-gap-[.75rem][7.8rem]">
-          <BreadCrump
-            textOne="Resource Center"
-            linkOne="/resource-center"
-            textTwo="AIP Resources"
-            linkTwo="/resource-center"
-            textThree="Reports"
-            linkThree="/resource-center"
-          />
-          <div className="tw-max-w-[51.188rem] ~tw-pt-[4.3rem]/[5rem] ~tw-pb-[2.5rem]/[4rem]">
-            <p className="tw-font-playFair tw-leading-[3.3rem] ~tw-text-h4/[3rem] tw-text-gray80">
-              AIP Resources
-            </p>
-          </div>
-        </div>
-        {/* <ResourcesSm
-          filterDatas={filterDatas}
-          dateArray={dateArray}
-          domainArray={domainArray}
-          typeContentArray={typeContentArray}
-        /> */}
-        <AipResourceTabs/>
-        
-      </div>
+    <div>
+      <TabGroup
+        selectedIndex={selectedIndex}
+        onChange={setSelectedIndex}
+        className="tw-flex tw-flex-col tw-justify-center "
+      >
+        <ResourcesTabs
+          resourcesArray={resourcesArray}
+          selectedIndex={selectedIndex}
+          //   setSelected={setSelected}
+          setSelectedIndex={setSelectedIndex}
+          textClassName="  "
+          listClassName="!tw-w-full"
+        />
+        <TabPanels className="">
+          <TabPanel>aaa</TabPanel>
+          <TabPanel>
+            <div className="tw-flex tw-flex-wrap tw-pt-[2rem] tw-gap-[.75rem]">
+              <p className="tw-py-3 tw-text-gray40 ">Filter by:</p>
+              <CustomSelect
+                optionsArray={domainArray}
+                ListboxButtonClassName="!tw-w-fit"
+                selectedClassName="!tw-w-fit"
+              />
+              <CustomSelect
+                optionsArray={typeContentArray}
+                ListboxButtonClassName="!tw-w-fit"
+                selectedClassName="!tw-w-fit"
+              />
+              <CustomSelect
+                optionsArray={dateArray}
+                ListboxButtonClassName="!tw-w-fit"
+                selectedClassName="!tw-w-fit"
+              />
+            </div>
+            <div className="tw-pt-[3.25rem] tw-pb-[7.5rem] tw-grid md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-[4.5rem]">
+              {datas.map((item, i) => (
+                <ResourceCard
+                  key={i}
+                  src={item.src}
+                  title={item.title}
+                  desc={item.desc}
+                  category={item.category}
+                />
+              ))}
+            </div>
+          </TabPanel>
+          <TabPanel>Content 3</TabPanel>
+          <TabPanel>Content 4</TabPanel>
+          <TabPanel>Content 5</TabPanel>
+          <TabPanel>Content 6</TabPanel>
+        </TabPanels>
+      </TabGroup>
     </div>
   );
 };
 
-export default AipResourcesPage;
+export default AipResourceTabs;
