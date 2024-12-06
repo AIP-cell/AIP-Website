@@ -1,3 +1,4 @@
+"use client"
 import {
   Listbox,
   ListboxButton,
@@ -8,6 +9,7 @@ import { CheckIcon, ChevronDownIcon } from "@heroicons/react/20/solid";
 import clsx from "clsx";
 import { useState } from "react";
 import DownTagSvg from "../svg/DownTagSvg";
+// import { useRouter } from "next/navigation";
 
 export default function CustomGraySelect({
   selected,
@@ -15,9 +17,10 @@ export default function CustomGraySelect({
   setSelected,
 }: {
   selected: any;
-  data: { id: number; title: string }[];
+  data: string[];
   setSelected: (value: any) => void;
 }) {
+  // const router = useRouter();
   return (
     <div className="tw-mx-auto tw-w-full tw-px-[1.25rem]">
       <Listbox value={selected} onChange={setSelected}>
@@ -27,7 +30,7 @@ export default function CustomGraySelect({
             "focus:tw-outline-none data-[focus]:tw-outline-2 data-[focus]:-tw-outline-offset-2 data-[focus]:tw-outline-white/25"
           )}
         >
-          {selected.title}
+          {selected}
           <DownTagSvg className="~tw-w-[1.25rem]/[0.6rem] ~tw-h-[1.25rem]/[0.4rem]" />
         </ListboxButton>
         <ListboxOptions
@@ -40,12 +43,19 @@ export default function CustomGraySelect({
         >
           {data.map((item) => (
             <ListboxOption
-              key={item.title}
+              key={item}
               value={item}
               className="tw-group tw-flex tw-cursor-default tw-items-center tw-gap-2  tw-py-1.5 tw-px-3 tw-select-none tw-bg-gray-200 tw-text-black data-[focus]:tw-bg-gray-400 "
             >
-              <CheckIcon className="tw-invisible tw-size-4 tw-fill-darkPurple group-data-[selected]:tw-visible" />
-              <div className="tw-text-h9Copy4 tw-text-black">{item.title}</div>
+              {/* <CheckIcon className="tw-invisible tw-size-4 tw-fill-darkPurple group-data-[selected]:tw-visible" /> */}
+              <div
+                // onClick={() => {
+                //   // router.push(`${items.link}`);
+                // }}
+                className="tw-text-h9Copy4 tw-text-black"
+              >
+                {item}
+              </div>
             </ListboxOption>
           ))}
         </ListboxOptions>

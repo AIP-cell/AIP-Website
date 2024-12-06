@@ -1,21 +1,26 @@
 "use client";
-import OurCoreFoundersContent from "../founders/_components/OurCoreFoundersContent";
-import TeamAip from "../founders/_components/TeamAip";
+import OurCoreFoundersContent from "../core-founders/_components/OurCoreFoundersContent";
+import TeamAip from "../team-AIP/_components/TeamAip";
 import { useState } from "react";
 import CustomGraySelect from "@/components/custom/CustomGraySelect";
 import { useRouter } from "next/navigation";
+import Experts from "../experts/_components/Experts";
 
 const list = [
-  { id: 1, title: "Our Core Founders" },
-  { id: 2, title: "Founders" },
-  { id: 3, title: "Our Advisory Board" },
-  { id: 4, title: "Team AIP" },
+  "Our Core Founders",
+  "Founders",
+  "Our Advisory Board",
+  "Team AIP",
+  "Experts",
 ];
 
-const PeopleOfAipSm = () => {
-  const [selected, setSelected] = useState(list[0]);
+type Props = {
+  tabSelect: string;
+};
+const PeopleOfAipSm = ({ tabSelect }: Props) => {
+  const [selected, setSelected] = useState(tabSelect);
   const router = useRouter();
-  if (selected.id == 3) {
+  if (selected == "Our Advisory Board") {
     router.push("/people-of-aip/our-advisory-board/slug");
   }
   return (
@@ -27,10 +32,11 @@ const PeopleOfAipSm = () => {
           setSelected={setSelected}
         />
         <div>
-          {selected.id == 1 && <OurCoreFoundersContent />}
+          {selected === "Our Core Founders" && <OurCoreFoundersContent />}
           {/* {selected.id == 2 && <div>Content 2</div>}
           {selected.id == 3 && <div>Content 3</div>} */}
-          {selected.id == 4 && <TeamAip />}
+          {selected === "Team AIP" && <TeamAip />}
+          {selected === "Experts" && <Experts />}
         </div>
       </div>
     </div>

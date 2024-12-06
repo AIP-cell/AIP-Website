@@ -27,7 +27,7 @@ const PTeamCard = ({
 }: Props) => {
   return (
     <div className="~tw-w-[10.3rem]/[11.87rem] tw-relative">
-      <PMediumSizeSvg src="/images/pTeamSample.png" />
+      <PMediumSizeSvg src="/images/sample.png" />
       {linkedin && (
         <Image
           src={Linkedin}

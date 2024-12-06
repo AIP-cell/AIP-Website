@@ -7,12 +7,13 @@ type Props = {
   title: string;
   desc: string;
   category: string;
+  name?: string;
 };
-const ResourceCard = ({ src, title, desc, category }: Props) => {
+const ResourceCard = ({ src, title, desc, category, name }: Props) => {
   return (
     // tw-justify-center
-    <div className="tw-flex tw-flex-col  tw-items-center tw-gap-[0.75rem]">
-      <div className="tw-relative tw-w-full tw-h-[16.594rem]">
+    <div className="tw-flex tw-flex-col  tw-items-center ~tw-gap-[1.25rem]/[0.75rem]">
+      <div className="tw-relative tw-w-full ~tw-h-[19.688rem]/[16.594rem]">
         <Image
           src={src}
           alt="svg"
@@ -20,14 +21,19 @@ const ResourceCard = ({ src, title, desc, category }: Props) => {
           className="tw-object-cover tw-rounded-[1.25rem]"
         />
       </div>
-      <p className=" tw-w-full tw-text-h6M tw-text-gray80 tw-font-inter tw-font-semibold tw-leading-[1.575rem] tw-underline tw-underline-offset-4 tw-decoration-[1.5px]">
-        {title}
-      </p>
-      <p className="tw-text-h9Copy5 tw-text-gray50 tw-font-inter tw-leading-[1.225rem]">
-        {desc}
-      </p>
+      <div className="tw-flex tw-flex-col  tw-items-center tw-gap-[0.75rem]">
+        <p className=" tw-w-full tw-text-h6M tw-text-gray80 tw-font-inter tw-font-semibold tw-leading-[1.575rem] tw-underline tw-underline-offset-4 tw-decoration-[1.5px]">
+          {title}
+        </p>
+        <p className=" tw-w-full tw-text-gray40 tw-font-playFairItalic tw-font-medium ~tw-leading-[1.4rem]/[1.575rem] ">
+          {name}
+        </p>
+        <p className="tw-text-h9Copy5 tw-text-gray50 tw-font-inter tw-leading-[1.225rem]">
+          {desc}
+        </p>
+      </div>
       <div className="tw-h-px tw-bg-footerGray tw-w-full"></div>
-      <div className="tw-flex tw-justify-between tw-w-full tw-text-h9BodyCopy5 tw-text-gray50 tw-font-inter tw-leading-[1.225rem]">
+      <div className="tw-flex tw-justify-between tw-w-full tw-text-h9Copy5 tw-text-gray50 tw-font-inter tw-leading-[1.225rem]">
         <p>11 Jul 2024</p>
         <p>{category}</p>
       </div>

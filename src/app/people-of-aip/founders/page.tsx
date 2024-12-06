@@ -16,7 +16,7 @@ const page = () => {
         />
       </div>
       <PeopleOfAipTab tabSelect="founders" />
-      <PeopleOfAipSm />
+      <PeopleOfAipSm tabSelect="Founders"/>
     </div>
   );
 };

@@ -1,10 +1,10 @@
 "use client";
 import React, { useState } from "react";
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
-import OurCoreFoundersContent from "../founders/_components/OurCoreFoundersContent";
-import TeamAip from "../founders/_components/TeamAip";
+import OurCoreFoundersContent from "../core-founders/_components/OurCoreFoundersContent";
+import TeamAip from "../team-AIP/_components/TeamAip";
 import Link from "next/link";
-import Experts from "../founders/_components/Experts";
+import Experts from "../experts/_components/Experts";
 import cn from "@/utils/tailwind";
 
 type Props = {
@@ -31,19 +31,19 @@ const PeopleOfAipTab = ({ tabSelect }: Props) => {
         className="tw-flex tw-w-full tw-flex-col tw-items-center tw-justify-center"
       >
         <TabList className="tw-flex tw-bg-[#F0F0F2] tw-p-1 tw-rounded-full tw-w-fit">
-          <Tab className="tw-px-[2.5rem] tw-py-[0.75rem] data-[selected]:tw-bg-darkPurple data-[selected]:tw-text-white data-[selected]:tw-rounded-full tw-text-h9Copy5 tw-leading-[1.22rem] tw-font-inter data-[selected]:tw-outline-none">
+          <Tab className="~tw-px-[1rem]/[2.5rem] tw-py-[0.75rem] data-[selected]:tw-bg-darkPurple data-[selected]:tw-text-white data-[selected]:tw-rounded-full tw-text-h9Copy5 tw-leading-[1.22rem] tw-font-inter data-[selected]:tw-outline-none">
             <Link href="/people-of-aip/core-founders">Core Founders</Link>
           </Tab>
           <Tab
             className={cn(
-              "tw-px-[2.5rem] tw-py-[0.75rem] data-[selected]:tw-bg-darkPurple data-[selected]:tw-text-white data-[selected]:tw-rounded-full tw-text-h9Copy5 tw-leading-[1.22rem] tw-font-inter data-[selected]:tw-outline-none"
+              "~tw-px-[1.5rem]/[2.5rem] tw-py-[0.75rem] data-[selected]:tw-bg-darkPurple data-[selected]:tw-text-white data-[selected]:tw-rounded-full tw-text-h9Copy5 tw-leading-[1.22rem] tw-font-inter data-[selected]:tw-outline-none"
             )}
           >
             <Link href="/people-of-aip/founders">Founders</Link>
           </Tab>
           <Tab
             className={cn(
-              "tw-px-[2.5rem] tw-py-[0.75rem] data-[selected]:tw-bg-darkPurple data-[selected]:tw-text-white data-[selected]:tw-rounded-full tw-text-h9Copy5 tw-leading-[1.22rem] tw-font-inter data-[selected]:tw-outline-none"
+              "~tw-px-[1.5rem]/[2.5rem] tw-py-[0.75rem] data-[selected]:tw-bg-darkPurple data-[selected]:tw-text-white data-[selected]:tw-rounded-full tw-text-h9Copy5 tw-leading-[1.22rem] tw-font-inter data-[selected]:tw-outline-none"
             )}
           >
             <Link href="/people-of-aip/our-advisory-board/slug">
@@ -52,14 +52,14 @@ const PeopleOfAipTab = ({ tabSelect }: Props) => {
           </Tab>
           <Tab
             className={cn(
-              "tw-px-[2.5rem] tw-py-[0.75rem] data-[selected]:tw-bg-darkPurple data-[selected]:tw-text-white data-[selected]:tw-rounded-full tw-text-h9Copy5 tw-leading-[1.22rem] tw-font-inter data-[selected]:tw-outline-none"
+              "~tw-px-[1.5rem]/[2.5rem] tw-py-[0.75rem] data-[selected]:tw-bg-darkPurple data-[selected]:tw-text-white data-[selected]:tw-rounded-full tw-text-h9Copy5 tw-leading-[1.22rem] tw-font-inter data-[selected]:tw-outline-none"
             )}
           >
             <Link href="/people-of-aip/team-AIP">Team AIP</Link>
           </Tab>
           <Tab
             className={cn(
-              "tw-px-[2.5rem] tw-py-[0.75rem] data-[selected]:tw-bg-darkPurple data-[selected]:tw-text-white data-[selected]:tw-rounded-full tw-text-h9Copy5 tw-leading-[1.22rem] tw-font-inter data-[selected]:tw-outline-none"
+              "~tw-px-[1.5rem]/[2.5rem] tw-py-[0.75rem] data-[selected]:tw-bg-darkPurple data-[selected]:tw-text-white data-[selected]:tw-rounded-full tw-text-h9Copy5 tw-leading-[1.22rem] tw-font-inter data-[selected]:tw-outline-none"
             )}
           >
             <Link href="/people-of-aip/experts">Experts</Link>

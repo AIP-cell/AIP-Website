@@ -28,7 +28,7 @@ const ATeamCard = ({
   locationClassName,
 }: Props) => {
   return (
-    <div className="~tw-w-[10.3rem]/[11.87rem] tw-relative">
+    <div className="~tw-w-[10rem]/[11.87rem] tw-relative">
       <AMediumSizeSvg
         src="/images/sample.png"
         // className="tw-w-[11.87rem] tw-h-[13.88rem]"

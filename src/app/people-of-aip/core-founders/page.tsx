@@ -15,7 +15,7 @@ const page = () => {
         />
       </div>
       <PeopleOfAipTab tabSelect="core-founders" />
-      <PeopleOfAipSm />
+      <PeopleOfAipSm tabSelect="Our Core Founders"/>
     </div>
   );
 };

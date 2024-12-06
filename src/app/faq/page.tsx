@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import FaqItem from "./_components/FaqItem";
 import BgFaq from "@public/svg/bg-faq.svg";
 import List from "./_components/List";
 import Image from "next/image";
@@ -9,11 +8,12 @@ import BreadCrump from "@/components/bread-crump/BreadCrump";
 import CustomGraySelect from "@/components/custom/CustomGraySelect";
 import FaqTab from "./_components/FaqTab";
 import { TabGroup, TabPanel, TabPanels } from "@headlessui/react";
+import { FaqItem } from "./_components/FaqItem";
 const list = [
-  { id: 1, title: "General Inquiry" },
-  { id: 2, title: "Founder Network" },
-  { id: 3, title: "Philanthropic Network" },
-  { id: 4, title: "NPO" },
+  "General Inquiry",
+  "Founder Network",
+  "Philanthropic Network",
+  "NPO",
 ];
 const FaqPage = () => {
   const [selected, setSelected] = useState(list[0]);
@@ -23,7 +23,7 @@ const FaqPage = () => {
         <Image
           src={BgFaq}
           alt=""
-          className="tw-left-0 tw-absolute tw-top-[5rem] "
+          className="tw-hidden lg:tw-block tw-left-0 tw-absolute tw-top-[5rem] "
         />
 
         <TabGroup className="tw-relative container tw-mx-auto ~tw-px-[1.25rem]/[7.75rem] tw-pt-[5rem] tw-grid md:tw-grid-cols-3 tw-gap-[3.75rem] tw-h-screen">

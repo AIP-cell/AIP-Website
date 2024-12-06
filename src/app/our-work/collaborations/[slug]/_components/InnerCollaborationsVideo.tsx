@@ -11,20 +11,20 @@ const InnerCollaborationsVideo = () => {
       <Image
         src={LeftCurve}
         alt=""
-        className="tw-absolute tw-left-0 tw-bottom-[-15rem]"
+        className="tw-hidden tw-absolute tw-left-0 tw-bottom-[-15rem]"
       />
 
-      <div className="~tw-pt-8/[3.5rem]  container tw-relative tw-flex tw-justify-center tw-mx-auto">
+      <div className="~tw-pt-[2rem]/[3.5rem]   container tw-relative tw-flex tw-justify-center tw-mx-auto">
         <div className="tw-w-[64.375rem] tw-relative tw-flex tw-justify-center tw-items-center ~tw-h-[12.313rem]/[35.313rem] tw-overflow-hidden tw-rounded-lg">
-          <Image
+          {/* <Image
             src={rightBottomCurve}
             alt="video-bg"
             className=" tw-absolute tw-left-0 tw-bottom-[-18.625rem]"
-          />
+          /> */}
           <Image
             src={BgVideo}
             alt="video-bg"
-            className="tw-object-cover tw-absolute tw-inset-0"
+            className="tw-object-cover tw-absolute tw-inset-0 tw-rounded-lg"
           />
           <Image src={videoPlaySvg} alt="play-svg" className="tw-z-10" />
         </div>

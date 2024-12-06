@@ -22,10 +22,10 @@ const ExpertInnerPage = () => {
         <Image
           src={Bg}
           alt="background-svg"
-          className="tw-hidden md:tw-block tw-absolute tw-top-0 tw-right-0 tw-z-[-1]"
+          className="tw-absolute ~tw-top-[2.75rem]/0 tw-right-0 tw-z-[-1] ~tw-w-[15.438rem]/[32.813rem] ~tw-h-[23.524rem]/[50rem]"
         />
         <div className="tw-relative container tw-mx-auto">
-          <div className="~tw-px-[1.25rem]/[7.8rem] ~tw-pb-[4rem]/[7.5rem]">
+          <div className="~tw-px-[1.25rem]/[7.8rem] ~tw-pb-0/[7.5rem]">
             <BreadCrump
               textOne="People of AIP"
               linkOne="/people-of-aip"
@@ -42,14 +42,14 @@ const ExpertInnerPage = () => {
                 <h4 className="tw-pt-[1rem] ~tw-text-h6/h5 tw-text-gray40 tw-font-playFairItalic ~tw-pr-[4rem]/0">
                   Founder-CEO, The Convergence Foundation
                 </h4>
-                <div className="tw-pt-[2.5rem] tw-text-midGray ~tw-pr-0/[6.56rem]">
-                  <p className="~tw-leading-[1.225rem]/[1.4rem]">
+                <div className="~tw-pt-[2rem]/[2.5rem] tw-text-midGray ~tw-pr-0/[6.56rem]">
+                  <p className="~tw-leading-[1.225rem]/[1.4rem] ~tw-text-h9Copy5/h9Copy4">
                     Ashish Dhawan is the Founder-CEO of The Convergence
                     Foundation (TCF) which is focused on accelerating India’s
                     economic growth and development. Ashish is also the Founding
                     Chairperson of Ashoka University.
                   </p>
-                  <p className="~tw-leading-[1.225rem]/[1.4rem] tw-pt-[1.5rem]">
+                  <p className="~tw-leading-[1.225rem]/[1.4rem] ~tw-text-h9Copy5/h9Copy4 ~tw-pt-[1rem]/[1.5rem]">
                     TCF incubates non-profits focused on creating system-wide
                     impact in the areas of economic growth, equality of
                     opportunity and sustainability. Its current portfolio
@@ -59,7 +59,7 @@ const ExpertInnerPage = () => {
                     philanthropic capital, and improving the effectiveness of
                     nonprofits.
                   </p>
-                  <p className="~tw-leading-[1.225rem]/[1.4rem] tw-pt-[1.5rem]">
+                  <p className="~tw-leading-[1.225rem]/[1.4rem] ~tw-text-h9Copy5/h9Copy4 ~tw-pt-[1rem]/[1.5rem]">
                     Ashoka University was established as a university in 2014
                     and is already recognized as a leading teaching and research
                     institute across the humanities, social sciences, natural
@@ -69,20 +69,20 @@ const ExpertInnerPage = () => {
                     several state governments in improving learning outcomes in
                     the early grades.
                   </p>
-                  <p className="~tw-leading-[1.225rem]/[1.4rem] ">
+                  <p className="~tw-leading-[1.225rem]/[1.4rem] ~tw-text-h9Copy5/h9Copy4 ">
                     Ashish also serves on the governing board of the Bill and
                     Melinda Gates Foundation (BMGF).
                   </p>
-                  <p className="~tw-leading-[1.225rem]/[1.4rem] tw-pt-[1.5rem]">
+                  <p className="~tw-leading-[1.225rem]/[1.4rem] ~tw-text-h9Copy5/h9Copy4 ~tw-pt-[1rem]/[1.5rem]">
                     Before his second career as a philanthropist, Ashish was
                     among India’s most successful private equity investors. He
                     founded and ran ChrysCapital, the country’s leading private
                     equity firm. Ashish graduated from Yale University and
                     received his MBA from Harvard Business School.
                   </p>
-                  <div className=" tw-pt-[2.5rem]  tw-flex-col tw-flex tw-gap-[1rem]">
+                  <div className=" ~tw-pt-[2rem]/[2.5rem]  tw-flex-col tw-flex tw-gap-[1rem]">
                     <div className="tw-flex tw-gap-[1rem]">
-                      <ButtonAnimation className="tw-rounded-full tw-p-[0.875rem] tw-bg-bgGray5">
+                      <ButtonAnimation className="tw-rounded-full ~tw-p-[0.5rem]/[0.875rem] tw-bg-bgGray5">
                         {/* <LinkedinSvg className="tw-size-[1.5rem]"/> */}
                         <Image
                           src={Linkedin}
@@ -95,15 +95,15 @@ const ExpertInnerPage = () => {
                         {/* <Image src={X} alt="" className="" /> */}
                       </ButtonAnimation>
                     </div>
-                    <div className="tw-flex tw-w-fit tw-gap-[0.98rem] tw-px-[1.25rem] tw-py-[0.76rem] tw-bg-bgGray5 tw-rounded-full">
+                    <div className="tw-flex tw-w-[17.375rem] tw-gap-[0.98rem] tw-px-[1.25rem] tw-py-[0.76rem] tw-bg-bgGray5 tw-rounded-full">
                       <Image src={LinkSvg} alt="" className="" />
-                      <p className="tw-text-gray80 tw-leading-[1.4rem]">
+                      <p className="tw-text-gray80 ~tw-leading-[1.225rem]/[1.4rem] ~tw-text-h9Copy5/h9Copy4">
                         theconvergencefoundation
                       </p>
                     </div>
-                    <div className="tw-flex tw-w-fit tw-gap-[0.98rem] tw-px-[1.25rem] tw-py-[0.76rem] tw-bg-bgGray5 tw-rounded-full">
+                    <div className="tw-flex tw-w-[17.375rem] tw-gap-[0.98rem] tw-px-[1.25rem] tw-py-[0.76rem] tw-bg-bgGray5 tw-rounded-full">
                       <Image src={LinkSvg} alt="" className="" />
-                      <p className="tw-text-gray80 tw-leading-[1.4rem]">
+                      <p className="tw-text-gray80 ~tw-leading-[1.225rem]/[1.4rem] ~tw-text-h9Copy5/h9Copy4">
                         abcdxyze_loremipsum
                       </p>
                     </div>
@@ -122,12 +122,12 @@ const ExpertInnerPage = () => {
                 </p>
               </div>
             </div>
+            <div className="">
+              <InnerCollaborationsVideo />
+            </div>
           </div>
         </div>
-        <div className="">
-          <InnerCollaborationsVideo />
-        </div>
-        <Contribution/>
+        <Contribution />
       </div>
     </div>
   );

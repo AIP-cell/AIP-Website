@@ -8,7 +8,7 @@ const ASvg = ({ src, ...props }: Props) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 295 345"
+      viewBox="0 0 300 345"
       fill="none"
       {...props}
     >
