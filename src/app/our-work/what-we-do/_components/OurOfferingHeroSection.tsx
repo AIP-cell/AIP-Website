@@ -62,14 +62,23 @@ const OurOfferingHeroSection = () => {
             points: 3,
           }}
         />
+        {/* ~tw-pt-[5.5rem]/[11rem] */}
 
-        <div className=" tw-bg-[#faecc894] ~tw-pt-[5.5rem]/[11rem] ~tw-pb-[5.5rem]/[10.798rem] tw-w-full ">
+        <div className=" tw-bg-[#faecc894] ~tw-pt-[3rem]/[6.25rem] ~tw-pb-[3rem]/[7.6rem] tw-w-full ">
           <div className="container tw-mx-auto tw-flex tw-justify-center tw-flex-col tw-items-center tw-relative tw-z-50 ~tw-px-5/[14.375rem] ">
-            <h3 className=" tw-leading-[20.64px] tw-uppercase tw-font-inter tw-text-[#121314] tw-font-semibold">
-              previous sectors engaged
+            <h3 className=" ~tw-leading-[1.129rem]/[1.29rem] ~tw-text-h9Copy5/h9Copy4 tw-uppercase tw-font-inter tw-text-lightPeach/60 tw-font-semibold">
+              Philanthropy is what it does.
             </h3>
-            <h2 className="tw-pt-[1.25rem] tw-tracking-[-1px] tw-text-center ~tw-text-h4/h3 tw-leading-[2.6rem] tw-font-playFair tw-text-gray80">
-            AIP is sector-agnostic, offering our network members services across a diverse range of sectors driven by their own philanthropic motivations and passions. While many of our members continue supporting traditional sectors for widespread impact, we’ve also noticed a growing interest among philanthropists–particularly from the younger generation–in specific sub-sectors. This trend is not only diversifying our giving pool but also enriching our collective efforts.
+            <h2 className="tw-pt-[1.25rem] md:tw-tracking-[-1px] tw-text-center ~tw-text-h7Copy3/h3 ~tw-leading-[1.788rem]/[2.6rem] tw-font-playFair tw-text-gray80">
+              AIP is a sector-agnostic organization, meaning we do not
+              specialize in any one sector but instead offer our expertise
+              across a wide range of fields. We work in any sector that aligns
+              with the philanthropist's goals, ensuring that their contributions
+              are strategically guided and effectively implemented. By not being
+              confined to a specific sector, we are able to tailor our approach
+              to meet the unique needs and aspirations of each philanthropist,
+              empowering them to create meaningful change wherever their passion
+              lies.
             </h2>
           </div>
         </div>

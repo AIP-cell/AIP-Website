@@ -1,19 +1,7 @@
-"use client";
-import React, { useState } from "react";
-import { TabGroup, TabPanel, TabPanels } from "@headlessui/react";
-import ResourcesTabs from "../_components/ResourcesTabs";
-import CustomSelect from "@/components/custom/CustomSelect";
 import ResourceCard from "@/components/cards/ResourceCard";
 import CustomFilter from "@/components/custom/CustomFilter";
+import React from "react";
 
-const resourcesArray = [
-  "AIP Updates",
-  "Reports & Publications",
-  " Newsletter",
-  " Inspirational Voices",
-  " In the Media",
-  " Gallery",
-];
 const datas = [
   {
     src: "/svg/resource-page/resource1.svg",
@@ -52,10 +40,9 @@ const datas = [
     category: "Field",
   },
 ];
-
 const filterDatas = [
   {
-    type: "domain",
+    type: "Expert Name",
     filter: [
       "All",
       "Art & Culture",
@@ -72,78 +59,43 @@ const filterDatas = [
     ],
   },
   {
-    type: "Type of Content",
+    type: "Fields",
     filter: ["data1", "data2"],
   },
   { type: "Date", filter: ["data1", "data2"] },
 ];
-
-const AipResourceTabs = () => {
-  const [selectedIndex, setSelectedIndex] = useState(0);
+const ExpertsCuratedResource = () => {
   return (
-    <div>
-      <TabGroup
-        selectedIndex={selectedIndex}
-        onChange={setSelectedIndex}
-        className="tw-flex tw-flex-col tw-justify-center "
-      >
-        <ResourcesTabs
-          resourcesArray={resourcesArray}
-          selectedIndex={selectedIndex}
-          //   setSelected={setSelected}
-          setSelectedIndex={setSelectedIndex}
-          textClassName="  "
-          listClassName="!tw-w-full"
-        />
-        <TabPanels className="">
-          <TabPanel>aaa</TabPanel>
-          <TabPanel>
-            <div className="tw-flex tw-flex-wrap tw-pt-[2rem] tw-items-center tw-gap-[0.75rem]">
-              <p className="~tw-pb-[1.25rem]/0 tw-text-gray40  ~tw-text-h9Copy5/h9Copy4 ~tw-leading-[1.225rem]/[1.4rem]">
-                Filter by:
-              </p>
-              <div className="tw-flex tw-flex-wrap tw-gap-[.75rem]">
-                {filterDatas.map((items, i) => (
-                  <CustomFilter
-                    type={items.type}
-                    key={i}
-                    optionsArray={items.filter}
-                    ListboxButtonClassName="!tw-w-fit"
-                    selectedClassName="!tw-w-fit"
-                  />
-                ))}
-              </div>
-              {/* <CustomSelect
-                  optionsArray={filterDatas.typeContent}
-                  ListboxButtonClassName="!tw-w-fit"
-                  selectedClassName="!tw-w-fit"
-                />
-                <CustomSelect
-                  optionsArray={filterDatas.date}
-                  ListboxButtonClassName="!tw-w-fit"
-                  selectedClassName="!tw-w-fit"
-                /> */}
-            </div>
-            <div className="tw-pt-[3.25rem] tw-pb-[7.5rem] tw-grid md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-[4.5rem]">
-              {datas.map((item, i) => (
-                <ResourceCard
-                  key={i}
-                  src={item.src}
-                  title={item.title}
-                  desc={item.desc}
-                  category={item.category}
-                />
-              ))}
-            </div>
-          </TabPanel>
-          <TabPanel>Content 3</TabPanel>
-          <TabPanel>Content 4</TabPanel>
-          <TabPanel>Content 5</TabPanel>
-          <TabPanel>Content 6</TabPanel>
-        </TabPanels>
-      </TabGroup>
-    </div>
+    <>
+      <div className="tw-flex tw-flex-wrap tw-pt-[2rem] tw-items-center tw-gap-[0.75rem]">
+        <p className="~tw-pb-[1.25rem]/0 tw-text-gray40  ~tw-text-h9Copy5/h9Copy4 ~tw-leading-[1.225rem]/[1.4rem]">
+          Filter by:
+        </p>
+        <div className="tw-flex tw-flex-wrap tw-gap-[.75rem]">
+          {filterDatas.map((items, i) => (
+            <CustomFilter
+              key={i}
+              type={items.type}
+              optionsArray={items.filter}
+              ListboxButtonClassName="!tw-w-fit"
+              selectedClassName="!tw-w-fit"
+            />
+          ))}
+        </div>
+      </div>
+      <div className="tw-pt-[3.25rem] tw-pb-[7.5rem] tw-grid md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-[4.5rem]">
+        {datas.map((item, i) => (
+          <ResourceCard
+            key={i}
+            src={item.src}
+            title={item.title}
+            desc={item.desc}
+            category={item.category}
+          />
+        ))}
+      </div>
+    </>
   );
 };
 
-export default AipResourceTabs;
+export default ExpertsCuratedResource;

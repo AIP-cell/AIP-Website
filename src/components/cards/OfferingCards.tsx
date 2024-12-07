@@ -12,24 +12,32 @@ const OfferingCard = ({ text1, text2, text3, index }: Props) => {
   return (
     <div className=" tw-grid tw-grid-cols-1 md:tw-grid-cols-5 tw-gap-[1.25rem]">
       <div
-        className={cn("tw-col-span-2 tw-justify-center tw-items-center", {
-          "md:tw-order-2 ": index % 2 == 1,
-        })}
+        className={cn(
+          "tw-col-span-2 ~tw-size-[20rem]/[24.938rem] tw-justify-center tw-items-center",
+          {
+            "md:tw-order-2 ": index % 2 == 1,
+          }
+        )}
       >
         <OvalPurple
           textClass2="tw-font-playFair ~tw-text-h4a/h4"
           textClass1="tw-font-playFair ~tw-text-h4a/h4 "
           text1="Networking &"
           text2="Convening"
-          sizeClass="tw-aspect-square"
+          sizeClass="~tw-size-[20rem]/[24.938rem]"
         />
       </div>
       <div
-        className={cn("tw-col-span-3  tw-relative  tw-h-full tw-flex tw-items-center", {
-          "md:tw-order-1": index % 2 === 1,
-        })}
+        className={cn(
+          "tw-col-span-3  tw-relative  tw-h-full tw-flex tw-items-center",
+          {
+            "md:tw-order-1": index % 2 === 1,
+          }
+        )}
       >
-        <p className="tw-leading-[1.4rem]  tw-text-midGray">{text1}</p>
+        <p className="~tw-text-h9Copy5/h9Copy4 ~tw-leading-[1.225rem]/[1.4rem]  tw-text-midGray">
+          {text1}
+        </p>
         {/* <p className="tw-leading-[1.4rem] tw-text-gray80 tw-pt-[2rem]">
           {text2}
         </p>

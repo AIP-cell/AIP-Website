@@ -24,7 +24,7 @@ const InnerCollaborationsVideo = () => {
           <Image
             src={BgVideo}
             alt="video-bg"
-            className="tw-object-cover tw-absolute tw-inset-0 tw-rounded-lg"
+            className="tw-object-cover tw-absolute tw-inset-0 tw-rounded-lg tw-h-full"
           />
           <Image src={videoPlaySvg} alt="play-svg" className="tw-z-10" />
         </div>

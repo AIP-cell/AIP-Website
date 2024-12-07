@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import BreadCrump from "@/components/bread-crump/BreadCrump";
 import ResourcesSm from "../_components/ResourcesSm";
@@ -6,6 +6,7 @@ import ResourcesTabs from "../_components/ResourcesTabs";
 import { TabGroup, TabPanel, TabPanels } from "@headlessui/react";
 import CustomSelect from "@/components/custom/CustomSelect";
 import ResourceCard from "@/components/cards/ResourceCard";
+import CuratedResourcesTabs from "./_components/CuratedResourcesTabs";
 const resourcesArray = [
   "Featured",
   "Experts",
@@ -71,93 +72,8 @@ const CuratedResourcesPage = () => {
             </p>
           </div>
         </div>
-        <ResourcesSm />
-        <TabGroup className="md:tw-flex tw-hidden tw-flex-col tw-justify-center ">
-          <ResourcesTabs
-            textClassName="!tw-px-0"
-            listClassName="!tw-w-full"
-            resourcesArray={resourcesArray}
-          />
-          <TabPanels className="">
-            <TabPanel>Content 1</TabPanel>
-            <TabPanel>
-              <div className="tw-flex tw-pt-[2rem] tw-gap-[.75rem]">
-                <p className="tw-py-3 tw-text-gray40 ">Filter by:</p>
-
-                <CustomSelect
-                  optionsArray={["Domain"]}
-                  ListboxButtonClassName="!tw-w-fit"
-                  selectedClassName="!tw-w-fit"
-                />
-
-                <CustomSelect
-                  optionsArray={["Type of Content"]}
-                  ListboxButtonClassName="!tw-w-fit"
-                  selectedClassName="!tw-w-fit"
-                />
-                <CustomSelect
-                  optionsArray={["Organisation Type"]}
-                  ListboxButtonClassName="!tw-w-fit"
-                  selectedClassName="!tw-w-fit"
-                />
-                <CustomSelect
-                  optionsArray={["Date"]}
-                  ListboxButtonClassName="!tw-w-fit"
-                  selectedClassName="!tw-w-fit"
-                />
-              </div>
-              <div className="tw-pt-[3.25rem] tw-pb-[7.5rem] tw-grid md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-[4.5rem]">
-                {datas.map((item, i) => (
-                  <Link key={i} href="/resource-center/curated-resources/experts/slug">
-                    <ResourceCard
-                      src={item.src}
-                      title={item.title}
-                      desc={item.desc}
-                      category={item.category}
-                    />
-                  </Link>
-                ))}
-              </div>
-            </TabPanel>
-            <TabPanel>Content 3</TabPanel>
-            <TabPanel>
-              <div className="tw-flex tw-pt-[2rem] tw-gap-[.75rem]">
-                <p className="tw-py-3 tw-text-gray40 ">Filter by:</p>
-
-                <CustomSelect
-                  optionsArray={["Expert Name"]}
-                  ListboxButtonClassName="!tw-w-fit"
-                  selectedClassName="!tw-w-fit"
-                />
-
-                <CustomSelect
-                  optionsArray={["Fields"]}
-                  ListboxButtonClassName="!tw-w-fit"
-                  selectedClassName="!tw-w-fit"
-                />
-
-                <CustomSelect
-                  optionsArray={["Date"]}
-                  ListboxButtonClassName="!tw-w-fit"
-                  selectedClassName="!tw-w-fit"
-                />
-              </div>
-              <div className="tw-pt-[3.25rem] tw-pb-[7.5rem] tw-grid md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-[4.5rem]">
-                {datas.map((item, i) => (
-                  <ResourceCard
-                    key={i}
-                    src={item.src}
-                    title={item.title}
-                    desc={item.desc}
-                    category={item.category}
-                  />
-                ))}
-              </div>
-            </TabPanel>
-            <TabPanel>Content 5</TabPanel>
-            <TabPanel>Content 6</TabPanel>
-          </TabPanels>
-        </TabGroup>
+        {/* <ResourcesSm /> */}
+        <CuratedResourcesTabs />
       </div>
     </div>
   );

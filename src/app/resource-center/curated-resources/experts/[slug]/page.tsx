@@ -47,8 +47,7 @@ const page = () => {
   return (
     <div className="tw-pt-[5rem]">
       <InnerExpertsSectionOne />
-      <InnerCollaborationsVideo />
-      <div className="container tw-mx-auto">
+      <div className="container tw-mx-auto ~tw-pb-[5rem]/[7.5rem]">
         <Gallery />
       </div>
     </div>

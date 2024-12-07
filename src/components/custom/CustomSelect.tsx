@@ -13,7 +13,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import DownTagSvg from "../svg/DownTagSvg";
 type Props = {
-  optionsArray?: any[];
+  optionsArray?: any;
   ListboxButtonClassName?: string;
   selectedClassName?: string;
 };
