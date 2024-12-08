@@ -107,8 +107,6 @@ const page = () => {
                   type={items.type}
                   key={i}
                   optionsArray={items.filter}
-                  ListboxButtonClassName="!tw-w-fit"
-                  selectedClassName="!tw-w-fit"
                 />
               ))}
             </div>

@@ -29,8 +29,8 @@ const datas = [
 ];
 const Contribution = () => {
   return (
-    <div className="~tw-pt-[5rem]/[10rem] container tw-mx-auto tw-flex tw-flex-col tw-items-center">
-      <h2 className="~tw-text-h4/h2 ~tw-leading-[2.6rem]/[3.3rem] ~tw-pb-0/[5rem] tw-text-center tw-font-playFair tw-text-gray80">
+    <div className="~tw-pt-[5rem]/[2.5rem] container tw-mx-auto tw-flex tw-flex-col tw-items-center">
+      <h2 className="~tw-text-h4/h2 ~tw-leading-[2.6rem]/[3.3rem] ~tw-pb-0/[1.75rem] tw-text-center tw-font-playFair tw-text-gray80">
         <span className="tw-font-playFairItalic tw-text-textPurple">
           Selected
         </span>{" "}

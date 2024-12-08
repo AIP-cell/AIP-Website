@@ -14,28 +14,52 @@ import RightSlickArrowSvg from "@/components/svg/RightSlickArrowSvg";
 import LeftSlickArrowSvg from "@/components/svg/LeftSlickArrowSvg";
 import cn from "@/utils/tailwind";
 import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
-const founderData: any = [
+const founderData = [
   {
     image: "/images/aSample.png",
-    name: "1Ashish Dhawan",
+    name: "0Ashish Dhawan",
     post: "The Convergence Foundation",
     desc: "I believe a lot more needs to be done particularly to encourage first-time givers. AIP aims to fill this gap and spur philanthropy in a very structured manner.",
   },
   {
     image: "/images/pSample.png",
-    name: "2Rohini Nilekani",
+    name: "1Rohini Nilekani",
     post: "Rohini Nilekani Philanthropies",
     desc: "I believe those who are already in philanthropy and enjoying it and making a difference have a responsibility to share their stories widely, and to be very transparent about their giving. By promoting such accountability, AIP is playing an essential role in building trust with the communities we serve.",
   },
   {
     image: "/images/aSample.png",
-    name: "3Vishal Tulsyan",
+    name: "2Vishal Tulsyan",
     post: "Abhiyan Bharat Foundation India",
     desc: "Effective philanthropy is not just about the act of giving, but a commitment to social transformation. Like in businesses and in professional life, it is time that we think about philanthropy in terms of scale with a lasting and sustainable long term impact. AIP brings together a strong group of changemakers to enable this change in thought process.",
   },
   {
     image: "/images/pSample.png",
-    name: "4Amit Chandra",
+    name: "3Amit Chandra",
+    post: "ATE Chandra Foundation",
+    desc: "“I believe those who are already in philanthropy and enjoying it and making a difference have a responsibility to share their stories widely, and to be very transparent about their giving. By promoting such accountability, AIP is playing an essential role in building trust with the communities we serve.”",
+  },
+  {
+    image: "/images/aSample.png",
+    name: "4Ashish Dhawan",
+    post: "The Convergence Foundation",
+    desc: "I believe a lot more needs to be done particularly to encourage first-time givers. AIP aims to fill this gap and spur philanthropy in a very structured manner.",
+  },
+  {
+    image: "/images/pSample.png",
+    name: "5Rohini Nilekani",
+    post: "Rohini Nilekani Philanthropies",
+    desc: "I believe those who are already in philanthropy and enjoying it and making a difference have a responsibility to share their stories widely, and to be very transparent about their giving. By promoting such accountability, AIP is playing an essential role in building trust with the communities we serve.",
+  },
+  {
+    image: "/images/aSample.png",
+    name: "6Vishal Tulsyan",
+    post: "Abhiyan Bharat Foundation India",
+    desc: "Effective philanthropy is not just about the act of giving, but a commitment to social transformation. Like in businesses and in professional life, it is time that we think about philanthropy in terms of scale with a lasting and sustainable long term impact. AIP brings together a strong group of changemakers to enable this change in thought process.",
+  },
+  {
+    image: "/images/pSample.png",
+    name: "7Amit Chandra",
     post: "ATE Chandra Foundation",
     desc: "“I believe those who are already in philanthropy and enjoying it and making a difference have a responsibility to share their stories widely, and to be very transparent about their giving. By promoting such accountability, AIP is playing an essential role in building trust with the communities we serve.”",
   },
@@ -58,12 +82,6 @@ const Founder = () => {
   };
   return (
     <div className="tw-w-full  tw-relative ~tw-mt-0/[-12rem]">
-      {/* <Image
-        src={FounderBg}
-        alt=""
-        className="tw-absolute tw-inset-0 tw-w-full tw-top-[-13rem]"
-      /> */}
-
       <Image src={TopImage} alt="" className="tw-w-full " />
       <div className="tw-w-full tw-bg-founderGradient ~tw-h-[50rem]/[68rem] tw-relative tw-mt-[-1px]">
         <div className="tw-absolute tw-top-0 tw-w-full">
@@ -114,10 +132,10 @@ const Founder = () => {
                     >
                       <ACardWithPlaySign
                         linkedin={true}
-                        image={founderData.at(select).image}
-                        desc={founderData.at(select).desc}
-                        post={founderData.at(select).post}
-                        name={founderData.at(select).name}
+                        image={founderData.at(select)!.image}
+                        desc={founderData.at(select)!.desc}
+                        post={founderData.at(select)!.post}
+                        name={founderData.at(select)!.name}
                       />
                     </div>
                     <div
@@ -129,10 +147,11 @@ const Founder = () => {
                       )}
                     >
                       <PCardWithPlaySign
-                        image={founderData.at(select).image}
-                        desc={founderData.at(select).desc}
-                        post={founderData.at(select).post}
-                        name={founderData.at(select).name}
+                        linkedin={true}
+                        image={founderData.at(select)!.image}
+                        desc={founderData.at(select)!.desc}
+                        post={founderData.at(select)!.post}
+                        name={founderData.at(select)!.name}
                       />
                     </div>
                   </>
@@ -151,38 +170,64 @@ const Founder = () => {
                   </div>
                 </div>
                 <div className="tw-hidden lg:tw-block tw-relative tw-pt-[3.43rem] ">
-                  <div className="tw-flex tw-gap-[4.56rem]">
-                    <ACardWithPlaySign
-                      linkedin
-                      image="/images/aSample.png"
-                      desc="“I believe a lot more needs to be done particularly to encourage first-time givers. AIP aims to fill this gap and spur philanthropy in a very structured manner.’’"
-                      post="The Convergence Foundation"
-                      name="Ashish Dhawan"
-                    />
-                    <PCardWithPlaySign
-                      linkedin
-                      image="/images/pSample.png"
-                      name="Rohini Nilekani"
-                      post="Rohini Nilekani Philanthropies"
-                      desc="I believe those who are already in philanthropy and enjoying it and making a difference have a responsibility to share their stories widely, and to be very transparent about their giving. By promoting such accountability, AIP is playing an essential role in building trust with the communities we serve."
-                    />
-                  </div>
-                  <div className="tw-flex tw-justify-end tw-gap-[4.56rem] tw-pt-[3.5rem]">
-                    <ACardWithPlaySign
-                      linkedin
-                      image="/images/aSample.png"
-                      name="Vishal Tulsyan"
-                      post="Abhiyan Bharat Foundation India"
-                      desc="Effective philanthropy is not just about the act of giving, but a commitment to social transformation. Like in businesses and in professional life, it is time that we think about philanthropy in terms of scale with a lasting and sustainable long term impact. AIP brings together a strong group of changemakers to enable this change in thought process."
-                    />
-                    <PCardWithPlaySign
-                      linkedin
-                      image="/images/pSample.png"
-                      name="Amit Chandra"
-                      post="ATE Chandra Foundation"
-                      desc="“I believe those who are already in philanthropy and enjoying it and making a difference have a responsibility to share their stories widely, and to be very transparent about their giving. By promoting such accountability, AIP is playing an essential role in building trust with the communities we serve.”"
-                    />
-                  </div>
+                  {(() => {
+                    const arrayWithFour = founderData.slice(select, select + 4);
+                    const arrayWithFirstTwo = arrayWithFour.slice(0, 2);
+                    const arrayWithNextTwo = arrayWithFour.slice(2, 4);
+                    return (
+                      <>
+                        <div className="tw-flex tw-gap-[4.56rem]">
+                          {arrayWithFirstTwo.map((items, i) =>
+                            i == 0 ? (
+                              <ACardWithPlaySign
+                                key={i}
+                                linkedin
+                                image={items.image}
+                                desc={items.desc}
+                                post={items.post}
+                                name={items.name}
+                              />
+                            ) : (
+                              i === 1 && (
+                                <PCardWithPlaySign
+                                  key={i}
+                                  linkedin
+                                  image={items.image}
+                                  desc={items.desc}
+                                  post={items.post}
+                                  name={items.name}
+                                />
+                              )
+                            )
+                          )}
+                        </div>
+
+                        <div className="tw-flex tw-justify-end tw-gap-[4.56rem] tw-pt-[3.5rem]">
+                          {arrayWithNextTwo.map((items, i) =>
+                            i === 0 ? (
+                              <ACardWithPlaySign
+                                key={i}
+                                linkedin
+                                image={items.image}
+                                desc={items.desc}
+                                post={items.post}
+                                name={items.name}
+                              />
+                            ) : (
+                              <PCardWithPlaySign
+                                key={i}
+                                linkedin
+                                image={items.image}
+                                desc={items.desc}
+                                post={items.post}
+                                name={items.name}
+                              />
+                            )
+                          )}
+                        </div>
+                      </>
+                    );
+                  })()}
                 </div>
               </div>
               <div className=" tw-block md:tw-hidden "></div>

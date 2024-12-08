@@ -72,17 +72,18 @@ const AllTabContent = () => {
               "tw-border-none": i === arrayLength - 1,
             })}
           >
-            <h3 className="tw-text-h4a tw-font-playFair tw-text-gray80 tw-leading-[2.1rem] tw-pt-[1.5rem]">
+            <h3 className="~tw-text-h5/h4a tw-font-playFair tw-text-gray80 tw-leading-[2.1rem] tw-pt-[1.5rem]">
               {content.title}
             </h3>
             <div
               className={cn(
                 "tw-flex tw-gap-[1.25rem] tw-pt-[1rem] tw-pb-[1.5rem]",
-                { "tw-flex-col": content.galleryImage }
+                { "tw-flex-col": content.galleryImage },
+                { "tw-flex-col md:tw-flex-row": content.video }
               )}
             >
               {content.image && (
-                <div className="tw-shrink-0 tw-relative tw-w-[3rem] tw-h-[4.3rem]">
+                <div className="tw-shrink-0 tw-relative ~tw-w-[4.28rem]/[3rem] ~tw-h-[4.548rem]/[4.3rem]">
                   <Image
                     src={content.image}
                     alt=""
@@ -98,15 +99,15 @@ const AllTabContent = () => {
                   </div>
                 </div>
               )}
-              <p className="tw-leading-[1.4rem] tw-text-midGray">
+              <p className="~tw-text-h9Copy5/h9Copy4 ~tw-leading-[1.225rem]/[1.4rem] tw-text-midGray">
                 {content.desc}
               </p>
               {content.galleryImage && (
-                <div className="tw-flex tw-gap-[1.25rem]">
+                <div className="tw-flex tw-flex-wrap tw-gap-[1.25rem]">
                   {content.galleryImage.map((items, index) => (
                     <div
                       key={index}
-                      className="tw-size-[11.87rem] tw-relative tw-rounded-3xl tw-overflow-hidden"
+                      className="~tw-size-[10.3rem]/[11.87rem] tw-relative tw-rounded-3xl tw-overflow-hidden"
                     >
                       <Image
                         src={items}

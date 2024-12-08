@@ -15,7 +15,6 @@ const headerData = [
     label: "About Us",
     id: "about",
     options: [
-      // { option: "About Us", link: "/about/aip-journey" },
       { option: "The AIP Journey", link: "/about/aip-journey" },
       { option: "Our Approach", link: "/about/our-approach" },
       { option: "AIP Impact", link: "/about/aip-impact" },
@@ -61,8 +60,8 @@ const headerData = [
     id: "resource-center",
     options: [
       // { option: "Resource Center", link: "/resource-center" },
-      { option: "AIP Resources", link: "/resource-center" },
-      { option: "Curated Resources", link: "#" },
+      { option: "AIP Resources", link: "/resource-center/aip-resources" },
+      { option: "Curated Resources", link: "/resource-center/curated-resources" },
       // { option: "Collaborations", link: "/resource-center/collaborations" },
     ],
   },
@@ -91,6 +90,7 @@ const Sidebar = () => {
                 {index === 0 && (
                   <Link
                     href="/"
+                    onClick={() => setIsOpen(!isOpen)}
                     className="tw-pb-[1.25rem] tw-border-b-2 tw-w-full tw-border-[#B861B3]"
                   >
                     Home

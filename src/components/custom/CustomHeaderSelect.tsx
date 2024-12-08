@@ -45,13 +45,8 @@ const CustomHeaderSelect = ({ items, isOpen, setIsOpen }: Props) => {
       as="div"
       className="tw-w-full"
     >
-      <ButtonAnimation
-        // onClick={() => {
-        //   setIsOpen(true);
-        // }}
-        className="tw-w-full"
-      >
-        <ListboxButton as="div" className={cn("tw-w-full ")}>
+      <ListboxButton as="div" className={cn("tw-w-full ")}>
+        <ButtonAnimation className="tw-w-full">
           <div className="tw-flex tw-flex-col ">
             <div className="tw-text-white tw-mb-[0.25rem] md:tw-text-gray80 tw-flex tw-justify-between tw-border-b-2 tw-w-full md:tw-w-auto tw-border-[#B861B3] md:tw-border-none tw-gap-[0.5rem] tw-items-center">
               <p
@@ -68,8 +63,8 @@ const CustomHeaderSelect = ({ items, isOpen, setIsOpen }: Props) => {
               <div className="tw-hidden md:tw-block tw-h-[0.25rem]  tw-w-full tw-rounded-full tw-bg-purple40"></div>
             )}
           </div>
-        </ListboxButton>
-      </ButtonAnimation>
+        </ButtonAnimation>
+      </ListboxButton>
       {isOpen && (
         <ListboxOptions
           transition
@@ -85,16 +80,16 @@ const CustomHeaderSelect = ({ items, isOpen, setIsOpen }: Props) => {
               className="data-[focus]:bg-blue-100 tw-text-white tw-cursor-pointer"
             >
               <ButtonAnimation
+                onClick={() => {
+                  router.push(`${items.link}`);
+                  setIsOpen(!isOpen);
+                }}
                 className={cn(
                   "tw-w-full tw-rounded-2xl hover:tw-bg-[#2B092A4D] tw-flex",
                   { "!tw-bg-[#2B092A4D]": pathname === items.link }
                 )}
               >
                 <div
-                  onClick={() => {
-                    router.push(`${items.link}`);
-                    setIsOpen(!isOpen);
-                  }}
                   // onClick={() => {
                   //   setIsOpen(!isOpen);
                   // }}

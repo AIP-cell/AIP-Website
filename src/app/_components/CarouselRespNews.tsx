@@ -25,7 +25,7 @@ const CarouselRespNews = () => {
   const previous = () => {
     if (carouselRef.current) {
       const card = carouselRef.current.querySelector("div");
-    //   console.log("card prev::", card);
+      //   console.log("card prev::", card);
       if (card) {
         const cardWidth = card.offsetWidth;
         // console.log("cardWidth::", cardWidth);
@@ -37,7 +37,7 @@ const CarouselRespNews = () => {
   const next = () => {
     if (carouselRef.current) {
       const card = carouselRef.current.querySelector("div");
-    //   console.log("card next::", card);
+      //   console.log("card next::", card);
       if (card) {
         const cardWidth = card.offsetWidth;
         carouselRef.current.scrollBy({ left: cardWidth, behavior: "smooth" });

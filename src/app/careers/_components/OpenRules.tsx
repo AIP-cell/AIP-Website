@@ -31,7 +31,7 @@ const OpenRules = () => {
           </div>
           <PositionsGrid />
         </div>
-        <div className="~tw-pt-[2rem]/0">
+        <div className="tw-pt-[2rem]">
           <Link
             className="tw-bg-darkPurple tw-px-7 tw-py-3 tw-flex tw-gap-2 tw-w-fit tw-rounded-3xl"
             href="/careers/all-positions"
