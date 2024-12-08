@@ -26,18 +26,18 @@ const WhyWorkWithAip = () => {
   return (
     <div className="tw-pt-[1rem] container tw-mx-auto">
       <div className="tw-flex tw-flex-col tw-w-full tw-justify-center tw-items-center">
-        <p className="tw-text-h2 tw-text-center tw-text-gray80 tw-leading-[3.713rem] tw-font-playFair tw-tracking-[-.04rem] tw-pb-5">
+        <p className="~tw-text-h4/h2 tw-text-center tw-text-gray80 ~tw-leading-[2.6rem]/[3.713rem] tw-font-playFair tw-tracking-[-.04rem] ~tw-pb-[1rem]/5">
           Why Work With
           <span className="tw-font-playFairItalic tw-text-textPurple">
             &nbsp;AIP?
           </span>
         </p>
-        <p className="tw-font-inter tw-text-center tw-text-midGray tw-pb-20 tw-px-[20.875rem]">
+        <p className="tw-font-inter ~tw-text-h9Copy5/h9Copy4 ~tw-leading-[1.225rem]/[1.4rem] tw-text-center tw-text-midGray ~tw-pb-[2.5rem]/20 ~tw-px-[4.1rem]/[20.875rem]">
           Join AIP, where careers run deep with purpose, carving pathways for
           social impact and carrying the spirit of philanthropy forward
         </p>
       </div>
-      <div className=" ~tw-px-5/[8.438rem] tw-grid tw-grid-cols-2 tw-gap-x-[5rem] tw-gap-y-[3rem] tw-relative">
+      <div className=" ~tw-px-[2.8rem]/[8.438rem] tw-grid md:tw-grid-cols-2 ~tw-gap-x-[3rem]/[5rem] ~tw-gap-y-[1.25rem]/[3rem] tw-relative">
         {works.map((item, i) => (
           <ImgTitleDescVer
             key={i}

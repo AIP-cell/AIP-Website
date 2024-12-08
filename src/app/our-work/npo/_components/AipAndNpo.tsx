@@ -42,13 +42,13 @@ const npos = [
 
 const AipAndNpo = () => {
   return (
-    <div className="tw-pt-[6.688rem] tw-pb-[5rem] container tw-mx-auto">
-      <h1 className="tw-text-h2 tw-leading-[3.3rem] tw-font-playFair tw-text-center tw-w-full">
+    <div className="~tw-pt-[5rem]/[6.688rem] tw-pb-[5rem] container tw-mx-auto">
+      <h1 className="~tw-text-h4/h2 ~tw-leading-[2.6rem]/[3.3rem] tw-font-playFair tw-text-center tw-w-full">
         AIP <span className="tw-font-playFairItalic tw-text-textPurple">&</span>{" "}
         NPOs
       </h1>
-      <div className="tw-px-[14.375rem] tw-flex tw-flex-col tw-w-full tw-items-center tw-gap-[1rem] tw-pt-[2.5rem] tw-text-center">
-        <p className="tw-text-gray80 tw-leading-[1.4rem]">
+      <div className="~tw-px-[1.25rem]/[14.375rem] tw-flex tw-flex-col tw-w-full tw-items-center ~tw-gap-[0.7rem]/[1rem] tw-pt-[2.5rem] tw-text-center">
+        <p className="tw-text-gray80 ~tw-text-h9Copy5/h9Copy4 ~tw-leading-[1.225rem]/[1.4rem]">
           At AIP, we recognized the need for a comprehensive and credible
           repository that could serve as a bridge between philanthropists and
           NPOs. Our NPO repository is meticulously curated to address this gap,
@@ -59,7 +59,7 @@ const AipAndNpo = () => {
           effectiveness and impact of philanthropy in India
         </p>
 
-        <p className="tw-text-gray80 tw-leading-[1.4rem]">
+        <p className="tw-text-gray80 ~tw-text-h9Copy5/h9Copy4 ~tw-leading-[1.225rem]/[1.4rem]">
           Our repository is more than just a database—it is a dynamic tool that
           feeds into various facets of our work, including Giving Plans, Sector
           Primers, Thematic Workshops, and Field Visits. The NPOs featured in
@@ -72,7 +72,7 @@ const AipAndNpo = () => {
           through strategic philanthropy.
         </p>
       </div>
-      <div className="tw-pt-[5rem] tw-flex tw-flex-wrap tw-gap-x-[4.563rem] tw-gap-y-[3rem] !tw-px-[6.438rem] tw-ju">
+      <div className="~tw-pt-[2rem]/[5rem] tw-flex tw-flex-wrap tw-justify-center tw-gap-x-[4.563rem] ~tw-gap-y-[1.25rem]/[3rem] !~tw-px-[2.8rem]/[6.438rem] ">
         {npos.map((items, i) => (
           <ImgTitleDescVer
             titleClassName="!tw-text-h4 !tw-leading-[2.6rem]"

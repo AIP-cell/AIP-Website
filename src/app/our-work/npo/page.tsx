@@ -9,7 +9,7 @@ import NposPartners from "./_components/NposPartners";
 
 const page = () => {
   return (
-    <div className="~tw-pt-[8rem]/[5rem]">
+    <div className="tw-pt-[5rem]">
       <NpoHeroSection />
       <AipAndNpo/>
       <NpoJoinTheFlow/>

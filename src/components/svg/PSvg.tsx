@@ -20,6 +20,7 @@ const PSvg = (props: SVGProps<SVGSVGElement> & { src: string }) => {
         </mask>
       </defs>
       <image
+        
         mask={`url(#${id})`}
         preserveAspectRatio="xMidYMid meet"
         x="0"

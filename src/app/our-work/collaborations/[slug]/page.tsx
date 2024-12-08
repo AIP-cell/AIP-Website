@@ -45,15 +45,15 @@ const page = () => {
   return (
     <div className="tw-pt-[5rem]">
       <InnerCollaborationsSectionOne />
-      <div className="">
-        <p className="tw-text-center tw-font-playFair tw-pb-20 tw-leading-[3.3rem] tw-tracking-[-.04rem] tw-text-h2 tw-text-gray80">
+      <div className="container tw-mx-auto tw-relative ~tw-px-[1.25rem]/[7.8rem] ">
+        <p className="tw-text-center tw-font-playFair ~tw-pb-[1rem]/20 ~tw-leading-[2.6rem]/[3.3rem] tw-tracking-[-.04rem] ~tw-text-h4/h2 tw-text-gray80">
           Agenda
         </p>
         <Agenda agendaArray={agendaArray} />
+        <InnerCollaborationsVideo />
       </div>
-      <InnerCollaborationsVideo />
-      <div className="container tw-mx-auto">
-        <Gallery galleryLink="/our-work/collaborations/slug/event-gallery"/>
+      <div className="container tw-mx-auto ~tw-pt-[3rem]/0">
+        <Gallery galleryLink="/our-work/collaborations/slug/event-gallery" />
       </div>
       <Media />
       <InnerCollaborationTestimonials />

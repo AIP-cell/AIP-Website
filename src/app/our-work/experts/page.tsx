@@ -9,7 +9,7 @@ import ExpertsShelves from './_components/ExpertsShelves'
 
 const page = () => {
   return (
-    <div className='~tw-pt-[8rem]/[5rem]'>
+    <div className='tw-pt-[5rem]'>
         <ExpertHeroSection/>
         <AipAndExperts/>
         <AsAnExperts/>

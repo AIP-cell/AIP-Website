@@ -26,7 +26,7 @@ const PTeamCard = ({
   locationClassName,
 }: Props) => {
   return (
-    <div className="~tw-w-[10.3rem]/[11.87rem] tw-relative">
+    <div className="max-[23rem]:tw-w-[8rem] ~tw-w-[10.3rem]/[11.87rem] tw-relative">
       <PMediumSizeSvg src="/images/sample.png" />
       {linkedin && (
         <Image

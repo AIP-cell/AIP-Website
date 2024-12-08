@@ -58,12 +58,12 @@ const NpoHeroSection = () => {
           }}
         />
 
-        <div className=" tw-bg-[#b861b4a6] ~tw-pt-[5.5rem]/[11rem] ~tw-pb-[5.5rem]/[10.798rem] tw-w-full ">
+        <div className=" tw-bg-[#b861b4a6] ~tw-pt-[3rem]/[6.25rem] ~tw-pb-[3rem]/[7.6rem] tw-w-full ">
           <div className="container tw-mx-auto tw-flex tw-justify-center tw-flex-col tw-items-center tw-relative tw-z-50 ~tw-px-5/[9rem] ">
-            <h3 className=" tw-leading-[20.64px] tw-uppercase tw-font-inter tw-text-white/60 tw-font-semibold">
+            <h3 className=" ~tw-leading-[1.129rem]/[1.29rem] ~tw-text-h9Copy5/h9Copy4 tw-uppercase tw-font-inter tw-text-white/60 tw-font-semibold">
               NPOs & Philanthropy
             </h3>
-            <h2 className="tw-pt-[1.25rem] tw-tracking-[-1px] tw-text-center ~tw-text-h4/h3 tw-leading-[2.6rem] tw-font-playFair tw-text-white">
+            <h2 className="tw-pt-[1.25rem] tw-tracking-[-1px] tw-text-center ~tw-text-h4a/h3 ~tw-leading-[2.113rem]/[2.6rem] tw-font-playFair tw-text-white">
               In India, the vast number of non-profit organizations (NPOs) can
               make it challenging for philanthropists to discover credible and
               impactful partners for their giving initiatives. With over 30 lakh

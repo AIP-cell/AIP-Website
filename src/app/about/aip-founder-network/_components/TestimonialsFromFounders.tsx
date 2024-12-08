@@ -1,24 +1,24 @@
-import TestimonialRespSlick from "@/components/slick/TestimonialRespSlick";
+// import TestimonialRespSlick from "@/components/slick/TestimonialRespSlick";
 import TestimonialSlick from "@/components/slick/TestimonialSlick";
 import React from "react";
 const testimonialsArray: any[] = [
   {
-    name: "0Ashish Dhawan",
+    name: "a1Ashish Dhawan",
     work: "The Convergence Foundation",
     desc: "“I believe those who are already in philanthropy and enjoying it and making a difference have a responsibility to share their stories widely, and to be very transparent about their giving. By promoting such accountability, AIP is playing an essential role in building trust with the communities we serve.” ’’",
   },
   {
-    name: "0Pritihi Jain",
+    name: "p1Pritihi Jain",
     work: "Philanthrophy Partner, BLR, South",
     desc: "“I believe those who are already in philanthropy and enjoying it and making a difference have a responsibility to share their stories widely, and to be very transparent about their giving. By promoting such accountability, AIP is playing an essential role in building trust with the communities we serve.” ",
   },
   {
-    name: "1Ashish Dhawan",
+    name: "a2Ashish Dhawan",
     work: "The Convergence Foundation",
     desc: "“I believe a lot more needs to be done particularly to encourage first-time givers. AIP aims to fill this gap and spur philanthropy in a very structured manner.’’",
   },
   {
-    name: "1Pritihi Jain",
+    name: "p2Pritihi Jain",
     work: "Philanthrophy Partner, BLR, South",
     desc: "“I believe those who are already in philanthropy and enjoying it and making a difference have a responsibility to share their stories widely, and to be very transparent about their giving. By promoting such accountability, AIP is playing an essential role in building trust with the communities we serve.” ",
   },
@@ -36,7 +36,7 @@ const TestimonialsFromFounders = () => {
         Some testimonials from our Founders.
       </p>
       <TestimonialSlick slickArray={testimonialsArray} />
-      <TestimonialRespSlick slickArray={testimonialsArray} />
+      {/* <TestimonialRespSlick slickArray={testimonialsArray} /> */}
     </div>
   );
 };

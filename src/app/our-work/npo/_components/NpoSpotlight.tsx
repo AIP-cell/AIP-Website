@@ -38,14 +38,14 @@ const NpoSpotlight = () => {
         alt=""
         className="tw-hidden lg:tw-block tw-absolute  tw-bottom-[-2rem]  tw-right-0"
       />
-      <div className=" tw-relative container tw-mx-auto ~tw-pt-[4.702rem]/[12.5rem]">
-        <h2 className="tw-text-center tw-text-h2 tw-text-darkBrown tw-font-playFair">
+      <div className=" tw-relative container tw-mx-auto ~tw-pt-[5rem]/[12.5rem]">
+        <h2 className="tw-text-center ~tw-text-h4/h2 ~tw-leading-[2.6rem]/[3.3rem] tw-text-darkBrown tw-font-playFair">
           NPO
           <span className="tw-text-textPurple tw-font-playFairItalic">
             &nbsp;Spotlight
           </span>
         </h2>
-        <div className="~tw-pt-10/[6.56rem] tw-flex tw-flex-col ~tw-gap-[3.5rem]/[5.5rem] ~tw-px-[1.25rem]/[7.8rem]">
+        <div className="~tw-pt-[2.5rem]/[6.56rem] tw-flex tw-flex-col ~tw-gap-[3.5rem]/[5.5rem] ~tw-px-[1.25rem]/[7.8rem]">
           {caseStudyData.map((item: any, i: number) => (
             <CaseStudy
               key={i}

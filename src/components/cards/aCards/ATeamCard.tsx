@@ -5,6 +5,7 @@ import Src from "@public/images/aTeamSample.png";
 import ASvg from "@/components/svg/ASvg";
 import AMediumSizeSvg from "@/components/svg/AMediumSizeSvg";
 import Link from "next/link";
+import cn from "@/utils/tailwind";
 type Props = {
   linkedin: boolean;
   title: string;
@@ -15,6 +16,7 @@ type Props = {
   titleClassName?: string;
   title2ClassName?: string;
   locationClassName?: string;
+  sizeClass?: string;
 };
 const ATeamCard = ({
   linkedin,
@@ -26,9 +28,10 @@ const ATeamCard = ({
   titleClassName,
   title2ClassName,
   locationClassName,
+  sizeClass,
 }: Props) => {
   return (
-    <div className="~tw-w-[10rem]/[11.87rem] tw-relative">
+    <div className={cn("max-[23rem]:tw-w-[8rem] ~tw-w-[10rem]/[11.87rem] tw-relative", sizeClass)}>
       <AMediumSizeSvg
         src="/images/sample.png"
         // className="tw-w-[11.87rem] tw-h-[13.88rem]"

@@ -58,14 +58,21 @@ const ExpertHeroSection = () => {
           }}
         />
 
-        <div className=" tw-bg-[#b861b4a6] ~tw-pt-[5.5rem]/[6rem] ~tw-pb-[5.5rem]/[9rem] tw-w-full ">
+        <div className=" tw-bg-[#b861b4a6] ~tw-pt-[3rem]/[6.25rem] ~tw-pb-[3rem]/[7.6rem] tw-w-full ">
           <div className="container tw-mx-auto tw-flex tw-justify-center tw-flex-col tw-items-center tw-relative tw-z-50 ~tw-px-5/[9rem] ">
-            <h3 className=" tw-leading-[20.64px] tw-uppercase tw-font-inter tw-text-white/60 tw-font-semibold">
-            Experts
+            <h3 className=" ~tw-leading-[1.129rem]/[1.29rem] ~tw-text-h9Copy5/h9Copy4 tw-uppercase tw-font-inter tw-text-white/60 tw-font-semibold">
+              Experts
             </h3>
-            <h2 className="tw-pt-[1.25rem] tw-tracking-[-1px] tw-text-center ~tw-text-h4/h3 tw-leading-[2.6rem] tw-font-playFair tw-text-white">
-            At AIP, we believe informed philanthropy can drive systemic change. Our approach is powered by subject-matter experts who provide valuable insights to help philanthropists make impactful decisions. These leaders enrich our network’s understanding of key sectors, guiding strategic giving aligned with Indias development needs.
-            We collaborate with experts to create knowledge products, host workshops, and design tailored learning experiences, connecting our network with innovative solutions to catalyse real change.
+            <h2 className="tw-pt-[1.25rem] tw-tracking-[-1px] tw-text-center ~tw-text-h5/h3 ~tw-leading-[1.75rem]/[2.6rem] tw-font-playFair tw-text-white">
+              At AIP, we believe informed philanthropy can drive systemic
+              change. Our approach is powered by subject-matter experts who
+              provide valuable insights to help philanthropists make impactful
+              decisions. These leaders enrich our network’s understanding of key
+              sectors, guiding strategic giving aligned with Indias development
+              needs. We collaborate with experts to create knowledge products,
+              host workshops, and design tailored learning experiences,
+              connecting our network with innovative solutions to catalyse real
+              change.
             </h2>
           </div>
         </div>
