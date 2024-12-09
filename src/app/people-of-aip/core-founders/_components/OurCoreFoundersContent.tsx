@@ -21,12 +21,12 @@ const OurCoreFoundersContent = () => {
       <Image
         src={Bg}
         alt=""
-        className="tw-hidden lg:tw-block tw-absolute  tw-top-[15.5rem]  tw-right-0"
+        className="tw-hidden xl:tw-block tw-absolute  tw-top-[15.5rem]  tw-right-0"
       />
       <Image
         src={Bg}
         alt=""
-        className="tw-hidden lg:tw-block tw-absolute  tw-bottom-0  tw-left-0 tw-rotate-180"
+        className="tw-hidden xl:tw-block tw-absolute  tw-bottom-0  tw-left-0 tw-rotate-180"
       />
       <div className="~tw-pt-[2.125rem]/[3rem] container tw-mx-auto tw-relative">
         <div className="tw-flex tw-flex-col tw-items-center tw-justify-center ~tw-px-[1.25rem]/[20.938rem]">

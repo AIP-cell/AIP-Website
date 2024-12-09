@@ -16,7 +16,7 @@ const AccordionItem = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <AccordionPrimitive.Item
     ref={ref}
-    className={cn("border-b", className)}
+    className={cn("tw-border-b-[1.7px] tw-border-white/30", className)}
     {...props}
   />
 ));
@@ -30,15 +30,13 @@ const AccordionTrigger = React.forwardRef<
     <AccordionPrimitive.Trigger
       ref={ref}
       className={cn(
-        "~tw-py-[1.25rem]/[1.75rem] tw-px-[1.25rem] tw-text-gray80 tw-flex tw-justify-between tw-w-full  items-center tw-text-h6M tw-font-inter tw-text-left transition-all data-[state=open]:tw-text-textPurple [&[data-state=open]>svg]:tw-rotate-180",
+        "tw-py-[1rem]  tw-text-white tw-flex tw-justify-between tw-w-full  items-center tw-text-h9Copy5 tw-leading-[1.225rem] tw-font-inter tw-text-left transition-all  [&[data-state=open]>svg]:tw-rotate-180",
         className
       )}
       {...props}
     >
       {children}
-      {/* <Image src={MinusSvg} alt="Minus Image" className="data-[state=open]:tw-hidden data-[state=closed]:tw-block tw-transition-transform tw-duration-200"/>
-      <Image src={PlusSvg} alt="Plus Image" className="data-[state=open]:tw-block data-[state=closed]:tw-hidden tw-transition-transform tw-duration-200" /> */}
-      <ChevronDownIcon className="tw-h-4 tw-w-4 tw-shrink-0 text-muted-foreground tw-transition-transform tw-duration-200" />
+      <ChevronDownIcon className="tw-size-[1.375rem] tw-shrink-0 text-muted-foreground tw-transition-transform tw-duration-200" />
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 ));
@@ -50,7 +48,7 @@ const AccordionContent = React.forwardRef<
 >(({ className, children, ...props }, ref) => (
   <AccordionPrimitive.Content
     ref={ref}
-    className="tw-text-midGray tw-bg-bgGray5 tw-p-5  tw-rounded-t-[1.25rem] tw-font-inter tw-text-h9Copy5 tw-leading-[1.225rem] overflow-hidden  tw-transition-transform tw-duration-200"
+    className="tw-text-white tw-py-[0.8rem] tw-text-h9Copy5 tw-leading-[1.225rem] overflow-hidden tw-transition-transform tw-duration-200"
     {...props}
   >
     <div className={cn("", className)}>{children}</div>

@@ -2,6 +2,8 @@ import React from "react";
 import PeopleOfAipTab from "../_components/PeopleOfAipTab";
 import PeopleOfAipSm from "../_components/PeopleOfAipSm";
 import BreadCrump from "@/components/bread-crump/BreadCrump";
+import PeopleOfAipTabs from "../_components/PeopleOfAipTabs";
+import Experts from "./_components/Experts";
 
 const page = () => {
   return (
@@ -14,8 +16,10 @@ const page = () => {
           linkTwo="/people-of-aip/experts"
         />
       </div>
-      <PeopleOfAipTab tabSelect="experts" />
-      <PeopleOfAipSm tabSelect="Experts"/>
+      <PeopleOfAipTabs currentTab="Experts" />
+      <Experts />
+      {/* <PeopleOfAipTab tabSelect="experts" />
+      <PeopleOfAipSm tabSelect="Experts"/> */}
     </div>
   );
 };

@@ -28,8 +28,17 @@ const headerData = [
   },
   {
     id: "people-of-aip/founders",
-    name: "People of AIP",
-    link: "/people-of-aip/core-founders",
+    label: "People of AIP",
+    options: [
+      { option: "Our Core Founders", link: "/people-of-aip/core-founders" },
+      { option: "Founders", link: "/people-of-aip/founders" },
+      {
+        option: "Our Advisory Board",
+        link: "/people-of-aip/our-advisory-board",
+      },
+      { option: "Team AIP", link: "/people-of-aip/team-AIP" },
+      { option: "Experts", link: "/people-of-aip/experts" },
+    ],
   },
   {
     width: " tw-w-[10.5rem] ",
@@ -68,19 +77,19 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(true);
 
   return (
-    <div className="tw-z-[10000] tw-fixed tw-right-0 tw-left-0 tw-top-0 max-lg:tw-bg-toRightPurpleToBlue md:tw-bg-white  ">
+    <div className=" tw-z-[10000] tw-fixed tw-right-0 tw-left-0 tw-top-0 max-xl:tw-bg-toRightPurpleToBlue xl:tw-bg-white  ">
       <div className="container tw-mx-auto tw-flex tw-justify-between tw-items-center ~tw-pt-[0.875rem]/[1rem] ~tw-pb-[0.75rem]/[0.9rem] tw-px-[1.25rem]">
-        <Link href="/" className="tw-hidden lg:tw-block">
+        <Link href="/" className="tw-hidden xl:tw-block">
           <LogoHeaderSvg />
         </Link>
-        <Link href="/" className="tw-block lg:tw-hidden">
+        <Link href="/" className="tw-block xl:tw-hidden">
           <LogoSmSVG className="tw-h-[2.75rem] tw-w-[4.5rem]" />
         </Link>
-        <div className="tw-flex tw-items-center tw-text-white tw-gap-[1rem] lg:tw-hidden">
+        <div className="tw-flex tw-items-center tw-text-white tw-gap-[1rem] xl:tw-hidden">
           <SearchSvg className="tw-size-[1.5rem]" />
           <Sidebar />
         </div>
-        <div className="tw-hidden lg:tw-flex tw-gap-[2.5rem] ">
+        <div className="tw-hidden xl:tw-flex tw-gap-[2.5rem] ">
           {headerData.map((items: any, index: number) => (
             <div key={index} className="tw-flex tw-items-center ">
               {items.options ? (
@@ -98,7 +107,7 @@ const Header = () => {
           ))}
         </div>
 
-        <div className="tw-hidden lg:tw-flex tw-rounded-full tw-border-2 tw-border-darkPurple tw-relative">
+        <div className="tw-hidden xl:tw-flex tw-rounded-full tw-border-2 tw-border-darkPurple tw-relative">
           <div className="tw-rounded-full tw-bg-darkPurple  tw-px-[1.75rem] tw-py-[0.75rem] ">
             <h3 className="tw-text-white tw-text-h9Copy5 tw-leading-[1.225rem]">
               Get Involved

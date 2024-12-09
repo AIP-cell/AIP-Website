@@ -56,22 +56,22 @@ const Experts = () => {
       <Image
         src={Bg1}
         alt=""
-        className="tw-hidden md:tw-block tw-absolute tw-top-[19.5rem] tw-right-0"
+        className="tw-hidden xl:tw-block tw-absolute tw-top-[19.5rem] tw-right-0"
       />
       <Image
         src={OvalPeach}
         alt=""
-        className="tw-hidden md:tw-block tw-absolute tw-top-[39rem] tw-right-[14.125rem] tw-size-[12rem]"
+        className="tw-hidden xl:tw-block tw-absolute tw-top-[39rem] tw-right-[14.125rem] tw-size-[12rem]"
       />
       <Image
         src={Bg2}
         alt=""
-        className="tw-hidden md:tw-block tw-absolute tw-bottom-[8rem] tw-left-0"
+        className="tw-hidden xl:tw-block tw-absolute tw-bottom-[8rem] tw-left-0"
       />
       <Image
         src={OvalPeach}
         alt=""
-        className="tw-hidden md:tw-block tw-absolute tw-bottom-[23rem] tw-left-[17rem] tw-size-[12rem]"
+        className="tw-hidden xl:tw-block tw-absolute tw-bottom-[23rem] tw-left-[17rem] tw-size-[12rem]"
       />
       <div className="tw-pt-[3rem] tw-pb-[7rem] container tw-mx-auto">
         <div className="tw-flex tw-flex-col  tw-justify-center ~tw-px-[1.25rem]/[20.9rem]">
@@ -88,12 +88,14 @@ const Experts = () => {
         </div>
         <div className="~tw-pt-[4.83rem]/[7.875rem] tw-flex md:tw-block tw-flex-col tw-items-center ~tw-px-[1.25rem]/[7.8rem] tw-relative">
           <div className="tw-flex ~tw-gap-[1.25rem]/[5.6rem] ">
-            <ATeamCard
-              title="Piyush"
-              title2="Doshi"
-              desc="Operating Partner"
-              linkedin={true}
-            />
+            {/* <Link href="/people-of-aip/experts/slug"> */}
+              <ATeamCard
+                title="Piyush"
+                title2="Doshi"
+                desc="Operating Partner"
+                linkedin={true}
+              />
+            {/* </Link> */}
             <PTeamCard
               title="Amitabh"
               title2="Jaipuria"

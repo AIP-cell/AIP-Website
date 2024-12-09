@@ -111,16 +111,6 @@ const AipResourceTabs = () => {
                   />
                 ))}
               </div>
-              {/* <CustomSelect
-                  optionsArray={filterDatas.typeContent}
-                  ListboxButtonClassName="!tw-w-fit"
-                  selectedClassName="!tw-w-fit"
-                />
-                <CustomSelect
-                  optionsArray={filterDatas.date}
-                  ListboxButtonClassName="!tw-w-fit"
-                  selectedClassName="!tw-w-fit"
-                /> */}
             </div>
             <div className="tw-pt-[3.25rem] tw-pb-[7.5rem] tw-grid md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-[4.5rem]">
               {datas.map((item, i) => (

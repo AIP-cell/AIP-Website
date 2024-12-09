@@ -113,8 +113,7 @@ const AipResourcesPage = () => {
           domainArray={domainArray}
           typeContentArray={typeContentArray}
         /> */}
-        <AipResourceTabs/>
-        
+        <AipResourceTabs />
       </div>
     </div>
   );

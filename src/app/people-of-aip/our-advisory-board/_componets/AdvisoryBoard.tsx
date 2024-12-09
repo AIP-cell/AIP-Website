@@ -50,7 +50,7 @@ const TeamArray = [
     desc: "Operating Partner",
   },
 ];
-const TeamAip = () => {
+const AdvisoryBoard = () => {
   return (
     <div className="tw-w-full tw-relative">
       <Image
@@ -76,9 +76,9 @@ const TeamAip = () => {
       <div className="tw-pt-[3rem] tw-pb-[7rem] container tw-mx-auto">
         <div className="tw-flex tw-flex-col  tw-justify-center ~tw-px-[1.25rem]/[20.9rem]">
           <h2 className=" tw-text-center ~tw-text-h4/h2 ~tw-leading-[2.6rem]/[3.3rem] tw-font-playFair">
-            Team
+            Our Advisory
             <span className="tw-text-textPurple tw-font-playFairItalic">
-              &nbsp;AIP
+              &nbsp;Board
             </span>
           </h2>
           <p className="~tw-pt-[2rem]/[1.25rem]  tw-text-midGray tw-text-center ~tw-text-h9Copy5/h9Copy4 ~tw-leading-[1.225rem]/[1.4rem]">
@@ -232,4 +232,4 @@ const TeamAip = () => {
   );
 };
 
-export default TeamAip;
+export default AdvisoryBoard;

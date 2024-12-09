@@ -28,7 +28,7 @@ const FaqTab = () => {
         {TablistData.map((items, i) => (
           <Tab
             key={i}
-            className="tw-group tw-w-full tw-bg-bgGray5 data-[selected]:tw-bg-darkPurple  data-[selected]:tw-text-white hover:tw-font-playFairItalic  tw-transition-all tw-p-5 tw-rounded-[1.25rem] tw-flex tw-justify-between tw-mb-3 tw-group data-[selected]:tw-outline-none"
+            className="tw-group tw-w-full tw-bg-bgGray5 data-[selected]:tw-bg-darkPurple tw-items-center data-[selected]:tw-text-white hover:tw-font-playFairItalic  tw-transition-all tw-p-5 tw-rounded-[1.25rem] tw-flex tw-text-left tw-justify-between tw-mb-3 tw-group data-[selected]:tw-outline-none"
           >
             <p className="tw-font-playFair tw-font-medium group-hover:tw-italic tw-text-xl tw-tracking-[.02rem] ">
               {items.name}
