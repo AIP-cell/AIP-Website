@@ -4,8 +4,14 @@ import React from "react";
 import Bg from "@public/svg/wavePeachRight.svg";
 import SmBg from "@public/svg/home/smMemberBg.svg";
 import OvalPurpleSvg from "@/components/svg/OvalPurpleSvg";
+import { THomePageCount } from "@/api/type";
+import OvalPeachCount from "@/components/ovals/OvalPeachCount";
+import OvalPurpleCount from "@/components/ovals/OvalPurpleCount";
 
-const Members = () => {
+type Props = {
+  countData: THomePageCount;
+};
+const Members = ({ countData }: Props) => {
   return (
     <div className=" tw-relative tw-w-full">
       <Image
@@ -43,7 +49,7 @@ const Members = () => {
               sizeClass="~tw-size-[13rem]/[17.3rem]"
               textClass1="~tw-text-h4/h3"
               textClass2="~tw-text-h9Copy5/h9Copy4"
-              text1="4"
+              text1={`${countData.coreFoundersCount}`}
               text2="Core Founders"
               mainClass=" tw-absolute ~tw-top-0/[-4rem] tw-left-0 md:tw-left-auto ~md:~tw-right-[20rem]/[11.862rem] "
             />
@@ -51,17 +57,17 @@ const Members = () => {
               sizeClass="~tw-size-[13rem]/[17.3rem]"
               textClass1="~tw-text-h4/h3"
               textClass2="~tw-text-h9Copy5/h9Copy4"
-              text1="31"
+              text1={`${countData.foundersCount}`}
               text2="Founders"
               mainClass=" tw-absolute ~tw-top-[6.75rem]/[15.5rem] tw-right-0  md:tw-right-[6.4rem] "
             />
-            <OvalPurple
+            <OvalPurpleCount
               sizeClass="~tw-size-[13rem]/[17.3rem]"
-              textClass1="~tw-text-h4/h3"
-              textClass2="~tw-text-h9Copy5/h9Copy4"
-              text1="150 +"
+              countEnd={countData.membersCount}
+              countClass="!tw-text-white"
               text2="Members"
-              mainClass=" tw-absolute ~tw-top-[14.3rem]/[20rem] tw-left-0 md:tw-left-auto ~md:~tw-right-[25rem]/[26rem]"
+              textClass2="~tw-text-h9Copy5/h9Copy4 !tw-text-white"
+              mainClass="tw-absolute ~tw-top-[14.3rem]/[20rem] tw-left-0 md:tw-left-auto ~md:~tw-right-[25rem]/[26rem]"
             />
           </div>
         </div>

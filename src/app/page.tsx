@@ -8,18 +8,30 @@ import AipWay from "./_components/AipWay";
 import Founder from "./_components/Founder";
 import News from "./_components/News";
 import CustomHeaderSelect from "@/components/custom/CustomHeaderSelect";
+import { Api } from "@/api/Api";
+import { THomePageData } from "@/api/type";
 
-const page = () => {
+const getHomePageApi = async (): Promise<THomePageData> => {
+  const response = await Api.getHomePage();
+  return response.data;
+};
+const page = async () => {
+  const response = await getHomePageApi();
+  console.log("home response:::", response);
+  const eventData = response.event;
+  const teamData = response.team;
+  const countData = response.count;
+  const newsAndUpdates = response.newsAndUpdates;
   return (
     <div className="tw-bg-bgLightPeach tw-pt-[5rem] tw-overflow-hidden">
       <HeroSection />
       <GiveSection />
-      <Spotlight />
+      <Spotlight eventData={eventData} />
       <MakeDifference />
-      <Members />
+      <Members countData={countData}/>
       <AipWay />
-      <Founder />
-      <News/>
+      <Founder teamData={teamData}/>
+      <News />
     </div>
   );
 };
