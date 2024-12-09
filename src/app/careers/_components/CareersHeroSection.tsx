@@ -13,7 +13,7 @@ const CareersHeroSection = () => {
       <Image
         src={Bg}
         alt=""
-        className="tw-hidden lg:tw-block tw-tw-absolute tw-top-[1rem]  tw-h-[65rem] tw-object-cover tw-w-[300rem]"
+        className="tw-hidden lg:tw-block tw-absolute tw-top-[1rem]  tw-h-[65rem] tw-object-cover tw-w-[300rem]"
       />
       <Image
         src={SmallBg}

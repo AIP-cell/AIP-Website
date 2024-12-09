@@ -14,6 +14,8 @@ import RightSlickArrowSvg from "@/components/svg/RightSlickArrowSvg";
 import LeftSlickArrowSvg from "@/components/svg/LeftSlickArrowSvg";
 import cn from "@/utils/tailwind";
 import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
+import { useMediaQuery } from "react-responsive";
+import useClient from "@/hooks/useClient";
 const founderData = [
   {
     image: "/images/aSample.png",
@@ -66,19 +68,24 @@ const founderData = [
 ];
 const Founder = () => {
   const [select, setSelect] = useState<number>(0);
+  const isDesktop = useMediaQuery({ query: "(min-width: 768px)" });
+  const itemsPerSlide = isDesktop ? 4 : 1;
   const arrayLength = founderData.length;
+  const isClient = useClient();
+  if (!isClient) {
+    return;
+  }
   const previous = () => {
     if (select == 0) {
-      setSelect(arrayLength - 1);
+      setSelect(arrayLength - itemsPerSlide);
     } else {
-      setSelect(select - 1);
+      setSelect(select - itemsPerSlide);
     }
   };
   const next = () => {
-    setSelect(select + 1);
-    if (select == arrayLength - 1) {
+    if (select == arrayLength - itemsPerSlide) {
       setSelect(0);
-    }
+    } else setSelect(select + itemsPerSlide);
   };
   return (
     <div className="tw-w-full  tw-relative ~tw-mt-0/[-12rem]">
@@ -171,7 +178,10 @@ const Founder = () => {
                 </div>
                 <div className="tw-hidden lg:tw-block tw-relative tw-pt-[3.43rem] ">
                   {(() => {
-                    const arrayWithFour = founderData.slice(select, select + 4);
+                    const arrayWithFour = founderData.slice(
+                      select,
+                      select + itemsPerSlide
+                    );
                     const arrayWithFirstTwo = arrayWithFour.slice(0, 2);
                     const arrayWithNextTwo = arrayWithFour.slice(2, 4);
                     return (
