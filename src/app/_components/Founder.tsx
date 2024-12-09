@@ -69,7 +69,7 @@ const Founder = ({ teamData }: Props) => {
   return (
     <div className="tw-w-full  tw-relative ~tw-mt-0/[-12rem]">
       <Image src={TopImage} alt="" className="tw-w-full " />
-      <div className="tw-w-full tw-bg-founderGradient ~tw-h-[50rem]/[68rem] tw-relative tw-mt-[-1px]">
+      <div className="tw-w-full tw-bg-founderGradient ~/md:~tw-h-[50rem]/[37rem] lg:~tw-h-[77rem]/[68rem] tw-relative tw-mt-[-1px]">
         <div className="tw-absolute tw-top-0 tw-w-full">
           <div className="tw-w-full  tw-relative">
             <Image
