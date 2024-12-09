@@ -13,7 +13,7 @@ const newsData = [
 const RespNews = () => {
   const [selected, setSelected] = useState(newsData?.at(0));
   return (
-    <div className="tw-pl-[1.25rem] tw-pr-[1.25rem] tw-block lg:tw-hidden">
+    <div className="tw-pl-[1.25rem] tw-pr-[1.25rem] tw-block xl:tw-hidden">
       <NewsRespSelect
         selected={selected}
         setSelected={setSelected}

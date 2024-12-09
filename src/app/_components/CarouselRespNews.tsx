@@ -46,7 +46,7 @@ const CarouselRespNews = () => {
   };
   return (
     <div className="tw-flex tw-flex-col tw-relative tw-items-center">
-      <div className="tw-absolute tw-top-[-17rem] tw-right-[7rem] tw-hidden   lg:tw-flex tw-justify-center tw-gap-[1.25rem] ">
+      <div className="tw-absolute tw-top-[-17rem] tw-right-[7rem] tw-hidden   xl:tw-flex tw-justify-center tw-gap-[1.25rem] ">
         <button
           onClick={previous}
           className="  tw-text-white tw-leading-[22.4px] tw-font-inter tw-bg-darkPurple tw-rounded-tl-3xl tw-rounded-bl-3xl tw-rounded-tr-xl tw-rounded-br-xl tw-py-[1.15rem] tw-px-[0.92rem]"
@@ -62,7 +62,7 @@ const CarouselRespNews = () => {
       </div>
       <div
         ref={carouselRef}
-        className="~tw-px-[1.25rem]/0 tw-flex tw-gap-[1.25rem] tw-pt-[2.5rem] tw-snap-x tw-snap-mandatory tw-overflow-x-scroll no-scrollbar tw-w-full"
+        className="~/lg:~tw-px-[1.25rem]/[18.5rem] tw-flex tw-gap-[1.25rem] tw-pt-[2.5rem] tw-snap-x tw-snap-mandatory tw-overflow-x-scroll no-scrollbar tw-w-full"
       >
         {newsData.map((items, i) => (
           <NewsCard key={i} src={items.src} text={items.text} />
@@ -73,7 +73,7 @@ const CarouselRespNews = () => {
         className=" !tw-px-[1.75rem]  tw-py-[0.75rem] "
         text="Read More"
       /> */}
-      <div className=" tw-pt-[2rem] tw-flex tw-justify-center lg:tw-hidden tw-gap-[1.25rem] ">
+      <div className=" tw-pt-[2rem] tw-flex tw-justify-center xl:tw-hidden tw-gap-[1.25rem] ">
         <button
           onClick={previous}
           className="  tw-text-white tw-leading-[22.4px] tw-font-inter tw-bg-darkPurple tw-rounded-tl-3xl tw-rounded-bl-3xl tw-rounded-tr-xl tw-rounded-br-xl tw-py-[1.15rem] tw-px-[0.92rem]"
