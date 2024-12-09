@@ -43,12 +43,14 @@ const OurOfferingHeroSection = () => {
       {/* <HeroBgSVg className="tw-absolute "/> */}
       {/* <Image src={HeroBg1} alt="" fill className="tw-z-40 " />
       <Image src={HeroBg2} alt="" fill className="tw-z-10 " /> */}
-      <BreadCrump
-        textOne="Our Work"
-        linkOne="/our-work"
-        textTwo="What We Do"
-        linkTwo="/our-work/what-we-do"
-      />
+      <div className="tw-relative container tw-mx-auto">
+        <BreadCrump
+          textOne="Our Work"
+          linkOne="/our-work"
+          textTwo="What We Do"
+          linkTwo="/our-work/what-we-do"
+        />
+      </div>
 
       <div className="tw-relative">
         <Wave
