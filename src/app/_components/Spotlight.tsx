@@ -19,12 +19,16 @@ const Spotlight = ({ eventData }: Props) => {
         </div>
         <div className="">
           <h4 className="~tw-text-h4/h2 tw-text-darkBlack tw-pt-[0.75rem] ~tw-leading-[2.6rem]/[3.3rem] tw-font-playFair">
-            {eventData?.title}
+            {/* {eventData?.title} */}
+            Wealth with Purpose Purpose
           </h4>
         </div>
 
         <p className="tw-text-h9Copy4 tw-leading-[1.4rem] tw-text-midGray tw-font-inter tw-pt-[0.75rem]">
-          {eventData?.description}
+          {/* {eventData?.description} */}
+          It gives us great pleasure to invite you for the launch of our report
+          - Systemic Impact Exemplars: Unique Approaches Towards Solving India’s
+          Development Challenges.
         </p>
 
         <div className="tw-pt-[1.25rem]">

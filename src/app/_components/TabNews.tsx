@@ -18,7 +18,7 @@ import CarouselNews from "./CarouselNews";
 // ];
 const TabNews = () => {
   return (
-    <div className="tw-hidden md:tw-block  ">
+    <div className="tw-hidden lg:tw-block  ">
       <TabGroup className="tw-flex tw-flex-col container tw-mx-auto ">
         <div className="tw-flex tw-justify-center">
           <TabList className="tw-flex tw-bg-[#F0F0F2] tw-p-1 tw-rounded-full tw-w-fit">
