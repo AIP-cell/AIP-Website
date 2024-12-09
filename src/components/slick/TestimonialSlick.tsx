@@ -45,7 +45,7 @@ const TestimonialSlick = ({ slickArray }: Props) => {
                 .slice(change, change + itemsPerSlide)
                 .map((items, i) => {
                   const actualIndex = (change + i) % arrayLength;
-                  console.log("actualIndex", actualIndex);
+                  // console.log("actualIndex", actualIndex);
                   return (
                     <div key={actualIndex}>
                       {actualIndex % 2 == 0 && (

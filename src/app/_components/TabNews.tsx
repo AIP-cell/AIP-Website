@@ -1,22 +1,21 @@
 import React from "react";
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
-import Link from "next/link";
-import NewsCard from "@/components/cards/NewsCard";
+// import NewsCard from "@/components/cards/NewsCard";
 import CarouselNews from "./CarouselNews";
-const newsData = [
-  {
-    src: "/images/news/newsDemo.png",
-    text: "An ugam is a starting point from where river begins.",
-  },
-  {
-    src: "/images/news/newsDemo.png",
-    text: "An ugam is a starting point from where river begins.",
-  },
-  {
-    src: "/images/news/newsDemo.png",
-    text: "An ugam is a starting point from where river begins.",
-  },
-];
+// const newsData = [
+//   {
+//     src: "/images/news/newsDemo.png",
+//     text: "An ugam is a starting point from where river begins.",
+//   },
+//   {
+//     src: "/images/news/newsDemo.png",
+//     text: "An ugam is a starting point from where river begins.",
+//   },
+//   {
+//     src: "/images/news/newsDemo.png",
+//     text: "An ugam is a starting point from where river begins.",
+//   },
+// ];
 const TabNews = () => {
   return (
     <div className="tw-hidden md:tw-block  ">

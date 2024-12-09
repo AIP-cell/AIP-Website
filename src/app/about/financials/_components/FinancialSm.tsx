@@ -19,13 +19,7 @@ const datas = [
   },
 ];
 
-const years = [
-  { id: 1, title: " 2024-25" },
-  { id: 2, title: " 2023-24" },
-  { id: 3, title: " 2022-23" },
-  { id: 4, title: " 2021-22" },
-  { id: 5, title: " 2020-21" },
-];
+const years = [" 2024-25", " 2023-24", " 2022-23", " 2021-22", " 2020-21"];
 
 const FinancialSm = () => {
   const [selected, setSelected] = useState(years.at(0));

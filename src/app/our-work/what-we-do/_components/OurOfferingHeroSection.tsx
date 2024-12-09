@@ -1,5 +1,4 @@
 import BreadCrump from "@/components/bread-crump/BreadCrump";
-import Link from "next/link";
 import React from "react";
 import Wave from "react-wavify";
 
@@ -73,7 +72,7 @@ const OurOfferingHeroSection = () => {
               AIP is a sector-agnostic organization, meaning we do not
               specialize in any one sector but instead offer our expertise
               across a wide range of fields. We work in any sector that aligns
-              with the philanthropist's goals, ensuring that their contributions
+              with the philanthropists goals, ensuring that their contributions
               are strategically guided and effectively implemented. By not being
               confined to a specific sector, we are able to tailor our approach
               to meet the unique needs and aspirations of each philanthropist,

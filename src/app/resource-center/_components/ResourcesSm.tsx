@@ -54,15 +54,38 @@ const datas = [
   },
 ];
 const fieldsArray = ["Fields/Sector", "Fields/Sector"];
-
+const filterDatas = [
+  {
+    type: "Expert Name",
+    filter: [
+      "All",
+      "Art & Culture",
+      "Education",
+      "Environment",
+      "Health & Nutrition",
+      "Legal & Judiciary",
+      "Livelihood",
+      "Disability",
+      "Rural Development",
+      "Sports",
+      "WASH",
+      "Women & Child",
+    ],
+  },
+  {
+    type: "Fields",
+    filter: ["data1", "data2"],
+  },
+  { type: "Date", filter: ["data1", "data2"] },
+];
 type Props = {
-  filterDatas?: any;
+  // filterDatas?: any;
   domainArray: string[];
   typeContentArray: string[];
   dateArray: string[];
 };
 const ResourcesSm = ({
-  filterDatas,
+  // filterDatas,
   domainArray,
   typeContentArray,
   dateArray,
@@ -78,29 +101,18 @@ const ResourcesSm = ({
         mainClassName="!tw-px-0"
       />
       <div className="">
-        <div className="tw-flex tw-flex-col ~tw-pt-[1.25rem]/[2rem] tw-gap-[.75rem]">
-          <p className="tw-py-[0.75rem] tw-text-gray40 ">Filter by:</p>
-          <div className="tw-flex tw-gap-x-[0.75rem] tw-gap-y-[0.5rem] tw-flex-wrap">
-            <CustomFilter
-              optionsArray={domainArray}
-              ListboxButtonClassName="!tw-w-fit"
-              selectedClassName="!tw-w-fit"
-            />
-            {/* <CustomSelect
-              optionsArray={domainArray}
-              ListboxButtonClassName="!tw-w-fit"
-              selectedClassName="!tw-w-fit"
-            /> */}
-            {/* <CustomSelect
-              optionsArray={typeContentArray}
-              ListboxButtonClassName="!tw-w-fit"
-              selectedClassName="!tw-w-fit"
-            />
-            <CustomSelect
-              optionsArray={dateArray}
-              ListboxButtonClassName="!tw-w-fit"
-              selectedClassName="!tw-w-fit"
-            /> */}
+        <div className="tw-flex tw-flex-wrap tw-pt-[2rem] tw-items-center tw-gap-[0.75rem]">
+          <p className="~tw-pb-[1.25rem]/0 tw-text-gray40  ~tw-text-h9Copy5/h9Copy4 ~tw-leading-[1.225rem]/[1.4rem]">
+            Filter by:
+          </p>
+          <div className="tw-flex tw-flex-wrap tw-gap-[.75rem]">
+            {filterDatas.map((items, i) => (
+              <CustomFilter
+                key={i}
+                type={items.type}
+                optionsArray={items.filter}
+              />
+            ))}
           </div>
         </div>
 

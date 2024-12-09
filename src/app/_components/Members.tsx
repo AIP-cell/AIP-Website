@@ -3,9 +3,7 @@ import Image from "next/image";
 import React from "react";
 import Bg from "@public/svg/wavePeachRight.svg";
 import SmBg from "@public/svg/home/smMemberBg.svg";
-import OvalPurpleSvg from "@/components/svg/OvalPurpleSvg";
 import { THomePageCount } from "@/api/type";
-import OvalPeachCount from "@/components/ovals/OvalPeachCount";
 import OvalPurpleCount from "@/components/ovals/OvalPurpleCount";
 
 type Props = {

@@ -77,8 +77,7 @@ const ExpertsCuratedResource = () => {
               key={i}
               type={items.type}
               optionsArray={items.filter}
-              ListboxButtonClassName="!tw-w-fit"
-              selectedClassName="!tw-w-fit"
+              
             />
           ))}
         </div>

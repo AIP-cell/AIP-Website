@@ -1,5 +1,5 @@
-import BgButton from "@/components/buttons/BgButton";
-import NewsCard from "@/components/cards/NewsCard";
+// import BgButton from "@/components/buttons/BgButton";
+// import NewsCard from "@/components/cards/NewsCard";
 import React from "react";
 import TabNews from "./TabNews";
 import RespNews from "./RespNews";

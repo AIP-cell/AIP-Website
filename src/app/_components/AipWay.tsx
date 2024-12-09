@@ -4,7 +4,6 @@ import LeftHomePagePeachCurve from "@public/svg/leftHomePagePeach.svg";
 import OvalPeachSvg from "@public/svg/ovalPeach.svg";
 
 import Image from "next/image";
-import OvalPurple from "@/components/ovals/OvalPurple";
 import OvalPeach from "@/components/ovals/OvalPeach";
 const AipWay = () => {
   return (

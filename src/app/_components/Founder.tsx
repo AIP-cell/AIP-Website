@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import FounderBg from "../../../public/svg/foundersBg.svg";
-import ASvg from "../../../public/svg/aSvg.svg";
+// import FounderBg from "../../../public/svg/foundersBg.svg";
 import PurPleCurveSvg from "../../../public/svg/purpleBgCurve.svg";
 import BlueCurveSvg from "../../../public/svg/blueBgCurve.svg";
 import TopImage from "@public/images/founderTopCurve.png";

@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from "react";
 import NewsRespSelect from "./NewsRespSelect";
-import CarouselNews from "./CarouselNews";
+// import CarouselNews from "./CarouselNews";
 import CarouselRespNews from "./CarouselRespNews";
 
 const newsData = [
