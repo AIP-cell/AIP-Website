@@ -12,13 +12,13 @@ const FoundationFactHeroSection = () => {
         <Image
           src={HeroBg}
           alt="oval-peach-color-svg"
-          className="tw-absolute tw-top-[4rem] tw-w-full"
+          className="tw-hidden lg:tw-block tw-absolute tw-top-[4rem] tw-w-full"
         />
         <div className="tw-relative container tw-mx-auto">
           <Image
             src={Oval}
             alt="oval-peach-color-svg"
-            className="tw-absolute tw-bottom-[-10.5rem] tw-size-[11.87rem] tw-right-[7.813rem]"
+            className="tw-hidden lg:tw-block tw-absolute tw-bottom-[-10.5rem] tw-size-[11.87rem] tw-right-[7.813rem]"
           />
           <BreadCrump
             textOne="About"
@@ -28,7 +28,7 @@ const FoundationFactHeroSection = () => {
             textThree="Foundation Fact Sheet"
             linkThree="/about/aip-impact/foundation-fact-sheet"
           />
-          <div className="tw-pt-[7.5rem]  tw-px-[7.8rem] tw-text-center tw-font-playFair tw-text-h3 tw-text-gray80 tw-tracking-[-1.4px] tw-leading-[3.25rem]">
+          <div className="~tw-pt-[4.313rem]/[7.5rem]  ~tw-px-[1.25rem]/[7.8rem] tw-text-left  md:tw-text-center tw-font-playFair  ~tw-text-h4a/h3 tw-text-gray80 tw-tracking-[-1.4px] ~tw-leading-[2.6rem]/[3.25rem]">
             AIP works to see strategic philanthropy impact India’s
             transformation. AIP is by and for philanthropists – to inspire,
             influence and inform strategic giving. AIP’s Core Founders are some

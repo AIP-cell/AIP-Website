@@ -24,15 +24,15 @@ const itemsArray = [
 ];
 const ContactSection = () => {
   return (
-    <div className="tw-flex tw-flex-col tw-items-center tw-pt-[12.5rem] tw-pb-[7.5rem]">
-      <h2 className="tw-text-h2 tw-text-center tw-text-gray80 tw-font-playFair">
+    <div className="tw-flex tw-flex-col tw-items-center ~tw-pt-[10rem]/[12.5rem] ~tw-pb-[5rem]/[7.5rem]">
+      <h2 className="~tw-text-h4/h2 ~tw-leading-[2.6rem]/[3.3rem] tw-text-center tw-text-gray80 tw-font-playFair">
         Reason to
         <span className="tw-text-textPurple tw-font-playFairItalic">
           &nbsp;Connect
         </span>
       </h2>
-      <div className="tw-pt-[5rem] tw-flex tw-justify-center tw-px-[19rem]">
-        <div className="tw-grid tw-grid-cols-2 tw-gap-x-[5rem] tw-gap-y-[2.5rem]">
+      <div className="~tw-pt-[3rem]/[5rem] tw-flex tw-justify-center ~tw-px-[1.25rem]/[19rem]">
+        <div className="tw-grid md:tw-grid-cols-2 ~tw-gap-x-[3rem]/[5rem] ~tw-gap-y-[1.75rem]/[2.5rem]">
           {itemsArray.map((item, i) => (
             <TitleDescCard
               key={i}
@@ -43,7 +43,7 @@ const ContactSection = () => {
           ))}
         </div>
       </div>
-      <div className="tw-pt-[5rem]">
+      <div className="~tw-pt-[2rem]/[5rem]">
         <BgButton
           text="Join The Flow"
           className="tw-text-h9Copy5 tw-leading-[1.225rem] tw-px-[1.75rem] tw-py-[0.75rem]"

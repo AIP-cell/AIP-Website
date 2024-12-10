@@ -10,6 +10,7 @@ import News from "./_components/News";
 import { Api } from "@/api/Api";
 import { THomePageData } from "@/api/type";
 
+export const dynamic = 'force-dynamic';
 const getHomePageApi = async (): Promise<THomePageData> => {
   const response = await Api.getHomePage();
   return response.data;
@@ -20,7 +21,7 @@ const page = async () => {
   const eventData = response.event;
   const teamData = response.team;
   const countData = response.count;
-  // const newsAndUpdates = response.newsAndUpdates;
+  
   return (
     <div className="tw-bg-bgLightPeach tw-pt-[5rem] tw-overflow-hidden">
       <HeroSection />

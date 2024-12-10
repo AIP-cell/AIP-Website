@@ -14,7 +14,7 @@ const FoundationFacts = ({ button }: Props) => {
       <Image
         src={Bg}
         alt=""
-        className="tw-block tw-h-[95rem] tw-object-cover md:tw-object-none tw-absolute tw-top-[-15rem] tw-w-[500rem]"
+        className="tw-block tw-h-[95rem] tw-object-cover md:tw-object-none tw-absolute ~tw-top-[-22rem]/[-15rem] tw-w-[500rem]"
       />
       <div className="tw-relative container tw-mx-auto ">
         <h2 className=" ~tw-text-h4/h2 tw-text-center tw-font-playFair ~tw-leading-[2.6rem]/[3.3rem]">

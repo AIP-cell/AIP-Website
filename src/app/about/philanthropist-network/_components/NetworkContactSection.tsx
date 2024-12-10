@@ -43,7 +43,7 @@ const NetworkContactSection = () => {
         relationships built on a strong legacy and an inspiring network.
       </p>
       <div className="~tw-pt-[2rem]/[2.5rem] tw-flex tw-justify-center ">
-        <div className="tw-grid  md:tw-grid-cols-2 ~tw-gap-x-[3]/[5rem] ~tw-gap-y-[1.75rem]/[3.5rem]">
+        <div className="tw-grid  md:tw-grid-cols-2 ~tw-gap-x-[3rem]/[5rem] ~tw-gap-y-[1.75rem]/[3.5rem]">
           {itemsArray.map((item, i) => (
             <TitleDescCard
               key={i}
