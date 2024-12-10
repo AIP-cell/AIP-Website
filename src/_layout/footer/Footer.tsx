@@ -60,8 +60,14 @@ const footerData = [
     id: "people-of-aip/founders",
     label: "people-of-aip",
     options: [
-      { option: "core-founders", link: "/people-of-aip/core-founders" },
-      { option: "core-founders", link: "/people-of-aip/core-founders" },
+      { option: "Our Core Founders", link: "/people-of-aip/core-founders" },
+      { option: "Founders", link: "/people-of-aip/founders" },
+      {
+        option: "Our Advisory Board",
+        link: "/people-of-aip/our-advisory-board",
+      },
+      { option: "Team AIP", link: "/people-of-aip/team-AIP" },
+      { option: "Experts", link: "/people-of-aip/experts" },
     ],
   },
   {
