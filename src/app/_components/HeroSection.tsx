@@ -6,17 +6,17 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <div className=" tw-w-full tw-relative xl:tw-h-screen">
+    <div className=" tw-w-full tw-relative ">
       <Image
         src={HeroBg}
         alt=""
-        className="tw-hidden lg:tw-block tw-absolute tw-top-[-2rem] tw-w-full tw-h-full  tw-object-fill"
+        className="tw-hidden lg:tw-block tw-absolute tw-top-[-2rem] tw-w-full  tw-h-[46rem]  tw-object-fill"
       />
-      <div className="container tw-mx-auto tw-relative tw-h-screen ">
+      <div className="container tw-mx-auto tw-relative md:~tw-h-[50rem]/[38rem] tw-h-[40rem] ">
         <div className="tw-hidden xl:tw-block tw-absolute tw-top-[3.125rem] tw-left-[1.25rem]">
           <Image src={OvalPeach} alt="" className="tw-size-[11.875rem]" />
         </div>
-        <div className="tw-flex tw-flex-col xl:tw-flex-row ~tw-gap-[3.25rem]/[1rem] tw-items-center  ~tw-pt-[2.5rem]/[5.56rem] ~tw-pl-[1rem]/[7.8rem] ~tw-pr-[1rem]/[5rem] tw-relative">
+        <div className="tw-flex tw-flex-col xl:tw-flex-row ~tw-gap-[3.25rem]/[1rem] tw-items-center  ~tw-pt-[2.5rem]/[5.2rem] ~tw-pl-[1rem]/[7.8rem] ~tw-pr-[1rem]/[5rem] tw-relative">
           <div className="tw-relative tw-tracking-[-1px] tw-shrink-0 tw-w-auto xl:tw-w-[38.125rem] tw-z-[1000] ~tw-text-h4/h1 tw-font-playFair ~tw-leading-[2.6rem]/[3.7rem] tw-px-[0.6rem] md:tw-px-0  tw-text-gray80">
             AIP is a peer network that
             <span className=" tw-font-playFairItalic tw-text-textPurple">

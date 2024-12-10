@@ -30,7 +30,7 @@ const GiveSection = () => {
         alt="give-section-Bg"
         className="tw-absolute ~/md:~tw-bottom-[15rem]/[10rem] tw-top-auto lg:tw-bottom-auto lg:tw-top-[-11rem] tw-right-0 ~tw-w-[7.842rem]/[13.125rem] ~tw-h-[29.87rem]/[50rem] "
       />
-      <div className="container tw-mx-auto  ~tw-pt-[6.519rem]/[3.5rem] ~tw-px-[2.8rem]/[7.8rem] tw-relative">
+      <div className="container tw-mx-auto  ~tw-pt-[3.2rem]/[3.5rem] ~tw-px-[2.8rem]/[7.8rem] tw-relative">
         <div className=" tw-flex tw-flex-col lg:tw-flex-row tw-justify-center xl:tw-justify-normal ~tw-gap-[1.25rem]/[4.56rem]">
           {giveData.map((item, i) => (
             <ImgTitleDescVer
