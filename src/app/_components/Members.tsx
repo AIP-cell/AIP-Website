@@ -15,10 +15,10 @@ const Members = ({ countData }: Props) => {
       <Image
         src={Bg}
         alt=""
-        className="tw-hidden md:tw-block tw-object-cover tw-absolute tw-w-full ~md:~tw-bottom-[0rem]/[-10.5rem]"
+        className="tw-hidden md:tw-block   max-cover tw-absolute tw-w-[300rem] tw-h-full ~md:~tw-bottom-[0rem]/[-5rem]"
       />
       <div className=" container tw-mx-auto ~tw-pt-[5rem]/[13.25rem]">
-        <div className="tw-relative tw-flex tw-flex-col xl:tw-flex-row tw-w-full tw-h-[120vh]  ~tw-gap-[2rem]/0">
+        <div className="tw-relative tw-flex tw-flex-col xl:tw-flex-row tw-w-full ~tw-h-[45rem]/[49rem]  ~tw-gap-[2rem]/0">
           <div className=" tw-w-full xl:tw-w-[65%] ~tw-pl-[1.25rem]/[7rem] ~/md:~tw-pr-[1.25rem]/[2rem] xl:tw-pr-0">
             <h2 className="~tw-text-h4/h2  tw-font-playFair tw-text-gray50 ~tw-leading-[2.6rem]/[3.3rem]">
               Accelerate Indian

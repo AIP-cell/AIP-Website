@@ -47,6 +47,14 @@ body {
   /* IE and Edge */
   scrollbar-width: none !important;
 }
+.max-cover{
+  object-fit: fill !important;
+}
+@media screen and  (max-width: 1900px){
+.max-cover{
+  object-fit: cover !important;
+}
+}
 .tk-blob {
   animation: blob-turn var(--time, 30s) linear infinite;
   fill: var(--fill, #7600f8);
