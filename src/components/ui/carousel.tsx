@@ -140,7 +140,7 @@ const Carousel = React.forwardRef<
         <div
           ref={ref}
           onKeyDownCapture={handleKeyDown}
-          className={cn("tw-relative", className)}
+          className={cn("relative", className)}
           role="region"
           aria-roledescription="carousel"
           {...props}
@@ -160,14 +160,14 @@ const CarouselContent = React.forwardRef<
   const { carouselRef, orientation } = useCarousel();
 
   return (
-    <div ref={carouselRef} className="tw-overflow-hidden">
+    <div ref={carouselRef} className="overflow-hidden">
       <div
         ref={ref}
         className={cn(
-          "tw-flex ",
+          "flex ",
           orientation === "horizontal"
-            ? "tw--ml-4"
-            : "tw--mt-4 tw-flex tw-flex-col",
+            ? "-ml-4"
+            : "-mt-4 flex flex-col",
           className
         )}
         {...props}
@@ -189,8 +189,8 @@ const CarouselItem = React.forwardRef<
       role="group"
       aria-roledescription="slide"
       className={cn(
-        "tw-min-w-0 tw-shrink-0 tw-basis-full",
-        orientation === "horizontal" ? "tw-pl-4" : "tw-pt-4",
+        "min-w-0 shrink-0 basis-full",
+        orientation === "horizontal" ? "pl-4" : "pt-4",
         className
       )}
       {...props}
@@ -211,24 +211,24 @@ const CarouselPrevious = React.forwardRef<
       variant={variant}
       size={size}
       className={cn(
-        // "tw-absolute tw-text-white tw-leading-[22.4px] tw-font-inter tw-bg-darkPurple tw-rounded-tl-3xl tw-rounded-bl-3xl tw-rounded-tr-xl tw-rounded-br-xl tw-p-[0.75rem]",
-        " hover:tw-text-white tw-text-darkPurple tw-leading-[22.4px] tw-font-inter hover:tw-bg-darkPurple tw-bg-white tw-rounded-tl-3xl tw-rounded-bl-3xl tw-rounded-tr-xl tw-rounded-br-xl tw-p-[0.75rem] tw-h-fit",
+        // "absolute text-white leading-[22.4px] font-inter bg-darkPurple rounded-tl-3xl rounded-bl-3xl rounded-tr-xl rounded-br-xl p-[0.75rem]",
+        " hover:text-white text-darkPurple leading-[22.4px] font-inter hover:bg-darkPurple bg-white rounded-tl-3xl rounded-bl-3xl rounded-tr-xl rounded-br-xl p-[0.75rem] h-fit",
         // orientation === "horizontal"
-        //   ? // tw--left-12
-        //     // tw--translate-y-1/2
-        //     "tw-flex tw-justify-center tw-bottom-[-4rem] "
-        //   : "tw--top-12 tw-left-1/2 tw--translate-x-1/2 tw-rotate-90",
+        //   ? // -left-12
+        //     // -translate-y-1/2
+        //     "flex justify-center bottom-[-4rem] "
+        //   : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
         className
       )}
       disabled={!canScrollPrev}
       onClick={scrollPrev}
       {...props}
     >
-      <SquareSizedArrow className="tw-size-[1.25rem]" />
-      {/* <LeftSlickArrowSvg className="tw-w-[1rem] tw-h-[0.57rem] " /> */}
-      {/* <ArrowLeftIcon className="tw-h-4 tw-w-4" /> */}
-      {/* <LeftSlickArrowSvg className="tw-h-4 tw-w-4" /> */}
-      <span className="tw-sr-only">Previous slide</span>
+      <SquareSizedArrow className="size-[1.25rem]" />
+      {/* <LeftSlickArrowSvg className="w-[1rem] h-[0.57rem] " /> */}
+      {/* <ArrowLeftIcon className="h-4 w-4" /> */}
+      {/* <LeftSlickArrowSvg className="h-4 w-4" /> */}
+      <span className="sr-only">Previous slide</span>
     </Button>
   );
 });
@@ -246,23 +246,23 @@ const CarouselNext = React.forwardRef<
       variant={variant}
       size={size}
       className={cn(
-        // "tw-absolute tw-h-8 tw-w-8 tw-text-white tw-leading-[22.4px] tw-font-inter tw-bg-darkPurple tw-rounded-tr-3xl tw-rounded-br-3xl tw-rounded-tl-xl tw-rounded-bl-xl tw-p-[0.75rem]",
-        "hover:tw-text-white  tw-text-darkPurple tw-leading-[22.4px] tw-font-inter hover:tw-bg-darkPurple tw-bg-white tw-rounded-tr-3xl tw-rounded-br-3xl  tw-p-[0.75rem] tw-h-fit",
+        // "absolute h-8 w-8 text-white leading-[22.4px] font-inter bg-darkPurple rounded-tr-3xl rounded-br-3xl rounded-tl-xl rounded-bl-xl p-[0.75rem]",
+        "hover:text-white  text-darkPurple leading-[22.4px] font-inter hover:bg-darkPurple bg-white rounded-tr-3xl rounded-br-3xl  p-[0.75rem] h-fit",
         // orientation === "horizontal"
-        //   ? // tw--right-12 tw-top-1/2
-        //     // tw--translate-y-1/2
-        //     "tw-flex tw-justify-center tw-bottom-[-4rem] "
-        //   : "tw--bottom-12 tw-left-1/2 tw--translate-x-1/2 tw-rotate-90",
+        //   ? // -right-12 top-1/2
+        //     // -translate-y-1/2
+        //     "flex justify-center bottom-[-4rem] "
+        //   : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
         className
       )}
       disabled={!canScrollNext}
       onClick={scrollNext}
       {...props}
     >
-      <SquareSizedArrow className="tw-size-[1.25rem] tw-rotate-180" />
-      {/* <RightSlickArrowSvg className="tw-w-[1rem] tw-h-[0.57rem]" /> */}
-      {/* <ArrowRightIcon className="tw-h-4 tw-w-4" /> */}
-      <span className="tw-sr-only">Next slide</span>
+      <SquareSizedArrow className="size-[1.25rem] rotate-180" />
+      {/* <RightSlickArrowSvg className="w-[1rem] h-[0.57rem]" /> */}
+      {/* <ArrowRightIcon className="h-4 w-4" /> */}
+      <span className="sr-only">Next slide</span>
     </Button>
   );
 });

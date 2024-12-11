@@ -7,7 +7,7 @@ import CurvePeach from "@public/svg/peach-bg-curve-founders.svg";
 
 const page = () => {
   return (
-    <div className="tw-relative tw-pt-[5rem]">
+    <div className="relative pt-[5rem]">
       <ImpactHeroSection />
       <CaseStudies  bottomCaseStudyCurveSvg={CurvePeach} />
       <FoundationFacts button="View more" />

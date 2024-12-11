@@ -18,25 +18,25 @@ const list = [
 const FaqPage = () => {
   const [selected, setSelected] = useState(list[0]);
   return (
-    <div className="tw-pt-[5rem]">
-      <div className=" tw-relative tw-h-screen ">
+    <div className="pt-[5rem]">
+      <div className=" relative h-screen ">
         <Image
           src={BgFaq}
           alt=""
-          className="tw-hidden lg:tw-block tw-left-0 tw-absolute tw-top-[5rem] "
+          className="hidden lg:block left-0 absolute top-[5rem] "
         />
 
-        <TabGroup className="tw-relative container tw-mx-auto ~tw-px-[1.25rem]/[7.75rem] tw-pt-[5rem] tw-grid md:tw-grid-cols-3 tw-gap-[3.75rem] tw-h-screen">
+        <TabGroup className="relative container mx-auto ~px-[1.25rem]/[7.75rem] pt-[5rem] grid md:grid-cols-3 gap-[3.75rem] h-screen">
           <BreadCrump textOne="FAQ's" linkOne="/faq" />
 
           <div>
-            <p className="tw-leading-[3.3rem] tw-text-h2 tw-pb-[3rem] tw-font-playFair">
+            <p className="leading-[3.3rem] text-h2 pb-[3rem] font-playFair">
               FAQS
             </p>
-            <div className="tw-hidden md:tw-block">
+            <div className="hidden md:block">
               <FaqTab />
             </div>
-            <div className="tw-block md:tw-hidden">
+            <div className="block md:hidden">
               <CustomGraySelect
                 data={list}
                 selected={selected}
@@ -44,7 +44,7 @@ const FaqPage = () => {
               />
             </div>
           </div>
-          <TabPanels className="md:tw-col-span-2">
+          <TabPanels className="md:col-span-2">
             <TabPanel>
               <FaqItem />
             </TabPanel>

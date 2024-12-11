@@ -24,39 +24,39 @@ export function ApplyFilterResp({
     setIsOpen(false);
   };
   return (
-    <div className="tw-block md:tw-hidden tw-fixed tw-bottom-0 tw-inset-x-0 tw-w-full tw-bg-white tw-h-[80vh] tw-rounded-t-lg  tw-px-[1.25rem] tw-pt-[2rem] tw-pb-[1.25rem] tw-z-[2000] tw-overflow-y-auto tw-overflow-hidden ">
+    <div className="block md:hidden fixed bottom-0 inset-x-0 w-full bg-white h-[80vh] rounded-t-lg  px-[1.25rem] pt-[2rem] pb-[1.25rem] z-[2000] overflow-y-auto overflow-hidden ">
       <form onSubmit={handleSubmit} className=" ">
-        <div className="tw-pb-[0.773rem] tw-border-b-[1.5px] tw-text-h8Copy3 tw-leading-[1.575rem] tw-gap-[0.5rem] tw-border-b-gray20 tw-text-gray80 tw-flex tw-relative tw-items-center">
-          <p className=" tw-text-gray20">Filter By:</p> <div>{type}</div>
+        <div className="pb-[0.773rem] border-b-[1.5px] text-h8Copy3 leading-[1.575rem] gap-[0.5rem] border-b-gray20 text-gray80 flex relative items-center">
+          <p className=" text-gray20">Filter By:</p> <div>{type}</div>
           <CrossSvg
             onClick={() => setIsOpen(false)}
-            className="tw-absolute tw-right-0 tw-size-[1rem] tw-cursor-pointer"
+            className="absolute right-0 size-[1rem] cursor-pointer"
           />
         </div>
         <RadioGroup
-          className="tw-flex tw-flex-col tw-px-[0.75rem] tw-h-[55vh] tw-overflow-y-scroll no-scrollbar tw-relative"
+          className="flex flex-col px-[0.75rem] h-[55vh] overflow-y-scroll no-scrollbar relative"
           defaultValue={selectedFilter}
           onValueChange={setSelectedFilter}
         >
           {optionsArray.map((items, index) => (
             <div
               key={index}
-              className="tw-flex tw-items-center tw-gap-[0.938rem] tw-py-[1.25rem]"
+              className="flex items-center gap-[0.938rem] py-[1.25rem]"
             >
               <RadioGroupItem value={items} id={items} />
               <label
                 htmlFor={items}
-                className="tw-text-h9Copy5 tw-leading-[1.225rem] tw-text-gray80"
+                className="text-h9Copy5 leading-[1.225rem] text-gray80"
               >
                 {items}
               </label>
             </div>
           ))}
         </RadioGroup>
-        <div className="tw-pt-[2rem]">
+        <div className="pt-[2rem]">
           <button
             type="submit"
-            className="tw-py-[0.75rem] tw-w-full tw-rounded-full tw-text-h9Copy5 tw-leading-[1.225rem] tw-text-white tw-bg-darkPurple tw-text-center"
+            className="py-[0.75rem] w-full rounded-full text-h9Copy5 leading-[1.225rem] text-white bg-darkPurple text-center"
           >
             Apply Filter
           </button>

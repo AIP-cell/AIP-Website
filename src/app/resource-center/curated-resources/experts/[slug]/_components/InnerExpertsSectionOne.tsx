@@ -12,13 +12,13 @@ import InnerCollaborationsVideo from "@/app/our-work/collaborations/[slug]/_comp
 
 const InnerExpertsSectionOne = () => {
   return (
-    <div className="tw-relative tw-w-full ~tw-pb-[3rem]/[5.75rem]">
+    <div className="relative w-full ~pb-[3rem]/[5.75rem]">
       <Image
         src={PurpleTopSvg}
         alt="purple-curve"
-        className="tw-hidden md:tw-block tw-absolute tw-top-[8rem] tw-right-0"
+        className="hidden md:block absolute top-[8rem] right-0"
       />
-      <div className="container tw-mx-auto tw-relative ~tw-px-[1.25rem]/[7.8rem] tw-pt-[5rem]">
+      <div className="container mx-auto relative ~px-[1.25rem]/[7.8rem] pt-[5rem]">
         <BreadCrump
           textOne="Resource Center"
           linkOne="/resource-center"
@@ -28,24 +28,24 @@ const InnerExpertsSectionOne = () => {
           linkThree="/resource-center/curated-resources/slug"
           textFour="slug"
         />
-        <div className="tw-relative tw-grid md:tw-grid-cols-3 tw-gap-5 ~tw-pb-[3rem]/0">
-          <div className="tw-col-span-2 tw-flex tw-flex-col ~tw-gap-[2rem]/[2.5rem]  ~tw-pe-0/[6.563rem]">
+        <div className="relative grid md:grid-cols-3 gap-5 ~pb-[3rem]/0">
+          <div className="col-span-2 flex flex-col ~gap-[2rem]/[2.5rem]  ~pe-0/[6.563rem]">
             <div>
-              <div className="tw-font-playFair">
-                <p className="tw-leading-[3.25rem] tw-tracking-[-.04rem] tw-text-h3 tw-text-midGray ">
+              <div className="font-playFair">
+                <p className="leading-[3.25rem] tracking-[-.04rem] text-h3 text-midGray ">
                   Systemic Impact Exemplars
                 </p>
-                <p className="tw-font-medium  tw-leading-[1.75rem]  tw-font-playFair tw-text-h5 tw-text-gray80 tw-pt-[1rem]">
+                <p className="font-medium  leading-[1.75rem]  font-playFair text-h5 text-gray80 pt-[1rem]">
                   By{" "}
-                  <span className="tw-underline tw-underline-offset-3 tw-decoration-[1.5px]">
+                  <span className="underline underline-offset-3 decoration-[1.5px]">
                     Karthik Muralidharan
                   </span>
                 </p>
-                <p className=" tw-leading-[1.75rem]  tw-font-playFairItalic tw-text-h5 tw-text-gray40 tw-font-medium tw-pt-[1rem]">
+                <p className=" leading-[1.75rem]  font-playFairItalic text-h5 text-gray40 font-medium pt-[1rem]">
                   Reports | Fields
                 </p>
               </div>
-              <p className="tw-font-inter tw-leading-[1.4rem]  tw-text-midGray  tw-pt-[1rem] ~tw-pr-0/[3rem]">
+              <p className="font-inter leading-[1.4rem]  text-midGray  pt-[1rem] ~pr-0/[3rem]">
                 This report was conceptualised to identify and learn from
                 organisations that have achieved large-scale impact by adopting
                 the systems change approach. It profiles 20 of India’s leading
@@ -55,48 +55,48 @@ const InnerExpertsSectionOne = () => {
                 resource, intended to shape thinking on systems change.
               </p>
             </div>
-            <div className="tw-block md:tw-hidden ">
+            <div className="block md:hidden ">
               <Image
                 src={Systemic}
-                className=" tw-w-full tw-object-cover tw-h-[30.89rem]"
+                className=" w-full object-cover h-[30.89rem]"
                 alt="image"
               />
             </div>
             <div className="">
-              <p className="tw-block md:tw-hidden tw-text-h6M tw-text-gray80 tw-font-playFair tw-leading-[1.575rem]">
+              <p className="block md:hidden text-h6M text-gray80 font-playFair leading-[1.575rem]">
                 Launch Details
               </p>
-              <button className="tw-mt-[1rem] tw-group tw-bg-darkPurple tw-border-2 tw-border-darkPurple hover:tw-bg-white  tw-transition-all  hover:tw-text-darkPurple tw-text-white hover:tw-border-2 hover:tw-border-darkPurple tw-px-7 tw-py-3 tw-flex tw-items-center tw-gap-[0.75rem] tw-w-fit tw-rounded-3xl">
-                <p className=" tw-font-inter  tw-text-h9Copy5 tw-leading-[1.225rem]">
+              <button className="mt-[1rem] group bg-darkPurple border-2 border-darkPurple hover:bg-white  transition-all  hover:text-darkPurple text-white hover:border-2 hover:border-darkPurple px-7 py-3 flex items-center gap-[0.75rem] w-fit rounded-3xl">
+                <p className=" font-inter  text-h9Copy5 leading-[1.225rem]">
                   Download
                 </p>
-                <div className=" tw-pt-[.1rem]">
-                  <DownloadFileSvg className="tw-size-[1.25rem]" />
+                <div className=" pt-[.1rem]">
+                  <DownloadFileSvg className="size-[1.25rem]" />
                 </div>
               </button>
             </div>
-            <div className="tw-flex tw-flex-col tw-gap-[1rem]">
-              <h2 className="~tw-text-h6M/h4a ~tw-leading-[1.575rem]/[2.113rem] tw-text-gray80 tw-font-playFair  ~tw-pb-0/[1.5rem]">
+            <div className="flex flex-col gap-[1rem]">
+              <h2 className="~text-h6M/h4a ~leading-[1.575rem]/[2.113rem] text-gray80 font-playFair  ~pb-0/[1.5rem]">
                 Links
               </h2>
-              <div className="tw-flex tw-w-[17.375rem] tw-gap-[0.98rem] ~tw-pl-[1rem]/[1.25rem] ~tw-py-[0.875rem]/[0.75rem] tw-bg-bgGray5 tw-rounded-full">
+              <div className="flex w-[17.375rem] gap-[0.98rem] ~pl-[1rem]/[1.25rem] ~py-[0.875rem]/[0.75rem] bg-bgGray5 rounded-full">
                 <Image src={LinkSvg} alt="" className="" />
-                <p className="tw-text-gray80 ~tw-leading-[1.225rem]/[1.4rem] ~tw-text-h9Copy5/h9Copy4">
+                <p className="text-gray80 ~leading-[1.225rem]/[1.4rem] ~text-h9Copy5/h9Copy4">
                   theconvergencefoundation
                 </p>
               </div>
-              <div className="tw-flex tw-w-[17.375rem] tw-gap-[0.98rem] ~tw-pl-[1rem]/[1.25rem] ~tw-py-[0.875rem]/[0.75rem] tw-bg-bgGray5 tw-rounded-full">
+              <div className="flex w-[17.375rem] gap-[0.98rem] ~pl-[1rem]/[1.25rem] ~py-[0.875rem]/[0.75rem] bg-bgGray5 rounded-full">
                 <Image src={LinkSvg} alt="" className="" />
-                <p className="tw-text-gray80 ~tw-leading-[1.225rem]/[1.4rem] ~tw-text-h9Copy5/h9Copy4">
+                <p className="text-gray80 ~leading-[1.225rem]/[1.4rem] ~text-h9Copy5/h9Copy4">
                   abcdxyze_loremipsum
                 </p>
               </div>
             </div>
           </div>
-          <div className="tw-hidden md:tw-block tw-pt-[5rem]">
+          <div className="hidden md:block pt-[5rem]">
             <Image
               src={Systemic}
-              className=" tw-w-[25rem] tw-object-cover tw-h-[35.313rem]"
+              className=" w-[25rem] object-cover h-[35.313rem]"
               alt="image"
             />
           </div>

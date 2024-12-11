@@ -7,14 +7,14 @@ type Props = {
 const SelectField = ({ label, placeholder }: Props) => {
   return (
     <div>
-      <label className="tw-font-inter tw-leading-[1.225rem] tw-text-sm tw-font-semibold tw-text-gray80">
+      <label className="font-inter leading-[1.225rem] text-sm font-semibold text-gray80">
         {label}
       </label>
       <select
-        className="tw-w-full tw-h-[3.25rem] tw-p-2 tw-border tw-border-gray-300 tw-rounded-md"
+        className="w-full h-[3.25rem] p-2 border border-gray-300 rounded-md"
         defaultValue=""
       >
-        <option value="" disabled hidden className="tw-text-gray80">
+        <option value="" disabled hidden className="text-gray80">
           {placeholder}
         </option>
         {/* {options.map((option, index) => (

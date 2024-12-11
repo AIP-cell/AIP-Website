@@ -8,28 +8,28 @@ import React from "react";
 
 const CareersHeroSection = () => {
   return (
-    <div className="tw-w-full tw-relative">
-      {/* tw-top-[9rem] */}
+    <div className="w-full relative">
+      {/* top-[9rem] */}
       <Image
         src={Bg}
         alt=""
-        className="tw-hidden lg:tw-block tw-absolute tw-top-[1rem]  tw-h-[65rem] tw-object-cover tw-w-[300rem]"
+        className="hidden lg:block absolute top-[1rem]  h-[65rem] object-cover w-[300rem]"
       />
       <Image
         src={SmallBg}
         alt=""
-        className="tw-block md:tw-hidden  tw-absolute tw-top-[-3rem] tw-w-full"
+        className="block md:hidden  absolute top-[-3rem] w-full"
       />
-      <div className="container tw-mx-auto tw-relative">
+      <div className="container mx-auto relative">
         <BreadCrump textOne="Careers" linkOne="/careers" />
-        <div className="tw-text-center tw-relative">
+        <div className="text-center relative">
           <Image
             src={OvalPurple}
             alt=""
-            className="tw-absolute ~tw-bottom-[4rem]/[2rem] tw-size-[10rem] md:tw-size-auto ~tw-right-0/[7.8rem]"
+            className="absolute ~bottom-[4rem]/[2rem] size-[10rem] md:size-auto ~right-0/[7.8rem]"
           />
-          <p className=" ~tw-px-5/[13.313rem] ~tw-pt-[3.5rem]/[7.5rem] ~tw-pb-[15rem]/[21.531rem] ~tw-text-h4/h1 tw-text-gray80 ~tw-leading-[2.6rem]/[3.713rem] tw-font-playFair tw-tracking-[-.04rem]">
-            <span className="tw-font-playFairItalic tw-text-textPurple">
+          <p className=" ~px-5/[13.313rem] ~pt-[3.5rem]/[7.5rem] ~pb-[15rem]/[21.531rem] ~text-h4/h1 text-gray80 ~leading-[2.6rem]/[3.713rem] font-playFair tracking-[-.04rem]">
+            <span className="font-playFairItalic text-textPurple">
               Inspiring. Supportive. Inclusive. Innovative. Growing.
             </span>
           </p>

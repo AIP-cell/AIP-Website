@@ -29,25 +29,25 @@ const datas = [
 ];
 const FourPillars = () => {
   return (
-    <div className="tw-relative">
+    <div className="relative">
       <Image
         src={CurveBg}
         alt=""
-        className="tw-hidden lg:tw-flex tw-absolute  tw-items-center tw-bottom-[1rem]  tw-left-0"
+        className="hidden lg:flex absolute  items-center bottom-[1rem]  left-0"
       />
       <Image
         src={bottomCaseStudyCurveSvg}
         alt=""
-        className="tw-hidden lg:tw-block tw-absolute  tw-top-[27rem]  tw-right-0"
+        className="hidden lg:block absolute  top-[27rem]  right-0"
       />
-      <div className=" tw-flex tw-flex-col tw-items-center container tw-mx-auto tw-relative">
-        <h2 className="~tw-text-h4/h2 ~tw-leading-[2.6rem]/[3.3rem] tw-font-playFair tw-text-gray80">
+      <div className=" flex flex-col items-center container mx-auto relative">
+        <h2 className="~text-h4/h2 ~leading-[2.6rem]/[3.3rem] font-playFair text-gray80">
           Our
-          <span className="tw-text-textPurple tw-font-playFairItalic">
+          <span className="text-textPurple font-playFairItalic">
             &nbsp;Four Pillars
           </span>
         </h2>
-        <p className="tw-text-midGray  ~tw-leading-[1.225rem]/[1.4rem] max-[20rem]:tw-w-[19rem] ~tw-w-[21rem]/[38.14rem] ~tw-text-h9Copy5/h9Copy4 tw-text-center  ~tw-pt-[0.75rem]/[1.25rem] ~tw-pb-[1.25rem]/[5rem]">
+        <p className="text-midGray  ~leading-[1.225rem]/[1.4rem] max-[20rem]:w-[19rem] ~w-[21rem]/[38.14rem] ~text-h9Copy5/h9Copy4 text-center  ~pt-[0.75rem]/[1.25rem] ~pb-[1.25rem]/[5rem]">
           At AIP, we believe in the transformative power of philanthropy to
           catalyse India’s progress. Our Theory of Change is rooted in the
           conviction that philanthropists are not only eager to make a
@@ -55,26 +55,26 @@ const FourPillars = () => {
           aim to create a vibrant movement of strategic giving that drives
           sustainable impact across the country.
         </p>
-        <div className="tw-flex tw-flex-col ~tw-gap-[0.5rem]/0">
+        <div className="flex flex-col ~gap-[0.5rem]/0">
           {datas.map((items, i) => (
             <div
               key={i}
               className={cn(
-                "tw-flex tw-flex-col md:tw-flex-row tw-items-center ~tw-gap-0/[1rem] ~tw-pl-[2.8rem]/[8rem] ~tw-pr-[2.8rem]/[14.3rem] max-[20rem]:!tw-px-[0.5rem]",
+                "flex flex-col md:flex-row items-center ~gap-0/[1rem] ~pl-[2.8rem]/[8rem] ~pr-[2.8rem]/[14.3rem] max-[20rem]:!px-[0.5rem]",
                 {
-                  "md:tw-flex-row-reverse  !~tw-pr-[2.8rem]/[8rem] !~tw-pl-[2.8rem]/[14.3rem] max-[20rem]:!tw-px-[0.5rem]":
+                  "md:flex-row-reverse  !~pr-[2.8rem]/[8rem] !~pl-[2.8rem]/[14.3rem] max-[20rem]:!px-[0.5rem]":
                     i % 2 == 1,
                 }
               )}
             >
               <OvalPurple
-                textClass1="!tw-leading-[2.113rem] !tw-text-h4a !tw-font-playFair"
-                textClass2="!tw-leading-[2.113rem] !tw-text-h4a !tw-font-playFair"
-                sizeClass="~tw-size-[16.5rem]/[18.438rem]"
+                textClass1="!leading-[2.113rem] !text-h4a !font-playFair"
+                textClass2="!leading-[2.113rem] !text-h4a !font-playFair"
+                sizeClass="~size-[16.5rem]/[18.438rem]"
                 text1={items.text1}
                 text2={items.text2}
               />
-              <p className="~tw-leading-[1.225rem]/[1.4rem] ~tw-text-h9Copy5/h9Copy4 tw-text-center md:tw-text-left tw-text-midGray">
+              <p className="~leading-[1.225rem]/[1.4rem] ~text-h9Copy5/h9Copy4 text-center md:text-left text-midGray">
                 {items.desc}
               </p>
             </div>

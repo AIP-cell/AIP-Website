@@ -29,27 +29,27 @@ const datas = [
 ];
 const AipAndExperts = () => {
   return (
-    <div className="tw-relative">
+    <div className="relative">
       <Image
         src={CurveBg}
         alt=""
-        className="tw-hidden lg:tw-flex tw-absolute  tw-items-center tw-bottom-[14rem]  tw-left-0"
+        className="hidden lg:flex absolute  items-center bottom-[14rem]  left-0"
       />
       <Image
         src={bottomCaseStudyCurveSvg}
         alt=""
-        className="tw-hidden lg:tw-block tw-absolute  tw-bottom-[-12rem]  tw-right-0"
+        className="hidden lg:block absolute  bottom-[-12rem]  right-0"
       />
-      <div className="~tw-pt-[4.5rem]/[6.688rem] ~tw-pb-0/[5rem] container tw-mx-auto">
-        <h1 className="~tw-text-h4/h2 ~tw-leading-[2.6rem]/[3.3rem] tw-font-playFair tw-text-center tw-w-full">
+      <div className="~pt-[4.5rem]/[6.688rem] ~pb-0/[5rem] container mx-auto">
+        <h1 className="~text-h4/h2 ~leading-[2.6rem]/[3.3rem] font-playFair text-center w-full">
           AIP
-          <span className="tw-font-playFairItalic tw-text-textPurple">
+          <span className="font-playFairItalic text-textPurple">
             &nbsp;&&nbsp;
           </span>
           Experts
         </h1>
-        <div className="~tw-px-[1.25rem]/[14.375rem] tw-flex tw-flex-col tw-w-full tw-items-center ~tw-gap-[0.7rem]/[1rem] ~tw-pt-[0.75rem]/[2.5rem] tw-text-center">
-          <p className="tw-text-midGray ~tw-text-h9Copy5/h9Copy4 ~tw-leading-[1.225rem]/[1.4rem]">
+        <div className="~px-[1.25rem]/[14.375rem] flex flex-col w-full items-center ~gap-[0.7rem]/[1rem] ~pt-[0.75rem]/[2.5rem] text-center">
+          <p className="text-midGray ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]">
             Experts play a vital role in AIP’s mission by contributing their
             wealth of experience across various touchpoints. Their engagement
             spans multiple activities that help our network members understand
@@ -58,31 +58,31 @@ const AipAndExperts = () => {
             the key ways experts contribute to AIP’s work.
           </p>
 
-          <p className="tw-text-midGray ~tw-text-h9Copy5/h9Copy4 ~tw-leading-[1.225rem]/[1.4rem]">
+          <p className="text-midGray ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]">
             Experts engage with AIP across a variety of platforms and activities
             designed to maximise their impact.
           </p>
         </div>
-        <div className="tw-flex tw-flex-col ~tw-gap-[0.5rem]/0">
+        <div className="flex flex-col ~gap-[0.5rem]/0">
           {datas.map((items, i) => (
             <div
               key={i}
               className={cn(
-                "tw-flex tw-flex-col md:tw-flex-row tw-items-center ~tw-gap-0/[1rem] ~tw-pl-[2.8rem]/[8rem] ~tw-pr-[2.8rem]/[14.3rem] max-[20rem]:!tw-px-[0.5rem]",
+                "flex flex-col md:flex-row items-center ~gap-0/[1rem] ~pl-[2.8rem]/[8rem] ~pr-[2.8rem]/[14.3rem] max-[20rem]:!px-[0.5rem]",
                 {
-                  "md:tw-flex-row-reverse  !~tw-pr-[2.8rem]/[8rem] !~tw-pl-[2.8rem]/[14.3rem] max-[20rem]:!tw-px-[0.5rem]":
+                  "md:flex-row-reverse  !~pr-[2.8rem]/[8rem] !~pl-[2.8rem]/[14.3rem] max-[20rem]:!px-[0.5rem]":
                     i % 2 == 1,
                 }
               )}
             >
               <OvalPurple
-                textClass1="!tw-leading-[2.113rem] !tw-text-h4a !tw-font-playFair"
-                textClass2="!tw-leading-[2.113rem] !tw-text-h4a !tw-font-playFair"
-                sizeClass="~tw-size-[16.5rem]/[18.438rem]"
+                textClass1="!leading-[2.113rem] !text-h4a !font-playFair"
+                textClass2="!leading-[2.113rem] !text-h4a !font-playFair"
+                sizeClass="~size-[16.5rem]/[18.438rem]"
                 text1={items.text1}
                 text2={items.text2}
               />
-              <p className="~tw-leading-[1.225rem]/[1.4rem] ~tw-text-h9Copy5/h9Copy4 tw-text-center md:tw-text-left tw-text-midGray">
+              <p className="~leading-[1.225rem]/[1.4rem] ~text-h9Copy5/h9Copy4 text-center md:text-left text-midGray">
                 {items.desc}
               </p>
             </div>

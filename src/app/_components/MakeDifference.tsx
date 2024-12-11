@@ -16,20 +16,20 @@ const dataS = [
 ];
 const MakeDifference = () => {
   return (
-    <div className="tw-w-full tw-relative">
+    <div className="w-full relative">
       <Image
         src={LeftHomePagePeachCurve}
         alt=""
-        className="tw-left-0 tw-absolute lg:tw-bottom-0 tw-top-[4rem] lg:tw-top-auto ~tw-w-[6.956rem]/[13.125rem] ~tw-h-[19.875rem]/[37.5rem]"
+        className="left-0 absolute lg:bottom-0 top-[4rem] lg:top-auto ~w-[6.956rem]/[13.125rem] ~h-[19.875rem]/[37.5rem]"
       />
-      <div className="container tw-mx-auto tw-relative ~tw-pt-[4.8rem]/[13rem] tw-flex tw-flex-col tw-items-center tw-justify-center">
-        <h3 className="~tw-text-h4/h2 tw-text-gray80 ~tw-leading-[2.6rem]/[3.3rem] tw-font-playFair">
+      <div className="container mx-auto relative ~pt-[4.8rem]/[13rem] flex flex-col items-center justify-center">
+        <h3 className="~text-h4/h2 text-gray80 ~leading-[2.6rem]/[3.3rem] font-playFair">
           How we are trying to
         </h3>
-        <p className="~tw-text-h4/h2 tw-text-textPurple ~tw-leading-[2.6rem]/[3.3rem] tw-font-playFairItalic">
+        <p className="~text-h4/h2 text-textPurple ~leading-[2.6rem]/[3.3rem] font-playFairItalic">
           make a difference
         </p>
-        <div className="tw-grid lg:tw-grid-cols-2 tw-gap-[1.25rem] ~tw-px-[2.9rem]/[7.8rem] ~tw-pt-[2rem]/[5rem]">
+        <div className="grid lg:grid-cols-2 gap-[1.25rem] ~px-[2.9rem]/[7.8rem] ~pt-[2rem]/[5rem]">
           {dataS.map((items, i) => (
             <ImgTitleDescHor
               key={i}

@@ -36,20 +36,20 @@ const testimonialsArray: any[] = [
 ];
 const CareerPage = () => {
   return (
-    <div className="tw-pt-[5rem]">
+    <div className="pt-[5rem]">
       <CareersHeroSection />
       <WhyWorkWithAip />
 
       <OpenRules />
 
-      <div className="tw-w-full tw-relative tw-pb-[5rem]">
+      <div className="w-full relative pb-[5rem]">
         <Image
           src={bottomSvg}
           alt=""
-          className="tw-hidden lg:tw-block tw-absolute tw-left-0 tw-top-[-12rem]"
+          className="hidden lg:block absolute left-0 top-[-12rem]"
         />
-        <div className="tw-relative container tw-mx-auto">
-          <p className="~tw-pt-[5rem]/[12.5rem] tw-text-darkBlack tw-text-center tw-tracking-[0.04rem] ~tw-text-h4/h2 ~tw-leading-[2.6rem]/[3.3rem] tw-font-playFair">
+        <div className="relative container mx-auto">
+          <p className="~pt-[5rem]/[12.5rem] text-darkBlack text-center tracking-[0.04rem] ~text-h4/h2 ~leading-[2.6rem]/[3.3rem] font-playFair">
             Testimonials
           </p>
           <TestimonialSlick slickArray={testimonialsArray} />

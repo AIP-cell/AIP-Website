@@ -67,52 +67,52 @@ const Founder = ({ teamData }: Props) => {
     } else setSelect(select + itemsPerSlide);
   };
   return (
-    <div className="tw-w-full  tw-relative ~tw-mt-0/[-12rem]">
-      <Image src={TopImage} alt="" className="tw-w-full " />
-      <div className="tw-w-full tw-bg-founderGradient ~/md:~tw-h-[50rem]/[37rem] lg:~tw-h-[77rem]/[68rem] tw-relative tw-mt-[-1px]">
-        <div className="tw-absolute tw-top-0 tw-w-full">
-          <div className="tw-w-full  tw-relative">
+    <div className="w-full  relative ~mt-0/[-12rem]">
+      <Image src={TopImage} alt="" className="w-full " />
+      <div className="w-full bg-founderGradient ~/md:~h-[50rem]/[37rem] lg:~h-[77rem]/[68rem] relative mt-[-1px]">
+        <div className="absolute top-0 w-full">
+          <div className="w-full  relative">
             <Image
               src={PurPleCurveSvg}
               alt=""
-              className="tw-hidden lg:tw-block tw-absolute tw-top-0 tw-right-0"
+              className="hidden lg:block absolute top-0 right-0"
             />
             <Image
               src={BlueCurveSvg}
               alt=""
-              className="tw-hidden lg:tw-block tw-absolute tw-bottom-[-15rem] tw-left-0"
+              className="hidden lg:block absolute bottom-[-15rem] left-0"
             />
-            <div className=" container tw-mx-auto tw-relative ">
-              <div className="~tw-px-[1.25rem]/[7.8rem] ">
-                <div className="tw-flex tw-justify-between tw-items-center">
-                  <h3 className="~tw-text-h4/h2 tw-text-white/80 ~tw-leading-[2.6rem]/[3.3rem] tw-relative tw-font-playFair">
+            <div className=" container mx-auto relative ">
+              <div className="~px-[1.25rem]/[7.8rem] ">
+                <div className="flex justify-between items-center">
+                  <h3 className="~text-h4/h2 text-white/80 ~leading-[2.6rem]/[3.3rem] relative font-playFair">
                     From our
-                    <span className="tw-text-white tw-font-playFairItalic tw-block md:tw-inline-block">
+                    <span className="text-white font-playFairItalic block md:inline-block">
                       &nbsp;Core-Founders
                     </span>
                   </h3>
-                  <div className=" tw-flex tw-gap-[1.25rem] tw-relative">
+                  <div className=" flex gap-[1.25rem] relative">
                     <ButtonAnimation
                       onClick={previous}
-                      className="  tw-text-darkPurple tw-leading-[22.4px] tw-font-inter tw-bg-white tw-rounded-tl-3xl tw-rounded-bl-3xl tw-rounded-tr-xl tw-rounded-br-xl tw-py-[1.15rem] tw-px-[0.92rem] tw-h-fit"
+                      className="  text-darkPurple leading-[22.4px] font-inter bg-white rounded-tl-3xl rounded-bl-3xl rounded-tr-xl rounded-br-xl py-[1.15rem] px-[0.92rem] h-fit"
                     >
-                      <LeftSlickArrowSvg className="tw-w-[1rem] tw-h-[0.57rem]" />
+                      <LeftSlickArrowSvg className="w-[1rem] h-[0.57rem]" />
                     </ButtonAnimation>
                     <ButtonAnimation
                       onClick={next}
-                      className=" tw-text-darkPurple tw-leading-[22.4px] tw-font-inter tw-bg-white tw-rounded-tr-3xl tw-rounded-br-3xl tw-rounded-tl-xl tw-rounded-bl-xl tw-py-[1.15rem] tw-px-[0.92rem] tw-h-fit"
+                      className=" text-darkPurple leading-[22.4px] font-inter bg-white rounded-tr-3xl rounded-br-3xl rounded-tl-xl rounded-bl-xl py-[1.15rem] px-[0.92rem] h-fit"
                     >
-                      <RightSlickArrowSvg className="tw-w-[1rem] tw-h-[0.57rem]" />
+                      <RightSlickArrowSvg className="w-[1rem] h-[0.57rem]" />
                     </ButtonAnimation>
                   </div>
                 </div>
-                <div className="tw-block lg:tw-hidden tw-relative tw-pt-[3.43rem]">
+                <div className="block lg:hidden relative pt-[3.43rem]">
                   <>
                     <div
                       className={cn(
-                        "tw-flex tw-justify-center tw-items-center",
+                        "flex justify-center items-center",
                         {
-                          "tw-hidden": select % 2 === 1,
+                          "hidden": select % 2 === 1,
                         }
                       )}
                     >
@@ -126,9 +126,9 @@ const Founder = ({ teamData }: Props) => {
                     </div>
                     <div
                       className={cn(
-                        "tw-flex tw-justify-center tw-items-center",
+                        "flex justify-center items-center",
                         {
-                          "tw-hidden": select % 2 === 0,
+                          "hidden": select % 2 === 0,
                         }
                       )}
                     >
@@ -142,20 +142,20 @@ const Founder = ({ teamData }: Props) => {
                     </div>
                   </>
                 </div>
-                <div className="md:tw-hidden tw-flex tw-justify-center tw-w-full  tw-pt-[2.5rem]">
-                  <div className=" tw-w-[4.5rem] tw-flex tw-gap-[0.5rem] ">
+                <div className="md:hidden flex justify-center w-full  pt-[2.5rem]">
+                  <div className=" w-[4.5rem] flex gap-[0.5rem] ">
                     {founderData.map((items: any, index: number) => (
                       <div
                         key={index}
                         className={cn(
-                          " tw-rounded-full tw-h-[0.5rem] tw-bg-[#E1CCED80] tw-basis-1/5",
-                          { "tw-basis-2/4 tw-bg-[#E1CCED]": index === select }
+                          " rounded-full h-[0.5rem] bg-[#E1CCED80] basis-1/5",
+                          { "basis-2/4 bg-[#E1CCED]": index === select }
                         )}
                       ></div>
                     ))}
                   </div>
                 </div>
-                <div className="tw-hidden lg:tw-block tw-relative tw-pt-[3.43rem] ">
+                <div className="hidden lg:block relative pt-[3.43rem] ">
                   {(() => {
                     const arrayWithFour = founderData.slice(
                       select,
@@ -165,7 +165,7 @@ const Founder = ({ teamData }: Props) => {
                     const arrayWithNextTwo = arrayWithFour.slice(2, 4);
                     return (
                       <>
-                        <div className="tw-flex tw-gap-[4.56rem]">
+                        <div className="flex gap-[4.56rem]">
                           {arrayWithFirstTwo.map((items, i) =>
                             i == 0 ? (
                               <ACardWithPlaySign
@@ -191,7 +191,7 @@ const Founder = ({ teamData }: Props) => {
                           )}
                         </div>
 
-                        <div className="tw-flex tw-justify-end tw-gap-[4.56rem] tw-pt-[3.5rem]">
+                        <div className="flex justify-end gap-[4.56rem] pt-[3.5rem]">
                           {arrayWithNextTwo.map((items, i) =>
                             i === 0 ? (
                               <ACardWithPlaySign
@@ -219,12 +219,12 @@ const Founder = ({ teamData }: Props) => {
                   })()}
                 </div>
               </div>
-              <div className=" tw-block md:tw-hidden "></div>
+              <div className=" block md:hidden "></div>
             </div>
           </div>
         </div>
       </div>
-      <Image src={BottomImage} alt="" className="tw-w-full tw-mt-[-2px]" />
+      <Image src={BottomImage} alt="" className="w-full mt-[-2px]" />
     </div>
   );
 };

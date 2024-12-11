@@ -112,7 +112,7 @@ const AipResourceTabs = () => {
       <TabGroup
         selectedIndex={selectedIndex}
         onChange={setSelectedIndex}
-        className="tw-flex tw-flex-col tw-justify-center "
+        className="flex flex-col justify-center "
       >
         <TabListAndRespSelect
           tabArray={resourcesArray}
@@ -120,16 +120,16 @@ const AipResourceTabs = () => {
           //   setSelected={setSelected}
           setSelectedIndex={setSelectedIndex}
           textClassName="  "
-          listClassName="!tw-w-full"
+          listClassName="!w-full"
         />
         <TabPanels className="">
           <TabPanel>aaa</TabPanel>
           <TabPanel>
-            <div className="tw-flex tw-flex-wrap tw-pt-[2rem] tw-items-center tw-gap-[0.75rem]">
-              <p className="~tw-pb-[1.25rem]/0 tw-text-gray40  ~tw-text-h9Copy5/h9Copy4 ~tw-leading-[1.225rem]/[1.4rem]">
+            <div className="flex flex-wrap pt-[2rem] items-center gap-[0.75rem]">
+              <p className="~pb-[1.25rem]/0 text-gray40  ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]">
                 Filter by:
               </p>
-              <div className="tw-relative tw-flex tw-flex-wrap tw-gap-[.75rem]">
+              <div className="relative flex flex-wrap gap-[.75rem]">
                 <CustomFilter
                   type={filterDatas.at(0)!.type}
                   optionsArray={filterDatas.at(0)!.filter}
@@ -148,7 +148,7 @@ const AipResourceTabs = () => {
                   /> */}
               </div>
             </div>
-            <div className="tw-pt-[3.25rem] tw-pb-[7.5rem] tw-grid md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-[4.5rem]">
+            <div className="pt-[3.25rem] pb-[7.5rem] grid md:grid-cols-2 lg:grid-cols-3 gap-[4.5rem]">
               {datas.map((item, i) => (
                 <ResourceCard
                   key={i}

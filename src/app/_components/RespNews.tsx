@@ -13,13 +13,13 @@ const newsData = [
 const RespNews = () => {
   const [selected, setSelected] = useState(newsData?.at(0));
   return (
-    <div className="tw-pl-[1.25rem] tw-pr-[1.25rem] tw-block xl:tw-hidden">
+    <div className="pl-[1.25rem] pr-[1.25rem] block xl:hidden">
       <NewsRespSelect
         selected={selected}
         setSelected={setSelected}
         optionsArray={newsData}
-        ListboxButtonClassName="!tw-bg-[#E9E6F280] !tw-border-none !tw-rounded-full !tw-pl-[1.75rem] !tw-pr-[1.25rem]"
-        selectedClassName=" !tw-text-darkPurple !tw-text-h9Copy4"
+        ListboxButtonClassName="!bg-[#E9E6F280] !border-none !rounded-full !pl-[1.75rem] !pr-[1.25rem]"
+        selectedClassName=" !text-darkPurple !text-h9Copy4"
       />
       <CarouselRespNews/>
     </div>

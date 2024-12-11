@@ -24,7 +24,7 @@ const CuratedResourcesTabs = () => {
       <TabGroup
         selectedIndex={selectedIndex}
         onChange={setSelectedIndex}
-        className="tw-flex tw-flex-col tw-justify-center "
+        className="flex flex-col justify-center "
       >
         <TabListAndRespSelect
           tabArray={resourcesArray}
@@ -32,7 +32,7 @@ const CuratedResourcesTabs = () => {
           //   setSelected={setSelected}
           setSelectedIndex={setSelectedIndex}
           textClassName="  "
-          listClassName="!tw-w-full"
+          listClassName="!w-full"
         />
         <TabPanels className="">
           <TabPanel>

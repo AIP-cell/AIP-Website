@@ -36,31 +36,31 @@ const CustomFilter = ({ type, optionsArray,selected,setSelected }: Props) => {
       <div onClick={() => setIsOpen(!isOpen)}>
         <Listbox value={selected} onChange={setSelected}>
           <ListboxButton
-            className={`tw-border-2 tw-border-[#DFE0E5] tw-rounded-lg`}
+            className={`border-2 border-[#DFE0E5] rounded-lg`}
           >
             <div
-              className={`tw-flex tw-gap-[.79rem] tw-text-gray80 tw-text-h9Copy5 ~tw-pl-[0.75rem]/[1.75rem] tw-pr-[1.25rem] tw-py-[0.75rem] tw-items-center tw-w-full tw-justify-between `}
+              className={`flex gap-[.79rem] text-gray80 text-h9Copy5 ~pl-[0.75rem]/[1.75rem] pr-[1.25rem] py-[0.75rem] items-center w-full justify-between `}
             >
-              <p className="   tw-text-h9Copy5 tw-leading-[1.225rem] tw-capitalize">
+              <p className="   text-h9Copy5 leading-[1.225rem] capitalize">
                 {type}
               </p>
 
-              <FilterDownArrowSvg className="tw-size-[1.25rem]" />
+              <FilterDownArrowSvg className="size-[1.25rem]" />
             </div>
           </ListboxButton>
-          {/* tw-w-[var(--button-width)] */}
+          {/* w-[var(--button-width)] */}
           <ListboxOptions
             anchor="bottom"
-            className="tw-hidden  tw-w-[10.25rem] !tw-max-h-[14.5rem] no-scrollbar tw-mt-[0.4rem] tw-z-[10000] tw-bg-white tw-border-2 tw-border-[#DFE0E5] md:tw-flex tw-flex-col tw-gap-[0.75rem] tw-rounded-md   tw-px-[0.863rem] tw-py-[0.8rem]"
+            className="hidden  w-[10.25rem] !max-h-[14.5rem] no-scrollbar mt-[0.4rem] z-[10000] bg-white border-2 border-[#DFE0E5] md:flex flex-col gap-[0.75rem] rounded-md   px-[0.863rem] py-[0.8rem]"
           >
             {optionsArray?.map((items: any, i: number) => (
               <ListboxOption
                 key={i}
                 value={items}
-                className="tw-group tw-flex tw-gap-[0.75rem] tw-text-start tw-items-center  tw-rounded-md tw-border-gray10 data-[focus]:bg-blue-100 no-scrollbar tw-text-black tw-text-h9Copy5 tw-leading-[1.225rem] tw-cursor-pointer"
+                className="group flex gap-[0.75rem] text-start items-center  rounded-md border-gray10 data-[focus]:bg-blue-100 no-scrollbar text-black text-h9Copy5 leading-[1.225rem] cursor-pointer"
               >
-                <div className="tw-size-[0.833rem] tw-border-2 tw-border-gray80 tw-rounded-sm tw-flex tw-justify-center tw-items-center">
-                  <div className="tw-size-[0.45rem] tw-bg-gray80 tw-rounded-md tw-invisible group-data-[selected]:tw-visible"></div>
+                <div className="size-[0.833rem] border-2 border-gray80 rounded-sm flex justify-center items-center">
+                  <div className="size-[0.45rem] bg-gray80 rounded-md invisible group-data-[selected]:visible"></div>
                 </div>
                 <p>{items}</p>
               </ListboxOption>

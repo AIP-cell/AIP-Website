@@ -23,7 +23,7 @@ const page = async () => {
   const countData = response.count;
   
   return (
-    <div className="tw-bg-bgLightPeach tw-pt-[5rem] tw-overflow-hidden">
+    <div className="bg-bgLightPeach pt-[5rem] overflow-hidden">
       <HeroSection />
       <GiveSection />
       <Spotlight eventData={eventData} />

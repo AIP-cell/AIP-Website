@@ -14,13 +14,13 @@ const NormalLinks = ({ items }: Props) => {
       <ButtonAnimation>
         <Link
           href={items.link}
-          className={cn("md:tw-text-gray80 tw-text-h9Copy5 tw-leading-[1.225rem]",{"tw-font-bold":items.link == pathname})}
+          className={cn("md:text-gray80 text-h9Copy5 leading-[1.225rem]",{"font-bold":items.link == pathname})}
         >
           {items.name}
         </Link>
       </ButtonAnimation>
       {items.link == pathname && (
-        <div className="tw-hidden md:tw-block tw-h-[0.25rem]  tw-w-full tw-rounded-full tw-bg-purple40"></div>
+        <div className="hidden md:block h-[0.25rem]  w-full rounded-full bg-purple40"></div>
       )}
     </div>
   );

@@ -5,25 +5,25 @@ import cn from "@/utils/tailwind";
 
 const CoreFoundersTab = () => {
   return (
-    <div className=" tw-w-full tw-hidden md:tw-flex tw-justify-center ~tw-pt-8/[4.75rem] ">
+    <div className=" w-full hidden md:flex justify-center ~pt-8/[4.75rem] ">
       <div
         // defaultIndex={active}
-        className="tw-flex tw-w-full tw-flex-col tw-items-center tw-justify-center"
+        className="flex w-full flex-col items-center justify-center"
       >
-        <div className="tw-flex tw-bg-[#F0F0F2] tw-p-1 tw-rounded-full tw-w-fit">
-          <div className="~tw-px-[1rem]/[2.5rem] tw-py-[0.75rem] tw-bg-darkPurple tw-text-white tw-rounded-full tw-text-h9Copy5 tw-leading-[1.22rem] tw-font-inter data-[selected]:tw-outline-none">
+        <div className="flex bg-[#F0F0F2] p-1 rounded-full w-fit">
+          <div className="~px-[1rem]/[2.5rem] py-[0.75rem] bg-darkPurple text-white rounded-full text-h9Copy5 leading-[1.22rem] font-inter data-[selected]:outline-none">
             <Link href="/people-of-aip/core-founders">Core Founders</Link>
           </div>
           <div
             className={cn(
-              "~tw-px-[1.5rem]/[2.5rem] tw-py-[0.75rem] data-[selected]:tw-bg-darkPurple data-[selected]:tw-text-white data-[selected]:tw-rounded-full tw-text-h9Copy5 tw-leading-[1.22rem] tw-font-inter data-[selected]:tw-outline-none"
+              "~px-[1.5rem]/[2.5rem] py-[0.75rem] data-[selected]:bg-darkPurple data-[selected]:text-white data-[selected]:rounded-full text-h9Copy5 leading-[1.22rem] font-inter data-[selected]:outline-none"
             )}
           >
             <Link href="/people-of-aip/founders">Founders</Link>
           </div>
           <div
             className={cn(
-              "~tw-px-[1.5rem]/[2.5rem] tw-py-[0.75rem] data-[selected]:tw-bg-darkPurple data-[selected]:tw-text-white data-[selected]:tw-rounded-full tw-text-h9Copy5 tw-leading-[1.22rem] tw-font-inter data-[selected]:tw-outline-none"
+              "~px-[1.5rem]/[2.5rem] py-[0.75rem] data-[selected]:bg-darkPurple data-[selected]:text-white data-[selected]:rounded-full text-h9Copy5 leading-[1.22rem] font-inter data-[selected]:outline-none"
             )}
           >
             <Link href="/people-of-aip/our-advisory-board/slug">
@@ -32,14 +32,14 @@ const CoreFoundersTab = () => {
           </div>
           <div
             className={cn(
-              "~tw-px-[1.5rem]/[2.5rem] tw-py-[0.75rem] data-[selected]:tw-bg-darkPurple data-[selected]:tw-text-white data-[selected]:tw-rounded-full tw-text-h9Copy5 tw-leading-[1.22rem] tw-font-inter data-[selected]:tw-outline-none"
+              "~px-[1.5rem]/[2.5rem] py-[0.75rem] data-[selected]:bg-darkPurple data-[selected]:text-white data-[selected]:rounded-full text-h9Copy5 leading-[1.22rem] font-inter data-[selected]:outline-none"
             )}
           >
             <Link href="/people-of-aip/team-AIP">Team AIP</Link>
           </div>
           <div
             className={cn(
-              "~tw-px-[1.5rem]/[2.5rem] tw-py-[0.75rem] data-[selected]:tw-bg-darkPurple data-[selected]:tw-text-white data-[selected]:tw-rounded-full tw-text-h9Copy5 tw-leading-[1.22rem] tw-font-inter data-[selected]:tw-outline-none"
+              "~px-[1.5rem]/[2.5rem] py-[0.75rem] data-[selected]:bg-darkPurple data-[selected]:text-white data-[selected]:rounded-full text-h9Copy5 leading-[1.22rem] font-inter data-[selected]:outline-none"
             )}
           >
             <Link href="/people-of-aip/experts">Experts</Link>
@@ -47,7 +47,7 @@ const CoreFoundersTab = () => {
         </div>
         <OurCoreFoundersContent />
 
-        {/* <TabPanels className="tw-w-full">
+        {/* <TabPanels className="w-full">
           <TabPanel>
             <OurCoreFoundersContent />
           </TabPanel>

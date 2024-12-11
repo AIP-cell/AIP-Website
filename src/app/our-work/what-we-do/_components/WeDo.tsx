@@ -35,39 +35,39 @@ const offeringsData = [
 ];
 const WeDo = () => {
   return (
-    <div className="tw-w-full tw-relative">
+    <div className="w-full relative">
       <Image
         src={TopLeftCurve}
         alt=""
-        className="tw-hidden md:tw-block tw-absolute tw-top-[4.233rem] tw-left-0 tw-z-[-1]"
+        className="hidden md:block absolute top-[4.233rem] left-0 z-[-1]"
       />
       <Image
         src={TopRightCurve}
         alt=""
-        className="tw-hidden md:block tw-absolute tw-top-[32.639rem] tw-right-0"
+        className="hidden md:block absolute top-[32.639rem] right-0"
       />
       <Image
         src={BottomLeftCurve}
         alt=""
-        className="tw-hidden md:block tw-absolute tw-bottom-[28.8rem] tw-left-0"
+        className="hidden md:block absolute bottom-[28.8rem] left-0"
       />
       <Image
         src={BottomRightCurve}
         alt=""
-        className="tw-hidden md:block tw-absolute tw-bottom-0 tw-right-0"
+        className="hidden md:block absolute bottom-0 right-0"
       />
-      <div className="~tw-pt-[4.625rem]/[6.63rem] ~tw-pb-[5rem]/[7.5rem] tw-relative container tw-mx-auto">
-        <h2 className="tw-font-playFair tw-text-gray80 ~tw-text-h4/h2 ~tw-leading-[2.6rem]/[3.3rem] tw-text-center">
+      <div className="~pt-[4.625rem]/[6.63rem] ~pb-[5rem]/[7.5rem] relative container mx-auto">
+        <h2 className="font-playFair text-gray80 ~text-h4/h2 ~leading-[2.6rem]/[3.3rem] text-center">
           What
-          <span className="tw-font-playFairItalic tw-text-textPurple">
+          <span className="font-playFairItalic text-textPurple">
             &nbsp;We Do
           </span>
         </h2>
-        <p className="~tw-leading-[1.225rem]/[1.4rem] ~tw-text-h9Copy5/h9Copy4 tw-text-gray80 tw-text-center ~tw-pt-[0.75rem]/[1.25rem]">
+        <p className="~leading-[1.225rem]/[1.4rem] ~text-h9Copy5/h9Copy4 text-gray80 text-center ~pt-[0.75rem]/[1.25rem]">
           AIP has four core offerings for propelling and guiding <br />
           philanthropists in their giving journey
         </p>
-        <div className="~tw-px-[1rem]/[7.8rem] ~tw-pt-[1.5rem]/[5rem] tw-flex tw-flex-col tw-justify-center ~tw-gap-[3.5rem]/0">
+        <div className="~px-[1rem]/[7.8rem] ~pt-[1.5rem]/[5rem] flex flex-col justify-center ~gap-[3.5rem]/0">
           {offeringsData.map((items, i) => (
             <OfferingCard
               key={i}

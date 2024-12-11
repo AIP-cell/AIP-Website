@@ -13,34 +13,34 @@ import BreadCrump from "@/components/bread-crump/BreadCrump";
 
 const page = () => {
   return (
-    <div className="tw-pt-[5rem]">
-      <div className="tw-relative tw-w-full">
-        {/* tw-top-[9rem] */}
+    <div className="pt-[5rem]">
+      <div className="relative w-full">
+        {/* top-[9rem] */}
         <Image
           src={Bg}
           alt=""
-          className="tw-hidden sm:tw-block tw-absolute ~tw-top-[9rem]/[17rem] tw-h-[60rem] tw-object-cover tw-w-[300rem]"
+          className="hidden sm:block absolute ~top-[9rem]/[17rem] h-[60rem] object-cover w-[300rem]"
         />
         <Image
           src={SmBg}
           alt=""
-          className="sm:tw-hidden tw-block tw-absolute tw-top-[23rem] tw-object-cover tw-w-full"
+          className="sm:hidden block absolute top-[23rem] object-cover w-full"
         />
-        <div className="tw-relative">
-          <div className="container tw-mx-auto tw-relative">
+        <div className="relative">
+          <div className="container mx-auto relative">
             <BreadCrump
               textOne="About Us"
               linkOne="/about"
               textTwo="Giving Roadmap"
               linkTwo="/about/giving-roadmap"
             />
-            <div className="tw-text-left md:tw-text-center tw-relative">
+            <div className="text-left md:text-center relative">
               <Image
                 src={OvalPurple}
                 alt=""
-                className="tw-absolute ~tw-bottom-[4rem]/[3rem] ~tw-w-[10rem]/[11.875rem] ~tw-right-0/[7.8rem]"
+                className="absolute ~bottom-[4rem]/[3rem] ~w-[10rem]/[11.875rem] ~right-0/[7.8rem]"
               />
-              <p className="~tw-px-[1.25rem]/[7rem] ~tw-pt-[4.313rem]/[7.5rem] ~tw-pb-[15rem]/[19.5rem] ~tw-text-h4a/h3 tw-text-gray80 tw-font-playFair md:tw-tracking-[-0.5px] ~tw-leading-[2.113rem]/[2.6rem] ">
+              <p className="~px-[1.25rem]/[7rem] ~pt-[4.313rem]/[7.5rem] ~pb-[15rem]/[19.5rem] ~text-h4a/h3 text-gray80 font-playFair md:tracking-[-0.5px] ~leading-[2.113rem]/[2.6rem] ">
                 At AIP, we believe in the transformative power of philanthropy.
                 Philanthropists can make a difference. Philanthropists want to
                 make a difference, and philanthropists are the best at inspiring

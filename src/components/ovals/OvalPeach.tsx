@@ -27,13 +27,13 @@ const OvalPeach = ({
   return (
     <div className={` ${mainClass} `}>
       <div
-        className={` ${sizeClass} tw-relative tw-shrink-0   tw-flex tw-flex-col tw-justify-center tw-items-center`}
+        className={` ${sizeClass} relative shrink-0   flex flex-col justify-center items-center`}
       >
         <Image src={OvalPeachSvg} alt="image" fill />
         {/* <OvalPurpleSvg /> */}
-        <div className={` ${textClass1}  tw-text-white tw-z-50`}>{text1}</div>
+        <div className={` ${textClass1}  text-white z-50`}>{text1}</div>
         <div
-          className={`tw-text-center tw-pt-[0.25rem] tw-z-50 tw-text-gray80 ${textParentClass}`}
+          className={`text-center pt-[0.25rem] z-50 text-gray80 ${textParentClass}`}
         >
           <div className={` ${textClass2} `}>{text2}</div>
           <div className={` ${textClass3} `}>{text3}</div>

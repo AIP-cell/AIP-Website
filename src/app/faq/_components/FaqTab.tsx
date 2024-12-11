@@ -28,12 +28,12 @@ const FaqTab = () => {
         {TablistData.map((items, i) => (
           <Tab
             key={i}
-            className="tw-group tw-w-full tw-bg-bgGray5 data-[selected]:tw-bg-darkPurple tw-items-center data-[selected]:tw-text-white hover:tw-font-playFairItalic  tw-transition-all tw-p-5 tw-rounded-[1.25rem] tw-flex tw-text-left tw-justify-between tw-mb-3 tw-group data-[selected]:tw-outline-none"
+            className="group w-full bg-bgGray5 data-[selected]:bg-darkPurple items-center data-[selected]:text-white hover:font-playFairItalic  transition-all p-5 rounded-[1.25rem] flex text-left justify-between mb-3 group data-[selected]:outline-none"
           >
-            <p className="tw-font-playFair tw-font-medium group-hover:tw-italic tw-text-xl tw-tracking-[.02rem] ">
+            <p className="font-playFair font-medium group-hover:italic text-xl tracking-[.02rem] ">
               {items.name}
             </p>
-            <div className="tw-p-[0.375rem] group tw-text-midGray group-data-[selected]:tw-text-white group-hover:tw-text-midGray">
+            <div className="p-[0.375rem] group text-midGray group-data-[selected]:text-white group-hover:text-midGray">
               <ArrowSvg />
             </div>
           </Tab>

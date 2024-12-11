@@ -4,8 +4,8 @@ import AdvisoryBoard from "./_componets/AdvisoryBoard";
 
 const OurAdvisoryBoardPage = () => {
   return (
-    <div className="tw-pt-[5rem] tw-overflow-hidden">
-      <div className="tw-relative container tw-mx-auto">
+    <div className="pt-[5rem] overflow-hidden">
+      <div className="relative container mx-auto">
         <BreadCrump
           textOne="People of AIP"
           linkOne="/people-of-aip"

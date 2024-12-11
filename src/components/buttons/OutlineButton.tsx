@@ -6,8 +6,8 @@ type Props = {
 };
 const OutlineButton = ({ text, className ,buttonClassName}: Props) => {
   return (
-    <div className={`tw-border-2 tw-border-darkPurple ${buttonClassName}`}>
-      <p className={`${className} tw-text-darkPurple`}>{text}</p>
+    <div className={`border-2 border-darkPurple ${buttonClassName}`}>
+      <p className={`${className} text-darkPurple`}>{text}</p>
     </div>
   );
 };

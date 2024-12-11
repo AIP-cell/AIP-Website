@@ -41,45 +41,45 @@ const joinArray = [
 ];
 const Join = () => {
   return (
-    <div className="tw-w-full tw-relative">
+    <div className="w-full relative">
       {/* <Image
         src={JoinCirclesOne}
         alt=""
-        className=" tw-absolute tw-top-[9rem] tw-left-0 tw-w-[23.56rem] tw-h-[23.3rem]"
+        className=" absolute top-[9rem] left-0 w-[23.56rem] h-[23.3rem]"
       />
       <Image
         src={PeachMaskedSemiCircle}
         alt=""
-        className=" tw-absolute tw-bottom-[-2.43rem] tw-left-0 tw-w-[23.56rem] tw-h-[23.3rem] tw-z-[-1]"
+        className=" absolute bottom-[-2.43rem] left-0 w-[23.56rem] h-[23.3rem] z-[-1]"
       />
       <Image
         src={JoinCirclesRight}
         alt=""
-        className=" tw-absolute tw-bottom-[-11.7rem] tw-right-0 tw-w-[20.875rem] tw-h-[20.62rem] tw-z-[-1]"
+        className=" absolute bottom-[-11.7rem] right-0 w-[20.875rem] h-[20.62rem] z-[-1]"
       /> */}
-      <div className="tw-relative container tw-mx-auto ">
-        <div className="tw-relative tw-flex tw-flex-col tw-items-center tw-justify-center ~tw-pt-[7.5rem]/[12.5rem]">
-          <h2 className="tw-font-playFair tw-text-gray80 ~tw-text-h4/h2 ~tw-leading-[2.6rem]/[3.3rem]">
+      <div className="relative container mx-auto ">
+        <div className="relative flex flex-col items-center justify-center ~pt-[7.5rem]/[12.5rem]">
+          <h2 className="font-playFair text-gray80 ~text-h4/h2 ~leading-[2.6rem]/[3.3rem]">
             Methods of
-            <span className="tw-text-textPurple tw-font-playFairItalic">
+            <span className="text-textPurple font-playFairItalic">
               &nbsp;Joining
             </span>
           </h2>
-          <p className="tw-text-midGray tw-text-center ~tw-text-h9Copy5/h9Copy4 ~tw-leading-[1.225rem]/[1.4rem] ~tw-px-[2.813rem]/[20.93rem] ~tw-pt-[1rem]/[1.25rem]">
+          <p className="text-midGray text-center ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] ~px-[2.813rem]/[20.93rem] ~pt-[1rem]/[1.25rem]">
             We invite you to join our growing network of philanthropists to see
             strategic philanthropy impact India’s transformation.
           </p>
-          <p className="tw-text-gray80 ~tw-text-h6M/h5 ~tw-leading-[1.575rem]/[1.75rem] tw-font-playFair tw-text-center ~tw-px-5/[20.93rem] ~tw-pt-[2.5rem]/[3.123rem]">
+          <p className="text-gray80 ~text-h6M/h5 ~leading-[1.575rem]/[1.75rem] font-playFair text-center ~px-5/[20.93rem] ~pt-[2.5rem]/[3.123rem]">
             To initiate a conversation, email our Philanthropy Partners
           </p>
         </div>
-        <div className="tw-grid md:tw-grid-cols-2 lg:tw-grid-cols-4 ~tw-gap-x-[1.25rem]/[5.625rem] ~tw-gap-y-[1rem]/[5.625rem]  tw-w-full tw-justify-center ~tw-pt-[1.25rem]/[4rem] ~tw-px-[1.25rem]/[7.813rem]">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 ~gap-x-[1.25rem]/[5.625rem] ~gap-y-[1rem]/[5.625rem]  w-full justify-center ~pt-[1.25rem]/[4rem] ~px-[1.25rem]/[7.813rem]">
           {joinArray.map((join, i) => (
-            <div key={i} className="tw-flex tw-justify-center">
+            <div key={i} className="flex justify-center">
               {i % 2 == 0 ? (
                 <ATeamCard
-                  titleClassName="tw-underline tw-decoration-[1px] tw-underline-offset-4"
-                  title2ClassName="tw-underline tw-decoration-[1px] tw-underline-offset-4"
+                  titleClassName="underline decoration-[1px] underline-offset-4"
+                  title2ClassName="underline decoration-[1px] underline-offset-4"
                   location={join.location}
                   email={join.email}
                   title={join.title1}
@@ -89,8 +89,8 @@ const Join = () => {
                 />
               ) : (
                 <PTeamCard
-                  titleClassName="tw-underline tw-decoration-[1px] tw-underline-offset-4"
-                  title2ClassName="tw-underline tw-decoration-[1px] tw-underline-offset-4"
+                  titleClassName="underline decoration-[1px] underline-offset-4"
+                  title2ClassName="underline decoration-[1px] underline-offset-4"
                   location={join.location}
                   email={join.email}
                   title={join.title1}

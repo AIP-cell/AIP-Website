@@ -29,37 +29,37 @@ const itemsArray = [
 ];
 const NetworkContactSection = () => {
   return (
-    <div className="tw-flex tw-flex-col tw-items-center tw-pt-[6rem] tw-pb-[1rem] container tw-mx-auto">
-      <h2 className="~tw-text-h4/h2 tw-text-center ~tw-leading-[2.6rem]/[3.3rem] tw-text-gray80 tw-font-playFair">
+    <div className="flex flex-col items-center pt-[6rem] pb-[1rem] container mx-auto">
+      <h2 className="~text-h4/h2 text-center ~leading-[2.6rem]/[3.3rem] text-gray80 font-playFair">
         Reason to
-        <span className="tw-text-textPurple tw-font-playFairItalic">
+        <span className="text-textPurple font-playFairItalic">
           &nbsp;Connect
         </span>
       </h2>
-      <p className="~tw-leading-[1.225rem]/[1.4rem] ~tw-text-h9Copy5/h9Copy4 ~tw-pt-[2rem]/[2.5rem] ~tw-px-[2.813rem]/[15.813rem] tw-text-center">
+      <p className="~leading-[1.225rem]/[1.4rem] ~text-h9Copy5/h9Copy4 ~pt-[2rem]/[2.5rem] ~px-[2.813rem]/[15.813rem] text-center">
         We believe in dedicating to an independent, sector agnostic, and deeply
         focused approach, personally catering to how one defines their
         philanthropy and here they wish to take it to. Valuing long-lasting
         relationships built on a strong legacy and an inspiring network.
       </p>
-      <div className="~tw-pt-[2rem]/[2.5rem] tw-flex tw-justify-center ">
-        <div className="tw-grid  md:tw-grid-cols-2 ~tw-gap-x-[3rem]/[5rem] ~tw-gap-y-[1.75rem]/[3.5rem]">
+      <div className="~pt-[2rem]/[2.5rem] flex justify-center ">
+        <div className="grid  md:grid-cols-2 ~gap-x-[3rem]/[5rem] ~gap-y-[1.75rem]/[3.5rem]">
           {itemsArray.map((item, i) => (
             <TitleDescCard
               key={i}
               title1={item.title1}
               title2={item.title2}
               desc={item.desc}
-              topClassName="~tw-w-[18.438rem]/[29rem]"
+              topClassName="~w-[18.438rem]/[29rem]"
             />
           ))}
         </div>
       </div>
-      <div className="~tw-pt-[2rem]/[3rem]">
-        <ButtonAnimation className="tw-text-white hover:tw-text-darkPurple tw-bg-darkPurple hover:tw-bg-white tw-rounded-full  tw-py-[0.75rem] tw-px-[1.75rem]">
+      <div className="~pt-[2rem]/[3rem]">
+        <ButtonAnimation className="text-white hover:text-darkPurple bg-darkPurple hover:bg-white rounded-full  py-[0.75rem] px-[1.75rem]">
           <Link
             href=""
-            className=" tw-flex tw-items-center tw-text-h9Copy5 tw-leading-[1.225rem] tw-gap-[0.5rem]"
+            className=" flex items-center text-h9Copy5 leading-[1.225rem] gap-[0.5rem]"
           >
             <p className="">Contact Us</p>
             <MailSvg />

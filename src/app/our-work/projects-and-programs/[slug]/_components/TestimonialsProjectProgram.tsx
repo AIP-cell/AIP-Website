@@ -26,20 +26,20 @@ const testimonialsArray: any[] = [
 ];
 const TestimonialsProjectProgram = () => {
   return (
-    <div className="tw-w-full tw-relative">
+    <div className="w-full relative">
       <Image
         src={PurpleBottomSvg}
         alt="purple-curve"
-        className="tw-hidden lg:tw-block tw-absolute tw-top-[-1rem] tw-right-0"
+        className="hidden lg:block absolute top-[-1rem] right-0"
       />
-      <div className="tw-py-[7.53rem] tw-relative container tw-mx-auto">
-        <h2 className="tw-font-playFair tw-text-gray80 ~tw-text-h4/h2 ~tw-leading-[2.6rem]/[3.3rem] tw-text-center">
-          <span className="tw-text-textPurple tw-font-playFairItalic">
+      <div className="py-[7.53rem] relative container mx-auto">
+        <h2 className="font-playFair text-gray80 ~text-h4/h2 ~leading-[2.6rem]/[3.3rem] text-center">
+          <span className="text-textPurple font-playFairItalic">
             Gallery
           </span>
           &nbsp;Of Voices
         </h2>
-        <p className="~tw-leading-[1.225rem]/[1.4rem] ~tw-text-h9Copy5/h9Copy4 tw-text-center ~tw-pt-[0.75rem]/[1.25rem] tw-text-midGray">
+        <p className="~leading-[1.225rem]/[1.4rem] ~text-h9Copy5/h9Copy4 text-center ~pt-[0.75rem]/[1.25rem] text-midGray">
           Some words from the launch.
         </p>
         <TestimonialSlick slickArray={testimonialsArray} />

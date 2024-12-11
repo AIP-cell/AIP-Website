@@ -5,15 +5,15 @@ import Image from "next/image";
 import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 const AipFootprints = () => {
   return (
-    <div className="tw-pt-[12.5rem] tw-pb-[7.5rem]">
-      <h3 className="tw-font-playFair tw-text-h2 tw-text-center tw-text-gray80 tw-pb-[2.734rem] ">
+    <div className="pt-[12.5rem] pb-[7.5rem]">
+      <h3 className="font-playFair text-h2 text-center text-gray80 pb-[2.734rem] ">
         AIP
-        <span className="tw-text-textPurple tw-font-playFairItalic">
+        <span className="text-textPurple font-playFairItalic">
           Footprint
         </span>
       </h3>
-      {/* <MapSvg className="tw-w-full"/> */}
-      <Image src={Map} alt="" className="tw-w-full" />
+      {/* <MapSvg className="w-full"/> */}
+      <Image src={Map} alt="" className="w-full" />
       
       
     </div>

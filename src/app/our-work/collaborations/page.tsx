@@ -36,50 +36,50 @@ const filterDatas = [
 ];
 const page = () => {
   return (
-    <div className="~tw-pt-[4.4rem]/[5rem]">
-      <div className="tw-relative tw-w-full  tw-pb-[7.5rem]">
+    <div className="~pt-[4.4rem]/[5rem]">
+      <div className="relative w-full  pb-[7.5rem]">
         <Image
           src={projectBg}
           alt="bg"
-          className="tw-hidden lg:tw-block tw-absolute tw-top-[-9rem] tw-h-[30rem] tw-w-full"
+          className="hidden lg:block absolute top-[-9rem] h-[30rem] w-full"
         />
         <Image
           src={bottomRightWave}
           alt="bottom-right-wave"
-          className="tw-hidden lg:tw-block tw-absolute tw-bottom-[2.6rem] tw-left-0"
+          className="hidden lg:block absolute bottom-[2.6rem] left-0"
         />
-        <div className="container tw-mx-auto tw-relative ~tw-px-5/[7.8rem] ~tw-pt-[4.313rem]/[5rem]">
+        <div className="container mx-auto relative ~px-5/[7.8rem] ~pt-[4.313rem]/[5rem]">
           <BreadCrump
             textOne="Our Work"
             linkOne="/our-work"
             textTwo="Collaborations"
             linkTwo="/our-work/collaborations"
           />
-          <p className="tw-font-inter ~tw-text-h9Copy5/h9Copy4  tw-font-semibold tw-uppercase ~tw-leading-[1.138rem]/[1.3rem] tw-text-purple40">
+          <p className="font-inter ~text-h9Copy5/h9Copy4  font-semibold uppercase ~leading-[1.138rem]/[1.3rem] text-purple40">
             Collaborations
           </p>
-          <div className="~tw-leading-[2.113rem]/[2.6rem] tw-font-playFair ~tw-text-h4a/h4 tw-text-gray80 tw-pt-5 ~tw-pb-0/[4.9rem] md:tw-tracking-[-0.02rem]">
+          <div className="~leading-[2.113rem]/[2.6rem] font-playFair ~text-h4a/h4 text-gray80 pt-5 ~pb-0/[4.9rem] md:tracking-[-0.02rem]">
             <div className="">
               Collaborative philanthropy is a powerful catalyst for change.
-              <div className="tw-inline md:tw-block ">
+              <div className="inline md:block ">
                 When we unite our resources and expertise, we pave the way for
                 resilient interventions to tackle pressing challenges. Engaging
                 with AIP&apos;s talented network has helped foster a sense of
                 shared purpose in driving transformative change.
               </div>
             </div>
-            {/* <p className=" tw-inline-block">
+            {/* <p className=" inline-block">
               When we unite our resources and expertise, we pave the way for
               resilient interventions to tackle pressing challenges. Engaging
               with AIP&apos;s talented network has helped foster a sense of
               shared purpose in driving transformative change.
             </p> */}
           </div>
-          <div className="tw-flex tw-flex-wrap ~tw-pt-[3.25rem]/0 tw-items-center tw-gap-[0.75rem]">
-            <p className=" tw-text-gray40  ~tw-text-h9Copy5/h9Copy4 ~tw-leading-[1.225rem]/[1.4rem]">
+          <div className="flex flex-wrap ~pt-[3.25rem]/0 items-center gap-[0.75rem]">
+            <p className=" text-gray40  ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]">
               Filter by:
             </p>
-            <div className="tw-flex tw-flex-wrap tw-gap-[.75rem]">
+            <div className="flex flex-wrap gap-[.75rem]">
               {filterDatas.map((items, i) => (
                 <CustomFilter
                   type={items.type}

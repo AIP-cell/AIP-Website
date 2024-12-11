@@ -10,7 +10,7 @@ import NormalLinks from "./NormalLinks";
 import { useState } from "react";
 const headerData = [
   {
-    width: " tw-w-[6rem] ",
+    width: " w-[6rem] ",
     label: "About Us",
     id: "about",
     options: [
@@ -41,7 +41,7 @@ const headerData = [
     ],
   },
   {
-    width: " tw-w-[10.5rem] ",
+    width: " w-[10.5rem] ",
     label: "Our Work",
     id: "our-work",
     options: [
@@ -59,7 +59,7 @@ const headerData = [
     ],
   },
   {
-    width: " tw-w-[9rem] ",
+    width: " w-[9rem] ",
     label: "Resource Center",
     id: "resource-center",
     options: [
@@ -77,23 +77,23 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(true);
 
   return (
-    <div className=" tw-z-[10000] tw-fixed tw-right-0 tw-left-0 tw-top-0 max-xl:tw-bg-toRightPurpleToBlue xl:tw-bg-white  ">
-      <div className="container tw-mx-auto tw-flex tw-justify-between tw-items-center ~tw-pt-[0.875rem]/[1rem] ~tw-pb-[0.75rem]/[0.9rem] tw-px-[1.25rem]">
-        <Link href="/" className="tw-hidden xl:tw-block">
+    <div className=" z-[10000] fixed right-0 left-0 top-0 max-xl:bg-toRightPurpleToBlue xl:bg-white  ">
+      <div className="container mx-auto flex justify-between items-center ~pt-[0.875rem]/[1rem] ~pb-[0.75rem]/[0.9rem] px-[1.25rem]">
+        <Link href="/" className="hidden xl:block">
           <LogoHeaderSvg />
         </Link>
-        <Link href="/" className="tw-block xl:tw-hidden">
-          <LogoSmSVG className="tw-h-[2.75rem] tw-w-[4.5rem]" />
+        <Link href="/" className="block xl:hidden">
+          <LogoSmSVG className="h-[2.75rem] w-[4.5rem]" />
         </Link>
-        <div className="tw-flex tw-items-center tw-text-white tw-gap-[1rem] xl:tw-hidden">
-          <SearchSvg className="tw-size-[1.5rem]" />
+        <div className="flex items-center text-white gap-[1rem] xl:hidden">
+          <SearchSvg className="size-[1.5rem]" />
           <Sidebar />
         </div>
-        <div className="tw-hidden xl:tw-flex tw-gap-[2.5rem] ">
+        <div className="hidden xl:flex gap-[2.5rem] ">
           {headerData.map((items: any, index: number) => (
-            <div key={index} className="tw-flex tw-items-center ">
+            <div key={index} className="flex items-center ">
               {items.options ? (
-                <div className="tw-flex tw-gap-[2.5rem]">
+                <div className="flex gap-[2.5rem]">
                   <CustomHeaderSelect
                     items={items}
                     isOpen={isOpen}
@@ -107,14 +107,14 @@ const Header = () => {
           ))}
         </div>
 
-        <div className="tw-hidden xl:tw-flex tw-rounded-full tw-border-2 tw-border-darkPurple tw-relative">
-          <div className="tw-rounded-full tw-bg-darkPurple  tw-px-[1.75rem] tw-py-[0.75rem] ">
-            <h3 className="tw-text-white tw-text-h9Copy5 tw-leading-[1.225rem]">
+        <div className="hidden xl:flex rounded-full border-2 border-darkPurple relative">
+          <div className="rounded-full bg-darkPurple  px-[1.75rem] py-[0.75rem] ">
+            <h3 className="text-white text-h9Copy5 leading-[1.225rem]">
               Get Involved
             </h3>
           </div>
-          <div className="tw-bg-white tw-rounded-tr-full tw-rounded-br-full tw-flex tw-items-center tw-justify-center">
-            <Link href="/search" className="tw-px-[1.46rem] ">
+          <div className="bg-white rounded-tr-full rounded-br-full flex items-center justify-center">
+            <Link href="/search" className="px-[1.46rem] ">
               <SearchHeaderSvg />
             </Link>
           </div>

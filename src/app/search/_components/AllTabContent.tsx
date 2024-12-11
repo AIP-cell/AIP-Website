@@ -63,57 +63,57 @@ const tabDatas = [
 const AllTabContent = () => {
   const arrayLength = tabDatas.length;
   return (
-    <div className="tw-pt-[1rem] tw-pb-[7.46rem]">
-      <div className="tw-flex tw-flex-col ">
+    <div className="pt-[1rem] pb-[7.46rem]">
+      <div className="flex flex-col ">
         {tabDatas.map((content, i) => (
           <div
             key={i}
-            className={cn("tw-border-b-2 tw-border-[#DFE0E5]", {
-              "tw-border-none": i === arrayLength - 1,
+            className={cn("border-b-2 border-[#DFE0E5]", {
+              "border-none": i === arrayLength - 1,
             })}
           >
-            <h3 className="~tw-text-h5/h4a tw-font-playFair tw-text-gray80 tw-leading-[2.1rem] tw-pt-[1.5rem]">
+            <h3 className="~text-h5/h4a font-playFair text-gray80 leading-[2.1rem] pt-[1.5rem]">
               {content.title}
             </h3>
             <div
               className={cn(
-                "tw-flex tw-gap-[1.25rem] tw-pt-[1rem] tw-pb-[1.5rem]",
-                { "tw-flex-col": content.galleryImage },
-                { "tw-flex-col md:tw-flex-row": content.video }
+                "flex gap-[1.25rem] pt-[1rem] pb-[1.5rem]",
+                { "flex-col": content.galleryImage },
+                { "flex-col md:flex-row": content.video }
               )}
             >
               {content.image && (
-                <div className="tw-shrink-0 tw-relative ~tw-w-[4.28rem]/[3rem] ~tw-h-[4.548rem]/[4.3rem]">
+                <div className="shrink-0 relative ~w-[4.28rem]/[3rem] ~h-[4.548rem]/[4.3rem]">
                   <Image
                     src={content.image}
                     alt=""
-                    className="tw-object-contain tw-w-full tw-h-full"
+                    className="object-contain w-full h-full"
                     fill
                   />
                 </div>
               )}
               {content.video && (
-                <div className="tw-shrink-0 tw-flex tw-justify-center tw-items-center tw-w-[18.4rem] tw-h-[10.37rem] tw-rounded-3xl tw-bg-gray80">
-                  <div className="tw-rounded-full tw-size-[4rem] tw-bg-textPurple tw-flex tw-justify-center tw-items-center">
-                    <PlaySvg className="tw-size-[2.4rem]" />
+                <div className="shrink-0 flex justify-center items-center w-[18.4rem] h-[10.37rem] rounded-3xl bg-gray80">
+                  <div className="rounded-full size-[4rem] bg-textPurple flex justify-center items-center">
+                    <PlaySvg className="size-[2.4rem]" />
                   </div>
                 </div>
               )}
-              <p className="~tw-text-h9Copy5/h9Copy4 ~tw-leading-[1.225rem]/[1.4rem] tw-text-midGray">
+              <p className="~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] text-midGray">
                 {content.desc}
               </p>
               {content.galleryImage && (
-                <div className="tw-flex tw-flex-wrap tw-gap-[1.25rem]">
+                <div className="flex flex-wrap gap-[1.25rem]">
                   {content.galleryImage.map((items, index) => (
                     <div
                       key={index}
-                      className="~tw-size-[10.3rem]/[11.87rem] tw-relative tw-rounded-3xl tw-overflow-hidden"
+                      className="~size-[10.3rem]/[11.87rem] relative rounded-3xl overflow-hidden"
                     >
                       <Image
                         src={items}
                         alt="gallery-images"
                         fill
-                        className="tw-object-cover"
+                        className="object-cover"
                       />
                     </div>
                   ))}

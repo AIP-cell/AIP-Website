@@ -8,10 +8,10 @@ type Props = {
 const FaqTabList = ({ name, className }: Props) => {
   return (
     <>
-      <p className="tw-font-playFair tw-font-medium group-hover:tw-italic tw-text-xl tw-tracking-[.02rem] ">
+      <p className="font-playFair font-medium group-hover:italic text-xl tracking-[.02rem] ">
         {name}
       </p>
-      <div className="tw-p-[0.375rem] group tw-text-white group-hover:tw-text-midGray">
+      <div className="p-[0.375rem] group text-white group-hover:text-midGray">
         <ArrowSvg />
       </div>
     </>

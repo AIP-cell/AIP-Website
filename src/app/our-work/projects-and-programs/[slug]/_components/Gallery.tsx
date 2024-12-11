@@ -8,54 +8,54 @@ type Props = {
 };
 const Gallery = ({ galleryLink }: Props) => {
   return (
-    <div className="tw-relative ">
-      <div className="~tw-pt-[2rem]/[12.5rem] container tw-mx-auto ~tw-px-[1.25rem]/[7.8rem]">
-        <p className=" tw-text-center tw-font-playFair  ~tw-leading-[2.6rem]/[3.3rem] tw-tracking-[-.04rem] ~tw-text-h4/h2 tw-text-gray80">
+    <div className="relative ">
+      <div className="~pt-[2rem]/[12.5rem] container mx-auto ~px-[1.25rem]/[7.8rem]">
+        <p className=" text-center font-playFair  ~leading-[2.6rem]/[3.3rem] tracking-[-.04rem] ~text-h4/h2 text-gray80">
           Gallery
         </p>
-        <div className="~tw-pt-[2rem]/[4rem] tw-grid tw-grid-cols-2 lg:tw-grid-cols-5 lg:tw-grid-rows-2 ~tw-gap-[1rem]/[1.25rem]">
-          <div className="tw-col-span-2 lg:tw-col-span-3 lg:tw-row-span-2 tw-relative ~tw-h-[14.344rem]/[25rem] tw-rounded-lg tw-overflow-hidden">
+        <div className="~pt-[2rem]/[4rem] grid grid-cols-2 lg:grid-cols-5 lg:grid-rows-2 ~gap-[1rem]/[1.25rem]">
+          <div className="col-span-2 lg:col-span-3 lg:row-span-2 relative ~h-[14.344rem]/[25rem] rounded-lg overflow-hidden">
             <Image
               src={SampleImage}
               alt=""
-              className="tw-absolute tw-w-full tw-h-full tw-object-cover"
+              className="absolute w-full h-full object-cover"
             />
           </div>
-          <div className="tw-col-span-1 lg:tw-row-span-1 tw-relative tw-h-[10.25rem] md:tw-h-auto tw-rounded-lg tw-overflow-hidden">
+          <div className="col-span-1 lg:row-span-1 relative h-[10.25rem] md:h-auto rounded-lg overflow-hidden">
             <Image
               src={SampleImage}
               alt=""
-              className="tw-absolute tw-h-full tw-w-full tw-object-cover"
+              className="absolute h-full w-full object-cover"
             />
           </div>
-          <div className="tw-col-span-1 lg:tw-row-span-1 tw-h-[10.25rem] md:tw-h-auto tw-relative tw-rounded-lg tw-overflow-hidden">
+          <div className="col-span-1 lg:row-span-1 h-[10.25rem] md:h-auto relative rounded-lg overflow-hidden">
             <Image
               src={SampleImage}
               alt=""
-              className="tw-absolute tw-w-full tw-h-full tw-object-cover"
+              className="absolute w-full h-full object-cover"
             />
           </div>
-          <div className="tw-col-span-1 lg:tw-row-span-1 tw-h-[10.25rem] md:tw-h-auto tw-relative tw-rounded-lg tw-overflow-hidden">
+          <div className="col-span-1 lg:row-span-1 h-[10.25rem] md:h-auto relative rounded-lg overflow-hidden">
             <Image
               src={SampleImage}
               alt=""
-              className="tw-absolute tw-w-full tw-h-full tw-object-cover"
+              className="absolute w-full h-full object-cover"
             />
           </div>
-          <div className="tw-col-span-1 lg:tw-row-span-1 tw-h-[10.25rem] md:tw-h-auto tw-relative tw-rounded-lg tw-overflow-hidden">
+          <div className="col-span-1 lg:row-span-1 h-[10.25rem] md:h-auto relative rounded-lg overflow-hidden">
             <Image
               src={SampleImage}
               alt=""
-              className="tw-absolute tw-w-full tw-h-full tw-object-cover"
+              className="absolute w-full h-full object-cover"
             />
           </div>
         </div>
         <Link
           href={galleryLink || ""}
-          className="~tw-pt-[2rem]/[2.5rem] tw-flex tw-justify-center"
+          className="~pt-[2rem]/[2.5rem] flex justify-center"
         >
-          <button className="tw-rounded-full tw-border-2 tw-border-darkPurple hover:tw-text-white hover:tw-bg-darkPurple tw-text-darkPurple">
-            <p className="tw-text-h9Copy5 tw-leading-[1.225rem] tw-font-medium tw-py-[0.75rem] tw-px-[1.75rem]">
+          <button className="rounded-full border-2 border-darkPurple hover:text-white hover:bg-darkPurple text-darkPurple">
+            <p className="text-h9Copy5 leading-[1.225rem] font-medium py-[0.75rem] px-[1.75rem]">
               View All Images
             </p>
           </button>

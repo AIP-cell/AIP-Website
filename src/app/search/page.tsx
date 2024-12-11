@@ -31,26 +31,26 @@ const filterDatas = [
 ];
 const page = () => {
   return (
-    <div className="tw-pt-[5rem]">
-      <div className="tw-relative container tw-mx-auto ~tw-pt-[4.313rem]/[5.5rem] ~tw-px-[1.25rem]/[7.8rem]">
+    <div className="pt-[5rem]">
+      <div className="relative container mx-auto ~pt-[4.313rem]/[5.5rem] ~px-[1.25rem]/[7.8rem]">
         <BreadCrump textOne="Search" linkOne="/search" />
-        <div className="tw-relative tw-w-full tw-border-b-2 tw-border-[#A0A3AD] tw-flex tw-items-center tw-justify-between">
+        <div className="relative w-full border-b-2 border-[#A0A3AD] flex items-center justify-between">
           <input
             type="text"
             placeholder="Search"
-            className="tw-text-h4 tw-leading-[2.6rem] tw-w-full tw-font-playFair tw-pb-[0.625rem] tw-outline-none"
+            className="text-h4 leading-[2.6rem] w-full font-playFair pb-[0.625rem] outline-none"
           />
-          <div className="tw-absolute tw-right-0 tw-flex tw-gap-[1.5rem] tw-text-textPurple">
-            <CrossSvg className="tw-size-[1.5rem]" />
-            <SearchSvg className="tw-size-[1.5rem]" />
+          <div className="absolute right-0 flex gap-[1.5rem] text-textPurple">
+            <CrossSvg className="size-[1.5rem]" />
+            <SearchSvg className="size-[1.5rem]" />
           </div>
         </div>
         <div>
-          <div className="tw-flex tw-flex-wrap ~tw-pt-[3.25rem]/[4rem] tw-items-center tw-gap-[0.75rem]">
-            <p className=" tw-text-gray40  ~tw-text-h9Copy5/h9Copy4 ~tw-leading-[1.225rem]/[1.4rem]">
+          <div className="flex flex-wrap ~pt-[3.25rem]/[4rem] items-center gap-[0.75rem]">
+            <p className=" text-gray40  ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]">
               Filter by:
             </p>
-            <div className="tw-flex tw-flex-wrap tw-gap-[.75rem]">
+            <div className="flex flex-wrap gap-[.75rem]">
               {filterDatas.map((items, i) => (
                 <CustomFilter
                   type={items.type}

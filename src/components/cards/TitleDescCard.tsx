@@ -9,17 +9,17 @@ type Props = {
 const TitleDescCard = ({ title1, desc, title2, topClassName }: Props) => {
   return (
     <div
-      className={`tw-flex tw-flex-col tw-items-center tw-gap-[0.75rem] ${topClassName}`}
+      className={`flex flex-col items-center gap-[0.75rem] ${topClassName}`}
     >
       <div>
-        <h2 className="~tw-text-h4a/h4 ~tw-leading-[2.113rem]/[2.6rem] tw-text-center tw-font-playFairItalic tw-text-textPurple">
+        <h2 className="~text-h4a/h4 ~leading-[2.113rem]/[2.6rem] text-center font-playFairItalic text-textPurple">
           {title1}
         </h2>
-        <h2 className="~tw-text-h4a/h4 ~tw-leading-[2.113rem]/[2.6rem] tw-text-center tw-font-playFairItalic tw-text-textPurple">
+        <h2 className="~text-h4a/h4 ~leading-[2.113rem]/[2.6rem] text-center font-playFairItalic text-textPurple">
           {title2}
         </h2>
       </div>
-      <p className="~tw-text-h9Copy5/h9Copy4 ~tw-leading-[1.225]/[1.4rem] tw-text-midGray tw-text-center">
+      <p className="~text-h9Copy5/h9Copy4 ~leading-[1.225]/[1.4rem] text-midGray text-center">
         {desc}
       </p>
     </div>

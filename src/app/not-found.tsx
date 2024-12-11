@@ -11,29 +11,29 @@ import BreadCrump from "@/components/bread-crump/BreadCrump";
 
 const NotFound = () => {
   return (
-    <div className="tw-pt-[5rem]  container tw-mx-auto">
-      <div className="tw-relative">
+    <div className="pt-[5rem]  container mx-auto">
+      <div className="relative">
         <BreadCrump textOne="home" linkOne="/" />
       </div>
-      <div className="~tw-pt-[8rem]/[12.5rem] tw-flex tw-flex-col tw-items-center tw-justify-center">
-        <h1 className="~tw-text-h4/h1 ~tw-leading-[2.6rem]/[3.713rem] tw-font-playFair tw-text-gray80">
+      <div className="~pt-[8rem]/[12.5rem] flex flex-col items-center justify-center">
+        <h1 className="~text-h4/h1 ~leading-[2.6rem]/[3.713rem] font-playFair text-gray80">
           Oops!
-          <span className="tw-font-playFairItalic tw-text-textPurple">
+          <span className="font-playFairItalic text-textPurple">
             &nbsp;Nothing here!
           </span>
         </h1>
-        <div className="~tw-pt-[5rem]/[4.5rem] tw-flex tw-justify-center">
-          <ButtonAnimation className="  tw-py-[0.75rem] tw-px-[2rem]  tw-rounded-full tw-bg-darkPurple">
+        <div className="~pt-[5rem]/[4.5rem] flex justify-center">
+          <ButtonAnimation className="  py-[0.75rem] px-[2rem]  rounded-full bg-darkPurple">
             <Link
               href="/"
-              className="tw-text-white tw-flex tw-items-center tw-gap-[0.5rem]"
+              className="text-white flex items-center gap-[0.5rem]"
             >
-              <FilterDownArrowSvg className="tw-size-[1.25rem] tw-shrink-0 tw-rotate-[90deg]" />
-              <p className=" tw-text-h9Copy5 tw-leading-[1.225rem]">Go Back</p>
+              <FilterDownArrowSvg className="size-[1.25rem] shrink-0 rotate-[90deg]" />
+              <p className=" text-h9Copy5 leading-[1.225rem]">Go Back</p>
             </Link>
           </ButtonAnimation>
         </div>
-        <p className="tw-text-midGray tw-text-h8Copy3 tw-pt-[11rem] tw-pb-[13.9rem] tw-leading-[1.57rem]">
+        <p className="text-midGray text-h8Copy3 pt-[11rem] pb-[13.9rem] leading-[1.57rem]">
           WIP
         </p>
       </div>

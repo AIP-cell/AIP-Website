@@ -2,10 +2,10 @@ import fluid, { extract, screens, fontSize } from "fluid-tailwind";
 import type { Config } from "tailwindcss";
 const config: Config = {
   darkMode: ["class"],
-  prefix: "tw-",
+  // prefix: "",
   content: {
     files: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
-    extract: extract({ prefix: "tw-" }),
+    extract,
   },
   theme: {
     screens,
@@ -20,9 +20,9 @@ const config: Config = {
         purpleToBlue: "linear-gradient(to bottom, #91298C , #224193)",
         founderGradient: "linear-gradient(to bottom, #792e8e , #3a3b91)",
         toRightPurpleToBlue: "linear-gradient(to right, #91298C , #224193)",
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-radial": "radial-gradient(var(--gradient-stops))",
         "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+          "conic-gradient(from 180deg at 50% 50%, var(--gradient-stops))",
       },
       colors: {
         lightPeach: "#121314",

@@ -24,29 +24,29 @@ const itemsArray = [
 ];
 const ContactSection = () => {
   return (
-    <div className="tw-flex tw-flex-col tw-items-center ~tw-pt-[10rem]/[12.5rem] ~tw-pb-[5rem]/[7.5rem]">
-      <h2 className="~tw-text-h4/h2 ~tw-leading-[2.6rem]/[3.3rem] tw-text-center tw-text-gray80 tw-font-playFair">
+    <div className="flex flex-col items-center ~pt-[10rem]/[12.5rem] ~pb-[5rem]/[7.5rem]">
+      <h2 className="~text-h4/h2 ~leading-[2.6rem]/[3.3rem] text-center text-gray80 font-playFair">
         Reason to
-        <span className="tw-text-textPurple tw-font-playFairItalic">
+        <span className="text-textPurple font-playFairItalic">
           &nbsp;Connect
         </span>
       </h2>
-      <div className="~tw-pt-[3rem]/[5rem] tw-flex tw-justify-center ~tw-px-[1.25rem]/[19rem]">
-        <div className="tw-grid md:tw-grid-cols-2 ~tw-gap-x-[3rem]/[5rem] ~tw-gap-y-[1.75rem]/[2.5rem]">
+      <div className="~pt-[3rem]/[5rem] flex justify-center ~px-[1.25rem]/[19rem]">
+        <div className="grid md:grid-cols-2 ~gap-x-[3rem]/[5rem] ~gap-y-[1.75rem]/[2.5rem]">
           {itemsArray.map((item, i) => (
             <TitleDescCard
               key={i}
               title1={item.title1}
               desc={item.desc}
-              topClassName="  tw-w-[18.438rem] "
+              topClassName="  w-[18.438rem] "
             />
           ))}
         </div>
       </div>
-      <div className="~tw-pt-[2rem]/[5rem]">
+      <div className="~pt-[2rem]/[5rem]">
         <BgButton
           text="Join The Flow"
-          className="tw-text-h9Copy5 tw-leading-[1.225rem] tw-px-[1.75rem] tw-py-[0.75rem]"
+          className="text-h9Copy5 leading-[1.225rem] px-[1.75rem] py-[0.75rem]"
         />
       </div>
     </div>

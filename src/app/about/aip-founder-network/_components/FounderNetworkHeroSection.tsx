@@ -6,17 +6,17 @@ import React from "react";
 
 const FounderNetworkHeroSection = () => {
   return (
-    <div className="tw-w-full  tw-relative">
+    <div className="w-full  relative">
       <Image
         src={PurpleWave}
         alt=""
-        className="tw-hidden lg:tw-block tw-absolute tw-top-0 tw-right-0"
+        className="hidden lg:block absolute top-0 right-0"
       />
-      <div className="tw-relative container tw-mx-auto">
+      <div className="relative container mx-auto">
         <Image
           src={OvalPeach}
           alt=""
-          className="tw-hidden lg:tw-block tw-absolute tw-top-[20.313rem] tw-z-10 tw-right-[1.18rem]"
+          className="hidden lg:block absolute top-[20.313rem] z-10 right-[1.18rem]"
         />
         <BreadCrump
           textOne="About Us"
@@ -24,12 +24,12 @@ const FounderNetworkHeroSection = () => {
           textTwo="AIP Founder Network"
           linkTwo="/about/aip-founder-network"
         />
-        <div className="~tw-pl-5/[7.81rem] ~tw-pr-5/[14.375rem]">
-          <h4 className="~tw-leading-[1.138rem]/[1.3rem] ~tw-text-h9Copy5/h9Copy4 tw-font-semibold tw-uppercase tw-text-purple40 ~tw-pt-[4.313rem]/[6.5rem]">
+        <div className="~pl-5/[7.81rem] ~pr-5/[14.375rem]">
+          <h4 className="~leading-[1.138rem]/[1.3rem] ~text-h9Copy5/h9Copy4 font-semibold uppercase text-purple40 ~pt-[4.313rem]/[6.5rem]">
             A Grant-maker not a fundraiser
           </h4>
-          <div className="~tw-pt-[1.25rem]/[0.75rem] ">
-            <div className=" ~tw-text-h5/h4 tw-text-gray80  ~tw-leading-[1.75rem]/[2.6rem] tw-font-medium tw-font-playFair">
+          <div className="~pt-[1.25rem]/[0.75rem] ">
+            <div className=" ~text-h5/h4 text-gray80  ~leading-[1.75rem]/[2.6rem] font-medium font-playFair">
               <p>AIP is by and for philanthropists - </p>
               to inspire, influence and inform strategic giving.
               <p> AIP’s Core Founders are Ashish and Manisha Dhawan</p>
@@ -37,7 +37,7 @@ const FounderNetworkHeroSection = () => {
               <p>(RohiniNilekani Philanthropies), Amit and Archana Chandra</p>
               (ATE Chandra Foundation) and Vishal Tulsyan.
             </div>
-            <div className=" ~tw-text-h5/h4 tw-text-gray80  ~tw-leading-[1.75rem]/[2.6rem] tw-font-medium tw-font-playFair ~tw-pt-[2rem]/[3rem]">
+            <div className=" ~text-h5/h4 text-gray80  ~leading-[1.75rem]/[2.6rem] font-medium font-playFair ~pt-[2rem]/[3rem]">
               They are joined by ~30 Founders who have committed to support AIP,
               help expand this movement, and inspire others. The AIP umbrella
               has so far touched over 125 philanthropists, who are at different

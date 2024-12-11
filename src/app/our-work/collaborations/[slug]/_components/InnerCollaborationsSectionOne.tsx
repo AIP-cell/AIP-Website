@@ -23,18 +23,18 @@ import { TabGroup, TabPanel, TabPanels } from "@headlessui/react";
 const tabArray = ["New Delhi", "Mumbai", "Bangalore"];
 const InnerCollaborationsSectionOne = () => {
   return (
-    <div className="tw-relative tw-w-full ~tw-pb-[5rem]/[12.75rem]">
+    <div className="relative w-full ~pb-[5rem]/[12.75rem]">
       <Image
         src={BottomBg}
         alt="purple-curve"
-        className="tw-hidden lg:tw-block tw-absolute tw-bottom-[-36rem] tw-h-[75rem] tw-w-full"
+        className="hidden lg:block absolute bottom-[-36rem] h-[75rem] w-full"
       />
       <Image
         src={PurpleTopSvg}
         alt="purple-curve"
-        className="tw-hidden lg:tw-block tw-absolute tw-top-[8rem] tw-right-0"
+        className="hidden lg:block absolute top-[8rem] right-0"
       />
-      <div className="container tw-mx-auto tw-relative ~tw-px-[1.25rem]/[7.8rem] tw-pt-[5rem]">
+      <div className="container mx-auto relative ~px-[1.25rem]/[7.8rem] pt-[5rem]">
         <BreadCrump
           textOne="Our Work"
           linkOne="/our-work"
@@ -43,16 +43,16 @@ const InnerCollaborationsSectionOne = () => {
           textThree="slug"
           linkThree="/our-work/collaborations/slug"
         />
-        <div className="tw-relative tw-grid lg:tw-grid-cols-3 tw-gap-5">
-          <div className="lg:tw-col-span-2 tw-flex tw-flex-col tw-gap-10  ~tw-pr-0/[6.563rem]">
-            <div className="tw-font-playFair">
-              <p className="tw-leading-[3.25rem] tw-tracking-[-.04rem] tw-text-h3 tw-text-midGray">
+        <div className="relative grid lg:grid-cols-3 gap-5">
+          <div className="lg:col-span-2 flex flex-col gap-10  ~pr-0/[6.563rem]">
+            <div className="font-playFair">
+              <p className="leading-[3.25rem] tracking-[-.04rem] text-h3 text-midGray">
                 Systemic Impact Exemplars
               </p>
-              <p className=" tw-leading-[1.75rem] tw-tracking-[-.02rem] tw-font-playFairItalic tw-text-h5 tw-text-gray40 tw-font-medium tw-pt-[1rem]">
+              <p className=" leading-[1.75rem] tracking-[-.02rem] font-playFairItalic text-h5 text-gray40 font-medium pt-[1rem]">
                 Reports
               </p>
-              <p className="tw-font-inter tw-leading-[1.4rem]  tw-text-midGray  ~tw-pt-[2rem]/[1.25rem] ~tw-pr-0/[3rem]">
+              <p className="font-inter leading-[1.4rem]  text-midGray  ~pt-[2rem]/[1.25rem] ~pr-0/[3rem]">
                 This report was conceptualised to identify and learn from
                 organisations that have achieved large-scale impact by adopting
                 the systems change approach. It profiles 20 of India’s leading
@@ -63,118 +63,118 @@ const InnerCollaborationsSectionOne = () => {
               </p>
             </div>
             <div className="">
-              <TabGroup className="tw-flex tw-flex-col tw-justify-center tw-pr-[3rem]">
-                <LocationTabs tabArray={tabArray} listClassName="!tw-w-full" />
+              <TabGroup className="flex flex-col justify-center pr-[3rem]">
+                <LocationTabs tabArray={tabArray} listClassName="!w-full" />
               </TabGroup>
-              <div className="tw-block md:tw-hidden tw-pt-[2rem]">
+              <div className="block md:hidden pt-[2rem]">
                 <Image
                   src={Systemic}
-                  className=" tw-w-full tw-h-[30.89rem] tw-object-cover"
+                  className=" w-full h-[30.89rem] object-cover"
                   alt="image"
                 />
-                <div className="tw-flex tw-pt-[2rem]">
-                  <button className="tw-group tw-bg-darkPurple tw-border-2 tw-border-darkPurple hover:tw-bg-white  tw-transition-all  hover:tw-text-darkPurple tw-text-white hover:tw-border-2 hover:tw-border-darkPurple tw-px-7 tw-py-3 tw-flex tw-items-center tw-gap-[0.75rem] tw-w-fit tw-rounded-3xl">
-                    <p className=" tw-font-inter  tw-text-h9Copy5 tw-leading-[1.225rem]">
+                <div className="flex pt-[2rem]">
+                  <button className="group bg-darkPurple border-2 border-darkPurple hover:bg-white  transition-all  hover:text-darkPurple text-white hover:border-2 hover:border-darkPurple px-7 py-3 flex items-center gap-[0.75rem] w-fit rounded-3xl">
+                    <p className=" font-inter  text-h9Copy5 leading-[1.225rem]">
                       Download Event Report
                     </p>
-                    <div className=" tw-pt-[.1rem]">
-                      <DownloadFileSvg className="tw-size-[1.25rem]" />
+                    <div className=" pt-[.1rem]">
+                      <DownloadFileSvg className="size-[1.25rem]" />
                     </div>
                   </button>
                 </div>
               </div>
               <div className="">
-                <h2 className="~tw-text-h6M/h4 ~tw-leading-[1.575rem]/[2.6rem] tw-font-playFair ~tw-pt-[2rem]/[1.25rem] tw-text-gray80">
+                <h2 className="~text-h6M/h4 ~leading-[1.575rem]/[2.6rem] font-playFair ~pt-[2rem]/[1.25rem] text-gray80">
                   Launch Details
                 </h2>
-                <p className="~tw-pt-[0.75rem]/[1.25rem] ~tw-text-h9Copy4/h7Copy2 ~tw-leading-[1.4rem]/[1.75rem] tw-font-bold tw-text-gray80 ">
+                <p className="~pt-[0.75rem]/[1.25rem] ~text-h9Copy4/h7Copy2 ~leading-[1.4rem]/[1.75rem] font-bold text-gray80 ">
                   25th - 30th Jun 2024
-                  <span className="tw-font-normal">&nbsp;|&nbsp;</span> 16:00
+                  <span className="font-normal">&nbsp;|&nbsp;</span> 16:00
                   Hrs IST
                 </p>
               </div>
             </div>
-            <div className="tw-flex tw-flex-col ">
-              <div className="tw-order-2 md:tw-order-none  ~tw-pb-[2.5rem]/0  ~tw-pt-[2.5rem]/0">
-                <p className="tw-font-playFair ~tw-pb-[0.75rem]/4  ~tw-leading-[1.575rem]/[1.75rem] tw-font-medium tw-tracking-[-.02rem] ~tw-text-h6M/h5 tw-text-gray80">
+            <div className="flex flex-col ">
+              <div className="order-2 md:order-none  ~pb-[2.5rem]/0  ~pt-[2.5rem]/0">
+                <p className="font-playFair ~pb-[0.75rem]/4  ~leading-[1.575rem]/[1.75rem] font-medium tracking-[-.02rem] ~text-h6M/h5 text-gray80">
                   Organised By
                 </p>
-                <div className="tw-flex tw-gap-4">
-                  <div className=" tw-flex tw-items-center tw-bg-white tw-border tw-border-1 tw-border-gray10 tw-rounded-xl ~tw-w-[9.46rem]/[11.813rem] ~tw-h-[4rem]/20 tw-overflow-hidden">
+                <div className="flex gap-4">
+                  <div className=" flex items-center bg-white border border-1 border-gray10 rounded-xl ~w-[9.46rem]/[11.813rem] ~h-[4rem]/20 overflow-hidden">
                     <Image
                       src={Foundation1}
-                      className="tw-object-contain "
+                      className="object-contain "
                       alt="foundation"
                     />
                   </div>
-                  <div className="tw-flex tw-items-center tw-border tw-border-1 tw-bg-white tw-border-gray10 tw-rounded-xl ~tw-w-[5.49rem]/[6.863rem] ~tw-h-[4rem]/20 tw-overflow-hidden">
+                  <div className="flex items-center border border-1 bg-white border-gray10 rounded-xl ~w-[5.49rem]/[6.863rem] ~h-[4rem]/20 overflow-hidden">
                     <Image
                       src={Impact}
-                      className="tw-object-contain   "
+                      className="object-contain   "
                       alt="foundation"
                     />
                   </div>
                 </div>
               </div>
-              <div className="tw-order-1 md:tw-order-none ~tw-pt-0/[2.5rem] ~tw-pb-[2.5rem]/0 tw-border-b tw-border-gray10 md:tw-border-none">
-                <p className="tw-font-playFair ~tw-pb-[0.75rem]/4 ~tw-leading-[1.575rem]/[1.75rem] tw-font-medium tw-tracking-[-.02rem] ~tw-text-h6M/h5 tw-text-gray80">
+              <div className="order-1 md:order-none ~pt-0/[2.5rem] ~pb-[2.5rem]/0 border-b border-gray10 md:border-none">
+                <p className="font-playFair ~pb-[0.75rem]/4 ~leading-[1.575rem]/[1.75rem] font-medium tracking-[-.02rem] ~text-h6M/h5 text-gray80">
                   In Collaboration With
                 </p>
-                <div className="tw-flex tw-gap-4">
-                  <div className="~tw-w-[7.75rem]/[9.688rem] tw-bg-white tw-flex tw-items-center ~tw-h-[4rem]/[5rem] tw-border tw-border-1 tw-border-gray10 tw-rounded-xl tw-overflow-hidden">
-                    {/* ~tw-py-[0.7rem]/[0.89rem] tw-px-[0.3rem] */}
+                <div className="flex gap-4">
+                  <div className="~w-[7.75rem]/[9.688rem] bg-white flex items-center ~h-[4rem]/[5rem] border border-1 border-gray10 rounded-xl overflow-hidden">
+                    {/* ~py-[0.7rem]/[0.89rem] px-[0.3rem] */}
                     <Image
                       src={Foundation4}
-                      className=" tw-object-contain "
+                      className=" object-contain "
                       alt="foundation"
                     />
                   </div>
-                  <div className="tw-flex tw-items-center tw-bg-white tw-border tw-border-1 tw-border-gray10 tw-rounded-xl ~tw-w-[4.12rem]/[5.388rem] ~tw-h-[4rem]/20 tw-overflow-hidden">
+                  <div className="flex items-center bg-white border border-1 border-gray10 rounded-xl ~w-[4.12rem]/[5.388rem] ~h-[4rem]/20 overflow-hidden">
                     <Image
                       src={Foundation3}
-                      className=" tw-object-cover "
+                      className=" object-cover "
                       alt="foundation"
                     />
                   </div>
-                  <div className="tw-flex tw-items-center tw-rounded-xl tw-h-[4rem] tw-w-[4.4rem] tw-overflow-hidden">
+                  <div className="flex items-center rounded-xl h-[4rem] w-[4.4rem] overflow-hidden">
                     <Image
                       src={Foundation2}
                       alt="foundation"
-                      className="tw-object-contain"
+                      className="object-contain"
                     />
                   </div>
                 </div>
               </div>
-              <div className="tw-order-3 md:tw-order-none tw-pt-[2.5rem] tw-border-t tw-border-gray10 md:tw-border-none">
-                <p className="tw-font-playFair tw-pb-4 ~tw-leading-[1.575rem]/[1.75rem] tw-font-medium tw-tracking-[-.02rem] ~tw-text-h6M/h5 tw-text-gray80">
+              <div className="order-3 md:order-none pt-[2.5rem] border-t border-gray10 md:border-none">
+                <p className="font-playFair pb-4 ~leading-[1.575rem]/[1.75rem] font-medium tracking-[-.02rem] ~text-h6M/h5 text-gray80">
                   Catch up on Event Updates
                 </p>
 
-                <div className="tw-flex tw-gap-4">
-                  <div className="tw-bg-bgGray5 tw-text-darkPurple hover:tw-text-white hover:tw-bg-darkPurple tw-w-[3rem] tw-h-[3rem] tw-rounded-full tw-flex tw-items-center tw-justify-center">
-                    <YoutubeSvg className="tw-size-[2rem]" />
+                <div className="flex gap-4">
+                  <div className="bg-bgGray5 text-darkPurple hover:text-white hover:bg-darkPurple w-[3rem] h-[3rem] rounded-full flex items-center justify-center">
+                    <YoutubeSvg className="size-[2rem]" />
                   </div>
 
-                  <div className="tw-bg-bgGray5 tw-text-darkPurple hover:tw-text-white hover:tw-bg-darkPurple tw-w-[3rem] tw-h-[3rem] tw-rounded-full tw-flex tw-items-center tw-justify-center ">
-                    <XSvg className="tw-w-[1.063rem] tw-h-[1.125rem]" />
+                  <div className="bg-bgGray5 text-darkPurple hover:text-white hover:bg-darkPurple w-[3rem] h-[3rem] rounded-full flex items-center justify-center ">
+                    <XSvg className="w-[1.063rem] h-[1.125rem]" />
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="tw-hidden md:tw-block tw-pt-[5rem]">
+          <div className="hidden md:block pt-[5rem]">
             <Image
               src={Systemic}
-              className=" tw-w-[25rem] tw-object-cover"
+              className=" w-[25rem] object-cover"
               alt="image"
             />
-            <div className="tw-flex tw-pt-[1.382rem]">
-              <button className="tw-group tw-bg-darkPurple tw-border-2 tw-border-darkPurple hover:tw-bg-white  tw-transition-all  hover:tw-text-darkPurple tw-text-white hover:tw-border-2 hover:tw-border-darkPurple tw-px-7 tw-py-3 tw-flex tw-items-center tw-gap-[0.75rem] tw-w-fit tw-rounded-3xl">
-                <p className=" tw-font-inter  tw-text-h9Copy5 tw-leading-[1.225rem]">
+            <div className="flex pt-[1.382rem]">
+              <button className="group bg-darkPurple border-2 border-darkPurple hover:bg-white  transition-all  hover:text-darkPurple text-white hover:border-2 hover:border-darkPurple px-7 py-3 flex items-center gap-[0.75rem] w-fit rounded-3xl">
+                <p className=" font-inter  text-h9Copy5 leading-[1.225rem]">
                   Download Event Report
                 </p>
-                <div className=" tw-pt-[.1rem]">
-                  <DownloadFileSvg className="tw-size-[1.25rem]" />
+                <div className=" pt-[.1rem]">
+                  <DownloadFileSvg className="size-[1.25rem]" />
                 </div>
               </button>
             </div>

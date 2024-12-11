@@ -48,26 +48,26 @@ const peopleDataRow1 = [
 ];
 const NetworkOfExperts = () => {
   return (
-    <div className="~tw-pt-[7.5rem]/[12.5rem] ~tw-pb-[7.5rem]/0 container tw-mx-auto">
-      <h2 className="~tw-text-h4/h2 ~tw-leading-[2.6rem]/[3.3rem] tw-font-playFair tw-text-darkBrown tw-text-center">
-        <span className="tw-text-textPurple tw-font-playFairItalic">
+    <div className="~pt-[7.5rem]/[12.5rem] ~pb-[7.5rem]/0 container mx-auto">
+      <h2 className="~text-h4/h2 ~leading-[2.6rem]/[3.3rem] font-playFair text-darkBrown text-center">
+        <span className="text-textPurple font-playFairItalic">
           Network&nbsp;
         </span>
         Of Experts
       </h2>
-      <p className="~tw-text-h9Copy5/h9Copy4 ~tw-leading-[1.225rem]/[1.4rem] tw-px-[2.8rem] tw-text-midGray tw-text-center ~tw-pt-[0.75rem]/[1.25rem]">
+      <p className="~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] px-[2.8rem] text-midGray text-center ~pt-[0.75rem]/[1.25rem]">
         Were thrilled and grateful for the pro-bono support of experts in our
         network
       </p>
-      <div className="~tw-pt-[3.5rem]/[5rem] ~tw-px-[1.25rem]/[7.8rem]">
-        <div className=" tw-grid tw-grid-cols-2 md:tw-grid-cols-3 lg:tw-grid-cols-4 tw-justify-center ~tw-gap-x-[1.25rem]/[5.625rem] ~tw-gap-y-[3.5rem]/[4.5rem]">
+      <div className="~pt-[3.5rem]/[5rem] ~px-[1.25rem]/[7.8rem]">
+        <div className=" grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center ~gap-x-[1.25rem]/[5.625rem] ~gap-y-[3.5rem]/[4.5rem]">
           {peopleDataRow1.map((people, i) => (
             <div key={i} className="">
               {i % 2 == 0 ? (
                 <ATeamCard
 
-                  titleClassName="tw-underline tw-decoration-[1.5px] tw-underline-offset-4"
-                  title2ClassName="tw-underline tw-decoration-[1.5px] tw-underline-offset-4"
+                  titleClassName="underline decoration-[1.5px] underline-offset-4"
+                  title2ClassName="underline decoration-[1.5px] underline-offset-4"
                   title={people.title1}
                   title2={people.title2}
                   desc={people.desc}
@@ -75,8 +75,8 @@ const NetworkOfExperts = () => {
                 />
               ) : (
                 <PTeamCard
-                  titleClassName="tw-underline tw-decoration-[1.5px] tw-underline-offset-4"
-                  title2ClassName="tw-underline tw-decoration-[1.5px] tw-underline-offset-4"
+                  titleClassName="underline decoration-[1.5px] underline-offset-4"
+                  title2ClassName="underline decoration-[1.5px] underline-offset-4"
                   title={people.title1}
                   title2={people.title2}
                   desc={people.desc}

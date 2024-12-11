@@ -23,32 +23,32 @@ const ImgTitleDescVer = ({
   totalWidth,
 }: Props) => {
   return (
-    // tw-justify-center
+    // justify-center
     <div
-      className={`tw-flex tw-flex-col  tw-items-center tw-gap-[0.75rem] ${totalWidth}`}
+      className={`flex flex-col  items-center gap-[0.75rem] ${totalWidth}`}
     >
       <div
-        className={` ${imageWidth} tw-relative ~tw-w-[10rem]/[20rem] ~tw-h-[7.5rem]/[8.75rem]`}
+        className={` ${imageWidth} relative ~w-[10rem]/[20rem] ~h-[7.5rem]/[8.75rem]`}
       >
         <Image src={src} alt="svg" fill />
       </div>
       <div>
         <h3
-          className={` ${titleClassName} ~tw-text-h4a/h3 tw-text-darkGray tw-text-center tw-font-playFair md:tw--tracking-[4%] tw-tracking-normal`}
+          className={` ${titleClassName} ~text-h4a/h3 text-darkGray text-center font-playFair md:-tracking-[4%] tracking-normal`}
         >
           {title}
-          <span className="tw-text-textPurple tw-font-playFairItalic">
+          <span className="text-textPurple font-playFairItalic">
             &nbsp;{span}
           </span>
         </h3>
         <h3
-          className={` ${titleClassName} ~tw-text-h4a/h3 tw-text-darkGray tw-text-center tw-font-playFair md:tw--tracking-[4%] tw-tracking-normal`}
+          className={` ${titleClassName} ~text-h4a/h3 text-darkGray text-center font-playFair md:-tracking-[4%] tracking-normal`}
         >
           {title2}
         </h3>
       </div>
       <h4
-        className={`${descClassName} ~tw-text-h9Copy5/h9Copy4 ~tw-leading-[1.225rem]/[1.4rem] tw-text-center tw-text-midGray`}
+        className={`${descClassName} ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] text-center text-midGray`}
       >
         {desc}
       </h4>

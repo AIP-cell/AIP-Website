@@ -4,12 +4,12 @@ import Wave from "react-wavify";
 
 const OurOfferingHeroSection = () => {
   return (
-    <div className="tw-relative tw-w-full ">
-      <div className="tw-absolute  tw-inset-0 ">
+    <div className="relative w-full ">
+      <div className="absolute  inset-0 ">
         <Wave
           fill="#F5B195"
           paused={false}
-          className="tw-h-[--h] !tw-block"
+          className="h-[--h] !block"
           options={{
             // height:40,
             amplitude: 60,
@@ -22,11 +22,11 @@ const OurOfferingHeroSection = () => {
             <stop offset="90%" stopColor="#F7E0A1" />
           </linearGradient>
         </Wave>
-        <div className="tw-h-[calc(100%-var(--h)*2)] tw-bg-[#F5B195]"></div>
+        <div className="h-[calc(100%-var(--h)*2)] bg-[#F5B195]"></div>
         <Wave
           fill="#F5B195"
           paused={false}
-          className="tw-h-[--h] tw-rotate-180 !tw-block"
+          className="h-[--h] rotate-180 !block"
           options={{
             // height:40,
             amplitude: 60,
@@ -40,10 +40,10 @@ const OurOfferingHeroSection = () => {
           </linearGradient>
         </Wave>
       </div>
-      {/* <HeroBgSVg className="tw-absolute "/> */}
-      {/* <Image src={HeroBg1} alt="" fill className="tw-z-40 " />
-      <Image src={HeroBg2} alt="" fill className="tw-z-10 " /> */}
-      <div className="tw-relative container tw-mx-auto">
+      {/* <HeroBgSVg className="absolute "/> */}
+      {/* <Image src={HeroBg1} alt="" fill className="z-40 " />
+      <Image src={HeroBg2} alt="" fill className="z-10 " /> */}
+      <div className="relative container mx-auto">
         <BreadCrump
           textOne="Our Work"
           linkOne="/our-work"
@@ -52,25 +52,25 @@ const OurOfferingHeroSection = () => {
         />
       </div>
 
-      <div className="tw-relative">
+      <div className="relative">
         <Wave
           fill="#faecc894"
           paused={false}
-          className="tw-h-[--h] !tw-block"
+          className="h-[--h] !block"
           options={{
             amplitude: 60,
             speed: 0.15,
             points: 3,
           }}
         />
-        {/* ~tw-pt-[5.5rem]/[11rem] */}
+        {/* ~pt-[5.5rem]/[11rem] */}
 
-        <div className=" tw-bg-[#faecc894] ~tw-pt-[3rem]/[6.25rem] ~tw-pb-[3rem]/[7.6rem] tw-w-full ">
-          <div className="container tw-mx-auto tw-flex tw-justify-center tw-flex-col tw-items-center tw-relative tw-z-50 ~tw-px-5/[14.375rem] ">
-            <h3 className=" ~tw-leading-[1.129rem]/[1.29rem] ~tw-text-h9Copy5/h9Copy4 tw-uppercase tw-font-inter tw-text-lightPeach/60 tw-font-semibold">
+        <div className=" bg-[#faecc894] ~pt-[3rem]/[6.25rem] ~pb-[3rem]/[7.6rem] w-full ">
+          <div className="container mx-auto flex justify-center flex-col items-center relative z-50 ~px-5/[14.375rem] ">
+            <h3 className=" ~leading-[1.129rem]/[1.29rem] ~text-h9Copy5/h9Copy4 uppercase font-inter text-lightPeach/60 font-semibold">
               Philanthropy is what it does.
             </h3>
-            <h2 className="tw-pt-[1.25rem] md:tw-tracking-[-1px] tw-text-center ~tw-text-h7Copy3/h3 ~tw-leading-[1.788rem]/[2.6rem] tw-font-playFair tw-text-gray80">
+            <h2 className="pt-[1.25rem] md:tracking-[-1px] text-center ~text-h7Copy3/h3 ~leading-[1.788rem]/[2.6rem] font-playFair text-gray80">
               AIP is a sector-agnostic organization, meaning we do not
               specialize in any one sector but instead offer our expertise
               across a wide range of fields. We work in any sector that aligns
@@ -86,7 +86,7 @@ const OurOfferingHeroSection = () => {
         <Wave
           fill="#faecc894"
           paused={false}
-          className="tw-h-[--h] tw-rotate-180 !tw-block"
+          className="h-[--h] rotate-180 !block"
           options={{
             amplitude: 60,
             speed: 0.15,

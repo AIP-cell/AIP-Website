@@ -27,31 +27,31 @@ const caseStudyData = [
 
 const NpoSpotlight = () => {
   return (
-    <div className="tw-relative tw-w-full">
+    <div className="relative w-full">
       <Image
         src={CurveBg}
         alt=""
-        className="tw-hidden lg:tw-flex tw-absolute tw-items-center tw-top-[7rem] tw-h-full tw-left-0"
+        className="hidden lg:flex absolute items-center top-[7rem] h-full left-0"
       />
       <Image
         src={CurvePeach}
         alt=""
-        className="tw-hidden lg:tw-block tw-absolute  tw-bottom-[-2rem]  tw-right-0"
+        className="hidden lg:block absolute  bottom-[-2rem]  right-0"
       />
-      <div className=" tw-relative container tw-mx-auto ~tw-pt-[5rem]/[12.5rem]">
-        <h2 className="tw-text-center ~tw-text-h4/h2 ~tw-leading-[2.6rem]/[3.3rem] tw-text-darkBrown tw-font-playFair">
+      <div className=" relative container mx-auto ~pt-[5rem]/[12.5rem]">
+        <h2 className="text-center ~text-h4/h2 ~leading-[2.6rem]/[3.3rem] text-darkBrown font-playFair">
           NPO
-          <span className="tw-text-textPurple tw-font-playFairItalic">
+          <span className="text-textPurple font-playFairItalic">
             &nbsp;Spotlight
           </span>
         </h2>
-        <div className="~tw-pt-[2.5rem]/[6.56rem] tw-flex tw-flex-col ~tw-gap-[3.5rem]/[5.5rem] ~tw-px-[1.25rem]/[7.8rem]">
+        <div className="~pt-[2.5rem]/[6.56rem] flex flex-col ~gap-[3.5rem]/[5.5rem] ~px-[1.25rem]/[7.8rem]">
           {caseStudyData.map((item: any, i: number) => (
             <CaseStudy
               key={i}
               index={i}
               foundationName={item.foundationName}
-              foundationNameClassName="!tw-pt-[1.25rem]"
+              foundationNameClassName="!pt-[1.25rem]"
               initiativeName={item.initiativeName}
               title={item.title}
               desc={item.desc}

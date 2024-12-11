@@ -43,16 +43,16 @@ const agendaArray = [
 ];
 const page = () => {
   return (
-    <div className="tw-pt-[5rem]">
+    <div className="pt-[5rem]">
       <InnerCollaborationsSectionOne />
-      <div className="container tw-mx-auto tw-relative ~tw-px-[1.25rem]/[7.8rem] ">
-        <p className="tw-text-center tw-font-playFair ~tw-pb-[1rem]/20 ~tw-leading-[2.6rem]/[3.3rem] tw-tracking-[-.04rem] ~tw-text-h4/h2 tw-text-gray80">
+      <div className="container mx-auto relative ~px-[1.25rem]/[7.8rem] ">
+        <p className="text-center font-playFair ~pb-[1rem]/20 ~leading-[2.6rem]/[3.3rem] tracking-[-.04rem] ~text-h4/h2 text-gray80">
           Agenda
         </p>
         <Agenda agendaArray={agendaArray} />
         <InnerCollaborationsVideo />
       </div>
-      <div className="container tw-mx-auto ~tw-pt-[3rem]/0">
+      <div className="container mx-auto ~pt-[3rem]/0">
         <Gallery galleryLink="/our-work/collaborations/slug/event-gallery" />
       </div>
       <Media />

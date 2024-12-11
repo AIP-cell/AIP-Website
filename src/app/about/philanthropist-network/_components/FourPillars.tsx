@@ -31,29 +31,29 @@ const serviceSlickData = [
 ];
 const FourPillars = () => {
   return (
-    <div className="tw-relative bg-container tw-mx-auto">
+    <div className="relative bg-container mx-auto">
       <Image
         src={Bg}
         alt=""
-        className=" tw-absolute -tw-top-[11.5rem]  tw-z-[-1] tw-h-[70rem]  tw-w-[400rem]"
+        className=" absolute -top-[11.5rem]  z-[-1] h-[70rem]  w-[400rem]"
       />
-      <div className="tw-pt-[12.5rem] ~tw-px-5/[7.8rem] container tw-mx-auto">
-        <h2 className="tw-font-playFair tw-text-center tw-text-gray80 tw-text-h2 tw-leading-[3.3rem]">
-          <span className="tw-text-textPurple tw-font-playFairItalic">
+      <div className="pt-[12.5rem] ~px-5/[7.8rem] container mx-auto">
+        <h2 className="font-playFair text-center text-gray80 text-h2 leading-[3.3rem]">
+          <span className="text-textPurple font-playFairItalic">
             Four
           </span>
           &nbsp;Pillars
         </h2>
-        <div className="tw-pt-[5rem] tw-flex no-scrollbar tw-gap-[4.5rem] tw-overflow-x-auto">
+        <div className="pt-[5rem] flex no-scrollbar gap-[4.5rem] overflow-x-auto">
           {serviceData.map((items, i) => (
             <OvalPurple
               key={i}
-              sizeClass="tw-size-[18.4rem]"
+              sizeClass="size-[18.4rem]"
               mainClass=""
               text1={items.text1}
               text2={items.text2}
-              textClass1="tw-text-h4 tw-font-playFair tw-text-white leading-[2.113rem]"
-              textClass2=" tw-italic tw-font-playFair tw-text-white tw-text-h4a leading-[2.113rem]"
+              textClass1="text-h4 font-playFair text-white leading-[2.113rem]"
+              textClass2=" italic font-playFair text-white text-h4a leading-[2.113rem]"
             />
           ))}
         </div>

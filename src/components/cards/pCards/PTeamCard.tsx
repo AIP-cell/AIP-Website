@@ -26,39 +26,39 @@ const PTeamCard = ({
   locationClassName,
 }: Props) => {
   return (
-    <div className="max-[23rem]:tw-w-[8rem] ~tw-w-[10.3rem]/[11.87rem] tw-relative">
+    <div className="max-[23rem]:w-[8rem] ~w-[10.3rem]/[11.87rem] relative">
       <PMediumSizeSvg src="/images/sample.png" />
       {linkedin && (
         <Image
           src={Linkedin}
           alt=""
-          className="tw-absolute tw-top-0 tw-right-0 tw-size-[2.5rem]"
+          className="absolute top-0 right-0 size-[2.5rem]"
         />
       )}
-      <div className="tw-flex tw-flex-col tw-gap-[0.5rem]">
+      <div className="flex flex-col gap-[0.5rem]">
         <h3
-          className={`~tw-text-h4a/h4 ~tw-leading-[2.1rem]/[2.6rem] tw-text-gray80 tw-font-playFair ${titleClassName}`}
+          className={`~text-h4a/h4 ~leading-[2.1rem]/[2.6rem] text-gray80 font-playFair ${titleClassName}`}
         >
           {title}
         </h3>
         <h3
-          className={`~tw-text-h4a/h4 ~tw-leading-[2.1rem]/[2.6rem] tw-text-gray80 tw-font-playFair ${title2ClassName}`}
+          className={`~text-h4a/h4 ~leading-[2.1rem]/[2.6rem] text-gray80 font-playFair ${title2ClassName}`}
         >
           {title2}
         </h3>
         {location && (
           <p
-            className={`~tw-text-h4a/h5 ~tw-leading-[2.113rem]/[1.75rem] tw-text-gray80 tw-font-playFair tw-font-medium ${locationClassName}`}
+            className={`~text-h4a/h5 ~leading-[2.113rem]/[1.75rem] text-gray80 font-playFair font-medium ${locationClassName}`}
           >
             {location}
           </p>
         )}
-        <p className="~tw-text-h6M/h5 tw-font-playFairItalic  tw-text-gray40 ~tw-leading-[1.575rem]/[1.75rem]  ">
+        <p className="~text-h6M/h5 font-playFairItalic  text-gray40 ~leading-[1.575rem]/[1.75rem]  ">
           {desc}
         </p>
         <Link
           href=""
-          className=" ~tw-text-h9Copy5/h8Copy3 tw-text-textPurple tw-italic  ~tw-leading-[1.225rem]/[1.575rem] tw-underline tw-decoration-[1px] "
+          className=" ~text-h9Copy5/h8Copy3 text-textPurple italic  ~leading-[1.225rem]/[1.575rem] underline decoration-[1px] "
         >
           {email}
         </Link>

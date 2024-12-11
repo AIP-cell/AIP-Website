@@ -24,14 +24,14 @@ const datas = [
 ];
 const ExpertsShelves = () => {
   return (
-    <div className="~tw-pt-[7rem]/[12.5rem] container tw-mx-auto tw-flex tw-flex-col tw-items-center">
-      <h2 className="~tw-text-h4/h2 ~tw-leading-[2.6rem]/[3.3rem]  tw-text-center tw-font-playFair tw-text-gray80">
+    <div className="~pt-[7rem]/[12.5rem] container mx-auto flex flex-col items-center">
+      <h2 className="~text-h4/h2 ~leading-[2.6rem]/[3.3rem]  text-center font-playFair text-gray80">
         From Experts’ Shelves
       </h2>
-      <p className="tw-text-midGray tw-px-[2.8rem] ~tw-text-h9Copy5/h9Copy4 ~tw-leading-[1.225rem]/[1.4rem] ~tw-pt-[0.75rem]/[1.25rem] tw-text-center ~tw-pb-[2.5rem]/[5rem]">
+      <p className="text-midGray px-[2.8rem] ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] ~pt-[0.75rem]/[1.25rem] text-center ~pb-[2.5rem]/[5rem]">
         A showcase of inspirational work done by collaborators in our network
       </p>
-      <div className="  tw-grid md:tw-grid-cols-2 lg:tw-grid-cols-3 ~tw-gap-[2.5rem]/[4.5rem] ~tw-px-[1.25rem]/[8.125rem]">
+      <div className="  grid md:grid-cols-2 lg:grid-cols-3 ~gap-[2.5rem]/[4.5rem] ~px-[1.25rem]/[8.125rem]">
         {datas.map((item, i) => (
           <ResourceCard
             key={i}
@@ -42,8 +42,8 @@ const ExpertsShelves = () => {
           />
         ))}
       </div>
-      <div className="~tw-pt-[2.5rem]/[5rem] ~tw-pb-[5rem]/[7.5rem]">
-        <BgButton text="See All" className="tw-py-[0.75rem] tw-px-[1.75rem]" />
+      <div className="~pt-[2.5rem]/[5rem] ~pb-[5rem]/[7.5rem]">
+        <BgButton text="See All" className="py-[0.75rem] px-[1.75rem]" />
       </div>
     </div>
   );

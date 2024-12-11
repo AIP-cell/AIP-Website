@@ -45,9 +45,9 @@ const agendaArray = [
 ];
 const page = () => {
   return (
-    <div className="tw-pt-[5rem]">
+    <div className="pt-[5rem]">
       <InnerExpertsSectionOne />
-      <div className="container tw-mx-auto ~tw-pb-[5rem]/[7.5rem]">
+      <div className="container mx-auto ~pb-[5rem]/[7.5rem]">
         <Gallery />
       </div>
     </div>

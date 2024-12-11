@@ -46,46 +46,46 @@ const twoP = [
 ];
 const FivePModel = () => {
   return (
-    <div className="tw-relative  tw-w-full">
-      <Image src={TopImage} alt="" className="tw-w-full " />
-      <div className="tw-w-full tw-bg-fivePBackground ~tw-h-[110rem]/[36.5rem] tw-relative">
-        <div className="tw-absolute ~tw-top-0/[-13rem] tw-w-full">
-          <div className="tw-relative container tw-mx-auto">
-            <div className="tw-relative tw-flex tw-flex-col tw-items-center container tw-mx-auto">
-              <h3 className="~tw-text-h4/h3 tw-text-center tw-text-gray80 ~tw-leading-[2.6rem]/[3.1rem] tw-font-playFair ">
-                <span className="tw-text-textPurple tw-font-playFairItalic">
+    <div className="relative  w-full">
+      <Image src={TopImage} alt="" className="w-full " />
+      <div className="w-full bg-fivePBackground ~h-[110rem]/[36.5rem] relative">
+        <div className="absolute ~top-0/[-13rem] w-full">
+          <div className="relative container mx-auto">
+            <div className="relative flex flex-col items-center container mx-auto">
+              <h3 className="~text-h4/h3 text-center text-gray80 ~leading-[2.6rem]/[3.1rem] font-playFair ">
+                <span className="text-textPurple font-playFairItalic">
                   Partnering
                 </span>
                 &nbsp;The Flow
               </h3>
-              <p className="tw-text-midGray ~tw-pt-[0.75rem]/[1.25rem] ~tw-px-[2.8rem]/[21rem] ~tw-text-h9Copy5/h9Copy4 tw-text-center ~tw-leading-[1.225rem]/[1.4rem]">
+              <p className="text-midGray ~pt-[0.75rem]/[1.25rem] ~px-[2.8rem]/[21rem] ~text-h9Copy5/h9Copy4 text-center ~leading-[1.225rem]/[1.4rem]">
                 At AIP, we help philanthropists move from Inspiration to Impact
                 through our proprietary 5P Framework. This structured approach
                 guides strategic giving, ensuring that every act of philanthropy
                 is thoughtful, effective, and transformative.
               </p>
-              <div className="~tw-pt-[5.68rem]/[5rem] tw-flex tw-flex-wrap tw-justify-center ~tw-gap-x-5/[3.8rem] ~tw-gap-y-5/[3rem] max-[20rem]:tw-px-[0.5rem] ~tw-px-[2.7rem]/[6.43rem] max-md:tw-bg-[#fcf5e3]">
+              <div className="~pt-[5.68rem]/[5rem] flex flex-wrap justify-center ~gap-x-5/[3.8rem] ~gap-y-5/[3rem] max-[20rem]:px-[0.5rem] ~px-[2.7rem]/[6.43rem] max-md:bg-[#fcf5e3]">
                 {threeP.map((item, i) => (
                   <ImgTitleDescVer
-                    totalWidth="!tw-w-[18.7rem] md:!~tw-w-[15rem]/[19.8rem]"
-                    imageWidth="!tw-w-[11.875rem]"
+                    totalWidth="!w-[18.7rem] md:!~w-[15rem]/[19.8rem]"
+                    imageWidth="!w-[11.875rem]"
                     key={i}
                     src={item.src}
                     title={item.title}
-                    titleClassName=" !tw-text-gray80"
-                    descClassName="tw-leading-[1.4rem]"
+                    titleClassName=" !text-gray80"
+                    descClassName="leading-[1.4rem]"
                     desc={item.desc}
                   />
                 ))}
               </div>
-              {/* <div className="~tw-pt-[1.25rem]/[3rem] tw-grid tw-grid-cols-1 lg:tw-grid-cols-2 ~tw-gap-5/[4.56rem] ~tw-px-[2.813rem]/[6.43rem] md:~tw-px-[4.25rem]/[18.6rem] max-md:tw-bg-[#fcf5e3] ~tw-pb-[5rem]/[21.625rem]">
+              {/* <div className="~pt-[1.25rem]/[3rem] grid grid-cols-1 lg:grid-cols-2 ~gap-5/[4.56rem] ~px-[2.813rem]/[6.43rem] md:~px-[4.25rem]/[18.6rem] max-md:bg-[#fcf5e3] ~pb-[5rem]/[21.625rem]">
                 {twoP.map((item, i) => (
                   <ImgTitleDescVer
                     key={i}
                     src={item.src}
                     title={item.title}
-                    titleClassName=" !tw-text-gray80"
-                    descClassName="tw-leading-[1.4rem]"
+                    titleClassName=" !text-gray80"
+                    descClassName="leading-[1.4rem]"
                     desc={item.desc}
                   />
                 ))}
@@ -94,7 +94,7 @@ const FivePModel = () => {
           </div>
         </div>
       </div>
-      <Image src={BottomImage} alt="" className="tw-w-full " />
+      <Image src={BottomImage} alt="" className="w-full " />
     </div>
   );
 };

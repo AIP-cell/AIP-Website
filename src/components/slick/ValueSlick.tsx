@@ -27,22 +27,22 @@ const ValueSlick = ({ slickArray }: Props) => {
     }
   };
   return (
-    <div className="tw-pt-[5rem] container tw-mx-auto tw-pb-[9.25rem]">
-      <div className="tw-relative  tw-flex tw-justify-center tw-items-center">
-        <p className="~tw-w-[16.1rem]/[38rem] tw-text-center tw-text-midGray ~tw-leading-[1.225rem]/[1.4rem]">
+    <div className="pt-[5rem] container mx-auto pb-[9.25rem]">
+      <div className="relative  flex justify-center items-center">
+        <p className="~w-[16.1rem]/[38rem] text-center text-midGray ~leading-[1.225rem]/[1.4rem]">
           {slickArray.at(change).desc}
         </p>
         <ButtonAnimation
           onClick={previous}
-          className="tw-absolute ~tw-left-[1.25rem]/[8rem] tw-z-20 tw-text-white tw-leading-[22.4px] tw-font-inter tw-bg-darkPurple tw-rounded-tl-3xl tw-rounded-bl-3xl tw-rounded-tr-xl tw-rounded-br-xl tw-py-[1.15rem] tw-px-[0.92rem]"
+          className="absolute ~left-[1.25rem]/[8rem] z-20 text-white leading-[22.4px] font-inter bg-darkPurple rounded-tl-3xl rounded-bl-3xl rounded-tr-xl rounded-br-xl py-[1.15rem] px-[0.92rem]"
         >
-          <LeftSlickArrowSvg className="tw-w-[1rem] tw-h-[0.57rem]" />
+          <LeftSlickArrowSvg className="w-[1rem] h-[0.57rem]" />
         </ButtonAnimation>
         <ButtonAnimation
           onClick={next}
-          className="tw-absolute ~tw-right-[1.25rem]/[8rem] tw-text-white tw-bg-darkPurple tw-rounded-tr-3xl tw-rounded-br-3xl tw-rounded-tl-xl tw-rounded-bl-xl tw-py-[1.15rem] tw-px-[0.92rem]"
+          className="absolute ~right-[1.25rem]/[8rem] text-white bg-darkPurple rounded-tr-3xl rounded-br-3xl rounded-tl-xl rounded-bl-xl py-[1.15rem] px-[0.92rem]"
         >
-          <RightSlickArrowSvg className="tw-w-[1rem] tw-h-[0.57rem]" />
+          <RightSlickArrowSvg className="w-[1rem] h-[0.57rem]" />
         </ButtonAnimation>
       </div>
     </div>

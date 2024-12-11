@@ -71,7 +71,7 @@ const headerData = [
 ];
 // const headerData = [
 //   {
-//     // width: " tw-w-[6rem] ",
+//     // width: " w-[6rem] ",
 //     label: "About Us",
 //     id: "about",
 //     options: [
@@ -93,7 +93,7 @@ const headerData = [
 //     link: "/people-of-aip/core-founders",
 //   },
 //   {
-//     // width: " tw-w-[10.5rem] ",
+//     // width: " w-[10.5rem] ",
 //     label: "Our Work",
 //     id: "our-work",
 //     options: [
@@ -115,7 +115,7 @@ const headerData = [
 //     ],
 //   },
 //   {
-//     // width: " tw-w-[9rem] ",
+//     // width: " w-[9rem] ",
 //     label: "Resource Center",
 //     id: "resource-center",
 //     options: [
@@ -140,30 +140,30 @@ const Sidebar = () => {
           onClick={() => {
             setIsOpen(true);
           }}
-          className="tw-size-[2rem]"
+          className="size-[2rem]"
         />
       ) : (
-        <div className="xl:tw-hidden tw-fixed tw-h-full tw-top-0 tw-left-0 tw-flex tw-w-full tw-bg-[#979796]">
-          <div className="tw-relative tw-w-[70%] tw-pt-[2.5rem] tw-px-[1.25rem] tw-rounded-tr-lg  tw-rounded-br-lg tw-overflow-hidden tw-bg-purpleToBlue xl:tw-hidden tw-gap-[2.5rem] ">
-            <div className="tw-flex tw-flex-col tw-text-white tw-items-start">
+        <div className="xl:hidden fixed h-full top-0 left-0 flex w-full bg-[#979796]">
+          <div className="relative w-[70%] pt-[2.5rem] px-[1.25rem] rounded-tr-lg  rounded-br-lg overflow-hidden bg-purpleToBlue xl:hidden gap-[2.5rem] ">
+            <div className="flex flex-col text-white items-start">
               <Link
                 href="/"
                 onClick={() => setIsOpen(!isOpen)}
-                className="tw-pb-[1.25rem] tw-text-h9Copy5 tw-leading-[1.225rem] tw-border-b-[1.7px] tw-w-full tw-border-[#B861B3]"
+                className="pb-[1.25rem] text-h9Copy5 leading-[1.225rem] border-b-[1.7px] w-full border-[#B861B3]"
               >
                 Home
               </Link>
               <CustomAccordionSelect
                 setIsOpen={setIsOpen}
                 ArrayData={headerData}
-                accordionItemClassName="!tw-border-[#B861B3]"
-                accordionTriggerClassName="!tw-py-[1.25rem]"
+                accordionItemClassName="!border-[#B861B3]"
+                accordionTriggerClassName="!py-[1.25rem]"
               />
               <Link
                 href="/careers"
                 onClick={() => setIsOpen(!isOpen)}
                 className={cn(
-                  " tw-border-b-[1.7px] tw-text-h9Copy5 tw-leading-[1.225rem] tw-w-full tw-border-[#B861B3] tw-py-[1.25rem] "
+                  " border-b-[1.7px] text-h9Copy5 leading-[1.225rem] w-full border-[#B861B3] py-[1.25rem] "
                 )}
               >
                 Careers
@@ -172,15 +172,15 @@ const Sidebar = () => {
                 href="/contact"
                 onClick={() => setIsOpen(!isOpen)}
                 className={cn(
-                  " tw-text-h9Copy5 tw-leading-[1.225rem]  tw-w-full  tw-pt-[1.25rem] "
+                  " text-h9Copy5 leading-[1.225rem]  w-full  pt-[1.25rem] "
                 )}
               >
                 Contact
               </Link>
             </div>
             <div className="">
-              <ButtonAnimation className="tw-mt-[2.5rem] tw-w-full tw-bg-white tw-rounded-full">
-                <p className="tw-py-[0.75rem] tw-text-h9Copy5 tw-leading-[1.225rem] tw-text-textPurple">
+              <ButtonAnimation className="mt-[2.5rem] w-full bg-white rounded-full">
+                <p className="py-[0.75rem] text-h9Copy5 leading-[1.225rem] text-textPurple">
                   Get Involved
                 </p>
               </ButtonAnimation>
@@ -191,14 +191,14 @@ const Sidebar = () => {
             onClick={() => {
               setIsOpen(false);
             }}
-            className="tw-w-[30%] tw-bg-[#979796] tw-relative"
+            className="w-[30%] bg-[#979796] relative"
           >
-            <ButtonAnimation className="tw-absolute tw-top-[1.23rem] tw-right-[1.25rem]">
+            <ButtonAnimation className="absolute top-[1.23rem] right-[1.25rem]">
               <CrossSvg
                 onClick={() => {
                   setIsOpen(false);
                 }}
-                className=" tw-cursor-pointer tw-size-[1.5rem] "
+                className=" cursor-pointer size-[1.5rem] "
               />
             </ButtonAnimation>
           </div>

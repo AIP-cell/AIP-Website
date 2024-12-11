@@ -48,7 +48,7 @@ const CustomAccordionSelect = ({
     isPathname = "contact";
   }
   return (
-    <Accordion type="single" collapsible className="tw-w-full">
+    <Accordion type="single" collapsible className="w-full">
       {ArrayData.map((items, i) => (
         <AccordionItem
           key={i}
@@ -57,7 +57,7 @@ const CustomAccordionSelect = ({
         >
           <AccordionTrigger
             className={cn(
-              { "tw-font-bold": isPathname == items.id },
+              { "font-bold": isPathname == items.id },
               accordionTriggerClassName
             )}
           >

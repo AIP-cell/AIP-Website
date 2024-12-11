@@ -11,61 +11,61 @@ type Props = {
 };
 const Members = ({ countData }: Props) => {
   return (
-    <div className=" tw-relative tw-w-full">
+    <div className=" relative w-full">
       <Image
         src={Bg}
         alt=""
-        className="tw-hidden md:tw-block   max-cover tw-absolute tw-w-[300rem] tw-h-full ~md:~tw-bottom-[0rem]/[-5rem]"
+        className="hidden md:block   max-cover absolute w-[300rem] h-full ~md:~bottom-[0rem]/[-5rem]"
       />
-      <div className=" container tw-mx-auto ~tw-pt-[5rem]/[13.25rem]">
-        <div className="tw-relative tw-flex tw-flex-col xl:tw-flex-row tw-w-full ~tw-h-[45rem]/[49rem]  ~tw-gap-[2rem]/0">
-          <div className=" tw-w-full xl:tw-w-[65%] ~tw-pl-[1.25rem]/[7rem] ~/md:~tw-pr-[1.25rem]/[2rem] xl:tw-pr-0">
-            <h2 className="~tw-text-h4/h2  tw-font-playFair tw-text-gray50 ~tw-leading-[2.6rem]/[3.3rem]">
+      <div className=" container mx-auto ~pt-[5rem]/[13.25rem]">
+        <div className="relative flex flex-col xl:flex-row w-full ~h-[45rem]/[49rem]  ~gap-[2rem]/0">
+          <div className=" w-full xl:w-[65%] ~pl-[1.25rem]/[7rem] ~/md:~pr-[1.25rem]/[2rem] xl:pr-0">
+            <h2 className="~text-h4/h2  font-playFair text-gray50 ~leading-[2.6rem]/[3.3rem]">
               Accelerate Indian
             </h2>
-            <h2 className="~tw-text-h4/h2  tw-font-playFair tw-text-gray50 ~tw-leading-[2.6rem]/[3.3rem] ">
+            <h2 className="~text-h4/h2  font-playFair text-gray50 ~leading-[2.6rem]/[3.3rem] ">
               Philanthropy is a peer network set up
-              <span className="tw-text-textPurple tw-font-playFairItalic">
+              <span className="text-textPurple font-playFairItalic">
                 &nbsp;by philanthropists,
               </span>
             </h2>
-            <h2 className="~tw-text-h4/h2 tw-font-playFair tw-text-gray50 ~tw-leading-[2.6rem]/[3.3rem] ">
-              <span className="tw-text-textPurple tw-font-playFairItalic">
+            <h2 className="~text-h4/h2 font-playFair text-gray50 ~leading-[2.6rem]/[3.3rem] ">
+              <span className="text-textPurple font-playFairItalic">
                 for philanthropists
               </span>
               &nbsp;to support their giving efforts.
             </h2>
           </div>
           {/* <OvalPurpleSvg className="-top-[4rem] right-[11.85rem]"/> */}
-          <div className="tw-w-full xl:tw-w-[35%] tw-relative">
+          <div className="w-full xl:w-[35%] relative">
             <Image
               src={SmBg}
               alt=""
-              className="tw-block md:tw-hidden tw-object-cover tw-absolute tw-w-full tw-bottom-[-32rem]"
+              className="block md:hidden object-cover absolute w-full bottom-[-32rem]"
             />
             <OvalPurple
-              sizeClass="~tw-size-[13rem]/[17.3rem]"
-              textClass1="~tw-text-h4/h3"
-              textClass2="~tw-text-h9Copy5/h9Copy4"
+              sizeClass="~size-[13rem]/[17.3rem]"
+              textClass1="~text-h4/h3"
+              textClass2="~text-h9Copy5/h9Copy4"
               text1={`${countData?.coreFoundersCount}`}
               text2="Core Founders"
-              mainClass=" tw-absolute ~tw-top-0/[-4rem] tw-left-0 md:tw-left-auto ~md:~tw-right-[20rem]/[11.862rem] "
+              mainClass=" absolute ~top-0/[-4rem] left-0 md:left-auto ~md:~right-[20rem]/[11.862rem] "
             />
             <OvalPurple
-              sizeClass="~tw-size-[13rem]/[17.3rem]"
-              textClass1="~tw-text-h4/h3"
-              textClass2="~tw-text-h9Copy5/h9Copy4"
+              sizeClass="~size-[13rem]/[17.3rem]"
+              textClass1="~text-h4/h3"
+              textClass2="~text-h9Copy5/h9Copy4"
               text1={`${countData?.foundersCount}`}
               text2="Founders"
-              mainClass=" tw-absolute ~tw-top-[6.75rem]/[15.5rem] tw-right-0  md:tw-right-[6.4rem] "
+              mainClass=" absolute ~top-[6.75rem]/[15.5rem] right-0  md:right-[6.4rem] "
             />
             <OvalPurpleCount
-              sizeClass="~tw-size-[13rem]/[17.3rem]"
+              sizeClass="~size-[13rem]/[17.3rem]"
               countEnd={countData?.membersCount}
-              countClass="!tw-text-white"
+              countClass="!text-white"
               text2="Members"
-              textClass2="~tw-text-h9Copy5/h9Copy4 !tw-text-white"
-              mainClass="tw-absolute ~tw-top-[14.3rem]/[20rem] tw-left-0 md:tw-left-auto ~md:~tw-right-[25rem]/[26rem]"
+              textClass2="~text-h9Copy5/h9Copy4 !text-white"
+              mainClass="absolute ~top-[14.3rem]/[20rem] left-0 md:left-auto ~md:~right-[25rem]/[26rem]"
             />
           </div>
         </div>

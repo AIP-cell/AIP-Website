@@ -26,25 +26,25 @@ const OvalPurpleCount = ({
   return (
     <div ref={ref} className={` ${mainClass} `}>
       <div
-        className={` ${sizeClass} tw-relative tw-shrink-0   tw-flex tw-flex-col tw-justify-center tw-items-center`}
+        className={` ${sizeClass} relative shrink-0   flex flex-col justify-center items-center`}
       >
         <Image src="/svg/ovalPurple.svg" alt="image" fill />
         {/* <OvalPurpleSvg /> */}
-        <div className={`tw-text-black tw-z-50 ${countClass}`}>
+        <div className={`text-black z-50 ${countClass}`}>
           {inView && (
             <CountUp
               start={0}
               end={countEnd}
               duration={2.75}
-              className="~tw-text-h4/h3 ~tw-leading-[2.6rem]/[3.25rem] tw-font-semibold "
+              className="~text-h4/h3 ~leading-[2.6rem]/[3.25rem] font-semibold "
             />
           )}
-          <span className=" ~tw-text-h4/h3 ~tw-leading-[2.6rem]/[3.25rem] tw-font-semibold">
+          <span className=" ~text-h4/h3 ~leading-[2.6rem]/[3.25rem] font-semibold">
             +
           </span>
         </div>
-        <div className={`tw-text-center tw-pt-[0.25rem] tw-z-50  `}>
-          <div className={`tw-text-gray80 ${textClass2} `}>{text2}</div>
+        <div className={`text-center pt-[0.25rem] z-50  `}>
+          <div className={`text-gray80 ${textClass2} `}>{text2}</div>
         </div>
       </div>
     </div>

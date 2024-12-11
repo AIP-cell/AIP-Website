@@ -24,32 +24,32 @@ export default function CustomGraySelect({
 }) {
   // const router = useRouter();
   return (
-    <div className={`tw-mx-auto tw-w-full tw-px-[1.25rem] ${mainClassName}`}>
+    <div className={`mx-auto w-full px-[1.25rem] ${mainClassName}`}>
       <Listbox value={selected} onChange={setSelected}>
         <ListboxButton
           className={clsx(
-            "tw-relative  tw-flex tw-items-center tw-justify-between tw-w-full tw-rounded-full tw-bg-[#F0F0F2] tw-py-[1rem] tw-pr-[1.25rem] tw-pl-[1.75rem] tw-text-left tw-text-h9Copy4 tw-text-darkPurple",
-            "focus:tw-outline-none data-[focus]:tw-outline-2 data-[focus]:-tw-outline-offset-2 data-[focus]:tw-outline-white/25"
+            "relative  flex items-center justify-between w-full rounded-full bg-[#F0F0F2] py-[1rem] pr-[1.25rem] pl-[1.75rem] text-left text-h9Copy4 text-darkPurple",
+            "focus:outline-none data-[focus]:outline-2 data-[focus]:-outline-offset-2 data-[focus]:outline-white/25"
           )}
         >
           {selected}
-          <DownTagSvg className="~tw-w-[1.25rem]/[0.6rem] ~tw-h-[1.25rem]/[0.4rem]" />
+          <DownTagSvg className="~w-[1.25rem]/[0.6rem] ~h-[1.25rem]/[0.4rem]" />
         </ListboxButton>
         <ListboxOptions
           anchor="bottom"
           className={clsx(
-            "w-[var(--button-width)] tw-rounded-3xl tw-border tw-border-white/5 tw-bg-white/5 tw-p-1 [--anchor-gap:var(--spacing-1)] focus:tw-outline-none  tw-w-full",
-            "tw-transition tw-duration-100 tw-ease-in data-[leave]:data-[closed]:tw-opacity-0"
+            "w-[var(--button-width)] rounded-3xl border border-white/5 bg-white/5 p-1 [--anchor-gap:var(--spacing-1)] focus:outline-none  w-full",
+            "transition duration-100 ease-in data-[leave]:data-[closed]:opacity-0"
           )}
         >
           {data.map((item) => (
             <ListboxOption
               key={item}
               value={item}
-              className="tw-group tw-flex tw-cursor-default tw-items-center tw-gap-2  tw-py-1.5 tw-px-3 tw-select-none tw-bg-gray-200 tw-text-black data-[focus]:tw-bg-gray-400 "
+              className="group flex cursor-default items-center gap-2  py-1.5 px-3 select-none bg-gray-200 text-black data-[focus]:bg-gray-400 "
             >
-              {/* <CheckIcon className="tw-invisible tw-size-4 tw-fill-darkPurple group-data-[selected]:tw-visible" /> */}
-              <div className="tw-text-h9Copy4 tw-text-black">{item}</div>
+              {/* <CheckIcon className="invisible size-4 fill-darkPurple group-data-[selected]:visible" /> */}
+              <div className="text-h9Copy4 text-black">{item}</div>
             </ListboxOption>
           ))}
         </ListboxOptions>

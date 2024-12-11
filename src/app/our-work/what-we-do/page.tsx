@@ -4,7 +4,7 @@ import WeDo from "./_components/WeDo";
 
 const page = () => {
   return (
-    <div className="tw-pt-[5rem]">
+    <div className="pt-[5rem]">
       <OurOfferingHeroSection />
       <WeDo />
     </div>

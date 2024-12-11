@@ -93,19 +93,19 @@ const ResourcesSm = ({
   const [selected, setSelected] = useState(list[0]);
 
   return (
-    <div className="tw-flex md:tw-hidden tw-flex-col tw-justify-center ">
+    <div className="flex md:hidden flex-col justify-center ">
       <CustomGraySelect
         data={list}
         selected={selected}
         setSelected={setSelected}
-        mainClassName="!tw-px-0"
+        mainClassName="!px-0"
       />
       <div className="">
-        <div className="tw-flex tw-flex-wrap tw-pt-[2rem] tw-items-center tw-gap-[0.75rem]">
-          <p className="~tw-pb-[1.25rem]/0 tw-text-gray40  ~tw-text-h9Copy5/h9Copy4 ~tw-leading-[1.225rem]/[1.4rem]">
+        <div className="flex flex-wrap pt-[2rem] items-center gap-[0.75rem]">
+          <p className="~pb-[1.25rem]/0 text-gray40  ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]">
             Filter by:
           </p>
-          <div className="tw-flex tw-flex-wrap tw-gap-[.75rem]">
+          <div className="flex flex-wrap gap-[.75rem]">
             {filterDatas.map((items, i) => (
               <CustomFilter
                 key={i}
@@ -117,7 +117,7 @@ const ResourcesSm = ({
         </div>
 
         <div>
-          <div className="tw-pt-[3.25rem] ~tw-pb-[5rem]/[7.5rem] tw-flex tw-flex-col tw-gap-[2.5rem]">
+          <div className="pt-[3.25rem] ~pb-[5rem]/[7.5rem] flex flex-col gap-[2.5rem]">
             {datas.map((item, i) => (
               <ResourceCard
                 key={i}

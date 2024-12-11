@@ -16,7 +16,7 @@ const AccordionItem = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <AccordionPrimitive.Item
     ref={ref}
-    className={cn("tw-border-b-[1.7px] tw-border-white/30", className)}
+    className={cn("border-b-[1.7px] border-white/30", className)}
     {...props}
   />
 ));
@@ -26,17 +26,17 @@ const AccordionTrigger = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
 >(({ className, children, ...props }, ref) => (
-  <AccordionPrimitive.Header className="tw-flex">
+  <AccordionPrimitive.Header className="flex">
     <AccordionPrimitive.Trigger
       ref={ref}
       className={cn(
-        "tw-py-[1rem]  tw-text-white tw-flex tw-justify-between tw-w-full  items-center tw-text-h9Copy5 tw-leading-[1.225rem] tw-font-inter tw-text-left transition-all  [&[data-state=open]>svg]:tw-rotate-180",
+        "py-[1rem]  text-white flex justify-between w-full  items-center text-h9Copy5 leading-[1.225rem] font-inter text-left transition-all  [&[data-state=open]>svg]:rotate-180",
         className
       )}
       {...props}
     >
       {children}
-      <ChevronDownIcon className="tw-size-[1.375rem] tw-shrink-0 text-muted-foreground tw-transition-transform tw-duration-200" />
+      <ChevronDownIcon className="size-[1.375rem] shrink-0 text-muted-foreground transition-transform duration-200" />
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 ));
@@ -48,7 +48,7 @@ const AccordionContent = React.forwardRef<
 >(({ className, children, ...props }, ref) => (
   <AccordionPrimitive.Content
     ref={ref}
-    className="tw-text-white tw-py-[0.8rem] tw-text-h9Copy5 tw-leading-[1.225rem] overflow-hidden tw-transition-transform tw-duration-200"
+    className="text-white py-[0.8rem] text-h9Copy5 leading-[1.225rem] overflow-hidden transition-transform duration-200"
     {...props}
   >
     <div className={cn("", className)}>{children}</div>

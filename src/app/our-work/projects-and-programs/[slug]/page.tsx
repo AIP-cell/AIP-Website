@@ -10,7 +10,7 @@ import TestimonialsProjectProgram from "./_components/TestimonialsProjectProgram
 
 const page = () => {
   return (
-    <div className="tw-pt-[5rem]">
+    <div className="pt-[5rem]">
       <InnerSectionOne />
       <Gallery />
       <Media />

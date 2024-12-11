@@ -4,41 +4,41 @@ import PeachVertWave from "@public/svg/about/philanthropist-network/peachVertWav
 import OvalPeach from "@public/svg/ovalPeach.svg";
 const PhilanthropistHeroSection = () => {
   return (
-    <div className="tw-w-full tw-relative">
+    <div className="w-full relative">
       <Image
         src={PeachVertWave}
         alt=""
-        className="tw-hidden lg:tw-block tw-absolute tw-top-0 tw-right-0"
+        className="hidden lg:block absolute top-0 right-0"
       />
       <Image
         src={OvalPeach}
         alt=""
-        className="tw-hidden lg:tw-block tw-absolute tw-top-[20.313rem] tw-z-10 tw-right-[1.18rem]"
+        className="hidden lg:block absolute top-[20.313rem] z-10 right-[1.18rem]"
       />
-      <div className="tw-relative container tw-mx-auto">
+      <div className="relative container mx-auto">
         <BreadCrump
           textOne="About Us"
           linkOne="/about"
           textTwo="Philanthropist Network"
           linkTwo="/about/philanthropist-network"
         />
-        <div className="~tw-pl-5/[7.81rem] ~tw-pr-5/[14.375rem]">
-          <h4 className="~tw-leading-[1.138rem]/[1.3rem] ~tw-text-h9Copy5/h9Copy4 tw-font-semibold tw-uppercase tw-text-purple40 ~tw-pt-[4.313rem]/[6.5rem]">
+        <div className="~pl-5/[7.81rem] ~pr-5/[14.375rem]">
+          <h4 className="~leading-[1.138rem]/[1.3rem] ~text-h9Copy5/h9Copy4 font-semibold uppercase text-purple40 ~pt-[4.313rem]/[6.5rem]">
             NETWORK {">"} NET WORTH
           </h4>
-          <div className="~tw-pt-[1.25rem]/[0.75rem] ">
-            <div className="  ~tw-text-h5/h4 tw-text-gray80 ~tw-leading-[1.75rem]/[2.6rem] tw-font-playFair tw-tracking-[-0.3px]">
-              <p className="tw-hidden md:tw-block">
+          <div className="~pt-[1.25rem]/[0.75rem] ">
+            <div className="  ~text-h5/h4 text-gray80 ~leading-[1.75rem]/[2.6rem] font-playFair tracking-[-0.3px]">
+              <p className="hidden md:block">
                 We work with philanthropist on a project level.
               </p>
-              <p className="tw-hidden md:tw-block ">
+              <p className="hidden md:block ">
                 AIP has created an enabling support structure for wealth
                 creators throughout their personal philanthropic journey. We are
                 supported by our Core Founders and Founders who believe in the
                 movement and in the potential for philanthropy to make a deep
                 impact.
               </p>
-              <p className="tw-block md:tw-hidden">
+              <p className="block md:hidden">
                 We work with philanthropist on a project level. AIP has created
                 an enabling support structure for wealth creators throughout
                 their personal philanthropic journey. We are supported by our
@@ -46,7 +46,7 @@ const PhilanthropistHeroSection = () => {
                 the potential for philanthropy to make a deep impact.
               </p>
             </div>
-            <div className="  ~tw-text-h5/h4 tw-text-gray80 ~tw-leading-[1.75rem]/[2.6rem] tw-font-playFair ~tw-pt-[2rem]/[3rem]">
+            <div className="  ~text-h5/h4 text-gray80 ~leading-[1.75rem]/[2.6rem] font-playFair ~pt-[2rem]/[3rem]">
               We pride ourselves on providing pro-bono support. This ensures our
               engagement remains neutral, unbiased, and devoid of conflicts. You
               don&apos;t need to be a founder to engage with us.

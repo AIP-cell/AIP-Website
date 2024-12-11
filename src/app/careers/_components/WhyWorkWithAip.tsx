@@ -24,28 +24,28 @@ const works = [
 ];
 const WhyWorkWithAip = () => {
   return (
-    <div className="tw-pt-[1rem] container tw-mx-auto">
-      <div className="tw-flex tw-flex-col tw-w-full tw-justify-center tw-items-center">
-        <p className="~tw-text-h4/h2 tw-text-center tw-text-gray80 ~tw-leading-[2.6rem]/[3.713rem] tw-font-playFair tw-tracking-[-.04rem] ~tw-pb-[1rem]/5">
+    <div className="pt-[1rem] container mx-auto">
+      <div className="flex flex-col w-full justify-center items-center">
+        <p className="~text-h4/h2 text-center text-gray80 ~leading-[2.6rem]/[3.713rem] font-playFair tracking-[-.04rem] ~pb-[1rem]/5">
           Why Work With
-          <span className="tw-font-playFairItalic tw-text-textPurple">
+          <span className="font-playFairItalic text-textPurple">
             &nbsp;AIP?
           </span>
         </p>
-        <p className="tw-font-inter ~tw-text-h9Copy5/h9Copy4 ~tw-leading-[1.225rem]/[1.4rem] tw-text-center tw-text-midGray ~tw-pb-[2.5rem]/20 ~tw-px-[4.1rem]/[20.875rem]">
+        <p className="font-inter ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] text-center text-midGray ~pb-[2.5rem]/20 ~px-[4.1rem]/[20.875rem]">
           Join AIP, where careers run deep with purpose, carving pathways for
           social impact and carrying the spirit of philanthropy forward
         </p>
       </div>
-      <div className=" ~tw-px-[2.8rem]/[8.438rem] tw-grid md:tw-grid-cols-2 ~tw-gap-x-[3rem]/[5rem] ~tw-gap-y-[1.25rem]/[3rem] tw-relative">
+      <div className=" ~px-[2.8rem]/[8.438rem] grid md:grid-cols-2 ~gap-x-[3rem]/[5rem] ~gap-y-[1.25rem]/[3rem] relative">
         {works.map((item, i) => (
           <ImgTitleDescVer
             key={i}
-            imageWidth="!~tw-w-[10rem]/[11.9rem]"
+            imageWidth="!~w-[10rem]/[11.9rem]"
             src={item.src}
             title={item.title}
-            titleClassName=" !tw-text-gray80 !tw-text-h4 tw-leading-[2.6rem]"
-            descClassName="tw-px-[0.5rem] tw-leading-[1.4rem]"
+            titleClassName=" !text-gray80 !text-h4 leading-[2.6rem]"
+            descClassName="px-[0.5rem] leading-[1.4rem]"
             desc={item.desc}
           />
         ))}

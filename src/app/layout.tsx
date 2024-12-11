@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${playfairDisplay.variable} ${playfairDisplayItalic.variable} !tw-overflow-y-auto tw-bg-bgLightPeach tw-font-inter no-scrollbar tw-overflow-x-hidden  `}
+        className={`${inter.variable} ${playfairDisplay.variable} ${playfairDisplayItalic.variable} !overflow-y-auto bg-bgLightPeach font-inter no-scrollbar overflow-x-hidden  `}
       >
         <Header />
         {children}

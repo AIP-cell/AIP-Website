@@ -21,49 +21,49 @@ const CaseStudy = ({
   initiativeName,
 }: Props) => {
   return (
-    <div className="tw-relative tw-grid tw-grid-cols-1 lg:tw-grid-cols-2 ~tw-gap-[1rem]/[7.81rem]">
+    <div className="relative grid grid-cols-1 lg:grid-cols-2 ~gap-[1rem]/[7.81rem]">
       <div
         className={cn(
-          " tw-col-span-1 tw-flex tw-justify-center  tw-overflow-hidden lg:tw-order-1",
+          " col-span-1 flex justify-center  overflow-hidden lg:order-1",
           {
-            "lg:!tw-order-2": index % 2 === 0,
+            "lg:!order-2": index % 2 === 0,
           }
         )}
       >
-        <div className="tw-w-full ~tw-h-[17.5rem]/[20rem] tw-rounded-3xl tw-overflow-hidden tw-relative ">
+        <div className="w-full ~h-[17.5rem]/[20rem] rounded-3xl overflow-hidden relative ">
           <Image
             src={image}
             alt=""
-            className="tw-object-cover tw-rounded-3xl tw-h-fit"
+            className="object-cover rounded-3xl h-fit"
             fill
           />
         </div>
       </div>
       <div
         className={cn(
-          "tw-col-span-1 tw-flex tw-flex-col tw-items-start lg:tw-order-2",
-          { "lg:!tw-order-1 ": index % 2 === 0 }
+          "col-span-1 flex flex-col items-start lg:order-2",
+          { "lg:!order-1 ": index % 2 === 0 }
         )}
       >
-        <h2 className="tw-font-playFair ~tw-text-h4a/h3 ~tw-leading-[2.113rem]/[3.25rem] tw-text-gray80">
+        <h2 className="font-playFair ~text-h4a/h3 ~leading-[2.113rem]/[3.25rem] text-gray80">
           {title}
         </h2>
         <h3
-          className={` tw-text-gray40 tw-font-playFairItalic ~tw-text-h8Copy3/h5 ~tw-leading-[1.575rem]/[1.75rem] tw-pt-[0.25rem] ${foundationNameClassName}`}
+          className={` text-gray40 font-playFairItalic ~text-h8Copy3/h5 ~leading-[1.575rem]/[1.75rem] pt-[0.25rem] ${foundationNameClassName}`}
         >
           {foundationName}
         </h3>
         {initiativeName && (
-          <h3 className=" tw-text-gray80 tw-font-playFair tw-font-medium ~tw-text-h8Copy3/h5 ~tw-leading-[1.575rem]/[1.75rem] ~tw-pt-[1rem]/[1.25rem]">
+          <h3 className=" text-gray80 font-playFair font-medium ~text-h8Copy3/h5 ~leading-[1.575rem]/[1.75rem] ~pt-[1rem]/[1.25rem]">
             {initiativeName}
           </h3>
         )}
-        <p className="tw-text-midGray ~tw-pt-[1rem]/[1.25rem] ~tw-text-h9Copy5/h9Copy4 ~tw-leading-[1.225rem]/[1.4rem]">
+        <p className="text-midGray ~pt-[1rem]/[1.25rem] ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]">
           {desc}
         </p>
-        <div className="~tw-pt-[2rem]/[2.5rem]">
-          <ButtonAnimation className=" tw-rounded-full  tw-border-2 tw-border-darkPurple hover:tw-bg-darkPurple ">
-            <h3 className="tw-text-darkPurple hover:tw-text-white tw-font-medium tw-text-h9Copy5 tw-leading-[1.225rem] tw-py-[0.75rem] tw-px-[1.75rem]">
+        <div className="~pt-[2rem]/[2.5rem]">
+          <ButtonAnimation className=" rounded-full  border-2 border-darkPurple hover:bg-darkPurple ">
+            <h3 className="text-darkPurple hover:text-white font-medium text-h9Copy5 leading-[1.225rem] py-[0.75rem] px-[1.75rem]">
               Read More
             </h3>
           </ButtonAnimation>

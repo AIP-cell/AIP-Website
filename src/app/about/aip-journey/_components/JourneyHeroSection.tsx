@@ -9,12 +9,12 @@ import BreadCrump from "@/components/bread-crump/BreadCrump";
 
 const JourneyHeroSection = () => {
   return (
-    <div className="tw-relative tw-w-full ">
-      <div className="tw-absolute  tw-inset-0 ">
+    <div className="relative w-full ">
+      <div className="absolute  inset-0 ">
         <Wave
           fill="#F5B195"
           paused={false}
-          className="tw-h-[--h] !tw-block "
+          className="h-[--h] !block "
           options={{
             // height:40,
             amplitude: 60,
@@ -27,11 +27,11 @@ const JourneyHeroSection = () => {
             <stop offset="90%" stopColor="#F7E0A1" />
           </linearGradient>
         </Wave>
-        <div className="tw-h-[calc(100%-var(--h)*2)] tw-bg-[#F5B195]"></div>
+        <div className="h-[calc(100%-var(--h)*2)] bg-[#F5B195]"></div>
         <Wave
           fill="#F5B195"
           paused={false}
-          className="tw-h-[--h] tw-rotate-180 !tw-block "
+          className="h-[--h] rotate-180 !block "
           options={{
             // height:40,
             amplitude: 60,
@@ -46,7 +46,7 @@ const JourneyHeroSection = () => {
         </Wave>
       </div>
 
-      <div className="tw-relative container tw-mx-auto">
+      <div className="relative container mx-auto">
         <BreadCrump
           textOne="About Us"
           linkOne="/about"
@@ -54,11 +54,11 @@ const JourneyHeroSection = () => {
           linkTwo="/about/aip-journey"
         />
       </div>
-      <div className="tw-relative">
+      <div className="relative">
         <Wave
           fill="#faecc894"
           paused={false}
-          className="tw-h-[--h] !tw-block "
+          className="h-[--h] !block "
           options={{
             amplitude: 60,
             speed: 0.15,
@@ -66,12 +66,12 @@ const JourneyHeroSection = () => {
           }}
         />
 
-        <div className=" tw-bg-[#faecc894] tw-backdrop-blur-[24px] ~tw-pt-[3.1rem]/[6.25rem] ~tw-pb-[3.8rem]/[7.6rem] tw-w-full ">
-          <div className="container tw-mx-auto tw-flex tw-justify-center tw-flex-col tw-items-center tw-relative tw-z-50 ~tw-px-[1.375rem]/[20.938rem] ">
-            <h3 className="~tw-text-h9Copy5/h9Copy4 tw-leading-[20.64px] tw-font-inter tw-text-lightPeach/60 tw-font-semibold">
+        <div className=" bg-[#faecc894] backdrop-blur-[24px] ~pt-[3.1rem]/[6.25rem] ~pb-[3.8rem]/[7.6rem] w-full ">
+          <div className="container mx-auto flex justify-center flex-col items-center relative z-50 ~px-[1.375rem]/[20.938rem] ">
+            <h3 className="~text-h9Copy5/h9Copy4 leading-[20.64px] font-inter text-lightPeach/60 font-semibold">
               PHILANTHROPY IS WHAT IT DOES.
             </h3>
-            <h2 className="tw-pt-[1.25rem] tw-text-center ~tw-text-h4/h3 ~tw-leading-[2.563rem]/[3.25rem] tw-font-playFair tw-text-gray80">
+            <h2 className="pt-[1.25rem] text-center ~text-h4/h3 ~leading-[2.563rem]/[3.25rem] font-playFair text-gray80">
               A philanthropist’s wealth is the origin. Philanthropy is the
               river. No two rivers are the same; No two philanthropists are the
               same; No two journeys are alike. And AIP helps channel the flow.
@@ -81,7 +81,7 @@ const JourneyHeroSection = () => {
         <Wave
           fill="#faecc894"
           paused={false}
-          className="tw-h-[--h] tw-rotate-180 !tw-block"
+          className="h-[--h] rotate-180 !block"
           options={{
             amplitude: 60,
             speed: 0.15,

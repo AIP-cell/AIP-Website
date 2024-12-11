@@ -29,22 +29,22 @@ const datas = [
 ];
 const WhyPartner = () => {
   return (
-    <div className="~tw-px-[2.84rem]/[18.656rem] ~tw-pt-[7.5rem]/[12.5rem] container tw-mx-auto">
-      <h2 className="~tw-text-h4/h2 ~tw-leading-[2.6rem]/[3.3rem] tw-text-gray80 tw-font-playFair tw-text-center">
-        <span className="tw-text-textPurple tw-font-playFairItalic">Why</span>{" "}
+    <div className="~px-[2.84rem]/[18.656rem] ~pt-[7.5rem]/[12.5rem] container mx-auto">
+      <h2 className="~text-h4/h2 ~leading-[2.6rem]/[3.3rem] text-gray80 font-playFair text-center">
+        <span className="text-textPurple font-playFairItalic">Why</span>{" "}
         Partner
       </h2>
-      <p className="tw-text-midGray ~tw-text-h9Copy5/h9Copy4 ~tw-leading-[1.225rem]/[1.4rem] ~tw-pt-[0.75rem]/[1.5rem] tw-text-center">
+      <p className="text-midGray ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] ~pt-[0.75rem]/[1.5rem] text-center">
         As an expert engaged with AIP, you will experience a range of
         opportunities that extend beyond the immediate ones for knowledge
         sharing.
       </p>
-      <div className="tw-pt-[4rem] tw-flex tw-flex-wrap tw-justify-center tw-gap-x-[4.563rem] tw-gap-y-[3rem]  ">
+      <div className="pt-[4rem] flex flex-wrap justify-center gap-x-[4.563rem] gap-y-[3rem]  ">
         {datas.map((items, i) => (
           <ImgTitleDescVer
-            titleClassName="!tw-text-h4 !tw-leading-[2.6rem]"
-            totalWidth="!tw-w-[19rem]"
-            imageWidth="!tw-w-[11.875rem]"
+            titleClassName="!text-h4 !leading-[2.6rem]"
+            totalWidth="!w-[19rem]"
+            imageWidth="!w-[11.875rem]"
             key={i}
             title={items.title1}
             title2={items.title2}

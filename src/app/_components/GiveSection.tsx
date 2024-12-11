@@ -24,14 +24,14 @@ const giveData = [
 ];
 const GiveSection = () => {
   return (
-    <div className="tw-w-full tw-relative">
+    <div className="w-full relative">
       <Image
         src={Bg}
         alt="give-section-Bg"
-        className="tw-absolute ~/md:~tw-bottom-[15rem]/[10rem] tw-top-auto lg:tw-bottom-auto lg:tw-top-[-11rem] tw-right-0 ~tw-w-[7.842rem]/[13.125rem] ~tw-h-[29.87rem]/[50rem] "
+        className="absolute ~/md:~bottom-[15rem]/[10rem] top-auto lg:bottom-auto lg:top-[-11rem] right-0 ~w-[7.842rem]/[13.125rem] ~h-[29.87rem]/[50rem] "
       />
-      <div className="container tw-mx-auto  ~tw-pt-[3.2rem]/[3.5rem] ~tw-px-[2.8rem]/[7rem] tw-relative">
-        <div className=" tw-flex tw-flex-col lg:tw-flex-row tw-justify-center xl:tw-justify-normal ~tw-gap-[1.25rem]/[3rem]">
+      <div className="container mx-auto  ~pt-[3.2rem]/[3.5rem] ~px-[2.8rem]/[7rem] relative">
+        <div className=" flex flex-col lg:flex-row justify-center xl:justify-normal ~gap-[1.25rem]/[3rem]">
           {giveData.map((item, i) => (
             <ImgTitleDescVer
               key={i}

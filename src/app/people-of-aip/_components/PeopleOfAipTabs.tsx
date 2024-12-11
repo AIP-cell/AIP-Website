@@ -19,16 +19,16 @@ type Props = {
 const PeopleOfAipTabs = ({ currentTab }: Props) => {
   return (
     <>
-      <div className=" tw-w-full tw-hidden lg:tw-flex tw-justify-center ~tw-pt-8/[4.75rem] ">
-        <div className="tw-flex tw-w-full tw-justify-center">
-          <div className="tw-flex tw-bg-[#F0F0F2] tw-p-1 tw-rounded-full tw-w-fit">
+      <div className=" w-full hidden lg:flex justify-center ~pt-8/[4.75rem] ">
+        <div className="flex w-full justify-center">
+          <div className="flex bg-[#F0F0F2] p-1 rounded-full w-fit">
             {tabList.map((items, i) => (
               <div
                 key={i}
                 className={cn(
-                  "~tw-px-[1.5rem]/[2.5rem] tw-py-[0.75rem] tw-text-h9Copy5 tw-leading-[1.22rem] tw-font-inter ",
+                  "~px-[1.5rem]/[2.5rem] py-[0.75rem] text-h9Copy5 leading-[1.22rem] font-inter ",
                   {
-                    "!tw-bg-darkPurple !tw-text-white !tw-outline-none !tw-rounded-full":
+                    "!bg-darkPurple !text-white !outline-none !rounded-full":
                       items.name === currentTab,
                   }
                 )}

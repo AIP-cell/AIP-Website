@@ -15,30 +15,30 @@ type Props={
 // "  "
 const ACardWithPlaySign = ({image,name,post,desc,linkedin}:Props) => {
   return (
-    <div className="tw-w-[18.43rem] tw-relative ">
+    <div className="w-[18.43rem] relative ">
       {linkedin && (
         <Image
           src={Linkedin}
           alt=""
-          className="tw-absolute tw-top-0 tw-right-0"
+          className="absolute top-0 right-0"
         />
       )}
-      <div className="tw-relative tw-flex tw-justify-center">
+      <div className="relative flex justify-center">
         <ASvg src={image} />
         <Image
           src={PlayButtonPurple}
           alt=""
-          className="tw-absolute tw-bottom-[4rem] hover:tw-scale-105 tw-transition-all tw-duration-150 tw-cursor-pointer"
+          className="absolute bottom-[4rem] hover:scale-105 transition-all duration-150 cursor-pointer"
         />
       </div>
-      <div className="tw-flex tw-flex-col tw-gap-[0.75rem]">
-        <h3 className="tw-text-h4 tw-leading-[2.6rem] tw-text-[#DFE0E5] tw-font-playFair tw-underline tw-underline-offset-4 tw-decoration-[1px] ">
+      <div className="flex flex-col gap-[0.75rem]">
+        <h3 className="text-h4 leading-[2.6rem] text-[#DFE0E5] font-playFair underline underline-offset-4 decoration-[1px] ">
           {name}
         </h3>
-        <h4 className="tw-text-h5 tw-font-playFair tw-text-lightPurplePink tw-font-medium tw-italic tw-line-clamp-1 tw-text-ellipsis">
+        <h4 className="text-h5 font-playFair text-lightPurplePink font-medium italic line-clamp-1 text-ellipsis">
           {post}
         </h4>
-        <p className="tw-text-h9Copy4 tw-leading-[1.4rem] tw-font-inter tw-line-clamp-4 md:tw-line-clamp-5 tw-text-ellipsis tw-text-[#DFE0E5] ">
+        <p className="text-h9Copy4 leading-[1.4rem] font-inter line-clamp-4 md:line-clamp-5 text-ellipsis text-[#DFE0E5] ">
           {desc}
         </p>
       </div>

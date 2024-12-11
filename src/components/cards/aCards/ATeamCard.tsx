@@ -31,42 +31,42 @@ const ATeamCard = ({
   sizeClass,
 }: Props) => {
   return (
-    <div className={cn("max-[23rem]:tw-w-[8rem] ~tw-w-[10rem]/[11.87rem] tw-relative", sizeClass)}>
+    <div className={cn("max-[23rem]:w-[8rem] ~w-[10rem]/[11.87rem] relative", sizeClass)}>
       <AMediumSizeSvg
         src="/images/sample.png"
-        // className="tw-w-[11.87rem] tw-h-[13.88rem]"
+        // className="w-[11.87rem] h-[13.88rem]"
       />
       {linkedin && (
         <Image
           src={Linkedin}
           alt=""
-          className="tw-absolute tw-top-0 tw-right-0 tw-size-[2.5rem]"
+          className="absolute top-0 right-0 size-[2.5rem]"
         />
       )}
-      <div className="tw-flex tw-flex-col tw-gap-[0.5rem]">
+      <div className="flex flex-col gap-[0.5rem]">
         <h3
-          className={`~tw-text-h4a/h4 ~tw-leading-[2.1rem]/[2.6rem] tw-text-gray80 tw-font-playFair ${titleClassName}`}
+          className={`~text-h4a/h4 ~leading-[2.1rem]/[2.6rem] text-gray80 font-playFair ${titleClassName}`}
         >
           {title}
         </h3>
         <h3
-          className={`~tw-text-h4a/h4 ~tw-leading-[2.1rem]/[2.6rem] tw-text-gray80 tw-font-playFair ${title2ClassName}`}
+          className={`~text-h4a/h4 ~leading-[2.1rem]/[2.6rem] text-gray80 font-playFair ${title2ClassName}`}
         >
           {title2}
         </h3>
         {location && (
           <p
-            className={`~tw-text-h4a/h5 ~tw-leading-[2.113rem]/[1.75rem] tw-text-gray80 tw-font-playFair ${locationClassName}`}
+            className={`~text-h4a/h5 ~leading-[2.113rem]/[1.75rem] text-gray80 font-playFair ${locationClassName}`}
           >
             {location}
           </p>
         )}
-        <p className=" ~tw-text-h6M/h5 tw-text-gray40 ~tw-leading-[1.575rem]/[1.75rem] tw-font-playFairItalic ">
+        <p className=" ~text-h6M/h5 text-gray40 ~leading-[1.575rem]/[1.75rem] font-playFairItalic ">
           {desc}
         </p>
         <Link
           href=""
-          className=" ~tw-text-h9Copy5/h8Copy3 tw-text-textPurple ~tw-leading-[1.225rem]/[1.575rem] tw-italic tw-underline tw-decoration-[1px] "
+          className=" ~text-h9Copy5/h8Copy3 text-textPurple ~leading-[1.225rem]/[1.575rem] italic underline decoration-[1px] "
         >
           {email}
         </Link>

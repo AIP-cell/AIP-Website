@@ -7,44 +7,44 @@ import React from "react";
 
 const ThankYouPage = () => {
   return (
-    <div className="tw-pt-[5rem]">
-      <div className="tw-relative">
+    <div className="pt-[5rem]">
+      <div className="relative">
         <BreadCrump textOne="home" linkOne="/" />
       </div>
-      <div className="tw-pt-[8rem] tw-flex tw-flex-col tw-items-center tw-justify-center">
-        <div className="~tw-text-h4/h1 tw-text-center ~tw-leading-[2.6rem]/[3.713rem] tw-font-playFair tw-text-gray80 ">
-          <span className="tw-font-playFairItalic tw-text-textPurple tw-text-center">
+      <div className="pt-[8rem] flex flex-col items-center justify-center">
+        <div className="~text-h4/h1 text-center ~leading-[2.6rem]/[3.713rem] font-playFair text-gray80 ">
+          <span className="font-playFairItalic text-textPurple text-center">
             Thank you
           </span>
           &nbsp;for
-          <h2 className=" tw-font-playFair tw-text-gray80 ~tw-text-h4/h1 ~tw-leading-[2.6rem]/[3.713rem]">
+          <h2 className=" font-playFair text-gray80 ~text-h4/h1 ~leading-[2.6rem]/[3.713rem]">
             &nbsp;Submitting the Form!
           </h2>
         </div>
-        <div className=" ~tw-mt-[2.5rem]/[4.5rem] tw-relative tw-w-[22rem] tw-h-[5rem] tw-rounded-3xl tw-flex tw-justify-center tw-items-center tw-overflow-hidden">
+        <div className=" ~mt-[2.5rem]/[4.5rem] relative w-[22rem] h-[5rem] rounded-3xl flex justify-center items-center overflow-hidden">
           <Image
             src="/images/news/newsDemo.png"
             alt=""
             fill
-            className="tw-object-cover"
+            className="object-cover"
           />
           <Link
             href="mailto:info@indianphilanthropy.org"
-            className="tw-relative tw-text-textPurple tw-leading-[1.4rem] tw-underline"
+            className="relative text-textPurple leading-[1.4rem] underline"
           >
             info@indianphilanthropy.org
           </Link>
         </div>
-        <div className="~tw-pt-[5rem]/[4.5rem] tw-flex tw-justify-center">
-          <ButtonAnimation className=" tw-py-[0.75rem] tw-px-[2rem]  tw-rounded-full tw-bg-darkPurple">
-            <Link href="/" className="tw-text-white tw-flex tw-gap-[0.5rem]">
-              <FilterDownArrowSvg className="tw-size-[1.25rem] tw-shrink-0 tw-rotate-[90deg]" />
+        <div className="~pt-[5rem]/[4.5rem] flex justify-center">
+          <ButtonAnimation className=" py-[0.75rem] px-[2rem]  rounded-full bg-darkPurple">
+            <Link href="/" className="text-white flex gap-[0.5rem]">
+              <FilterDownArrowSvg className="size-[1.25rem] shrink-0 rotate-[90deg]" />
   
-              <p className=" tw-text-h9Copy5 tw-leading-[1.225rem]">Go Back</p>
+              <p className=" text-h9Copy5 leading-[1.225rem]">Go Back</p>
             </Link>
           </ButtonAnimation>
         </div>
-        <p className="tw-text-midGray tw-text-h8Copy3 tw-pt-[3.5rem] tw-pb-[8.3rem] tw-leading-[1.57rem]">
+        <p className="text-midGray text-h8Copy3 pt-[3.5rem] pb-[8.3rem] leading-[1.57rem]">
           WIP
         </p>
       </div>

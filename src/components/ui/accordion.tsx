@@ -26,19 +26,19 @@ const AccordionTrigger = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
 >(({ className, children, ...props }, ref) => (
-  <AccordionPrimitive.Header className="tw-flex">
+  <AccordionPrimitive.Header className="flex">
     <AccordionPrimitive.Trigger
       ref={ref}
       className={cn(
-        "~tw-py-[1.25rem]/[1.75rem] tw-px-[1.25rem] tw-text-gray80 tw-flex tw-justify-between tw-w-full  items-center tw-text-h6M tw-font-inter tw-text-left transition-all data-[state=open]:tw-text-textPurple [&[data-state=open]>svg]:tw-rotate-180",
+        "~py-[1.25rem]/[1.75rem] px-[1.25rem] text-gray80 flex justify-between w-full  items-center text-h6M font-inter text-left transition-all data-[state=open]:text-textPurple [&[data-state=open]>svg]:rotate-180",
         className
       )}
       {...props}
     >
       {children}
-      {/* <Image src={MinusSvg} alt="Minus Image" className="data-[state=open]:tw-hidden data-[state=closed]:tw-block tw-transition-transform tw-duration-200"/>
-      <Image src={PlusSvg} alt="Plus Image" className="data-[state=open]:tw-block data-[state=closed]:tw-hidden tw-transition-transform tw-duration-200" /> */}
-      <ChevronDownIcon className="tw-h-4 tw-w-4 tw-shrink-0 text-muted-foreground tw-transition-transform tw-duration-200" />
+      {/* <Image src={MinusSvg} alt="Minus Image" className="data-[state=open]:hidden data-[state=closed]:block transition-transform duration-200"/>
+      <Image src={PlusSvg} alt="Plus Image" className="data-[state=open]:block data-[state=closed]:hidden transition-transform duration-200" /> */}
+      <ChevronDownIcon className="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200" />
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 ));
@@ -50,7 +50,7 @@ const AccordionContent = React.forwardRef<
 >(({ className, children, ...props }, ref) => (
   <AccordionPrimitive.Content
     ref={ref}
-    className="tw-text-midGray tw-bg-bgGray5 tw-p-5  tw-rounded-t-[1.25rem] tw-font-inter tw-text-h9Copy5 tw-leading-[1.225rem] overflow-hidden  tw-transition-transform tw-duration-200"
+    className="text-midGray bg-bgGray5 p-5  rounded-t-[1.25rem] font-inter text-h9Copy5 leading-[1.225rem] overflow-hidden  transition-transform duration-200"
     {...props}
   >
     <div className={cn("", className)}>{children}</div>

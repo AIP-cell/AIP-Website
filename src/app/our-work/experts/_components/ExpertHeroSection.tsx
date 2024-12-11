@@ -4,12 +4,12 @@ import Wave from "react-wavify";
 
 const ExpertHeroSection = () => {
   return (
-    <div className="tw-relative tw-w-full ">
-      <div className="tw-absolute  tw-inset-0 ">
+    <div className="relative w-full ">
+      <div className="absolute  inset-0 ">
         <Wave
           fill="#91298C"
           paused={false}
-          className="tw-h-[--h] !tw-block"
+          className="h-[--h] !block"
           options={{
             // height:40,
             amplitude: 60,
@@ -22,11 +22,11 @@ const ExpertHeroSection = () => {
             <stop offset="90%" stopColor="#224193" />
           </linearGradient>
         </Wave>
-        <div className="tw-h-[calc(100%-var(--h)*2)] tw-bg-[#91298C]"></div>
+        <div className="h-[calc(100%-var(--h)*2)] bg-[#91298C]"></div>
         <Wave
           fill="#91298C"
           paused={false}
-          className="tw-h-[--h] tw-rotate-180 !tw-block"
+          className="h-[--h] rotate-180 !block"
           options={{
             // height:40,
             amplitude: 60,
@@ -46,11 +46,11 @@ const ExpertHeroSection = () => {
         textTwo="Experts"
         linkTwo="/our-work/experts"
       />
-      <div className="tw-relative">
+      <div className="relative">
         <Wave
           fill="#b861b4a6"
           paused={false}
-          className="tw-h-[--h] !tw-block"
+          className="h-[--h] !block"
           options={{
             amplitude: 60,
             speed: 0.15,
@@ -58,12 +58,12 @@ const ExpertHeroSection = () => {
           }}
         />
 
-        <div className=" tw-bg-[#b861b4a6] ~tw-pt-[3rem]/[6.25rem] ~tw-pb-[3rem]/[7.6rem] tw-w-full ">
-          <div className="container tw-mx-auto tw-flex tw-justify-center tw-flex-col tw-items-center tw-relative tw-z-50 ~tw-px-5/[9rem] ">
-            <h3 className=" ~tw-leading-[1.129rem]/[1.29rem] ~tw-text-h9Copy5/h9Copy4 tw-uppercase tw-font-inter tw-text-white/60 tw-font-semibold">
+        <div className=" bg-[#b861b4a6] ~pt-[3rem]/[6.25rem] ~pb-[3rem]/[7.6rem] w-full ">
+          <div className="container mx-auto flex justify-center flex-col items-center relative z-50 ~px-5/[9rem] ">
+            <h3 className=" ~leading-[1.129rem]/[1.29rem] ~text-h9Copy5/h9Copy4 uppercase font-inter text-white/60 font-semibold">
               Experts
             </h3>
-            <h2 className="tw-pt-[1.25rem] tw-tracking-[-1px] tw-text-center ~tw-text-h5/h3 ~tw-leading-[1.75rem]/[2.6rem] tw-font-playFair tw-text-white">
+            <h2 className="pt-[1.25rem] tracking-[-1px] text-center ~text-h5/h3 ~leading-[1.75rem]/[2.6rem] font-playFair text-white">
               At AIP, we believe informed philanthropy can drive systemic
               change. Our approach is powered by subject-matter experts who
               provide valuable insights to help philanthropists make impactful
@@ -79,7 +79,7 @@ const ExpertHeroSection = () => {
         <Wave
           fill="#b861b4a6"
           paused={false}
-          className="tw-h-[--h] tw-rotate-180 !tw-block"
+          className="h-[--h] rotate-180 !block"
           options={{
             amplitude: 60,
             speed: 0.15,

@@ -8,40 +8,40 @@ import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 
 const ExpertsJoinTheFlow = () => {
   return (
-    <div className="tw-w-full tw-relative ~tw-pt-[7.5rem]/[10rem]">
+    <div className="w-full relative ~pt-[7.5rem]/[10rem]">
       <Image
         src={JoinCirclesOne}
         alt=""
-        className="tw-hidden lg:tw-block tw-absolute tw-top-[-13rem] tw-left-[3.938rem] tw-w-[18.625rem] tw-h-[18.438rem]"
+        className="hidden lg:block absolute top-[-13rem] left-[3.938rem] w-[18.625rem] h-[18.438rem]"
       />
       <Image
         src={PeachLeftSemiCircle}
         alt=""
-        className="tw-hidden lg:tw-block tw-absolute tw-top-[-2rem] tw-left-0  tw-w-[18.625rem] tw-h-[18.438rem]"
+        className="hidden lg:block absolute top-[-2rem] left-0  w-[18.625rem] h-[18.438rem]"
       />
       <Image
         src={JoinCirclesRight}
         alt=""
-        className="tw-hidden lg:tw-block tw-absolute tw-top-[1rem] tw-right-0 tw-w-[15.313rem] tw-h-[15.125rem]"
+        className="hidden lg:block absolute top-[1rem] right-0 w-[15.313rem] h-[15.125rem]"
       />
-      <div className="tw-relative container tw-mx-auto">
-        <div className="tw-relative tw-flex tw-flex-col tw-items-center tw-justify-center ~tw-pt-0/[8.43rem]">
-          <h2 className="tw-font-playFair tw-text-gray80 ~tw-text-h4/h2 ~tw-leading-[2.6rem]/[3.3rem]">
-            <span className="tw-text-textPurple tw-font-playFairItalic">
+      <div className="relative container mx-auto">
+        <div className="relative flex flex-col items-center justify-center ~pt-0/[8.43rem]">
+          <h2 className="font-playFair text-gray80 ~text-h4/h2 ~leading-[2.6rem]/[3.3rem]">
+            <span className="text-textPurple font-playFairItalic">
               Join
             </span>{" "}
             The Flow
           </h2>
-          <p className="tw-text-midGray ~tw-text-h9Copy5/h9Copy4 ~tw-leading-[1.225rem]/[1.4rem] tw-text-center ~tw-px-5/[20.94rem] ~tw-pt-[1rem]/[2.5rem]">
+          <p className="text-midGray ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] text-center ~px-5/[20.94rem] ~pt-[1rem]/[2.5rem]">
             At AIP, experts are not just contributors—they are partners in the
             journey of transforming philanthropy to build a better future for
             India. We look forward to welcoming you as part of this vibrant
             community of change-makers
           </p>
-          <ButtonAnimation className=" ~tw-mt-[2rem]/[2.5rem] tw-text-darkPurple tw-border-2 tw-border-darkPurple hover:tw-text-white tw-bg-white hover:tw-bg-darkPurple tw-rounded-full  tw-py-[0.75rem] tw-px-[1.75rem]">
+          <ButtonAnimation className=" ~mt-[2rem]/[2.5rem] text-darkPurple border-2 border-darkPurple hover:text-white bg-white hover:bg-darkPurple rounded-full  py-[0.75rem] px-[1.75rem]">
             <Link
               href=""
-              className=" tw-flex tw-items-center tw-text-h9Copy5 tw-gap-[0.5rem]"
+              className=" flex items-center text-h9Copy5 gap-[0.5rem]"
             >
               <p className="">Contact Us</p>
               <MailSvg />

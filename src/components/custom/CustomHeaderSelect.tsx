@@ -43,24 +43,24 @@ const CustomHeaderSelect = ({ items, isOpen, setIsOpen }: Props) => {
       value={selected}
       onChange={setSelected}
       as="div"
-      className="tw-w-full"
+      className="w-full"
     >
-      <ListboxButton as="div" className={cn("tw-w-full ")}>
-        <ButtonAnimation className="tw-w-full">
-          <div className="tw-flex tw-flex-col ">
-            <div className="tw-text-white tw-mb-[0.25rem] md:tw-text-gray80 tw-flex tw-justify-between tw-border-b-2 tw-w-full md:tw-w-auto tw-border-[#B861B3] md:tw-border-none tw-gap-[0.5rem] tw-items-center">
+      <ListboxButton as="div" className={cn("w-full ")}>
+        <ButtonAnimation className="w-full">
+          <div className="flex flex-col ">
+            <div className="text-white mb-[0.25rem] md:text-gray80 flex justify-between border-b-2 w-full md:w-auto border-[#B861B3] md:border-none gap-[0.5rem] items-center">
               <p
                 className={cn(
-                  "~tw-py-[1.25rem]/0 tw-text-h9Copy5 tw-leading-[1.225rem]",
-                  { "tw-font-bold": isPathname == items.id }
+                  "~py-[1.25rem]/0 text-h9Copy5 leading-[1.225rem]",
+                  { "font-bold": isPathname == items.id }
                 )}
               >
                 {items.label}
               </p>
-              <DownTagSvg className="~tw-w-[1.25rem]/[0.6rem] ~tw-h-[1.25rem]/[0.4rem]" />
+              <DownTagSvg className="~w-[1.25rem]/[0.6rem] ~h-[1.25rem]/[0.4rem]" />
             </div>
             {isPathname == items.id && (
-              <div className="tw-hidden md:tw-block tw-h-[0.25rem]  tw-w-full tw-rounded-full tw-bg-purple40"></div>
+              <div className="hidden md:block h-[0.25rem]  w-full rounded-full bg-purple40"></div>
             )}
           </div>
         </ButtonAnimation>
@@ -70,14 +70,14 @@ const CustomHeaderSelect = ({ items, isOpen, setIsOpen }: Props) => {
           transition
           anchor="bottom"
           className={cn(
-            "tw-ml-[5.6rem] no-scrollbar tw-mt-[1rem] tw-z-[10000] tw-bg-purpleToBlue tw-flex tw-flex-col tw-rounded-2xl tw-w-[16.625rem] tw-p-[0.5rem]"
+            "ml-[5.6rem] no-scrollbar mt-[1rem] z-[10000] bg-purpleToBlue flex flex-col rounded-2xl w-[16.625rem] p-[0.5rem]"
           )}
         >
           {options?.map((items: any, i: number) => (
             <ListboxOption
               key={i}
               value={items.option}
-              className="data-[focus]:bg-blue-100 tw-text-white tw-cursor-pointer"
+              className="data-[focus]:bg-blue-100 text-white cursor-pointer"
             >
               <ButtonAnimation
                 onClick={() => {
@@ -85,8 +85,8 @@ const CustomHeaderSelect = ({ items, isOpen, setIsOpen }: Props) => {
                   setIsOpen(!isOpen);
                 }}
                 className={cn(
-                  "tw-w-full tw-rounded-2xl hover:tw-bg-[#2B092A4D] tw-flex",
-                  { "!tw-bg-[#2B092A4D]": pathname === items.link }
+                  "w-full rounded-2xl hover:bg-[#2B092A4D] flex",
+                  { "!bg-[#2B092A4D]": pathname === items.link }
                 )}
               >
                 <div
@@ -95,8 +95,8 @@ const CustomHeaderSelect = ({ items, isOpen, setIsOpen }: Props) => {
                   // }}
                   // href={items?.link}
                   className={cn(
-                    "hover:tw-font-playFairItalic tw-text-left tw-pl-[1.25rem] tw-transition-all tw-duration-150 tw-py-[0.8rem] tw-w-full",
-                    { "!tw-font-playFairItalic": pathname === items.link }
+                    "hover:font-playFairItalic text-left pl-[1.25rem] transition-all duration-150 py-[0.8rem] w-full",
+                    { "!font-playFairItalic": pathname === items.link }
                   )}
                 >
                   {items.option}

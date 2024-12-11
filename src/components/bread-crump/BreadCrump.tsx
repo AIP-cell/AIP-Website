@@ -26,16 +26,16 @@ const BreadCrump = ({
   linkFour,
 }: Props) => {
   return (
-    <div className="tw-absolute tw-z-[1000] tw-flex tw-flex-wrap tw-items-center ~tw-left-5/[7.8rem] tw-font-inter tw-top-[1.25rem]">
+    <div className="absolute z-[1000] flex flex-wrap items-center ~left-5/[7.8rem] font-inter top-[1.25rem]">
       <Link
         href={linkOne}
         className={cn(
-          "tw-text-black tw-flex tw-items-center tw-gap-[0.5rem] ~tw-text-h10Copy6/h9Copy5 ~tw-leading-[1rem]/[1.225rem]",
-          { "!tw-text-gray50": textTwo }
+          "text-black flex items-center gap-[0.5rem] ~text-h10Copy6/h9Copy5 ~leading-[1rem]/[1.225rem]",
+          { "!text-gray50": textTwo }
         )}
       >
-        <div className="tw-text-[#6A6D75]">
-          <LeftOPenSvg className="~tw-size-[0.8rem]/[1rem]" />
+        <div className="text-[#6A6D75]">
+          <LeftOPenSvg className="~size-[0.8rem]/[1rem]" />
         </div>
         {/* <Image src={BreadCrumpSvg} alt="bread-crump-Svg" /> */}
         {textOne}
@@ -45,12 +45,12 @@ const BreadCrump = ({
         <Link
           href={linkTwo}
           className={cn(
-            " tw-text-black tw-flex tw-gap-[0.5rem] ~tw-text-h10Copy6/h9Copy5 ~tw-leading-[1rem]/[1.225rem]",
-            { "!tw-text-gray50 ": textThree }
+            " text-black flex gap-[0.5rem] ~text-h10Copy6/h9Copy5 ~leading-[1rem]/[1.225rem]",
+            { "!text-gray50 ": textThree }
           )}
         >
           <p
-            className={cn({ "tw-underline tw-underline-offset-4": textThree })}
+            className={cn({ "underline underline-offset-4": textThree })}
           >
             {textTwo}
           </p>
@@ -61,13 +61,13 @@ const BreadCrump = ({
         <Link
           href={linkThree}
           className={cn(
-            "tw-text-black ~tw-text-h10Copy6/h9Copy5 tw-flex ~tw-leading-[1rem]/[1.225rem]",
+            "text-black ~text-h10Copy6/h9Copy5 flex ~leading-[1rem]/[1.225rem]",
             {
-              "!tw-text-gray50": textFour,
+              "!text-gray50": textFour,
             }
           )}
         >
-          <p className={cn({ "tw-underline tw-underline-offset-4": textFour })}>
+          <p className={cn({ "underline underline-offset-4": textFour })}>
             {textThree}
           </p>
           {textFour && <p>&nbsp;/&nbsp;</p>}
@@ -76,7 +76,7 @@ const BreadCrump = ({
       {textFour && linkFour && (
         <Link
           href={linkFour}
-          className="tw-text-black ~tw-text-h10Copy6/h9Copy5 ~tw-leading-[1rem]/[1.225rem]"
+          className="text-black ~text-h10Copy6/h9Copy5 ~leading-[1rem]/[1.225rem]"
         >
           {textFour}
         </Link>

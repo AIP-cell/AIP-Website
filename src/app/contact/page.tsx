@@ -12,38 +12,38 @@ import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 
 const page = () => {
   return (
-    <div className="tw-pt-[5rem]">
-      <div className="tw-relative tw-w-full">
+    <div className="pt-[5rem]">
+      <div className="relative w-full">
         <Image
           src={WaveBg}
           alt="wave-peach"
-          className="tw-absolute tw-w-[400rem] -tw-bottom-[5rem] tw-h-[65rem] "
+          className="absolute w-[400rem] -bottom-[5rem] h-[65rem] "
         />
-        <div className="tw-relative container tw-mx-auto ~tw-px-[1.25rem]/[7.8rem]">
-          <div className=" tw-pt-[5rem] tw-grid md:tw-grid-cols-2">
+        <div className="relative container mx-auto ~px-[1.25rem]/[7.8rem]">
+          <div className=" pt-[5rem] grid md:grid-cols-2">
             <BreadCrump textOne="Contacts" linkOne="/contact" />
             <div className=" ">
-              <p className="tw-font-playFair ~tw-text-h4/h3 tw-leading-[3.3rem]">
+              <p className="font-playFair ~text-h4/h3 leading-[3.3rem]">
                 Get in Touch
               </p>
-              <p className="tw-font-inter tw-text-h9Copy5/h9Copy4 ~tw-leading-[1.225rem]/[1.4rem] tw-pt-[1.25rem]  tw-text-midGray md:tw-text-gray60">
+              <p className="font-inter text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] pt-[1.25rem]  text-midGray md:text-gray60">
                 Please fill the form below to connect with a specific office or
                 department that can best meet your needs. Need to talk to our
                 team, please use the below information to connect with them.
               </p>
             </div>
           </div>
-          <div className="~tw-pt-[2.5rem]/[1.813rem]">
+          <div className="~pt-[2.5rem]/[1.813rem]">
             <Form />
           </div>
 
-          {/* <div className="tw-hidden md:tw-block">
+          {/* <div className="hidden md:block">
             <Form />
           </div> */}
-          <div className=" tw-grid lg:tw-grid-cols-2 ~tw-py-[5rem]/[7.106rem] ~tw-gap-[2.5rem]/0">
-            <div className=" tw-relative ">
-              <div className="tw-bg-bgGray5 ~tw-p-5/[2rem] tw-rounded-[1.25rem]  tw-w-full md:tw-w-[22.9rem] tw-h-[29.25 rem]">
-                <p className="tw-font-playFair tw-italic tw-font-medium tw-text-gray50 tw-text-xl tw-tracking-[.02rem]">
+          <div className=" grid lg:grid-cols-2 ~py-[5rem]/[7.106rem] ~gap-[2.5rem]/0">
+            <div className=" relative ">
+              <div className="bg-bgGray5 ~p-5/[2rem] rounded-[1.25rem]  w-full md:w-[22.9rem] h-[29.25 rem]">
+                <p className="font-playFair italic font-medium text-gray50 text-xl tracking-[.02rem]">
                   General Inquiry
                 </p>
 
@@ -59,9 +59,9 @@ const page = () => {
                   data="+91 9876543210"
                 />
 
-                <div className="tw-h-px tw-bg-footerGray tw-mt-5 tw-mb-5"></div>
+                <div className="h-px bg-footerGray mt-5 mb-5"></div>
 
-                <p className="tw-font-playFair tw-italic tw-font-medium tw-text-gray50 tw-text-xl tw-tracking-[.02rem]">
+                <p className="font-playFair italic font-medium text-gray50 text-xl tracking-[.02rem]">
                   Network Team
                 </p>
                 <EnquiryLink
@@ -70,9 +70,9 @@ const page = () => {
                   data="sabhyata@indianphilanthropy.org"
                   name="Sabhayata Prakash"
                 />
-                <div className="tw-h-px tw-bg-footerGray tw-mt-5 tw-mb-5"></div>
+                <div className="h-px bg-footerGray mt-5 mb-5"></div>
 
-                <p className="tw-font-playFair tw-italic tw-font-medium tw-text-gray50 tw-text-xl tw-tracking-[.02rem]">
+                <p className="font-playFair italic font-medium text-gray50 text-xl tracking-[.02rem]">
                   Knowledge Team
                 </p>
                 <EnquiryLink
@@ -83,12 +83,12 @@ const page = () => {
                 />
               </div>
             </div>
-            <div className="lg:tw-pl-[7.875rem] tw-flex tw-flex-col tw-gap-5 ~tw-pt-20/14 tw-justify-end">
-              <h2 className=" tw-font-playFairItalic tw-text-h4 tw-leading-[2.6rem] tw-text-gray50">
+            <div className="lg:pl-[7.875rem] flex flex-col gap-5 ~pt-20/14 justify-end">
+              <h2 className=" font-playFairItalic text-h4 leading-[2.6rem] text-gray50">
                 Reach us at
               </h2>
-              <div className="~tw-text-h9Copy5/h9Copy4 ~tw-leading-[1.225rem]/[1.4rem] tw-flex tw-flex-col tw-text-midGray">
-                <span className="tw-font-bold">
+              <div className="~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] flex flex-col text-midGray">
+                <span className="font-bold">
                   Foundation For Accelerating Philanthropy
                 </span>
                 Ananda, 242 Okhla Industrial Estate Phase III
@@ -97,14 +97,14 @@ const page = () => {
               </div>
               <ButtonAnimation>
                 <Link
-                  className="tw-font-inter tw-text-textPurple hover:tw-text-white tw-flex tw-items-center tw-gap-[0.875rem] tw-bg-bgGray5 hover:tw-bg-textPurple  tw-py-3 tw-w-fit tw-h-[2.8rem] tw-rounded-[3.125rem] tw-px-[1.25rem] "
+                  className="font-inter text-textPurple hover:text-white flex items-center gap-[0.875rem] bg-bgGray5 hover:bg-textPurple  py-3 w-fit h-[2.8rem] rounded-[3.125rem] px-[1.25rem] "
                   href=""
                 >
                   <div className="">
-                    <LocationSvg className="tw-size-[1.313rem] " />
+                    <LocationSvg className="size-[1.313rem] " />
                   </div>
 
-                  <p className="tw-text-gray80 hover:tw-text-white ~tw-text-h9Copy5/h9Copy4 ~tw-leading-[1.225rem]/[1.4rem]">
+                  <p className="text-gray80 hover:text-white ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]">
                     Open Link on Maps
                   </p>
                 </Link>

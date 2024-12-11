@@ -7,26 +7,26 @@ import LeftCurve from "@public/svg/products-and-services/collaborations/leftPeac
 import Image from "next/image";
 const InnerCollaborationsVideo = () => {
   return (
-    <div className="tw-relative ">
+    <div className="relative ">
       <Image
         src={LeftCurve}
         alt=""
-        className="tw-hidden tw-absolute tw-left-0 tw-bottom-[-15rem]"
+        className="hidden absolute left-0 bottom-[-15rem]"
       />
 
-      <div className="~tw-pt-[2rem]/[3.5rem]   container tw-relative tw-flex tw-justify-center tw-mx-auto">
-        <div className="tw-w-[64.375rem] tw-relative tw-flex tw-justify-center tw-items-center ~tw-h-[12.313rem]/[35.313rem] tw-overflow-hidden tw-rounded-lg">
+      <div className="~pt-[2rem]/[3.5rem]   container relative flex justify-center mx-auto">
+        <div className="w-[64.375rem] relative flex justify-center items-center ~h-[12.313rem]/[35.313rem] overflow-hidden rounded-lg">
           {/* <Image
             src={rightBottomCurve}
             alt="video-bg"
-            className=" tw-absolute tw-left-0 tw-bottom-[-18.625rem]"
+            className=" absolute left-0 bottom-[-18.625rem]"
           /> */}
           <Image
             src={BgVideo}
             alt="video-bg"
-            className="tw-object-cover tw-absolute tw-inset-0 tw-rounded-lg tw-h-full"
+            className="object-cover absolute inset-0 rounded-lg h-full"
           />
-          <Image src={videoPlaySvg} alt="play-svg" className="tw-z-10" />
+          <Image src={videoPlaySvg} alt="play-svg" className="z-10" />
         </div>
       </div>
     </div>

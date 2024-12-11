@@ -11,42 +11,42 @@ type Props = {
 };
 const ResourceCard = ({ src, title, desc, category, name }: Props) => {
   return (
-    // tw-justify-center
-    <div className="tw-flex tw-flex-col  tw-items-center ~tw-gap-[1.25rem]/[0.75rem]">
-      <div className="tw-relative tw-w-full ~tw-h-[19.688rem]/[16.594rem]">
+    // justify-center
+    <div className="flex flex-col  items-center ~gap-[1.25rem]/[0.75rem]">
+      <div className="relative w-full ~h-[19.688rem]/[16.594rem]">
         <Image
           src={src}
           alt="svg"
           fill
-          className="tw-object-cover tw-rounded-[1.25rem]"
+          className="object-cover rounded-[1.25rem]"
         />
       </div>
-      <div className="tw-flex tw-flex-col  tw-items-center tw-gap-[0.75rem]">
-        <p className=" tw-w-full tw-text-h6M tw-text-gray80 tw-font-inter tw-font-semibold tw-leading-[1.575rem] tw-underline tw-underline-offset-4 tw-decoration-[1.5px]">
+      <div className="flex flex-col  items-center gap-[0.75rem]">
+        <p className=" w-full text-h6M text-gray80 font-inter font-semibold leading-[1.575rem] underline underline-offset-4 decoration-[1.5px]">
           {title}
         </p>
         {name && (
-          <p className=" tw-w-full tw-text-gray40 tw-font-playFairItalic tw-font-medium ~tw-leading-[1.4rem]/[1.575rem] ">
+          <p className=" w-full text-gray40 font-playFairItalic font-medium ~leading-[1.4rem]/[1.575rem] ">
             {name}
           </p>
         )}
-        <p className="tw-text-h9Copy5 tw-text-gray50 tw-font-inter tw-leading-[1.225rem]">
+        <p className="text-h9Copy5 text-gray50 font-inter leading-[1.225rem]">
           {desc}
         </p>
       </div>
-      <div className="tw-h-px tw-bg-footerGray tw-w-full"></div>
-      <div className="tw-flex tw-justify-between tw-w-full tw-text-h9Copy5 tw-text-gray50 tw-font-inter tw-leading-[1.225rem]">
+      <div className="h-px bg-footerGray w-full"></div>
+      <div className="flex justify-between w-full text-h9Copy5 text-gray50 font-inter leading-[1.225rem]">
         <p>11 Jul 2024</p>
         <p>{category}</p>
       </div>
-      {/* <div className="tw-h-px tw-bg-footerGray tw-w-full"></div>
-      <div className="tw-flex tw-justify-start tw-w-full tw-gap-[.75rem]">
-        <div className="tw-group tw-text-darkPurple tw-bg-bgGray5 tw-w-[2.5rem] hover:tw-text-white  hover:tw-bg-darkPurple  tw-transition-all  tw-h-[2.5rem] tw-rounded-full tw-flex tw-items-center tw-justify-center tw-p-[.5rem]">
-          <EyeSvg className="tw-size-[1.5rem]" />
+      {/* <div className="h-px bg-footerGray w-full"></div>
+      <div className="flex justify-start w-full gap-[.75rem]">
+        <div className="group text-darkPurple bg-bgGray5 w-[2.5rem] hover:text-white  hover:bg-darkPurple  transition-all  h-[2.5rem] rounded-full flex items-center justify-center p-[.5rem]">
+          <EyeSvg className="size-[1.5rem]" />
         </div>
 
-        <div className="tw-group tw-text-darkPurple hover:tw-text-white tw-bg-bgGray5 tw-w-[2.5rem]  hover:tw-bg-darkPurple  tw-transition-all  tw-h-[2.5rem] tw-rounded-full tw-flex tw-items-center tw-justify-center tw-p-[.5rem]">
-          <DownloadFileSvg className="tw-size-[1.5rem]" />
+        <div className="group text-darkPurple hover:text-white bg-bgGray5 w-[2.5rem]  hover:bg-darkPurple  transition-all  h-[2.5rem] rounded-full flex items-center justify-center p-[.5rem]">
+          <DownloadFileSvg className="size-[1.5rem]" />
         </div>
       </div> */}
     </div>

@@ -3,30 +3,30 @@ import React from "react";
 import ASvg from "@public/images/aSample.png";
 const JourneySoFar = () => {
   return (
-    <div className="tw-flex tw-flex-col tw-items-center tw-w-full container tw-mx-auto ~tw-pt-[5rem]/[10rem]">
-      <h2 className="tw-text-gray80 tw-font-playFair ~tw-text-h4/h2 ~tw-leading-[2.6rem]/[3.3rem] ">
+    <div className="flex flex-col items-center w-full container mx-auto ~pt-[5rem]/[10rem]">
+      <h2 className="text-gray80 font-playFair ~text-h4/h2 ~leading-[2.6rem]/[3.3rem] ">
         The
-        <span className="tw-font-playFairItalic tw-text-textPurple">
+        <span className="font-playFairItalic text-textPurple">
           &nbsp;Journey
         </span>
         &nbsp; So Far
       </h2>
-      <div className="tw-flex tw-flex-col md:tw-flex-row ~tw-gap-[2rem]/[6.563rem] ~tw-pl-[1.25rem]/[6.121rem] ~tw-pr-[1.25rem]/[9.563rem] tw-pt-[3.5rem]">
+      <div className="flex flex-col md:flex-row ~gap-[2rem]/[6.563rem] ~pl-[1.25rem]/[6.121rem] ~pr-[1.25rem]/[9.563rem] pt-[3.5rem]">
         <Image
           src={ASvg}
           alt=""
-          className="~tw-w-[18.438rem]/[19.688rem] ~tw-h-[21.563rem]/[23.024rem] "
+          className="~w-[18.438rem]/[19.688rem] ~h-[21.563rem]/[23.024rem] "
         />
-        <div className="~tw-text-h9Copy5/h9Copy4 tw-text-midGray ~tw-leading-[1.225rem]/[1.4rem] tw-pt-[1.688rem] tw-flex tw-flex-col tw-gap-[1rem]">
+        <div className="~text-h9Copy5/h9Copy4 text-midGray ~leading-[1.225rem]/[1.4rem] pt-[1.688rem] flex flex-col gap-[1rem]">
           <p>
-            <span className="tw-font-bold">
+            <span className="font-bold">
               Accelerate Indian Philanthropy (AIP)
             </span>{" "}
             was founded in 2021 with an objective to transform the strategic
             giving landscape in India. AIP works with ultra-high net worth
             individuals and families (in India and the diaspora) to create
             sustainable impact by inspiring and enabling them to{" "}
-            <span className="tw-font-bold">
+            <span className="font-bold">
               give more, give sooner, and give better.
             </span>
           </p>
@@ -45,13 +45,13 @@ const JourneySoFar = () => {
             collection of case studies and insights from diverse philanthropic
             journeys, covering a wide range of sectors and “theories of change.”
             Additionally, we have a growing database of close to{" "}
-            <span className="tw-font-bold">1,500 credible NGOs</span>, enabling
+            <span className="font-bold">1,500 credible NGOs</span>, enabling
             us to guide philanthropic efforts towards building effective and
             impactful giving portfolios
           </p>
           <p>
             Over the past three years, AIP has stayed true to its unique
-            <span className="tw-font-bold">pro-bono model</span>, while
+            <span className="font-bold">pro-bono model</span>, while
             maintaining a neutral, non-judgmental, and “philanthropist-first”
             approach, focusing solely on maximizing the impact and scale of
             giving.

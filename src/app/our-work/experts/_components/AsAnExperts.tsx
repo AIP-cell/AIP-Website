@@ -3,14 +3,14 @@ import React from "react";
 
 const AsAnExperts = () => {
   return (
-    <div className="~tw-pt-[7.5rem]/[10.124rem]  container tw-mx-auto ~tw-px-[1.25rem]/[14.375rem] tw-flex tw-flex-col tw-items-center">
-      <h2 className="~tw-text-h4/h2 ~tw-leading-[2.6rem]/[3.3rem] tw-font-playFair tw-text-center tw-text-gray80">
-        <span className="tw-font-playFairItalic tw-text-textPurple">
+    <div className="~pt-[7.5rem]/[10.124rem]  container mx-auto ~px-[1.25rem]/[14.375rem] flex flex-col items-center">
+      <h2 className="~text-h4/h2 ~leading-[2.6rem]/[3.3rem] font-playFair text-center text-gray80">
+        <span className="font-playFairItalic text-textPurple">
           Partner&nbsp;
         </span>
         as an Expert
       </h2>
-      <div className="~tw-text-h9Copy5/h9Copy4 ~tw-leading-[1.225rem]/[1.4rem] tw-text-midGray tw-flex tw-flex-col  ~tw-gap-[0.7rem]/[1rem] ~tw-pt-[1rem]/[2.5rem] tw-text-center">
+      <div className="~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] text-midGray flex flex-col  ~gap-[0.7rem]/[1rem] ~pt-[1rem]/[2.5rem] text-center">
         <p>
           AIP is expanding its panel of subject-matter experts. If you’re a
           seasoned professional or thought leader with expertise in areas
@@ -27,11 +27,11 @@ const AsAnExperts = () => {
           social challenges.
         </p>
       </div>
-      <div className="~tw-pt-[2rem]/[3.268rem]">
+      <div className="~pt-[2rem]/[3.268rem]">
         <OutlineButton
           text="Join The Flow"
-          buttonClassName="tw-rounded-full tw-w-fit"
-          className="tw-py-[0.75rem] tw-px-[1.75rem]"
+          buttonClassName="rounded-full w-fit"
+          className="py-[0.75rem] px-[1.75rem]"
         />
       </div>
     </div>

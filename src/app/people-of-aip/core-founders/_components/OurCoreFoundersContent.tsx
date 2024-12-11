@@ -17,25 +17,25 @@ const datas = [
 ];
 const OurCoreFoundersContent = () => {
   return (
-    <div className="tw-w-full tw-relative">
+    <div className="w-full relative">
       <Image
         src={Bg}
         alt=""
-        className="tw-hidden xl:tw-block tw-absolute  tw-top-[15.5rem]  tw-right-0"
+        className="hidden xl:block absolute  top-[15.5rem]  right-0"
       />
       <Image
         src={Bg}
         alt=""
-        className="tw-hidden xl:tw-block tw-absolute  tw-bottom-0  tw-left-0 tw-rotate-180"
+        className="hidden xl:block absolute  bottom-0  left-0 rotate-180"
       />
-      <div className="~tw-pt-[2.125rem]/[3rem] container tw-mx-auto tw-relative">
-        <div className="tw-flex tw-flex-col tw-items-center tw-justify-center ~tw-px-[1.25rem]/[20.938rem]">
-          <h2 className="~tw-text-h4/h2 tw-text-center tw-text-gray80 ~tw-leading-[2.6rem]/[3.2rem] tw-font-playFair">
-            <span className="tw-text-textPurple tw-font-playFairItalic">
+      <div className="~pt-[2.125rem]/[3rem] container mx-auto relative">
+        <div className="flex flex-col items-center justify-center ~px-[1.25rem]/[20.938rem]">
+          <h2 className="~text-h4/h2 text-center text-gray80 ~leading-[2.6rem]/[3.2rem] font-playFair">
+            <span className="text-textPurple font-playFairItalic">
               &nbsp;Core-Founders
             </span>
           </h2>
-          <p className="tw-font-inter ~tw-leading-[1.225rem]/[1.4rem] ~tw-text-h9Copy5/h9Copy4 tw-text-center tw-text-gray80 ~tw-pt-[2rem]/[1.25rem] ~tw-px-[1rem]/0">
+          <p className="font-inter ~leading-[1.225rem]/[1.4rem] ~text-h9Copy5/h9Copy4 text-center text-gray80 ~pt-[2rem]/[1.25rem] ~px-[1rem]/0">
             Our Founders are the foundations of the common purpose: create a
             transformative impact of philanthropic efforts across a range of
             sectors from education to healthcare to climate and the arts, with
@@ -46,11 +46,11 @@ const OurCoreFoundersContent = () => {
         {datas.map((item, i) => (
           <div
             key={i}
-            className="sm:tw-flex-row tw-flex-col tw-flex ~tw-gap-[3.5rem]/[4.56rem] tw-pt-[5rem] tw-pr-12 ~tw-pl-12/[7.8rem] "
+            className="sm:flex-row flex-col flex ~gap-[3.5rem]/[4.56rem] pt-[5rem] pr-12 ~pl-12/[7.8rem] "
           >
             <ACard
               linkedin
-              nameClass=" tw-underline tw-decoration-[1px] tw-underline-offset-4 "
+              nameClass=" underline decoration-[1px] underline-offset-4 "
               name="Ashish Dhawan"
               desc="“I believe a lot more needs to be done particularly to encourage first-time givers. AIP aims to fill this gap and spur philanthropy in a very structured manner.’’"
               work="The Convergence Foundation"
@@ -58,7 +58,7 @@ const OurCoreFoundersContent = () => {
             />
             <PCard
               linkedin
-              nameClass=" tw-underline tw-decoration-[1px] tw-underline-offset-4 "
+              nameClass=" underline decoration-[1px] underline-offset-4 "
               name="Ashish Dhawan"
               desc="“I believe a lot more needs to be done particularly to encourage first-time givers. AIP aims to fill this gap and spur philanthropy in a very structured manner.’’"
               work="The Convergence Foundation"
@@ -66,10 +66,10 @@ const OurCoreFoundersContent = () => {
             />
           </div>
         ))}
-        <div className="sm:tw-flex-row tw-flex-col tw-flex ~tw-gap-[3.5rem]/[4.56rem] ~tw-pt-14/[5.25rem] tw-justify-end tw-pb-[7.37rem] tw-pl-12 ~tw-pr-12/[7.8rem]">
+        <div className="sm:flex-row flex-col flex ~gap-[3.5rem]/[4.56rem] ~pt-14/[5.25rem] justify-end pb-[7.37rem] pl-12 ~pr-12/[7.8rem]">
           <ACard
             linkedin
-            nameClass=" tw-underline tw-decoration-[1px] tw-underline-offset-4 "
+            nameClass=" underline decoration-[1px] underline-offset-4 "
             name="Ashish Dhawan"
             desc="“I believe a lot more needs to be done particularly to encourage first-time givers. AIP aims to fill this gap and spur philanthropy in a very structured manner.’’"
             work="The Convergence Foundation"
@@ -77,7 +77,7 @@ const OurCoreFoundersContent = () => {
           />
           <PCard
             linkedin
-            nameClass=" tw-underline tw-decoration-[1px] tw-underline-offset-4 "
+            nameClass=" underline decoration-[1px] underline-offset-4 "
             name="Ashish Dhawan"
             desc="“I believe a lot more needs to be done particularly to encourage first-time givers. AIP aims to fill this gap and spur philanthropy in a very structured manner.’’"
             work="The Convergence Foundation"

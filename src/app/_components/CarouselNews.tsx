@@ -42,46 +42,46 @@
 //     }
 //   };
 //   return (
-//     <div className="tw-hidden md:tw-flex tw-flex-col tw-relative tw-items-center">
-//       <div className="tw-absolute tw-top-[-17rem] tw-right-[7rem] tw-hidden   lg:tw-flex tw-justify-center tw-gap-[1.25rem] ">
+//     <div className="hidden md:flex flex-col relative items-center">
+//       <div className="absolute top-[-17rem] right-[7rem] hidden   lg:flex justify-center gap-[1.25rem] ">
 //         <button
 //           onClick={previous}
-//           className="  tw-text-white tw-leading-[22.4px] tw-font-inter tw-bg-darkPurple tw-rounded-tl-3xl tw-rounded-bl-3xl tw-rounded-tr-xl tw-rounded-br-xl tw-py-[1.15rem] tw-px-[0.92rem]"
+//           className="  text-white leading-[22.4px] font-inter bg-darkPurple rounded-tl-3xl rounded-bl-3xl rounded-tr-xl rounded-br-xl py-[1.15rem] px-[0.92rem]"
 //         >
-//           <LeftSlickArrowSvg className="tw-w-[1rem] tw-h-[0.57rem]" />
+//           <LeftSlickArrowSvg className="w-[1rem] h-[0.57rem]" />
 //         </button>
 //         <button
 //           onClick={next}
-//           className=" tw-text-white tw-leading-[22.4px] tw-font-inter tw-bg-darkPurple tw-rounded-tr-3xl tw-rounded-br-3xl tw-rounded-tl-xl tw-rounded-bl-xl tw-py-[1.15rem] tw-px-[0.92rem]"
+//           className=" text-white leading-[22.4px] font-inter bg-darkPurple rounded-tr-3xl rounded-br-3xl rounded-tl-xl rounded-bl-xl py-[1.15rem] px-[0.92rem]"
 //         >
-//           <RightSlickArrowSvg className="tw-w-[1rem] tw-h-[0.57rem]" />
+//           <RightSlickArrowSvg className="w-[1rem] h-[0.57rem]" />
 //         </button>
 //       </div>
 //       <div
 //         ref={carouselRef}
-//         className="~tw-px-[1.25rem]/0 tw-flex tw-gap-[1.25rem] tw-pt-[2.5rem] tw-snap-x tw-snap-mandatory tw-overflow-x-scroll no-scrollbar "
+//         className="~px-[1.25rem]/0 flex gap-[1.25rem] pt-[2.5rem] snap-x snap-mandatory overflow-x-scroll no-scrollbar "
 //       >
 //         {newsData.map((items, i) => (
 //           <NewsCard key={i} src={items.src} text={items.text} />
 //         ))}
 //       </div>
 //       <OutlineButton
-//         buttonClassName="!tw-rounded-full !tw-w-fit tw-mt-[2.5rem]"
-//         className=" !tw-px-[1.75rem]  tw-py-[0.75rem] "
+//         buttonClassName="!rounded-full !w-fit mt-[2.5rem]"
+//         className=" !px-[1.75rem]  py-[0.75rem] "
 //         text="Read More"
 //       />
-//       <div className=" tw-pt-[2rem] tw-flex tw-justify-center lg:tw-hidden tw-gap-[1.25rem] ">
+//       <div className=" pt-[2rem] flex justify-center lg:hidden gap-[1.25rem] ">
 //         <button
 //           onClick={previous}
-//           className="  tw-text-white tw-leading-[22.4px] tw-font-inter tw-bg-darkPurple tw-rounded-tl-3xl tw-rounded-bl-3xl tw-rounded-tr-xl tw-rounded-br-xl tw-py-[1.15rem] tw-px-[0.92rem]"
+//           className="  text-white leading-[22.4px] font-inter bg-darkPurple rounded-tl-3xl rounded-bl-3xl rounded-tr-xl rounded-br-xl py-[1.15rem] px-[0.92rem]"
 //         >
-//           <LeftSlickArrowSvg className="tw-w-[1rem] tw-h-[0.57rem]" />
+//           <LeftSlickArrowSvg className="w-[1rem] h-[0.57rem]" />
 //         </button>
 //         <button
 //           onClick={next}
-//           className=" tw-text-white tw-leading-[22.4px] tw-font-inter tw-bg-darkPurple tw-rounded-tr-3xl tw-rounded-br-3xl tw-rounded-tl-xl tw-rounded-bl-xl tw-py-[1.15rem] tw-px-[0.92rem]"
+//           className=" text-white leading-[22.4px] font-inter bg-darkPurple rounded-tr-3xl rounded-br-3xl rounded-tl-xl rounded-bl-xl py-[1.15rem] px-[0.92rem]"
 //         >
-//           <RightSlickArrowSvg className="tw-w-[1rem] tw-h-[0.57rem]" />
+//           <RightSlickArrowSvg className="w-[1rem] h-[0.57rem]" />
 //         </button>
 //       </div>
 //     </div>
@@ -120,15 +120,15 @@ export function CarouselNews() {
       opts={{
         align: "start",
       }}
-      className="tw-w-full container tw-mx-auto tw-relative"
+      className="w-full container mx-auto relative"
     >
-      <CarouselContent className="~tw-px-[1.25rem] tw-w-fit ">
+      <CarouselContent className="~px-[1.25rem] w-fit ">
         {/* {Array.from({ length: 5 }).map((_, index) => ( */}
-        {/* <div className="~tw-px-[1.25rem]/0 tw-flex tw-gap-[1.25rem] tw-pt-[2.5rem] "> */}
+        {/* <div className="~px-[1.25rem]/0 flex gap-[1.25rem] pt-[2.5rem] "> */}
         {newsData.map((items, i) => (
           <CarouselItem
             key={i}
-            className="md:!tw-basis-1/1 lg:!tw-basis-1/2 xl:!tw-basis-1/3 tw-justify-center tw-gap-[1.25rem] tw-flex  tw-pt-[2.5rem]"
+            className="md:!basis-1/1 lg:!basis-1/2 xl:!basis-1/3 justify-center gap-[1.25rem] flex  pt-[2.5rem]"
           >
             <NewsCard src={items.src} text={items.text} />
           </CarouselItem>
@@ -136,7 +136,7 @@ export function CarouselNews() {
         {/* </div> */}
         {/* ))} */}
       </CarouselContent>
-      <div className="tw-absolute tw-bottom-[-5rem] lg:tw-bottom-auto tw-w-full  lg:tw-top-[-15rem] lg:~tw-right-0/[5rem] tw-flex tw-justify-center lg:tw-justify-end tw-gap-[1.25rem] ">
+      <div className="absolute bottom-[-5rem] lg:bottom-auto w-full  lg:top-[-15rem] lg:~right-0/[5rem] flex justify-center lg:justify-end gap-[1.25rem] ">
         <CarouselPrevious />
         <CarouselNext />
       </div>

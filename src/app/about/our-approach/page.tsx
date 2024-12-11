@@ -10,12 +10,12 @@ import ShapeTheFlow from "./_components/ShapeTheFlow";
 import FourPillars from "./_components/FourPillars";
 const page = () => {
   return (
-    <div className="tw-pt-[5rem]">
-      <div className="tw-relative tw-w-full">
+    <div className="pt-[5rem]">
+      <div className="relative w-full">
         <Image
           src={Bg}
           alt=""
-          className="tw-absolute ~tw-top-[-26rem]/[-4rem]  tw-right-0"
+          className="absolute ~top-[-26rem]/[-4rem]  right-0"
         />
         <ApproachHeroSection/>
         <ShapeTheFlow/>

@@ -25,14 +25,14 @@ const testimonialsArray: any[] = [
 ];
 const TestimonialsFromFounders = () => {
   return (
-    <div className="~tw-pt-[8.125rem]/[12.5rem] tw-pb-[7.404rem]">
-      <h2 className="tw-font-playFair ~tw-leading-[2.6rem]/[3.3rem] tw-text-gray80 ~tw-text-h4/h2 tw-text-center">
+    <div className="~pt-[8.125rem]/[12.5rem] pb-[7.404rem]">
+      <h2 className="font-playFair ~leading-[2.6rem]/[3.3rem] text-gray80 ~text-h4/h2 text-center">
         Philanthropist
-        <span className="tw-font-playFairItalic tw-text-textPurple">
+        <span className="font-playFairItalic text-textPurple">
           &nbsp;Speak
         </span>
       </h2>
-      <p className="~tw-text-h9Copy5/h9Copy4 ~tw-leading-[1.225rem]/[1.4rem] tw-text-midGray ~tw-pt-[0.8rem]/[1.25rem] tw-text-center">
+      <p className="~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] text-midGray ~pt-[0.8rem]/[1.25rem] text-center">
         Some testimonials from our Founders.
       </p>
       <TestimonialSlick slickArray={testimonialsArray} />

@@ -45,46 +45,46 @@ const CarouselRespNews = () => {
     }
   };
   return (
-    <div className="tw-flex md:tw-hidden tw-flex-col tw-relative tw-items-center">
-      <div className="tw-absolute tw-top-[-17rem] tw-right-[7rem] tw-hidden   xl:tw-flex tw-justify-center tw-gap-[1.25rem] ">
+    <div className="flex md:hidden flex-col relative items-center">
+      <div className="absolute top-[-17rem] right-[7rem] hidden   xl:flex justify-center gap-[1.25rem] ">
         <button
           onClick={previous}
-          className="  tw-text-white tw-leading-[22.4px] tw-font-inter tw-bg-darkPurple tw-rounded-tl-3xl tw-rounded-bl-3xl tw-rounded-tr-xl tw-rounded-br-xl tw-py-[1.15rem] tw-px-[0.92rem]"
+          className="  text-white leading-[22.4px] font-inter bg-darkPurple rounded-tl-3xl rounded-bl-3xl rounded-tr-xl rounded-br-xl py-[1.15rem] px-[0.92rem]"
         >
-          <LeftSlickArrowSvg className="tw-w-[1rem] tw-h-[0.57rem]" />
+          <LeftSlickArrowSvg className="w-[1rem] h-[0.57rem]" />
         </button>
         <button
           onClick={next}
-          className=" tw-text-white tw-leading-[22.4px] tw-font-inter tw-bg-darkPurple tw-rounded-tr-3xl tw-rounded-br-3xl tw-rounded-tl-xl tw-rounded-bl-xl tw-py-[1.15rem] tw-px-[0.92rem]"
+          className=" text-white leading-[22.4px] font-inter bg-darkPurple rounded-tr-3xl rounded-br-3xl rounded-tl-xl rounded-bl-xl py-[1.15rem] px-[0.92rem]"
         >
-          <RightSlickArrowSvg className="tw-w-[1rem] tw-h-[0.57rem]" />
+          <RightSlickArrowSvg className="w-[1rem] h-[0.57rem]" />
         </button>
       </div>
       <div
         ref={carouselRef}
-        className="~/lg:~tw-px-[1.25rem]/[18.5rem] tw-flex tw-gap-[1.25rem] tw-pt-[2.5rem] tw-snap-x tw-snap-mandatory tw-overflow-x-scroll no-scrollbar tw-w-full"
+        className="~/lg:~px-[1.25rem]/[18.5rem] flex gap-[1.25rem] pt-[2.5rem] snap-x snap-mandatory overflow-x-scroll no-scrollbar w-full"
       >
         {newsData.map((items, i) => (
           <NewsCard key={i} src={items.src} text={items.text} />
         ))}
       </div>
       {/* <OutlineButton
-        buttonClassName="!tw-rounded-full !tw-w-fit tw-mt-[2.5rem]"
-        className=" !tw-px-[1.75rem]  tw-py-[0.75rem] "
+        buttonClassName="!rounded-full !w-fit mt-[2.5rem]"
+        className=" !px-[1.75rem]  py-[0.75rem] "
         text="Read More"
       /> */}
-      <div className=" tw-pt-[2rem] tw-flex tw-justify-center xl:tw-hidden tw-gap-[1.25rem] ">
+      <div className=" pt-[2rem] flex justify-center xl:hidden gap-[1.25rem] ">
         <button
           onClick={previous}
-          className="  tw-text-white tw-leading-[22.4px] tw-font-inter tw-bg-darkPurple tw-rounded-tl-3xl tw-rounded-bl-3xl tw-rounded-tr-xl tw-rounded-br-xl tw-py-[1.15rem] tw-px-[0.92rem]"
+          className="  text-white leading-[22.4px] font-inter bg-darkPurple rounded-tl-3xl rounded-bl-3xl rounded-tr-xl rounded-br-xl py-[1.15rem] px-[0.92rem]"
         >
-          <LeftSlickArrowSvg className="tw-w-[1rem] tw-h-[0.57rem]" />
+          <LeftSlickArrowSvg className="w-[1rem] h-[0.57rem]" />
         </button>
         <button
           onClick={next}
-          className=" tw-text-white tw-leading-[22.4px] tw-font-inter tw-bg-darkPurple tw-rounded-tr-3xl tw-rounded-br-3xl tw-rounded-tl-xl tw-rounded-bl-xl tw-py-[1.15rem] tw-px-[0.92rem]"
+          className=" text-white leading-[22.4px] font-inter bg-darkPurple rounded-tr-3xl rounded-br-3xl rounded-tl-xl rounded-bl-xl py-[1.15rem] px-[0.92rem]"
         >
-          <RightSlickArrowSvg className="tw-w-[1rem] tw-h-[0.57rem]" />
+          <RightSlickArrowSvg className="w-[1rem] h-[0.57rem]" />
         </button>
       </div>
     </div>

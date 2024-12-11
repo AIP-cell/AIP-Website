@@ -18,28 +18,28 @@ const datas = [
 
 const PositionsGrid = () => {
   return (
-    <div className="tw-relative ~tw-pt-[1rem]/[3rem]">
+    <div className="relative ~pt-[1rem]/[3rem]">
       {datas.map((item, i) => (
         <div
           key={i}
-          className="tw-flex tw-flex-col md:tw-flex-row tw-justify-between ~tw-gap-0/[5.4rem] tw-w-full  tw-py-8  tw-border-b tw-border-gray10"
+          className="flex flex-col md:flex-row justify-between ~gap-0/[5.4rem] w-full  py-8  border-b border-gray10"
         >
           <div className="">
-            <p className="tw-font-playFair ~tw-text-h4a/h4 tw-text-gray80 ~tw-leading-[2.113rem]/[2.6rem]">
+            <p className="font-playFair ~text-h4a/h4 text-gray80 ~leading-[2.113rem]/[2.6rem]">
               {item.title}
             </p>
-            <p className="tw-py-4 ~tw-text-h9Copy5/h9Copy4 ~tw-leading-[1.225rem]/[1.4rem] tw-font-inter tw-text-midGray">
+            <p className="py-4 ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] font-inter text-midGray">
               {item.desc}
             </p>
           </div>
-          <div className="tw-text-end tw-leading-[1.4rem] ~tw-pt-[2rem]/0 tw-font-inter tw-w-fit tw-flex tw-items-end ~tw-pb-0/4">
+          <div className="text-end leading-[1.4rem] ~pt-[2rem]/0 font-inter w-fit flex items-end ~pb-0/4">
             <ButtonAnimation className="  ">
               <Link
                 href=""
-                className="tw-font-inter tw-border-2 tw-border-darkPurple tw-text-h9BodyCopy5 tw-rounded-3xl tw-flex tw-items-center tw-gap-2 leading-[1.225rem]  tw-text-darkPurple tw-font-medium hover:tw-text-white tw-bg-white tw-px-[1.75rem] tw-py-[0.75rem] hover:tw-bg-darkPurple"
+                className="font-inter border-2 border-darkPurple text-h9BodyCopy5 rounded-3xl flex items-center gap-2 leading-[1.225rem]  text-darkPurple font-medium hover:text-white bg-white px-[1.75rem] py-[0.75rem] hover:bg-darkPurple"
               >
                 <p>Apply</p>
-                <UserCheckSvg className="tw-size-[1.25rem]" />
+                <UserCheckSvg className="size-[1.25rem]" />
                 {/* <Image src={UserCheck} alt="arrow down" /> */}
               </Link>
             </ButtonAnimation>

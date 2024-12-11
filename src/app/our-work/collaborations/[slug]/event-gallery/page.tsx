@@ -10,14 +10,14 @@ import GalleryImages from "./_components/GalleryImages";
 
 const page = () => {
   return (
-    <div className="tw-pt-[5rem]">
-      <div className=" tw-relative tw-w-full tw-overflow-hidden">
+    <div className="pt-[5rem]">
+      <div className=" relative w-full overflow-hidden">
         <Image
           src={projectBg}
           alt="bg"
-          className="tw-hidden lg:tw-block tw-absolute tw-top-[-8.5rem] tw-w-full tw-h-[30rem] "
+          className="hidden lg:block absolute top-[-8.5rem] w-full h-[30rem] "
         />
-        <div className="container tw-mx-auto tw-relative ~tw-px-5/[7.8rem] ~tw-pt-[4.313rem]/[5rem]">
+        <div className="container mx-auto relative ~px-5/[7.8rem] ~pt-[4.313rem]/[5rem]">
           <BreadCrump
             textOne="Our Work"
             linkOne="/our-work"
@@ -28,10 +28,10 @@ const page = () => {
             textFour="Event Gallery"
             linkFour="/our-work/collaborations/slug/event-gallery"
           />
-          <p className="tw-font-inter  tw-font-semibold tw-uppercase ~tw-text-h9Copy5/h9Copy4 ~tw-leading-[1.138rem]/[1.3rem] tw-text-purple40">
+          <p className="font-inter  font-semibold uppercase ~text-h9Copy5/h9Copy4 ~leading-[1.138rem]/[1.3rem] text-purple40">
             Systemic Impact Exemplars
           </p>
-          <p className="~tw-leading-[2.113rem]/[2.6rem] tw-font-playFair ~tw-text-h4a/h4 tw-text-gray80 tw-pt-5 ~tw-pb-0/[5rem] md:tw-tracking-[-0.02rem]">
+          <p className="~leading-[2.113rem]/[2.6rem] font-playFair ~text-h4a/h4 text-gray80 pt-5 ~pb-0/[5rem] md:tracking-[-0.02rem]">
             AIP hosts events across cities in the world. AIP is continuously
             bringing inspirational philanthropists together to help co-create
             this network and establish personal philanthropy as a means for

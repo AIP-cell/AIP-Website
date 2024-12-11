@@ -11,17 +11,17 @@ type Props = {
 
 const EnquiryLink = ({ image, alt, data, name }: Props) => {
   return (
-    <div className="tw-flex tw-items-center tw-gap-[.75rem] tw-pt-3">
-      <div className="tw-bg-gray10 tw-w-[2.5rem] tw-h-[2.5rem] tw-rounded-full tw-flex tw-items-center tw-justify-center me-1">
-        <Image src={image} className="tw-w-[1.125rem] tw-h-[0.875rem]" alt={alt} />
+    <div className="flex items-center gap-[.75rem] pt-3">
+      <div className="bg-gray10 w-[2.5rem] h-[2.5rem] rounded-full flex items-center justify-center me-1">
+        <Image src={image} className="w-[1.125rem] h-[0.875rem]" alt={alt} />
       </div>
       <div>
         {name && (
-          <p className="tw-font-inter  tw-font-bold tw-mb-1 tw-text-gray80 ~tw-text-h9Copy5/h9Copy4 ~tw-leading-[1.225rem]/[1.4rem]">
+          <p className="font-inter  font-bold mb-1 text-gray80 ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]">
             {name}
           </p>
         )}
-        <Link href="" className="tw-font-inter ~tw-text-h9Copy5/h9Copy4 ~tw-leading-[1.225rem]/[1.4rem] tw-text-gray80">{data}</Link>
+        <Link href="" className="font-inter ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] text-gray80">{data}</Link>
       </div>
     </div>
   );

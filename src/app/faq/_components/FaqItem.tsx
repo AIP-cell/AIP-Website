@@ -33,17 +33,17 @@
 //         <Disclosure key={i}>
 //           {({ open }) => (
 //             <>
-//               <DisclosureButton className="~tw-py-[1.25rem]/[1.75rem] tw-px-[1.25rem] tw-flex tw-justify-between tw-w-full">
+//               <DisclosureButton className="~py-[1.25rem]/[1.75rem] px-[1.25rem] flex justify-between w-full">
 //                 <div
-//                   className={`tw-text-h6M tw-font-inter tw-text-left ${
-//                     open ? "tw-text-textPurple" : "tw-text-gray80"
+//                   className={`text-h6M font-inter text-left ${
+//                     open ? "text-textPurple" : "text-gray80"
 //                   }`}
 //                 >
 //                   {items.Q}
 //                 </div>
 //                 <div
-//                   className={`tw-transform tw-size-5 tw-flex tw-justify-center tw-items-center tw-transition-all tw-duration-300  ${
-//                     open ? "tw-rotate-180" : "tw-rotate-0"
+//                   className={`transform size-5 flex justify-center items-center transition-all duration-300  ${
+//                     open ? "rotate-180" : "rotate-0"
 //                   }`}
 //                 >
 //                   {open ? (
@@ -53,10 +53,10 @@
 //                   )}
 //                 </div>
 //               </DisclosureButton>
-//               <DisclosurePanel className="tw-text-midGray tw-bg-bgGray5 tw-p-5  tw-rounded-t-[1.25rem] tw-font-inter tw-text-h9Copy5 tw-leading-[1.225rem]">
+//               <DisclosurePanel className="text-midGray bg-bgGray5 p-5  rounded-t-[1.25rem] font-inter text-h9Copy5 leading-[1.225rem]">
 //                 {items.A}
 //               </DisclosurePanel>
-//               <div className="tw-h-px tw-bg-gray20"></div>
+//               <div className="h-px bg-gray20"></div>
 //             </>
 //           )}
 //         </Disclosure>

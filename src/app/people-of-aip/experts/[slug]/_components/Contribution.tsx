@@ -29,14 +29,14 @@ const datas = [
 ];
 const Contribution = () => {
   return (
-    <div className="~tw-pt-[5rem]/[2.5rem] container tw-mx-auto tw-flex tw-flex-col tw-items-center">
-      <h2 className="~tw-text-h4/h2 ~tw-leading-[2.6rem]/[3.3rem] ~tw-pb-0/[1.75rem] tw-text-center tw-font-playFair tw-text-gray80">
-        <span className="tw-font-playFairItalic tw-text-textPurple">
+    <div className="~pt-[5rem]/[2.5rem] container mx-auto flex flex-col items-center">
+      <h2 className="~text-h4/h2 ~leading-[2.6rem]/[3.3rem] ~pb-0/[1.75rem] text-center font-playFair text-gray80">
+        <span className="font-playFairItalic text-textPurple">
           Selected
         </span>{" "}
         Works
       </h2>
-      <div className="~tw-pt-[2.5rem]/[3.25rem] ~tw-pb-[2.5rem]/[5.75rem] tw-grid md:tw-grid-cols-2 lg:tw-grid-cols-3 ~tw-gap-[2.5rem]/[4.5rem] ~tw-px-[1.25rem]/[8.125rem]">
+      <div className="~pt-[2.5rem]/[3.25rem] ~pb-[2.5rem]/[5.75rem] grid md:grid-cols-2 lg:grid-cols-3 ~gap-[2.5rem]/[4.5rem] ~px-[1.25rem]/[8.125rem]">
         {datas.map((item, i) => (
           <ResourceCard
             key={i}
@@ -51,8 +51,8 @@ const Contribution = () => {
       <ButtonAnimation className="">
         <OutlineButton
           text="See More"
-          buttonClassName="tw-py-[0.75rem] tw-px-[1.75rem] tw-rounded-full"
-          className="tw-text-h9Copy5 tw-leading-[1.225rem]"
+          buttonClassName="py-[0.75rem] px-[1.75rem] rounded-full"
+          className="text-h9Copy5 leading-[1.225rem]"
         />
       </ButtonAnimation>
     </div>
