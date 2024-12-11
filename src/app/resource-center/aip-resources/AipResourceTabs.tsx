@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { TabGroup, TabPanel, TabPanels } from "@headlessui/react";
-import ResourcesTabs from "../_components/ResourcesTabs";
+import TabListAndRespSelect from "../_components/TabListAndRespSelect";
 import CustomSelect from "@/components/custom/CustomSelect";
 import ResourceCard from "@/components/cards/ResourceCard";
 import CustomFilter from "@/components/custom/CustomFilter";
@@ -77,9 +77,36 @@ const filterDatas = [
   },
   { type: "Date", filter: ["data1", "data2"] },
 ];
-
+// const filterDatas = [
+//   {
+//     type: "domain",
+//     filter: [
+//       { id: "0", name: "0All" },
+//       { id: "1", name: "1All" },
+//       { id: "2", name: "2All" },
+//     ],
+//   },
+//   {
+//     type: "Type of Content",
+//     filter: [
+//       { id: "0", name: "0Content" },
+//       { id: "1", name: "1Content" },
+//     ],
+//   },
+//   {
+//     type: "Date",
+//     filter: [
+//       { id: "0", name: "0Date" },
+//       { id: "1", name: "1Date" },
+//     ],
+//   },
+// ];
 const AipResourceTabs = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const [domain, setDomain] = useState<string>(
+    filterDatas.at(0)!.filter.at(0)!
+  );
+  console.log("domain:::::", domain);
   return (
     <div>
       <TabGroup
@@ -87,8 +114,8 @@ const AipResourceTabs = () => {
         onChange={setSelectedIndex}
         className="tw-flex tw-flex-col tw-justify-center "
       >
-        <ResourcesTabs
-          resourcesArray={resourcesArray}
+        <TabListAndRespSelect
+          tabArray={resourcesArray}
           selectedIndex={selectedIndex}
           //   setSelected={setSelected}
           setSelectedIndex={setSelectedIndex}
@@ -102,14 +129,23 @@ const AipResourceTabs = () => {
               <p className="~tw-pb-[1.25rem]/0 tw-text-gray40  ~tw-text-h9Copy5/h9Copy4 ~tw-leading-[1.225rem]/[1.4rem]">
                 Filter by:
               </p>
-              <div className="tw-flex tw-flex-wrap tw-gap-[.75rem]">
-                {filterDatas.map((items, i) => (
-                  <CustomFilter
+              <div className="tw-relative tw-flex tw-flex-wrap tw-gap-[.75rem]">
+                <CustomFilter
+                  type={filterDatas.at(0)!.type}
+                  optionsArray={filterDatas.at(0)!.filter}
+                  selected={domain}
+                  setSelected={setDomain}
+                />
+                {/* <CustomFilter
                     type={items.type}
                     key={i}
                     optionsArray={items.filter}
                   />
-                ))}
+                  <CustomFilter
+                    type={items.type}
+                    key={i}
+                    optionsArray={items.filter}
+                  /> */}
               </div>
             </div>
             <div className="tw-pt-[3.25rem] tw-pb-[7.5rem] tw-grid md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-[4.5rem]">

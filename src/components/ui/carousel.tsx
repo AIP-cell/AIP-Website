@@ -1,15 +1,16 @@
 "use client";
 
 import * as React from "react";
-import { ArrowLeftIcon, ArrowRightIcon } from "@radix-ui/react-icons"
+import { ArrowLeftIcon, ArrowRightIcon } from "@radix-ui/react-icons";
 import useEmblaCarousel, {
   type UseEmblaCarouselType,
 } from "embla-carousel-react";
 
 import { Button } from "@/components/ui/button";
 import cn from "@/utils/tailwind";
-import LeftSlickArrowSvg from "../svg/LeftSlickArrowSvg";
 import RightSlickArrowSvg from "../svg/RightSlickArrowSvg";
+import LeftSlickArrowSvg from "../svg/LeftSlickArrowSvg";
+import SquareSizedArrow from "../svg/SquareSizedArrow";
 
 type CarouselApi = UseEmblaCarouselType[1];
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>;
@@ -163,7 +164,7 @@ const CarouselContent = React.forwardRef<
       <div
         ref={ref}
         className={cn(
-          "flex",
+          "tw-flex ",
           orientation === "horizontal"
             ? "tw--ml-4"
             : "tw--mt-4 tw-flex tw-flex-col",
@@ -188,7 +189,7 @@ const CarouselItem = React.forwardRef<
       role="group"
       aria-roledescription="slide"
       className={cn(
-        "tw-min-w-0 tw-shrink-0 tw-grow-0 tw-basis-full",
+        "tw-min-w-0 tw-shrink-0 tw-basis-full",
         orientation === "horizontal" ? "tw-pl-4" : "tw-pt-4",
         className
       )}
@@ -210,19 +211,22 @@ const CarouselPrevious = React.forwardRef<
       variant={variant}
       size={size}
       className={cn(
-        "tw-absolute tw-text-white tw-leading-[22.4px] tw-font-inter tw-bg-darkPurple tw-rounded-tl-3xl tw-rounded-bl-3xl tw-rounded-tr-xl tw-rounded-br-xl tw-p-[0.75rem]",
-        orientation === "horizontal"
-          ? // tw--left-12
-            // tw--translate-y-1/2
-            "tw-flex tw-justify-center tw-bottom-[-4rem] "
-          : "tw--top-12 tw-left-1/2 tw--translate-x-1/2 tw-rotate-90",
+        // "tw-absolute tw-text-white tw-leading-[22.4px] tw-font-inter tw-bg-darkPurple tw-rounded-tl-3xl tw-rounded-bl-3xl tw-rounded-tr-xl tw-rounded-br-xl tw-p-[0.75rem]",
+        " hover:tw-text-white tw-text-darkPurple tw-leading-[22.4px] tw-font-inter hover:tw-bg-darkPurple tw-bg-white tw-rounded-tl-3xl tw-rounded-bl-3xl tw-rounded-tr-xl tw-rounded-br-xl tw-p-[0.75rem] tw-h-fit",
+        // orientation === "horizontal"
+        //   ? // tw--left-12
+        //     // tw--translate-y-1/2
+        //     "tw-flex tw-justify-center tw-bottom-[-4rem] "
+        //   : "tw--top-12 tw-left-1/2 tw--translate-x-1/2 tw-rotate-90",
         className
       )}
       disabled={!canScrollPrev}
       onClick={scrollPrev}
       {...props}
     >
-      <ArrowLeftIcon className="tw-h-4 tw-w-4" />
+      <SquareSizedArrow className="tw-size-[1.25rem]" />
+      {/* <LeftSlickArrowSvg className="tw-w-[1rem] tw-h-[0.57rem] " /> */}
+      {/* <ArrowLeftIcon className="tw-h-4 tw-w-4" /> */}
       {/* <LeftSlickArrowSvg className="tw-h-4 tw-w-4" /> */}
       <span className="tw-sr-only">Previous slide</span>
     </Button>
@@ -242,20 +246,22 @@ const CarouselNext = React.forwardRef<
       variant={variant}
       size={size}
       className={cn(
-        "tw-absolute tw-h-8 tw-w-8 tw-text-white tw-leading-[22.4px] tw-font-inter tw-bg-darkPurple tw-rounded-tr-3xl tw-rounded-br-3xl tw-rounded-tl-xl tw-rounded-bl-xl tw-p-[0.75rem]",
-        orientation === "horizontal"
-          ? // tw--right-12 tw-top-1/2
-            // tw--translate-y-1/2
-            "tw-flex tw-justify-center tw-bottom-[-4rem] "
-          : "tw--bottom-12 tw-left-1/2 tw--translate-x-1/2 tw-rotate-90",
+        // "tw-absolute tw-h-8 tw-w-8 tw-text-white tw-leading-[22.4px] tw-font-inter tw-bg-darkPurple tw-rounded-tr-3xl tw-rounded-br-3xl tw-rounded-tl-xl tw-rounded-bl-xl tw-p-[0.75rem]",
+        "hover:tw-text-white  tw-text-darkPurple tw-leading-[22.4px] tw-font-inter hover:tw-bg-darkPurple tw-bg-white tw-rounded-tr-3xl tw-rounded-br-3xl  tw-p-[0.75rem] tw-h-fit",
+        // orientation === "horizontal"
+        //   ? // tw--right-12 tw-top-1/2
+        //     // tw--translate-y-1/2
+        //     "tw-flex tw-justify-center tw-bottom-[-4rem] "
+        //   : "tw--bottom-12 tw-left-1/2 tw--translate-x-1/2 tw-rotate-90",
         className
       )}
       disabled={!canScrollNext}
       onClick={scrollNext}
       {...props}
     >
-      {/* <RightSlickArrowSvg className="tw-h-4 tw-w-4" /> */}
-      <ArrowRightIcon className="tw-h-4 tw-w-4" />
+      <SquareSizedArrow className="tw-size-[1.25rem] tw-rotate-180" />
+      {/* <RightSlickArrowSvg className="tw-w-[1rem] tw-h-[0.57rem]" /> */}
+      {/* <ArrowRightIcon className="tw-h-4 tw-w-4" /> */}
       <span className="tw-sr-only">Next slide</span>
     </Button>
   );

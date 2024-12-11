@@ -3,7 +3,7 @@ import ResourceCard from "@/components/cards/ResourceCard";
 import CustomFilter from "@/components/custom/CustomFilter";
 import { TabGroup, TabPanel, TabPanels } from "@headlessui/react";
 import React, { useState } from "react";
-import ResourcesTabs from "../../_components/ResourcesTabs";
+import TabListAndRespSelect from "../../_components/TabListAndRespSelect";
 import FeaturesCuratedResource from "./FeaturesCuratedResource";
 import ExpertsCuratedResource from "./ExpertsCuratedResource";
 
@@ -26,8 +26,8 @@ const CuratedResourcesTabs = () => {
         onChange={setSelectedIndex}
         className="tw-flex tw-flex-col tw-justify-center "
       >
-        <ResourcesTabs
-          resourcesArray={resourcesArray}
+        <TabListAndRespSelect
+          tabArray={resourcesArray}
           selectedIndex={selectedIndex}
           //   setSelected={setSelected}
           setSelectedIndex={setSelectedIndex}

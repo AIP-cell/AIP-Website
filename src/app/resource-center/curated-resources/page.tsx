@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import BreadCrump from "@/components/bread-crump/BreadCrump";
 import ResourcesSm from "../_components/ResourcesSm";
-import ResourcesTabs from "../_components/ResourcesTabs";
+import TabListAndRespSelect from "../_components/TabListAndRespSelect";
 import { TabGroup, TabPanel, TabPanels } from "@headlessui/react";
 import CustomSelect from "@/components/custom/CustomSelect";
 import ResourceCard from "@/components/cards/ResourceCard";

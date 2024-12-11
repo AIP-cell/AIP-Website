@@ -14,7 +14,7 @@ const News = () => {
         </span>
       </div>
       <TabNews />
-      <RespNews/>
+      {/* <RespNews/> */}
     </div>
   );
 };

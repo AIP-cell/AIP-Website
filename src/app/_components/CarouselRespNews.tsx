@@ -45,7 +45,7 @@ const CarouselRespNews = () => {
     }
   };
   return (
-    <div className="tw-flex tw-flex-col tw-relative tw-items-center">
+    <div className="tw-flex md:tw-hidden tw-flex-col tw-relative tw-items-center">
       <div className="tw-absolute tw-top-[-17rem] tw-right-[7rem] tw-hidden   xl:tw-flex tw-justify-center tw-gap-[1.25rem] ">
         <button
           onClick={previous}
