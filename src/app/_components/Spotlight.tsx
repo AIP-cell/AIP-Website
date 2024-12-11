@@ -4,6 +4,7 @@ import ShapelessBrown from "@public/svg/shapelessBrown.svg";
 import Upcoming from "@public/images/upcoming.png";
 import React from "react";
 import { THomePageEvent } from "@/api/type";
+import { StorageUrl } from "@/utils/BaseUrl";
 
 type Props = {
   eventData: THomePageEvent;
@@ -19,16 +20,16 @@ const Spotlight = ({ eventData }: Props) => {
         </div>
         <div className="">
           <h4 className="~text-h4/h2 text-darkBlack pt-[0.75rem] ~leading-[2.6rem]/[3.3rem] font-playFair">
-            {/* {eventData?.title} */}
-            Wealth with Purpose Purpose
+            {eventData?.title}
+            {/* Wealth with Purpose Purpose */}
           </h4>
         </div>
 
         <p className="text-h9Copy4 leading-[1.4rem] text-midGray font-inter pt-[0.75rem]">
-          {/* {eventData?.description} */}
-          It gives us great pleasure to invite you for the launch of our report
+          {eventData?.description}
+          {/* It gives us great pleasure to invite you for the launch of our report
           - Systemic Impact Exemplars: Unique Approaches Towards Solving India’s
-          Development Challenges.
+          Development Challenges. */}
         </p>
 
         <div className="pt-[1.25rem]">
@@ -41,8 +42,8 @@ const Spotlight = ({ eventData }: Props) => {
       <div className="relative col-span-2 lg:col-span-1">
         <div className="relative z-[10] shrink-0  ~h-[14rem]/[22.1rem] rounded-2xl overflow-hidden">
           <Image
-            // src={eventData.image}
-            src={Upcoming}
+            src={StorageUrl + eventData?.image}
+            // src={Upcoming}
             alt="upcoming-Image"
             fill
             className="object-cover h-full w-full"

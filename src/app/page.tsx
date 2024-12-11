@@ -21,6 +21,7 @@ const page = async () => {
   const eventData = response.event;
   const teamData = response.team;
   const countData = response.count;
+  const newsData = response.newsAndUpdates;
   
   return (
     <div className="bg-bgLightPeach pt-[5rem] overflow-hidden">
@@ -31,7 +32,7 @@ const page = async () => {
       <Members countData={countData} />
       <AipWay />
       <Founder teamData={teamData} />
-      <News />
+      <News newsData={newsData}/>
     </div>
   );
 };

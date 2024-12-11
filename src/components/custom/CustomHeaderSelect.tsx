@@ -14,13 +14,13 @@ import cn from "@/utils/tailwind";
 
 type Props = {
   items: any;
-  isOpen: boolean;
-  setIsOpen: (value: boolean) => void;
+  // isOpen: boolean;
+  // setIsOpen: (value: boolean) => void;
 };
-const CustomHeaderSelect = ({ items, isOpen, setIsOpen }: Props) => {
-  const [selected, setSelected] = useState(items.label);
-  // const [isOpen, setIsOpen] = useState(true);
-  // const [isPathname, setIsPathname] = useState(false);
+const CustomHeaderSelect = ({ items }: Props) => {
+  // console.log("isOpen::::::", isOpen);
+  // const [selected, setSelected] = useState(items.label);
+
   const router = useRouter();
   const pathname = usePathname();
   let isPathname = "";
@@ -39,12 +39,7 @@ const CustomHeaderSelect = ({ items, isOpen, setIsOpen }: Props) => {
   }
   const options = items.options;
   return (
-    <Listbox
-      value={selected}
-      onChange={setSelected}
-      as="div"
-      className="w-full"
-    >
+    <Listbox as="div" className="w-full">
       <ListboxButton as="div" className={cn("w-full ")}>
         <ButtonAnimation className="w-full">
           <div className="flex flex-col ">
@@ -65,47 +60,40 @@ const CustomHeaderSelect = ({ items, isOpen, setIsOpen }: Props) => {
           </div>
         </ButtonAnimation>
       </ListboxButton>
-      {isOpen && (
-        <ListboxOptions
-          transition
-          anchor="bottom"
-          className={cn(
-            "ml-[5.6rem] no-scrollbar mt-[1rem] z-[10000] bg-purpleToBlue flex flex-col rounded-2xl w-[16.625rem] p-[0.5rem]"
-          )}
-        >
-          {options?.map((items: any, i: number) => (
-            <ListboxOption
-              key={i}
-              value={items.option}
-              className="data-[focus]:bg-blue-100 text-white cursor-pointer"
+
+      <ListboxOptions
+        transition
+        anchor="bottom"
+        className={cn(
+          "ml-[5.6rem] no-scrollbar mt-[1rem] z-[10000] bg-purpleToBlue flex flex-col rounded-2xl w-[16.625rem] p-[0.5rem]"
+        )}
+      >
+        {options?.map((items: any, i: number) => (
+          <ListboxOption
+            key={i}
+            value={items.option}
+            className="text-white cursor-pointer"
+          >
+            <ButtonAnimation
+              onClick={() => {
+                router.push(`${items.link}`);
+              }}
+              className={cn("w-full rounded-2xl hover:bg-[#2B092A4D] flex", {
+                "!bg-[#2B092A4D]": pathname === items.link,
+              })}
             >
-              <ButtonAnimation
-                onClick={() => {
-                  router.push(`${items.link}`);
-                  setIsOpen(!isOpen);
-                }}
+              <div
                 className={cn(
-                  "w-full rounded-2xl hover:bg-[#2B092A4D] flex",
-                  { "!bg-[#2B092A4D]": pathname === items.link }
+                  "hover:font-playFairItalic text-left pl-[1.25rem] transition-all duration-150 py-[0.8rem] w-full",
+                  { "!font-playFairItalic": pathname === items.link }
                 )}
               >
-                <div
-                  // onClick={() => {
-                  //   setIsOpen(!isOpen);
-                  // }}
-                  // href={items?.link}
-                  className={cn(
-                    "hover:font-playFairItalic text-left pl-[1.25rem] transition-all duration-150 py-[0.8rem] w-full",
-                    { "!font-playFairItalic": pathname === items.link }
-                  )}
-                >
-                  {items.option}
-                </div>
-              </ButtonAnimation>
-            </ListboxOption>
-          ))}
-        </ListboxOptions>
-      )}
+                {items.option}
+              </div>
+            </ButtonAnimation>
+          </ListboxOption>
+        ))}
+      </ListboxOptions>
     </Listbox>
   );
 };

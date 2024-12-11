@@ -49,7 +49,7 @@ const Members = ({ countData }: Props) => {
               textClass2="~text-h9Copy5/h9Copy4"
               text1={`${countData?.coreFoundersCount}`}
               text2="Core Founders"
-              mainClass=" absolute ~top-0/[-4rem] left-0 md:left-auto ~md:~right-[20rem]/[11.862rem] "
+              mainClass=" absolute ~top-0/[-4rem] left-0 lg:left-auto  ~md:~right-[20rem]/[11.862rem] "
             />
             <OvalPurple
               sizeClass="~size-[13rem]/[17.3rem]"

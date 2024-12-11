@@ -27,7 +27,7 @@ type Props = {
   setSelectedIndex: (value: number) => void;
 };
 const TabListAndRespSelect = ({
-  tabArray: tabArray,
+  tabArray,
   textClassName,
   listClassName,
   listboxButtonClassName,
@@ -44,7 +44,7 @@ const TabListAndRespSelect = ({
             <Tab
               className={` ~px-4/[2.4rem] md:flex justify-center w-full items-center py-[.75rem] data-[selected]:bg-darkPurple data-[selected]:text-white data-[selected]:rounded-full text-h9Copy5 leading-[1.22rem] font-inter data-[selected]:outline-none ${textClassName}`}
             >
-              {items}
+              {items.tab}
             </Tab>
           </div>
         ))}
@@ -64,7 +64,7 @@ const TabListAndRespSelect = ({
             className={`flex gap-[.79rem] text-darkPurple text-h9Copy5 pl-[1.75rem] py-[1rem] items-center w-full justify-between `}
           >
             <p className="   leading-[1.4rem] ">
-              {tabArray.at(selectedIndex)}
+              {tabArray.at(selectedIndex).tab}
             </p>
             <DownTagSvg className="size-[1.25rem]" />
           </div>
@@ -79,7 +79,7 @@ const TabListAndRespSelect = ({
               value={i}
               className="data-[focus]:bg-blue-100 text-darkPurple text-center text-h9Copy5 leading-[1.225rem] cursor-pointer"
             >
-              {items}
+              {items.tab}
             </ListboxOption>
           ))}
         </ListboxOptions>

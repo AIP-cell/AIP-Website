@@ -27,7 +27,7 @@ const headerData = [
     ],
   },
   {
-    id: "people-of-aip/founders",
+    id: "people-of-aip",
     label: "People of AIP",
     options: [
       { option: "Our Core Founders", link: "/people-of-aip/core-founders" },
@@ -74,7 +74,7 @@ const headerData = [
   { id: "contact", name: "Contact", link: "/contact" },
 ];
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  // const [isOpen, setIsOpen] = useState(true);
 
   return (
     <div className=" z-[10000] fixed right-0 left-0 top-0 max-xl:bg-toRightPurpleToBlue xl:bg-white  ">
@@ -96,8 +96,8 @@ const Header = () => {
                 <div className="flex gap-[2.5rem]">
                   <CustomHeaderSelect
                     items={items}
-                    isOpen={isOpen}
-                    setIsOpen={setIsOpen}
+                    // isOpen={isOpen}
+                    // setIsOpen={setIsOpen}
                   />
                 </div>
               ) : (

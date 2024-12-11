@@ -98,6 +98,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import NewsCard from "@/components/cards/NewsCard";
+import { THomePageNewsInTheMedia } from "@/api/type";
 
 const newsData = [
   {
@@ -112,9 +113,11 @@ const newsData = [
     src: "/images/news/newsDemo.png",
     text: "An ugam is a starting point from where river begins.",
   },
-  
 ];
-export function CarouselNews() {
+type Props = {
+  newsArray: THomePageNewsInTheMedia[];
+};
+export function CarouselNews({ newsArray }: Props) {
   return (
     <Carousel
       opts={{
@@ -123,18 +126,14 @@ export function CarouselNews() {
       className="w-full container mx-auto relative"
     >
       <CarouselContent className="~px-[1.25rem] w-fit ">
-        {/* {Array.from({ length: 5 }).map((_, index) => ( */}
-        {/* <div className="~px-[1.25rem]/0 flex gap-[1.25rem] pt-[2.5rem] "> */}
-        {newsData.map((items, i) => (
+        {newsArray.map((items, i) => (
           <CarouselItem
             key={i}
-            className="md:!basis-1/1 lg:!basis-1/2 xl:!basis-1/3 justify-center gap-[1.25rem] flex  pt-[2.5rem]"
+            className="md:!basis-1/2 lg:!basis-1/2 xl:!basis-1/3 justify-center gap-[1.25rem] flex  pt-[2.5rem]"
           >
-            <NewsCard src={items.src} text={items.text} />
+            <NewsCard src={items.image} text={items.description} />
           </CarouselItem>
         ))}
-        {/* </div> */}
-        {/* ))} */}
       </CarouselContent>
       <div className="absolute bottom-[-5rem] lg:bottom-auto w-full  lg:top-[-15rem] lg:~right-0/[5rem] flex justify-center lg:justify-end gap-[1.25rem] ">
         <CarouselPrevious />

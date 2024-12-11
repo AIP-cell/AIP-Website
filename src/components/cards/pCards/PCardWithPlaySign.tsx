@@ -13,6 +13,7 @@ type Props = {
 
 };
 const PCardWithPlaySign = ({ image, name, post, desc,linkedin }: Props) => {
+  console.log("image::::", image)
   return (
     <div className="w-[18.43rem] relative ">
       {linkedin && (
@@ -38,9 +39,9 @@ const PCardWithPlaySign = ({ image, name, post, desc,linkedin }: Props) => {
         <h4 className="text-h5 font-playFair text-lightPurplePink font-medium italic line-clamp-1 text-ellipsis">
           {post}
         </h4>
-        <p className="text-h9Copy4 leading-[1.4rem] line-clamp-4 md:line-clamp-5 text-ellipsis font-inter text-[#DFE0E5] ">
-          {desc}
-        </p>
+        <div dangerouslySetInnerHTML={{ __html: desc || "" }} className="text-h9Copy4 leading-[1.4rem] line-clamp-4 md:line-clamp-5 text-ellipsis font-inter text-[#DFE0E5] ">
+          {/* {desc} */}
+        </div>
       </div>
     </div>
   );

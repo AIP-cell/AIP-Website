@@ -3,8 +3,12 @@
 import React from "react";
 import TabNews from "./TabNews";
 import RespNews from "./RespNews";
+import { THomePageNews } from "@/api/type";
 
-const News = () => {
+type Props={
+  newsData:THomePageNews
+}
+const News = ({newsData}:Props) => {
   return (
     <div className="flex container mx-auto flex-col justify-center pt-[5rem]  pb-[8.5rem]">
       <div className="~text-h4/h2 font-playFair ~px-[1.25rem]/[14.375rem] text-midGray ~pb-[2rem]/[3.5rem] text-center ~leading-[2.6rem]/[3.3rem]">
@@ -13,7 +17,7 @@ const News = () => {
           &nbsp;news and updates
         </span>
       </div>
-      <TabNews />
+      <TabNews newsData={newsData}/>
       {/* <RespNews/> */}
     </div>
   );

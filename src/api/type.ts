@@ -30,7 +30,7 @@ export type THomePageNews = {
   inTheMedia: THomePageNewsInTheMedia[];
   aipUpdates: THomePageNewsAipUpdates[];
   partner: THomePageNewsPartner[];
-  worldOfPhilanthropy: THomePageNewsWorldOfPhilanthropy;
+  worldOfPhilanthropy: THomePageNewsWorldOfPhilanthropy[]
 };
 export type THomePageNewsInTheMedia = {
   _id: string;

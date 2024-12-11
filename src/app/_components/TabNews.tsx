@@ -6,6 +6,7 @@ import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 import TabListAndRespSelect from "../resource-center/_components/TabListAndRespSelect";
 import CarouselRespNews from "./CarouselRespNews";
 import { CarouselNews } from "./CarouselNews";
+import { THomePageNews } from "@/api/type";
 // const newsData = [
 //   {
 //     src: "/images/news/newsDemo.png",
@@ -21,13 +22,17 @@ import { CarouselNews } from "./CarouselNews";
 //   },
 // ];
 const newsTabArray = [
-  "About AIP",
-  "From Partners",
-  "In the Media",
-  "World of Philanthropy",
+  { key: "aipUpdates", tab: "About AIP" },
+  { key: "partner", tab: "From Partners" },
+  { key: "inTheMedia", tab: "In the Media" },
+  { key: "worldOfPhilanthropy", tab: "World of Philanthropy" },
 ];
-const TabNews = () => {
+type Props = {
+  newsData: THomePageNews;
+};
+const TabNews = ({ newsData }: Props) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
+
   return (
     <div className="  ">
       <TabGroup
@@ -35,39 +40,31 @@ const TabNews = () => {
         onChange={setSelectedIndex}
         className="flex flex-col items-center w-full"
       >
-        {/* <div className="flex justify-center">
-          <TabList className="flex bg-[#F0F0F2] p-1 rounded-full w-fit">
-            <Tab className="~px-[1rem]/[2.5rem]  ~py-[1rem]/[0.75rem] data-[selected]:bg-darkPurple data-[selected]:text-white data-[selected]:rounded-full text-h9Copy5 leading-[1.22rem] font-inter data-[selected]:outline-none">
-              About AIP
-            </Tab>
-            <Tab className="~px-[1rem]/[2.5rem] ~py-[1rem]/[0.75rem] data-[selected]:bg-darkPurple data-[selected]:text-white data-[selected]:rounded-full text-h9Copy5 leading-[1.22rem] font-inter data-[selected]:outline-none">
-              From Partners
-            </Tab>
-            <Tab className="~px-[1rem]/[2.5rem] ~py-[1rem]/[0.75rem] data-[selected]:bg-darkPurple data-[selected]:text-white data-[selected]:rounded-full text-h9Copy5 leading-[1.22rem] font-inter data-[selected]:outline-none">
-              In the Media
-            </Tab>
-            <Tab className="~px-[1rem]/[2.5rem] ~py-[1rem]/[0.75rem] data-[selected]:bg-darkPurple data-[selected]:text-white data-[selected]:rounded-full text-h9Copy5 leading-[1.22rem] font-inter data-[selected]:outline-none">
-              World of Philanthropy
-            </Tab>
-          </TabList>
-        </div> */}
         <div className="px-[1.25rem] w-full flex justify-center ">
           <TabListAndRespSelect
             tabArray={newsTabArray}
             selectedIndex={selectedIndex}
-            //   setSelected={setSelected}
             setSelectedIndex={setSelectedIndex}
             listboxButtonClassName="w-full"
           />
         </div>
-        <TabPanels>
-          <TabPanel>
-            <CarouselNews />
-            {/* <CarouselRespNews /> */}
-          </TabPanel>
-          <TabPanel>
-            <div className="pt-[2.5rem]">AIP - Partners content</div>
-          </TabPanel>
+        <TabPanels className="~px-[1.25rem]/0">
+          {newsTabArray.map((items, i) => (
+            <TabPanel key={i}>
+              {items.key == "inTheMedia" && (
+                <CarouselNews newsArray={newsData.inTheMedia} />
+              )}
+              {items.key == "partner" && (
+                <CarouselNews newsArray={newsData.partner} />
+              )}
+              {items.key == "worldOfPhilanthropy" && (
+                <CarouselNews newsArray={newsData.worldOfPhilanthropy} />
+              )}
+              {items.key == "aipUpdates" && (
+                <CarouselNews newsArray={newsData.aipUpdates} />
+              )}
+            </TabPanel>
+          ))}
         </TabPanels>
       </TabGroup>
     </div>

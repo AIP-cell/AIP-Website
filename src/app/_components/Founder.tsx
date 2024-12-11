@@ -49,7 +49,7 @@ const Founder = ({ teamData }: Props) => {
   const [select, setSelect] = useState<number>(0);
   const isDesktop = useMediaQuery({ query: "(min-width: 768px)" });
   const itemsPerSlide = isDesktop ? 4 : 1;
-  const arrayLength = founderData.length;
+  const arrayLength = teamData.length;
   const isClient = useClient();
   if (!isClient) {
     return;
@@ -109,42 +109,36 @@ const Founder = ({ teamData }: Props) => {
                 <div className="block lg:hidden relative pt-[3.43rem]">
                   <>
                     <div
-                      className={cn(
-                        "flex justify-center items-center",
-                        {
-                          "hidden": select % 2 === 1,
-                        }
-                      )}
+                      className={cn("flex justify-center items-center", {
+                        hidden: select % 2 === 1,
+                      })}
                     >
                       <ACardWithPlaySign
                         linkedin={true}
-                        image={founderData.at(select)!.image}
-                        desc={founderData.at(select)!.desc}
-                        post={founderData.at(select)!.post}
-                        name={founderData.at(select)!.name}
+                        image={teamData.at(select)!.image}
+                        desc={teamData.at(select)!.description}
+                        post={teamData.at(select)!.designation}
+                        name={teamData.at(select)!.name}
                       />
                     </div>
                     <div
-                      className={cn(
-                        "flex justify-center items-center",
-                        {
-                          "hidden": select % 2 === 0,
-                        }
-                      )}
+                      className={cn("flex justify-center items-center", {
+                        hidden: select % 2 === 0,
+                      })}
                     >
                       <PCardWithPlaySign
                         linkedin={true}
-                        image={founderData.at(select)!.image}
-                        desc={founderData.at(select)!.desc}
-                        post={founderData.at(select)!.post}
-                        name={founderData.at(select)!.name}
+                        image={teamData.at(select)!.image}
+                        desc={teamData.at(select)!.description}
+                        post={teamData.at(select)!.designation}
+                        name={teamData.at(select)!.name}
                       />
                     </div>
                   </>
                 </div>
                 <div className="md:hidden flex justify-center w-full  pt-[2.5rem]">
                   <div className=" w-[4.5rem] flex gap-[0.5rem] ">
-                    {founderData.map((items: any, index: number) => (
+                    {teamData.map((items: any, index: number) => (
                       <div
                         key={index}
                         className={cn(
@@ -157,7 +151,7 @@ const Founder = ({ teamData }: Props) => {
                 </div>
                 <div className="hidden lg:block relative pt-[3.43rem] ">
                   {(() => {
-                    const arrayWithFour = founderData.slice(
+                    const arrayWithFour = teamData.slice(
                       select,
                       select + itemsPerSlide
                     );
@@ -172,8 +166,8 @@ const Founder = ({ teamData }: Props) => {
                                 key={i}
                                 linkedin
                                 image={items.image}
-                                desc={items.desc}
-                                post={items.post}
+                                desc={items.description}
+                                post={items.designation}
                                 name={items.name}
                               />
                             ) : (
@@ -182,8 +176,8 @@ const Founder = ({ teamData }: Props) => {
                                   key={i}
                                   linkedin
                                   image={items.image}
-                                  desc={items.desc}
-                                  post={items.post}
+                                  desc={items.description}
+                                  post={items.designation}
                                   name={items.name}
                                 />
                               )
@@ -198,8 +192,8 @@ const Founder = ({ teamData }: Props) => {
                                 key={i}
                                 linkedin
                                 image={items.image}
-                                desc={items.desc}
-                                post={items.post}
+                                desc={items.description}
+                                post={items.designation}
                                 name={items.name}
                               />
                             ) : (
@@ -207,8 +201,8 @@ const Founder = ({ teamData }: Props) => {
                                 key={i}
                                 linkedin
                                 image={items.image}
-                                desc={items.desc}
-                                post={items.post}
+                                desc={items.description}
+                                post={items.designation}
                                 name={items.name}
                               />
                             )
