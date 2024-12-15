@@ -2,6 +2,7 @@ import React from "react";
 import TestimonialSlick from "../../../../../components/slick/TestimonialSlick";
 import RightWave from "@public/svg/about/aip-impact/testimonialLeftPeachWave.svg";
 import Image from "next/image";
+import { TTestimonials } from "@/api/type";
 const testimonialsArray: any[] = [
   {
     image: "/images/sample.png",
@@ -28,7 +29,10 @@ const testimonialsArray: any[] = [
     desc: "“I believe those who are already in philanthropy and enjoying it and making a difference have a responsibility to share their stories widely, and to be very transparent about their giving. By promoting such accountability, AIP is playing an essential role in building trust with the communities we serve.” ",
   },
 ];
-const Testimonials = () => {
+type Props={
+  testimonialsData:TTestimonials[]
+}
+const Testimonials = ({testimonialsData}:Props) => {
   return (
     <div className="~mt-[7.5rem]/[12.5rem] relative">
       <Image
@@ -46,7 +50,7 @@ const Testimonials = () => {
         <p className="~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] text-midGray ~pt-[0.8rem]/[1.25rem] text-center">
           Some testimonials from our philanthropists.
         </p>
-        <TestimonialSlick slickArray={testimonialsArray} />
+        <TestimonialSlick slickArray={testimonialsData} />
       </div>
     </div>
   );

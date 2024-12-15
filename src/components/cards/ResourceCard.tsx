@@ -2,26 +2,30 @@ import Image from "next/image";
 import React from "react";
 import EyeSvg from "../svg/EyeSvg";
 import DownloadFileSvg from "../svg/DowloadFileSvg";
+import dayjs from "dayjs";
+import { StorageUrl } from "@/utils/BaseUrl";
 type Props = {
   src: string;
   title: string;
   desc: string;
   category: string;
   name?: string;
+  date?: string;
 };
-const ResourceCard = ({ src, title, desc, category, name }: Props) => {
+const ResourceCard = ({ src, title, desc, category, name, date }: Props) => {
+  const dateFormat = dayjs(date).format("D MMMM");
   return (
     // justify-center
     <div className="flex flex-col  items-center ~gap-[1.25rem]/[0.75rem]">
       <div className="relative w-full ~h-[19.688rem]/[16.594rem]">
         <Image
-          src={src}
+          src={StorageUrl + src}
           alt="svg"
           fill
           className="object-cover rounded-[1.25rem]"
         />
       </div>
-      <div className="flex flex-col  items-center gap-[0.75rem]">
+      <div className="flex flex-col w-full gap-[0.75rem]">
         <p className=" w-full text-h6M text-gray80 font-inter font-semibold leading-[1.575rem] underline underline-offset-4 decoration-[1.5px]">
           {title}
         </p>
@@ -36,7 +40,7 @@ const ResourceCard = ({ src, title, desc, category, name }: Props) => {
       </div>
       <div className="h-px bg-footerGray w-full"></div>
       <div className="flex justify-between w-full text-h9Copy5 text-gray50 font-inter leading-[1.225rem]">
-        <p>11 Jul 2024</p>
+        <p>{dateFormat}</p>
         <p>{category}</p>
       </div>
       {/* <div className="h-px bg-footerGray w-full"></div>

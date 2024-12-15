@@ -6,7 +6,8 @@ import Link from "next/link";
 type Props = {
   linkedin: boolean;
   title: string;
-  title2: string;
+  title2?: string;
+  image: string;
   location?: string;
   email?: string;
   desc: string;
@@ -16,6 +17,7 @@ type Props = {
 };
 const PTeamCard = ({
   linkedin,
+  image,
   title,
   title2,
   location,
@@ -27,7 +29,7 @@ const PTeamCard = ({
 }: Props) => {
   return (
     <div className="max-[23rem]:w-[8rem] ~w-[10.3rem]/[11.87rem] relative">
-      <PMediumSizeSvg src="/images/sample.png" />
+      <PMediumSizeSvg src={image} />
       {linkedin && (
         <Image
           src={Linkedin}

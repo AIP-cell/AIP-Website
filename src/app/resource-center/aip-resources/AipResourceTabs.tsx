@@ -5,14 +5,16 @@ import TabListAndRespSelect from "../_components/TabListAndRespSelect";
 import CustomSelect from "@/components/custom/CustomSelect";
 import ResourceCard from "@/components/cards/ResourceCard";
 import CustomFilter from "@/components/custom/CustomFilter";
+import { TAipResourcesCategory } from "@/api/type";
+import { generatingSearchParam } from "@/utils/UrlHelper";
 
 const resourcesArray = [
-  "AIP Updates",
-  "Reports & Publications",
-  " Newsletter",
-  " Inspirational Voices",
-  " In the Media",
-  " Gallery",
+  { tab: "AIP Updates" },
+  { tab: "Reports & Publications" },
+  { tab: "Newsletter" },
+  { tab: "Inspirational Voices" },
+  { tab: "In the Media" },
+  { tab: "Gallery" },
 ];
 const datas = [
   {
@@ -101,12 +103,13 @@ const filterDatas = [
 //     ],
 //   },
 // ];
-const AipResourceTabs = () => {
+type Props = {
+  tabData: TAipResourcesCategory[];
+  category: string;
+};
+const AipResourceTabs = ({ tabData, category }: Props) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const [domain, setDomain] = useState<string>(
-    filterDatas.at(0)!.filter.at(0)!
-  );
-  console.log("domain:::::", domain);
+
   return (
     <div>
       <TabGroup
@@ -123,7 +126,32 @@ const AipResourceTabs = () => {
           listClassName="!w-full"
         />
         <TabPanels className="">
-          <TabPanel>aaa</TabPanel>
+          <TabPanel>
+            <div className="flex flex-wrap pt-[2rem] items-center gap-[0.75rem]">
+              <p className="~pb-[1.25rem]/0 text-gray40  ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]">
+                Filter by:
+              </p>
+              <div className="relative flex flex-wrap gap-[.75rem]">
+                <CustomFilter
+                  category={category}
+                  type={filterDatas.at(0)!.type}
+                  optionsArray={filterDatas.at(0)!.filter}
+                />
+              </div>
+            </div>
+            <div className="pt-[3.25rem] pb-[7.5rem] grid md:grid-cols-2 lg:grid-cols-3 gap-[4.5rem]">
+              {tabData.map((item, i) => (
+                <ResourceCard
+                  key={i}
+                  src={item.image}
+                  title={item.title}
+                  desc={item.description}
+                  category={item.domain}
+                />
+              ))}
+            </div>
+          </TabPanel>
+
           <TabPanel>
             <div className="flex flex-wrap pt-[2rem] items-center gap-[0.75rem]">
               <p className="~pb-[1.25rem]/0 text-gray40  ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]">
@@ -133,37 +161,133 @@ const AipResourceTabs = () => {
                 <CustomFilter
                   type={filterDatas.at(0)!.type}
                   optionsArray={filterDatas.at(0)!.filter}
-                  selected={domain}
-                  setSelected={setDomain}
+                  // selected={domain}
+                  // setSelected={setDomain}
+                  category={category}
                 />
-                {/* <CustomFilter
-                    type={items.type}
-                    key={i}
-                    optionsArray={items.filter}
-                  />
-                  <CustomFilter
-                    type={items.type}
-                    key={i}
-                    optionsArray={items.filter}
-                  /> */}
               </div>
             </div>
             <div className="pt-[3.25rem] pb-[7.5rem] grid md:grid-cols-2 lg:grid-cols-3 gap-[4.5rem]">
-              {datas.map((item, i) => (
+              {tabData.map((item, i) => (
                 <ResourceCard
                   key={i}
-                  src={item.src}
+                  src={item.image}
                   title={item.title}
-                  desc={item.desc}
-                  category={item.category}
+                  desc={item.description}
+                  category={item.domain}
                 />
               ))}
             </div>
           </TabPanel>
-          <TabPanel>Content 3</TabPanel>
-          <TabPanel>Content 4</TabPanel>
-          <TabPanel>Content 5</TabPanel>
-          <TabPanel>Content 6</TabPanel>
+          <TabPanel>
+            <div className="flex flex-wrap pt-[2rem] items-center gap-[0.75rem]">
+              <p className="~pb-[1.25rem]/0 text-gray40  ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] col-span-2">
+                Filter by:
+              </p>
+              <div className="relative flex flex-wrap gap-[.75rem]">
+                <CustomFilter
+                  category={category}
+                  type={filterDatas.at(0)!.type}
+                  optionsArray={filterDatas.at(0)!.filter}
+                  // selected={domain}
+                  // setSelected={setDomain}
+                />
+              </div>
+            </div>
+            <div className="pt-[3.25rem] pb-[7.5rem] grid md:grid-cols-2 lg:grid-cols-3 gap-[4.5rem]">
+              {tabData.map((item, i) => (
+                <ResourceCard
+                  key={i}
+                  src={item.image}
+                  title={item.title}
+                  desc={item.description}
+                  category={item.domain}
+                />
+              ))}
+            </div>
+          </TabPanel>
+          <TabPanel>
+            <div className="flex flex-wrap pt-[2rem] items-center gap-[0.75rem]">
+              <p className="~pb-[1.25rem]/0 text-gray40  ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]">
+                Filter by:
+              </p>
+              <div className="relative flex flex-wrap gap-[.75rem]">
+                <CustomFilter
+                  category={category}
+                  type={filterDatas.at(0)!.type}
+                  optionsArray={filterDatas.at(0)!.filter}
+                  // selected={domain}
+                  // setSelected={setDomain}
+                />
+              </div>
+            </div>
+            <div className="pt-[3.25rem] pb-[7.5rem] grid md:grid-cols-2 lg:grid-cols-3 gap-[4.5rem]">
+              {tabData.map((item, i) => (
+                <ResourceCard
+                  key={i}
+                  src={item.image}
+                  title={item.title}
+                  desc={item.description}
+                  category={item.domain}
+                />
+              ))}
+            </div>
+          </TabPanel>
+          <TabPanel>
+            <div className="flex flex-wrap pt-[2rem] items-center gap-[0.75rem]">
+              <p className="~pb-[1.25rem]/0 text-gray40  ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]">
+                Filter by:
+              </p>
+              <div className="relative flex flex-wrap gap-[.75rem]">
+                <CustomFilter
+                  category={category}
+                  type={filterDatas.at(0)!.type}
+                  optionsArray={filterDatas.at(0)!.filter}
+                  // selected={domain}
+                  // setSelected={setDomain}
+                />
+              </div>
+            </div>
+            <div className="pt-[3.25rem] pb-[7.5rem] grid md:grid-cols-2 lg:grid-cols-3 gap-[4.5rem]">
+              {tabData.map((item, i) => (
+                <ResourceCard
+                  key={i}
+                  src={item.image}
+                  title={item.title}
+                  desc={item.description}
+                  category={item.domain}
+                  date={item.date}
+                />
+              ))}
+            </div>
+          </TabPanel>
+          <TabPanel>
+            <div className="flex flex-wrap pt-[2rem] items-center gap-[0.75rem]">
+              <p className="~pb-[1.25rem]/0 text-gray40  ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]">
+                Filter by:
+              </p>
+              <div className="relative flex flex-wrap gap-[.75rem]">
+                <CustomFilter
+                  category={category}
+                  type={filterDatas.at(0)!.type}
+                  optionsArray={filterDatas.at(0)!.filter}
+                  // selected={domain}
+                  // setSelected={setDomain}
+                />
+              </div>
+            </div>
+            <div className="pt-[3.25rem] pb-[7.5rem] grid md:grid-cols-2 lg:grid-cols-3 gap-[4.5rem]">
+              {tabData.map((item, i) => (
+                <ResourceCard
+                  key={i}
+                  src={item.image}
+                  title={item.title}
+                  desc={item.description}
+                  category={item.domain}
+                />
+              ))}
+            </div>
+          </TabPanel>
         </TabPanels>
       </TabGroup>
     </div>

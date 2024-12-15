@@ -7,14 +7,9 @@ import { TabGroup, TabPanel, TabPanels } from "@headlessui/react";
 import CustomSelect from "@/components/custom/CustomSelect";
 import ResourceCard from "@/components/cards/ResourceCard";
 import CuratedResourcesTabs from "./_components/CuratedResourcesTabs";
-const resourcesArray = [
-  "Featured",
-  "Experts",
-  "Philanthropists",
-  " NPO",
-  " Partners",
-  " World of Philanthropy",
-];
+import { TAipResourcesCategory } from "@/api/type";
+import { Api } from "@/api/Api";
+
 const datas = [
   {
     src: "/svg/resource-page/resource1.svg",
@@ -53,7 +48,37 @@ const datas = [
     category: "Field",
   },
 ];
-const CuratedResourcesPage = () => {
+export const dynamic = "force-dynamic";
+const getCuratedResourcesApi = async (
+  category: string,
+  domain: string,
+  typeOfContent: string,
+  date: string
+): Promise<TAipResourcesCategory[]> => {
+  const response = await Api.getCuratedResources({
+    category,
+    domain,
+    typeOfContent,
+    date,
+  });
+  return response.data;
+};
+const CuratedResourcesPage = async ({
+  searchParams,
+}: {
+  searchParams: {
+    category: string;
+    domain: string;
+    typeOfContent: string;
+    date: string;
+  };
+}) => {
+  const curatedResourcesSelectedTabData = await getCuratedResourcesApi(
+    searchParams.category ? searchParams.category : "AIP Updates",
+    searchParams?.domain,
+    searchParams?.typeOfContent,
+    searchParams?.date
+  );
   return (
     <div className="pt-[5rem]">
       <div className="container mx-auto relative ~px-5/[7.8rem]">

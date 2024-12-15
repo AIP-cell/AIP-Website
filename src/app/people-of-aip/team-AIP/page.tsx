@@ -4,8 +4,17 @@ import React from "react";
 import BreadCrump from "@/components/bread-crump/BreadCrump";
 import PeopleOfAipTabs from "../_components/PeopleOfAipTabs";
 import TeamAip from "./_components/TeamAip";
+import { Api } from "@/api/Api";
+import { TPeopleOfAip } from "@/api/type";
 
-const page = () => {
+export const dynamic = "force-dynamic";
+const getPeopleOfAipApi = async (slug: string): Promise<TPeopleOfAip> => {
+  const response = await Api.getPeopleOfAip(slug);
+  return response.data;
+};
+const page = async () => {
+  const response = await getPeopleOfAipApi("teamAIP");
+  const teamAipMembers = response.teamMembers;
   return (
     <div className="pt-[5rem] overflow-hidden">
       <div className="relative container mx-auto">
@@ -17,7 +26,7 @@ const page = () => {
         />
       </div>
       <PeopleOfAipTabs currentTab="Team AIP" />
-      <TeamAip />
+      <TeamAip teamAipMembers={teamAipMembers} />
       {/* <PeopleOfAipTab tabSelect="team-AIP" />
       <PeopleOfAipSm tabSelect="Team AIP"/> */}
     </div>

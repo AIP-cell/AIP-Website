@@ -6,16 +6,51 @@ import React from "react";
 import ACard from "@/components/cards/aCards/ACard";
 import SampleImage from "@public/images/sample.png";
 import PCard from "@/components/cards/pCards/PCard";
+import { TTeamMembers } from "@/api/type";
+import cn from "@/utils/tailwind";
 
 const datas = [
   {
     image: "/images/sample.png",
-    name: "Ashish Dhawan",
+    name: "0Ashish Dhawan",
+    desc: "“I believe a lot more needs to be done particularly to encourage first-time givers. AIP aims to fill this gap and spur philanthropy in a very structured manner.’’",
+    work: "The Convergence Foundation",
+  },
+  {
+    image: "/images/sample.png",
+    name: "1Ashish Dhawan",
+    desc: "“I believe a lot more needs to be done particularly to encourage first-time givers. AIP aims to fill this gap and spur philanthropy in a very structured manner.’’",
+    work: "The Convergence Foundation",
+  },
+  {
+    image: "/images/sample.png",
+    name: "2Ashish Dhawan",
+    desc: "“I believe a lot more needs to be done particularly to encourage first-time givers. AIP aims to fill this gap and spur philanthropy in a very structured manner.’’",
+    work: "The Convergence Foundation",
+  },
+  {
+    image: "/images/sample.png",
+    name: "3Ashish Dhawan",
+    desc: "“I believe a lot more needs to be done particularly to encourage first-time givers. AIP aims to fill this gap and spur philanthropy in a very structured manner.’’",
+    work: "The Convergence Foundation",
+  },
+  {
+    image: "/images/sample.png",
+    name: "4Ashish Dhawan",
+    desc: "“I believe a lot more needs to be done particularly to encourage first-time givers. AIP aims to fill this gap and spur philanthropy in a very structured manner.’’",
+    work: "The Convergence Foundation",
+  },
+  {
+    image: "/images/sample.png",
+    name: "5Ashish Dhawan",
     desc: "“I believe a lot more needs to be done particularly to encourage first-time givers. AIP aims to fill this gap and spur philanthropy in a very structured manner.’’",
     work: "The Convergence Foundation",
   },
 ];
-const OurCoreFoundersContent = () => {
+type Props = {
+  coreFounderMembers: TTeamMembers[];
+};
+const OurCoreFoundersContent = ({ coreFounderMembers }: Props) => {
   return (
     <div className="w-full relative">
       <Image
@@ -43,49 +78,44 @@ const OurCoreFoundersContent = () => {
             Our founders are our banks, our north stars, all the same.
           </p>
         </div>
-        {datas.map((item, i) => (
-          <div
-            key={i}
-            className="sm:flex-row flex-col flex ~gap-[3.5rem]/[4.56rem] pt-[5rem] pr-12 ~pl-12/[7.8rem] "
-          >
-            <ACard
-              linkedin
-              nameClass=" underline decoration-[1px] underline-offset-4 "
-              name="Ashish Dhawan"
-              desc="“I believe a lot more needs to be done particularly to encourage first-time givers. AIP aims to fill this gap and spur philanthropy in a very structured manner.’’"
-              work="The Convergence Foundation"
-              image="/images/sample.png"
-            />
-            <PCard
-              linkedin
-              nameClass=" underline decoration-[1px] underline-offset-4 "
-              name="Ashish Dhawan"
-              desc="“I believe a lot more needs to be done particularly to encourage first-time givers. AIP aims to fill this gap and spur philanthropy in a very structured manner.’’"
-              work="The Convergence Foundation"
-              image="/images/sample.png"
-            />
-          </div>
-        ))}
-        <div className="sm:flex-row flex-col flex ~gap-[3.5rem]/[4.56rem] ~pt-14/[5.25rem] justify-end pb-[7.37rem] pl-12 ~pr-12/[7.8rem]">
-          <ACard
-            linkedin
-            nameClass=" underline decoration-[1px] underline-offset-4 "
-            name="Ashish Dhawan"
-            desc="“I believe a lot more needs to be done particularly to encourage first-time givers. AIP aims to fill this gap and spur philanthropy in a very structured manner.’’"
-            work="The Convergence Foundation"
-            image="/images/sample.png"
-          />
-          <PCard
-            linkedin
-            nameClass=" underline decoration-[1px] underline-offset-4 "
-            name="Ashish Dhawan"
-            desc="“I believe a lot more needs to be done particularly to encourage first-time givers. AIP aims to fill this gap and spur philanthropy in a very structured manner.’’"
-            work="The Convergence Foundation"
-            image="/images/sample.png"
-          />
-          {/* <ACardWithButton />
-          <PCardWithButton /> */}
-        </div>
+        {coreFounderMembers.map((item, i) => {
+          const isFirstDesign = Math.floor(i / 2) % 2 === 0;
+          if (i % 2 == 0) {
+            return (
+              <div
+                key={i}
+                className={cn(
+                  "sm:flex-row flex-col flex ~gap-[3.5rem]/[4.56rem] ",
+                  {
+                    "pt-[5rem] pr-12 ~pl-12/[7.8rem] ": isFirstDesign,
+                    "~pt-14/[5.25rem] justify-end pb-[7.37rem] pl-12 ~pr-12/[7.8rem]":
+                      !isFirstDesign,
+                  }
+                )}
+              >
+                <ACard
+                  linkedin
+                  nameClass=" underline decoration-[1px] underline-offset-4 "
+                  name={item.name}
+                  desc={item.description}
+                  work={item.designation}
+                  image="/images/sample.png"
+                />
+
+                {coreFounderMembers[i + 1] && (
+                  <PCard
+                    linkedin
+                    nameClass=" underline decoration-[1px] underline-offset-4 "
+                    name={coreFounderMembers[i + 1].name}
+                    desc={coreFounderMembers[i + 1].description}
+                    work={coreFounderMembers[i + 1].designation}
+                    image="/images/sample.png"
+                  />
+                )}
+              </div>
+            );
+          }
+        })}
       </div>
     </div>
   );

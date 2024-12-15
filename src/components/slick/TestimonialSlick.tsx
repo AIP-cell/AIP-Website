@@ -12,8 +12,9 @@ import LeftSlickArrowSvg from "../svg/LeftSlickArrowSvg";
 import { ButtonAnimation } from "../animations/ButtonAnimation";
 import cn from "@/utils/tailwind";
 import useClient from "@/hooks/useClient";
+import { TTestimonials } from "@/api/type";
 type Props = {
-  slickArray: any[];
+  slickArray: TTestimonials[];
 };
 const TestimonialSlick = ({ slickArray }: Props) => {
   const [change, setChange] = useState<number>(0);
@@ -53,8 +54,8 @@ const TestimonialSlick = ({ slickArray }: Props) => {
                           key={i}
                           image="/images/sample.png"
                           name={items.name}
-                          work={items.work}
-                          desc={items.desc}
+                          work={items.designation}
+                          desc={items.description}
                         />
                       )}
                       {actualIndex % 2 == 1 && (
@@ -62,8 +63,8 @@ const TestimonialSlick = ({ slickArray }: Props) => {
                           key={i}
                           image="/images/sample.png"
                           name={items.name}
-                          work={items.work}
-                          desc={items.desc}
+                          work={items.designation}
+                          desc={items.description}
                         />
                       )}
                     </div>

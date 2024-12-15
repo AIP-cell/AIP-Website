@@ -8,12 +8,12 @@ import FeaturesCuratedResource from "./FeaturesCuratedResource";
 import ExpertsCuratedResource from "./ExpertsCuratedResource";
 
 const resourcesArray = [
-  "Featured",
-  "Experts",
-  "Philanthropists",
-  " NPO",
-  " Partners",
-  " World of Philanthropy",
+  {tab:"Featured"},
+  {tab:"Experts"},
+  {tab:"Philanthropists"},
+  {tab:"NPO"},
+  {tab:"Partners"},
+  {tab:"World of Philanthropy"}
 ];
 
 const CuratedResourcesTabs = () => {
@@ -24,7 +24,7 @@ const CuratedResourcesTabs = () => {
       <TabGroup
         selectedIndex={selectedIndex}
         onChange={setSelectedIndex}
-        className="flex flex-col justify-center "
+        className="flex flex-col items-center "
       >
         <TabListAndRespSelect
           tabArray={resourcesArray}
@@ -32,7 +32,7 @@ const CuratedResourcesTabs = () => {
           //   setSelected={setSelected}
           setSelectedIndex={setSelectedIndex}
           textClassName="  "
-          listClassName="!w-full"
+          listClassName=""
         />
         <TabPanels className="">
           <TabPanel>

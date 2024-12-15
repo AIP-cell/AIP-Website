@@ -10,12 +10,12 @@ type Props = {
 };
 const OfferingCard = ({ text1, text2, text3, index }: Props) => {
   return (
-    <div className=" grid grid-cols-1 md:grid-cols-5 gap-[1.25rem]">
+    <div className=" grid grid-cols-1 lg:grid-cols-5 gap-[1.25rem]">
       <div
         className={cn(
-          "col-span-2 ~size-[20rem]/[24.938rem] justify-center items-center",
+          "col-span-2  flex justify-center items-center",
           {
-            "md:order-2 ": index % 2 == 1,
+            "lg:order-2 ": index % 2 == 1,
           }
         )}
       >
@@ -28,12 +28,9 @@ const OfferingCard = ({ text1, text2, text3, index }: Props) => {
         />
       </div>
       <div
-        className={cn(
-          "col-span-3  relative  h-full flex items-center",
-          {
-            "md:order-1": index % 2 === 1,
-          }
-        )}
+        className={cn("col-span-3  relative  h-full flex items-center", {
+          "lg:order-1": index % 2 === 1,
+        })}
       >
         <p className="~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]  text-midGray">
           {text1}

@@ -136,7 +136,7 @@ const Footer = () => {
                 </p>
               </div>
               <div className="flex lg:hidden flex-col w-full pt-[1rem]">
-                <CustomAccordionSelect ArrayData={footerData} />
+                <CustomAccordionSelect ArrayData={footerData} accordionTriggerClassName="!text-white"/>
                 <div className="flex text-h9Copy5 leading-[1.225rem] flex-wrap gap-[1rem] text-white pt-[1rem]">
                   <p>Careers</p>|<p>FAQs</p>|<p>Foundation Fact Sheet</p>|
                   <p>Join our learning circle</p>
@@ -172,8 +172,7 @@ const Footer = () => {
                 </Link>
               </ButtonAnimation>
               <p className="~pt-[1rem]/[1.75rem] ~text-h10Copy6/h9Copy5 font-inter text-white/60">
-                <span className="text-white"> CIN:</span>{" "}
-                U85300DL202INPL384351
+                <span className="text-white"> CIN:</span> U85300DL202INPL384351
               </p>
               <div className="flex gap-[1.25rem] ~pt-[1rem]/[2rem]">
                 <ButtonAnimation className="relative size-[2.5rem]">

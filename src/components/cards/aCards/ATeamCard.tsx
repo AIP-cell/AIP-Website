@@ -9,9 +9,10 @@ import cn from "@/utils/tailwind";
 type Props = {
   linkedin: boolean;
   title: string;
-  title2: string;
+  title2?: string;
   location?: string;
   email?: string;
+  image: string;
   desc: string;
   titleClassName?: string;
   title2ClassName?: string;
@@ -19,6 +20,7 @@ type Props = {
   sizeClass?: string;
 };
 const ATeamCard = ({
+  image,
   linkedin,
   title,
   title2,
@@ -31,11 +33,13 @@ const ATeamCard = ({
   sizeClass,
 }: Props) => {
   return (
-    <div className={cn("max-[23rem]:w-[8rem] ~w-[10rem]/[11.87rem] relative", sizeClass)}>
-      <AMediumSizeSvg
-        src="/images/sample.png"
-        // className="w-[11.87rem] h-[13.88rem]"
-      />
+    <div
+      className={cn(
+        "max-[23rem]:w-[8rem] ~w-[10rem]/[11.87rem] relative",
+        sizeClass
+      )}
+    >
+      <AMediumSizeSvg src={image} className="" />
       {linkedin && (
         <Image
           src={Linkedin}
@@ -65,7 +69,7 @@ const ATeamCard = ({
           {desc}
         </p>
         <Link
-          href=""
+          href={`mailto:${email}`}
           className=" ~text-h9Copy5/h8Copy3 text-textPurple ~leading-[1.225rem]/[1.575rem] italic underline decoration-[1px] "
         >
           {email}

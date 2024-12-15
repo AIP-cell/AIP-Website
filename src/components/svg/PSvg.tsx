@@ -28,7 +28,7 @@ const PSvg = (props: SVGProps<SVGSVGElement> & { src: string }) => {
         y="0"
         href={StorageUrl + props.src}
         width="100%"
-        height="100%"
+        // height="100%"
       />
     </svg>
   );

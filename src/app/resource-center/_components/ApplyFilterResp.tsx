@@ -1,26 +1,38 @@
 import CrossSvg from "@/components/svg/CrossSvg";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { generatingSearchParam } from "@/utils/UrlHelper";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useState } from "react";
 
 type Props = {
   type: string;
   optionsArray: any[];
-  setSelected: (value: any) => void;
+  // setSelected: (value: any) => void;
   setIsOpen: (value: boolean) => void;
-  selected: string;
+  // selected: string;
 };
 export function ApplyFilterResp({
   type,
   optionsArray,
-  setSelected,
+  // setSelected,
   setIsOpen,
-  selected,
-}: Props) {
-  const [selectedFilter, setSelectedFilter] = useState<any>(selected);
-  //   console.log("selectedFilter::::", selectedFilter);
+}: // selected,
+Props) {
+  const searchParams = useSearchParams();
+  const domain = searchParams.get("domain");
+  const [selectedFilter, setSelectedFilter] = useState<any>(domain);
+  const router = useRouter();
+  const category = searchParams.get("category");
+  // console.log("selectedFilter::::", selectedFilter);
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    setSelected(selectedFilter);
+    const query = generatingSearchParam({
+      category,
+      domain: selectedFilter,
+    });
+    router.push(`?${query.toString()}`, {
+      scroll: false,
+    });
     setIsOpen(false);
   };
   return (

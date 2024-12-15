@@ -4,8 +4,23 @@ import Link from "next/link";
 import Image from "next/image";
 import FinancialTabs from "./_components/FinancialTabs";
 import BreadCrump from "@/components/bread-crump/BreadCrump";
+import { Api } from "@/api/Api";
+import { TFinancialReportPageData } from "@/api/type";
 
-const page = () => {
+const getFinancialReportApi = async (): Promise<TFinancialReportPageData> => {
+  const response = await Api.getFinancialReport();
+  return response.data;
+};
+const page = async ({
+  searchParams,
+}: {
+  searchParams: { category: string };
+}) => {
+  const response = await getFinancialReportApi();
+  const reports = response.reports;
+  const currentYear = searchParams.category ? searchParams.category : "2019";
+  const filterDataByYear = reports.find((year) => year.year === currentYear);
+  console.log("filterDataByYear:::", filterDataByYear);
   return (
     <div className="pt-[5rem]">
       <div className="w-full relative">
@@ -23,12 +38,10 @@ const page = () => {
               linkTwo="/about/financials"
             />
             <div className="~pb-0/[5rem]  ~text-h4/h2 ~leading-[2.6rem]/[3.3rem] font-playFair">
-              <p className=" text-gray80">
-                Financial Reports & Certificates
-              </p>
+              <p className=" text-gray80">Financial Reports & Certificates</p>
             </div>
           </div>
-          <FinancialTabs />
+          <FinancialTabs filterDataByYear={filterDataByYear} />
         </div>
       </div>
     </div>

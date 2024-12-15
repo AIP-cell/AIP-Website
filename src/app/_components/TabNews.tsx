@@ -29,8 +29,9 @@ const newsTabArray = [
 ];
 type Props = {
   newsData: THomePageNews;
+  searchParams:string;
 };
-const TabNews = ({ newsData }: Props) => {
+const TabNews = ({ newsData,searchParams }: Props) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   return (

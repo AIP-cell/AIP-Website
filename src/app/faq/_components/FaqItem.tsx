@@ -66,6 +66,7 @@
 // };
 
 // export default FaqItem;
+import { TFaqs } from "@/api/type";
 import {
   Accordion,
   AccordionContent,
@@ -75,28 +76,30 @@ import {
 
 const dummyArray = [
   {
-    id:"one",
+    id: "one",
     Q: "What is the mission of our organization?",
     A: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla",
   },
   {
-    id:"two",
+    id: "two",
     Q: "What is the mission of our organization?",
     A: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla",
   },
   {
-    id:"three",
+    id: "three",
     Q: "What is the mission of our organization?",
     A: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla",
   },
 ];
-export function FaqItem() {
+
+type Props = { faqData: TFaqs[] };
+export function FaqItem({ faqData }: Props) {
   return (
     <Accordion type="single" collapsible className="w-full">
-      {dummyArray.map((items, i) => (
-        <AccordionItem key={i} value={items.id}>
-          <AccordionTrigger>{items.Q}</AccordionTrigger>
-          <AccordionContent>{items.A}</AccordionContent>
+      {faqData.map((items, i) => (
+        <AccordionItem key={i} value={items.question}>
+          <AccordionTrigger>{items.question}</AccordionTrigger>
+          <AccordionContent>{items.answer}</AccordionContent>
         </AccordionItem>
       ))}
     </Accordion>

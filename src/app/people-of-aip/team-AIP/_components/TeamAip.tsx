@@ -5,6 +5,7 @@ import Bg1 from "@public/svg/people-of-aip/peachCurveRightTeamAip.svg";
 import OvalPeach from "@public/svg/ovalPeach.svg";
 import Bg2 from "@public/svg/people-of-aip/peachCurveLeftTeamAip.svg";
 import Link from "next/link";
+import { TTeamMembers } from "@/api/type";
 
 const TeamArray = [
   {
@@ -50,7 +51,10 @@ const TeamArray = [
     desc: "Operating Partner",
   },
 ];
-const TeamAip = () => {
+type Props = {
+  teamAipMembers: TTeamMembers[];
+};
+const TeamAip = ({teamAipMembers}:Props) => {
   return (
     <div className="w-full relative">
       <Image
@@ -89,144 +93,131 @@ const TeamAip = () => {
             social challenges.
           </p>
         </div>
-        <div className="~pt-[4.83rem]/[7.875rem] flex md:block flex-col items-center ~px-[1.25rem]/[7.8rem] relative">
-          <div className=" grid grid-cols-2 lg:grid-cols-4 ~gap-[1.25rem]/[5.6rem] ">
-            {/* <Link href='/people-of-aip/our-advisory-board/slug' > */}
-            <div className="w-full justify-center flex">
-              <ATeamCard
-                titleClassName=" underline decoration-[1px] underline-offset-4"
-                title2ClassName=" underline decoration-[1px] underline-offset-4"
-                title="Piyush"
-                title2="Doshi"
-                desc="Operating Partner"
-                linkedin={true}
-              />
-            </div>
-            {/* </Link> */}
-            <div className="w-full justify-center flex">
-              <PTeamCard
-                titleClassName=" underline decoration-[1px] underline-offset-4"
-                title2ClassName=" underline decoration-[1px] underline-offset-4"
-                title="Amitabh"
-                title2="Jaipuria"
-                desc="CEO"
-                linkedin={true}
-              />
-            </div>
-          </div>
-          <div className="pt-[4rem] grid grid-cols-2 lg:grid-cols-4 ~gap-[1.25rem]/[5.6rem] ">
-            <div className="w-full justify-center flex">
-              <ATeamCard
-                titleClassName=" underline decoration-[1px] underline-offset-4"
-                title2ClassName=" underline decoration-[1px] underline-offset-4"
-                title="Radhika"
-                title2="Jain"
-                desc="Philanthropic Partner"
-                linkedin={true}
-              />
-            </div>
-            <div className="w-full justify-center flex">
-              <PTeamCard
-                titleClassName=" underline decoration-[1px] underline-offset-4"
-                title2ClassName=" underline decoration-[1px] underline-offset-4"
-                title="Aditi"
-                title2="Ray"
-                desc="Philanthropic Partner"
-                linkedin={true}
-              />
-            </div>
-          </div>
-          <div className="justify-center pt-[4rem] grid grid-cols-2 lg:grid-cols-4 ~gap-[1.25rem]/[5.6rem]  ">
-            <div className="w-full justify-center flex col-span-1">
-              <ATeamCard
-                titleClassName=" underline decoration-[1px] underline-offset-4"
-                title2ClassName=" underline decoration-[1px] underline-offset-4"
-                title="Dr. Preethi"
-                title2="Jain"
-                desc="Philanthropic Partner"
-                linkedin={true}
-              />
-            </div>
-            <div className="w-full justify-center flex col-span-1">
-              <PTeamCard
-                titleClassName=" underline decoration-[1px] underline-offset-4"
-                title2ClassName=" underline decoration-[1px] underline-offset-4"
-                title="Vishal"
-                title2="Dutta"
-                desc="Head, Knowledge"
-                linkedin={true}
-              />
-            </div>
-            <div className="w-full justify-center flex">
-              <ATeamCard
-                titleClassName=" underline decoration-[1px] underline-offset-4"
-                title2ClassName=" underline decoration-[1px] underline-offset-4"
-                title="Jhilmil"
-                title2="Garg"
-                desc="Program Manager"
-                linkedin={true}
-              />
-            </div>
-            <div className="w-full justify-center flex">
-              <PTeamCard
-                titleClassName=" underline decoration-[1px] underline-offset-4"
-                title2ClassName=" underline decoration-[1px] underline-offset-4"
-                title="Isha"
-                title2="Mathur"
-                desc="Program Manager"
-                linkedin={true}
-              />
-            </div>
-          </div>
-          <div className="pt-[4rem] grid grid-cols-2 lg:grid-cols-4  ~gap-[1.25rem]/[5.6rem]  ">
-            <div></div>
-            <div></div>
-            <div className="w-full justify-center flex">
-              <ATeamCard
-                titleClassName=" underline decoration-[1px] underline-offset-4"
-                title2ClassName=" underline decoration-[1px] underline-offset-4"
-                title="Bhavana S"
-                title2="Resmi"
-                desc="Program Associate"
-                linkedin={true}
-              />
-            </div>
-            <div className="w-full justify-center flex">
-              <PTeamCard
-                titleClassName=" underline decoration-[1px] underline-offset-4"
-                title2ClassName=" underline decoration-[1px] underline-offset-4"
-                title="Aparna"
-                title2="Joshi"
-                desc="Program Manager"
-                linkedin={true}
-              />
-            </div>
-          </div>
-          <div className="pt-[4rem] grid grid-cols-2 lg:grid-cols-4   ~gap-[1.25rem]/[5.6rem] ">
-            <div></div>
-            <div></div>
-            <div className="w-full justify-center flex">
-              <ATeamCard
-                titleClassName=" underline decoration-[1px] underline-offset-4"
-                title2ClassName=" underline decoration-[1px] underline-offset-4"
-                title="Dr. Sabhyata"
-                title2="Prakash"
-                desc="Communication & Brand Manager"
-                linkedin={true}
-              />
-            </div>
-            <div className="w-full justify-center flex">
-              <PTeamCard
-                titleClassName=" underline decoration-[1px] underline-offset-4"
-                title2ClassName=" underline decoration-[1px] underline-offset-4"
-                title="Annie"
-                title2="Bisht"
-                desc="Executive Assistant"
-                linkedin={true}
-              />
-            </div>
-          </div>
-        </div>
+        {teamAipMembers.map((items, i) => {
+          const position = i % 12;
+          const isCenteredRow = position >= 8 && position <= 11;
+          if (
+            position === 0 ||
+            position === 2 ||
+            position === 4 ||
+            position === 6 ||
+            position === 8 ||
+            position === 10
+          )
+            return (
+              <div
+                key={i}
+                className="~pt-[4.83rem]/[7.875rem] flex md:block flex-col items-center ~px-[1.25rem]/[7.8rem] relative"
+              >
+                {position === 0 && (
+                  <div className="flex ~gap-[1.25rem]/[5.6rem] ">
+                    <ATeamCard
+                      image={"/images/sample"}
+                      title={items.name}
+                      desc={items.designation}
+                      linkedin={true}
+                    />
+                    {teamAipMembers[i + 1] && (
+                      <PTeamCard
+                        image={"/images/sample"}
+                        title={teamAipMembers[i + 1].name}
+                        desc={teamAipMembers[i + 1].designation}
+                        linkedin={true}
+                      />
+                    )}
+                  </div>
+                )}
+                {position === 2 && (
+                  <div className="pt-[4rem] flex ~gap-[1.25rem]/[5.6rem] ">
+                    <ATeamCard
+                      image={"/images/sample"}
+                      title={items.name}
+                      desc={items.designation}
+                      linkedin={true}
+                    />
+                    {teamAipMembers[i + 1] && (
+                      <PTeamCard
+                        image={"/images/sample"}
+                        title={teamAipMembers[i + 1].name}
+                        desc={teamAipMembers[i + 1].designation}
+                        linkedin={true}
+                      />
+                    )}
+                  </div>
+                )}
+                {position === 4 && (
+                  <div className="justify-center pt-[4rem] flex flex-wrap ~gap-[1.25rem]/[5.6rem]">
+                    <ATeamCard
+                      image={"/images/sample"}
+                      title={items.name}
+                      desc={items.designation}
+                      linkedin={true}
+                    />
+                    {teamAipMembers[i + 1] && (
+                      <PTeamCard
+                        image={"/images/sample"}
+                        title={teamAipMembers[i + 1].name}
+                        desc={teamAipMembers[i + 1].designation}
+                        linkedin={true}
+                      />
+                    )}
+                    {teamAipMembers[i + 2] && (
+                      <ATeamCard
+                        image={"/images/sample"}
+                        title={teamAipMembers[i + 2].name}
+                        desc={teamAipMembers[i + 2].designation}
+                        linkedin={true}
+                      />
+                    )}
+                    {teamAipMembers[i + 3] && (
+                      <PTeamCard
+                        image={"/images/sample"}
+                        title={teamAipMembers[i + 3].name}
+                        desc={teamAipMembers[i + 3].designation}
+                        linkedin={true}
+                      />
+                    )}
+                  </div>
+                )}
+                {position === 8 && (
+                  <div className="pt-[4rem] flex justify-start md:justify-end ~gap-[1.25rem]/[5.6rem]  ">
+                    <ATeamCard
+                      image={"/images/sample"}
+                      title={items.name}
+                      desc={items.designation}
+                      linkedin={true}
+                    />
+                    {teamAipMembers[i + 1] && (
+                      <PTeamCard
+                        image={"/images/sample"}
+                        title={teamAipMembers[i + 1].name}
+                        desc={teamAipMembers[i + 1].designation}
+                        linkedin={true}
+                      />
+                    )}
+                  </div>
+                )}
+                {position === 10 && (
+                  <div className="pt-[4rem] flex justify-start md:justify-end ~gap-[1.25rem]/[5.6rem] ">
+                    <ATeamCard
+                      image={"/images/sample"}
+                      title={items.name}
+                      desc={items.designation}
+                      linkedin={true}
+                    />
+                    {teamAipMembers[i + 1] && (
+                      <PTeamCard
+                        image={"/images/sample"}
+                        title={teamAipMembers[i + 1].name}
+                        desc={teamAipMembers[i + 1].designation}
+                        linkedin={true}
+                      />
+                    )}
+                  </div>
+                )}
+              </div>
+            );
+        })}
       </div>
     </div>
   );

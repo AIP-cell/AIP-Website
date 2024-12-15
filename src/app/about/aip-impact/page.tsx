@@ -3,15 +3,30 @@ import CaseStudies from "./_components/CaseStudies";
 import FoundationFacts from "./_components/FoundationFacts";
 import PeopleWeWorkWith from "./_components/PeopleWeWorkWith";
 import CurvePeach from "@public/svg/peach-bg-curve-founders.svg";
+import { Api } from "@/api/Api";
+import { TAipImpact, TAipImpactPageData } from "@/api/type";
 
+export const dynamic = "force-dynamic";
+const geAipImpactApi = async (): Promise<TAipImpact> => {
+  const response = await Api.getAipImpact();
+  return response.data;
+};
+const page = async () => {
+  const response = await geAipImpactApi();
 
-const page = () => {
+  const caseStudyData = response.casestudies;
+  const peopleData = response.people;
+  const foundationFacts = response.foundationFacts;
+
   return (
     <div className="relative pt-[5rem]">
       <ImpactHeroSection />
-      <CaseStudies  bottomCaseStudyCurveSvg={CurvePeach} />
-      <FoundationFacts button="View more" />
-      <PeopleWeWorkWith />
+      <CaseStudies
+        bottomCaseStudyCurveSvg={CurvePeach}
+        caseStudyData={caseStudyData}
+      />
+      <FoundationFacts button="View more" foundationFacts={foundationFacts} />
+      <PeopleWeWorkWith peopleData={peopleData} />
     </div>
   );
 };

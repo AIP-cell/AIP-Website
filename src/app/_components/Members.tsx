@@ -37,11 +37,11 @@ const Members = ({ countData }: Props) => {
             </h2>
           </div>
           {/* <OvalPurpleSvg className="-top-[4rem] right-[11.85rem]"/> */}
-          <div className="w-full xl:w-[35%] relative">
+          <div className="w-full xl:w-[35%] relative flex justify-center ">
             <Image
               src={SmBg}
               alt=""
-              className="block md:hidden object-cover absolute w-full bottom-[-32rem]"
+              className="block md:hidden object-cover absolute w-full bottom-[-32rem] "
             />
             <OvalPurple
               sizeClass="~size-[13rem]/[17.3rem]"
@@ -49,7 +49,7 @@ const Members = ({ countData }: Props) => {
               textClass2="~text-h9Copy5/h9Copy4"
               text1={`${countData?.coreFoundersCount}`}
               text2="Core Founders"
-              mainClass=" absolute ~top-0/[-4rem] left-0 lg:left-auto  ~md:~right-[20rem]/[11.862rem] "
+              mainClass=" absolute ~top-0/[-4rem] left-0 md:left-auto   md:right-[20rem] lg:~right-[46rem]/[11.862rem] "
             />
             <OvalPurple
               sizeClass="~size-[13rem]/[17.3rem]"
@@ -65,7 +65,7 @@ const Members = ({ countData }: Props) => {
               countClass="!text-white"
               text2="Members"
               textClass2="~text-h9Copy5/h9Copy4 !text-white"
-              mainClass="absolute ~top-[14.3rem]/[20rem] left-0 md:left-auto ~md:~right-[25rem]/[26rem]"
+              mainClass="absolute ~/md:~top-[14.3rem]/[15rem] lg:~top-[11rem]/[20rem]  left-0 md:left-auto ~md:~right-[25rem]/[26rem]"
             />
           </div>
         </div>

@@ -13,11 +13,14 @@ import {
   ListboxOptions,
 } from "@headlessui/react";
 import DownTagSvg from "@/components/svg/DownTagSvg";
+import { useRouter, useSearchParams } from "next/navigation";
+import { generatingSearchParam } from "@/utils/UrlHelper";
 
 const fieldsArray = ["Fields/Sector", "Fields/Sector"];
 const dateArray = ["Date", "Date"];
 
 type Props = {
+  queryParamValues?: any;
   tabArray: any;
   textClassName?: string;
   listClassName?: string;
@@ -27,6 +30,7 @@ type Props = {
   setSelectedIndex: (value: number) => void;
 };
 const TabListAndRespSelect = ({
+  queryParamValues,
   tabArray,
   textClassName,
   listClassName,
@@ -34,6 +38,9 @@ const TabListAndRespSelect = ({
   selectedIndex,
   setSelectedIndex,
 }: Props) => {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const domain = searchParams.get("domain");
   return (
     <>
       <TabList
@@ -42,6 +49,15 @@ const TabListAndRespSelect = ({
         {tabArray.map((items: any, i: number) => (
           <div key={i}>
             <Tab
+              onClick={() => {
+                const query = generatingSearchParam({
+                  category: items.tab,
+                  domain,
+                });
+                router.push(`?${query.toString()}`, {
+                  scroll: false,
+                });
+              }}
               className={` ~px-4/[2.4rem] md:flex justify-center w-full items-center py-[.75rem] data-[selected]:bg-darkPurple data-[selected]:text-white data-[selected]:rounded-full text-h9Copy5 leading-[1.22rem] font-inter data-[selected]:outline-none ${textClassName}`}
             >
               {items.tab}
@@ -75,6 +91,15 @@ const TabListAndRespSelect = ({
         >
           {tabArray?.map((items: any, i: number) => (
             <ListboxOption
+              onClick={() => {
+                const query = generatingSearchParam({
+                  category: items.tab,
+                  domain: domain,
+                });
+                router.push(`?${query.toString()}`, {
+                  scroll: false,
+                });
+              }}
               key={i}
               value={i}
               className="data-[focus]:bg-blue-100 text-darkPurple text-center text-h9Copy5 leading-[1.225rem] cursor-pointer"

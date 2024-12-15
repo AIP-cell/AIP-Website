@@ -13,38 +13,48 @@ import Link from "next/link";
 import React, { useState } from "react";
 import FilterDownArrowSvg from "../svg/FilterDownArrowSvg";
 import { ApplyFilterResp } from "@/app/resource-center/_components/ApplyFilterResp";
+import { useRouter, useSearchParams } from "next/navigation";
+import { generatingSearchParam } from "@/utils/UrlHelper";
 type Props = {
   optionsArray: any[];
   type: string;
-  selected:string;
-  setSelected:(value:string) => void;
+  selected?: string;
+  setSelected?: (value: string) => void;
+  category: string;
+  queryParamValues?: any;
 };
-const CustomFilter = ({ type, optionsArray,selected,setSelected }: Props) => {
-  // const [selected, setSelected] = useState(optionsArray!.at(0));
+const CustomFilter = ({
+  queryParamValues,
+  type,
+  optionsArray,
+  selected,
+  setSelected,
+  category,
+}: Props) => {
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
+  // const searchParams = useSearchParams();
+  // const domain = searchParams.get('domain');
   return (
     <>
       {isOpen && (
         <ApplyFilterResp
           type={type}
           optionsArray={optionsArray}
-          setSelected={setSelected}
+          // setSelected={setSelected}
           setIsOpen={setIsOpen}
-          selected={selected}
+          // selected={selected}
         />
       )}
       <div onClick={() => setIsOpen(!isOpen)}>
         <Listbox value={selected} onChange={setSelected}>
-          <ListboxButton
-            className={`border-2 border-[#DFE0E5] rounded-lg`}
-          >
+          <ListboxButton className={`border-2 border-[#DFE0E5] rounded-lg`}>
             <div
               className={`flex gap-[.79rem] text-gray80 text-h9Copy5 ~pl-[0.75rem]/[1.75rem] pr-[1.25rem] py-[0.75rem] items-center w-full justify-between `}
             >
-              <p className="   text-h9Copy5 leading-[1.225rem] capitalize">
+              <p className="text-h9Copy5 leading-[1.225rem] capitalize">
                 {type}
               </p>
-
               <FilterDownArrowSvg className="size-[1.25rem]" />
             </div>
           </ListboxButton>
@@ -57,6 +67,15 @@ const CustomFilter = ({ type, optionsArray,selected,setSelected }: Props) => {
               <ListboxOption
                 key={i}
                 value={items}
+                onClick={() => {
+                  const query = generatingSearchParam({
+                    category,
+                    domain: items,
+                  });
+                  router.push(`?${query.toString()}`, {
+                    scroll: false,
+                  });
+                }}
                 className="group flex gap-[0.75rem] text-start items-center  rounded-md border-gray10 data-[focus]:bg-blue-100 no-scrollbar text-black text-h9Copy5 leading-[1.225rem] cursor-pointer"
               >
                 <div className="size-[0.833rem] border-2 border-gray80 rounded-sm flex justify-center items-center">

@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 import CurvePurple from "@public/svg/purpleCurveCaseStudy.svg";
 import CurveBg from "@public/svg/about/aip-impact/caseStudyPeachCurve.svg";
+import { TCaseStudies } from "@/api/type";
 
 const caseStudyData = [
   {
@@ -27,7 +28,10 @@ const caseStudyData = [
     image: "/images/case-studies/caseStudy1.png",
   },
 ];
-const NetworkCaseStudies = () => {
+type Props = {
+  casestudies: TCaseStudies[];
+};
+const NetworkCaseStudies = ({ casestudies }: Props) => {
   return (
     <div className="relative w-full">
       <Image
@@ -48,7 +52,7 @@ const NetworkCaseStudies = () => {
           </span>
         </h2>
         <div className="~pt-[2.5rem]/[6.56rem]  flex flex-col ~gap-[3.5rem]/[5.5rem] ~px-[1.25rem]/[7.8rem]">
-          {caseStudyData.map((item: any, i: number) => (
+          {casestudies.map((item: any, i: number) => (
             <CaseStudy
               key={i}
               index={i}

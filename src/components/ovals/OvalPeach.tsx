@@ -3,7 +3,7 @@ import React from "react";
 import OvalPeachSvg from "@public/svg/ovalPeach.svg";
 
 type Props = {
-  text1?: string;
+  text1?: string | number;
   text2?: string;
   text3?: string;
   mainClass?: string;

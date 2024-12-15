@@ -1,3 +1,4 @@
+import { TCaseStudies } from "@/api/type";
 import CaseStudy from "@/components/cards/CaseStudy";
 import CurveBg from "@public/svg/about/aip-impact/caseStudyPeachCurve.svg";
 import CurvePeach from "@public/svg/peach-bg-curve-founders.svg";
@@ -24,8 +25,11 @@ const caseStudyData = [
     image: "/images/case-studies/caseStudy1.png",
   },
 ];
+type Props={
+  casestudies:TCaseStudies[]
+}
 
-const NpoSpotlight = () => {
+const NpoSpotlight = ({casestudies}:Props) => {
   return (
     <div className="relative w-full">
       <Image
@@ -46,7 +50,7 @@ const NpoSpotlight = () => {
           </span>
         </h2>
         <div className="~pt-[2.5rem]/[6.56rem] flex flex-col ~gap-[3.5rem]/[5.5rem] ~px-[1.25rem]/[7.8rem]">
-          {caseStudyData.map((item: any, i: number) => (
+          {casestudies.map((item: any, i: number) => (
             <CaseStudy
               key={i}
               index={i}

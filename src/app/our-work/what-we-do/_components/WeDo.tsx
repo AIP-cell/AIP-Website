@@ -39,22 +39,22 @@ const WeDo = () => {
       <Image
         src={TopLeftCurve}
         alt=""
-        className="hidden md:block absolute top-[4.233rem] left-0 z-[-1]"
+        className="h-[26.663rem] lg:h-auto w-[17.498rem] lg:w-auto absolute top-[4.233rem] left-0 z-[-1]"
       />
       <Image
         src={TopRightCurve}
         alt=""
-        className="hidden md:block absolute top-[32.639rem] right-0"
+        className="h-[43.981rem] lg:h-auto w-[17.3rem] lg:w-auto absolute top-[32.639rem] right-0"
       />
       <Image
         src={BottomLeftCurve}
         alt=""
-        className="hidden md:block absolute bottom-[28.8rem] left-0"
+        className="h-[35.404rem] lg:h-auto w-[16.865rem] lg:w-auto absolute bottom-[28.8rem] left-0"
       />
       <Image
         src={BottomRightCurve}
         alt=""
-        className="hidden md:block absolute bottom-0 right-0"
+        className="h-[35.404rem] lg:h-auto w-[16.865rem] lg:w-auto absolute bottom-0 right-0"
       />
       <div className="~pt-[4.625rem]/[6.63rem] ~pb-[5rem]/[7.5rem] relative container mx-auto">
         <h2 className="font-playFair text-gray80 ~text-h4/h2 ~leading-[2.6rem]/[3.3rem] text-center">

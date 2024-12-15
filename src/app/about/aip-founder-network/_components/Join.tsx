@@ -8,6 +8,7 @@ import React from "react";
 import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 import ATeamCard from "@/components/cards/aCards/ATeamCard";
 import PTeamCard from "@/components/cards/pCards/PTeamCard";
+import { TMethodsOfJoining } from "@/api/type";
 
 const joinArray = [
   {
@@ -39,24 +40,12 @@ const joinArray = [
     email: "xyz@abcd.com",
   },
 ];
-const Join = () => {
+type Props = {
+  methodsOfJoining: TMethodsOfJoining[];
+};
+const Join = ({ methodsOfJoining }: Props) => {
   return (
     <div className="w-full relative">
-      {/* <Image
-        src={JoinCirclesOne}
-        alt=""
-        className=" absolute top-[9rem] left-0 w-[23.56rem] h-[23.3rem]"
-      />
-      <Image
-        src={PeachMaskedSemiCircle}
-        alt=""
-        className=" absolute bottom-[-2.43rem] left-0 w-[23.56rem] h-[23.3rem] z-[-1]"
-      />
-      <Image
-        src={JoinCirclesRight}
-        alt=""
-        className=" absolute bottom-[-11.7rem] right-0 w-[20.875rem] h-[20.62rem] z-[-1]"
-      /> */}
       <div className="relative container mx-auto ">
         <div className="relative flex flex-col items-center justify-center ~pt-[7.5rem]/[12.5rem]">
           <h2 className="font-playFair text-gray80 ~text-h4/h2 ~leading-[2.6rem]/[3.3rem]">
@@ -74,28 +63,30 @@ const Join = () => {
           </p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 ~gap-x-[1.25rem]/[5.625rem] ~gap-y-[1rem]/[5.625rem]  w-full justify-center ~pt-[1.25rem]/[4rem] ~px-[1.25rem]/[7.813rem]">
-          {joinArray.map((join, i) => (
+          {methodsOfJoining.map((join, i) => (
             <div key={i} className="flex justify-center">
               {i % 2 == 0 ? (
                 <ATeamCard
+                  image={join.image}
                   titleClassName="underline decoration-[1px] underline-offset-4"
                   title2ClassName="underline decoration-[1px] underline-offset-4"
-                  location={join.location}
+                  // location={join.location}
                   email={join.email}
-                  title={join.title1}
-                  title2={join.title2}
-                  desc={join.desc}
+                  title={join.name}
+                  // title2={join.title2}
+                  desc={join.designation}
                   linkedin={false}
                 />
               ) : (
                 <PTeamCard
                   titleClassName="underline decoration-[1px] underline-offset-4"
                   title2ClassName="underline decoration-[1px] underline-offset-4"
-                  location={join.location}
+                  image={join.image}
+                  // location={join.location}
                   email={join.email}
-                  title={join.title1}
-                  title2={join.title2}
-                  desc={join.desc}
+                  title={join.name}
+                  // title2={join.title2}
+                  desc={join.designation}
                   linkedin={false}
                 />
               )}

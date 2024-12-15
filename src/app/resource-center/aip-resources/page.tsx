@@ -7,6 +7,8 @@ import { TabGroup, TabPanel, TabPanels } from "@headlessui/react";
 import CustomSelect from "@/components/custom/CustomSelect";
 import ResourceCard from "@/components/cards/ResourceCard";
 import AipResourceTabs from "./AipResourceTabs";
+import { Api } from "@/api/Api";
+import { TAipResourcesCategory } from "@/api/type";
 
 const resourcesArray = [
   "AIP Updates",
@@ -88,7 +90,41 @@ const filterDatas = {
 };
 const typeContentArray = ["Type of Content", "Type of Content"];
 const dateArray = ["Date", "Date"];
-const AipResourcesPage = () => {
+
+export const dynamic = "force-dynamic";
+const getAipResourcesData = async (
+  category: string,
+  domain: string,
+  typeOfContent: string,
+  date: string
+): Promise<TAipResourcesCategory[]> => {
+  const response = await Api.getAipResources({
+    category,
+    domain,
+    typeOfContent,
+    date,
+  });
+  return response.data;
+};
+const AipResourcesPage = async ({
+  searchParams,
+}: {
+  searchParams: {
+    category: string;
+    domain: string;
+    typeOfContent: string;
+    date: string;
+  };
+}) => {
+  const category = searchParams?.category;
+
+  const aipResourcesSelectedTabData = await getAipResourcesData(
+    category ? category : "AIP Updates",
+    searchParams?.domain,
+    searchParams?.typeOfContent,
+    searchParams?.date
+  );
+
   return (
     <div className="pt-[5rem]">
       <div className="container mx-auto relative ~px-5/[7.5rem]">
@@ -113,7 +149,10 @@ const AipResourcesPage = () => {
           domainArray={domainArray}
           typeContentArray={typeContentArray}
         /> */}
-        <AipResourceTabs />
+        <AipResourceTabs
+          tabData={aipResourcesSelectedTabData}
+          category={category}
+        />
       </div>
     </div>
   );

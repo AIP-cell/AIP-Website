@@ -1,3 +1,4 @@
+import { StorageUrl } from "@/utils/BaseUrl";
 import { SVGProps, useId } from "react";
 
 const PMediumSizeSvg = (props: SVGProps<SVGSVGElement> & { src: string }) => {
@@ -24,9 +25,9 @@ const PMediumSizeSvg = (props: SVGProps<SVGSVGElement> & { src: string }) => {
         preserveAspectRatio="xMidYMid meet"
         x="0"
         y="0"
-        href={props.src}
+        href={StorageUrl + props.src}
         width="100%"
-        height="100%"
+        // height="100%"
       />
     </svg>
   );

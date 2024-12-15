@@ -10,19 +10,23 @@ import News from "./_components/News";
 import { Api } from "@/api/Api";
 import { THomePageData } from "@/api/type";
 
-export const dynamic = 'force-dynamic';
+export const dynamic = "force-dynamic";
 const getHomePageApi = async (): Promise<THomePageData> => {
   const response = await Api.getHomePage();
   return response.data;
 };
-const page = async () => {
+const page = async ({
+  searchParams,
+}: {
+  searchParams: { category: string };
+}) => {
   const response = await getHomePageApi();
   // console.log("home response:::", response);
   const eventData = response.event;
   const teamData = response.team;
   const countData = response.count;
   const newsData = response.newsAndUpdates;
-  
+
   return (
     <div className="bg-bgLightPeach pt-[5rem] overflow-hidden">
       <HeroSection />
@@ -32,7 +36,7 @@ const page = async () => {
       <Members countData={countData} />
       <AipWay />
       <Founder teamData={teamData} />
-      <News newsData={newsData}/>
+      <News newsData={newsData} searchParams={searchParams} />
     </div>
   );
 };

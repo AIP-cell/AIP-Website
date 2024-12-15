@@ -6,14 +6,23 @@ import Testimonials from "./_components/Testimonials";
 import ContactSection from "@/app/about/aip-impact/foundation-fact-sheet/_components/ContactSection";
 import SheetFoundationFacts from "./_components/SheetFoundationFacts";
 import FoundationFacts from "../_components/FoundationFacts";
+import { Api } from "@/api/Api";
+import { TAipImpact, TAipImpactPageData } from "@/api/type";
 
-const page = () => {
+const geAipImpactApi = async (): Promise<TAipImpact> => {
+  const response = await Api.getAipImpact();
+  return response.data;
+};
+const page = async () => {
+  const response = await geAipImpactApi();
+  const testimonialsData = response.testimonials;
+  const foundationFacts = response.foundationFacts;
   return (
     <div>
       <FoundationFactHeroSection />
-      <FoundationFacts/>
+      <FoundationFacts foundationFacts={foundationFacts} />
       {/* <SheetFoundationFacts /> */}
-      <Testimonials />
+      <Testimonials testimonialsData={testimonialsData} />
       {/* <AipFootprints /> */}
       <ContactSection />
     </div>

@@ -2,6 +2,7 @@ import cn from "@/utils/tailwind";
 import Image from "next/image";
 import React from "react";
 import { ButtonAnimation } from "../animations/ButtonAnimation";
+import { StorageUrl } from "@/utils/BaseUrl";
 type Props = {
   title: string;
   desc: string;
@@ -32,18 +33,17 @@ const CaseStudy = ({
       >
         <div className="w-full ~h-[17.5rem]/[20rem] rounded-3xl overflow-hidden relative ">
           <Image
-            src={image}
-            alt=""
+            src={StorageUrl + image}
+            alt="caseStudy-image"
             className="object-cover rounded-3xl h-fit"
             fill
           />
         </div>
       </div>
       <div
-        className={cn(
-          "col-span-1 flex flex-col items-start lg:order-2",
-          { "lg:!order-1 ": index % 2 === 0 }
-        )}
+        className={cn("col-span-1 flex flex-col items-start lg:order-2", {
+          "lg:!order-1 ": index % 2 === 0,
+        })}
       >
         <h2 className="font-playFair ~text-h4a/h3 ~leading-[2.113rem]/[3.25rem] text-gray80">
           {title}
