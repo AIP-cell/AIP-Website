@@ -7,6 +7,8 @@ import ResourceCard from "@/components/cards/ResourceCard";
 import BreadCrump from "@/components/bread-crump/BreadCrump";
 import CustomSelect from "@/components/custom/CustomSelect";
 import CustomFilter from "@/components/custom/CustomFilter";
+import { Api } from "@/api/Api";
+import { TProjectPrograms } from "@/api/type";
 
 const datas = [
   {
@@ -48,7 +50,8 @@ const datas = [
 ];
 const filterDatas = [
   {
-    type: "Fields",
+    type: "Domain",
+    key: "domain",
     filter: [
       "All",
       "Art & Culture",
@@ -65,14 +68,70 @@ const filterDatas = [
     ],
   },
   {
-    type: "Partner Type",
-    filter: ["data1", "data2"],
+    type: "Type of Content",
+    key: "typeOfContent",
+    filter: [
+      "Thematic Workshop",
+      "Panel Discussions",
+      "Fireside Chats",
+      "Roundtable Discussions",
+    ],
   },
-  { type: "Date", filter: ["data1", "data2"] },
+  {
+    type: "Organization Type",
+    key: "organizationType",
+    filter: ["Organization Type1", "Organization Type2"],
+  },
+  { type: "Events", key: "events", filter: ["Events1", "Events2"] },
+  { type: "Date", key: "date", filter: ["Date1", "Date2"] },
 ];
-// const categoryData = ["Category", "Category", "Category"];
-// const dateData = ["Date", "Date", "Date"];
-const page = () => {
+
+export const dynamic = "force-dynamic";
+const getProjectsProgramsApi = async ({
+  domain,
+  typeOfContent,
+  organizationType,
+  events,
+  date,
+}: {
+  domain?: string;
+  typeOfContent?: string;
+  organizationType?: string;
+  events?: string;
+  date?: string;
+}): Promise<TProjectPrograms[]> => {
+  const response = await Api.getProjectsPrograms({
+    domain,
+    typeOfContent,
+    organizationType,
+    events,
+    date,
+  });
+  return response.data;
+};
+
+const page = async ({
+  searchParams,
+}: {
+  searchParams: Promise<{
+    domain?: string;
+    typeOfContent?: string;
+    organizationType?: string;
+    events?: string;
+    date?: string;
+  }>;
+}) => {
+  const { domain, typeOfContent, organizationType, events, date } =
+    await searchParams;
+  const urlsearchParams = await searchParams;
+  const response = await getProjectsProgramsApi({
+    domain,
+    typeOfContent,
+    organizationType,
+    events,
+    date,
+  });
+  // console.log("searchParams::", searchParams);
   return (
     <div className="~pt-[4.4rem]/[5rem]">
       <div className=" relative w-full overflow-hidden ">
@@ -104,8 +163,10 @@ const page = () => {
             <div className="flex flex-wrap gap-[.75rem]">
               {filterDatas.map((items, i) => (
                 <CustomFilter
-                  type={items.type}
                   key={i}
+                  searchParams={{ ...urlsearchParams }}
+                  filterKey={items.key}
+                  type={items.type}
                   optionsArray={items.filter}
                 />
               ))}
@@ -113,16 +174,17 @@ const page = () => {
           </div>
 
           <div className="pt-[3.25rem] pb-[5rem] grid md:grid-cols-3 gap-[4.5rem]">
-            {datas.map((item, i) => (
+            {response.map((item, i) => (
               <Link
-                href={`/our-work/projects-and-programs/${item.title}`}
+                href={`/our-work/projects-and-programs/${item.slug}`}
                 key={i}
               >
                 <ResourceCard
-                  src={item.src}
+                  src={item.image}
                   title={item.title}
-                  desc={item.desc}
-                  category={item.category}
+                  desc={item.description}
+                  // category={item.category}
+                  date={item.date}
                 />
               </Link>
             ))}

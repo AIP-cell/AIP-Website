@@ -39,8 +39,8 @@ const TabListAndRespSelect = ({
   setSelectedIndex,
 }: Props) => {
   const router = useRouter();
-  const searchParams = useSearchParams();
-  const domain = searchParams.get("domain");
+  // const searchParams = useSearchParams();
+  // const domain = searchParams.get("domain");
   return (
     <>
       <TabList
@@ -51,8 +51,8 @@ const TabListAndRespSelect = ({
             <Tab
               onClick={() => {
                 const query = generatingSearchParam({
-                  category: items.tab,
-                  domain,
+                  selected: items.tab,
+                  // domain,
                 });
                 router.push(`?${query.toString()}`, {
                   scroll: false,
@@ -93,8 +93,8 @@ const TabListAndRespSelect = ({
             <ListboxOption
               onClick={() => {
                 const query = generatingSearchParam({
-                  category: items.tab,
-                  domain: domain,
+                  selected: items.tab,
+                  // domain: domain,
                 });
                 router.push(`?${query.toString()}`, {
                   scroll: false,

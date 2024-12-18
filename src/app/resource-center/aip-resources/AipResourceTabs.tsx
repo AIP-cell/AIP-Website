@@ -106,8 +106,9 @@ const filterDatas = [
 type Props = {
   tabData: TAipResourcesCategory[];
   category: string;
+  asyncParam: Record<string, any>;
 };
-const AipResourceTabs = ({ tabData, category }: Props) => {
+const AipResourceTabs = ({ tabData, category, asyncParam }: Props) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   return (
@@ -117,14 +118,22 @@ const AipResourceTabs = ({ tabData, category }: Props) => {
         onChange={setSelectedIndex}
         className="flex flex-col justify-center "
       >
-        <TabListAndRespSelect
+        {/* <SelectedAipUpdates
           tabArray={resourcesArray}
           selectedIndex={selectedIndex}
           //   setSelected={setSelected}
           setSelectedIndex={setSelectedIndex}
           textClassName="  "
           listClassName="!w-full"
-        />
+        /> */}
+        {/* <TabListAndRespSelect
+          tabArray={resourcesArray}
+          selectedIndex={selectedIndex}
+          //   setSelected={setSelected}
+          setSelectedIndex={setSelectedIndex}
+          textClassName="  "
+          listClassName="!w-full"
+        /> */}
         <TabPanels className="">
           <TabPanel>
             <div className="flex flex-wrap pt-[2rem] items-center gap-[0.75rem]">
@@ -133,8 +142,10 @@ const AipResourceTabs = ({ tabData, category }: Props) => {
               </p>
               <div className="relative flex flex-wrap gap-[.75rem]">
                 <CustomFilter
+                  searchParams={{ ...asyncParam }}
+                  filterKey="domain"
                   category={category}
-                  type={filterDatas.at(0)!.type}
+                  type="domain"
                   optionsArray={filterDatas.at(0)!.filter}
                 />
               </div>
@@ -159,11 +170,25 @@ const AipResourceTabs = ({ tabData, category }: Props) => {
               </p>
               <div className="relative flex flex-wrap gap-[.75rem]">
                 <CustomFilter
+                  filterKey="domain"
+                  searchParams={{ ...asyncParam }}
                   type={filterDatas.at(0)!.type}
                   optionsArray={filterDatas.at(0)!.filter}
-                  // selected={domain}
-                  // setSelected={setDomain}
                   category={category}
+                />
+                <CustomFilter
+                  searchParams={{ ...asyncParam }}
+                  filterKey="Type of Content"
+                  category={category}
+                  type={filterDatas.at(1)!.type}
+                  optionsArray={filterDatas.at(1)!.filter}
+                />
+                <CustomFilter
+                  searchParams={{ ...asyncParam }}
+                  filterKey="Date"
+                  category={category}
+                  type={filterDatas.at(2)!.type}
+                  optionsArray={filterDatas.at(2)!.filter}
                 />
               </div>
             </div>
@@ -186,6 +211,37 @@ const AipResourceTabs = ({ tabData, category }: Props) => {
               </p>
               <div className="relative flex flex-wrap gap-[.75rem]">
                 <CustomFilter
+                  filterKey="Date"
+                  searchParams={{ ...asyncParam }}
+                  category={category}
+                  type={filterDatas.at(2)!.type}
+                  optionsArray={filterDatas.at(2)!.filter}
+                  // selected={domain}
+                  // setSelected={setDomain}
+                />
+              </div>
+            </div>
+            <div className="pt-[3.25rem] pb-[7.5rem] grid md:grid-cols-2 lg:grid-cols-3 gap-[4.5rem]">
+              {tabData.map((item, i) => (
+                <ResourceCard
+                  key={i}
+                  src={item.image}
+                  title={item.title}
+                  desc={item.description}
+                  category={item.domain}
+                />
+              ))}
+            </div>
+          </TabPanel>
+          <TabPanel>
+            <div className="flex flex-wrap pt-[2rem] items-center gap-[0.75rem]">
+              <p className="~pb-[1.25rem]/0 text-gray40  ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]">
+                Filter by:
+              </p>
+              <div className="relative flex flex-wrap gap-[.75rem]">
+                <CustomFilter
+                  filterKey=""
+                  searchParams={{ ...asyncParam }}
                   category={category}
                   type={filterDatas.at(0)!.type}
                   optionsArray={filterDatas.at(0)!.filter}
@@ -213,33 +269,8 @@ const AipResourceTabs = ({ tabData, category }: Props) => {
               </p>
               <div className="relative flex flex-wrap gap-[.75rem]">
                 <CustomFilter
-                  category={category}
-                  type={filterDatas.at(0)!.type}
-                  optionsArray={filterDatas.at(0)!.filter}
-                  // selected={domain}
-                  // setSelected={setDomain}
-                />
-              </div>
-            </div>
-            <div className="pt-[3.25rem] pb-[7.5rem] grid md:grid-cols-2 lg:grid-cols-3 gap-[4.5rem]">
-              {tabData.map((item, i) => (
-                <ResourceCard
-                  key={i}
-                  src={item.image}
-                  title={item.title}
-                  desc={item.description}
-                  category={item.domain}
-                />
-              ))}
-            </div>
-          </TabPanel>
-          <TabPanel>
-            <div className="flex flex-wrap pt-[2rem] items-center gap-[0.75rem]">
-              <p className="~pb-[1.25rem]/0 text-gray40  ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]">
-                Filter by:
-              </p>
-              <div className="relative flex flex-wrap gap-[.75rem]">
-                <CustomFilter
+                  filterKey=""
+                  searchParams={{ ...asyncParam }}
                   category={category}
                   type={filterDatas.at(0)!.type}
                   optionsArray={filterDatas.at(0)!.filter}
@@ -268,6 +299,8 @@ const AipResourceTabs = ({ tabData, category }: Props) => {
               </p>
               <div className="relative flex flex-wrap gap-[.75rem]">
                 <CustomFilter
+                  filterKey=""
+                  searchParams={{ ...asyncParam }}
                   category={category}
                   type={filterDatas.at(0)!.type}
                   optionsArray={filterDatas.at(0)!.filter}

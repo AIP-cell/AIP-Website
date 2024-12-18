@@ -25,11 +25,11 @@ const caseStudyData = [
     image: "/images/case-studies/caseStudy1.png",
   },
 ];
-type Props={
-  casestudies:TCaseStudies[]
-}
+type Props = {
+  casestudies: TCaseStudies[];
+};
 
-const NpoSpotlight = ({casestudies}:Props) => {
+const NpoSpotlight = ({ casestudies }: Props) => {
   return (
     <div className="relative w-full">
       <Image
@@ -50,15 +50,15 @@ const NpoSpotlight = ({casestudies}:Props) => {
           </span>
         </h2>
         <div className="~pt-[2.5rem]/[6.56rem] flex flex-col ~gap-[3.5rem]/[5.5rem] ~px-[1.25rem]/[7.8rem]">
-          {casestudies.map((item: any, i: number) => (
+          {casestudies.map((item, i: number) => (
             <CaseStudy
               key={i}
               index={i}
-              foundationName={item.foundationName}
+              foundationName={item.organisation}
               foundationNameClassName="!pt-[1.25rem]"
               initiativeName={item.initiativeName}
               title={item.title}
-              desc={item.desc}
+              desc={item.description}
               image={item.image}
             />
           ))}

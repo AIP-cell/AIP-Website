@@ -18,8 +18,10 @@ type Props = {
   title2ClassName?: string;
   locationClassName?: string;
   sizeClass?: string;
+  link?: string;
 };
 const ATeamCard = ({
+  link,
   image,
   linkedin,
   title,
@@ -48,11 +50,12 @@ const ATeamCard = ({
         />
       )}
       <div className="flex flex-col gap-[0.5rem]">
-        <h3
+        <Link
+          href={`${link}`}
           className={`~text-h4a/h4 ~leading-[2.1rem]/[2.6rem] text-gray80 font-playFair ${titleClassName}`}
         >
           {title}
-        </h3>
+        </Link>
         <h3
           className={`~text-h4a/h4 ~leading-[2.1rem]/[2.6rem] text-gray80 font-playFair ${title2ClassName}`}
         >

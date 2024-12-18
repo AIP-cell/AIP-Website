@@ -2,6 +2,7 @@ import Image from "next/image";
 import Src from "@public/images/mediaImage.png";
 import React from "react";
 import cn from "@/utils/tailwind";
+import dayjs from "dayjs";
 
 type Props = {
   title: string;
@@ -11,6 +12,7 @@ type Props = {
   mediaArrayLength: number;
 };
 const MediaCard = ({ title, ddmmyy, desc, index, mediaArrayLength }: Props) => {
+  const dateFormat = dayjs(ddmmyy).format("D MMMM");
   return (
     <div
       className={cn(
@@ -30,7 +32,7 @@ const MediaCard = ({ title, ddmmyy, desc, index, mediaArrayLength }: Props) => {
       </p>
       <div className="bg-[#DFE0E5] h-px"></div>
       <p className="text-h9Copy5 leading-[1.225rem] text-gray50 ">
-        {ddmmyy}
+        {dateFormat}
       </p>
     </div>
   );

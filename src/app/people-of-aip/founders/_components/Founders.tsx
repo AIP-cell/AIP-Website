@@ -178,9 +178,9 @@ import { TTeamMembers } from "@/api/type";
 //   },
 // ];
 type Props = {
-  advisoryBoardMembers: TTeamMembers[];
+  founderMembers: TTeamMembers[];
 };
-const Founders = ({ advisoryBoardMembers }: Props) => {
+const Founders = ({ founderMembers }: Props) => {
   return (
     <div className="w-full relative">
       <Image
@@ -206,7 +206,7 @@ const Founders = ({ advisoryBoardMembers }: Props) => {
       <div className="pt-[3rem] pb-[7rem] container mx-auto">
         <div className="flex flex-col  justify-center ~px-[1.25rem]/[20.9rem]">
           <h2 className=" text-center ~text-h4/h2 ~leading-[2.6rem]/[3.3rem] text-textPurple font-playFairItalic">
-            Advisory Board
+            Founders
           </h2>
           <p className="~pt-[2rem]/[1.25rem]  text-midGray text-center ~text-h9Copy5/h9Copy4 !leading-[1.225rem]/[1.4rem] max-[21rem]:px-[0.5rem]">
             Experts in the philanthropic sector are dedicated professionals who
@@ -216,7 +216,7 @@ const Founders = ({ advisoryBoardMembers }: Props) => {
             meaningful change in underserved communities.
           </p>
         </div>
-        {advisoryBoardMembers.map((items, i) => {
+        {founderMembers.map((items, i) => {
           const position = i % 12;
           const isCenteredRow = position >= 8 && position <= 11;
           if (
@@ -235,17 +235,16 @@ const Founders = ({ advisoryBoardMembers }: Props) => {
                 {position === 0 && (
                   <div className="flex ~gap-[1.25rem]/[5.6rem] ">
                     <ATeamCard
-                      link={`our-advisory-board/${items.name}`}
                       image={"/images/sample"}
                       title={items.name}
                       desc={items.designation}
                       linkedin={true}
                     />
-                    {advisoryBoardMembers[i + 1] && (
+                    {founderMembers[i + 1] && (
                       <PTeamCard
                         image={"/images/sample"}
-                        title={advisoryBoardMembers[i + 1].name}
-                        desc={advisoryBoardMembers[i + 1].designation}
+                        title={founderMembers[i + 1].name}
+                        desc={founderMembers[i + 1].designation}
                         linkedin={true}
                       />
                     )}
@@ -259,11 +258,11 @@ const Founders = ({ advisoryBoardMembers }: Props) => {
                       desc={items.designation}
                       linkedin={true}
                     />
-                    {advisoryBoardMembers[i + 1] && (
+                    {founderMembers[i + 1] && (
                       <PTeamCard
                         image={"/images/sample"}
-                        title={advisoryBoardMembers[i + 1].name}
-                        desc={advisoryBoardMembers[i + 1].designation}
+                        title={founderMembers[i + 1].name}
+                        desc={founderMembers[i + 1].designation}
                         linkedin={true}
                       />
                     )}
@@ -277,27 +276,27 @@ const Founders = ({ advisoryBoardMembers }: Props) => {
                       desc={items.designation}
                       linkedin={true}
                     />
-                    {advisoryBoardMembers[i + 1] && (
+                    {founderMembers[i + 1] && (
                       <PTeamCard
                         image={"/images/sample"}
-                        title={advisoryBoardMembers[i + 1].name}
-                        desc={advisoryBoardMembers[i + 1].designation}
+                        title={founderMembers[i + 1].name}
+                        desc={founderMembers[i + 1].designation}
                         linkedin={true}
                       />
                     )}
-                    {advisoryBoardMembers[i + 2] && (
+                    {founderMembers[i + 2] && (
                       <ATeamCard
                         image={"/images/sample"}
-                        title={advisoryBoardMembers[i + 2].name}
-                        desc={advisoryBoardMembers[i + 2].designation}
+                        title={founderMembers[i + 2].name}
+                        desc={founderMembers[i + 2].designation}
                         linkedin={true}
                       />
                     )}
-                    {advisoryBoardMembers[i + 3] && (
+                    {founderMembers[i + 3] && (
                       <PTeamCard
                         image={"/images/sample"}
-                        title={advisoryBoardMembers[i + 3].name}
-                        desc={advisoryBoardMembers[i + 3].designation}
+                        title={founderMembers[i + 3].name}
+                        desc={founderMembers[i + 3].designation}
                         linkedin={true}
                       />
                     )}
@@ -311,11 +310,11 @@ const Founders = ({ advisoryBoardMembers }: Props) => {
                       desc={items.designation}
                       linkedin={true}
                     />
-                    {advisoryBoardMembers[i + 1] && (
+                    {founderMembers[i + 1] && (
                       <PTeamCard
                         image={"/images/sample"}
-                        title={advisoryBoardMembers[i + 1].name}
-                        desc={advisoryBoardMembers[i + 1].designation}
+                        title={founderMembers[i + 1].name}
+                        desc={founderMembers[i + 1].designation}
                         linkedin={true}
                       />
                     )}
@@ -329,11 +328,11 @@ const Founders = ({ advisoryBoardMembers }: Props) => {
                       desc={items.designation}
                       linkedin={true}
                     />
-                    {advisoryBoardMembers[i + 1] && (
+                    {founderMembers[i + 1] && (
                       <PTeamCard
                         image={"/images/sample"}
-                        title={advisoryBoardMembers[i + 1].name}
-                        desc={advisoryBoardMembers[i + 1].designation}
+                        title={founderMembers[i + 1].name}
+                        desc={founderMembers[i + 1].designation}
                         linkedin={true}
                       />
                     )}

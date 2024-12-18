@@ -12,9 +12,19 @@ const getPeopleOfAipApi = async (slug: string): Promise<TPeopleOfAip> => {
   const response = await Api.getPeopleOfAip(slug);
   return response.data;
 };
+const tabList = [
+  { name: "Our Core Founders", link: "/people-of-aip/core-founders" },
+  { name: "Founders", link: "/people-of-aip/founders" },
+  {
+    name: "Our Advisory Board",
+    link: "/people-of-aip/our-advisory-board",
+  },
+  { name: "Team AIP", link: "/people-of-aip/team-AIP" },
+  { name: "Experts", link: "/people-of-aip/experts" },
+];
 const page = async () => {
   const response = await getPeopleOfAipApi("experts");
-  const expertMembers =response.teamMembers
+  const expertMembers = response.teamMembers;
   return (
     <div className="pt-[5rem] overflow-hidden">
       <div className="relative container mx-auto">
@@ -25,8 +35,8 @@ const page = async () => {
           linkTwo="/people-of-aip/experts"
         />
       </div>
-      <PeopleOfAipTabs currentTab="Experts" />
-      <Experts expertMembers={expertMembers}/>
+      <PeopleOfAipTabs tabList={tabList} currentTab="Experts" />
+      <Experts expertMembers={expertMembers} />
       {/* <PeopleOfAipTab tabSelect="experts" />
       <PeopleOfAipSm tabSelect="Experts"/> */}
     </div>

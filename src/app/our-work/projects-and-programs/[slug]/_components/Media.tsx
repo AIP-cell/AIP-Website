@@ -1,4 +1,5 @@
 "use client";
+import { TMedia } from "@/api/type";
 import MediaCard from "@/components/cards/MediaCard";
 import LeftSlickArrowSvg from "@/components/svg/LeftSlickArrowSvg";
 import RightSlickArrowSvg from "@/components/svg/RightSlickArrowSvg";
@@ -21,7 +22,10 @@ const mediaArray = [
     ddmmyy: "11 Jul 2024",
   },
 ];
-const Media = () => {
+type Props = {
+  media: TMedia[];
+};
+const Media = ({ media }: Props) => {
   const carouselRef = useRef<HTMLDivElement>(null);
   const previous = () => {
     if (carouselRef.current) {
@@ -42,7 +46,7 @@ const Media = () => {
       }
     }
   };
-  const mediaArrayLength = mediaArray.length;
+  const mediaArrayLength = media.length;
   return (
     <div className="~pt-[5rem]/[7.53rem] ">
       <div className="relative container mx-auto ~pb-[1.988rem]/0">
@@ -67,14 +71,14 @@ const Media = () => {
           ref={carouselRef}
           className="flex snap-x snap-mandatory pointer-events-none w-full overflow-x-scroll no-scrollbar  ~gap-[1.25rem]/[4.5rem] lg:justify-center "
         >
-          {mediaArray.map((media, i) => (
+          {media.map((media, i) => (
             <MediaCard
               mediaArrayLength={mediaArrayLength}
               key={i}
               index={i}
               title={media.title}
-              desc={media.desc}
-              ddmmyy={media.ddmmyy}
+              desc={media.description}
+              ddmmyy={media.date}
             />
           ))}
         </div>

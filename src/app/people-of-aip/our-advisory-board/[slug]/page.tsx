@@ -13,8 +13,25 @@ import LinkedinSvg from "@/components/svg/LinkedinSvg";
 import ASvg from "@/components/svg/ASvg";
 import PSvg from "@/components/svg/PSvg";
 import InnerCollaborationsVideo from "@/app/our-work/collaborations/[slug]/_components/InnerCollaborationsVideo";
+import { Api } from "@/api/Api";
+import { TPeopleOfAipGetOne } from "@/api/type";
 
-const AdvisoryInnerPage = () => {
+export const dynamic = "force-dynamic";
+const getPeopleOfAipGetOneApi = async (
+  slug: string
+): Promise<TPeopleOfAipGetOne> => {
+  const response = await Api.getPeopleOfAipGetOne(slug);
+  return response.data;
+};
+const AdvisoryInnerPage = async ({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) => {
+  const urlParams = await params;
+  const response = await getPeopleOfAipGetOneApi(urlParams.slug);
+  const details = response.teams;
+  console.log("urlParams:::",urlParams.slug);
   return (
     <div className="pt-[5rem]">
       <div className="w-full relative ">
@@ -37,10 +54,10 @@ const AdvisoryInnerPage = () => {
               <div className="col-span-2  relative">
                 <div className=" hidden md:block">
                   <h2 className="~text-h4/h2 text-midGray leading-[3.3rem] font-playFair">
-                    Ashish Dhawan
+                    {details?.name}
                   </h2>
                   <h4 className="pt-[1rem] ~text-h6/h5 text-gray40 font-playFairItalic ~pr-[4rem]/0">
-                    Founder-CEO, The Convergence Foundation
+                    {details?.designation}
                   </h4>
                 </div>
                 <div className="~pt-[2rem]/[2.5rem] text-midGray ~pr-0/[6.56rem]">
@@ -85,11 +102,7 @@ const AdvisoryInnerPage = () => {
                     <div className="flex gap-[1rem]">
                       <ButtonAnimation className="rounded-full ~p-[0.5rem]/[0.875rem] bg-bgGray5">
                         {/* <LinkedinSvg className="size-[1.5rem]"/> */}
-                        <Image
-                          src={Linkedin}
-                          alt=""
-                          className="w-[1.375rem]"
-                        />
+                        <Image src={Linkedin} alt="" className="w-[1.375rem]" />
                       </ButtonAnimation>
                       <ButtonAnimation className="rounded-full flex justify-center items-center text-textPurple hover:text-white p-[0.93rem] bg-bgGray5 hover:bg-textPurple">
                         <XSvg className="size-[1.063rem]" />
@@ -97,21 +110,13 @@ const AdvisoryInnerPage = () => {
                       </ButtonAnimation>
                     </div>
                     <div className="flex w-[17.375rem] gap-[0.98rem] ~pl-[1rem]/[1.25rem] ~pr-[2.813rem]/[1.25rem] ~py-[0.87rem]/[0.76rem] bg-bgGray5 rounded-full">
-                      <Image
-                        src={LinkSvg}
-                        alt=""
-                        className="size-[1.25rem]"
-                      />
+                      <Image src={LinkSvg} alt="" className="size-[1.25rem]" />
                       <p className="text-gray80 ~leading-[1.225rem]/[1.4rem] ~text-h9Copy5/h9Copy4">
                         theconvergencefoundation
                       </p>
                     </div>
                     <div className="flex w-[17.375rem] gap-[0.98rem] px-[1.25rem] py-[0.76rem] bg-bgGray5 rounded-full">
-                      <Image
-                        src={LinkSvg}
-                        alt=""
-                        className="size-[1.25rem]"
-                      />
+                      <Image src={LinkSvg} alt="" className="size-[1.25rem]" />
                       <p className="text-gray80 ~leading-[1.225rem]/[1.4rem] ~text-h9Copy5/h9Copy4">
                         abcdxyze_loremipsum
                       </p>

@@ -7,8 +7,21 @@ import Image from "next/image";
 import BreadCrump from "@/components/bread-crump/BreadCrump";
 import GalleryVideos from "./_components/GalleryVideos";
 import GalleryImages from "./_components/GalleryImages";
+import { Api } from "@/api/Api";
+import { TGalleryCollaboration } from "@/api/type";
 
-const page = () => {
+export const dynamic = "force-dynamic";
+const getOneGalleryCollaborationsApi = async (
+  slug: string
+): Promise<TGalleryCollaboration> => {
+  const response = await Api.getOneGalleryCollaborations(slug);
+  return response.data;
+};
+const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
+  const asyncParam = (await params).slug;
+  const response = await getOneGalleryCollaborationsApi(asyncParam);
+  const galleryImages =response.gallery.galleryImages
+  const galleryVideos =response.gallery.galleryVideos
   return (
     <div className="pt-[5rem]">
       <div className=" relative w-full overflow-hidden">
@@ -37,8 +50,8 @@ const page = () => {
             this network and establish personal philanthropy as a means for
             India’s transformation.
           </p>
-          <GalleryVideos />
-          <GalleryImages  />
+          <GalleryVideos galleryVideos={galleryVideos} />
+          <GalleryImages galleryImages={galleryImages} />
         </div>
       </div>
     </div>

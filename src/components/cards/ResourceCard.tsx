@@ -4,15 +4,25 @@ import EyeSvg from "../svg/EyeSvg";
 import DownloadFileSvg from "../svg/DowloadFileSvg";
 import dayjs from "dayjs";
 import { StorageUrl } from "@/utils/BaseUrl";
+import Link from "next/link";
 type Props = {
   src: string;
   title: string;
   desc: string;
-  category: string;
+  category?: string;
   name?: string;
   date?: string;
+  link?: string;
 };
-const ResourceCard = ({ src, title, desc, category, name, date }: Props) => {
+const ResourceCard = ({
+  src,
+  title,
+  desc,
+  category,
+  name,
+  date,
+  link,
+}: Props) => {
   const dateFormat = dayjs(date).format("D MMMM");
   return (
     // justify-center
@@ -26,7 +36,9 @@ const ResourceCard = ({ src, title, desc, category, name, date }: Props) => {
         />
       </div>
       <div className="flex flex-col w-full gap-[0.75rem]">
-        <p className=" w-full text-h6M text-gray80 font-inter font-semibold leading-[1.575rem] underline underline-offset-4 decoration-[1.5px]">
+        <p
+          className=" w-full text-h6M text-gray80 font-inter font-semibold leading-[1.575rem] underline underline-offset-4 decoration-[1.5px]"
+        >
           {title}
         </p>
         {name && (

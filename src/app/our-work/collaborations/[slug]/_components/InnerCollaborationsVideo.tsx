@@ -5,7 +5,11 @@ import rightBottomCurve from "@public/svg/products-and-services/offerings/peachL
 import LeftCurve from "@public/svg/products-and-services/collaborations/leftPeachCurve.svg";
 
 import Image from "next/image";
-const InnerCollaborationsVideo = () => {
+import { StorageUrl } from "@/utils/BaseUrl";
+type Props = {
+  video: string;
+};
+const InnerCollaborationsVideo = ({ video }: Props) => {
   return (
     <div className="relative ">
       <Image
@@ -16,17 +20,19 @@ const InnerCollaborationsVideo = () => {
 
       <div className="~pt-[2rem]/[3.5rem]   container relative flex justify-center mx-auto">
         <div className="w-[64.375rem] relative flex justify-center items-center ~h-[12.313rem]/[35.313rem] overflow-hidden rounded-lg">
+          <video className="z-10 border-2 absolute inset-0 w-full h-full ">
+            <source src={StorageUrl + video} type="video/mp4" />
+          </video>
           {/* <Image
-            src={rightBottomCurve}
-            alt="video-bg"
-            className=" absolute left-0 bottom-[-18.625rem]"
-          /> */}
-          <Image
             src={BgVideo}
             alt="video-bg"
-            className="object-cover absolute inset-0 rounded-lg h-full"
+            className="object-cover absolute inset-0 rounded-lg h-full z-20"
+          /> */}
+          <Image
+            src={videoPlaySvg}
+            alt="play-svg"
+            className="z-50 cursor-pointer"
           />
-          <Image src={videoPlaySvg} alt="play-svg" className="z-10" />
         </div>
       </div>
     </div>

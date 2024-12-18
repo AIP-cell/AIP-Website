@@ -1,4 +1,5 @@
 "use client";
+import { TGalleryVideos } from "@/api/type";
 import GalleryVideo from "@/components/cards/GalleryVideo";
 import LeftSlickArrowSvg from "@/components/svg/LeftSlickArrowSvg";
 import RightSlickArrowSvg from "@/components/svg/RightSlickArrowSvg";
@@ -31,12 +32,15 @@ const VideoArray = [
   },
 ];
 
-const GalleryVideos = () => {
+type Props = {
+  galleryVideos: TGalleryVideos[];
+};
+const GalleryVideos = ({ galleryVideos }: Props) => {
   const [change, setChange] = useState<number>(0);
 
   const isDesktop = useMediaQuery({ query: "(min-width: 768px)" });
   const itemsPerSlide = isDesktop ? 2 : 1;
-  const arrayLength = VideoArray.length;
+  const arrayLength = galleryVideos.length;
   const previous = () => {
     if (change <= 0) {
       setChange(arrayLength - itemsPerSlide);
@@ -73,19 +77,19 @@ const GalleryVideos = () => {
         </button>
       </div>
       <div className="flex  overflow-x-auto no-scrollbar lg:justify-center  gap-[1.248rem] ~pt-5/[4.997rem]">
-        {VideoArray.slice(change, change + itemsPerSlide).map(
-          (video, index) => {
+        {galleryVideos
+          .slice(change, change + itemsPerSlide)
+          .map((video, index) => {
             return (
               <GalleryVideo
                 key={index}
-                src={video.src}
-                desc={video.desc}
-                ddmmyy={video.ddmmyy}
-                desc2={video.desc2}
+                src={video.video}
+                title={video.title}
+                date={video.date}
+                // desc2={video.desc2}
               />
             );
-          }
-        )}
+          })}
       </div>
     </div>
   );

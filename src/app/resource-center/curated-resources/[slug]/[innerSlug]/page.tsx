@@ -1,5 +1,5 @@
 import Agenda from "@/app/our-work/collaborations/[slug]/_components/Agenda";
-import InnerCollaborationsSectionOne from "@/app/our-work/collaborations/[slug]/_components/InnerCollaborationsSectionOne";
+import InnerCollaborations from "@/app/our-work/collaborations/[slug]/_components/InnerCollaborations";
 import InnerCollaborationsVideo from "@/app/our-work/collaborations/[slug]/_components/InnerCollaborationsVideo";
 import InnerCollaborationTestimonials from "@/app/our-work/collaborations/[slug]/_components/InnerCollaborationTestimonials";
 import Gallery from "@/app/our-work/projects-and-programs/[slug]/_components/Gallery";
@@ -48,7 +48,7 @@ const page = () => {
     <div className="pt-[5rem]">
       <InnerExpertsSectionOne />
       <div className="container mx-auto ~pb-[5rem]/[7.5rem]">
-        <Gallery />
+        {/* <Gallery gallery={}/> */}
       </div>
     </div>
   );

@@ -1,3 +1,4 @@
+import { TSelectedWorks } from "@/api/type";
 import BgButton from "@/components/buttons/BgButton";
 import ResourceCard from "@/components/cards/ResourceCard";
 import React from "react";
@@ -22,7 +23,10 @@ const datas = [
     category: "Field",
   },
 ];
-const ExpertsShelves = () => {
+type Props = {
+  expertShelves: TSelectedWorks[];
+};
+const ExpertsShelves = ({ expertShelves }: Props) => {
   return (
     <div className="~pt-[7rem]/[12.5rem] container mx-auto flex flex-col items-center">
       <h2 className="~text-h4/h2 ~leading-[2.6rem]/[3.3rem]  text-center font-playFair text-gray80">
@@ -32,12 +36,12 @@ const ExpertsShelves = () => {
         A showcase of inspirational work done by collaborators in our network
       </p>
       <div className="  grid md:grid-cols-2 lg:grid-cols-3 ~gap-[2.5rem]/[4.5rem] ~px-[1.25rem]/[8.125rem]">
-        {datas.map((item, i) => (
+        {expertShelves.map((item, i) => (
           <ResourceCard
             key={i}
-            src={item.src}
+            src={item.image}
             title={item.title}
-            desc={item.desc}
+            desc={item.description}
             category={item.category}
           />
         ))}

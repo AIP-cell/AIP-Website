@@ -1,6 +1,7 @@
 import TestimonialSlick from "@/components/slick/TestimonialSlick";
 import Image from "next/image";
 import PurpleBottomSvg from "@public/svg/products-and-services/project-and-programs/bottomRightPurpleCurve.svg";
+import { TTestimonials } from "@/api/type";
 
 const testimonialsArray: any[] = [
   {
@@ -24,7 +25,10 @@ const testimonialsArray: any[] = [
     desc: "“I believe those who are already in philanthropy and enjoying it and making a difference have a responsibility to share their stories widely, and to be very transparent about their giving. By promoting such accountability, AIP is playing an essential role in building trust with the communities we serve.” ",
   },
 ];
-const TestimonialsProjectProgram = () => {
+type Props={
+  testimonials:TTestimonials[]
+}
+const TestimonialsProjectProgram = ({testimonials}:Props) => {
   return (
     <div className="w-full relative">
       <Image
@@ -42,7 +46,7 @@ const TestimonialsProjectProgram = () => {
         <p className="~leading-[1.225rem]/[1.4rem] ~text-h9Copy5/h9Copy4 text-center ~pt-[0.75rem]/[1.25rem] text-midGray">
           Some words from the launch.
         </p>
-        <TestimonialSlick slickArray={testimonialsArray} />
+        <TestimonialSlick slickArray={testimonials} />
       </div>
     </div>
   );

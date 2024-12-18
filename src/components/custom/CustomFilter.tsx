@@ -19,17 +19,21 @@ type Props = {
   optionsArray: any[];
   type: string;
   selected?: string;
+  searchParams: Record<string, any>;
   setSelected?: (value: string) => void;
-  category: string;
+  category?: string;
   queryParamValues?: any;
+  filterKey: string;
 };
 const CustomFilter = ({
   queryParamValues,
+  searchParams,
   type,
   optionsArray,
   selected,
   setSelected,
   category,
+  filterKey,
 }: Props) => {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
@@ -69,8 +73,9 @@ const CustomFilter = ({
                 value={items}
                 onClick={() => {
                   const query = generatingSearchParam({
-                    category,
-                    domain: items,
+                    // category,
+                    ...searchParams,
+                    [filterKey]: items,
                   });
                   router.push(`?${query.toString()}`, {
                     scroll: false,

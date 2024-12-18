@@ -19,15 +19,18 @@ export const Api = {
       return null;
     }
   },
-  getAipResources: async (data: {
-    category: string;
-    domain?: string;
-    typeOfContent?: string;
-    date?: string;
-  }) => {
+  getAipResources: async (
+    slug: string,
+    data: {
+      domain?: string;
+      typeOfContent?: string;
+      date?: string;
+    }
+  ) => {
+    console.log("data::", slug);
     try {
       const response = await axiosClient.get(
-        `aip-resources?${new URLSearchParams(data)}`
+        `aip-resources?category=${slug}&${new URLSearchParams(data)}`
       );
       return response.data;
     } catch (error) {
@@ -35,15 +38,19 @@ export const Api = {
       return null;
     }
   },
-  getCuratedResources: async (data: {
-    category: string;
-    domain?: string;
-    typeOfContent?: string;
-    date?: string;
-  }) => {
+  getCuratedResources: async (
+    slug: string,
+    data: {
+      domain?: string;
+      typeOfContent?: string;
+      organisationType?: string;
+      date?: string;
+    }
+  ) => {
+    console.log("data::", slug);
     try {
       const response = await axiosClient.get(
-        `curated-resources?${new URLSearchParams(data)}`
+        `curated-resources?category=${slug}&${new URLSearchParams(data)}`
       );
       return response.data;
     } catch (error) {
@@ -51,6 +58,23 @@ export const Api = {
       return null;
     }
   },
+  
+  // getCuratedResources: async (data: {
+  //   category: string;
+  //   domain?: string;
+  //   typeOfContent?: string;
+  //   date?: string;
+  // }) => {
+  //   try {
+  //     const response = await axiosClient.get(
+  //       `curated-resources?${new URLSearchParams(data)}`
+  //     );
+  //     return response.data;
+  //   } catch (error) {
+  //     console.log(error);
+  //     return null;
+  //   }
+  // },
   getFounderNetwork: async () => {
     try {
       const response = await axiosClient.get(`founder-networks`);
@@ -99,6 +123,81 @@ export const Api = {
   getPeopleOfAip: async (slug: string) => {
     try {
       const response = await axiosClient.get(`aip-team/${slug}`);
+      return response.data;
+    } catch (error) {
+      console.log(error);
+      return null;
+    }
+  },
+  getPeopleOfAipGetOne: async (slug: string) => {
+    try {
+      const response = await axiosClient.get(`aip-team/get-one/${slug}`);
+      return response.data;
+    } catch (error) {
+      console.log(error);
+      return null;
+    }
+  },
+  getOurWorkExperts: async () => {
+    try {
+      const response = await axiosClient.get(`experts`);
+      return response.data;
+    } catch (error) {
+      console.log(error);
+      return null;
+    }
+  },
+  getProjectsPrograms: async (data: {
+    domain?: string;
+    typeOfContent?: string;
+    organizationType?: string;
+    events?: string;
+    date?: string;
+  }) => {
+    try {
+      const response = await axiosClient.get(
+        `projects-programs?${new URLSearchParams(data)}`
+      );
+      return response.data;
+    } catch (error) {
+      console.log(error);
+      return null;
+    }
+  },
+  getOneProjectsPrograms: async (slug: string) => {
+    try {
+      const response = await axiosClient.get(`projects-programs/${slug}`);
+      return response.data;
+    } catch (error) {
+      console.log(error);
+      return null;
+    }
+  },
+  getCollaborations: async (data: {
+    type?: string;
+    partnerType?: string;
+    date?: string;
+  }) => {
+    try {
+      const response = await axiosClient.get(`collaborations`);
+      return response.data;
+    } catch (error) {
+      console.log(error);
+      return null;
+    }
+  },
+  getOneCollaborations: async (slug: string) => {
+    try {
+      const response = await axiosClient.get(`collaborations/${slug}`);
+      return response.data;
+    } catch (error) {
+      console.log(error);
+      return null;
+    }
+  },
+  getOneGalleryCollaborations: async (slug: string) => {
+    try {
+      const response = await axiosClient.get(`collaborations/${slug}/gallery`);
       return response.data;
     } catch (error) {
       console.log(error);

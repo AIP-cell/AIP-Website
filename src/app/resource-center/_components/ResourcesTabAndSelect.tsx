@@ -1,22 +1,25 @@
+"use client";
 import cn from "@/utils/tailwind";
 import Link from "next/link";
 import React from "react";
-import PeopleOfAipRespTab from "./PeopleOfAipRespTab";
+import ResourcesSm from "./ResourcesSm";
+import { useRouter } from "next/navigation";
 
 type Props = {
   currentTab: string;
   tabClassName?: string;
   mainClassName?: string;
   tabListClassName?: string;
-  tabList: { name: string; link: string }[];
+  tabList: { slug: string; name: string; link: string }[];
 };
-const PeopleOfAipTabs = ({
+const ResourcesTabAndSelect = ({
   currentTab,
   tabList,
   tabListClassName,
   tabClassName,
   mainClassName,
 }: Props) => {
+  const router = useRouter();
   return (
     <>
       <div
@@ -35,8 +38,13 @@ const PeopleOfAipTabs = ({
             {tabList.map((items, i) => (
               <div
                 key={i}
+                onClick={() =>
+                  router.push(`/resource-center/aip-resources/${items.slug}`, {
+                    scroll: false,
+                  })
+                }
                 className={cn(
-                  "~px-[1.5rem]/[2.5rem] py-[0.75rem] flex justify-center items-center text-h9Copy5 leading-[1.22rem] font-inter ",
+                  "~px-[1.5rem]/[2.5rem] py-[0.75rem] cursor-pointer flex justify-center items-center text-h9Copy5 leading-[1.22rem] font-inter ",
                   tabClassName,
                   {
                     "!bg-darkPurple !text-white !outline-none !rounded-full":
@@ -44,15 +52,15 @@ const PeopleOfAipTabs = ({
                   }
                 )}
               >
-                <Link href={items.link}>{items.name}</Link>
+                {items.name}
               </div>
             ))}
           </div>
         </div>
       </div>
-      <PeopleOfAipRespTab selected={currentTab} listArray={tabList} />
+      <ResourcesSm selected={currentTab} listArray={tabList} />
     </>
   );
 };
 
-export default PeopleOfAipTabs;
+export default ResourcesTabAndSelect;

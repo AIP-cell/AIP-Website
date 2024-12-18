@@ -13,9 +13,19 @@ const getPeopleOfAipApi = async (slug: string): Promise<TPeopleOfAip> => {
   const response = await Api.getPeopleOfAip(slug);
   return response.data;
 };
+const tabList = [
+  { name: "Our Core Founders", link: "/people-of-aip/core-founders" },
+  { name: "Founders", link: "/people-of-aip/founders" },
+  {
+    name: "Our Advisory Board",
+    link: "/people-of-aip/our-advisory-board",
+  },
+  { name: "Team AIP", link: "/people-of-aip/team-AIP" },
+  { name: "Experts", link: "/people-of-aip/experts" },
+];
 const page = async () => {
   const response = await getPeopleOfAipApi("coreFounder");
-  const coreFounderMembers =response.teamMembers
+  const coreFounderMembers = response.teamMembers;
   return (
     <div className="pt-[5rem] overflow-hidden">
       <div className="relative container mx-auto">
@@ -28,8 +38,8 @@ const page = async () => {
       </div>
 
       {/* <CoreFoundersTab/>  */}
-      <PeopleOfAipTabs currentTab="Our Core Founders" />
-      <OurCoreFoundersContent coreFounderMembers={coreFounderMembers}/>
+      <PeopleOfAipTabs tabList={tabList} currentTab="Our Core Founders" />
+      <OurCoreFoundersContent coreFounderMembers={coreFounderMembers} />
     </div>
   );
 };

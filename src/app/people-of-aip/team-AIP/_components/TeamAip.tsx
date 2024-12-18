@@ -60,22 +60,22 @@ const TeamAip = ({teamAipMembers}:Props) => {
       <Image
         src={Bg1}
         alt=""
-        className="hidden xl:block absolute top-[19.5rem] right-0"
+        className="hidden xl:block absolute top-[19.5rem] right-0 z-[50]"
       />
       <Image
         src={OvalPeach}
         alt=""
-        className="hidden xl:block absolute top-[39rem] right-[14.125rem] size-[12rem]"
+        className="hidden xl:block absolute top-[39rem] right-[14.125rem] size-[12rem] z-[50]"
       />
       <Image
         src={Bg2}
         alt=""
-        className="hidden xl:block absolute bottom-[8rem] left-0"
+        className="hidden xl:block absolute bottom-[8rem] left-0 z-[50]"
       />
       <Image
         src={OvalPeach}
         alt=""
-        className="hidden xl:block absolute bottom-[23rem] left-[17rem] size-[12rem]"
+        className="hidden xl:block absolute bottom-[23rem] left-[17rem] size-[12rem] z-[50]"
       />
       <div className="pt-[3rem] pb-[7rem] container mx-auto">
         <div className="flex flex-col  justify-center ~px-[1.25rem]/[20.9rem]">

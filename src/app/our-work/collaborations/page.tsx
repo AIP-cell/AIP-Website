@@ -8,11 +8,14 @@ import CollaborationGrid from "./_components/CollaborationGrid";
 import BreadCrump from "@/components/bread-crump/BreadCrump";
 import CustomSelect from "@/components/custom/CustomSelect";
 import CustomFilter from "@/components/custom/CustomFilter";
+import { Api } from "@/api/Api";
+import { TCollaborationPageData } from "@/api/type";
 const categoryData = ["Category", "Category", "Category"];
 const dateData = ["Date", "Date", "Date"];
 const filterDatas = [
   {
-    type: "Fields",
+    key: "type",
+    type: "Type",
     filter: [
       "All",
       "Art & Culture",
@@ -29,12 +32,37 @@ const filterDatas = [
     ],
   },
   {
+    key: "partnerType",
     type: "Partner Type",
     filter: ["data1", "data2"],
   },
-  { type: "Date", filter: ["data1", "data2"] },
+  { key: "date", type: "Date", filter: ["data1", "data2"] },
 ];
-const page = () => {
+export const dynamic = "force-dynamic";
+const getCollaborationsApi = async ({
+  type,
+  partnerType,
+  date,
+}: {
+  type?: string;
+  partnerType?: string;
+  date?: string;
+}): Promise<TCollaborationPageData[]> => {
+  const response = await Api.getCollaborations({ type, partnerType, date });
+  return response.data;
+};
+const page = async ({
+  searchParams,
+}: {
+  searchParams: Promise<{
+    type?: string;
+    partnerType?: string;
+    date?: string;
+  }>;
+}) => {
+  const { type, partnerType, date } = await searchParams;
+  const urlsearchParams = await searchParams;
+  const response = await getCollaborationsApi({ type, partnerType, date });
   return (
     <div className="~pt-[4.4rem]/[5rem]">
       <div className="relative w-full  pb-[7.5rem]">
@@ -82,16 +110,17 @@ const page = () => {
             <div className="flex flex-wrap gap-[.75rem]">
               {filterDatas.map((items, i) => (
                 <CustomFilter
+                  searchParams={{ ...urlsearchParams }}
+                  filterKey={items.key}
                   type={items.type}
                   key={i}
                   optionsArray={items.filter}
-                  
                 />
               ))}
             </div>
           </div>
 
-          <CollaborationGrid />
+          <CollaborationGrid collaborationData={response}/>
         </div>
       </div>
     </div>

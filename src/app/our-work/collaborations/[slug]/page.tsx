@@ -1,9 +1,11 @@
 import Agenda from "./_components/Agenda";
-import InnerCollaborationsSectionOne from "./_components/InnerCollaborationsSectionOne";
+import InnerCollaborations from "./_components/InnerCollaborations";
 import InnerCollaborationsVideo from "./_components/InnerCollaborationsVideo";
 import Gallery from "../../projects-and-programs/[slug]/_components/Gallery";
 import Media from "../../projects-and-programs/[slug]/_components/Media";
 import InnerCollaborationTestimonials from "./_components/InnerCollaborationTestimonials";
+import { Api } from "@/api/Api";
+import { TOneCollaborationPageData } from "@/api/type";
 const agendaArray = [
   {
     title: "Registration + Tea and Coffee",
@@ -41,22 +43,22 @@ const agendaArray = [
     desc: "By Ashish Dhawan, Founder-CEO,The Convergence Foundation; Core Founder, AIP",
   },
 ];
-const page = () => {
+export const dynamic = "force-dynamic";
+const getOneCollaborationsApi = async (
+  slug: string
+): Promise<TOneCollaborationPageData> => {
+  const response = await Api.getOneCollaborations(slug);
+  return response.data;
+};
+const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
+  const asyncParam = (await params).slug;
+  const response = await getOneCollaborationsApi(asyncParam);
+  const collaboration = response.collaboration;
+  const cities = collaboration?.cities;
+  const media = cities;
   return (
     <div className="pt-[5rem]">
-      <InnerCollaborationsSectionOne />
-      <div className="container mx-auto relative ~px-[1.25rem]/[7.8rem] ">
-        <p className="text-center font-playFair ~pb-[1rem]/20 ~leading-[2.6rem]/[3.3rem] tracking-[-.04rem] ~text-h4/h2 text-gray80">
-          Agenda
-        </p>
-        <Agenda agendaArray={agendaArray} />
-        <InnerCollaborationsVideo />
-      </div>
-      <div className="container mx-auto ~pt-[3rem]/0">
-        <Gallery galleryLink="/our-work/collaborations/slug/event-gallery" />
-      </div>
-      <Media />
-      <InnerCollaborationTestimonials />
+      <InnerCollaborations collaboration={collaboration} slug={asyncParam}/>
     </div>
   );
 };

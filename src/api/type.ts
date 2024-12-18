@@ -86,6 +86,7 @@ export type TTestimonials = {
 export type TCaseStudies = {
   title: string;
   organisationName: string;
+  organisation: string;
   philanthropistName: string;
   foundationName: string;
   initiativeName: string;
@@ -214,3 +215,171 @@ export type TTeamMembers = {
 };
 
 // End People Of Aip
+
+// Start People Of Aip Get One
+
+export type TPeopleOfAipGetOne = {
+  teams: TPeopleOfAipTeams;
+};
+export type TPeopleOfAipTeams = {
+  _id: string;
+  name: string;
+  designation: string;
+  description: string;
+  quote: string;
+  linkedln: string;
+  linkOrVideo: string;
+  twitter: string;
+  image: string;
+  video: string;
+  slug: string;
+  links: TLinks[];
+};
+
+export type TLinks = {
+  link: string;
+  _id: string;
+};
+
+// End People Of Aip
+
+// Start People Of Aip
+
+export type TProjectPrograms = {
+  _id: string;
+  date: string;
+  title: string;
+  description: string;
+  image: string;
+  slug: string;
+};
+
+// End People Of Aip
+
+// Start Inner People Of Aip
+
+export type TOneProjectProgramsPage = {
+  projectAndProgram: TOneProjectPrograms;
+};
+export type TOneProjectPrograms = {
+  category: string;
+  date: string;
+  title: string;
+  field: string;
+  partners: TPartners[];
+  description: string;
+  report: string;
+  image: string;
+  gallery: TGallery;
+  media: TMedia[];
+  testimonials: TTestimonials[];
+};
+export type TPartners = {
+  name: string;
+  image: string;
+  link: string;
+};
+export type TGallery = {
+  galleryImages: TGalleryImages[];
+  galleryVideos: TGalleryVideos[];
+};
+export type TGalleryImages = {
+  title: string;
+  date: string;
+  image: string;
+  _id: string;
+};
+export type TGalleryVideos = {
+  title: string;
+  date: string;
+  video: string;
+  _id: string;
+};
+export type TMedia = {
+  date: string;
+  title: string;
+  link: string;
+  description: string;
+  image: string;
+  _id: string;
+};
+
+// End Inner People Of Aip
+
+// Start Collaboration
+
+export type TCollaborationPageData = {
+  _id: string;
+  title: string;
+  date: string;
+  category: string;
+  slug: string;
+  description: string;
+  collaborations: TCollaboration[];
+};
+export type TCollaboration = {
+  _id: string;
+  name: string;
+  image: string;
+};
+
+// End Collaboration
+
+// Start Inner Collaboration
+
+export type TOneCollaborationPageData = {
+  collaboration: TOneCollaboration;
+};
+export type TOneCollaboration = {
+  _id: string;
+  category: string;
+  date: string;
+  title: string;
+  description: string;
+  cities: TCities[];
+};
+export type TCities = {
+  _id: string;
+  name: string;
+  fromDate: string;
+  toDate: string;
+  time: string;
+  linkOrVideo: string;
+  report: string;
+  videoLink: string;
+  organisationDetails: TOrganisationDetails[];
+  catchupDetails: TCatchupDetails[];
+  gallery: TGallery;
+  agenda: TAgenda[];
+  media: TMedia[];
+  testimonials: TTestimonials[];
+  Video: string;
+  collaborations: TCollaboration[];
+};
+export type TOrganisationDetails = {
+  image: string;
+  link: string;
+  _id: string;
+};
+export type TCatchupDetails = {
+  image: string;
+  link: string;
+  _id: string;
+};
+export type TAgenda = {
+  title: string;
+  date: string;
+  fromTime: string;
+  toTime: string;
+  description: string;
+  _id: string;
+};
+
+// End Inner Collaboration
+
+// Start Gallery Collaboration
+
+export type TGalleryCollaboration = {
+  gallery: TGallery;
+};
+// End Gallery Collaboration
