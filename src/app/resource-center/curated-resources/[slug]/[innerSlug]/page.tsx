@@ -5,6 +5,8 @@ import InnerCollaborationTestimonials from "@/app/our-work/collaborations/[slug]
 import Gallery from "@/app/our-work/projects-and-programs/[slug]/_components/Gallery";
 import Media from "@/app/our-work/projects-and-programs/[slug]/_components/Media";
 import InnerExpertsSectionOne from "./_components/InnerExpertsSectionOne";
+import { TCuratedResourcesExpertsInner } from "@/api/type";
+import { Api } from "@/api/Api";
 
 const agendaArray = [
   {
@@ -43,10 +45,25 @@ const agendaArray = [
     desc: "By Ashish Dhawan, Founder-CEO,The Convergence Foundation; Core Founder, AIP",
   },
 ];
-const page = () => {
+export const dynamic = "force-dynamic";
+const getCuratedResourcesExpertsInnerApi = async (
+  slug: string
+): Promise<TCuratedResourcesExpertsInner> => {
+  const response = await Api.getCuratedResourcesExpertsInner(slug);
+  return response?.data;
+};
+const page = async ({ params }: { params: Promise<{ innerSlug: string }> }) => {
+  const asyncParam = (await params).innerSlug;
+  console.log("asyncParam::",asyncParam)
+  const response = await getCuratedResourcesExpertsInnerApi(asyncParam);
+  if (!response) {
+    return;
+  }
+  const curatedResource = response?.curatedResource;
+  console.log("response",response)
   return (
     <div className="pt-[5rem]">
-      <InnerExpertsSectionOne />
+      <InnerExpertsSectionOne innerData={curatedResource} />
       <div className="container mx-auto ~pb-[5rem]/[7.5rem]">
         {/* <Gallery gallery={}/> */}
       </div>

@@ -106,29 +106,160 @@ const tabList = [
     link: "/resource-center/aip-resources/gallery",
   },
 ];
-const filterDatas = [
+const aipResourcesFilter = [
   {
-    type: "domain",
+    filterBy: "aipUpdates",
     filter: [
-      "All",
-      "Art & Culture",
-      "Education",
-      "Environment",
-      "Health & Nutrition",
-      "Legal & Judiciary",
-      "Livelihood",
-      "Disability",
-      "Rural Development",
-      "Sports",
-      "WASH",
-      "Women & Child",
+      {
+        type: "domain",
+        options: [
+          "All",
+          "Art & Culture",
+          "Education",
+          "Environment",
+          "Health & Nutrition",
+          "Legal & Judiciary",
+          "Livelihood",
+          "Disability",
+          "Rural Development",
+          "Sports",
+          "WASH",
+          "Women & Child",
+        ],
+      },
     ],
   },
   {
-    type: "Type of Content",
-    filter: ["data1", "data2"],
+    filterBy: "reportsAndPublications",
+    filter: [
+      {
+        type: "domain",
+        options: [
+          "All",
+          "Art & Culture",
+          "Education",
+          "Environment",
+          "Health & Nutrition",
+          "Legal & Judiciary",
+          "Livelihood",
+          "Disability",
+          "Rural Development",
+          "Sports",
+          "WASH",
+          "Women & Child",
+        ],
+      },
+      {
+        type: "Type of Content",
+        options: ["data1", "data2"],
+      },
+      { type: "Date", options: ["data1", "data2"] },
+    ],
   },
-  { type: "Date", filter: ["data1", "data2"] },
+  {
+    filterBy: "newsletter",
+    filter: [
+      {
+        type: "domain",
+        options: [
+          "All",
+          "Art & Culture",
+          "Education",
+          "Environment",
+          "Health & Nutrition",
+          "Legal & Judiciary",
+          "Livelihood",
+          "Disability",
+          "Rural Development",
+          "Sports",
+          "WASH",
+          "Women & Child",
+        ],
+      },
+      { type: "Date", options: ["data1", "data2"] },
+    ],
+  },
+  {
+    filterBy: "inspirationalVoices",
+    filter: [
+      {
+        type: "domain",
+        options: [
+          "All",
+          "Art & Culture",
+          "Education",
+          "Environment",
+          "Health & Nutrition",
+          "Legal & Judiciary",
+          "Livelihood",
+          "Disability",
+          "Rural Development",
+          "Sports",
+          "WASH",
+          "Women & Child",
+        ],
+      },
+      {
+        type: "Type of Content",
+        options: ["data1", "data2"],
+      },
+      { type: "Date", options: ["data1", "data2"] },
+    ],
+  },
+  {
+    filterBy: "inTheMedia",
+    filter: [
+      {
+        type: "domain",
+        options: [
+          "All",
+          "Art & Culture",
+          "Education",
+          "Environment",
+          "Health & Nutrition",
+          "Legal & Judiciary",
+          "Livelihood",
+          "Disability",
+          "Rural Development",
+          "Sports",
+          "WASH",
+          "Women & Child",
+        ],
+      },
+      {
+        type: "Type of Content",
+        options: ["data1", "data2"],
+      },
+      { type: "Date", options: ["data1", "data2"] },
+    ],
+  },
+  {
+    filterBy: "gallery",
+    filter: [
+      {
+        type: "domain",
+        options: [
+          "All",
+          "Art & Culture",
+          "Education",
+          "Environment",
+          "Health & Nutrition",
+          "Legal & Judiciary",
+          "Livelihood",
+          "Disability",
+          "Rural Development",
+          "Sports",
+          "WASH",
+          "Women & Child",
+        ],
+      },
+      {
+        type: "Type of Content",
+        options: ["data1", "data2"],
+      },
+      { type: "Date", options: ["data1", "data2"] },
+    ],
+  },
 ];
 export const dynamic = "force-dynamic";
 const getAipResourcesData = async (
@@ -171,7 +302,9 @@ const AipResourcesInnerPage = async ({
     return;
   }
   const filterBySlug = tabList.find((items) => items.slug === param.slug);
-
+  const filterData = aipResourcesFilter.find(
+    (item) => item.filterBy === param.slug
+  );
   console.log("filterBySlug::", filterBySlug);
   return (
     <div className="pt-[5rem]">
@@ -192,6 +325,7 @@ const AipResourcesInnerPage = async ({
           </div>
         </div>
         <ResourcesTabAndSelect
+          resources="aip-resources"
           currentTab={filterBySlug!.name}
           tabList={tabList}
           mainClassName="!pt-0"
@@ -203,12 +337,15 @@ const AipResourcesInnerPage = async ({
             Filter by:
           </p>
           <div className="relative flex flex-wrap gap-[.75rem]">
-            <CustomFilter
-              searchParams={{ ...SearchParam }}
-              filterKey="domain"
-              type="domain"
-              optionsArray={filterDatas.at(0)!.filter}
-            />
+            {filterData?.filter.map((data, i) => (
+              <CustomFilter
+                key={i}
+                searchParams={{ ...SearchParam }}
+                filterKey={data.type}
+                type={data.type}
+                optionsArray={data.options}
+              />
+            ))}
           </div>
         </div>
         <div className="pt-[3.25rem] pb-[7.5rem] grid md:grid-cols-2 lg:grid-cols-3 gap-[4.5rem]">

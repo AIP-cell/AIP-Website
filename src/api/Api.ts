@@ -47,7 +47,6 @@ export const Api = {
       date?: string;
     }
   ) => {
-    console.log("data::", slug);
     try {
       const response = await axiosClient.get(
         `curated-resources?category=${slug}&${new URLSearchParams(data)}`
@@ -58,7 +57,17 @@ export const Api = {
       return null;
     }
   },
-  
+  getCuratedResourcesExpertsInner: async (slug: string) => {
+    try {
+      const response = await axiosClient.get(`curated-resources/${slug}`);
+      console.log("response,data:::", response.data);
+      return response.data;
+    } catch (error) {
+      console.log(error);
+      return null;
+    }
+  },
+
   // getCuratedResources: async (data: {
   //   category: string;
   //   domain?: string;
@@ -198,6 +207,24 @@ export const Api = {
   getOneGalleryCollaborations: async (slug: string) => {
     try {
       const response = await axiosClient.get(`collaborations/${slug}/gallery`);
+      return response.data;
+    } catch (error) {
+      console.log(error);
+      return null;
+    }
+  },
+  getSearch: async (data: {
+    key: string
+    domain?: string;
+    typeOfContent?: string;
+    organizationType?: string;
+    events?: string;
+    date?: string;
+  }) => {
+    try {
+      const response = await axiosClient.get(
+        `search?${new URLSearchParams(data)}`
+      );
       return response.data;
     } catch (error) {
       console.log(error);

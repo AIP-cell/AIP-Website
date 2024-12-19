@@ -36,11 +36,11 @@ const ResourceCard = ({
         />
       </div>
       <div className="flex flex-col w-full gap-[0.75rem]">
-        <p
+        <Link href={`${link}`} 
           className=" w-full text-h6M text-gray80 font-inter font-semibold leading-[1.575rem] underline underline-offset-4 decoration-[1.5px]"
         >
           {title}
-        </p>
+        </Link>
         {name && (
           <p className=" w-full text-gray40 font-playFairItalic font-medium ~leading-[1.4rem]/[1.575rem] ">
             {name}

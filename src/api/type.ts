@@ -118,6 +118,8 @@ export type TPeople = {
 
 // Enc Aip Impact Types
 
+// Start Resource center
+
 export type TAipResourcesCategory = {
   _id: string;
   title: string;
@@ -125,7 +127,32 @@ export type TAipResourcesCategory = {
   description: string;
   date: string;
   image: string;
+  slug: string;
+  link: string;
 };
+export type TCuratedResourcesExpertsInner = {
+  curatedResource:TCuratedResourcesInner
+};
+export type TCuratedResourcesInner = {
+  _id: string;
+  title: string;
+  domain: string;
+  description: string;
+  image: string;
+  video: string;
+  linkOrFile: string;
+  linkOrVideo: string;
+  file: string;
+  date: string;
+  links: TLinks[];
+  galleryImages: TGalleryImages[];
+  galleryVideos: TGalleryVideos[];
+  fileLink: string;
+  typeOfContent: string;
+  videoLink: string;
+};
+
+// End Resource center
 
 // Start Founder Network
 

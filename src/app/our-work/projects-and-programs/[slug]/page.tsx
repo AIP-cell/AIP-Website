@@ -20,6 +20,7 @@ const getOneProjectsProgramsApi = async (
 const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const asyncParam = (await params).slug;
   const response = await getOneProjectsProgramsApi(asyncParam);
+  
   const heroSectionData = response.projectAndProgram;
   const gallery = response.projectAndProgram.gallery;
   const media = response.projectAndProgram.media;

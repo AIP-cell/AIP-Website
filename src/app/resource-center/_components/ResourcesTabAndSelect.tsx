@@ -10,10 +10,12 @@ type Props = {
   tabClassName?: string;
   mainClassName?: string;
   tabListClassName?: string;
+  resources: string;
   tabList: { slug: string; name: string; link: string }[];
 };
 const ResourcesTabAndSelect = ({
   currentTab,
+  resources,
   tabList,
   tabListClassName,
   tabClassName,
@@ -39,7 +41,7 @@ const ResourcesTabAndSelect = ({
               <div
                 key={i}
                 onClick={() =>
-                  router.push(`/resource-center/aip-resources/${items.slug}`, {
+                  router.push(`/resource-center/${resources}/${items.slug}`, {
                     scroll: false,
                   })
                 }

@@ -80,19 +80,14 @@ const tabList = [
     link: "/resource-center/curated-resources/featured",
   },
   {
+    slug: "experts",
+    name: "Experts",
+    link: "/resource-center/curated-resources/experts",
+  },
+  {
     slug: "philanthropists",
     name: "Philanthropists",
     link: "/resource-center/curated-resources/philanthropists",
-  },
-  {
-    slug: "partners",
-    name: "Partners",
-    link: "/resource-center/curated-resources/partners",
-  },
-  {
-    slug: "experts",
-    name: "Experts Voices",
-    link: "/resource-center/curated-resources/experts",
   },
   {
     slug: "npo",
@@ -100,34 +95,170 @@ const tabList = [
     link: "/resource-center/curated-resources/npo",
   },
   {
+    slug: "partners",
+    name: "Partners",
+    link: "/resource-center/curated-resources/partners",
+  },
+  {
     slug: "worldOfPhilanthropy",
     name: "World of Philanthropy",
     link: "/resource-center/curated-resources/worldOfPhilanthropy",
   },
 ];
-const filterDatas = [
+const curatedResourcesFilter = [
   {
-    type: "domain",
+    filterBy: "featured",
     filter: [
-      "All",
-      "Art & Culture",
-      "Education",
-      "Environment",
-      "Health & Nutrition",
-      "Legal & Judiciary",
-      "Livelihood",
-      "Disability",
-      "Rural Development",
-      "Sports",
-      "WASH",
-      "Women & Child",
+      {
+        type: "domain",
+        options: [
+          "All",
+          "Art & Culture",
+          "Education",
+          "Environment",
+          "Health & Nutrition",
+          "Legal & Judiciary",
+          "Livelihood",
+          "Disability",
+          "Rural Development",
+          "Sports",
+          "WASH",
+          "Women & Child",
+        ],
+      },
     ],
   },
   {
-    type: "Type of Content",
-    filter: ["data1", "data2"],
+    filterBy: "experts",
+    filter: [
+      {
+        type: "domain",
+        options: [
+          "All",
+          "Art & Culture",
+          "Education",
+          "Environment",
+          "Health & Nutrition",
+          "Legal & Judiciary",
+          "Livelihood",
+          "Disability",
+          "Rural Development",
+          "Sports",
+          "WASH",
+          "Women & Child",
+        ],
+      },
+      {
+        type: "Type of Content",
+        options: ["data1", "data2"],
+      },
+      { type: "Date", options: ["data1", "data2"] },
+    ],
   },
-  { type: "Date", filter: ["data1", "data2"] },
+  {
+    filterBy: "philanthropists",
+    filter: [
+      {
+        type: "domain",
+        options: [
+          "All",
+          "Art & Culture",
+          "Education",
+          "Environment",
+          "Health & Nutrition",
+          "Legal & Judiciary",
+          "Livelihood",
+          "Disability",
+          "Rural Development",
+          "Sports",
+          "WASH",
+          "Women & Child",
+        ],
+      },
+      { type: "Date", options: ["data1", "data2"] },
+    ],
+  },
+  {
+    filterBy: "npo",
+    filter: [
+      {
+        type: "domain",
+        options: [
+          "All",
+          "Art & Culture",
+          "Education",
+          "Environment",
+          "Health & Nutrition",
+          "Legal & Judiciary",
+          "Livelihood",
+          "Disability",
+          "Rural Development",
+          "Sports",
+          "WASH",
+          "Women & Child",
+        ],
+      },
+      {
+        type: "Type of Content",
+        options: ["data1", "data2"],
+      },
+      { type: "Date", options: ["data1", "data2"] },
+    ],
+  },
+  {
+    filterBy: "partners",
+    filter: [
+      {
+        type: "domain",
+        options: [
+          "All",
+          "Art & Culture",
+          "Education",
+          "Environment",
+          "Health & Nutrition",
+          "Legal & Judiciary",
+          "Livelihood",
+          "Disability",
+          "Rural Development",
+          "Sports",
+          "WASH",
+          "Women & Child",
+        ],
+      },
+      {
+        type: "Type of Content",
+        options: ["data1", "data2"],
+      },
+      { type: "Date", options: ["data1", "data2"] },
+    ],
+  },
+  {
+    filterBy: "worldOfPhilanthropy",
+    filter: [
+      {
+        type: "domain",
+        options: [
+          "All",
+          "Art & Culture",
+          "Education",
+          "Environment",
+          "Health & Nutrition",
+          "Legal & Judiciary",
+          "Livelihood",
+          "Disability",
+          "Rural Development",
+          "Sports",
+          "WASH",
+          "Women & Child",
+        ],
+      },
+      {
+        type: "Type of Content",
+        options: ["data1", "data2"],
+      },
+      { type: "Date", options: ["data1", "data2"] },
+    ],
+  },
 ];
 export const dynamic = "force-dynamic";
 const getAipResourcesData = async (
@@ -178,7 +309,9 @@ const CuratedResourcesInnerPage = async ({
     return;
   }
   const filterBySlug = tabList.find((items) => items.slug === param.slug);
-
+  const filterData = curatedResourcesFilter.find(
+    (item) => item.filterBy === param.slug
+  );
   console.log("filterBySlug::", filterBySlug);
   return (
     <div className="pt-[5rem]">
@@ -199,6 +332,7 @@ const CuratedResourcesInnerPage = async ({
           </div>
         </div>
         <ResourcesTabAndSelect
+          resources="curated-resources"
           currentTab={filterBySlug!.name}
           tabList={tabList}
           mainClassName="!pt-0"
@@ -210,17 +344,25 @@ const CuratedResourcesInnerPage = async ({
             Filter by:
           </p>
           <div className="relative flex flex-wrap gap-[.75rem]">
-            <CustomFilter
-              searchParams={{ ...SearchParam }}
-              filterKey="domain"
-              type="domain"
-              optionsArray={filterDatas.at(0)!.filter}
-            />
+            {filterData?.filter.map((data, i) => (
+              <CustomFilter
+                key={i}
+                searchParams={{ ...SearchParam }}
+                filterKey={data.type}
+                type={data.type}
+                optionsArray={data.options}
+              />
+            ))}
           </div>
         </div>
         <div className="pt-[3.25rem] pb-[7.5rem] grid md:grid-cols-2 lg:grid-cols-3 gap-[4.5rem]">
           {response.map((item, i) => (
             <ResourceCard
+              link={
+                param.slug === "experts"
+                  ? `/resource-center/curated-resources/experts/${item.slug}`
+                  : item.link
+              }
               key={i}
               src={item.image}
               title={item.title}

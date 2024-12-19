@@ -9,8 +9,13 @@ import Systemic from "@public/svg/projects-page/systemic.png";
 
 import BreadCrump from "@/components/bread-crump/BreadCrump";
 import InnerCollaborationsVideo from "@/app/our-work/collaborations/[slug]/_components/InnerCollaborationsVideo";
+import { TCuratedResourcesInner } from "@/api/type";
+import { StorageUrl } from "@/utils/BaseUrl";
 
-const InnerExpertsSectionOne = () => {
+type Props = {
+  innerData: TCuratedResourcesInner;
+};
+const InnerExpertsSectionOne = ({ innerData }: Props) => {
   return (
     <div className="relative w-full ~pb-[3rem]/[5.75rem]">
       <Image
@@ -33,7 +38,7 @@ const InnerExpertsSectionOne = () => {
             <div>
               <div className="font-playFair">
                 <p className="leading-[3.25rem] tracking-[-.04rem] text-h3 text-midGray ">
-                  Systemic Impact Exemplars
+                  {innerData.title}
                 </p>
                 <p className="font-medium  leading-[1.75rem]  font-playFair text-h5 text-gray80 pt-[1rem]">
                   By{" "}
@@ -42,66 +47,72 @@ const InnerExpertsSectionOne = () => {
                   </span>
                 </p>
                 <p className=" leading-[1.75rem]  font-playFairItalic text-h5 text-gray40 font-medium pt-[1rem]">
-                  Reports | Fields
+                  {innerData.domain}
+                  {/* Reports | Fields */}
                 </p>
               </div>
               <p className="font-inter leading-[1.4rem]  text-midGray  pt-[1rem] ~pr-0/[3rem]">
-                This report was conceptualised to identify and learn from
-                organisations that have achieved large-scale impact by adopting
-                the systems change approach. It profiles 20 of India’s leading
-                SSOs, and aims to inspire and inform other social purpose
-                organisations by building evidence on what works in the Indian
-                context. The report serves as a comprehensive knowledge
-                resource, intended to shape thinking on systems change.
+                {innerData.description}
               </p>
             </div>
-            <div className="block md:hidden ">
-              <Image
-                src={Systemic}
-                className=" w-full object-cover h-[30.89rem]"
-                alt="image"
-              />
+            <div className="block xl:hidden ">
+              <div className="relative w-full h-[30.89rem]">
+                <Image
+                  src={StorageUrl + innerData.image}
+                  className="  object-cover "
+                  fill
+                  alt="image"
+                />
+              </div>
             </div>
             <div className="">
               <p className="block md:hidden text-h6M text-gray80 font-playFair leading-[1.575rem]">
                 Launch Details
               </p>
-              <button className="mt-[1rem] group bg-darkPurple border-2 border-darkPurple hover:bg-white  transition-all  hover:text-darkPurple text-white hover:border-2 hover:border-darkPurple px-7 py-3 flex items-center gap-[0.75rem] w-fit rounded-3xl">
+              <a href={innerData.fileLink} download className="mt-[1rem] group bg-darkPurple border-2 border-darkPurple hover:bg-white  transition-all  hover:text-darkPurple text-white hover:border-2 hover:border-darkPurple px-7 py-3 flex items-center gap-[0.75rem] w-fit rounded-3xl">
                 <p className=" font-inter  text-h9Copy5 leading-[1.225rem]">
                   Download
                 </p>
                 <div className=" pt-[.1rem]">
                   <DownloadFileSvg className="size-[1.25rem]" />
                 </div>
-              </button>
+              </a>
             </div>
             <div className="flex flex-col gap-[1rem]">
               <h2 className="~text-h6M/h4a ~leading-[1.575rem]/[2.113rem] text-gray80 font-playFair  ~pb-0/[1.5rem]">
                 Links
               </h2>
-              <div className="flex w-[17.375rem] gap-[0.98rem] ~pl-[1rem]/[1.25rem] ~py-[0.875rem]/[0.75rem] bg-bgGray5 rounded-full">
-                <Image src={LinkSvg} alt="" className="" />
-                <p className="text-gray80 ~leading-[1.225rem]/[1.4rem] ~text-h9Copy5/h9Copy4">
-                  theconvergencefoundation
-                </p>
-              </div>
-              <div className="flex w-[17.375rem] gap-[0.98rem] ~pl-[1rem]/[1.25rem] ~py-[0.875rem]/[0.75rem] bg-bgGray5 rounded-full">
+              {innerData.links.map((link, i) => (
+                <div
+                  key={i}
+                  className="flex w-[17.375rem] gap-[0.98rem] ~pl-[1rem]/[1.25rem] ~py-[0.875rem]/[0.75rem] bg-bgGray5 rounded-full"
+                >
+                  <Image src={LinkSvg} alt="" className="" />
+                  <p className="text-gray80 ~leading-[1.225rem]/[1.4rem] ~text-h9Copy5/h9Copy4">
+                    {link.link}
+                  </p>
+                </div>
+              ))}
+              {/* <div className="flex w-[17.375rem] gap-[0.98rem] ~pl-[1rem]/[1.25rem] ~py-[0.875rem]/[0.75rem] bg-bgGray5 rounded-full">
                 <Image src={LinkSvg} alt="" className="" />
                 <p className="text-gray80 ~leading-[1.225rem]/[1.4rem] ~text-h9Copy5/h9Copy4">
                   abcdxyze_loremipsum
                 </p>
-              </div>
+              </div> */}
             </div>
           </div>
-          <div className="hidden md:block pt-[5rem]">
-            <Image
-              src={Systemic}
-              className=" w-[25rem] object-cover h-[35.313rem]"
-              alt="image"
-            />
+          <div className="hidden xl:block pt-[5rem]">
+            <div className="relative  w-[25rem] h-[35.313rem]">
+              <Image
+                src={StorageUrl + innerData.image}
+                className="object-cover"
+                fill
+                alt="image"
+              />
+            </div>
           </div>
         </div>
-        <InnerCollaborationsVideo />
+        <InnerCollaborationsVideo video={innerData.video} />
       </div>
     </div>
   );
