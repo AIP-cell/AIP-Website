@@ -118,6 +118,7 @@ type Props = {
   newsArray: THomePageNewsInTheMedia[];
 };
 export function CarouselNews({ newsArray }: Props) {
+  const length = newsArray.length
   return (
     <Carousel
       opts={{
@@ -135,10 +136,10 @@ export function CarouselNews({ newsArray }: Props) {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <div className="absolute bottom-[-5rem] lg:bottom-auto w-full  lg:top-[-15rem] lg:~right-0/[5rem] flex justify-center lg:justify-end gap-[1.25rem] ">
+      {length != 0 && <div className="absolute bottom-[-5rem] lg:bottom-auto w-full  lg:top-[-15rem] lg:~right-0/[5rem] flex justify-center lg:justify-end gap-[1.25rem] ">
         <CarouselPrevious />
         <CarouselNext />
-      </div>
+      </div>}
     </Carousel>
   );
 }

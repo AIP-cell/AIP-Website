@@ -1,0 +1,149 @@
+import Link from "next/link";
+import React from "react";
+import Bg from "@public/svg/people-of-aip/peachCurveRightDetailsPage.svg";
+import Linkedin from "@public/svg/linkedinPurple.svg";
+import X from "@public/svg/xPurple.svg";
+import LinkSvg from "@public/svg/linkingPurple.svg";
+import SampleVideo from "@public/images/sampleVideo.png";
+import Image from "next/image";
+import BreadCrump from "@/components/bread-crump/BreadCrump";
+import XSvg from "@/components/svg/XSvg";
+import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
+import LinkedinSvg from "@/components/svg/LinkedinSvg";
+import ASvg from "@/components/svg/ASvg";
+import PSvg from "@/components/svg/PSvg";
+import InnerCollaborationsVideo from "@/app/our-work/collaborations/[slug]/_components/InnerCollaborationsVideo";
+import { Api } from "@/api/Api";
+import { TPeopleOfAipGetOne } from "@/api/type";
+import { StorageUrl } from "@/utils/BaseUrl";
+import SelectedWorks from "./_components/SelectedWorks";
+
+export const dynamic = "force-dynamic";
+const getPeopleOfAipGetOneApi = async (
+  slug: string
+): Promise<TPeopleOfAipGetOne> => {
+  const response = await Api.getPeopleOfAipGetOne(slug);
+  return response.data;
+};
+const InnerTeamPage = async ({
+  params,
+}: {
+  params: Promise<{ innerSlug: string; slug: string }>;
+}) => {
+  const urlParams = await params;
+  const response = await getPeopleOfAipGetOneApi(urlParams.innerSlug);
+  const team = response.teams;
+  console.log("urlParams:::", urlParams.innerSlug);
+  return (
+    <div className="pt-[5rem]">
+      <div className="w-full relative ">
+        <Image
+          src={Bg}
+          alt="background-svg"
+          className=" absolute ~top-[2.75rem]/0 right-0 z-[-1] ~w-[15.438rem]/[32.813rem] ~h-[23.524rem]/[50rem]"
+        />
+        <div className="relative container mx-auto">
+          <div className="~px-[1.25rem]/[7.8rem] ~pb-[4.9rem]/[7.5rem]">
+            <BreadCrump
+              textOne="People of AIP"
+              linkOne="/people-of-aip"
+              textTwo={urlParams.slug}
+              linkTwo="/people-of-aip/core-founders"
+              textThree={`${team.name}`}
+              linkThree={`/people-of-aip/${urlParams.slug}/${urlParams.innerSlug}`}
+            />
+            <div className="~pt-[4.3rem]/[5rem] flex flex-col-reverse lg:grid grid-cols-3 gap-[1.238rem]">
+              <div className="col-span-2  relative">
+                <div className=" hidden md:block">
+                  <h2 className="~text-h4/h2 text-midGray leading-[3.3rem] font-playFair">
+                    {team.name}
+                  </h2>
+                  <h4 className="pt-[1rem] ~text-h6/h5 text-gray40 font-playFairItalic ~pr-[4rem]/0">
+                    {team.designation}
+                  </h4>
+                </div>
+                <div className="~pt-[2rem]/[2.5rem] text-midGray ~pr-0/[6.56rem]">
+                  <div
+                    dangerouslySetInnerHTML={{ __html: team.description || "" }}
+                    className="~leading-[1.225rem]/[1.4rem] ~text-h9Copy5/h9Copy4"
+                  ></div>
+
+                  <div className=" ~pt-[2rem]/[2.5rem]  flex-col flex gap-[1rem]">
+                    <div className="flex gap-[1rem]">
+                      <Link href={team.linkedln}>
+                        <ButtonAnimation className="rounded-full ~p-[0.5rem]/[0.875rem] bg-bgGray5">
+                          {/* <LinkedinSvg className="size-[1.5rem]"/> */}
+                          <Image
+                            src={Linkedin}
+                            alt=""
+                            className="w-[1.375rem]"
+                          />
+                        </ButtonAnimation>
+                      </Link>
+                      <Link href={team.twitter}>
+                        <ButtonAnimation className="rounded-full flex justify-center items-center text-textPurple hover:text-white p-[0.93rem] bg-bgGray5 hover:bg-textPurple">
+                          <XSvg className="size-[1.063rem]" />
+                          {/* <Image src={X} alt="" className="" /> */}
+                        </ButtonAnimation>
+                      </Link>
+                    </div>
+                    {team.links.map((link, i) => (
+                      <Link
+                        key={i}
+                        href={link.link}
+                        className="flex w-[17.375rem] gap-[0.98rem] ~pl-[1rem]/[1.25rem] ~pr-[2.813rem]/[1.25rem] ~py-[0.87rem]/[0.76rem] bg-bgGray5 rounded-full"
+                      >
+                        <Image
+                          src={LinkSvg}
+                          alt=""
+                          className="size-[1.25rem]"
+                        />
+                        <p className="text-gray80 ~leading-[1.225rem]/[1.4rem] ~text-h9Copy5/h9Copy4">
+                          theconvergencefoundation
+                        </p>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <div className="col-span-1 relative">
+                <PSvg
+                  src={StorageUrl + team.image}
+                  className="relative z-10 ~w-[18.438rem]/[25rem]"
+                />
+                <div className=" block md:hidden">
+                  <h2 className="~text-h4/h2 text-midGray leading-[3.3rem] font-playFair">
+                    {team.name}
+                  </h2>
+                  <h4 className="~pt-[0.75rem]/[1rem] font-medium ~text-h6M/h5 text-gray40 font-playFairItalic ~pr-[4rem]/0">
+                    {team.designation}
+                  </h4>
+                  <h4 className=" ~text-h6M/h5 text-gray40 font-medium font-playFairItalic ~pr-[4rem]/0">
+                    The Convergence Foundation
+                  </h4>
+                </div>
+                <p className="text-h5 pt-[2rem] text-gray90 font-playFair font-medium leading-[1.75rem]">
+                  {team.quote}
+                </p>
+              </div>
+            </div>
+            <div className="">
+              <InnerCollaborationsVideo
+                linkOrVideo={team.linkOrVideo}
+                video={team.video}
+              />
+              {/* <Image
+                src={SampleVideo}
+                alt="background-svg"
+                className="w-full h-[35.3rem]"
+              /> */}
+            </div>
+          </div>
+        </div>
+        {team.selectedWorks && <SelectedWorks works={team.selectedWorks} />}
+      </div>
+    </div>
+  );
+};
+
+export default InnerTeamPage;

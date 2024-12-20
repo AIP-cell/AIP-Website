@@ -131,7 +131,7 @@ export type TAipResourcesCategory = {
   link: string;
 };
 export type TCuratedResourcesExpertsInner = {
-  curatedResource:TCuratedResourcesInner
+  curatedResource: TCuratedResourcesInner;
 };
 export type TCuratedResourcesInner = {
   _id: string;
@@ -261,11 +261,22 @@ export type TPeopleOfAipTeams = {
   video: string;
   slug: string;
   links: TLinks[];
+  selectedWorks: TTSelectedWorks[];
 };
 
 export type TLinks = {
   link: string;
   _id: string;
+};
+export type TTSelectedWorks = {
+  _id: string;
+  name: string;
+  title: string;
+  description: string;
+  image: string;
+  slug: string;
+  category: string;
+  date: string;
 };
 
 // End People Of Aip

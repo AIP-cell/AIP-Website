@@ -1,10 +1,10 @@
 "use client";
 import OurCoreFoundersContent from "../core-founders/_components/OurCoreFoundersContent";
-import TeamAip from "../team-AIP/_components/TeamAip";
+import TeamAip from "../team-AIPsss/_components/TeamAip";
 import { useState } from "react";
 import CustomGraySelect from "@/components/custom/CustomGraySelect";
 import { useRouter } from "next/navigation";
-import Experts from "../experts/_components/Experts";
+import PeopleOfAipTeamMembers from "../[slug]/_components/PeopleOfAipTeamMembers";
 
 const list = [
   "Our Core Founders",
@@ -34,7 +34,7 @@ const PeopleOfAipSm = ({ tabSelect }: Props) => {
         <div>
           {selected === "Our Core Founders" && <OurCoreFoundersContent />}
           {selected === "Team AIP" && <TeamAip />}
-          {selected === "Experts" && <Experts />}
+          {selected === "Experts" && <PeopleOfAipTeamMembers />}
         </div>
       </div>
     </div>

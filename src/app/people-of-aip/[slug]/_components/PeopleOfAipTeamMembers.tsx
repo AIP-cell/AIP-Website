@@ -178,9 +178,10 @@ import { TTeamMembers } from "@/api/type";
 //   },
 // ];
 type Props = {
-  advisoryBoardMembers: TTeamMembers[];
+  teamMembers: TTeamMembers[];
+  urlSlug: string;
 };
-const Founders = ({ advisoryBoardMembers }: Props) => {
+const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
   return (
     <div className="w-full relative">
       <Image
@@ -206,7 +207,7 @@ const Founders = ({ advisoryBoardMembers }: Props) => {
       <div className="pt-[3rem] pb-[7rem] container mx-auto">
         <div className="flex flex-col  justify-center ~px-[1.25rem]/[20.9rem]">
           <h2 className=" text-center ~text-h4/h2 ~leading-[2.6rem]/[3.3rem] text-textPurple font-playFairItalic">
-            Advisory Board
+            Experts
           </h2>
           <p className="~pt-[2rem]/[1.25rem]  text-midGray text-center ~text-h9Copy5/h9Copy4 !leading-[1.225rem]/[1.4rem] max-[21rem]:px-[0.5rem]">
             Experts in the philanthropic sector are dedicated professionals who
@@ -216,7 +217,7 @@ const Founders = ({ advisoryBoardMembers }: Props) => {
             meaningful change in underserved communities.
           </p>
         </div>
-        {advisoryBoardMembers.map((items, i) => {
+        {teamMembers.map((items, i) => {
           const position = i % 12;
           const isCenteredRow = position >= 8 && position <= 11;
           if (
@@ -235,17 +236,20 @@ const Founders = ({ advisoryBoardMembers }: Props) => {
                 {position === 0 && (
                   <div className="flex ~gap-[1.25rem]/[5.6rem] ">
                     <ATeamCard
-                      link={`our-advisory-board/${items.name}`}
+                      link={`/people-of-aip/${urlSlug}/${items.slug}`}
                       image={"/images/sample"}
                       title={items.name}
                       desc={items.designation}
                       linkedin={true}
                     />
-                    {advisoryBoardMembers[i + 1] && (
+                    {teamMembers[i + 1] && (
                       <PTeamCard
+                        link={`/people-of-aip/${urlSlug}/${
+                          teamMembers[i + 1].slug
+                        }`}
                         image={"/images/sample"}
-                        title={advisoryBoardMembers[i + 1].name}
-                        desc={advisoryBoardMembers[i + 1].designation}
+                        title={teamMembers[i + 1].name}
+                        desc={teamMembers[i + 1].designation}
                         linkedin={true}
                       />
                     )}
@@ -254,16 +258,20 @@ const Founders = ({ advisoryBoardMembers }: Props) => {
                 {position === 2 && (
                   <div className="pt-[4rem] flex ~gap-[1.25rem]/[5.6rem] ">
                     <ATeamCard
+                      link={`/people-of-aip/${urlSlug}/${items.slug}`}
                       image={"/images/sample"}
                       title={items.name}
                       desc={items.designation}
                       linkedin={true}
                     />
-                    {advisoryBoardMembers[i + 1] && (
+                    {teamMembers[i + 1] && (
                       <PTeamCard
                         image={"/images/sample"}
-                        title={advisoryBoardMembers[i + 1].name}
-                        desc={advisoryBoardMembers[i + 1].designation}
+                        link={`/people-of-aip/${urlSlug}/${
+                          teamMembers[i + 1].slug
+                        }`}
+                        title={teamMembers[i + 1].name}
+                        desc={teamMembers[i + 1].designation}
                         linkedin={true}
                       />
                     )}
@@ -273,31 +281,41 @@ const Founders = ({ advisoryBoardMembers }: Props) => {
                   <div className="justify-center pt-[4rem] flex flex-wrap ~gap-[1.25rem]/[5.6rem]">
                     <ATeamCard
                       image={"/images/sample"}
+                      link={`/people-of-aip/${urlSlug}/${items.slug}`}
                       title={items.name}
                       desc={items.designation}
                       linkedin={true}
                     />
-                    {advisoryBoardMembers[i + 1] && (
+                    {teamMembers[i + 1] && (
                       <PTeamCard
                         image={"/images/sample"}
-                        title={advisoryBoardMembers[i + 1].name}
-                        desc={advisoryBoardMembers[i + 1].designation}
+                        link={`/people-of-aip/${urlSlug}/${
+                          teamMembers[i + 1].slug
+                        }`}
+                        title={teamMembers[i + 1].name}
+                        desc={teamMembers[i + 1].designation}
                         linkedin={true}
                       />
                     )}
-                    {advisoryBoardMembers[i + 2] && (
+                    {teamMembers[i + 2] && (
                       <ATeamCard
                         image={"/images/sample"}
-                        title={advisoryBoardMembers[i + 2].name}
-                        desc={advisoryBoardMembers[i + 2].designation}
+                        link={`/people-of-aip/${urlSlug}/${
+                          teamMembers[i + 2].slug
+                        }`}
+                        title={teamMembers[i + 2].name}
+                        desc={teamMembers[i + 2].designation}
                         linkedin={true}
                       />
                     )}
-                    {advisoryBoardMembers[i + 3] && (
+                    {teamMembers[i + 3] && (
                       <PTeamCard
                         image={"/images/sample"}
-                        title={advisoryBoardMembers[i + 3].name}
-                        desc={advisoryBoardMembers[i + 3].designation}
+                        link={`/people-of-aip/${urlSlug}/${
+                          teamMembers[i + 3].slug
+                        }`}
+                        title={teamMembers[i + 3].name}
+                        desc={teamMembers[i + 3].designation}
                         linkedin={true}
                       />
                     )}
@@ -307,15 +325,19 @@ const Founders = ({ advisoryBoardMembers }: Props) => {
                   <div className="pt-[4rem] flex justify-start md:justify-end ~gap-[1.25rem]/[5.6rem]  ">
                     <ATeamCard
                       image={"/images/sample"}
+                      link={`/people-of-aip/${urlSlug}/${items.slug}`}
                       title={items.name}
                       desc={items.designation}
                       linkedin={true}
                     />
-                    {advisoryBoardMembers[i + 1] && (
+                    {teamMembers[i + 1] && (
                       <PTeamCard
                         image={"/images/sample"}
-                        title={advisoryBoardMembers[i + 1].name}
-                        desc={advisoryBoardMembers[i + 1].designation}
+                        link={`/people-of-aip/${urlSlug}/${
+                          teamMembers[i + 1].slug
+                        }`}
+                        title={teamMembers[i + 1].name}
+                        desc={teamMembers[i + 1].designation}
                         linkedin={true}
                       />
                     )}
@@ -325,15 +347,19 @@ const Founders = ({ advisoryBoardMembers }: Props) => {
                   <div className="pt-[4rem] flex justify-start md:justify-end ~gap-[1.25rem]/[5.6rem] ">
                     <ATeamCard
                       image={"/images/sample"}
+                      link={`/people-of-aip/${urlSlug}/${items.slug}`}
                       title={items.name}
                       desc={items.designation}
                       linkedin={true}
                     />
-                    {advisoryBoardMembers[i + 1] && (
+                    {teamMembers[i + 1] && (
                       <PTeamCard
                         image={"/images/sample"}
-                        title={advisoryBoardMembers[i + 1].name}
-                        desc={advisoryBoardMembers[i + 1].designation}
+                        link={`/people-of-aip/${urlSlug}/${
+                          teamMembers[i + 1].slug
+                        }`}
+                        title={teamMembers[i + 1].name}
+                        desc={teamMembers[i + 1].designation}
                         linkedin={true}
                       />
                     )}
@@ -347,4 +373,4 @@ const Founders = ({ advisoryBoardMembers }: Props) => {
   );
 };
 
-export default Founders;
+export default PeopleOfAipTeamMembers;

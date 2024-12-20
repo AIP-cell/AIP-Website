@@ -2,9 +2,9 @@
 import React, { useState } from "react";
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 import OurCoreFoundersContent from "../core-founders/_components/OurCoreFoundersContent";
-import TeamAip from "../team-AIP/_components/TeamAip";
+import TeamAip from "../team-AIPsss/_components/TeamAip";
 import Link from "next/link";
-import Experts from "../experts/_components/Experts";
+import PeopleOfAipTeamMembers from "../[slug]/_components/PeopleOfAipTeamMembers";
 import cn from "@/utils/tailwind";
 
 type Props = {
@@ -75,7 +75,7 @@ const PeopleOfAipTab = ({ tabSelect }: Props) => {
             <TeamAip />
           </TabPanel>
           <TabPanel>
-            <Experts />
+            <PeopleOfAipTeamMembers />
           </TabPanel>
         </TabPanels>
       </TabGroup>

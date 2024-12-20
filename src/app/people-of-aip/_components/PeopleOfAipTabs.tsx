@@ -8,7 +8,7 @@ type Props = {
   tabClassName?: string;
   mainClassName?: string;
   tabListClassName?: string;
-  tabList: { name: string; link: string }[];
+  tabList: { key: string; name: string; link: string }[];
 };
 const PeopleOfAipTabs = ({
   currentTab,
@@ -40,7 +40,7 @@ const PeopleOfAipTabs = ({
                   tabClassName,
                   {
                     "!bg-darkPurple !text-white !outline-none !rounded-full":
-                      items.name === currentTab,
+                      items.key === currentTab,
                   }
                 )}
               >

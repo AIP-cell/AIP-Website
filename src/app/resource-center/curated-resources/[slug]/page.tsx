@@ -8,7 +8,6 @@ import CustomSelect from "@/components/custom/CustomSelect";
 import ResourceCard from "@/components/cards/ResourceCard";
 import { Api } from "@/api/Api";
 import { TAipResourcesCategory } from "@/api/type";
-import PeopleOfAipTabs from "@/app/people-of-aip/_components/PeopleOfAipTabs";
 import CustomFilter from "@/components/custom/CustomFilter";
 import ResourcesTabAndSelect from "../../_components/ResourcesTabAndSelect";
 

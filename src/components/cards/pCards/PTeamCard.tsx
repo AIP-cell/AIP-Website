@@ -14,6 +14,7 @@ type Props = {
   titleClassName?: string;
   title2ClassName?: string;
   locationClassName?: string;
+  link?: string;
 };
 const PTeamCard = ({
   linkedin,
@@ -26,6 +27,7 @@ const PTeamCard = ({
   titleClassName,
   title2ClassName,
   locationClassName,
+  link,
 }: Props) => {
   return (
     <div className="max-[23rem]:w-[8rem] ~w-[10.3rem]/[11.87rem] relative">
@@ -38,11 +40,12 @@ const PTeamCard = ({
         />
       )}
       <div className="flex flex-col gap-[0.5rem]">
-        <h3
+        <Link
+          href={`${link}`}
           className={`~text-h4a/h4 ~leading-[2.1rem]/[2.6rem] text-gray80 font-playFair ${titleClassName}`}
         >
           {title}
-        </h3>
+        </Link>
         <h3
           className={`~text-h4a/h4 ~leading-[2.1rem]/[2.6rem] text-gray80 font-playFair ${title2ClassName}`}
         >

@@ -1,3 +1,4 @@
+import { TTSelectedWorks } from "@/api/type";
 import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 import BgButton from "@/components/buttons/BgButton";
 import OutlineButton from "@/components/buttons/OutlineButton";
@@ -27,23 +28,24 @@ const datas = [
     category: "Field",
   },
 ];
-const Contribution = () => {
+type Props = {
+  works: TTSelectedWorks[];
+};
+const SelectedWorks = ({ works }: Props) => {
   return (
     <div className="~pt-[5rem]/[2.5rem] container mx-auto flex flex-col items-center">
       <h2 className="~text-h4/h2 ~leading-[2.6rem]/[3.3rem] ~pb-0/[1.75rem] text-center font-playFair text-gray80">
-        <span className="font-playFairItalic text-textPurple">
-          Selected
-        </span>{" "}
+        <span className="font-playFairItalic text-textPurple">Selected</span>{" "}
         Works
       </h2>
       <div className="~pt-[2.5rem]/[3.25rem] ~pb-[2.5rem]/[5.75rem] grid md:grid-cols-2 lg:grid-cols-3 ~gap-[2.5rem]/[4.5rem] ~px-[1.25rem]/[8.125rem]">
-        {datas.map((item, i) => (
+        {works.map((item, i) => (
           <ResourceCard
             key={i}
-            src={item.src}
+            src={item.image}
             title={item.title}
             name={item.name}
-            desc={item.desc}
+            desc={item.description}
             category={item.category}
           />
         ))}
@@ -59,4 +61,4 @@ const Contribution = () => {
   );
 };
 
-export default Contribution;
+export default SelectedWorks;

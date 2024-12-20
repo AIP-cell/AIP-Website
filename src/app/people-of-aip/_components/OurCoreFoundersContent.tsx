@@ -94,6 +94,7 @@ const OurCoreFoundersContent = ({ coreFounderMembers }: Props) => {
                 )}
               >
                 <ACard
+                  link={`/people-of-aip/coreFounder/${item.slug}`}
                   linkedin
                   nameClass=" underline decoration-[1px] underline-offset-4 "
                   name={item.name}
@@ -104,6 +105,9 @@ const OurCoreFoundersContent = ({ coreFounderMembers }: Props) => {
 
                 {coreFounderMembers[i + 1] && (
                   <PCard
+                    link={`/people-of-aip/coreFounder/${
+                      coreFounderMembers[i + 1].slug
+                    }`}
                     linkedin
                     nameClass=" underline decoration-[1px] underline-offset-4 "
                     name={coreFounderMembers[i + 1].name}
