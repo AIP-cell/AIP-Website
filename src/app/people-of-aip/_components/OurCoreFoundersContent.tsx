@@ -9,44 +9,6 @@ import PCard from "@/components/cards/pCards/PCard";
 import { TTeamMembers } from "@/api/type";
 import cn from "@/utils/tailwind";
 
-const datas = [
-  {
-    image: "/images/sample.png",
-    name: "0Ashish Dhawan",
-    desc: "“I believe a lot more needs to be done particularly to encourage first-time givers. AIP aims to fill this gap and spur philanthropy in a very structured manner.’’",
-    work: "The Convergence Foundation",
-  },
-  {
-    image: "/images/sample.png",
-    name: "1Ashish Dhawan",
-    desc: "“I believe a lot more needs to be done particularly to encourage first-time givers. AIP aims to fill this gap and spur philanthropy in a very structured manner.’’",
-    work: "The Convergence Foundation",
-  },
-  {
-    image: "/images/sample.png",
-    name: "2Ashish Dhawan",
-    desc: "“I believe a lot more needs to be done particularly to encourage first-time givers. AIP aims to fill this gap and spur philanthropy in a very structured manner.’’",
-    work: "The Convergence Foundation",
-  },
-  {
-    image: "/images/sample.png",
-    name: "3Ashish Dhawan",
-    desc: "“I believe a lot more needs to be done particularly to encourage first-time givers. AIP aims to fill this gap and spur philanthropy in a very structured manner.’’",
-    work: "The Convergence Foundation",
-  },
-  {
-    image: "/images/sample.png",
-    name: "4Ashish Dhawan",
-    desc: "“I believe a lot more needs to be done particularly to encourage first-time givers. AIP aims to fill this gap and spur philanthropy in a very structured manner.’’",
-    work: "The Convergence Foundation",
-  },
-  {
-    image: "/images/sample.png",
-    name: "5Ashish Dhawan",
-    desc: "“I believe a lot more needs to be done particularly to encourage first-time givers. AIP aims to fill this gap and spur philanthropy in a very structured manner.’’",
-    work: "The Convergence Foundation",
-  },
-];
 type Props = {
   coreFounderMembers: TTeamMembers[];
 };

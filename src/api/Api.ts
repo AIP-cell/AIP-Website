@@ -1,3 +1,4 @@
+import { generatingSearchParam } from "@/utils/UrlHelper";
 import { axiosClient } from "./config/axiosClient";
 
 export const Api = {
@@ -214,17 +215,18 @@ export const Api = {
     }
   },
   getSearch: async (data: {
-    key: string
-    domain?: string;
-    typeOfContent?: string;
-    organizationType?: string;
-    events?: string;
+    key?: string;
+    field?: string;
+    type?: string;
     date?: string;
   }) => {
     try {
-      const response = await axiosClient.get(
-        `search?${new URLSearchParams(data)}`
-      );
+      const query = generatingSearchParam({
+        ...data,
+      });
+      console.log("URLSearchParams:::::::", query.toString());
+      const response = await axiosClient.get(`search?${query.toString()}`);
+     
       return response.data;
     } catch (error) {
       console.log(error);

@@ -421,3 +421,23 @@ export type TGalleryCollaboration = {
   gallery: TGallery;
 };
 // End Gallery Collaboration
+
+// Start Search
+
+export type TSearch = {
+  _id: string;
+  title: string;
+  description: string;
+  designation: string;
+  organisationName: string;
+  philanthropistName: string;
+  initiativeName: string;
+  image: string;
+  question: string;
+  answer: string;
+  year: string;
+  report: string;
+  name: string;
+  slug: string;
+};
+// End Search

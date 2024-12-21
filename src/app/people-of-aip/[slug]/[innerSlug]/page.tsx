@@ -118,9 +118,9 @@ const InnerTeamPage = async ({
                   <h4 className="~pt-[0.75rem]/[1rem] font-medium ~text-h6M/h5 text-gray40 font-playFairItalic ~pr-[4rem]/0">
                     {team.designation}
                   </h4>
-                  <h4 className=" ~text-h6M/h5 text-gray40 font-medium font-playFairItalic ~pr-[4rem]/0">
+                  {/* <h4 className=" ~text-h6M/h5 text-gray40 font-medium font-playFairItalic ~pr-[4rem]/0">
                     The Convergence Foundation
-                  </h4>
+                  </h4> */}
                 </div>
                 <p className="text-h5 pt-[2rem] text-gray90 font-playFair font-medium leading-[1.75rem]">
                   {team.quote}

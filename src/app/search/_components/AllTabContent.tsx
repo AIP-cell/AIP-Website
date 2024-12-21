@@ -3,6 +3,8 @@ import React from "react";
 import audio from "@public/images/aSample.png";
 import cn from "@/utils/tailwind";
 import PlaySvg from "@/components/svg/PlaySvg";
+import { TSearch } from "@/api/type";
+import { StorageUrl } from "@/utils/BaseUrl";
 
 const tabDatas = [
   {
@@ -60,68 +62,82 @@ const tabDatas = [
     ],
   },
 ];
-const AllTabContent = () => {
-  const arrayLength = tabDatas.length;
+type Props = {
+  searchData: TSearch[];
+};
+const AllTabContent = ({ searchData }: Props) => {
+  // console.log("searchData:::", searchData);
+  const arrayLength = searchData.length;
   return (
     <div className="pt-[1rem] pb-[7.46rem]">
       <div className="flex flex-col ">
-        {tabDatas.map((content, i) => (
-          <div
-            key={i}
-            className={cn("border-b-2 border-[#DFE0E5]", {
-              "border-none": i === arrayLength - 1,
-            })}
-          >
-            <h3 className="~text-h5/h4a font-playFair text-gray80 leading-[2.1rem] pt-[1.5rem]">
-              {content.title}
-            </h3>
-            <div
-              className={cn(
-                "flex gap-[1.25rem] pt-[1rem] pb-[1.5rem]",
-                { "flex-col": content.galleryImage },
-                { "flex-col md:flex-row": content.video }
-              )}
-            >
-              {content.image && (
-                <div className="shrink-0 relative ~w-[4.28rem]/[3rem] ~h-[4.548rem]/[4.3rem]">
-                  <Image
-                    src={content.image}
-                    alt=""
-                    className="object-contain w-full h-full"
-                    fill
-                  />
-                </div>
-              )}
-              {content.video && (
-                <div className="shrink-0 flex justify-center items-center w-[18.4rem] h-[10.37rem] rounded-3xl bg-gray80">
-                  <div className="rounded-full size-[4rem] bg-textPurple flex justify-center items-center">
-                    <PlaySvg className="size-[2.4rem]" />
-                  </div>
-                </div>
-              )}
-              <p className="~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] text-midGray">
-                {content.desc}
-              </p>
-              {content.galleryImage && (
-                <div className="flex flex-wrap gap-[1.25rem]">
-                  {content.galleryImage.map((items, index) => (
-                    <div
-                      key={index}
-                      className="~size-[10.3rem]/[11.87rem] relative rounded-3xl overflow-hidden"
-                    >
+        {searchData.map(
+          (content, i) =>
+            content && (
+              <div
+                key={i}
+                className={cn("border-b-2 border-[#DFE0E5]", {
+                  "border-none": i === arrayLength - 1,
+                })}
+              >
+                {content.title && (
+                  <h3 className="~text-h5/h4a font-playFair text-gray80 leading-[2.1rem] pt-[1.5rem]">
+                    {content.title}
+                  </h3>
+                )}
+                <div
+                  className={cn(
+                    "flex gap-[1.25rem] pt-[1rem] pb-[1.5rem]",
+                    { "flex-col": content.galleryImage },
+                    { "flex-col md:flex-row": content.video }
+                  )}
+                >
+                  {content.image && (
+                    <div className="shrink-0 relative ~w-[4.28rem]/[3rem] ~h-[4.548rem]/[4.3rem]">
                       <Image
-                        src={items}
-                        alt="gallery-images"
+                        src={StorageUrl + content.image}
+                        alt=""
+                        className="object-contain w-full h-full"
                         fill
-                        className="object-cover"
                       />
                     </div>
-                  ))}
+                  )}
+                  {content?.video && (
+                    <div className="shrink-0 flex justify-center items-center w-[18.4rem] h-[10.37rem] rounded-3xl bg-gray80">
+                      <div className="rounded-full size-[4rem] bg-textPurple flex justify-center items-center">
+                        <PlaySvg className="size-[2.4rem]" />
+                      </div>
+                    </div>
+                  )}
+                  {content.description && (
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: content.description || "",
+                      }}
+                      className="~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] text-midGray"
+                    ></div>
+                  )}
+                  {content.galleryImage && (
+                    <div className="flex flex-wrap gap-[1.25rem]">
+                      {content.galleryImage.map((items, index) => (
+                        <div
+                          key={index}
+                          className="~size-[10.3rem]/[11.87rem] relative rounded-3xl overflow-hidden"
+                        >
+                          <Image
+                            src={items}
+                            alt="gallery-images"
+                            fill
+                            className="object-cover"
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </div>
-              )}
-            </div>
-          </div>
-        ))}
+              </div>
+            )
+        )}
       </div>
     </div>
   );
