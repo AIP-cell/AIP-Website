@@ -14,8 +14,9 @@ import { StorageUrl } from "@/utils/BaseUrl";
 
 type Props = {
   innerData: TCuratedResourcesInner;
+  params: string;
 };
-const InnerExpertsSectionOne = ({ innerData }: Props) => {
+const InnerExpertsSectionOne = ({ innerData, params }: Props) => {
   return (
     <div className="relative w-full ~pb-[3rem]/[5.75rem]">
       <Image
@@ -30,8 +31,9 @@ const InnerExpertsSectionOne = ({ innerData }: Props) => {
           textTwo="Curated Resources"
           linkTwo="/resource-center/curated-resources"
           textThree="Experts"
-          linkThree="/resource-center/curated-resources/slug"
-          textFour="slug"
+          linkThree={`/resource-center/curated-resources/experts`}
+          textFour={innerData.title}
+          linkFour={`/resource-center/curated-resources/experts/${params}`}
         />
         <div className="relative grid md:grid-cols-3 gap-5 ~pb-[3rem]/0">
           <div className="col-span-2 flex flex-col ~gap-[2rem]/[2.5rem]  ~pe-0/[6.563rem]">
@@ -69,7 +71,11 @@ const InnerExpertsSectionOne = ({ innerData }: Props) => {
               <p className="block md:hidden text-h6M text-gray80 font-playFair leading-[1.575rem]">
                 Launch Details
               </p>
-              <a href={innerData.fileLink} download className="mt-[1rem] group bg-darkPurple border-2 border-darkPurple hover:bg-white  transition-all  hover:text-darkPurple text-white hover:border-2 hover:border-darkPurple px-7 py-3 flex items-center gap-[0.75rem] w-fit rounded-3xl">
+              <a
+                href={innerData.fileLink}
+                download
+                className="mt-[1rem] group bg-darkPurple border-2 border-darkPurple hover:bg-white  transition-all  hover:text-darkPurple text-white hover:border-2 hover:border-darkPurple px-7 py-3 flex items-center gap-[0.75rem] w-fit rounded-3xl"
+              >
                 <p className=" font-inter  text-h9Copy5 leading-[1.225rem]">
                   Download
                 </p>

@@ -21,7 +21,6 @@ const page = async ({
   searchParams: { category: string };
 }) => {
   const response = await getHomePageApi();
-  // console.log("home response:::", response);
   const eventData = response.event;
   const teamData = response.team;
   const countData = response.count;

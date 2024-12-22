@@ -35,12 +35,12 @@ const NpoSpotlight = ({ casestudies }: Props) => {
       <Image
         src={CurveBg}
         alt=""
-        className="hidden lg:flex absolute items-center top-[7rem] h-full left-0"
+        className="hidden xl:flex absolute items-center top-[7rem] h-full left-0"
       />
       <Image
         src={CurvePeach}
         alt=""
-        className="hidden lg:block absolute  bottom-[-2rem]  right-0"
+        className="hidden xl:block absolute  bottom-[-2rem]  right-0"
       />
       <div className=" relative container mx-auto ~pt-[5rem]/[12.5rem]">
         <h2 className="text-center ~text-h4/h2 ~leading-[2.6rem]/[3.3rem] text-darkBrown font-playFair">

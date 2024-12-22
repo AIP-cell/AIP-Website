@@ -297,7 +297,6 @@ const CuratedResourcesInnerPage = async ({
   const param = await params;
   const SearchParam = await searchParams;
   const { domain, typeOfContent, organisationType, date } = await searchParams;
-  //   const category = asyncParam?.category;
   const response = await getAipResourcesData(param.slug, {
     domain,
     typeOfContent,

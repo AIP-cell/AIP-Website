@@ -49,7 +49,7 @@ const Spotlight = ({ eventData }: Props) => {
             className="object-cover h-full w-full"
           />
         </div>
-        <div className="absolute ~bottom-[-1.8rem]/[-3rem]  ~right-[-1.6rem]/[-4.5rem] ~size-[10.3rem]/[18.4rem]">
+        <div className="absolute ~bottom-[-1.8rem]/[-1.5rem]  ~right-[-1.6rem]/[-4.5rem] ~size-[10.3rem]/[18.4rem]">
           <Image src={ShapelessBrown} alt="" fill />
         </div>
       </div>

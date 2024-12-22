@@ -156,11 +156,10 @@
 
 // export default AipResourcesPage;
 import { redirect } from "next/navigation";
-import React from "react";
 
 const page = async () => {
   redirect("/resource-center/aip-resources/reportsAndPublications");
-  return <div></div>;
+  // return <div></div>;
 };
 
 export default page;

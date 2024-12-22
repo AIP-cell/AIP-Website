@@ -8,10 +8,12 @@ import { StorageUrl } from "@/utils/BaseUrl";
 
 type Props = {
   galleryLink?: string;
-  gallery: TGallery;
+  // gallery: TGallery;
+  galleryImages:TGalleryImages[]
+
 };
 
-const Gallery = ({ galleryLink, gallery }: Props) => {
+const Gallery = ({ galleryLink,galleryImages }: Props) => {
   return (
     <div className="relative ">
       <div className="~pt-[2rem]/[12.5rem] container mx-auto ~px-[1.25rem]/[7.8rem]">
@@ -19,7 +21,7 @@ const Gallery = ({ galleryLink, gallery }: Props) => {
           Gallery
         </p>
         <div className="~pt-[2rem]/[4rem] grid grid-cols-2 lg:grid-cols-5 lg:grid-rows-2 ~gap-[1rem]/[1.25rem]">
-          {gallery.galleryImages.map((items, i) => (
+          {galleryImages.map((items, i) => (
             <div
               key={i}
               className={cn(
@@ -40,7 +42,7 @@ const Gallery = ({ galleryLink, gallery }: Props) => {
           ))}
         </div>
         <Link
-          href={galleryLink || ""}
+          href={galleryLink ?? ""}
           className="~pt-[2rem]/[2.5rem] flex justify-center"
         >
           <button className="rounded-full border-2 border-darkPurple hover:text-white hover:bg-darkPurple text-darkPurple">

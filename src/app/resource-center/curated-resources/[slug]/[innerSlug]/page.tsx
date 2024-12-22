@@ -52,20 +52,22 @@ const getCuratedResourcesExpertsInnerApi = async (
   const response = await Api.getCuratedResourcesExpertsInner(slug);
   return response?.data;
 };
-const page = async ({ params }: { params: Promise<{ innerSlug: string }> }) => {
-  const asyncParam = (await params).innerSlug;
-  console.log("asyncParam::",asyncParam)
-  const response = await getCuratedResourcesExpertsInnerApi(asyncParam);
+const page = async ({ params }: { params: Promise<{ innerSlug: string,slug:string }> }) => {
+  const asyncInnerSlug = (await params).innerSlug;
+  const asyncSlug = (await params).slug;
+  console.log("asyncParam::", asyncInnerSlug);
+  const response = await getCuratedResourcesExpertsInnerApi(asyncInnerSlug);
   if (!response) {
     return;
   }
   const curatedResource = response?.curatedResource;
-  console.log("response",response)
+  const galleryImages = response.curatedResource.galleryImages;
+  console.log("response", response);
   return (
     <div className="pt-[5rem]">
-      <InnerExpertsSectionOne innerData={curatedResource} />
+      <InnerExpertsSectionOne innerData={curatedResource} params={asyncInnerSlug}/>
       <div className="container mx-auto ~pb-[5rem]/[7.5rem]">
-        {/* <Gallery gallery={}/> */}
+        <Gallery galleryImages={galleryImages} />
       </div>
     </div>
   );

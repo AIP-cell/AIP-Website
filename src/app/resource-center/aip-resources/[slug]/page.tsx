@@ -290,13 +290,11 @@ const AipResourcesInnerPage = async ({
   const param = await params;
   const SearchParam = await searchParams;
   const { domain, typeOfContent, date } = await searchParams;
-  //   const category = asyncParam?.category;
   const response = await getAipResourcesData(param.slug, {
     domain,
     typeOfContent,
     date,
   });
-  console.log("response::::", response);
   if (!response) {
     return;
   }

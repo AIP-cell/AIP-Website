@@ -106,11 +106,10 @@
 
 // export default CuratedResourcesPage;
 import { redirect } from "next/navigation";
-import React from "react";
 
 const page = async () => {
   redirect("/resource-center/curated-resources/featured");
-  return <div></div>;
+  // return <div></div>;
 };
 
 export default page;

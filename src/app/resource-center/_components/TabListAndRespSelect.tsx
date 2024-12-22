@@ -20,7 +20,6 @@ const fieldsArray = ["Fields/Sector", "Fields/Sector"];
 const dateArray = ["Date", "Date"];
 
 type Props = {
-  queryParamValues?: any;
   tabArray: any;
   textClassName?: string;
   listClassName?: string;
@@ -30,7 +29,6 @@ type Props = {
   setSelectedIndex: (value: number) => void;
 };
 const TabListAndRespSelect = ({
-  queryParamValues,
   tabArray,
   textClassName,
   listClassName,
@@ -44,7 +42,7 @@ const TabListAndRespSelect = ({
   return (
     <>
       <TabList
-        className={`hidden xl:flex bg-[#F0F0F2] rounded-full w-fit p-[.25rem] ${listClassName}`}
+        className={`hidden lg:flex bg-[#F0F0F2] rounded-full w-fit p-[.25rem] ${listClassName}`}
       >
         {tabArray.map((items: any, i: number) => (
           <div key={i}>
@@ -70,7 +68,7 @@ const TabListAndRespSelect = ({
         value={tabArray.at(selectedIndex)}
         onChange={setSelectedIndex}
         as="div"
-        className="block xl:hidden w-full"
+        className="block lg:hidden w-full"
       >
         <ListboxButton
           as="div"

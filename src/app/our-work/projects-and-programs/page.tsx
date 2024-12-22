@@ -175,18 +175,15 @@ const page = async ({
 
           <div className="pt-[3.25rem] pb-[5rem] grid md:grid-cols-3 gap-[4.5rem]">
             {response.map((item, i) => (
-              <Link
-                href={`/our-work/projects-and-programs/${item.slug}`}
+              <ResourceCard
                 key={i}
-              >
-                <ResourceCard
-                  src={item.image}
-                  title={item.title}
-                  desc={item.description}
-                  // category={item.category}
-                  date={item.date}
-                />
-              </Link>
+                link={`/our-work/projects-and-programs/${item.slug}`}
+                src={item.image}
+                title={item.title}
+                desc={item.description}
+                // category={item.category}
+                date={item.date}
+              />
             ))}
           </div>
         </div>

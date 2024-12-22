@@ -79,30 +79,7 @@ const filterDatas = [
   },
   { type: "Date", filter: ["data1", "data2"] },
 ];
-// const filterDatas = [
-//   {
-//     type: "domain",
-//     filter: [
-//       { id: "0", name: "0All" },
-//       { id: "1", name: "1All" },
-//       { id: "2", name: "2All" },
-//     ],
-//   },
-//   {
-//     type: "Type of Content",
-//     filter: [
-//       { id: "0", name: "0Content" },
-//       { id: "1", name: "1Content" },
-//     ],
-//   },
-//   {
-//     type: "Date",
-//     filter: [
-//       { id: "0", name: "0Date" },
-//       { id: "1", name: "1Date" },
-//     ],
-//   },
-// ];
+
 type Props = {
   tabData: TAipResourcesCategory[];
   category: string;

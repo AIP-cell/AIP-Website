@@ -1,4 +1,4 @@
-import { TTSelectedWorks } from "@/api/type";
+import { TSelectedWorks } from "@/api/type";
 import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 import BgButton from "@/components/buttons/BgButton";
 import OutlineButton from "@/components/buttons/OutlineButton";
@@ -29,7 +29,7 @@ const datas = [
   },
 ];
 type Props = {
-  works: TTSelectedWorks[];
+  works: TSelectedWorks[];
 };
 const SelectedWorks = ({ works }: Props) => {
   return (

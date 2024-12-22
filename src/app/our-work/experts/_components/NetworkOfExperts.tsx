@@ -69,6 +69,7 @@ const NetworkOfExperts = ({ people }: Props) => {
             <div key={i} className="">
               {i % 2 == 0 ? (
                 <ATeamCard
+                  link=""
                   image={people.image}
                   titleClassName="underline decoration-[1.5px] underline-offset-4"
                   title2ClassName="underline decoration-[1.5px] underline-offset-4"
@@ -79,6 +80,7 @@ const NetworkOfExperts = ({ people }: Props) => {
                 />
               ) : (
                 <PTeamCard
+                  link=""
                   image={people.image}
                   titleClassName="underline decoration-[1.5px] underline-offset-4"
                   title2ClassName="underline decoration-[1.5px] underline-offset-4"

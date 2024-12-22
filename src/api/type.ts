@@ -261,14 +261,14 @@ export type TPeopleOfAipTeams = {
   video: string;
   slug: string;
   links: TLinks[];
-  selectedWorks: TTSelectedWorks[];
+  selectedWorks: TSelectedWorks[];
 };
 
 export type TLinks = {
   link: string;
   _id: string;
 };
-export type TTSelectedWorks = {
+export type TSelectedWorks = {
   _id: string;
   name: string;
   title: string;
@@ -279,7 +279,20 @@ export type TTSelectedWorks = {
   date: string;
 };
 
-// End People Of Aip
+// End People Of Aip Get One
+
+// Start Experts
+export type TOurWorkExpertsData = {
+  experts: TExperts[];
+  selectedWorks:TSelectedWorks[]
+};
+export type TExperts = {
+  _id: string;
+  name: string;
+  organisation: string;
+  image: string;
+};
+// End Experts
 
 // Start People Of Aip
 

@@ -34,7 +34,7 @@ const ourValues = [
   },
 ];
 
-const OurValueSection = () => {
+const OurValueSectionUsingRef = () => {
   const textRef = useRef<HTMLDivElement>(null);
   const OvalRef = useRef<HTMLDivElement>(null);
   const previous = () => {
@@ -145,4 +145,4 @@ const OurValueSection = () => {
   );
 };
 
-export default OurValueSection;
+export default OurValueSectionUsingRef;

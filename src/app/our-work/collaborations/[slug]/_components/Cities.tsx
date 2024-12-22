@@ -266,7 +266,7 @@ const Cities = ({ collaboration, slug }: Props) => {
         </div>
         <div className="container mx-auto ~pt-[3rem]/0">
           <Gallery
-            gallery={cities.at(selectedIndex)!.gallery}
+            galleryImages={cities.at(selectedIndex)!.gallery.galleryImages}
             galleryLink={`/our-work/collaborations/${slug}/event-gallery`}
           />
         </div>

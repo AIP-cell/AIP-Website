@@ -1,3 +1,4 @@
+import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 import OutlineButton from "@/components/buttons/OutlineButton";
 import React from "react";
 
@@ -28,11 +29,13 @@ const AsAnExperts = () => {
         </p>
       </div>
       <div className="~pt-[2rem]/[3.268rem]">
-        <OutlineButton
-          text="Join The Flow"
-          buttonClassName="rounded-full w-fit"
-          className="py-[0.75rem] px-[1.75rem]"
-        />
+       <ButtonAnimation >
+          <OutlineButton
+            text="Join The Flow"
+            buttonClassName="rounded-full w-fit  bg-white hover:bg-darkPurple"
+            className="py-[0.75rem] px-[1.75rem] hover:text-white"
+          />
+       </ButtonAnimation>
       </div>
     </div>
   );

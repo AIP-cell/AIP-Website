@@ -46,7 +46,7 @@ const ResourceCard = ({
             {name}
           </p>
         )}
-        <p className="text-h9Copy5 text-gray50 font-inter leading-[1.225rem]">
+        <p className="line-clamp-6 text-ellipsis text-h9Copy5 text-gray50 font-inter leading-[1.225rem]">
           {desc}
         </p>
       </div>

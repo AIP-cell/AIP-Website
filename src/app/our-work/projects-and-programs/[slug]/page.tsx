@@ -28,7 +28,7 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   return (
     <div className="pt-[5rem]">
       <InnerSectionOne heroSectionData={heroSectionData} />
-      <Gallery gallery={gallery} />
+      <Gallery galleryImages={gallery.galleryImages} />
       <Media media={media} />
       <TestimonialsProjectProgram testimonials={testimonials}/>
     </div>

@@ -28,11 +28,16 @@ export const Api = {
       date?: string;
     }
   ) => {
-    console.log("data::", slug);
     try {
+      const query = generatingSearchParam({
+        ...data,
+      });
       const response = await axiosClient.get(
-        `aip-resources?category=${slug}&${new URLSearchParams(data)}`
+        `aip-resources?category=${slug}&${query.toString()}`
       );
+      // const response = await axiosClient.get(
+      //   `aip-resources?category=${slug}&${new URLSearchParams(data)}`
+      // );
       return response.data;
     } catch (error) {
       console.log(error);
@@ -49,9 +54,15 @@ export const Api = {
     }
   ) => {
     try {
+      const query = generatingSearchParam({
+        ...data,
+      });
       const response = await axiosClient.get(
-        `curated-resources?category=${slug}&${new URLSearchParams(data)}`
+        `curated-resources?category=${slug}&${query.toString()}`
       );
+      // const response = await axiosClient.get(
+      //   `curated-resources?category=${slug}&${new URLSearchParams(data)}`
+      // );
       return response.data;
     } catch (error) {
       console.log(error);
@@ -165,9 +176,15 @@ export const Api = {
     date?: string;
   }) => {
     try {
+      const query = generatingSearchParam({
+        ...data,
+      });
       const response = await axiosClient.get(
-        `projects-programs?${new URLSearchParams(data)}`
+        `projects-programs?${query.toString()}`
       );
+      // const response = await axiosClient.get(
+      //   `projects-programs?${new URLSearchParams(data)}`
+      // );
       return response.data;
     } catch (error) {
       console.log(error);
@@ -189,7 +206,13 @@ export const Api = {
     date?: string;
   }) => {
     try {
-      const response = await axiosClient.get(`collaborations`);
+      const query = generatingSearchParam({
+        ...data,
+      });
+      const response = await axiosClient.get(
+        `collaborations?${query.toString()}`
+      );
+      // const response = await axiosClient.get(`collaborations`);
       return response.data;
     } catch (error) {
       console.log(error);
@@ -224,9 +247,8 @@ export const Api = {
       const query = generatingSearchParam({
         ...data,
       });
-      console.log("URLSearchParams:::::::", query.toString());
       const response = await axiosClient.get(`search?${query.toString()}`);
-     
+
       return response.data;
     } catch (error) {
       console.log(error);

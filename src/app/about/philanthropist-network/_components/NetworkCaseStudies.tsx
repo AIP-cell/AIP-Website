@@ -52,15 +52,15 @@ const NetworkCaseStudies = ({ casestudies }: Props) => {
           </span>
         </h2>
         <div className="~pt-[2.5rem]/[6.56rem]  flex flex-col ~gap-[3.5rem]/[5.5rem] ~px-[1.25rem]/[7.8rem]">
-          {casestudies.map((item: any, i: number) => (
+          {casestudies.map((item, i: number) => (
             <CaseStudy
               key={i}
               index={i}
-              foundationName={item.foundationName}
+              foundationName={item.organisationName}
               foundationNameClassName="!~pt-[1rem]/[1.25rem] !~text-h6M/h5"
               initiativeName={item.initiativeName}
               title={item.title}
-              desc={item.desc}
+              desc={item.description}
               image={item.image}
             />
           ))}

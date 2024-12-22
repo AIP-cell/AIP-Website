@@ -5,21 +5,24 @@ import Image from "next/image";
 import FinancialTabs from "./_components/FinancialTabs";
 import BreadCrump from "@/components/bread-crump/BreadCrump";
 import { Api } from "@/api/Api";
-import { TFinancialReportPageData } from "@/api/type";
+import { TFinancialReportPageData, TReports } from "@/api/type";
 
-const getFinancialReportApi = async (): Promise<TFinancialReportPageData> => {
+const getFinancialReportApi = async (): Promise<TReports[]> => {
   const response = await Api.getFinancialReport();
   return response.data;
 };
 const page = async ({
   searchParams,
 }: {
-  searchParams: { category: string };
+  searchParams: Promise<{ selected: string }>;
 }) => {
+  const urlSearchParams = await searchParams;
   const response = await getFinancialReportApi();
-  const reports = response.reports;
-  const currentYear = searchParams.category ? searchParams.category : "2019";
-  const filterDataByYear = reports.find((year) => year.year === currentYear);
+  const reports = response;
+  const currentYear = urlSearchParams.selected
+    ? urlSearchParams.selected
+    : "2019";
+  const filterDataByYear = reports.find((year) => year.year === "2019");
   console.log("filterDataByYear:::", filterDataByYear);
   return (
     <div className="pt-[5rem]">
@@ -41,7 +44,7 @@ const page = async ({
               <p className=" text-gray80">Financial Reports & Certificates</p>
             </div>
           </div>
-          <FinancialTabs filterDataByYear={filterDataByYear} />
+          <FinancialTabs filterDataByYear={filterDataByYear} urlSearchParams={urlSearchParams.selected}/>
         </div>
       </div>
     </div>
