@@ -23,7 +23,6 @@ const page = async ({
     ? urlSearchParams.selected
     : "2019";
   const filterDataByYear = reports.find((year) => year.year === "2019");
-  console.log("filterDataByYear:::", filterDataByYear);
   return (
     <div className="pt-[5rem]">
       <div className="w-full relative">

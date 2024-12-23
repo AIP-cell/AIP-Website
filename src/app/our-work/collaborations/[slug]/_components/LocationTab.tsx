@@ -15,7 +15,7 @@ type Props = {
   textClassName?: string;
   listClassName?: string;
   selectedIndex: number;
-  setSelectedIndex: (value: number) => void;
+  setSelectedIndex: (value: any) => void;
 };
 const LocationTabs = ({
   tabArray,

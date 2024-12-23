@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import FooterFish from "@public/svg/footer/fish/homePageFish.svg";
+// import FooterFish from "@public/svg/footer/fish/homePageFish.svg";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 

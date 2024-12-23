@@ -310,7 +310,6 @@ const CuratedResourcesInnerPage = async ({
   const filterData = curatedResourcesFilter.find(
     (item) => item.filterBy === param.slug
   );
-  console.log("filterBySlug::", filterBySlug);
   return (
     <div className="pt-[5rem]">
       <div className="container mx-auto relative ~px-5/[7.5rem]">

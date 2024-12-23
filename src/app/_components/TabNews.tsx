@@ -7,20 +7,6 @@ import TabListAndRespSelect from "../resource-center/_components/TabListAndRespS
 import CarouselRespNews from "./CarouselRespNews";
 import { CarouselNews } from "./CarouselNews";
 import { THomePageNews } from "@/api/type";
-// const newsData = [
-//   {
-//     src: "/images/news/newsDemo.png",
-//     text: "An ugam is a starting point from where river begins.",
-//   },
-//   {
-//     src: "/images/news/newsDemo.png",
-//     text: "An ugam is a starting point from where river begins.",
-//   },
-//   {
-//     src: "/images/news/newsDemo.png",
-//     text: "An ugam is a starting point from where river begins.",
-//   },
-// ];
 const newsTabArray = [
   { key: "aipUpdates", tab: "About AIP" },
   { key: "partner", tab: "From Partners" },

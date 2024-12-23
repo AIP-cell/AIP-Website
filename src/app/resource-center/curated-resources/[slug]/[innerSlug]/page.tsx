@@ -54,15 +54,13 @@ const getCuratedResourcesExpertsInnerApi = async (
 };
 const page = async ({ params }: { params: Promise<{ innerSlug: string,slug:string }> }) => {
   const asyncInnerSlug = (await params).innerSlug;
-  const asyncSlug = (await params).slug;
-  console.log("asyncParam::", asyncInnerSlug);
+  // const asyncSlug = (await params).slug;
   const response = await getCuratedResourcesExpertsInnerApi(asyncInnerSlug);
   if (!response) {
     return;
   }
   const curatedResource = response?.curatedResource;
   const galleryImages = response.curatedResource.galleryImages;
-  console.log("response", response);
   return (
     <div className="pt-[5rem]">
       <InnerExpertsSectionOne innerData={curatedResource} params={asyncInnerSlug}/>

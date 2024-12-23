@@ -18,9 +18,13 @@ const getHomePageApi = async (): Promise<THomePageData> => {
 const page = async ({
   searchParams,
 }: {
-  searchParams: { category: string };
+  searchParams: Promise<{ category: string }>;
 }) => {
+  const asyncSearchParams = await searchParams
   const response = await getHomePageApi();
+  if (!response) {
+    return;
+  }
   const eventData = response.event;
   const teamData = response.team;
   const countData = response.count;
@@ -35,7 +39,7 @@ const page = async ({
       <Members countData={countData} />
       <AipWay />
       <Founder teamData={teamData} />
-      <News newsData={newsData} searchParams={searchParams} />
+      <News newsData={newsData} searchParams={asyncSearchParams.category} />
     </div>
   );
 };

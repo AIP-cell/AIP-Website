@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import OvalPurpleSvg from "../svg/OvalPurpleSvg";
+// import OvalPurpleSvg from "../svg/OvalPurpleSvg";
 type Props = {
   text1?: string | number;
   text2?: string;

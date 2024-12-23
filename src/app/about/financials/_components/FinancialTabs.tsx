@@ -43,7 +43,6 @@ type Props = {
 };
 const FinancialTabs = ({ filterDataByYear, urlSearchParams }: Props) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
-  console.log("selectedIndex:::",selectedIndex)
   return (
     <>
       <FinancialSm />

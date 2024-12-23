@@ -1,7 +1,7 @@
 import BgButton from "@/components/buttons/BgButton";
 import Image from "next/image";
 import ShapelessBrown from "@public/svg/shapelessBrown.svg";
-import Upcoming from "@public/images/upcoming.png";
+// import Upcoming from "@public/images/upcoming.png";
 import React from "react";
 import { THomePageEvent } from "@/api/type";
 import { StorageUrl } from "@/utils/BaseUrl";

@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import OvalPeachSvg from "@public/svg/ovalPeach.svg";
+// import OvalPeachSvg from "@public/svg/ovalPeach.svg";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 type Props = {

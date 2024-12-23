@@ -11,7 +11,6 @@ const SearchBar = (props: {
 }) => {
   const router = useRouter();
   const [key, setKey] = useState(props.key ?? "");
-  console.log("key::", key);
   const handleSearch = (event: any) => {
     event.preventDefault();
     const query = generatingSearchParam({

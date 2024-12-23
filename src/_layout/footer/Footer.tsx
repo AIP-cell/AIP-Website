@@ -11,34 +11,8 @@ import Wave from "react-wavify";
 import Link from "next/link";
 import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 import FooterFishes from "./FooterFishes";
-import CustomHeaderSelect from "@/components/custom/CustomHeaderSelect";
 import CustomAccordionSelect from "@/components/custom/CustomAccordionSelect";
-const footerLinks = [
-  {
-    name: "FAQ",
-    link: "/faq",
-  },
-  {
-    name: "Fact Sheet",
-    link: "",
-  },
-  {
-    name: "Social Media",
-    link: "",
-  },
-  {
-    name: "Learning Circle",
-    link: "",
-  },
-  {
-    name: "T & C",
-    link: "",
-  },
-  {
-    name: "Copyright",
-    link: "",
-  },
-];
+
 const footerData = [
   {
     label: "About Us",
@@ -136,7 +110,10 @@ const Footer = () => {
                 </p>
               </div>
               <div className="flex lg:hidden flex-col w-full pt-[1rem]">
-                <CustomAccordionSelect ArrayData={footerData} accordionTriggerClassName="!text-white"/>
+                <CustomAccordionSelect
+                  ArrayData={footerData}
+                  accordionTriggerClassName="!text-white"
+                />
                 <div className="flex text-h9Copy5 leading-[1.225rem] flex-wrap gap-[1rem] text-white pt-[1rem]">
                   <p>Careers</p>|<p>FAQs</p>|<p>Foundation Fact Sheet</p>|
                   <p>Join our learning circle</p>

@@ -1,6 +1,5 @@
 "use client";
 import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
-import CustomHeaderSelect from "@/components/custom/CustomHeaderSelect";
 import MenuSvg from "@/components/svg/MenuSvg";
 import Link from "next/link";
 import Jelly from "@public/svg/footer/jelly.svg";
@@ -69,68 +68,7 @@ const headerData = [
     ],
   },
 ];
-// const headerData = [
-//   {
-//     // width: " w-[6rem] ",
-//     label: "About Us",
-//     id: "about",
-//     options: [
-//       { option: "The AIP Journey", link: "/about/aip-journey" },
-//       { option: "Our Approach", link: "/about/our-approach" },
-//       { option: "AIP Impact", link: "/about/aip-impact" },
-//       { option: "Giving Roadmap", link: "/about/giving-roadmap" },
-//       { option: "Financial Reports", link: "/about/financials" },
-//       { option: "AIP Founder Network", link: "/about/aip-founder-network" },
-//       {
-//         option: "Philanthropist Network",
-//         link: "/about/philanthropist-network",
-//       },
-//     ],
-//   },
-//   {
-//     id: "people-of-aip",
-//     label: "People of AIP",
-//     link: "/people-of-aip/core-founders",
-//   },
-//   {
-//     // width: " w-[10.5rem] ",
-//     label: "Our Work",
-//     id: "our-work",
-//     options: [
-//       // {
-//       //   option: "Products & Services",
-//       //   link: "/our-work/our-offerings",
-//       // },
-//       { option: "What We Do", link: "/our-work/what-we-do" },
-//       { option: "NPO Registry", link: "/our-work/npo" },
-//       { option: "Experts", link: "/our-work/experts" },
-//       {
-//         option: "Projects and Programs",
-//         link: "/our-work/projects-and-programs",
-//       },
-//       {
-//         option: "Collaborations",
-//         link: "/our-work/collaborations",
-//       },
-//     ],
-//   },
-//   {
-//     // width: " w-[9rem] ",
-//     label: "Resource Center",
-//     id: "resource-center",
-//     options: [
-//       // { option: "Resource Center", link: "/resource-center" },
-//       { option: "AIP Resources", link: "/resource-center/aip-resources" },
-//       {
-//         option: "Curated Resources",
-//         link: "/resource-center/curated-resources",
-//       },
-//       // { option: "Collaborations", link: "/resource-center/collaborations" },
-//     ],
-//   },
-//   { id: "careers", name: "Careers", link: "/careers" },
-//   { id: "contact", name: "Contact", link: "/contact" },
-// ];
+
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (

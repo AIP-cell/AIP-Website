@@ -33,7 +33,6 @@ const InnerTeamPage = async ({
   const urlParams = await params;
   const response = await getPeopleOfAipGetOneApi(urlParams.innerSlug);
   const team = response.teams;
-  console.log("urlParams:::", urlParams.innerSlug);
   return (
     <div className="pt-[5rem]">
       <div className="w-full relative ">

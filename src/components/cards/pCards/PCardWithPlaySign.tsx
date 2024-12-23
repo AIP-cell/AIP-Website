@@ -13,7 +13,6 @@ type Props = {
 
 };
 const PCardWithPlaySign = ({ image, name, post, desc,linkedin }: Props) => {
-  console.log("image::::", image)
   return (
     <div className="w-[18.43rem] relative ">
       {linkedin && (

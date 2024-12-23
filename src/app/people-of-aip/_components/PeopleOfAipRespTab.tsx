@@ -17,7 +17,7 @@ export default function PeopleOfAipRespTab({
   listArray,
 }: //   setSelected,
 {
-  selected: any;
+  selected: string;
   listArray: { name: string; link: string }[];
   //   setSelected: any;
 }) {

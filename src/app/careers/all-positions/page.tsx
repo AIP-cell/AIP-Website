@@ -13,6 +13,7 @@ const dateData = ["Date", "Date"];
 const locationData = ["Location", "Location"];
 const filterDatas = [
   {
+    key: "function",
     type: "Function",
     filter: [
       "All",
@@ -30,13 +31,25 @@ const filterDatas = [
     ],
   },
   {
+    key: "level",
     type: "Level",
     filter: ["data1", "data2"],
   },
-  { type: "City", filter: ["data1", "data2"] },
-  { type: "Type", filter: ["data1", "data2"] },
+  { key: "city", type: "City", filter: ["data1", "data2"] },
+  { key: "type", type: "Type", filter: ["data1", "data2"] },
 ];
-const page = () => {
+const page = async ({
+  searchParams,
+}: {
+  searchParams: Promise<{
+    functions?: string;
+    level?: string;
+    city?: string;
+    type?: string;
+  }>;
+}) => {
+  const urlsearchParams = await searchParams;
+  const { functions, level, city, type } = await searchParams;
   return (
     <div className="pt-[5rem]">
       <div className=" relative bg-container mx-auto ">
@@ -79,6 +92,8 @@ const page = () => {
             <div className="flex flex-wrap gap-[.75rem]">
               {filterDatas.map((items, i) => (
                 <CustomFilter
+                  searchParams={{ ...urlsearchParams }}
+                  filterKey={items.key}
                   type={items.type}
                   key={i}
                   optionsArray={items.filter}

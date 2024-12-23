@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 import CustomHeaderSelect from "@/components/custom/CustomHeaderSelect";
 import LogoHeaderSvg from "@/components/svg/LogoHeaderSvg";
 import LogoSmSVG from "@/components/svg/LogoSmSVG";
@@ -7,7 +7,6 @@ import Link from "next/link";
 import Sidebar from "./Sidebar";
 import SearchSvg from "@/components/svg/SearchSvg";
 import NormalLinks from "./NormalLinks";
-import { useState } from "react";
 const headerData = [
   {
     width: " w-[6rem] ",
@@ -74,8 +73,6 @@ const headerData = [
   { id: "contact", name: "Contact", link: "/contact" },
 ];
 const Header = () => {
-  // const [isOpen, setIsOpen] = useState(true);
-
   return (
     <div className=" z-[10000] fixed right-0 left-0 top-0 max-xl:bg-toRightPurpleToBlue xl:bg-white  ">
       <div className="container mx-auto flex justify-between items-center ~pt-[0.875rem]/[1rem] ~pb-[0.75rem]/[0.9rem] px-[1.25rem]">
@@ -90,7 +87,7 @@ const Header = () => {
           <Sidebar />
         </div>
         <div className="hidden xl:flex gap-[2.5rem] ">
-          {headerData.map((items: any, index: number) => (
+          {headerData.map((items, index: number) => (
             <div key={index} className="flex items-center ">
               {items.options ? (
                 <div className="flex gap-[2.5rem]">

@@ -38,7 +38,6 @@ const GalleryImages = ({ galleryImages }: Props) => {
     return dayjs(date).format("D MMMM YYYY");
   };
   const next = () => {
-    console.log("hii");
     if (selectedIndex === galleryImages.length - 1) {
       setSelectedIndex(0);
     } else {

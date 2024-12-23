@@ -302,7 +302,6 @@ const AipResourcesInnerPage = async ({
   const filterData = aipResourcesFilter.find(
     (item) => item.filterBy === param.slug
   );
-  console.log("filterBySlug::", filterBySlug);
   return (
     <div className="pt-[5rem]">
       <div className="container mx-auto relative ~px-5/[7.5rem]">

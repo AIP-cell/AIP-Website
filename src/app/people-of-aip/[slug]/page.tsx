@@ -1,9 +1,7 @@
 import React from "react";
-import PeopleOfAipTab from "../_components/PeopleOfAipTab";
-import PeopleOfAipSm from "../_components/PeopleOfAipSm";
 import BreadCrump from "@/components/bread-crump/BreadCrump";
 import PeopleOfAipTabs from "../_components/PeopleOfAipTabs";
-import { TPeopleOfAip, TTeamMembers } from "@/api/type";
+import { TTeamMembers } from "@/api/type";
 import { Api } from "@/api/Api";
 import PeopleOfAipTeamMembers from "./_components/PeopleOfAipTeamMembers";
 import OurCoreFoundersContent from "../_components/OurCoreFoundersContent";
