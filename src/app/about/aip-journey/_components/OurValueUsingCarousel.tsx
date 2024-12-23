@@ -69,7 +69,7 @@ const OurValueUsingCarousel = () => {
               The foundations that drive AIP to drive positive change
             </p>
           </div>
-          <CarouselContent className="~pt-[2.5rem]/[5rem]  relative ">
+          <CarouselContent className="~pt-[2.5rem]/[5rem] relative pl-[30rem] pr-[60rem]">
             {ourValues.map((items, i) => (
               <div
                 key={i}
@@ -77,7 +77,7 @@ const OurValueUsingCarousel = () => {
               >
                 <CarouselItem
                   key={i}
-                  className="md:!basis-1/2 lg:!basis-1/2 xl:!basis-1/3 justify-center gap-[1.25rem] flex  "
+                  className="md:!basis-1/2 lg:!basis-1/2 xl:!basis-1/1 justify-center gap-[1.25rem] flex "
                 >
                   <div className=" flex justify-center w-full">
                     <OvalPurple
@@ -90,7 +90,7 @@ const OurValueUsingCarousel = () => {
                     />
                   </div>
                 </CarouselItem>
-                {/* <CarouselItem className="basis-1 justify-center gap-[1.25rem] flex  ">
+                {/* <CarouselItem className="basis-1 justify-center gap-[1.25rem] flex  "> */}
                   <div className="flex  w-full">
                     <div className=" w-full flex justify-center shrink-0  container mx-auto pb-[5rem]">
                       <div className="relative ~w-[16.125rem]/[38rem] flex justify-center items-center">
@@ -100,11 +100,11 @@ const OurValueUsingCarousel = () => {
                       </div>
                     </div>
                   </div>
-                </CarouselItem> */}
+                {/* </CarouselItem> */}
               </div>
             ))}
           </CarouselContent>
-          <CarouselContent>
+          {/* <CarouselContent>
             {ourValues.map((items, i) => (
               <CarouselItem
                 key={i}
@@ -121,7 +121,7 @@ const OurValueUsingCarousel = () => {
                 </div>
               </CarouselItem>
             ))}
-          </CarouselContent>
+          </CarouselContent> */}
           <div className="absolute top h-full w-full justify-center flex items-center">
             <div className="absolute flex w-full justify-between">
               <CarouselPrevious />

@@ -43,8 +43,8 @@ const OurValueSectionUsingRef = () => {
       const OvalSlide = OvalRef.current.querySelector("div");
       //   console.log("card prev::", card);
       if (textSlide && OvalSlide) {
-        const textWidth = textSlide.offsetWidth;
-        const OvalWidth = OvalSlide.offsetWidth;
+        const textWidth = textSlide.getBoundingClientRect().width;
+        const OvalWidth = OvalSlide.getBoundingClientRect().width;
         // console.log("cardWidth::", cardWidth);
         textRef.current.scrollBy({ left: -textWidth, behavior: "smooth" });
         OvalRef.current.scrollBy({ left: -OvalWidth, behavior: "smooth" });
@@ -57,8 +57,8 @@ const OurValueSectionUsingRef = () => {
       const OvalSlide = OvalRef.current.querySelector("div");
       //   console.log("card prev::", card);
       if (textSlide && OvalSlide) {
-        const textWidth = textSlide.offsetWidth;
-        const OvalWidth = OvalSlide.offsetWidth;
+        const textWidth = textSlide.getBoundingClientRect().width;
+        const OvalWidth = OvalSlide.getBoundingClientRect().width;
         // console.log("cardWidth::", cardWidth);
         textRef.current.scrollBy({ left: textWidth, behavior: "smooth" });
         OvalRef.current.scrollBy({ left: OvalWidth, behavior: "smooth" });

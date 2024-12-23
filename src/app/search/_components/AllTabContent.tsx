@@ -125,7 +125,7 @@ const AllTabContent = ({ searchData }: Props) => {
                           className="~size-[10.3rem]/[11.87rem] relative rounded-3xl overflow-hidden"
                         >
                           <Image
-                            src={items}
+                            src={items.image}
                             alt="gallery-images"
                             fill
                             className="object-cover"

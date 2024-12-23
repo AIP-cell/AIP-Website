@@ -450,6 +450,8 @@ export type TSearch = {
   answer: string;
   year: string;
   report: string;
+  galleryImage:TGalleryImages[]
+  video:string;
   name: string;
   slug: string;
 };
