@@ -1,10 +1,5 @@
 import React from "react";
-import Link from "next/link";
 import Image from "next/image";
-
-import PositionsGrid from "./_components/PositionsGrid";
-import usersBg from "@public/svg/careers/users.svg";
-import BreadCrump from "@/components/bread-crump/BreadCrump";
 import CareersHeroSection from "./_components/CareersHeroSection";
 import WhyWorkWithAip from "./_components/WhyWorkWithAip";
 import OpenRules from "./_components/OpenRules";

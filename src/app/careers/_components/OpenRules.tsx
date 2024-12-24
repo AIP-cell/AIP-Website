@@ -29,7 +29,7 @@ const OpenRules = () => {
               strategic philanthropy impact India’s transformation.
             </p>
           </div>
-          <PositionsGrid />
+          <PositionsGrid data={[]} />
         </div>
         <div className="pt-[2rem]">
           <Link

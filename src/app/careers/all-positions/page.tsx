@@ -6,8 +6,8 @@ import Image from "next/image";
 import Link from "next/link";
 import PositionsGrid from "../_components/PositionsGrid";
 import BreadCrump from "@/components/bread-crump/BreadCrump";
-import CustomSelect from "@/components/custom/CustomSelect";
 import CustomFilter from "@/components/custom/CustomFilter";
+import { Api } from "@/api/Api";
 const departmentData = ["Department", "Department"];
 const dateData = ["Date", "Date"];
 const locationData = ["Location", "Location"];
@@ -38,6 +38,12 @@ const filterDatas = [
   { key: "city", type: "City", filter: ["data1", "data2"] },
   { key: "type", type: "Type", filter: ["data1", "data2"] },
 ];
+
+const getCareersApi = async (): Promise<any> => {
+  const response = await Api.getCareers();
+  return response.data;
+};
+
 const page = async ({
   searchParams,
 }: {
@@ -50,6 +56,8 @@ const page = async ({
 }) => {
   const urlsearchParams = await searchParams;
   const { functions, level, city, type } = await searchParams;
+  const response = await getCareersApi();
+  console.log(response.organizations, response.jobs);
   return (
     <div className="pt-[5rem]">
       <div className=" relative bg-container mx-auto ">
@@ -102,7 +110,7 @@ const page = async ({
             </div>
           </div>
 
-          <PositionsGrid />
+          <PositionsGrid data={response.jobs} />
 
           <div className=" ~px-0/[6.563rem] ~pt-[2.5rem]/20  ">
             <div className="~px-5/[9.375rem] py-[2rem] rounded-[1.25rem] text-center bg-lightgrey">

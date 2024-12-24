@@ -255,4 +255,13 @@ export const Api = {
       return null;
     }
   },
+  getCareers: async () => {
+    try {
+      const response = await axiosClient.get(`careers`);
+      return response.data;
+    } catch (error) {
+      console.log(error);
+      return null;
+    }
+  },
 };
