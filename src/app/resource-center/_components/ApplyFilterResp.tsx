@@ -1,34 +1,38 @@
 import CrossSvg from "@/components/svg/CrossSvg";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { generatingSearchParam } from "@/utils/UrlHelper";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 type Props = {
   type: string;
+  filterKey: string;
   optionsArray: any[];
+  searchParams: Record<string, any>;
   // setSelected: (value: any) => void;
   setIsOpen: (value: boolean) => void;
-  // selected: string;
+  isOpen: boolean;
 };
 export function ApplyFilterResp({
   type,
   optionsArray,
-  // setSelected,
+  filterKey,
+  searchParams,
+  isOpen,
   setIsOpen,
-}: // selected,
-Props) {
-  const searchParams = useSearchParams();
-  const domain = searchParams.get("domain");
-  const [selectedFilter, setSelectedFilter] = useState<any>(domain);
+}: Props) {
+  // const searchParams = useSearchParams();
+  // const domain = searchParams.get("domain");
+  const [selectedFilter, setSelectedFilter] = useState<any>();
   const router = useRouter();
-  const category = searchParams.get("category");
-  // console.log("selectedFilter::::", selectedFilter);
+  // const category = searchParams.get("category");
+
   const handleSubmit = (e: any) => {
-    e.preventDefault();
+    // e.preventDefault();
+    // console.log("hiiiiiiiiii")
     const query = generatingSearchParam({
-      category,
-      domain: selectedFilter,
+      ...searchParams,
+      [filterKey]: selectedFilter,
     });
     router.push(`?${query.toString()}`, {
       scroll: false,
@@ -40,10 +44,9 @@ Props) {
       <form onSubmit={handleSubmit} className=" ">
         <div className="pb-[0.773rem] border-b-[1.5px] text-h8Copy3 leading-[1.575rem] gap-[0.5rem] border-b-gray20 text-gray80 flex relative items-center">
           <p className=" text-gray20">Filter By:</p> <div>{type}</div>
-          <CrossSvg
-            onClick={() => setIsOpen(false)}
-            className="absolute right-0 size-[1rem] cursor-pointer"
-          />
+          <div onClick={() => setIsOpen(!isOpen)}>
+            <CrossSvg className="absolute right-0 size-[1rem] cursor-pointer" />
+          </div>
         </div>
         <RadioGroup
           className="flex flex-col px-[0.75rem] h-[55vh] overflow-y-scroll no-scrollbar relative"

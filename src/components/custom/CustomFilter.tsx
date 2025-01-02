@@ -37,7 +37,7 @@ const CustomFilter = ({
 }: Props) => {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
-  // const searchParams = useSearchParams();
+//  console.log("isOpen:::::",isOpen)
   // const domain = searchParams.get('domain');
   return (
     <>
@@ -45,9 +45,11 @@ const CustomFilter = ({
         <ApplyFilterResp
           type={type}
           optionsArray={optionsArray}
+          filterKey={filterKey}
+          searchParams={searchParams}
           // setSelected={setSelected}
           setIsOpen={setIsOpen}
-          // selected={selected}
+          isOpen={isOpen}
         />
       )}
       <div onClick={() => setIsOpen(!isOpen)}>

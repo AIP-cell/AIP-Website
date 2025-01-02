@@ -20,7 +20,7 @@ const ACardWithPlaySign = ({ image, name, post, desc, linkedin }: Props) => {
         <Image src={Linkedin} alt="" className="absolute top-0 right-0" />
       )}
       <div className="relative flex justify-center">
-        <ASvg src={image} />
+        <ASvg src={image} className="w-[18.438rem] h-[21.563rem]"/>
         <Image
           src={PlayButtonPurple}
           alt=""

@@ -24,7 +24,7 @@ const PCardWithPlaySign = ({ image, name, post, desc,linkedin }: Props) => {
       )}
       <div className="relative flex justify-center">
         {/* <Image src={Src} alt="" />   */}
-        <PSvg src={image} />
+        <PSvg src={image} className="w-[18.438rem] h-[21.563rem]"/>
         <Image
           src={PlayButtonPurple}
           alt=""

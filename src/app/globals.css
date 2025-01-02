@@ -16,10 +16,12 @@
     --background-end-rgb: 0, 0, 0;
   } 
 } */
-
+.scroll-align {
+  scroll-snap-align: center !important;
+}
 .container {
   max-width: 1280px !important;
-} 
+}
 .bg-container {
   max-width: 1920px !important;
 }
@@ -47,13 +49,13 @@ body {
   /* IE and Edge */
   scrollbar-width: none !important;
 }
-.max-cover{
+.max-cover {
   object-fit: fill !important;
 }
-@media screen and  (max-width: 1900px){
-.max-cover{
-  object-fit: cover !important;
-}
+@media screen and (max-width: 1900px) {
+  .max-cover {
+    object-fit: cover !important;
+  }
 }
 .tk-blob {
   animation: blob-turn var(--time, 30s) linear infinite;

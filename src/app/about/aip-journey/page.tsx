@@ -13,10 +13,8 @@ const page = () => {
     <div className="pt-[5rem]">
       <JourneyHeroSection />
       <JourneySoFar />
-      {/* <OurValueUsingCarousel /> */}
-      <OurValueSectionUsingRef />
-
-      {/* <Pillars /> */}
+      <OurValueUsingCarousel />
+      {/* <OurValueSectionUsingRef /> */}
     </div>
   );
 };
