@@ -8,56 +8,15 @@ import PositionsGrid from "../_components/PositionsGrid";
 import BreadCrump from "@/components/bread-crump/BreadCrump";
 import CustomFilter from "@/components/custom/CustomFilter";
 import { Api } from "@/api/Api";
-const departmentData = ["Department", "Department"];
-const dateData = ["Date", "Date"];
-const locationData = ["Location", "Location"];
-const filterDatas = [
-  {
-    key: "function",
-    type: "Function",
-    filter: [
-      "All",
-      "Art & Culture",
-      "Education",
-      "Environment",
-      "Health & Nutrition",
-      "Legal & Judiciary",
-      "Livelihood",
-      "Disability",
-      "Rural Development",
-      "Sports",
-      "WASH",
-      "Women & Child",
-    ],
-  },
-  {
-    key: "level",
-    type: "Level",
-    filter: ["data1", "data2"],
-  },
-  { key: "city", type: "City", filter: ["data1", "data2"] },
-  { key: "type", type: "Type", filter: ["data1", "data2"] },
-];
 
 const getCareersApi = async (): Promise<any> => {
   const response = await Api.getCareers();
   return response.data;
 };
 
-const page = async ({
-  searchParams,
-}: {
-  searchParams: Promise<{
-    functions?: string;
-    level?: string;
-    city?: string;
-    type?: string;
-  }>;
-}) => {
-  const urlsearchParams = await searchParams;
-  const { functions, level, city, type } = await searchParams;
+const page = async () => {
   const response = await getCareersApi();
-  console.log(response.organizations, response.jobs);
+  if (!response) return;
   return (
     <div className="pt-[5rem]">
       <div className=" relative bg-container mx-auto ">
@@ -92,23 +51,6 @@ const page = async ({
           <p className="~leading-[2.113rem]/[2.6rem] font-playFair ~text-h4a/h4 text-gray80 ~pb-[7.3rem]/[5rem]">
             Apply now. We’ll surely get back to you at the soonest.
           </p>
-
-          <div className="flex flex-wrap ~pt-0/[2rem] items-center gap-[0.75rem]">
-            <p className=" text-gray40  ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]">
-              Filter by:
-            </p>
-            <div className="flex flex-wrap gap-[.75rem]">
-              {filterDatas.map((items, i) => (
-                <CustomFilter
-                  searchParams={{ ...urlsearchParams }}
-                  filterKey={items.key}
-                  type={items.type}
-                  key={i}
-                  optionsArray={items.filter}
-                />
-              ))}
-            </div>
-          </div>
 
           <PositionsGrid data={response.jobs} />
 

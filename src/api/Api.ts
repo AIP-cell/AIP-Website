@@ -255,6 +255,15 @@ export const Api = {
       return null;
     }
   },
+  getCareersPage: async () => {
+    try {
+      const response = await axiosClient.get(`careers/page`);
+      return response.data;
+    } catch (error) {
+      console.log(error);
+      return null;
+    }
+  },
   getCareers: async () => {
     try {
       const response = await axiosClient.get(`careers`);

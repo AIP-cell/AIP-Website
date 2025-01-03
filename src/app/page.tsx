@@ -18,7 +18,7 @@ const getHomePageApi = async (): Promise<THomePageData> => {
 const page = async ({
   searchParams,
 }: {
-  searchParams: Promise<{ category: string }>;
+  searchParams: Promise<{ selected: string }>;
 }) => {
   const asyncSearchParams = await searchParams
   const response = await getHomePageApi();
@@ -39,7 +39,7 @@ const page = async ({
       <Members countData={countData} />
       <AipWay />
       <Founder teamData={teamData} />
-      <News newsData={newsData} searchParams={asyncSearchParams.category} />
+      <News newsData={newsData} searchParams={asyncSearchParams.selected} />
     </div>
   );
 };

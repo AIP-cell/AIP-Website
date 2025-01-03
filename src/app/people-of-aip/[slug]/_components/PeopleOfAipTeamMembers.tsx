@@ -206,15 +206,37 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
       />
       <div className="pt-[3rem] pb-[7rem] container mx-auto">
         <div className="flex flex-col  justify-center ~px-[1.25rem]/[20.9rem]">
-          <h2 className=" text-center ~text-h4/h2 ~leading-[2.6rem]/[3.3rem] text-textPurple font-playFairItalic">
-            Experts
-          </h2>
+          {urlSlug === "experts" && (
+            <h2 className=" text-center ~text-h4/h2 ~leading-[2.6rem]/[3.3rem] text-textPurple font-playFairItalic">
+              Experts
+            </h2>
+          )}
+          {urlSlug === "founder" && (
+            <h2 className=" text-center ~text-h4/h2 ~leading-[2.6rem]/[3.3rem] text-textPurple font-playFairItalic">
+              Founders
+            </h2>
+          )}
+          {urlSlug === "teamAIP" && (
+            <h2 className=" text-center ~text-h4/h2 text-gray80 ~leading-[2.6rem]/[3.3rem] font-playFair">
+              Team{" "}
+              <span className="text-textPurple font-playFairItalic">AIP</span>
+            </h2>
+          )}
+          {urlSlug === "advisoryBoard" && (
+            <h2 className=" text-center ~text-h4/h2 text-gray80 ~leading-[2.6rem]/[3.3rem] font-playFair">
+              Advisory{" "}
+              <span className="text-textPurple font-playFairItalic">Board</span>
+            </h2>
+          )}
           <p className="~pt-[2rem]/[1.25rem]  text-midGray text-center ~text-h9Copy5/h9Copy4 !leading-[1.225rem]/[1.4rem] max-[21rem]:px-[0.5rem]">
-            Experts in the philanthropic sector are dedicated professionals who
-            possess a deep understanding of social impact, community needs, and
-            strategic giving. They leverage their expertise in areas like
-            fundraising, program development, and resource allocation to drive
-            meaningful change in underserved communities.
+            {urlSlug === "experts" &&
+              "Experts in the philanthropic sector are dedicated professionals who possess a deep understanding of social impact, community needs, and strategic giving. They leverage their expertise in areas like fundraising, program development, and resource allocation to drive meaningful change in underserved communities."}
+            {urlSlug === "founder" &&
+              "Experts in the philanthropic sector are dedicated professionals who possess a deep understanding of social impact, community needs, and strategic giving. They leverage their expertise in areas like fundraising, program development, and resource allocation to drive meaningful change in underserved communities."}
+            {urlSlug === "teamAIP" &&
+              "It takes a village to raise a child. It takes a team to build an organisation that works toward a common aim: to inform, influence and inspire philanthropists and stakeholders, fostering a deeper understanding of how strategic philanthropy can address pressing social challenges."}
+            {urlSlug === "advisoryBoard" &&
+              "It takes a village to raise a child. It takes a team to build an organisation that works toward a common aim: to inform, influence and inspire philanthropists and stakeholders, fostering a deeper understanding of how strategic philanthropy can address pressing social challenges."}
           </p>
         </div>
         {teamMembers.map((items, i) => {

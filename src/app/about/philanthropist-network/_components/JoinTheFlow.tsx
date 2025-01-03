@@ -39,7 +39,7 @@ const JoinTheFlow = () => {
           </p>
           <ButtonAnimation className=" ~mt-[2rem]/[2.5rem] text-white hover:text-darkPurple bg-darkPurple hover:bg-white rounded-full  py-[0.75rem] px-[1.75rem]">
             <Link
-              href=""
+              href="/contact"
               className=" flex items-center text-h9Copy5 gap-[0.5rem]"
             >
               <p className="">Contact Us</p>

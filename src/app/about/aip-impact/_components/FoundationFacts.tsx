@@ -16,7 +16,7 @@ const FoundationFacts = ({ button, foundationFacts }: Props) => {
       <Image
         src={Bg}
         alt=""
-        className="block h-[95rem] object-cover md:object-none absolute ~top-[-22rem]/[-15rem] w-[500rem]"
+        className="block h-[95rem] object-cover  absolute ~top-[-22rem]/[-12rem] w-[500rem]"
       />
       <div className="relative container mx-auto ">
         <h2 className=" ~text-h4/h2 text-center font-playFair ~leading-[2.6rem]/[3.3rem]">

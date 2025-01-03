@@ -58,7 +58,7 @@ const NetworkContactSection = () => {
       <div className="~pt-[2rem]/[3rem]">
         <ButtonAnimation className="text-white hover:text-darkPurple bg-darkPurple hover:bg-white rounded-full  py-[0.75rem] px-[1.75rem]">
           <Link
-            href=""
+            href="/contact"
             className=" flex items-center text-h9Copy5 leading-[1.225rem] gap-[0.5rem]"
           >
             <p className="">Contact Us</p>

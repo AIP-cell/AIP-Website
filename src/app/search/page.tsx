@@ -101,6 +101,11 @@ const page = async ({
               ))}
             </div>
           </div>
+          {key && (
+            <p className="text-gray40 font-playFair text-center py-[1rem]">
+              &quot;Search result for {key}&quot;
+            </p>
+          )}
           <AllTabContent searchData={response} />
         </div>
       </div>

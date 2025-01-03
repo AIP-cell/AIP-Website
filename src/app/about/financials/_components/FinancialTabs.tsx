@@ -46,7 +46,11 @@ const FinancialTabs = ({ filterDataByYear, urlSearchParams }: Props) => {
   return (
     <>
       <FinancialSm />
-      <TabGroup selectedIndex={selectedIndex} onChange={setSelectedIndex} className="hidden md:flex flex-col justify-center items-center">
+      <TabGroup
+        selectedIndex={selectedIndex}
+        onChange={setSelectedIndex}
+        className="hidden md:flex flex-col justify-center items-center"
+      >
         <TabListAndRespSelect
           selectedIndex={selectedIndex}
           setSelectedIndex={setSelectedIndex}
@@ -58,7 +62,7 @@ const FinancialTabs = ({ filterDataByYear, urlSearchParams }: Props) => {
           <div className="flex flex-col gap-[3rem] px-[14.375rem] pb-[7.5rem]">
             <p className="text-center font-playFair text-h2 leading-[2.6rem] tracking-[-0.02rem] text-gray80">
               {/* FY {filterDataByYear?.year} */}
-              FY {urlSearchParams}
+              FY {urlSearchParams ? urlSearchParams : "2019"}
             </p>
             <div>
               {filterDataByYear?.financialReports.map((data, index) => (
@@ -67,7 +71,11 @@ const FinancialTabs = ({ filterDataByYear, urlSearchParams }: Props) => {
                   className="flex justify-between text-textPurple py-[2.063rem] w-full px-[1.25rem] border-b-2 border-footerGray "
                 >
                   <p className="leading-[1.4rem] text-gray80">{data.name}</p>
-                  <DownloadFileSvg className="size-[2rem]" />
+                  <a href={data.report} download>
+                    <ButtonAnimation className="">
+                      <DownloadFileSvg className="size-[2rem]" />
+                    </ButtonAnimation>
+                  </a>
                 </div>
               ))}
             </div>

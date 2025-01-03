@@ -4,8 +4,12 @@ import usersBg from "@public/svg/careers/users.svg";
 import PeachCurve from "@public/svg/careers/peachCurveRight.svg";
 import Link from "next/link";
 import Image from "next/image";
-
-const OpenRules = () => {
+import { TJob } from "@/api/type";
+import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
+type Props = {
+  jobs: TJob[];
+};
+const OpenRules = ({ jobs }: Props) => {
   return (
     <div className="w-full relative">
       <Image
@@ -29,17 +33,16 @@ const OpenRules = () => {
               strategic philanthropy impact India’s transformation.
             </p>
           </div>
-          <PositionsGrid data={[]} />
+          <PositionsGrid data={jobs} />
         </div>
         <div className="pt-[2rem]">
-          <Link
-            className="bg-darkPurple px-7 py-3 flex gap-2 w-fit rounded-3xl"
-            href="/careers/all-positions"
-          >
-            <p className=" font-inter text-white text-h9Copy5 leading-[1.225rem]">
-              See all open positions
-            </p>
-            <Image src={usersBg} alt="arrow down" />
+          <Link className="" href="/careers/all-positions">
+            <ButtonAnimation className=" px-7 py-3 flex gap-2 bg-darkPurple w-fit rounded-3xl">
+              <p className=" font-inter text-white text-h9Copy5 leading-[1.225rem]">
+                See all open positions
+              </p>
+              <Image src={usersBg} alt="arrow down" />
+            </ButtonAnimation>
           </Link>
         </div>
         <div className=" ~px-0/[6.563rem] ~pt-[2.5rem]/20  ">

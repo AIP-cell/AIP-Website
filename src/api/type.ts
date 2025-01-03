@@ -284,7 +284,7 @@ export type TSelectedWorks = {
 // Start Experts
 export type TOurWorkExpertsData = {
   experts: TExperts[];
-  selectedWorks:TSelectedWorks[]
+  selectedWorks: TSelectedWorks[];
 };
 export type TExperts = {
   _id: string;
@@ -450,9 +450,25 @@ export type TSearch = {
   answer: string;
   year: string;
   report: string;
-  galleryImage:TGalleryImages[]
-  video:string;
+  galleryImage: TGalleryImages[];
+  video: string;
   name: string;
   slug: string;
 };
 // End Search
+export type TJob = {
+  id: number;
+  organization: number;
+  hash: string;
+  position_name: string;
+  description: string;
+  headcount: number;
+  contract_details: string;
+  career_page_url: string;
+  address: string;
+  is_pinned_in_career_page: boolean;
+  is_remote: null;
+  salary_max: null;
+  salary_min: null;
+  status: string;
+};

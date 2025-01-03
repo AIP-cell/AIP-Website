@@ -15,11 +15,10 @@ const newsTabArray = [
 ];
 type Props = {
   newsData: THomePageNews;
-  searchParams:string;
+  searchParams: string;
 };
-const TabNews = ({ newsData,searchParams }: Props) => {
+const TabNews = ({ newsData, searchParams }: Props) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
-
   return (
     <div className="  ">
       <TabGroup
@@ -36,22 +35,24 @@ const TabNews = ({ newsData,searchParams }: Props) => {
           />
         </div>
         <TabPanels className="~px-[1.25rem]/0">
-          {newsTabArray.map((items, i) => (
-            <TabPanel key={i}>
-              {items.key == "inTheMedia" && (
-                <CarouselNews newsArray={newsData.inTheMedia} />
-              )}
-              {items.key == "partner" && (
-                <CarouselNews newsArray={newsData.partner} />
-              )}
-              {items.key == "worldOfPhilanthropy" && (
-                <CarouselNews newsArray={newsData.worldOfPhilanthropy} />
-              )}
-              {items.key == "aipUpdates" && (
-                <CarouselNews newsArray={newsData.aipUpdates} />
-              )}
-            </TabPanel>
-          ))}
+          {newsTabArray.map((items, i) => {
+            return (
+              <TabPanel key={i}>
+                {items.tab == "In the Media" && (
+                  <CarouselNews newsArray={newsData.inTheMedia} />
+                )}
+                {items.tab == "From Partners" && (
+                  <CarouselNews newsArray={newsData.partner} />
+                )}
+                {items.tab == "World of Philanthropy" && (
+                  <CarouselNews newsArray={newsData.worldOfPhilanthropy} />
+                )}
+                {items.tab == "About AIP" && (
+                  <CarouselNews newsArray={newsData.aipUpdates} />
+                )}
+              </TabPanel>
+            );
+          })}
         </TabPanels>
       </TabGroup>
     </div>

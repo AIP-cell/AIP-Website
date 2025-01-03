@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 import { ButtonAnimation } from "../animations/ButtonAnimation";
 import { StorageUrl } from "@/utils/BaseUrl";
+import Link from "next/link";
 type Props = {
   title: string;
   desc: string;
@@ -11,6 +12,9 @@ type Props = {
   foundationName?: string;
   foundationNameClassName?: string;
   initiativeName?: string;
+  isLinkOrPdf?: string;
+  file?: string;
+  fileLink?: string;
 };
 const CaseStudy = ({
   title,
@@ -20,9 +24,14 @@ const CaseStudy = ({
   foundationName,
   foundationNameClassName,
   initiativeName,
+  isLinkOrPdf,
+  file,
+  fileLink,
 }: Props) => {
+  const link = isLinkOrPdf === "pdf" ? file : fileLink;
+  const toDownload = isLinkOrPdf === "pdf" ? true : false;
   return (
-    <div className="relative grid grid-cols-1 lg:grid-cols-2 ~gap-[1rem]/[7.81rem]">
+    <div className="relative z-[100] grid grid-cols-1 lg:grid-cols-2 ~gap-[1rem]/[7.81rem]">
       <div
         className={cn(
           " col-span-1 flex justify-center  overflow-hidden lg:order-1",
@@ -61,13 +70,17 @@ const CaseStudy = ({
         <p className="text-midGray ~pt-[1rem]/[1.25rem] ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]">
           {desc}
         </p>
-        <div className="~pt-[2rem]/[2.5rem]">
+        <a
+          href={link ?? ""}
+          download={toDownload}
+          className="~pt-[2rem]/[2.5rem]"
+        >
           <ButtonAnimation className=" rounded-full  border-2 border-darkPurple hover:bg-darkPurple ">
             <h3 className="text-darkPurple hover:text-white font-medium text-h9Copy5 leading-[1.225rem] py-[0.75rem] px-[1.75rem]">
               Read More
             </h3>
           </ButtonAnimation>
-        </div>
+        </a>
       </div>
     </div>
   );

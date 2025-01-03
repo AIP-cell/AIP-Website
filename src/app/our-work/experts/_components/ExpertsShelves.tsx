@@ -38,7 +38,7 @@ const ExpertsShelves = ({ expertShelves }: Props) => {
       <div className="  grid md:grid-cols-2 lg:grid-cols-3 ~gap-[2.5rem]/[4.5rem] ~px-[1.25rem]/[8.125rem]">
         {expertShelves.map((item, i) => (
           <ResourceCard
-            link=""
+            link={item.slug}
             key={i}
             src={item.image}
             title={item.title}

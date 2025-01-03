@@ -12,10 +12,12 @@ import PCardWithPlaySign from "@/components/cards/pCards/PCardWithPlaySign";
 import RightSlickArrowSvg from "@/components/svg/RightSlickArrowSvg";
 import LeftSlickArrowSvg from "@/components/svg/LeftSlickArrowSvg";
 import cn from "@/utils/tailwind";
+import { motion } from "framer-motion";
 import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 import { useMediaQuery } from "react-responsive";
 import useClient from "@/hooks/useClient";
 import { THomePageTeam } from "@/api/type";
+import { AnimatePresence } from "framer-motion";
 const founderData = [
   {
     image: "/images/aSample.png",
@@ -107,10 +109,27 @@ const Founder = ({ teamData }: Props) => {
                   </div>
                 </div>
                 <div className="block lg:hidden relative pt-[3.43rem]">
-                  <>
-                    <div
+                  <AnimatePresence>
+                    <motion.div
+                      key={0}
+                      variants={{
+                        initial: { opacity: 0, x: 100 },
+                        visible: { opacity: 1, x: 0 },
+                        exit: {
+                          opacity: 0,
+                          x: -100,
+                          // transition: {
+                          //   duration: 1.2,
+                          //   ease: "easeInOut",
+                          // },
+                        },
+                      }}
+                      initial="initial"
+                      animate="visible"
+                      exit="exit"
+                      transition={{ ease: "easeInOut", duration: 0.5 }}
                       className={cn("flex justify-center items-center", {
-                        hidden: select % 2 === 1,
+                        'hidden': select % 2 === 1,
                       })}
                     >
                       <ACardWithPlaySign
@@ -120,8 +139,9 @@ const Founder = ({ teamData }: Props) => {
                         post={teamData.at(select)!.designation}
                         name={teamData.at(select)!.name}
                       />
-                    </div>
-                    <div
+                    </motion.div>
+                    <motion.div
+                      key={1}
                       className={cn("flex justify-center items-center", {
                         hidden: select % 2 === 0,
                       })}
@@ -133,8 +153,8 @@ const Founder = ({ teamData }: Props) => {
                         post={teamData.at(select)!.designation}
                         name={teamData.at(select)!.name}
                       />
-                    </div>
-                  </>
+                    </motion.div>
+                  </AnimatePresence>
                 </div>
                 <div className="md:hidden flex justify-center w-full  pt-[2.5rem]">
                   <div className=" w-[4.5rem] flex gap-[0.5rem] ">
@@ -160,10 +180,10 @@ const Founder = ({ teamData }: Props) => {
                     return (
                       <>
                         <div className="flex gap-[4.56rem]">
-                          {arrayWithFirstTwo.map((items, i) =>
-                            i == 0 ? (
+                          {arrayWithFirstTwo.map((items, index) =>
+                            index == 0 ? (
                               <ACardWithPlaySign
-                                key={i}
+                                key={index}
                                 linkedin
                                 image={items.image}
                                 desc={items.description}
@@ -171,9 +191,9 @@ const Founder = ({ teamData }: Props) => {
                                 name={items.name}
                               />
                             ) : (
-                              i === 1 && (
+                              index === 1 && (
                                 <PCardWithPlaySign
-                                  key={i}
+                                  key={index}
                                   linkedin
                                   image={items.image}
                                   desc={items.description}

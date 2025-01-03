@@ -21,8 +21,8 @@ const page = async ({
   const reports = response;
   const currentYear = urlSearchParams.selected
     ? urlSearchParams.selected
-    : "2019";
-  const filterDataByYear = reports.find((year) => year.year === "2019");
+    : "2024";
+  const filterDataByYear = reports.find((year) => year.year === currentYear);
   return (
     <div className="pt-[5rem]">
       <div className="w-full relative">
@@ -43,7 +43,10 @@ const page = async ({
               <p className=" text-gray80">Financial Reports & Certificates</p>
             </div>
           </div>
-          <FinancialTabs filterDataByYear={filterDataByYear} urlSearchParams={urlSearchParams.selected}/>
+          <FinancialTabs
+            filterDataByYear={filterDataByYear}
+            urlSearchParams={urlSearchParams.selected}
+          />
         </div>
       </div>
     </div>
