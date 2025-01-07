@@ -1,10 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import EyeSvg from "../svg/EyeSvg";
-import DownloadFileSvg from "../svg/DowloadFileSvg";
 import dayjs from "dayjs";
 import { StorageUrl } from "@/utils/BaseUrl";
-import Link from "next/link";
 type Props = {
   src: string;
   title: string;
@@ -12,7 +9,13 @@ type Props = {
   category?: string;
   name?: string;
   date?: string;
-  link?: string;
+  domain?: string;
+  isLinkOrPdf?: string;
+  file?: string;
+  fileLink?: string;
+  slug?: string;
+  projectsAndProgram?: Boolean;
+  collaboration?: Boolean;
 };
 const ResourceCard = ({
   src,
@@ -21,9 +24,28 @@ const ResourceCard = ({
   category,
   name,
   date,
-  link,
+  file,
+  fileLink,
+  domain,
+  isLinkOrPdf,
+  projectsAndProgram,
+  collaboration,
+  slug,
 }: Props) => {
+  let link;
+  if (category === "experts") {
+    link = `/resource-center/curated-resources/experts/${slug}`;
+  } else if (projectsAndProgram) {
+    link = `/our-work/projects-and-programs/${slug}`;
+  } else if (collaboration) {
+    link = `/our-work/collaborations/${slug}`;
+  } else {
+    link = isLinkOrPdf === "pdf" ? file : fileLink;
+  }
+  // const link = isLinkOrPdf === "pdf" ? file : fileLink;
+  const toDownload = isLinkOrPdf === "pdf" ? true : false;
   const dateFormat = dayjs(date).format("D MMMM");
+
   return (
     // justify-center
     <div className="flex flex-col  items-center ~gap-[1.25rem]/[0.75rem]">
@@ -36,11 +58,13 @@ const ResourceCard = ({
         />
       </div>
       <div className="flex flex-col w-full gap-[0.75rem]">
-        <Link href={`${link}`} 
+        <a
+          href={link}
+          download={toDownload}
           className=" w-full text-h6M text-gray80 font-inter font-semibold leading-[1.575rem] underline underline-offset-4 decoration-[1.5px]"
         >
           {title}
-        </Link>
+        </a>
         {name && (
           <p className=" w-full text-gray40 font-playFairItalic font-medium ~leading-[1.4rem]/[1.575rem] ">
             {name}
@@ -53,7 +77,7 @@ const ResourceCard = ({
       <div className="h-px bg-footerGray w-full"></div>
       <div className="flex justify-between w-full text-h9Copy5 text-gray50 font-inter leading-[1.225rem]">
         <p>{dateFormat}</p>
-        <p>{category}</p>
+        <p>{domain}</p>
       </div>
       {/* <div className="h-px bg-footerGray w-full"></div>
       <div className="flex justify-start w-full gap-[.75rem]">

@@ -129,6 +129,10 @@ export type TAipResourcesCategory = {
   image: string;
   slug: string;
   link: string;
+  isLinkOrPdf:string;
+  fileLink:string;
+  file:string;
+  category:string;
 };
 export type TCuratedResourcesExpertsInner = {
   curatedResource: TCuratedResourcesInner;

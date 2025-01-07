@@ -130,11 +130,21 @@ const AipResourceTabs = ({ tabData, category, asyncParam }: Props) => {
             <div className="pt-[3.25rem] pb-[7.5rem] grid md:grid-cols-2 lg:grid-cols-3 gap-[4.5rem]">
               {tabData.map((item, i) => (
                 <ResourceCard
+                  // key={i}
+                  // src={item.image}
+                  // title={item.title}
+                  // desc={item.description}
+                  // category={item.domain}
+                  slug={item.slug}
+                  isLinkOrPdf={item.isLinkOrPdf}
+                  file={item.file}
+                  fileLink={item.fileLink}
                   key={i}
                   src={item.image}
                   title={item.title}
                   desc={item.description}
-                  category={item.domain}
+                  domain={item.domain}
+                  category={item.category}
                 />
               ))}
             </div>

@@ -5,29 +5,6 @@ import CurvePurple from "@public/svg/purpleCurveCaseStudy.svg";
 import CurveBg from "@public/svg/about/aip-impact/caseStudyPeachCurve.svg";
 import { TCaseStudies } from "@/api/type";
 
-const caseStudyData = [
-  {
-    title: "Grant Making",
-    foundationName: "Foundation Name",
-    // initiativeName:"Initiative Name",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec lacus vitae urna tincidunt aliquet. Nullam scelerisque urna ut lacus accumsan, ac porttitor nisi tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum imperdiet, velit id euismod vehicula, nulla elit malesuada libero, in posuere est justo id lorem. Aliquam erat volutpat. Sed pharetra augue ut felis fermentum, nec aliquam risus tincidunt. Donec bibendum sapien eget mauris lacinia, ut pellentesque justo luctus. Duis vehicula odio in risus sagittis, sit amet viverra mauris facilisis.",
-    image: "/images/case-studies/caseStudy1.png",
-  },
-  {
-    title: "Grant Making",
-    foundationName: "Foundation Name",
-    // initiativeName:"Initiative Name",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec lacus vitae urna tincidunt aliquet. Nullam scelerisque urna ut lacus accumsan, ac porttitor nisi tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum imperdiet, velit id euismod vehicula, nulla elit malesuada libero, in posuere est justo id lorem. Aliquam erat volutpat. Sed pharetra augue ut felis fermentum, nec aliquam risus tincidunt. Donec bibendum sapien eget mauris lacinia, ut pellentesque justo luctus. Duis vehicula odio in risus sagittis, sit amet viverra mauris facilisis.",
-    image: "/images/case-studies/caseStudy1.png",
-  },
-  {
-    title: "Grant Making",
-    foundationName: "Foundation Name",
-    // initiativeName:"Initiative Name",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec lacus vitae urna tincidunt aliquet. Nullam scelerisque urna ut lacus accumsan, ac porttitor nisi tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum imperdiet, velit id euismod vehicula, nulla elit malesuada libero, in posuere est justo id lorem. Aliquam erat volutpat. Sed pharetra augue ut felis fermentum, nec aliquam risus tincidunt. Donec bibendum sapien eget mauris lacinia, ut pellentesque justo luctus. Duis vehicula odio in risus sagittis, sit amet viverra mauris facilisis.",
-    image: "/images/case-studies/caseStudy1.png",
-  },
-];
 type Props = {
   casestudies: TCaseStudies[];
 };

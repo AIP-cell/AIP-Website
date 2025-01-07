@@ -355,16 +355,21 @@ const CuratedResourcesInnerPage = async ({
         <div className="pt-[3.25rem] pb-[7.5rem] grid md:grid-cols-2 lg:grid-cols-3 gap-[4.5rem]">
           {response.map((item, i) => (
             <ResourceCard
-              link={
-                param.slug === "experts"
-                  ? `/resource-center/curated-resources/experts/${item.slug}`
-                  : item.link
-              }
+              // link={
+              //   param.slug === "experts"
+              //     ? `/resource-center/curated-resources/experts/${item.slug}`
+              //     : item.link
+              // }
+              slug={item.slug}
+              isLinkOrPdf={item.isLinkOrPdf}
+              file={item.file}
+              fileLink={item.fileLink}
               key={i}
               src={item.image}
               title={item.title}
               desc={item.description}
-              category={item.domain}
+              domain={item.domain}
+              category={item.category}
             />
           ))}
         </div>

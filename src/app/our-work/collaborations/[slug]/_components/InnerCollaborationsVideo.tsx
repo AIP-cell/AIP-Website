@@ -1,13 +1,11 @@
 import React from "react";
-import BgVideo from "@public/images/sampleVideo.png";
 import videoPlaySvg from "@public/svg/playButtonPurple.svg";
-import rightBottomCurve from "@public/svg/products-and-services/offerings/peachLeftBottomCurve.svg";
 import LeftCurve from "@public/svg/products-and-services/collaborations/leftPeachCurve.svg";
 
 import Image from "next/image";
 import { StorageUrl } from "@/utils/BaseUrl";
 type Props = {
-  video: string;
+  video?: string;
   linkOrVideo?: string;
 };
 const InnerCollaborationsVideo = ({ video, linkOrVideo }: Props) => {
@@ -43,11 +41,6 @@ const InnerCollaborationsVideo = ({ video, linkOrVideo }: Props) => {
             />
           </div>
         )}
-        {/* <Image
-            src={BgVideo}
-            alt="video-bg"
-            className="object-cover absolute inset-0 rounded-lg h-full z-20"
-          /> */}
       </div>
     </div>
   );

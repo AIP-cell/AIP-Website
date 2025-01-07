@@ -1,11 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import ArrowDownSvg from "@public/svg/arrowDown.svg";
-import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
-import ResourceCard from "../../../components/cards/ResourceCard";
-import Image from "next/image";
-import CustomSelect from "@/components/custom/CustomSelect";
+
+import { Tab, TabList } from "@headlessui/react";
+
 import {
   Listbox,
   ListboxButton,
@@ -16,8 +14,6 @@ import DownTagSvg from "@/components/svg/DownTagSvg";
 import { useRouter, useSearchParams } from "next/navigation";
 import { generatingSearchParam } from "@/utils/UrlHelper";
 
-const fieldsArray = ["Fields/Sector", "Fields/Sector"];
-const dateArray = ["Date", "Date"];
 
 type Props = {
   tabArray: any;
