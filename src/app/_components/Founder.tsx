@@ -129,10 +129,11 @@ const Founder = ({ teamData }: Props) => {
                       exit="exit"
                       transition={{ ease: "easeInOut", duration: 0.5 }}
                       className={cn("flex justify-center items-center", {
-                        'hidden': select % 2 === 1,
+                        hidden: select % 2 === 1,
                       })}
                     >
                       <ACardWithPlaySign
+                        linkOrVideo={teamData.at(select)!.linkOrVideo}
                         linkedin={true}
                         image={teamData.at(select)!.image}
                         desc={teamData.at(select)!.description}
@@ -183,6 +184,7 @@ const Founder = ({ teamData }: Props) => {
                           {arrayWithFirstTwo.map((items, index) =>
                             index == 0 ? (
                               <ACardWithPlaySign
+                                linkOrVideo={items.linkOrVideo}
                                 key={index}
                                 linkedin
                                 image={items.image}
@@ -209,6 +211,7 @@ const Founder = ({ teamData }: Props) => {
                           {arrayWithNextTwo.map((items, i) =>
                             i === 0 ? (
                               <ACardWithPlaySign
+                                linkOrVideo={items.linkOrVideo}
                                 key={i}
                                 linkedin
                                 image={items.image}

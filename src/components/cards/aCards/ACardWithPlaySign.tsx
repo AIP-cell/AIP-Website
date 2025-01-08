@@ -11,11 +11,24 @@ type Props = {
   name: string;
   post: string;
   desc: string;
+  linkOrVideo: string;
+  videoLink?: string;
+  video?: string;
   linkedin?: boolean;
 };
 // "  "
-const ACardWithPlaySign = ({ image, name, post, desc, linkedin }: Props) => {
+const ACardWithPlaySign = ({
+  image,
+  name,
+  post,
+  desc,
+  linkedin,
+  linkOrVideo,
+  video,
+  videoLink,
+}: Props) => {
   const [isOpen, setIsOpen] = useState(false);
+  const isVideo = linkOrVideo === "Video";
   return (
     <>
       <div className="w-[18.43rem] relative ">
@@ -46,7 +59,7 @@ const ACardWithPlaySign = ({ image, name, post, desc, linkedin }: Props) => {
           </div>
         </div>
       </div>
-      <CustomModal isOpen={isOpen} setIsOpen={setIsOpen} />
+      <CustomModal isOpen={isOpen} setIsOpen={setIsOpen} linkOrVideo={linkOrVideo} video={video} videoLink={videoLink}/>
     </>
   );
 };

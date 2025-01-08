@@ -8,12 +8,14 @@ type Props = {
   isOpen: boolean;
   setIsOpen: (value: boolean) => void;
   video?: string;
+  videoLink?: string;
   linkOrVideo?: string;
 };
 export default function CustomModal({
   isOpen,
   setIsOpen,
   video,
+  videoLink,
   linkOrVideo,
 }: Props) {
   return (
@@ -45,9 +47,16 @@ export default function CustomModal({
                   </div>
                 ) : (
                   <div className="~w-[18rem]/[64.375rem] relative flex justify-center items-center ~h-[12.313rem]/[25.313rem] overflow-hidden rounded-lg">
-                    <video className="z-10 border-2 absolute inset-0 w-full h-full ">
+                    <iframe
+                      //   loading="lazy"
+                      className="z-10 border-2 absolute inset-0 w-full h-full"
+                      src={videoLink}
+                        // width="640"
+                        // height="480"
+                    />
+                    {/* <video className="z-10 border-2 absolute inset-0 w-full h-full ">
                       <source src={StorageUrl + video} type="video/mp4" />
-                    </video>
+                    </video> */}
                     <Image
                       src={videoPlaySvg}
                       alt="play-svg"

@@ -73,7 +73,11 @@ const AllTabContent = ({ searchData }: Props) => {
       <div className="flex flex-col ">
         {searchData.map(
           (content, i) =>
-            content && (
+            (content.title ||
+              content.image ||
+              content?.video ||
+              content.description ||
+              content.galleryImage ) && (
               <div
                 key={i}
                 className={cn("border-b-2 border-[#DFE0E5]", {

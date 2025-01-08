@@ -19,6 +19,9 @@ export type THomePageTeam = {
   description: string;
   linkedln: string;
   image: string;
+  linkOrVideo:string
+  video:string
+  videoLink:string
 };
 export type THomePageCount = {
   _id: string;
@@ -458,6 +461,7 @@ export type TSearch = {
   video: string;
   name: string;
   slug: string;
+  key:string
 };
 // End Search
 export type TJob = {
