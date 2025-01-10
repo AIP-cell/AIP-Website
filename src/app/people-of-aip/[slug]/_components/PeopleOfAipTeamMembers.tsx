@@ -241,7 +241,6 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
         </div>
         {teamMembers.map((items, i) => {
           const position = i % 12;
-          const isCenteredRow = position >= 8 && position <= 11;
           if (
             position === 0 ||
             position === 2 ||
@@ -259,7 +258,7 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
                   <div className="flex ~gap-[1.25rem]/[5.6rem] ">
                     <ATeamCard
                       link={`/people-of-aip/${urlSlug}/${items.slug}`}
-                      image={"/images/sample"}
+                      image={items.image}
                       title={items.name}
                       desc={items.designation}
                       linkedin={true}
@@ -269,7 +268,7 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
                         link={`/people-of-aip/${urlSlug}/${
                           teamMembers[i + 1].slug
                         }`}
-                        image={"/images/sample"}
+                        image={teamMembers[i + 1].image}
                         title={teamMembers[i + 1].name}
                         desc={teamMembers[i + 1].designation}
                         linkedin={true}
@@ -281,14 +280,14 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
                   <div className="pt-[4rem] flex ~gap-[1.25rem]/[5.6rem] ">
                     <ATeamCard
                       link={`/people-of-aip/${urlSlug}/${items.slug}`}
-                      image={"/images/sample"}
+                      image={items.image}
                       title={items.name}
                       desc={items.designation}
                       linkedin={true}
                     />
                     {teamMembers[i + 1] && (
                       <PTeamCard
-                        image={"/images/sample"}
+                        image={teamMembers[i + 1].image}
                         link={`/people-of-aip/${urlSlug}/${
                           teamMembers[i + 1].slug
                         }`}
@@ -302,7 +301,7 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
                 {position === 4 && (
                   <div className="justify-center pt-[4rem] flex flex-wrap ~gap-[1.25rem]/[5.6rem]">
                     <ATeamCard
-                      image={"/images/sample"}
+                      image={items.image}
                       link={`/people-of-aip/${urlSlug}/${items.slug}`}
                       title={items.name}
                       desc={items.designation}
@@ -310,7 +309,7 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
                     />
                     {teamMembers[i + 1] && (
                       <PTeamCard
-                        image={"/images/sample"}
+                        image={teamMembers[i + 1].image}
                         link={`/people-of-aip/${urlSlug}/${
                           teamMembers[i + 1].slug
                         }`}
@@ -321,7 +320,7 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
                     )}
                     {teamMembers[i + 2] && (
                       <ATeamCard
-                        image={"/images/sample"}
+                        image={teamMembers[i + 2].image}
                         link={`/people-of-aip/${urlSlug}/${
                           teamMembers[i + 2].slug
                         }`}
@@ -332,7 +331,7 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
                     )}
                     {teamMembers[i + 3] && (
                       <PTeamCard
-                        image={"/images/sample"}
+                        image={teamMembers[i + 3].image}
                         link={`/people-of-aip/${urlSlug}/${
                           teamMembers[i + 3].slug
                         }`}
@@ -346,7 +345,7 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
                 {position === 8 && (
                   <div className="pt-[4rem] flex justify-start md:justify-end ~gap-[1.25rem]/[5.6rem]  ">
                     <ATeamCard
-                      image={"/images/sample"}
+                      image={items.image}
                       link={`/people-of-aip/${urlSlug}/${items.slug}`}
                       title={items.name}
                       desc={items.designation}
@@ -354,7 +353,7 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
                     />
                     {teamMembers[i + 1] && (
                       <PTeamCard
-                        image={"/images/sample"}
+                        image={teamMembers[i + 1].image}
                         link={`/people-of-aip/${urlSlug}/${
                           teamMembers[i + 1].slug
                         }`}
@@ -368,7 +367,7 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
                 {position === 10 && (
                   <div className="pt-[4rem] flex justify-start md:justify-end ~gap-[1.25rem]/[5.6rem] ">
                     <ATeamCard
-                      image={"/images/sample"}
+                      image={items.image}
                       link={`/people-of-aip/${urlSlug}/${items.slug}`}
                       title={items.name}
                       desc={items.designation}
@@ -376,7 +375,7 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
                     />
                     {teamMembers[i + 1] && (
                       <PTeamCard
-                        image={"/images/sample"}
+                        image={items.image}
                         link={`/people-of-aip/${urlSlug}/${
                           teamMembers[i + 1].slug
                         }`}

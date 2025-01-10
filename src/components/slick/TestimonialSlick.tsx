@@ -52,7 +52,7 @@ const TestimonialSlick = ({ slickArray }: Props) => {
                       {actualIndex % 2 == 0 && (
                         <ACard
                           key={i}
-                          image="/images/sample.png"
+                          image={items.image}
                           name={items.name}
                           work={items.designation}
                           desc={items.description}
@@ -61,7 +61,7 @@ const TestimonialSlick = ({ slickArray }: Props) => {
                       {actualIndex % 2 == 1 && (
                         <PCard
                           key={i}
-                          image="/images/sample.png"
+                          image={items.image}
                           name={items.name}
                           work={items.designation}
                           desc={items.description}

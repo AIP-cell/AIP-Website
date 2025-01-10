@@ -1,29 +1,14 @@
 "use client";
 import React, { useState } from "react";
-import Download from "@public/svg/download.svg";
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
-import Image from "next/image";
 import DownloadFileSvg from "@/components/svg/DowloadFileSvg";
 import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 import FinancialSm from "./FinancialSm";
 import TabListAndRespSelect from "@/app/resource-center/_components/TabListAndRespSelect";
-import { TFinancialReports, TReports } from "@/api/type";
+import { TReports } from "@/api/type";
 import Link from "next/link";
+import { StorageUrl } from "@/utils/BaseUrl";
 
-const datas = [
-  {
-    title: "MGT-7 EXTRACT of ANNUAL RETURN, COMPANIES ACT 2013",
-  },
-  {
-    title: "NOTICE OF FIRST ANNUAL GENERAL BODY MEETING FY 2023-24",
-  },
-  {
-    title: "FINANCIAL STATEMENTS FY 2023-24",
-  },
-  {
-    title: "ANNUAL REPORT 2023-2024 ",
-  },
-];
 const yearsArray = [
   { tab: "2024-25" },
   { tab: "2023-24" },
@@ -43,13 +28,15 @@ type Props = {
 };
 const FinancialTabs = ({ filterDataByYear, urlSearchParams }: Props) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
+  console.log("selectedIndex::", selectedIndex);
+  console.log("filterDataByYear:::", filterDataByYear);
   return (
     <>
-      <FinancialSm />
+      {/* <FinancialSm /> */}
       <TabGroup
         selectedIndex={selectedIndex}
         onChange={setSelectedIndex}
-        className="hidden md:flex flex-col justify-center items-center"
+        className="flex flex-col justify-center items-center"
       >
         <TabListAndRespSelect
           selectedIndex={selectedIndex}
@@ -58,25 +45,29 @@ const FinancialTabs = ({ filterDataByYear, urlSearchParams }: Props) => {
           listClassName=""
           textClassName="!px-[1.394rem]"
         />
-        <div className=" w-full pt-[5rem]">
-          <div className="flex flex-col gap-[3rem] px-[14.375rem] pb-[7.5rem]">
-            <p className="text-center font-playFair text-h2 leading-[2.6rem] tracking-[-0.02rem] text-gray80">
+        <div className=" w-full ~pt-[2.5rem]/[5rem]">
+          <div className="flex flex-col gap-[3rem] ~px-[1.25rem]/[14.375rem] ~pb-[3.875rem]/[7.5rem]">
+            <p className="text-center font-playFair ~text-h4a/h2 ~leading-[2.113rem]/[2.6rem] tracking-[-0.02rem] text-gray80">
               {/* FY {filterDataByYear?.year} */}
-              FY {urlSearchParams ? urlSearchParams : "2019"}
+              FY {urlSearchParams ? urlSearchParams : "2024"}
             </p>
             <div>
               {filterDataByYear?.financialReports.map((data, index) => (
-                <div
+                <TabPanel
                   key={index}
                   className="flex justify-between text-textPurple py-[2.063rem] w-full px-[1.25rem] border-b-2 border-footerGray "
                 >
                   <p className="leading-[1.4rem] text-gray80">{data.name}</p>
-                  <a href={data.report} download>
+                  <Link
+                    href={StorageUrl + data.report}
+                    target="_blank"
+                    download
+                  >
                     <ButtonAnimation className="">
                       <DownloadFileSvg className="size-[2rem]" />
                     </ButtonAnimation>
-                  </a>
-                </div>
+                  </Link>
+                </TabPanel>
               ))}
             </div>
             <div className="flex w-full justify-end">

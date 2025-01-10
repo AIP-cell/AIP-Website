@@ -6,10 +6,10 @@ import Image from "next/image";
 import Link from "next/link";
 import PositionsGrid from "../_components/PositionsGrid";
 import BreadCrump from "@/components/bread-crump/BreadCrump";
-import CustomFilter from "@/components/custom/CustomFilter";
 import { Api } from "@/api/Api";
 import { TAllPositions } from "@/api/type";
 
+export const dynamic = "force-dynamic";
 const getCareersApi = async (page: string): Promise<TAllPositions> => {
   const response = await Api.getCareers(page);
   return response.data;

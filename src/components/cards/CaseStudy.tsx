@@ -70,8 +70,9 @@ const CaseStudy = ({
         <p className="text-midGray ~pt-[1rem]/[1.25rem] ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]">
           {desc}
         </p>
-        <a
-          href={link ?? ""}
+        <Link
+          href={StorageUrl + link}
+          target="_blank"
           download={toDownload}
           className="~pt-[2rem]/[2.5rem]"
         >
@@ -80,7 +81,7 @@ const CaseStudy = ({
               Read More
             </h3>
           </ButtonAnimation>
-        </a>
+        </Link>
       </div>
     </div>
   );

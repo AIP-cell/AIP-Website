@@ -245,6 +245,7 @@ export type TTeamMembers = {
   description: string;
   slug: string;
   linkOrVideo: string;
+  image:string
   videoLink: string;
 };
 

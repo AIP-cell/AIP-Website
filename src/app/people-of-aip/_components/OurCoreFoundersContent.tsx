@@ -62,7 +62,7 @@ const OurCoreFoundersContent = ({ coreFounderMembers }: Props) => {
                   name={item.name}
                   desc={item.description}
                   work={item.designation}
-                  image="/images/sample.png"
+                  image={item.image}
                 />
 
                 {coreFounderMembers[i + 1] && (
@@ -75,7 +75,7 @@ const OurCoreFoundersContent = ({ coreFounderMembers }: Props) => {
                     name={coreFounderMembers[i + 1].name}
                     desc={coreFounderMembers[i + 1].description}
                     work={coreFounderMembers[i + 1].designation}
-                    image="/images/sample.png"
+                    image={coreFounderMembers[i + 1].image}
                   />
                 )}
               </div>

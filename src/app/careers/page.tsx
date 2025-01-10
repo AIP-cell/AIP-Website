@@ -7,6 +7,7 @@ import TestimonialSlick from "@/components/slick/TestimonialSlick";
 import bottomSvg from "@public/svg/careers/bottomPurpleVert.svg";
 import { Api } from "@/api/Api";
 
+export const dynamic = "force-dynamic";
 const getCareersPageApi = async (): Promise<any> => {
   const response = await Api.getCareersPage();
   return response.data;

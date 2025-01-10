@@ -45,6 +45,7 @@ const agendaArray = [
     desc: "By Ashish Dhawan, Founder-CEO,The Convergence Foundation; Core Founder, AIP",
   },
 ];
+
 export const dynamic = "force-dynamic";
 const getCuratedResourcesExpertsInnerApi = async (
   slug: string
