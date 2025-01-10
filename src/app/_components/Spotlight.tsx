@@ -10,6 +10,7 @@ type Props = {
   eventData: THomePageEvent;
 };
 const Spotlight = ({ eventData }: Props) => {
+  // console.log("eventData:::",eventData)
   return (
     <div className="grid grid-cols-2  container mx-auto  ~gap-[2rem]/0 ~pt-[5rem]/[12.75rem] ~pl-[1.2rem]/[7.8rem] ~pr-[1.2rem]/[6.56rem]">
       <div className=" md:pr-[6rem] col-span-2 lg:col-span-1">

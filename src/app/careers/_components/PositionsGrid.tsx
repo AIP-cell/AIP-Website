@@ -6,30 +6,43 @@ import Link from "next/link";
 import LeftSlickArrowSvg from "@/components/svg/LeftSlickArrowSvg";
 import RightSlickArrowSvg from "@/components/svg/RightSlickArrowSvg";
 import { TJob } from "@/api/type";
+import { useRouter } from "next/navigation";
 
-const PositionsGrid = ({ data }: { data: TJob[] }) => {
+type Props = {
+  data: TJob[];
+  totalPages?: number;
+};
+const PositionsGrid = ({ data, totalPages }: Props) => {
   const parentDivRef = useRef<any>();
+  const router = useRouter();
   const [page, setPage] = useState(1);
   if (!data) {
     return;
   }
-  const itemPerPage = 6;
-  const totalPage = Math.ceil(data.length / itemPerPage);
+  const itemPerPage = 10;
 
   const nextPage = () => {
-    setPage((prev) => {
-      const newPage = prev + 1;
-      if (newPage > totalPage) return 1;
-      return newPage;
-    });
+    if (page > 1) {
+      setPage(page + 1);
+      router.push(`/careers/all-positions?page=${page}`);
+    }
+    // setPage((prev) => {
+    //   const newPage = prev + 1;
+    //   if (newPage > totalPage) return 1;
+    //   return newPage;
+    // });
   };
 
   const previousPage = () => {
-    setPage((prev) => {
-      const newPage = prev - 1;
-      if (newPage < 1) return totalPage;
-      return newPage;
-    });
+    if (page <= totalPages!) {
+      setPage(page - 1);
+      router.push(`/careers/all-positions?page=${page}`);
+    }
+    // setPage((prev) => {
+    //   const newPage = prev - 1;
+    //   if (newPage < 1) return totalPage;
+    //   return newPage;
+    // });
   };
 
   const handlePageClick = (pageNumber: number) => {
@@ -72,7 +85,7 @@ const PositionsGrid = ({ data }: { data: TJob[] }) => {
         ))}
       </div>
       {data.length > itemPerPage && (
-        <div className="flex justify-center pt-[8.5rem] md:block">
+        <div className="flex justify-center ~pt-[2.5rem]/[8.5rem] md:block">
           <div className="flex h-8 items-center justify-center rounded-full">
             <div className="flex h-[3.5rem] w-[3.5rem] items-center justify-center ">
               <button onClick={previousPage}>
@@ -81,7 +94,7 @@ const PositionsGrid = ({ data }: { data: TJob[] }) => {
             </div>
 
             <div className="text-global-font-mob-text2 flex  gap-[1rem]">
-              {Array.from({ length: totalPage }, (_, i) => (
+              {Array.from({ length: totalPages! }, (items: string, i) => (
                 <button
                   key={i}
                   onClick={() => handlePageClick(i + 1)}

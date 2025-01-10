@@ -1,18 +1,16 @@
 "use client";
 import { Radio, RadioGroup } from "@headlessui/react";
-import { CheckCircleIcon } from "@heroicons/react/24/solid";
-import { useState } from "react";
 
-const radioArray = [
-  "I'm a Philanthropist/Foundation",
-  "I'm a Researcher/Academia",
-  "I’m an NPO",
-  "I'm Curious",
-];
-
-export default function CustomRadio() {
-  const [selected, setSelected] = useState(radioArray[0]);
-
+type Props = {
+  selected: string;
+  setSelected: (value: string) => void;
+  radioArray: string[];
+};
+export default function CustomRadio({
+  selected,
+  setSelected,
+  radioArray,
+}: Props) {
   return (
     <div className="max-[23rem]:w-[18.5rem] ~w-[21.8rem]/[25.875rem] ">
       <RadioGroup

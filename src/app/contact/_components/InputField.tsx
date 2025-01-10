@@ -9,11 +9,7 @@ type Props = {
   label: string;
   placeholder: string;
   register?: UseFormRegisterReturn;
-  error?: FieldErrors<{
-    name: string;
-    email: string;
-    message: string;
-  }>;
+  error?: FieldError;
 };
 const InputField = ({ type, label, placeholder, register, error }: Props) => {
   return (
@@ -28,7 +24,7 @@ const InputField = ({ type, label, placeholder, register, error }: Props) => {
         className="w-full h-[3.25rem] font-inter p-5 border border-gray-300 rounded-md text-gray80"
       />
       {error && (
-        <p className="text-global-body-4 text-red-500">{`${error.message}`}</p>
+        <p className=" text-red-500 ">{`${error?.message}`}</p>
       )}
     </div>
   );

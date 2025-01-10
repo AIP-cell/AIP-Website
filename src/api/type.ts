@@ -480,3 +480,9 @@ export type TJob = {
   salary_min: null;
   status: string;
 };
+export type TAllPositions={
+  jobs:TJob[]
+  totalCount:number;
+  currentPage:number;
+  pageCount:number;
+}

@@ -264,9 +264,9 @@ export const Api = {
       return null;
     }
   },
-  getCareers: async () => {
+  getCareers: async (page: string) => {
     try {
-      const response = await axiosClient.get(`careers`);
+      const response = await axiosClient.get(`careers?page=${page}`);
       return response.data;
     } catch (error) {
       console.log(error);
