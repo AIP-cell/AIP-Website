@@ -18,11 +18,9 @@ const page = async ({
 }) => {
   const urlSearchParams = await searchParams;
   const response = await getFinancialReportApi();
-console.log("response:::",response)
   const currentYear = urlSearchParams.selected
     ? urlSearchParams.selected
-    : "2024";
-  console.log("currentYear:::", currentYear);
+    : "2024-25";
   const filterDataByYear = response.find((year) => year.year === currentYear);
   return (
     <div className="pt-[5rem]">

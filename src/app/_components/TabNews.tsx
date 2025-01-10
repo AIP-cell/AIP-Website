@@ -8,17 +8,24 @@ import CarouselRespNews from "./CarouselRespNews";
 import { CarouselNews } from "./CarouselNews";
 import { THomePageNews } from "@/api/type";
 const newsTabArray = [
-  { key: "aipUpdates", tab: "About AIP" },
-  { key: "partner", tab: "From Partners" },
-  { key: "inTheMedia", tab: "In the Media" },
-  { key: "worldOfPhilanthropy", tab: "World of Philanthropy" },
+  { tabNo: 0, key: "aipUpdates", tab: "About AIP" },
+  { tabNo: 1, key: "partner", tab: "From Partners" },
+  { tabNo: 2, key: "inTheMedia", tab: "In the Media" },
+  { tabNo: 3, key: "worldOfPhilanthropy", tab: "World of Philanthropy" },
 ];
 type Props = {
   newsData: THomePageNews;
   searchParams: string;
 };
+
 const TabNews = ({ newsData, searchParams }: Props) => {
-  const [selectedIndex, setSelectedIndex] = useState(0);
+  const SelectedData = newsTabArray.find(
+    (newsTab) => newsTab.tab == searchParams
+  );
+  const [selectedIndex, setSelectedIndex] = useState(
+    searchParams ? SelectedData?.tabNo : 0
+  );
+
   return (
     <div className="  ">
       <TabGroup
@@ -26,7 +33,7 @@ const TabNews = ({ newsData, searchParams }: Props) => {
         onChange={setSelectedIndex}
         className="flex flex-col items-center w-full"
       >
-        <div className="px-[1.25rem] w-full flex justify-center ">
+        <div className="px-[1.25rem] w-full flex justify-center">
           <TabListAndRespSelect
             tabArray={newsTabArray}
             selectedIndex={selectedIndex}

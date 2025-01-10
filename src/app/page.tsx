@@ -9,6 +9,7 @@ import Founder from "./_components/Founder";
 import News from "./_components/News";
 import { Api } from "@/api/Api";
 import { THomePageData } from "@/api/type";
+import { notFound } from "next/navigation";
 
 export const dynamic = "force-dynamic";
 const getHomePageApi = async (): Promise<THomePageData> => {
@@ -20,10 +21,11 @@ const page = async ({
 }: {
   searchParams: Promise<{ selected: string }>;
 }) => {
-  const asyncSearchParams = await searchParams
+  const asyncSearchParams = await searchParams;
   const response = await getHomePageApi();
   if (!response) {
-    return;
+    notFound();
+    // return;
   }
   const eventData = response.event;
   const teamData = response.team;
@@ -34,12 +36,14 @@ const page = async ({
     <div className="bg-bgLightPeach pt-[5rem] overflow-hidden">
       <HeroSection />
       <GiveSection />
-      <Spotlight eventData={eventData} />
+      {eventData && <Spotlight eventData={eventData} />}
       <MakeDifference />
-      <Members countData={countData} />
+      {countData && <Members countData={countData} />}
       <AipWay />
-      <Founder teamData={teamData} />
-      <News newsData={newsData} searchParams={asyncSearchParams.selected} />
+      {teamData && <Founder teamData={teamData} />}
+      {/* {newsData && ( */}
+        <News newsData={newsData} searchParams={asyncSearchParams.selected} />
+      {/* )} */}
     </div>
   );
 };

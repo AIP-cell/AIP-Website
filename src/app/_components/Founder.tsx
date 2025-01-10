@@ -133,12 +133,12 @@ const Founder = ({ teamData }: Props) => {
                       })}
                     >
                       <ACardWithPlaySign
-                        linkOrVideo={teamData.at(select)!.linkOrVideo}
+                        linkOrVideo={teamData.at(select)?.linkOrVideo}
                         linkedin={true}
-                        image={teamData.at(select)!.image}
-                        desc={teamData.at(select)!.description}
-                        post={teamData.at(select)!.designation}
-                        name={teamData.at(select)!.name}
+                        image={teamData.at(select)?.image}
+                        desc={teamData.at(select)?.description}
+                        post={teamData.at(select)?.designation}
+                        name={teamData.at(select)?.name}
                       />
                     </motion.div>
                     <motion.div
@@ -149,10 +149,10 @@ const Founder = ({ teamData }: Props) => {
                     >
                       <PCardWithPlaySign
                         linkedin={true}
-                        image={teamData.at(select)!.image}
-                        desc={teamData.at(select)!.description}
-                        post={teamData.at(select)!.designation}
-                        name={teamData.at(select)!.name}
+                        image={teamData.at(select)?.image}
+                        desc={teamData.at(select)?.description}
+                        post={teamData.at(select)?.designation}
+                        name={teamData.at(select)?.name}
                       />
                     </motion.div>
                   </AnimatePresence>
@@ -184,23 +184,23 @@ const Founder = ({ teamData }: Props) => {
                           {arrayWithFirstTwo.map((items, index) =>
                             index == 0 ? (
                               <ACardWithPlaySign
-                                linkOrVideo={items.linkOrVideo}
+                                linkOrVideo={items?.linkOrVideo}
                                 key={index}
                                 linkedin
-                                image={items.image}
-                                desc={items.description}
-                                post={items.designation}
-                                name={items.name}
+                                image={items?.image}
+                                desc={items?.description}
+                                post={items?.designation}
+                                name={items?.name}
                               />
                             ) : (
                               index === 1 && (
                                 <PCardWithPlaySign
                                   key={index}
                                   linkedin
-                                  image={items.image}
-                                  desc={items.description}
-                                  post={items.designation}
-                                  name={items.name}
+                                  image={items?.image}
+                                  desc={items?.description}
+                                  post={items?.designation}
+                                  name={items?.name}
                                 />
                               )
                             )
@@ -211,22 +211,22 @@ const Founder = ({ teamData }: Props) => {
                           {arrayWithNextTwo.map((items, i) =>
                             i === 0 ? (
                               <ACardWithPlaySign
-                                linkOrVideo={items.linkOrVideo}
+                                linkOrVideo={items?.linkOrVideo}
                                 key={i}
                                 linkedin
-                                image={items.image}
-                                desc={items.description}
-                                post={items.designation}
-                                name={items.name}
+                                image={items?.image}
+                                desc={items?.description}
+                                post={items?.designation}
+                                name={items?.name}
                               />
                             ) : (
                               <PCardWithPlaySign
                                 key={i}
                                 linkedin
-                                image={items.image}
-                                desc={items.description}
-                                post={items.designation}
-                                name={items.name}
+                                image={items?.image}
+                                desc={items?.description}
+                                post={items?.designation}
+                                name={items?.name}
                               />
                             )
                           )}

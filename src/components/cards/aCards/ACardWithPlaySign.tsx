@@ -7,11 +7,11 @@ import PlayButtonPurple from "@public/svg/playButtonPurple.svg";
 import ASvg from "@/components/svg/ASvg";
 import CustomModal from "@/components/custom/CustomModal";
 type Props = {
-  image: string;
-  name: string;
-  post: string;
-  desc: string;
-  linkOrVideo: string;
+  image?: string;
+  name?: string;
+  post?: string;
+  desc?: string;
+  linkOrVideo?: string;
   videoLink?: string;
   video?: string;
   linkedin?: boolean;
@@ -36,7 +36,9 @@ const ACardWithPlaySign = ({
           <Image src={Linkedin} alt="" className="absolute top-0 right-0" />
         )}
         <div className="relative flex justify-center">
-          <ASvg src={image} className="w-[18.438rem] h-[21.563rem]" />
+          {image && (
+            <ASvg src={image} className="w-[18.438rem] h-[21.563rem]" />
+          )}
           <Image
             onClick={() => setIsOpen(true)}
             src={PlayButtonPurple}
@@ -59,7 +61,13 @@ const ACardWithPlaySign = ({
           </div>
         </div>
       </div>
-      <CustomModal isOpen={isOpen} setIsOpen={setIsOpen} linkOrVideo={linkOrVideo} video={video} videoLink={videoLink}/>
+      <CustomModal
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+        linkOrVideo={linkOrVideo}
+        video={video}
+        videoLink={videoLink}
+      />
     </>
   );
 };

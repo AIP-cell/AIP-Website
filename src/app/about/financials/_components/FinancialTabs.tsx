@@ -28,8 +28,7 @@ type Props = {
 };
 const FinancialTabs = ({ filterDataByYear, urlSearchParams }: Props) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
-  console.log("selectedIndex::", selectedIndex);
-  console.log("filterDataByYear:::", filterDataByYear);
+  
   return (
     <>
       {/* <FinancialSm /> */}
@@ -48,8 +47,7 @@ const FinancialTabs = ({ filterDataByYear, urlSearchParams }: Props) => {
         <div className=" w-full ~pt-[2.5rem]/[5rem]">
           <div className="flex flex-col gap-[3rem] ~px-[1.25rem]/[14.375rem] ~pb-[3.875rem]/[7.5rem]">
             <p className="text-center font-playFair ~text-h4a/h2 ~leading-[2.113rem]/[2.6rem] tracking-[-0.02rem] text-gray80">
-              {/* FY {filterDataByYear?.year} */}
-              FY {urlSearchParams ? urlSearchParams : "2024"}
+              FY {urlSearchParams ? urlSearchParams : "2024-25"}
             </p>
             <div>
               {filterDataByYear?.financialReports.map((data, index) => (
