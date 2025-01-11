@@ -33,9 +33,9 @@ const NotFound = () => {
             </Link>
           </ButtonAnimation>
         </div>
-        <p className="text-midGray text-h8Copy3 pt-[11rem] pb-[13.9rem] leading-[1.57rem]">
+        {/* <p className="text-midGray text-h8Copy3 pt-[11rem] pb-[13.9rem] leading-[1.57rem]">
           WIP
-        </p>
+        </p> */}
       </div>
     </div>
   );

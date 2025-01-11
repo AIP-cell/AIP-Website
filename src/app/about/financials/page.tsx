@@ -1,11 +1,11 @@
 import React from "react";
 import BgFaq from "@public/svg/bg-faq.svg";
-import Link from "next/link";
 import Image from "next/image";
-import FinancialTabs from "./_components/FinancialTabs";
+import FinancialContent from "./_components/FinancialContent";
 import BreadCrump from "@/components/bread-crump/BreadCrump";
 import { Api } from "@/api/Api";
-import { TFinancialReportPageData, TReports } from "@/api/type";
+import { TReports } from "@/api/type";
+import { notFound } from "next/navigation";
 
 const getFinancialReportApi = async (): Promise<TReports[]> => {
   const response = await Api.getFinancialReport();
@@ -14,13 +14,16 @@ const getFinancialReportApi = async (): Promise<TReports[]> => {
 const page = async ({
   searchParams,
 }: {
-  searchParams: Promise<{ selected: string }>;
+  searchParams: Promise<{ year: string }>;
 }) => {
   const urlSearchParams = await searchParams;
   const response = await getFinancialReportApi();
-  const currentYear = urlSearchParams.selected
-    ? urlSearchParams.selected
-    : "2024-25";
+  if (!response) {
+    notFound();
+  }
+  const currentYear = urlSearchParams.year
+    ? urlSearchParams.year
+    : response.at(0)?.year;
   const filterDataByYear = response.find((year) => year.year === currentYear);
   return (
     <div className="pt-[5rem]">
@@ -42,10 +45,13 @@ const page = async ({
               <p className=" text-gray80">Financial Reports & Certificates</p>
             </div>
           </div>
-          <FinancialTabs
-            filterDataByYear={filterDataByYear}
-            urlSearchParams={urlSearchParams.selected}
-          />
+          {response && (
+            <FinancialContent
+              filterDataByYear={filterDataByYear}
+              currentYear={currentYear}
+              response={response}
+            />
+          )}
         </div>
       </div>
     </div>

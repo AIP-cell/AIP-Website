@@ -4,7 +4,6 @@ import Image from "next/image";
 import Bg1 from "@public/svg/people-of-aip/peachCurveRightTeamAip.svg";
 import OvalPeach from "@public/svg/ovalPeach.svg";
 import Bg2 from "@public/svg/people-of-aip/peachCurveLeftTeamAip.svg";
-import Link from "next/link";
 import { TTeamMembers } from "@/api/type";
 
 // const TeamArray = [
@@ -184,26 +183,30 @@ type Props = {
 const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
   return (
     <div className="w-full relative">
-      <Image
-        src={Bg1}
-        alt=""
-        className="hidden xl:block absolute top-[19.5rem] right-0"
-      />
-      <Image
-        src={OvalPeach}
-        alt=""
-        className="hidden xl:block absolute top-[39rem] right-[14.125rem] size-[12rem]"
-      />
-      <Image
-        src={Bg2}
-        alt=""
-        className="hidden xl:block absolute bottom-[8rem] left-0"
-      />
-      <Image
-        src={OvalPeach}
-        alt=""
-        className="hidden xl:block absolute bottom-[23rem] left-[17rem] size-[12rem]"
-      />
+      {teamMembers.length != 0 && (
+        <>
+          <Image
+            src={Bg1}
+            alt=""
+            className="hidden xl:block absolute top-[19.5rem] right-0"
+          />
+          <Image
+            src={OvalPeach}
+            alt=""
+            className="hidden xl:block absolute top-[39rem] right-[14.125rem] size-[12rem]"
+          />
+          <Image
+            src={Bg2}
+            alt=""
+            className="hidden xl:block absolute bottom-[8rem] left-0"
+          />
+          <Image
+            src={OvalPeach}
+            alt=""
+            className="hidden xl:block absolute bottom-[23rem] left-[17rem] size-[12rem]"
+          />
+        </>
+      )}
       <div className="pt-[3rem] pb-[7rem] container mx-auto">
         <div className="flex flex-col  justify-center ~px-[1.25rem]/[20.9rem]">
           {urlSlug === "experts" && (
@@ -257,20 +260,22 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
                 {position === 0 && (
                   <div className="flex ~gap-[1.25rem]/[5.6rem] ">
                     <ATeamCard
+                      slug={items?.slug}
                       link={`/people-of-aip/${urlSlug}/${items.slug}`}
-                      image={items.image}
-                      title={items.name}
-                      desc={items.designation}
+                      image={items?.image}
+                      title={items?.name}
+                      desc={items?.designation}
                       linkedin={true}
                     />
                     {teamMembers[i + 1] && (
                       <PTeamCard
+                        slug={items?.slug}
                         link={`/people-of-aip/${urlSlug}/${
                           teamMembers[i + 1].slug
                         }`}
-                        image={teamMembers[i + 1].image}
-                        title={teamMembers[i + 1].name}
-                        desc={teamMembers[i + 1].designation}
+                        image={teamMembers[i + 1]?.image}
+                        title={teamMembers[i + 1]?.name}
+                        desc={teamMembers[i + 1]?.designation}
                         linkedin={true}
                       />
                     )}
@@ -279,20 +284,22 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
                 {position === 2 && (
                   <div className="pt-[4rem] flex ~gap-[1.25rem]/[5.6rem] ">
                     <ATeamCard
+                      slug={items?.slug}
                       link={`/people-of-aip/${urlSlug}/${items.slug}`}
-                      image={items.image}
-                      title={items.name}
-                      desc={items.designation}
+                      image={items?.image}
+                      title={items?.name}
+                      desc={items?.designation}
                       linkedin={true}
                     />
                     {teamMembers[i + 1] && (
                       <PTeamCard
-                        image={teamMembers[i + 1].image}
+                        slug={teamMembers[i + 1]?.slug}
+                        image={teamMembers[i + 1]?.image}
                         link={`/people-of-aip/${urlSlug}/${
                           teamMembers[i + 1].slug
                         }`}
-                        title={teamMembers[i + 1].name}
-                        desc={teamMembers[i + 1].designation}
+                        title={teamMembers[i + 1]?.name}
+                        desc={teamMembers[i + 1]?.designation}
                         linkedin={true}
                       />
                     )}
@@ -301,42 +308,46 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
                 {position === 4 && (
                   <div className="justify-center pt-[4rem] flex flex-wrap ~gap-[1.25rem]/[5.6rem]">
                     <ATeamCard
-                      image={items.image}
+                      slug={items?.slug}
+                      image={items?.image}
                       link={`/people-of-aip/${urlSlug}/${items.slug}`}
-                      title={items.name}
-                      desc={items.designation}
+                      title={items?.name}
+                      desc={items?.designation}
                       linkedin={true}
                     />
                     {teamMembers[i + 1] && (
                       <PTeamCard
-                        image={teamMembers[i + 1].image}
+                        slug={teamMembers[i + 1]?.slug}
+                        image={teamMembers[i + 1]?.image}
                         link={`/people-of-aip/${urlSlug}/${
                           teamMembers[i + 1].slug
                         }`}
-                        title={teamMembers[i + 1].name}
-                        desc={teamMembers[i + 1].designation}
+                        title={teamMembers[i + 1]?.name}
+                        desc={teamMembers[i + 1]?.designation}
                         linkedin={true}
                       />
                     )}
                     {teamMembers[i + 2] && (
                       <ATeamCard
-                        image={teamMembers[i + 2].image}
+                        slug={teamMembers[i + 2]?.slug}
+                        image={teamMembers[i + 2]?.image}
                         link={`/people-of-aip/${urlSlug}/${
                           teamMembers[i + 2].slug
                         }`}
-                        title={teamMembers[i + 2].name}
-                        desc={teamMembers[i + 2].designation}
+                        title={teamMembers[i + 2]?.name}
+                        desc={teamMembers[i + 2]?.designation}
                         linkedin={true}
                       />
                     )}
                     {teamMembers[i + 3] && (
                       <PTeamCard
-                        image={teamMembers[i + 3].image}
+                        slug={teamMembers[i + 3]?.slug}
+                        image={teamMembers[i + 3]?.image}
                         link={`/people-of-aip/${urlSlug}/${
                           teamMembers[i + 3].slug
                         }`}
-                        title={teamMembers[i + 3].name}
-                        desc={teamMembers[i + 3].designation}
+                        title={teamMembers[i + 3]?.name}
+                        desc={teamMembers[i + 3]?.designation}
                         linkedin={true}
                       />
                     )}
@@ -345,20 +356,22 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
                 {position === 8 && (
                   <div className="pt-[4rem] flex justify-start md:justify-end ~gap-[1.25rem]/[5.6rem]  ">
                     <ATeamCard
-                      image={items.image}
+                      slug={items?.slug}
+                      image={items?.image}
                       link={`/people-of-aip/${urlSlug}/${items.slug}`}
-                      title={items.name}
-                      desc={items.designation}
+                      title={items?.name}
+                      desc={items?.designation}
                       linkedin={true}
                     />
                     {teamMembers[i + 1] && (
                       <PTeamCard
-                        image={teamMembers[i + 1].image}
+                        slug={teamMembers[i + 1]?.slug}
+                        image={teamMembers[i + 1]?.image}
                         link={`/people-of-aip/${urlSlug}/${
                           teamMembers[i + 1].slug
                         }`}
-                        title={teamMembers[i + 1].name}
-                        desc={teamMembers[i + 1].designation}
+                        title={teamMembers[i + 1]?.name}
+                        desc={teamMembers[i + 1]?.designation}
                         linkedin={true}
                       />
                     )}
@@ -367,20 +380,22 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
                 {position === 10 && (
                   <div className="pt-[4rem] flex justify-start md:justify-end ~gap-[1.25rem]/[5.6rem] ">
                     <ATeamCard
-                      image={items.image}
+                      slug={items?.slug}
+                      image={items?.image}
                       link={`/people-of-aip/${urlSlug}/${items.slug}`}
-                      title={items.name}
-                      desc={items.designation}
+                      title={items?.name}
+                      desc={items?.designation}
                       linkedin={true}
                     />
                     {teamMembers[i + 1] && (
                       <PTeamCard
-                        image={items.image}
+                        slug={items?.slug}
+                        image={items?.image}
                         link={`/people-of-aip/${urlSlug}/${
-                          teamMembers[i + 1].slug
+                          teamMembers[i + 1]?.slug
                         }`}
-                        title={teamMembers[i + 1].name}
-                        desc={teamMembers[i + 1].designation}
+                        title={teamMembers[i + 1]?.name}
+                        desc={teamMembers[i + 1]?.designation}
                         linkedin={true}
                       />
                     )}

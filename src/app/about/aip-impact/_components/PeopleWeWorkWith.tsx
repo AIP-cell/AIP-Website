@@ -21,18 +21,18 @@ const PeopleWeWorkWith = ({ peopleData }: Props) => {
             <div key={i} className="">
               {i % 2 == 0 ? (
                 <ATeamCard
-                  title={people.name}
-                  image={people.image}
+                  title={people?.name}
+                  image={people?.image}
                   // title2={people.designation}
-                  desc={people.designation}
+                  desc={people?.designation}
                   linkedin={false}
                 />
               ) : (
                 <PTeamCard
-                  title={people.name}
-                  image={people.image}
+                  title={people?.name}
+                  image={people?.image}
                   // title2={people.title2}
-                  desc={people.designation}
+                  desc={people?.designation}
                   linkedin={false}
                 />
               )}

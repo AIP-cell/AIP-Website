@@ -3,10 +3,10 @@ import TestimonialSlick from "../../../../../components/slick/TestimonialSlick";
 import RightWave from "@public/svg/about/aip-impact/testimonialLeftPeachWave.svg";
 import Image from "next/image";
 import { TTestimonials } from "@/api/type";
-type Props={
-  testimonialsData:TTestimonials[]
-}
-const Testimonials = ({testimonialsData}:Props) => {
+type Props = {
+  testimonialsData: TTestimonials[];
+};
+const Testimonials = ({ testimonialsData }: Props) => {
   return (
     <div className="~mt-[7.5rem]/[12.5rem] relative">
       <Image
@@ -24,7 +24,7 @@ const Testimonials = ({testimonialsData}:Props) => {
         <p className="~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] text-midGray ~pt-[0.8rem]/[1.25rem] text-center">
           Some testimonials from our philanthropists.
         </p>
-        <TestimonialSlick slickArray={testimonialsData} />
+        {testimonialsData && <TestimonialSlick slickArray={testimonialsData} />}
       </div>
     </div>
   );

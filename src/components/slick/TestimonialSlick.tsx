@@ -52,19 +52,19 @@ const TestimonialSlick = ({ slickArray }: Props) => {
                       {actualIndex % 2 == 0 && (
                         <ACard
                           key={i}
-                          image={items.image}
-                          name={items.name}
-                          work={items.designation}
-                          desc={items.description}
+                          image={items?.image}
+                          name={items?.name}
+                          work={items?.designation}
+                          desc={items?.description}
                         />
                       )}
                       {actualIndex % 2 == 1 && (
                         <PCard
                           key={i}
-                          image={items.image}
-                          name={items.name}
-                          work={items.designation}
-                          desc={items.description}
+                          image={items?.image}
+                          name={items?.name}
+                          work={items?.designation}
+                          desc={items?.description}
                         />
                       )}
                     </div>
@@ -90,7 +90,7 @@ const TestimonialSlick = ({ slickArray }: Props) => {
       </div>
       <div className="md:hidden flex justify-center w-full  pt-[3.25rem]">
         <div className=" w-[4.5rem] flex gap-[0.5rem] ">
-          {slickArray.map((items: any, index: number) => (
+          {slickArray?.map((items: any, index: number) => (
             <div
               key={index}
               className={cn(

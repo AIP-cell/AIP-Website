@@ -9,6 +9,7 @@ import GalleryVideos from "./_components/GalleryVideos";
 import GalleryImages from "./_components/GalleryImages";
 import { Api } from "@/api/Api";
 import { TGalleryCollaboration } from "@/api/type";
+import { notFound } from "next/navigation";
 
 export const dynamic = "force-dynamic";
 const getOneGalleryCollaborationsApi = async (
@@ -20,8 +21,11 @@ const getOneGalleryCollaborationsApi = async (
 const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const asyncParam = (await params).slug;
   const response = await getOneGalleryCollaborationsApi(asyncParam);
-  const galleryImages =response.gallery.galleryImages
-  const galleryVideos =response.gallery.galleryVideos
+  if (!response) {
+    notFound();
+  }
+  const galleryImages = response?.gallery?.galleryImages;
+  const galleryVideos = response?.gallery?.galleryVideos;
   return (
     <div className="pt-[5rem]">
       <div className=" relative w-full overflow-hidden">
@@ -50,8 +54,12 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
             this network and establish personal philanthropy as a means for
             India’s transformation.
           </p>
-          <GalleryVideos galleryVideos={galleryVideos} />
-          <GalleryImages galleryImages={galleryImages} />
+          {galleryVideos.length != 0 && (
+            <GalleryVideos galleryVideos={galleryVideos} />
+          )}
+          {galleryImages.length != 0 && (
+            <GalleryImages galleryImages={galleryImages} />
+          )}
         </div>
       </div>
     </div>

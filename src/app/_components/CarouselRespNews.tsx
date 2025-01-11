@@ -4,7 +4,6 @@ import { useRef } from "react";
 import NewsCard from "@/components/cards/NewsCard";
 import RightSlickArrowSvg from "@/components/svg/RightSlickArrowSvg";
 import LeftSlickArrowSvg from "@/components/svg/LeftSlickArrowSvg";
-import OutlineButton from "@/components/buttons/OutlineButton";
 
 const newsData = [
   {

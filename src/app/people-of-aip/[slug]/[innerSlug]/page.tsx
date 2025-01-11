@@ -2,21 +2,18 @@ import Link from "next/link";
 import React from "react";
 import Bg from "@public/svg/people-of-aip/peachCurveRightDetailsPage.svg";
 import Linkedin from "@public/svg/linkedinPurple.svg";
-import X from "@public/svg/xPurple.svg";
 import LinkSvg from "@public/svg/linkingPurple.svg";
-import SampleVideo from "@public/images/sampleVideo.png";
 import Image from "next/image";
 import BreadCrump from "@/components/bread-crump/BreadCrump";
 import XSvg from "@/components/svg/XSvg";
 import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
-import LinkedinSvg from "@/components/svg/LinkedinSvg";
-import ASvg from "@/components/svg/ASvg";
 import PSvg from "@/components/svg/PSvg";
 import InnerCollaborationsVideo from "@/app/our-work/collaborations/[slug]/_components/InnerCollaborationsVideo";
 import { Api } from "@/api/Api";
 import { TPeopleOfAipGetOne } from "@/api/type";
 import { StorageUrl } from "@/utils/BaseUrl";
 import SelectedWorks from "./_components/SelectedWorks";
+import { notFound } from "next/navigation";
 
 export const dynamic = "force-dynamic";
 const getPeopleOfAipGetOneApi = async (
@@ -32,6 +29,9 @@ const InnerTeamPage = async ({
 }) => {
   const urlParams = await params;
   const response = await getPeopleOfAipGetOneApi(urlParams.innerSlug);
+  if (!response) {
+    notFound();
+  }
   const team = response.teams;
   return (
     <div className="pt-[5rem]">
@@ -55,21 +55,23 @@ const InnerTeamPage = async ({
               <div className="col-span-2  relative">
                 <div className=" hidden md:block">
                   <h2 className="~text-h4/h2 text-midGray leading-[3.3rem] font-playFair">
-                    {team.name}
+                    {team?.name}
                   </h2>
                   <h4 className="pt-[1rem] ~text-h6/h5 text-gray40 font-playFairItalic ~pr-[4rem]/0">
-                    {team.designation}
+                    {team?.designation}
                   </h4>
                 </div>
                 <div className="~pt-[2rem]/[2.5rem] text-midGray ~pr-0/[6.56rem]">
                   <div
-                    dangerouslySetInnerHTML={{ __html: team.description || "" }}
+                    dangerouslySetInnerHTML={{
+                      __html: team?.description || "",
+                    }}
                     className="~leading-[1.225rem]/[1.4rem] ~text-h9Copy5/h9Copy4"
                   ></div>
 
                   <div className=" ~pt-[2rem]/[2.5rem]  flex-col flex gap-[1rem]">
                     <div className="flex gap-[1rem]">
-                      <Link href={team.linkedln}>
+                      <Link href={team?.linkedln}>
                         <ButtonAnimation className="rounded-full ~p-[0.5rem]/[0.875rem] bg-bgGray5">
                           {/* <LinkedinSvg className="size-[1.5rem]"/> */}
                           <Image
@@ -79,7 +81,7 @@ const InnerTeamPage = async ({
                           />
                         </ButtonAnimation>
                       </Link>
-                      <Link href={team.twitter}>
+                      <Link href={team?.twitter}>
                         <ButtonAnimation className="rounded-full flex justify-center items-center text-textPurple hover:text-white p-[0.93rem] bg-bgGray5 hover:bg-textPurple">
                           <XSvg className="size-[1.063rem]" />
                           {/* <Image src={X} alt="" className="" /> */}
@@ -89,7 +91,7 @@ const InnerTeamPage = async ({
                     {team.links.map((link, i) => (
                       <Link
                         key={i}
-                        href={link.link}
+                        href={link?.link}
                         className="flex w-[17.375rem] gap-[0.98rem] ~pl-[1rem]/[1.25rem] ~pr-[2.813rem]/[1.25rem] ~py-[0.87rem]/[0.76rem] bg-bgGray5 rounded-full"
                       >
                         <Image
@@ -112,24 +114,24 @@ const InnerTeamPage = async ({
                 />
                 <div className=" block md:hidden">
                   <h2 className="~text-h4/h2 text-midGray leading-[3.3rem] font-playFair">
-                    {team.name}
+                    {team?.name}
                   </h2>
                   <h4 className="~pt-[0.75rem]/[1rem] font-medium ~text-h6M/h5 text-gray40 font-playFairItalic ~pr-[4rem]/0">
-                    {team.designation}
+                    {team?.designation}
                   </h4>
                   {/* <h4 className=" ~text-h6M/h5 text-gray40 font-medium font-playFairItalic ~pr-[4rem]/0">
                     The Convergence Foundation
                   </h4> */}
                 </div>
                 <p className="text-h5 pt-[2rem] text-gray90 font-playFair font-medium leading-[1.75rem]">
-                  {team.quote}
+                  {team?.quote}
                 </p>
               </div>
             </div>
             <div className="">
               <InnerCollaborationsVideo
-                linkOrVideo={team.linkOrVideo}
-                video={team.video}
+                linkOrVideo={team?.linkOrVideo}
+                video={team?.video}
               />
               {/* <Image
                 src={SampleVideo}
@@ -139,7 +141,9 @@ const InnerTeamPage = async ({
             </div>
           </div>
         </div>
-        {team.selectedWorks && <SelectedWorks works={team.selectedWorks} />}
+        {team.selectedWorks.length != 0 && (
+          <SelectedWorks works={team.selectedWorks} />
+        )}
       </div>
     </div>
   );

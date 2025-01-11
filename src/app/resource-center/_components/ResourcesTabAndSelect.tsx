@@ -6,11 +6,11 @@ import ResourcesSm from "./ResourcesSm";
 import { useRouter } from "next/navigation";
 
 type Props = {
-  currentTab: string;
+  currentTab?: string;
   tabClassName?: string;
   mainClassName?: string;
   tabListClassName?: string;
-  resources: string;
+  resources?: string;
   tabList: { slug: string; name: string; link: string }[];
 };
 const ResourcesTabAndSelect = ({

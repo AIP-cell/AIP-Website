@@ -10,6 +10,7 @@ import CustomSelect from "@/components/custom/CustomSelect";
 import CustomFilter from "@/components/custom/CustomFilter";
 import { Api } from "@/api/Api";
 import { TCollaborationPageData } from "@/api/type";
+import { notFound } from "next/navigation";
 const categoryData = ["Category", "Category", "Category"];
 const dateData = ["Date", "Date", "Date"];
 const filterDatas = [
@@ -63,6 +64,9 @@ const page = async ({
   const { type, partnerType, date } = await searchParams;
   const urlsearchParams = await searchParams;
   const response = await getCollaborationsApi({ type, partnerType, date });
+  if (!response) {
+    notFound();
+  }
   return (
     <div className="~pt-[4.4rem]/[5rem]">
       <div className="relative w-full  pb-[7.5rem]">
@@ -120,7 +124,9 @@ const page = async ({
             </div>
           </div>
 
-          <CollaborationGrid collaborationData={response}/>
+          {response.length != 0 && (
+            <CollaborationGrid collaborationData={response} />
+          )}
         </div>
       </div>
     </div>

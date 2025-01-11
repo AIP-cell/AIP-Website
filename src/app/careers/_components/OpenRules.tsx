@@ -33,18 +33,20 @@ const OpenRules = ({ jobs }: Props) => {
               strategic philanthropy impact India’s transformation.
             </p>
           </div>
-          <PositionsGrid data={jobs} />
+          {jobs.length != 0 && <PositionsGrid data={jobs} />}
         </div>
-        <div className="pt-[2rem]">
-          <Link className="" href="/careers/all-positions">
-            <ButtonAnimation className=" px-7 py-3 flex gap-2 bg-darkPurple w-fit rounded-3xl">
-              <p className=" font-inter text-white text-h9Copy5 leading-[1.225rem]">
-                See all open positions
-              </p>
-              <Image src={usersBg} alt="arrow down" />
-            </ButtonAnimation>
-          </Link>
-        </div>
+        {jobs.length != 0 && (
+          <div className="pt-[2rem]">
+            <Link className="" href="/careers/all-positions">
+              <ButtonAnimation className=" px-7 py-3 flex gap-2 bg-darkPurple w-fit rounded-3xl">
+                <p className=" font-inter text-white text-h9Copy5 leading-[1.225rem]">
+                  See all open positions
+                </p>
+                <Image src={usersBg} alt="arrow down" />
+              </ButtonAnimation>
+            </Link>
+          </div>
+        )}
         <div className=" ~px-0/[6.563rem] ~pt-[2.5rem]/20  ">
           <div className="~px-5/[9.375rem] py-[2rem] rounded-[1.25rem] text-center bg-lightgrey">
             <p className="font-playFair ~text-h5/h4a ~leading-[1.75rem]/[2.113rem] text-gray80">

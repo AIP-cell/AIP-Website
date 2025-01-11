@@ -3,9 +3,12 @@ import React, { useState } from "react";
 import InputField from "./InputField";
 import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 import CustomRadio from "@/components/custom/CustomRadio";
+import { useMutation } from "@tanstack/react-query";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
+import { Api } from "@/api/Api";
 
 const radioArray = [
   "I'm a Philanthropist/Foundation",
@@ -14,7 +17,7 @@ const radioArray = [
   "I'm Curious",
 ];
 const Form = () => {
-  const [selected, setSelected] = useState(radioArray[0]);
+  const [type, setType] = useState<string>(radioArray[0]);
   const contactSchema = z.object({
     name: z.string().min(1, "Name is required"),
     email: z.string().email("Email is required"),
@@ -24,16 +27,33 @@ const Form = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors, isSubmitting },
   } = useForm<TContactSchema>({
     resolver: zodResolver(contactSchema),
   });
-  const onSubmit = (data: TContactSchema) => {};
+  const { mutate, error } = useMutation({
+    mutationFn: (formData: TContactSchema) =>
+      Api.postContact({ ...formData, type }),
+    onSuccess: () => {
+      toast.success("Successfully Send");
+      reset();
+    },
+    onError: () => {
+      toast.error("Error Submitting");
+      console.log("error:::", error);
+    },
+  });
+
+  const onSubmit = (formData: TContactSchema) => {
+    console.log("formData::", formData);
+    mutate(formData);
+  };
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col  ">
       <div className="grid lg:grid-cols-2 ~gap-[2.5rem]/0">
         <div>
-          <CustomRadio selected={selected} setSelected={setSelected} radioArray={radioArray}/>
+          <CustomRadio type={type} setType={setType} radioArray={radioArray} />
         </div>
         <div className="flex flex-col lg:pl-[7.875rem] w-full gap-[1.75rem]">
           <InputField
@@ -45,7 +65,7 @@ const Form = () => {
           />
           <InputField
             register={register("email")}
-            error={errors.email}
+            error={errors?.email}
             type="email"
             label=" Email ID"
             placeholder="Enter your email"

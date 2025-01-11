@@ -19,9 +19,9 @@ export type THomePageTeam = {
   description: string;
   linkedln: string;
   image: string;
-  linkOrVideo:string
-  video:string
-  videoLink:string
+  linkOrVideo: string;
+  video: string;
+  videoLink: string;
 };
 export type THomePageCount = {
   _id: string;
@@ -132,10 +132,10 @@ export type TAipResourcesCategory = {
   image: string;
   slug: string;
   link: string;
-  isLinkOrPdf:string;
-  fileLink:string;
-  file:string;
-  category:string;
+  isLinkOrPdf: string;
+  fileLink: string;
+  file: string;
+  category: string;
 };
 export type TCuratedResourcesExpertsInner = {
   curatedResource: TCuratedResourcesInner;
@@ -245,7 +245,7 @@ export type TTeamMembers = {
   description: string;
   slug: string;
   linkOrVideo: string;
-  image:string
+  image: string;
   videoLink: string;
 };
 
@@ -462,7 +462,7 @@ export type TSearch = {
   video: string;
   name: string;
   slug: string;
-  key:string
+  key: string;
 };
 // End Search
 export type TJob = {
@@ -481,9 +481,14 @@ export type TJob = {
   salary_min: null;
   status: string;
 };
-export type TAllPositions={
-  jobs:TJob[]
-  totalCount:number;
-  currentPage:number;
-  pageCount:number;
-}
+
+export type TCareersPage = {
+  jobs: TJob[];
+  testimonials: TTestimonials[];
+};
+export type TAllPositions = {
+  jobs: TJob[];
+  totalCount: number;
+  currentPage: number;
+  pageCount: number;
+};

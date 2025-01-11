@@ -1,45 +1,8 @@
-import MailSvg from "@/components/svg/MailSvg";
-import Image from "next/image";
-import Link from "next/link";
-import JoinCirclesOne from "@public/svg/about/aip-founder-network/JoinCirclesOne.svg";
-import JoinCirclesRight from "@public/svg/about/aip-founder-network/JoinCirclesRight.svg";
-import PeachMaskedSemiCircle from "@public/svg/about/aip-founder-network/semiMaskedCircles.svg";
 import React from "react";
-import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 import ATeamCard from "@/components/cards/aCards/ATeamCard";
 import PTeamCard from "@/components/cards/pCards/PTeamCard";
 import { TMethodsOfJoining } from "@/api/type";
 
-const joinArray = [
-  {
-    title1: "Aakash",
-    title2: "Chaudhry",
-    desc: "CEO",
-    email: "xyz@abcd.com",
-  },
-  {
-    title1: "Ambarish",
-    title2: "Raghuvanshi",
-    location: "West & International",
-    desc: "Info Edge India",
-    email: "xyz@abcd.com",
-  },
-
-  {
-    title1: "GV",
-    title2: "Prasad",
-    location: "North & East",
-    desc: "Dr. Reddy's Lab",
-    email: "xyz@abcd.com",
-  },
-  {
-    title1: "Karishma",
-    title2: "Shanghvi",
-    location: "South",
-    desc: "Sun Pharma",
-    email: "xyz@abcd.com",
-  },
-];
 type Props = {
   methodsOfJoining: TMethodsOfJoining[];
 };
@@ -67,26 +30,26 @@ const Join = ({ methodsOfJoining }: Props) => {
             <div key={i} className="flex justify-center">
               {i % 2 == 0 ? (
                 <ATeamCard
-                  image={join.image}
+                  image={join?.image}
                   titleClassName="underline decoration-[1px] underline-offset-4"
                   title2ClassName="underline decoration-[1px] underline-offset-4"
                   // location={join.location}
-                  email={join.email}
-                  title={join.name}
+                  email={join?.email}
+                  title={join?.name}
                   // title2={join.title2}
-                  desc={join.designation}
+                  desc={join?.designation}
                   linkedin={false}
                 />
               ) : (
                 <PTeamCard
                   titleClassName="underline decoration-[1px] underline-offset-4"
                   title2ClassName="underline decoration-[1px] underline-offset-4"
-                  image={join.image}
+                  image={join?.image}
                   // location={join.location}
-                  email={join.email}
-                  title={join.name}
+                  email={join?.email}
+                  title={join?.name}
                   // title2={join.title2}
-                  desc={join.designation}
+                  desc={join?.designation}
                   linkedin={false}
                 />
               )}

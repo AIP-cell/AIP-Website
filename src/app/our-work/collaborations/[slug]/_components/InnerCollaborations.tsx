@@ -29,7 +29,7 @@ import InnerCollaborationTestimonials from "./InnerCollaborationTestimonials";
 const tabArray = ["New Delhi", "Mumbai", "Bangalore"];
 type Props = {
   collaboration: TOneCollaboration;
-  slug:string
+  slug: string;
 };
 const agendaArray = [
   {
@@ -68,11 +68,10 @@ const agendaArray = [
     desc: "By Ashish Dhawan, Founder-CEO,The Convergence Foundation; Core Founder, AIP",
   },
 ];
-const InnerCollaborations = ({ collaboration,slug }: Props) => {
+const InnerCollaborations = ({ collaboration, slug }: Props) => {
   return (
     <>
       <div className="relative w-full ~pb-[5rem]/[12.75rem]">
-       
         <Image
           src={PurpleTopSvg}
           alt="purple-curve"
@@ -88,7 +87,7 @@ const InnerCollaborations = ({ collaboration,slug }: Props) => {
             linkThree="/our-work/collaborations/slug"
           />
         </div>
-        <Cities collaboration={collaboration} slug={slug}/>
+        {collaboration && <Cities collaboration={collaboration} slug={slug} />}
       </div>
     </>
   );

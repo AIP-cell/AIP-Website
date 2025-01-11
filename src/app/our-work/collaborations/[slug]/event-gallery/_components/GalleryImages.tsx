@@ -34,7 +34,7 @@ type Props = {
 };
 const GalleryImages = ({ galleryImages }: Props) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const dateFormat = (date: string) => {
+  const dateFormat = (date: string | undefined) => {
     return dayjs(date).format("D MMMM YYYY");
   };
   const next = () => {
@@ -74,7 +74,7 @@ const GalleryImages = ({ galleryImages }: Props) => {
         <div>
           <div className="relative  ~w-[21.8rem]/[51.25rem] ~h-[14.3rem]/[34.167rem] rounded-xl overflow-hidden flex items-center justify-center">
             <Image
-              src={StorageUrl + galleryImages.at(selectedIndex)!.image}
+              src={StorageUrl + galleryImages.at(selectedIndex)?.image}
               alt=""
               fill
               className="object-cover z-10"
@@ -82,10 +82,10 @@ const GalleryImages = ({ galleryImages }: Props) => {
           </div>
           <div className="flex flex-col md:flex-row justify-between ~gap-[0.25rem]/[3rem] ~pt-[1rem]/[0.75rem]">
             <div className="leading-[1.4rem] font-bold  text-midGray">
-              <p className="">{galleryImages.at(selectedIndex)!.title}</p>
+              <p className="">{galleryImages.at(selectedIndex)?.title}</p>
             </div>
             <p className="leading-[1.4rem] text-midGray">
-              {dateFormat(galleryImages.at(selectedIndex)!.date)}
+              {dateFormat(galleryImages.at(selectedIndex)?.date)}
             </p>
           </div>
         </div>

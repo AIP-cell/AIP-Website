@@ -5,12 +5,13 @@ import PMediumSizeSvg from "@/components/svg/PMediumSizeSvg";
 import Link from "next/link";
 type Props = {
   linkedin: boolean;
-  title: string;
+  title?: string;
+  slug?: string;
   title2?: string;
-  image: string;
+  image?: string;
   location?: string;
   email?: string;
-  desc: string;
+  desc?: string;
   titleClassName?: string;
   title2ClassName?: string;
   locationClassName?: string;
@@ -18,6 +19,7 @@ type Props = {
 };
 const PTeamCard = ({
   linkedin,
+  slug,
   image,
   title,
   title2,
@@ -31,7 +33,7 @@ const PTeamCard = ({
 }: Props) => {
   return (
     <div className="max-[23rem]:w-[8rem] ~w-[10.3rem]/[11.87rem] relative">
-      <PMediumSizeSvg src={image} />
+      {image && <PMediumSizeSvg src={image} />}
       {linkedin && (
         <Image
           src={Linkedin}
@@ -40,12 +42,20 @@ const PTeamCard = ({
         />
       )}
       <div className="flex flex-col gap-[0.5rem]">
-        <Link
-          href={`${link}`}
-          className={`~text-h4a/h4 ~leading-[2.1rem]/[2.6rem] text-gray80 font-playFair ${titleClassName}`}
-        >
-          {title}
-        </Link>
+        {slug ? (
+          <Link
+            href={`${link}`}
+            className={`~text-h4a/h4 ~leading-[2.1rem]/[2.6rem] text-gray80 font-playFair ${titleClassName}`}
+          >
+            {title}
+          </Link>
+        ) : (
+          <div
+            className={`~text-h4a/h4 ~leading-[2.1rem]/[2.6rem] text-gray80 font-playFair ${titleClassName}`}
+          >
+            {title}
+          </div>
+        )}
         <h3
           className={`~text-h4a/h4 ~leading-[2.1rem]/[2.6rem] text-gray80 font-playFair ${title2ClassName}`}
         >

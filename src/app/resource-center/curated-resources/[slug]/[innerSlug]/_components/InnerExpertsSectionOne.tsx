@@ -13,7 +13,7 @@ import { TCuratedResourcesInner } from "@/api/type";
 import { StorageUrl } from "@/utils/BaseUrl";
 
 type Props = {
-  innerData: TCuratedResourcesInner;
+  innerData?: TCuratedResourcesInner;
   params: string;
 };
 const InnerExpertsSectionOne = ({ innerData, params }: Props) => {
@@ -32,7 +32,7 @@ const InnerExpertsSectionOne = ({ innerData, params }: Props) => {
           linkTwo="/resource-center/curated-resources"
           textThree="Experts"
           linkThree={`/resource-center/curated-resources/experts`}
-          textFour={innerData.title}
+          textFour={innerData?.title}
           linkFour={`/resource-center/curated-resources/experts/${params}`}
         />
         <div className="relative grid md:grid-cols-3 gap-5 ~pb-[3rem]/0">
@@ -40,7 +40,7 @@ const InnerExpertsSectionOne = ({ innerData, params }: Props) => {
             <div>
               <div className="font-playFair">
                 <p className="leading-[3.25rem] tracking-[-.04rem] text-h3 text-midGray ">
-                  {innerData.title}
+                  {innerData?.title}
                 </p>
                 <p className="font-medium  leading-[1.75rem]  font-playFair text-h5 text-gray80 pt-[1rem]">
                   By{" "}
@@ -49,18 +49,18 @@ const InnerExpertsSectionOne = ({ innerData, params }: Props) => {
                   </span>
                 </p>
                 <p className=" leading-[1.75rem]  font-playFairItalic text-h5 text-gray40 font-medium pt-[1rem]">
-                  {innerData.domain}
+                  {innerData?.domain}
                   {/* Reports | Fields */}
                 </p>
               </div>
               <p className="font-inter leading-[1.4rem]  text-midGray  pt-[1rem] ~pr-0/[3rem]">
-                {innerData.description}
+                {innerData?.description}
               </p>
             </div>
             <div className="block xl:hidden ">
               <div className="relative w-full h-[30.89rem]">
                 <Image
-                  src={StorageUrl + innerData.image}
+                  src={StorageUrl + innerData?.image}
                   className="  object-cover "
                   fill
                   alt="image"
@@ -72,7 +72,7 @@ const InnerExpertsSectionOne = ({ innerData, params }: Props) => {
                 Launch Details
               </p>
               <a
-                href={innerData.fileLink}
+                href={innerData?.fileLink}
                 download
                 className="mt-[1rem] group bg-darkPurple border-2 border-darkPurple hover:bg-white  transition-all  hover:text-darkPurple text-white hover:border-2 hover:border-darkPurple px-7 py-3 flex items-center gap-[0.75rem] w-fit rounded-3xl"
               >
@@ -88,14 +88,14 @@ const InnerExpertsSectionOne = ({ innerData, params }: Props) => {
               <h2 className="~text-h6M/h4a ~leading-[1.575rem]/[2.113rem] text-gray80 font-playFair  ~pb-0/[1.5rem]">
                 Links
               </h2>
-              {innerData.links.map((link, i) => (
+              {innerData?.links.map((link, i) => (
                 <div
                   key={i}
                   className="flex w-[17.375rem] gap-[0.98rem] ~pl-[1rem]/[1.25rem] ~py-[0.875rem]/[0.75rem] bg-bgGray5 rounded-full"
                 >
                   <Image src={LinkSvg} alt="" className="" />
                   <p className="text-gray80 ~leading-[1.225rem]/[1.4rem] ~text-h9Copy5/h9Copy4">
-                    {link.link}
+                    {link?.link}
                   </p>
                 </div>
               ))}
@@ -110,7 +110,7 @@ const InnerExpertsSectionOne = ({ innerData, params }: Props) => {
           <div className="hidden xl:block pt-[5rem]">
             <div className="relative  w-[25rem] h-[35.313rem]">
               <Image
-                src={StorageUrl + innerData.image}
+                src={StorageUrl + innerData?.image}
                 className="object-cover"
                 fill
                 alt="image"
@@ -118,7 +118,7 @@ const InnerExpertsSectionOne = ({ innerData, params }: Props) => {
             </div>
           </div>
         </div>
-        <InnerCollaborationsVideo video={innerData.video} />
+        <InnerCollaborationsVideo video={innerData?.video} />
       </div>
     </div>
   );

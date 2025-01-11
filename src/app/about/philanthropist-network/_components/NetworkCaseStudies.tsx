@@ -33,15 +33,15 @@ const NetworkCaseStudies = ({ casestudies }: Props) => {
             <CaseStudy
               key={i}
               index={i}
-              foundationName={item.organisationName}
+              foundationName={item?.organisationName}
               foundationNameClassName="!~pt-[1rem]/[1.25rem] !~text-h6M/h5"
-              initiativeName={item.initiativeName}
-              title={item.title}
-              desc={item.description}
-              image={item.image}
-              isLinkOrPdf={item.isLinkOrPdf}
-              file={item.file}
-              fileLink={item.fileLink}
+              initiativeName={item?.initiativeName}
+              title={item?.title}
+              desc={item?.description}
+              image={item?.image}
+              isLinkOrPdf={item?.isLinkOrPdf}
+              file={item?.file}
+              fileLink={item?.fileLink}
               />
           ))}
         </div>

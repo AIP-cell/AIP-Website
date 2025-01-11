@@ -8,12 +8,13 @@ import Link from "next/link";
 import cn from "@/utils/tailwind";
 type Props = {
   linkedin: boolean;
-  title: string;
+  slug?: string;
+  title?: string;
   title2?: string;
   location?: string;
   email?: string;
-  image: string;
-  desc: string;
+  image?: string;
+  desc?: string;
   titleClassName?: string;
   title2ClassName?: string;
   locationClassName?: string;
@@ -21,6 +22,7 @@ type Props = {
   link?: string;
 };
 const ATeamCard = ({
+  slug,
   link,
   image,
   linkedin,
@@ -41,7 +43,7 @@ const ATeamCard = ({
         sizeClass
       )}
     >
-      <AMediumSizeSvg src={image} className="" />
+      {image && <AMediumSizeSvg src={image} className="" />}
       {linkedin && (
         <Image
           src={Linkedin}
@@ -50,12 +52,20 @@ const ATeamCard = ({
         />
       )}
       <div className="flex flex-col gap-[0.5rem]">
-        <Link
-          href={`${link}`}
-          className={`~text-h4a/h4 ~leading-[2.1rem]/[2.6rem] text-gray80 font-playFair ${titleClassName}`}
-        >
-          {title}
-        </Link>
+        {slug ? (
+          <Link
+            href={`${link}`}
+            className={`~text-h4a/h4 ~leading-[2.1rem]/[2.6rem] text-gray80 font-playFair ${titleClassName}`}
+          >
+            {title}
+          </Link>
+        ) : (
+          <div
+            className={`~text-h4a/h4 ~leading-[2.1rem]/[2.6rem] text-gray80 font-playFair ${titleClassName}`}
+          >
+            {title}
+          </div>
+        )}
         <h3
           className={`~text-h4a/h4 ~leading-[2.1rem]/[2.6rem] text-gray80 font-playFair ${title2ClassName}`}
         >

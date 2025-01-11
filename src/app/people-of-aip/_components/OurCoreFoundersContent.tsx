@@ -15,16 +15,20 @@ type Props = {
 const OurCoreFoundersContent = ({ coreFounderMembers }: Props) => {
   return (
     <div className="w-full relative">
-      <Image
-        src={Bg}
-        alt=""
-        className="hidden xl:block absolute  top-[15.5rem]  right-0"
-      />
-      <Image
-        src={Bg}
-        alt=""
-        className="hidden xl:block absolute  bottom-0  left-0 rotate-180"
-      />
+      {coreFounderMembers.length != 0 && (
+        <>
+          <Image
+            src={Bg}
+            alt=""
+            className="hidden xl:block absolute  top-[15.5rem]  right-0"
+          />
+          <Image
+            src={Bg}
+            alt=""
+            className="hidden xl:block absolute  bottom-0  left-0 rotate-180"
+          />
+        </>
+      )}
       <div className="~pt-[2.125rem]/[3rem] container mx-auto relative">
         <div className="flex flex-col items-center justify-center ~px-[1.25rem]/[20.938rem]">
           <h2 className="~text-h4/h2 text-center text-gray80 ~leading-[2.6rem]/[3.2rem] font-playFair">
@@ -56,26 +60,28 @@ const OurCoreFoundersContent = ({ coreFounderMembers }: Props) => {
                 )}
               >
                 <ACard
+                  slug={item?.slug}
                   link={`/people-of-aip/coreFounder/${item.slug}`}
                   linkedin
                   nameClass=" underline decoration-[1px] underline-offset-4 "
-                  name={item.name}
-                  desc={item.description}
-                  work={item.designation}
-                  image={item.image}
+                  name={item?.name}
+                  desc={item?.description}
+                  work={item?.designation}
+                  image={item?.image}
                 />
 
                 {coreFounderMembers[i + 1] && (
                   <PCard
+                    slug={item?.slug}
                     link={`/people-of-aip/coreFounder/${
-                      coreFounderMembers[i + 1].slug
+                      coreFounderMembers[i + 1]?.slug
                     }`}
                     linkedin
                     nameClass=" underline decoration-[1px] underline-offset-4 "
-                    name={coreFounderMembers[i + 1].name}
-                    desc={coreFounderMembers[i + 1].description}
-                    work={coreFounderMembers[i + 1].designation}
-                    image={coreFounderMembers[i + 1].image}
+                    name={coreFounderMembers[i + 1]?.name}
+                    desc={coreFounderMembers[i + 1]?.description}
+                    work={coreFounderMembers[i + 1]?.designation}
+                    image={coreFounderMembers[i + 1]?.image}
                   />
                 )}
               </div>

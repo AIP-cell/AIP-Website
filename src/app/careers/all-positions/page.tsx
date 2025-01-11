@@ -8,6 +8,7 @@ import PositionsGrid from "../_components/PositionsGrid";
 import BreadCrump from "@/components/bread-crump/BreadCrump";
 import { Api } from "@/api/Api";
 import { TAllPositions } from "@/api/type";
+import { notFound } from "next/navigation";
 
 export const dynamic = "force-dynamic";
 const getCareersApi = async (page: string): Promise<TAllPositions> => {
@@ -22,8 +23,8 @@ const page = async ({
 }) => {
   const page = (await searchParams).page;
   const response = await getCareersApi(page);
-  if (!response) return;
-  const totalPages = response.pageCount;
+  if (!response) notFound();
+  const totalPages = response?.pageCount;
   return (
     <div className="pt-[5rem]">
       <div className=" relative bg-container mx-auto ">
@@ -59,7 +60,9 @@ const page = async ({
             Apply now. We’ll surely get back to you at the soonest.
           </p>
 
-          <PositionsGrid data={response.jobs} totalPages={totalPages} />
+          {response.jobs.length != 0 && (
+            <PositionsGrid data={response.jobs} totalPages={totalPages} />
+          )}
 
           <div className=" ~px-0/[6.563rem] ~pt-[2.5rem]/20 ~pb-[1.5rem]/[7.438rem] ">
             <div className="~px-5/[9.375rem] py-[2rem] rounded-[1.25rem] text-center bg-lightgrey">

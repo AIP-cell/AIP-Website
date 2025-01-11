@@ -83,9 +83,9 @@ const GalleryVideos = ({ galleryVideos }: Props) => {
             return (
               <GalleryVideo
                 key={index}
-                src={video.video}
-                title={video.title}
-                date={video.date}
+                src={video?.video}
+                title={video?.title}
+                date={video?.date}
                 // desc2={video.desc2}
               />
             );

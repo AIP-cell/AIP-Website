@@ -36,20 +36,22 @@ const ExpertsShelves = ({ expertShelves }: Props) => {
         A showcase of inspirational work done by collaborators in our network
       </p>
       <div className="  grid md:grid-cols-2 lg:grid-cols-3 ~gap-[2.5rem]/[4.5rem] ~px-[1.25rem]/[8.125rem]">
-        {expertShelves.map((item, i) => (
+        {expertShelves?.map((item, i) => (
           <ResourceCard
-            slug={item.slug}
+            slug={item?.slug}
             key={i}
-            src={item.image}
-            title={item.title}
-            desc={item.description}
-            category={item.category}
+            src={item?.image}
+            title={item?.title}
+            desc={item?.description}
+            category={item?.category}
           />
         ))}
       </div>
-      <div className="~pt-[2.5rem]/[5rem] ~pb-[5rem]/[7.5rem]">
-        <BgButton text="See All" className="py-[0.75rem] px-[1.75rem]" />
-      </div>
+      {expertShelves && (
+        <div className="~pt-[2.5rem]/[5rem] ~pb-[5rem]/[7.5rem]">
+          <BgButton text="See All" className="py-[0.75rem] px-[1.75rem]" />
+        </div>
+      )}
     </div>
   );
 };

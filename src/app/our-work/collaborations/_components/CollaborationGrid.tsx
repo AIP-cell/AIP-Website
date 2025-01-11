@@ -52,11 +52,11 @@ const CollaborationGrid = ({ collaborationData }: Props) => {
             <div className="w-full md:w-[80%]">
               <Link href={`/our-work/collaborations/${item.slug}`}>
                 <p className="font-playFair ~text-h4a/h4 text-gray80 ~leading-[2.113rem]/[2.6rem] underline underline-offset-4 decoration-[1px]">
-                  {item.title}
+                  {item?.title}
                 </p>
               </Link>
               <p className="~pt-[1.25rem]/4 line-clamp-4 text-ellipsis  leading-[1.4rem] font-inter text-midGray ">
-                {item.description}
+                {item?.description}
               </p>
             </div>
             <div className="w-full md:w-[35%] flex flex-col md:items-end leading-[1.4rem] ~pt-0/4">
@@ -64,7 +64,7 @@ const CollaborationGrid = ({ collaborationData }: Props) => {
                 In Collaboration with:
               </p>
               <div className="flex  md:justify-end gap-[0.75rem] flex-wrap">
-                {item.collaborations.map((data, index) => (
+                {item?.collaborations?.map((data, index) => (
                   <div
                     key={index}
                     className="py-[0.563rem] shrink-0 px-[.68rem] w-fit bg-bgCollab rounded-[1.25rem] "

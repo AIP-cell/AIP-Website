@@ -5,9 +5,9 @@ import { StorageUrl } from "@/utils/BaseUrl";
 import dayjs from "dayjs";
 
 type Props = {
-  src: string;
-  date: string;
-  title: string;
+  src?: string;
+  date?: string;
+  title?: string;
   desc2?: string;
 };
 const GalleryVideo = ({ src, date, title, desc2 }: Props) => {
@@ -15,9 +15,11 @@ const GalleryVideo = ({ src, date, title, desc2 }: Props) => {
   return (
     <div>
       <div className="relative shrink-0 ~w-[21.8rem]/[31.5rem] ~h-[14.3rem]/[20.698rem] rounded-xl overflow-hidden flex items-center justify-center">
-        <video className="absolute inset-0 w-full h-full object-cover z-10">
-          <source src={StorageUrl + src} type="video/mp4" />
-        </video>
+        {src && (
+          <video className="absolute inset-0 w-full h-full object-cover z-10">
+            <source src={StorageUrl + src} type="video/mp4" />
+          </video>
+        )}
         {/* <Image src={src} alt="" fill className="object-cover z-10" /> */}
         <Image
           src={PlayButtonPurple}

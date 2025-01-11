@@ -11,6 +11,7 @@ import { TAipResourcesCategory } from "@/api/type";
 import AipResourceTabs from "../AipResourceTabs";
 import CustomFilter from "@/components/custom/CustomFilter";
 import ResourcesTabAndSelect from "../../_components/ResourcesTabAndSelect";
+import { notFound } from "next/navigation";
 
 const tabList = [
   {
@@ -237,7 +238,7 @@ const AipResourcesInnerPage = async ({
   });
   // console.log("response:::::", response);
   if (!response) {
-    return;
+    notFound();
   }
   const filterBySlug = tabList.find((items) => items.slug === param.slug);
   const filterData = aipResourcesFilter.find(
@@ -252,7 +253,7 @@ const AipResourcesInnerPage = async ({
             linkOne="/resource-center"
             textTwo="AIP Resources"
             linkTwo="/resource-center/aip-resources"
-            textThree={filterBySlug!.name}
+            textThree={filterBySlug?.name}
             linkThree={`/resource-center/aip-resources/${param.slug}`}
           />
           <div className="max-w-[51.188rem] ~pt-[4.3rem]/[5rem] ~pb-[2.5rem]/[4rem]">
@@ -263,7 +264,7 @@ const AipResourcesInnerPage = async ({
         </div>
         <ResourcesTabAndSelect
           resources="aip-resources"
-          currentTab={filterBySlug!.name}
+          currentTab={filterBySlug?.name}
           tabList={tabList}
           mainClassName="!pt-0"
           tabClassName="!w-full  !px-0"
@@ -278,25 +279,25 @@ const AipResourcesInnerPage = async ({
               <CustomFilter
                 key={i}
                 searchParams={{ ...SearchParam }}
-                filterKey={data.type}
-                type={data.type}
-                optionsArray={data.options}
+                filterKey={data?.type}
+                type={data?.type}
+                optionsArray={data?.options}
               />
             ))}
           </div>
         </div>
         <div className="pt-[3.25rem] pb-[7.5rem] grid md:grid-cols-2 lg:grid-cols-3 gap-[4.5rem]">
-          {response.map((item, i) => (
+          {response?.map((item, i) => (
             <ResourceCard
               // link={item.link}
-              isLinkOrPdf={item.isLinkOrPdf}
-              file={item.file}
-              fileLink={item.fileLink}
+              isLinkOrPdf={item?.isLinkOrPdf}
+              file={item?.file}
+              fileLink={item?.fileLink}
               key={i}
-              src={item.image}
-              title={item.title}
-              desc={item.description}
-              category={item.domain}
+              src={item?.image}
+              title={item?.title}
+              desc={item?.description}
+              category={item?.domain}
             />
           ))}
         </div>

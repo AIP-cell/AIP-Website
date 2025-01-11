@@ -2,21 +2,21 @@
 import { Radio, RadioGroup } from "@headlessui/react";
 
 type Props = {
-  selected: string;
-  setSelected: (value: string) => void;
+  type: string;
+  setType: (value: string) => void;
   radioArray: string[];
 };
 export default function CustomRadio({
-  selected,
-  setSelected,
+  type,
+  setType,
   radioArray,
 }: Props) {
   return (
     <div className="max-[23rem]:w-[18.5rem] ~w-[21.8rem]/[25.875rem] ">
       <RadioGroup
         //   by="name"
-        value={selected}
-        onChange={setSelected}
+        value={type}
+        onChange={setType}
         aria-label="Server size"
         className="flex flex-col gap-[0.75rem]"
       >

@@ -79,7 +79,7 @@ const Cities = ({ collaboration, slug }: Props) => {
   if (!client) {
     return;
   }
-  const cities = collaboration.cities;
+  const cities = collaboration?.cities;
   const fromDate = dayjs(cities.at(selectedIndex)?.fromDate).format("D");
   const toDate = dayjs(cities.at(selectedIndex)?.toDate).format("D MMMM YYYY");
   const timeFormate = dayjs(cities.at(selectedIndex)?.time).format("HH IST");
@@ -90,13 +90,13 @@ const Cities = ({ collaboration, slug }: Props) => {
         <div className="lg:col-span-2 flex flex-col gap-10  ~pr-0/[6.563rem]">
           <div className="font-playFair">
             <p className="leading-[3.25rem] tracking-[-.04rem] text-h3 text-midGray">
-              {collaboration.title}
+              {collaboration?.title}
             </p>
             <p className=" leading-[1.75rem] tracking-[-.02rem] font-playFairItalic text-h5 text-gray40 font-medium pt-[1rem]">
-              {collaboration.category}
+              {collaboration?.category}
             </p>
             <p className="font-inter leading-[1.4rem]  text-midGray  ~pt-[2rem]/[1.25rem] ~pr-0/[3rem]">
-              {collaboration.description}
+              {collaboration?.description}
             </p>
           </div>
 
@@ -121,7 +121,7 @@ const Cities = ({ collaboration, slug }: Props) => {
               />
               <div className="flex pt-[2rem]">
                 <a
-                  href={cities.at(selectedIndex)!.report}
+                  href={cities?.at(selectedIndex)?.report}
                   download
                   className="group bg-darkPurple border-2 border-darkPurple hover:bg-white  transition-all  hover:text-darkPurple text-white hover:border-2 hover:border-darkPurple px-7 py-3 flex items-center gap-[0.75rem] w-fit rounded-3xl"
                 >
@@ -153,15 +153,15 @@ const Cities = ({ collaboration, slug }: Props) => {
               </p>
               <div className="flex gap-4">
                 {cities
-                  .at(selectedIndex)!
-                  .organisationDetails.map((items, i) => (
+                  ?.at(selectedIndex)
+                  ?.organisationDetails.map((items, i) => (
                     <div
                       key={i}
                       className=" flex items-center bg-white border border-1 border-gray10 rounded-xl ~w-[9.46rem]/[11.813rem] ~h-[4rem]/20 overflow-hidden"
                     >
                       <div className="relative ~w-[9.46rem]/[11.813rem] ~h-[4rem]/20">
                         <Image
-                          src={StorageUrl + items.image}
+                          src={StorageUrl + items?.image}
                           className="object-contain "
                           fill
                           alt="foundation"
@@ -183,7 +183,7 @@ const Cities = ({ collaboration, slug }: Props) => {
                 In Collaboration With
               </p>
               <div className="flex gap-4">
-                {cities.at(selectedIndex)!.collaborations.map((items, i) => (
+                {cities?.at(selectedIndex)?.collaborations?.map((items, i) => (
                   <div
                     key={i}
                     className="~w-[7.75rem]/[9.688rem] bg-white flex items-center ~h-[4rem]/[5rem] border border-1 border-gray10 rounded-xl overflow-hidden"
@@ -191,7 +191,7 @@ const Cities = ({ collaboration, slug }: Props) => {
                     {/* ~py-[0.7rem]/[0.89rem] px-[0.3rem] */}
                     <div className="relative ~w-[7.75rem]/[9.688rem] ~h-[4rem]/[5rem]">
                       <Image
-                        src={StorageUrl + items.image}
+                        src={StorageUrl + items?.image}
                         className=" object-contain "
                         fill
                         alt="foundation"
@@ -240,7 +240,7 @@ const Cities = ({ collaboration, slug }: Props) => {
           />
           <div className="flex pt-[1.382rem]">
             <a
-              href={cities.at(selectedIndex)!.report}
+              href={cities?.at(selectedIndex)?.report}
               download
               className="group bg-darkPurple border-2 border-darkPurple hover:bg-white  transition-all  hover:text-darkPurple text-white hover:border-2 hover:border-darkPurple px-7 py-3 flex items-center gap-[0.75rem] w-fit rounded-3xl"
             >
@@ -260,20 +260,28 @@ const Cities = ({ collaboration, slug }: Props) => {
           alt="peach-curve"
           className="hidden lg:block absolute top-[-25rem] h-[75rem] w-full z-10"
         />
-        <div className="container mx-auto relative ~px-[1.25rem]/[7.8rem] ~pt-[5rem]/[12.75rem]">
-          <Agenda agendaArray={cities.at(selectedIndex)!.agenda} />
-          <InnerCollaborationsVideo video={cities.at(selectedIndex)!.Video} />
-        </div>
-        <div className="container mx-auto ~pt-[3rem]/0">
-          <Gallery
-            galleryImages={cities.at(selectedIndex)!.gallery.galleryImages}
-            galleryLink={`/our-work/collaborations/${slug}/event-gallery`}
-          />
-        </div>
-        <Media media={cities.at(selectedIndex)!.media} />
-        <InnerCollaborationTestimonials
-          testimonials={cities.at(selectedIndex)!.testimonials}
-        />
+        {cities.length != 0 && (
+          <div className="container mx-auto relative ~px-[1.25rem]/[7.8rem] ~pt-[5rem]/[12.75rem]">
+            <Agenda agendaArray={cities?.at(selectedIndex)?.agenda} />
+            <InnerCollaborationsVideo
+              video={cities?.at(selectedIndex)?.Video}
+            />
+          </div>
+        )}
+        {cities.length != 0 && (
+          <>
+            <div className="container mx-auto ~pt-[3rem]/0">
+              <Gallery
+                galleryImages={cities?.at(selectedIndex)?.gallery.galleryImages}
+                galleryLink={`/our-work/collaborations/${slug}/event-gallery`}
+              />
+            </div>
+            <Media media={cities?.at(selectedIndex)!.media} />
+            <InnerCollaborationTestimonials
+              testimonials={cities?.at(selectedIndex)!.testimonials}
+            />
+          </>
+        )}
       </div>
     </div>
   );

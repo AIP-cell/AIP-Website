@@ -5,9 +5,9 @@ import { ButtonAnimation } from "../animations/ButtonAnimation";
 import { StorageUrl } from "@/utils/BaseUrl";
 import Link from "next/link";
 type Props = {
-  title: string;
-  desc: string;
-  image: string;
+  title?: string;
+  desc?: string;
+  image?: string;
   index: number;
   foundationName?: string;
   foundationNameClassName?: string;
@@ -41,12 +41,21 @@ const CaseStudy = ({
         )}
       >
         <div className="w-full ~h-[17.5rem]/[20rem] rounded-3xl overflow-hidden relative ">
-          <Image
-            src={StorageUrl + image}
-            alt="caseStudy-image"
-            className="object-cover rounded-3xl h-fit"
-            fill
-          />
+          {image ? (
+            <Image
+              src={StorageUrl + image}
+              alt="caseStudy-image"
+              className="object-cover rounded-3xl h-fit"
+              fill
+            />
+          ) : (
+            <Image
+              src="/images/case-studies/caseStudy1.png"
+              alt="caseStudy-image"
+              className="object-cover rounded-3xl h-fit"
+              fill
+            />
+          )}
         </div>
       </div>
       <div
@@ -70,18 +79,20 @@ const CaseStudy = ({
         <p className="text-midGray ~pt-[1rem]/[1.25rem] ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]">
           {desc}
         </p>
-        <Link
-          href={StorageUrl + link}
-          target="_blank"
-          download={toDownload}
-          className="~pt-[2rem]/[2.5rem]"
-        >
-          <ButtonAnimation className=" rounded-full  border-2 border-darkPurple hover:bg-darkPurple ">
-            <h3 className="text-darkPurple hover:text-white font-medium text-h9Copy5 leading-[1.225rem] py-[0.75rem] px-[1.75rem]">
-              Read More
-            </h3>
-          </ButtonAnimation>
-        </Link>
+        {isLinkOrPdf && (
+          <Link
+            href={StorageUrl + link}
+            target="_blank"
+            download={toDownload}
+            className="~pt-[2rem]/[2.5rem]"
+          >
+            <ButtonAnimation className=" rounded-full  border-2 border-darkPurple hover:bg-darkPurple ">
+              <h3 className="text-darkPurple hover:text-white font-medium text-h9Copy5 leading-[1.225rem] py-[0.75rem] px-[1.75rem]">
+                Read More
+              </h3>
+            </ButtonAnimation>
+          </Link>
+        )}
       </div>
     </div>
   );

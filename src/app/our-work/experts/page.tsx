@@ -8,6 +8,7 @@ import NetworkOfExperts from "./_components/NetworkOfExperts";
 import ExpertsShelves from "./_components/ExpertsShelves";
 import { Api } from "@/api/Api";
 import { TOurWorkExpertsData } from "@/api/type";
+import { notFound } from "next/navigation";
 
 export const dynamic = "force-dynamic";
 const getOurWorkExpertsApi = async (): Promise<TOurWorkExpertsData> => {
@@ -16,8 +17,11 @@ const getOurWorkExpertsApi = async (): Promise<TOurWorkExpertsData> => {
 };
 const page = async () => {
   const response = await getOurWorkExpertsApi();
-  const people = response.experts;
-  const expertShelves = response.selectedWorks;
+  if (!response) {
+    notFound();
+  }
+  const people = response?.experts;
+  const expertShelves = response?.selectedWorks;
   return (
     <div className="pt-[5rem]">
       <ExpertHeroSection />
@@ -25,8 +29,10 @@ const page = async () => {
       <AsAnExperts />
       <ExpertsJoinTheFlow />
       <WhyPartner />
-      <NetworkOfExperts people={people} />
-      <ExpertsShelves expertShelves={expertShelves} />
+      {people.length != 0 && <NetworkOfExperts people={people} />}
+      {expertShelves.length != 0 && (
+        <ExpertsShelves expertShelves={expertShelves} />
+      )}
     </div>
   );
 };

@@ -9,6 +9,7 @@ import CustomSelect from "@/components/custom/CustomSelect";
 import CustomFilter from "@/components/custom/CustomFilter";
 import { Api } from "@/api/Api";
 import { TProjectPrograms } from "@/api/type";
+import { notFound } from "next/navigation";
 
 const datas = [
   {
@@ -131,6 +132,9 @@ const page = async ({
     events,
     date,
   });
+  if (!response) {
+    notFound();
+  }
   // console.log("searchParams::", searchParams);
   return (
     <div className="~pt-[4.4rem]/[5rem]">
@@ -173,21 +177,23 @@ const page = async ({
             </div>
           </div>
 
-          <div className="pt-[3.25rem] pb-[5rem] grid md:grid-cols-3 gap-[4.5rem]">
-            {response.map((item, i) => (
-              <ResourceCard
-                key={i}
-                // link={`/our-work/projects-and-programs/${item.slug}`}
-                projectsAndProgram
-                slug={item.slug}
-                src={item.image}
-                title={item.title}
-                desc={item.description}
-                // category={item.category}
-                date={item.date}
-              />
-            ))}
-          </div>
+          {response.length != 0 && (
+            <div className="pt-[3.25rem] pb-[5rem] grid md:grid-cols-3 gap-[4.5rem]">
+              {response?.map((item, i) => (
+                <ResourceCard
+                  key={i}
+                  // link={`/our-work/projects-and-programs/${item.slug}`}
+                  projectsAndProgram
+                  slug={item.slug}
+                  src={item.image}
+                  title={item.title}
+                  desc={item.description}
+                  // category={item.category}
+                  date={item.date}
+                />
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </div>

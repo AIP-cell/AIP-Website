@@ -35,9 +35,6 @@ export const Api = {
       const response = await axiosClient.get(
         `aip-resources?category=${slug}&${query.toString()}`
       );
-      // const response = await axiosClient.get(
-      //   `aip-resources?category=${slug}&${new URLSearchParams(data)}`
-      // );
       return response.data;
     } catch (error) {
       console.log(error);
@@ -79,23 +76,6 @@ export const Api = {
       return null;
     }
   },
-
-  // getCuratedResources: async (data: {
-  //   category: string;
-  //   domain?: string;
-  //   typeOfContent?: string;
-  //   date?: string;
-  // }) => {
-  //   try {
-  //     const response = await axiosClient.get(
-  //       `curated-resources?${new URLSearchParams(data)}`
-  //     );
-  //     return response.data;
-  //   } catch (error) {
-  //     console.log(error);
-  //     return null;
-  //   }
-  // },
   getFounderNetwork: async () => {
     try {
       const response = await axiosClient.get(`founder-networks`);
@@ -182,9 +162,7 @@ export const Api = {
       const response = await axiosClient.get(
         `projects-programs?${query.toString()}`
       );
-      // const response = await axiosClient.get(
-      //   `projects-programs?${new URLSearchParams(data)}`
-      // );
+
       return response.data;
     } catch (error) {
       console.log(error);
@@ -212,7 +190,6 @@ export const Api = {
       const response = await axiosClient.get(
         `collaborations?${query.toString()}`
       );
-      // const response = await axiosClient.get(`collaborations`);
       return response.data;
     } catch (error) {
       console.log(error);
@@ -267,6 +244,16 @@ export const Api = {
   getCareers: async (page: string) => {
     try {
       const response = await axiosClient.get(`careers?page=${page}`);
+      return response.data;
+    } catch (error) {
+      console.log(error);
+      return null;
+    }
+  },
+  postContact: async (body: object) => {
+    console.log("body:::", body);
+    try {
+      const response = await axiosClient.post(`contact-form`, body);
       return response.data;
     } catch (error) {
       console.log(error);

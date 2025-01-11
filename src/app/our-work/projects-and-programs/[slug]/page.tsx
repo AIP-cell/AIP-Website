@@ -20,17 +20,21 @@ const getOneProjectsProgramsApi = async (
 const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const asyncParam = (await params).slug;
   const response = await getOneProjectsProgramsApi(asyncParam);
-  
+
   const heroSectionData = response.projectAndProgram;
   const gallery = response.projectAndProgram.gallery;
   const media = response.projectAndProgram.media;
   const testimonials = response.projectAndProgram.testimonials;
   return (
     <div className="pt-[5rem]">
-      <InnerSectionOne heroSectionData={heroSectionData} />
-      <Gallery galleryImages={gallery.galleryImages} />
-      <Media media={media} />
-      <TestimonialsProjectProgram testimonials={testimonials}/>
+      {heroSectionData && <InnerSectionOne heroSectionData={heroSectionData} />}
+      {gallery.galleryImages.length != 0 && (
+        <Gallery galleryImages={gallery.galleryImages} />
+      )}
+      {media.length != 0 && <Media media={media} />}
+      {testimonials.length != 0 && (
+        <TestimonialsProjectProgram testimonials={testimonials} />
+      )}
     </div>
   );
 };

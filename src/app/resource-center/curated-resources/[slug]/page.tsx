@@ -10,67 +10,7 @@ import { Api } from "@/api/Api";
 import { TAipResourcesCategory } from "@/api/type";
 import CustomFilter from "@/components/custom/CustomFilter";
 import ResourcesTabAndSelect from "../../_components/ResourcesTabAndSelect";
-
-const resourcesArray = [
-  "AIP Updates",
-  "Reports & Publications",
-  " Newsletter",
-  " Inspirational Voices",
-  " In the Media",
-  " Gallery",
-];
-const datas = [
-  {
-    src: "/svg/resource-page/resource1.svg",
-    title: "Wealth with Purpose- a report on Indian Philanthropy",
-    desc: "This report a collaborative effort between Accelerate India Philanthropy (AIP) and Boston Consulting Group (BCG) delves into the motivations, challenges, strategies and decision-making processes of UHNIs across various stages of philanthropy. We interviewed 100 UHNIs as part of a selective sample, ensuring diverse representation across net worth, geographical location, source of wealth and stage of giving.",
-    category: "Field",
-  },
-  {
-    src: "/svg/resource-page/resource2.svg",
-    title: "Getting Non-profits in India Scale Ready",
-    desc: "A primary research report by AIP that presents a nationally representative view of the challenges that 65+ non-profits face in their journey to scale impact and recommends principles for philanthropists in supporting their grantees.",
-    category: "Field",
-  },
-  {
-    src: "/svg/resource-page/resource2.svg",
-    title: "Enabling Good Vol 11",
-    desc: "A monthly roundup from the world of philanthropy. In this edition, we introduce our five new Founders-Radhika and Kartik Bharat Ram, Rati Forbes, Mathew Cyriac, Pankaj Gupta, and Swati Apte and Alok Kshirsagar-whose expertise and shared passion for philanthropy brings remarkable value to our community",
-    category: "Field",
-  },
-  {
-    src: "/svg/resource-page/resource1.svg",
-    title: "Wealth with Purpose- a report on Indian Philanthropy",
-    desc: "This report a collaborative effort between Accelerate India Philanthropy (AIP) and Boston Consulting Group (BCG) delves into the motivations, challenges, strategies and decision-making processes of UHNIs across various stages of philanthropy. We interviewed 100 UHNIs as part of a selective sample, ensuring diverse representation across net worth, geographical location, source of wealth and stage of giving.",
-    category: "Field",
-  },
-  {
-    src: "/svg/resource-page/resource2.svg",
-    title: "Getting Non-profits in India Scale Ready",
-    desc: "A primary research report by AIP that presents a nationally representative view of the challenges that 65+ non-profits face in their journey to scale impact and recommends principles for philanthropists in supporting their grantees.",
-    category: "Field",
-  },
-  {
-    src: "/svg/resource-page/resource2.svg",
-    title: "Enabling Good Vol 11",
-    desc: "A monthly roundup from the world of philanthropy. In this edition, we introduce our five new Founders-Radhika and Kartik Bharat Ram, Rati Forbes, Mathew Cyriac, Pankaj Gupta, and Swati Apte and Alok Kshirsagar-whose expertise and shared passion for philanthropy brings remarkable value to our community",
-    category: "Field",
-  },
-];
-const domainArray = [
-  "All",
-  "Art & Culture",
-  "Education",
-  "Environment",
-  "Health & Nutrition",
-  "Legal & Judiciary",
-  "Livelihood",
-  "Disability",
-  "Rural Development",
-  "Sports",
-  "WASH",
-  "Women & Child",
-];
+import { notFound } from "next/navigation";
 
 const tabList = [
   {
@@ -305,7 +245,7 @@ const CuratedResourcesInnerPage = async ({
     date,
   });
   if (!response) {
-    return;
+    notFound();
   }
   const filterBySlug = tabList.find((items) => items.slug === param.slug);
   const filterData = curatedResourcesFilter.find(
@@ -320,7 +260,7 @@ const CuratedResourcesInnerPage = async ({
             linkOne="/resource-center"
             textTwo="Curated Resources"
             linkTwo="/resource-center/curated-resources"
-            textThree={filterBySlug!.name}
+            textThree={filterBySlug?.name}
             linkThree={`/resource-center/curated-resources/${param.slug}`}
           />
           <div className="max-w-[51.188rem] ~pt-[4.3rem]/[5rem] ~pb-[2.5rem]/[4rem]">
@@ -331,7 +271,7 @@ const CuratedResourcesInnerPage = async ({
         </div>
         <ResourcesTabAndSelect
           resources="curated-resources"
-          currentTab={filterBySlug!.name}
+          currentTab={filterBySlug?.name}
           tabList={tabList}
           mainClassName="!pt-0"
           tabClassName="!w-full  !px-0"
@@ -354,23 +294,23 @@ const CuratedResourcesInnerPage = async ({
           </div>
         </div>
         <div className="pt-[3.25rem] pb-[7.5rem] grid md:grid-cols-2 lg:grid-cols-3 gap-[4.5rem]">
-          {response.map((item, i) => (
+          {response?.map((item, i) => (
             <ResourceCard
               // link={
               //   param.slug === "experts"
               //     ? `/resource-center/curated-resources/experts/${item.slug}`
               //     : item.link
               // }
-              slug={item.slug}
-              isLinkOrPdf={item.isLinkOrPdf}
-              file={item.file}
-              fileLink={item.fileLink}
+              slug={item?.slug}
+              isLinkOrPdf={item?.isLinkOrPdf}
+              file={item?.file}
+              fileLink={item?.fileLink}
               key={i}
-              src={item.image}
-              title={item.title}
-              desc={item.description}
-              domain={item.domain}
-              category={item.category}
+              src={item?.image}
+              title={item?.title}
+              desc={item?.description}
+              domain={item?.domain}
+              category={item?.category}
             />
           ))}
         </div>

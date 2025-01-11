@@ -65,28 +65,28 @@ const NetworkOfExperts = ({ people }: Props) => {
       </p>
       <div className="~pt-[3.5rem]/[5rem] ~px-[1.25rem]/[7.8rem]">
         <div className=" grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center ~gap-x-[1.25rem]/[5.625rem] ~gap-y-[3.5rem]/[4.5rem]">
-          {people.map((people, i) => (
+          {people?.map((people, i) => (
             <div key={i} className="">
               {i % 2 == 0 ? (
                 <ATeamCard
                   link=""
-                  image={people.image}
+                  image={people?.image}
                   titleClassName="underline decoration-[1.5px] underline-offset-4"
                   title2ClassName="underline decoration-[1.5px] underline-offset-4"
-                  title={people.name}
+                  title={people?.name}
                   // title2={people.title2}
-                  desc={people.organisation}
+                  desc={people?.organisation}
                   linkedin={false}
                 />
               ) : (
                 <PTeamCard
                   link=""
-                  image={people.image}
+                  image={people?.image}
                   titleClassName="underline decoration-[1.5px] underline-offset-4"
                   title2ClassName="underline decoration-[1.5px] underline-offset-4"
-                  title={people.name}
+                  title={people?.name}
                   // title2={people.title2}
-                  desc={people.organisation}
+                  desc={people?.organisation}
                   linkedin={false}
                 />
               )}

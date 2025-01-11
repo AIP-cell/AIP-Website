@@ -33,12 +33,14 @@ const Spotlight = ({ eventData }: Props) => {
           Development Challenges. */}
         </p>
 
-        <div className="pt-[1.25rem]">
-          <BgButton
-            text="Read More"
-            className="px-[2rem] py-[0.75rem] ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]"
-          />
-        </div>
+        {eventData && (
+          <div className="pt-[1.25rem]">
+            <BgButton
+              text="Read More"
+              className="px-[2rem] py-[0.75rem] ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]"
+            />
+          </div>
+        )}
       </div>
       <div className="relative col-span-2 lg:col-span-1">
         <div className="relative z-[10] shrink-0  ~h-[14rem]/[22.1rem] rounded-2xl overflow-hidden">
@@ -47,7 +49,7 @@ const Spotlight = ({ eventData }: Props) => {
             // src={Upcoming}
             alt="upcoming-Image"
             fill
-            className="object-cover h-full w-full"
+            className="object-cover h-full w-full overflow-y-scroll"
           />
         </div>
         <div className="absolute ~bottom-[-1.8rem]/[-1.5rem]  ~right-[-1.6rem]/[-4.5rem] ~size-[10.3rem]/[18.4rem]">

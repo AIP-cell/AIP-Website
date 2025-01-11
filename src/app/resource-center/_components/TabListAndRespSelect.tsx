@@ -31,7 +31,7 @@ const TabListAndRespSelect = ({
   selectedIndex,
   setSelectedIndex,
 }: Props) => {
-  const router = useRouter();   
+  const router = useRouter();
 
   return (
     <>
@@ -43,7 +43,7 @@ const TabListAndRespSelect = ({
             <Tab
               onClick={() => {
                 const query = generatingSearchParam({
-                  selected: items?.tab,
+                  selected: items.tab ? items.tab : items.year && items.year,
                   // domain,
                 });
                 router.push(`?${query.toString()}`, {
@@ -52,7 +52,7 @@ const TabListAndRespSelect = ({
               }}
               className={` ~px-4/[2.4rem] md:flex justify-center w-full items-center py-[.75rem] data-[selected]:bg-darkPurple data-[selected]:text-white data-[selected]:rounded-full text-h9Copy5 leading-[1.22rem] font-inter data-[selected]:outline-none ${textClassName}`}
             >
-              {items?.tab}
+              {items.tab ? items?.tab : items.year && items?.year}
             </Tab>
           </div>
         ))}

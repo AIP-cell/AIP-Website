@@ -2,51 +2,7 @@ import { TPeople } from "@/api/type";
 import ATeamCard from "@/components/cards/aCards/ATeamCard";
 import PTeamCard from "@/components/cards/pCards/PTeamCard";
 import React from "react";
-const peopleDataRow1 = [
-  {
-    title1: "Aakash",
-    title2: "Chaudhry",
-    desc: "Aakash Educational Services",
-  },
-  {
-    title1: "Ambarish",
-    title2: "Raghuvanshi",
-    desc: "Info Edge India",
-  },
 
-  {
-    title1: "GV",
-    title2: "Prasad",
-    desc: "Dr. Reddy's Lab",
-  },
-  {
-    title1: "Karishma",
-    title2: "Shanghvi",
-    desc: "Sun Pharma",
-  },
-
-  {
-    title1: "Mukul",
-    title2: "Agrawal",
-    desc: "Param Capital",
-  },
-  {
-    title1: "Aakash",
-    title2: "Chaudhry",
-    desc: "Newgen Software Tech",
-  },
-
-  {
-    title1: "Pia",
-    title2: "Singh",
-    desc: "DLF Foundation",
-  },
-  {
-    title1: "Ravindra",
-    title2: "Chamaria",
-    desc: "Infinity Infotech Parks",
-  },
-];
 type Props = {
   people: TPeople[];
 };
@@ -61,22 +17,22 @@ const NposPartners = ({ people }: Props) => {
       </h2>
       <div className="~pt-[2.5rem]/[5rem] ~px-[1.25rem]/[7.8rem]">
         <div className=" grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center ~gap-[1.25rem]/[5.625rem]">
-          {people.map((people, i) => (
+          {people?.map((people, i) => (
             <div key={i} className="">
               {i % 2 == 0 ? (
                 <ATeamCard
-                  title={people.name}
+                  title={people?.name}
                   // title2={people.title2}
-                  desc={people.designation}
-                  image={people.image}
+                  desc={people?.designation}
+                  image={people?.image}
                   linkedin={false}
                 />
               ) : (
                 <PTeamCard
-                  title={people.name}
+                  title={people?.name}
                   // title2={people.title2}
-                  desc={people.designation}
-                  image={people.image}
+                  desc={people?.designation}
+                  image={people?.image}
                   linkedin={false}
                 />
               )}

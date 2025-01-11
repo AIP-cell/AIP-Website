@@ -3,9 +3,9 @@ import React from "react";
 import dayjs from "dayjs";
 import { StorageUrl } from "@/utils/BaseUrl";
 type Props = {
-  src: string;
-  title: string;
-  desc: string;
+  src?: string;
+  title?: string;
+  desc?: string;
   category?: string;
   name?: string;
   date?: string;
@@ -49,14 +49,16 @@ const ResourceCard = ({
   return (
     // justify-center
     <div className="flex flex-col  items-center ~gap-[1.25rem]/[0.75rem]">
-      <div className="relative w-full ~h-[19.688rem]/[16.594rem]">
-        <Image
-          src={StorageUrl + src}
-          alt="svg"
-          fill
-          className="object-cover rounded-[1.25rem]"
-        />
-      </div>
+      {src && (
+        <div className="relative w-full ~h-[19.688rem]/[16.594rem]">
+          <Image
+            src={StorageUrl + src}
+            alt="svg"
+            fill
+            className="object-cover rounded-[1.25rem]"
+          />
+        </div>
+      )}
       <div className="flex flex-col w-full gap-[0.75rem]">
         <a
           href={link}

@@ -54,15 +54,15 @@ const NpoSpotlight = ({ casestudies }: Props) => {
             <CaseStudy
               key={i}
               index={i}
-              foundationName={item.organisation}
+              foundationName={item?.organisation}
               foundationNameClassName="!pt-[1.25rem]"
-              initiativeName={item.initiativeName}
-              title={item.title}
-              desc={item.description}
-              image={item.image}
-              isLinkOrPdf={item.isLinkOrPdf}
-              file={item.file}
-              fileLink={item.fileLink}
+              initiativeName={item?.initiativeName}
+              title={item?.title}
+              desc={item?.description}
+              image={item?.image}
+              isLinkOrPdf={item?.isLinkOrPdf}
+              file={item?.file}
+              fileLink={item?.fileLink}
             />
           ))}
         </div>

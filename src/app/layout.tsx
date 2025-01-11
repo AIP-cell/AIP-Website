@@ -4,6 +4,8 @@ import "./globals.css";
 import Header from "@/_layout/header/Header";
 import Footer from "@/_layout/footer/Footer";
 import localFont from "next/font/local";
+import QueryProvider from "./providers/QueryProviderClient";
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({ subsets: ["latin"], variable: "--inter" });
 const playfairDisplay = localFont({
@@ -30,9 +32,12 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${playfairDisplay.variable} ${playfairDisplayItalic.variable} !overflow-y-auto bg-bgLightPeach font-inter no-scrollbar overflow-x-hidden  `}
       >
-        <Header />
-        {children}
-        <Footer />
+        <QueryProvider>
+          <Toaster position="top-right" containerClassName="mt-4" />
+          <Header />
+          {children}
+          <Footer />
+        </QueryProvider>
       </body>
     </html>
   );

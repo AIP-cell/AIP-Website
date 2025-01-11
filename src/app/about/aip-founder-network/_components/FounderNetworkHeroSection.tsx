@@ -5,8 +5,8 @@ import OvalPeach from "@public/svg/ovalPeach.svg";
 import React from "react";
 
 type Props = {
-  desc1: string;
-  desc2: string;
+  desc1?: string;
+  desc2?: string;
 };
 const FounderNetworkHeroSection = ({ desc1, desc2 }: Props) => {
   return (
@@ -29,9 +29,9 @@ const FounderNetworkHeroSection = ({ desc1, desc2 }: Props) => {
           linkTwo="/about/aip-founder-network"
         />
         <div className="~pl-5/[7.81rem] ~pr-5/[14.375rem]">
-          <h4 className="~leading-[1.138rem]/[1.3rem] ~text-h9Copy5/h9Copy4 font-semibold uppercase text-purple40 ~pt-[4.313rem]/[6.5rem]">
+          {/* <h4 className="~leading-[1.138rem]/[1.3rem] ~text-h9Copy5/h9Copy4 font-semibold uppercase text-purple40 ~pt-[4.313rem]/[6.5rem]">
             A Grant-maker not a fundraiser
-          </h4>
+          </h4> */}
           <div className="~pt-[1.25rem]/[0.75rem] ">
             <div className=" ~text-h5/h4 text-gray80  ~leading-[1.75rem]/[2.6rem] font-medium font-playFair">
               {desc1}
