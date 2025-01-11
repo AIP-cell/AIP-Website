@@ -88,6 +88,7 @@ export type TTestimonials = {
 };
 export type TCaseStudies = {
   title: string;
+  slug: string;
   organisationName: string;
   organisation: string;
   philanthropistName: string;

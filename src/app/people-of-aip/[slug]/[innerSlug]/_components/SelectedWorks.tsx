@@ -29,7 +29,7 @@ const datas = [
   },
 ];
 type Props = {
-  works: TSelectedWorks[];
+  works?: TSelectedWorks[];
 };
 const SelectedWorks = ({ works }: Props) => {
   return (
@@ -39,7 +39,7 @@ const SelectedWorks = ({ works }: Props) => {
         Works
       </h2>
       <div className="~pt-[2.5rem]/[3.25rem] ~pb-[2.5rem]/[5.75rem] grid md:grid-cols-2 lg:grid-cols-3 ~gap-[2.5rem]/[4.5rem] ~px-[1.25rem]/[8.125rem]">
-        {works.map((item, i) => (
+        {works?.map((item, i) => (
           <ResourceCard
             key={i}
             src={item.image}

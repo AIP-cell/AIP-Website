@@ -27,7 +27,7 @@ const page = async () => {
       <HelpingRivers />
       <NetworkContactSection />
       <JoinTheFlow />
-      {casestudies && <NetworkCaseStudies casestudies={casestudies} />}
+      {casestudies.length!=0 && <NetworkCaseStudies casestudies={casestudies} />}
       {/* <CaseStudies  bottomCaseStudyCurveSvg={CurvePurple} /> */}
       {peopleData && <PeopleWeWorkWith peopleData={peopleData} />}
     </div>

@@ -28,11 +28,11 @@ const page = async () => {
 
   return (
     <div className="pt-[5rem]">
-      {desc1 && desc2 && (
-        <FounderNetworkHeroSection desc1={desc1} desc2={desc2} />
-      )}
+      {desc1 && <FounderNetworkHeroSection desc1={desc1} desc2={desc2} />}
       {methodsOfJoining && <Join methodsOfJoining={methodsOfJoining} />}
-      {testimonials && <TestimonialsFromFounders testimonials={testimonials} />}
+      {testimonials.length != 0 && (
+        <TestimonialsFromFounders testimonials={testimonials} />
+      )}
     </div>
   );
 };

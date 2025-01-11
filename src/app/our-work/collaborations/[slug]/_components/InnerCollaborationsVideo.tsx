@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useRef } from "react";
 import videoPlaySvg from "@public/svg/playButtonPurple.svg";
 import LeftCurve from "@public/svg/products-and-services/collaborations/leftPeachCurve.svg";
 
@@ -9,6 +10,7 @@ type Props = {
   linkOrVideo?: string;
 };
 const InnerCollaborationsVideo = ({ video, linkOrVideo }: Props) => {
+  // const ref = useRef();
   return (
     <div className="relative ">
       <Image
@@ -20,7 +22,11 @@ const InnerCollaborationsVideo = ({ video, linkOrVideo }: Props) => {
       <div className="~pt-[2rem]/[3.5rem]   container relative flex justify-center mx-auto">
         {linkOrVideo === "Video" ? (
           <div className="w-[64.375rem] relative flex justify-center items-center ~h-[12.313rem]/[35.313rem] overflow-hidden rounded-lg">
-            <video className="z-10 border-2 absolute inset-0 w-full h-full ">
+            <video
+              // ref="video"
+              controls
+              className="z-10 border-2 absolute inset-0 w-full h-full"
+            >
               <source src={StorageUrl + video} type="video/mp4" />
             </video>
             <Image

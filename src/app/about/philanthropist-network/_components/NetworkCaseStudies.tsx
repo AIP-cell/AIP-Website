@@ -6,7 +6,7 @@ import CurveBg from "@public/svg/about/aip-impact/caseStudyPeachCurve.svg";
 import { TCaseStudies } from "@/api/type";
 
 type Props = {
-  casestudies: TCaseStudies[];
+  casestudies?: TCaseStudies[];
 };
 const NetworkCaseStudies = ({ casestudies }: Props) => {
   return (
@@ -29,7 +29,7 @@ const NetworkCaseStudies = ({ casestudies }: Props) => {
           </span>
         </h2>
         <div className="~pt-[2.5rem]/[6.56rem]  flex flex-col ~gap-[3.5rem]/[5.5rem] ~px-[1.25rem]/[7.8rem]">
-          {casestudies.map((item, i: number) => (
+          {casestudies?.map((item, i: number) => (
             <CaseStudy
               key={i}
               index={i}

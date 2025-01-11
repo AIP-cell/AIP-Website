@@ -35,22 +35,11 @@ const FounderNetworkHeroSection = ({ desc1, desc2 }: Props) => {
           <div className="~pt-[1.25rem]/[0.75rem] ">
             <div className=" ~text-h5/h4 text-gray80  ~leading-[1.75rem]/[2.6rem] font-medium font-playFair">
               {desc1}
-              {/* <p>AIP is by and for philanthropists - </p>
-              to inspire, influence and inform strategic giving.
-              <p> AIP’s Core Founders are Ashish and Manisha Dhawan</p>
-              <p>(The Convergence Foundation), Rohini Nilekani </p>
-              <p>(RohiniNilekani Philanthropies), Amit and Archana Chandra</p>
-              (ATE Chandra Foundation) and Vishal Tulsyan. */}
             </div>
-            <div className=" ~text-h5/h4 text-gray80  ~leading-[1.75rem]/[2.6rem] font-medium font-playFair ~pt-[2rem]/[3rem]">
+            {/* <div className=" ~text-h5/h4 text-gray80  ~leading-[1.75rem]/[2.6rem] font-medium font-playFair ~pt-[2rem]/[3rem]">
               {desc2}
-              {/* They are joined by ~30 Founders who have committed to support AIP,
-              help expand this movement, and inspire others. The AIP umbrella
-              has so far touched over 125 philanthropists, who are at different
-              stages in their philanthropic journey, yet are bound by a shared
-              vision for meaningful philanthropy that aids India’s
-              transformation. */}
-            </div>
+             
+            </div> */}
           </div>
         </div>
       </div>

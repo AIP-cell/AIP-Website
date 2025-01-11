@@ -26,7 +26,7 @@ const caseStudyData = [
   },
 ];
 type Props = {
-  casestudies: TCaseStudies[];
+  casestudies?: TCaseStudies[];
 };
 
 const NpoSpotlight = ({ casestudies }: Props) => {
@@ -50,10 +50,11 @@ const NpoSpotlight = ({ casestudies }: Props) => {
           </span>
         </h2>
         <div className="~pt-[2.5rem]/[6.56rem] flex flex-col ~gap-[3.5rem]/[5.5rem] ~px-[1.25rem]/[7.8rem]">
-          {casestudies.map((item, i: number) => (
+          {casestudies?.map((item, i: number) => (
             <CaseStudy
               key={i}
               index={i}
+              slug={item?.slug}
               foundationName={item?.organisation}
               foundationNameClassName="!pt-[1.25rem]"
               initiativeName={item?.initiativeName}

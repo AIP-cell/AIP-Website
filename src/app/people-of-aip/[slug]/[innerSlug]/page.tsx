@@ -32,7 +32,7 @@ const InnerTeamPage = async ({
   if (!response) {
     notFound();
   }
-  const team = response.teams;
+  const team = response?.teams;
   return (
     <div className="pt-[5rem]">
       <div className="w-full relative ">
@@ -48,7 +48,7 @@ const InnerTeamPage = async ({
               linkOne="/people-of-aip"
               textTwo={urlParams.slug}
               linkTwo="/people-of-aip/core-founders"
-              textThree={`${team.name}`}
+              textThree={`${team?.name}`}
               linkThree={`/people-of-aip/${urlParams.slug}/${urlParams.innerSlug}`}
             />
             <div className="~pt-[4.3rem]/[5rem] flex flex-col-reverse lg:grid grid-cols-3 gap-[1.238rem]">
@@ -109,7 +109,7 @@ const InnerTeamPage = async ({
               </div>
               <div className="col-span-1 relative">
                 <PSvg
-                  src={StorageUrl + team.image}
+                  src={StorageUrl + team?.image}
                   className="relative z-10 ~w-[18.438rem]/[25rem]"
                 />
                 <div className=" block md:hidden">
@@ -141,7 +141,7 @@ const InnerTeamPage = async ({
             </div>
           </div>
         </div>
-        {team.selectedWorks.length != 0 && (
+        {team?.selectedWorks?.length != 0 && (
           <SelectedWorks works={team.selectedWorks} />
         )}
       </div>
