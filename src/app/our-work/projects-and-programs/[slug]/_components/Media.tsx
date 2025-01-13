@@ -69,13 +69,14 @@ const Media = ({ media }: Props) => {
         </div>
         <div
           ref={carouselRef}
-          className="flex snap-x snap-mandatory pointer-events-none w-full overflow-x-scroll no-scrollbar  ~gap-[1.25rem]/[4.5rem] lg:justify-center "
+          className="flex snap-x snap-mandatory  w-full overflow-x-scroll no-scrollbar  ~gap-[1.25rem]/[4.5rem] lg:justify-center "
         >
-          {media.map((media, i) => (
+          {media?.map((media, i) => (
             <MediaCard
               mediaArrayLength={mediaArrayLength}
               key={i}
               index={i}
+              link={media.link}
               title={media.title}
               desc={media.description}
               ddmmyy={media.date}

@@ -29,9 +29,7 @@ const NpoJoinTheFlow = () => {
       <div className="relative container mx-auto">
         <div className="relative flex flex-col items-center justify-center ~pt-0/[8.43rem]">
           <h2 className="font-playFair text-gray80 ~text-h4/h2 ~leading-[2.6rem]/[3.3rem]">
-            <span className="text-textPurple font-playFairItalic">
-              Join
-            </span>{" "}
+            <span className="text-textPurple font-playFairItalic">Join</span>{" "}
             The Flow
           </h2>
           <p className="text-midGray text-center ~px-5/[20.94rem] ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] ~pt-[1.5rem]/[1.25rem]">
@@ -44,11 +42,13 @@ const NpoJoinTheFlow = () => {
               text="Register With Us"
               className="text-h9Copy5 leading-[1.225rem] py-[0.75rem] px-[1.75rem]"
             />
-            <OutlineButton
-              text="A Member Already? Login!"
-              className="text-h9Copy5 leading-[1.225rem] py-[0.75rem] px-[1.75rem] font-medium "
-              buttonClassName="rounded-full h-fit"
-            />
+            <ButtonAnimation>
+              <OutlineButton
+                text="A Member Already? Login!"
+                className="text-h9Copy5 leading-[1.225rem] py-[0.75rem] px-[1.75rem] font-medium "
+                buttonClassName="rounded-full h-fit "
+              />
+            </ButtonAnimation>
             <ButtonAnimation className=" text-white hover:text-darkPurple bg-darkPurple hover:bg-white rounded-full  py-[0.75rem] px-[1.75rem]">
               <Link
                 href=""

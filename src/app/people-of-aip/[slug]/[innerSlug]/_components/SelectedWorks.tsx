@@ -50,13 +50,15 @@ const SelectedWorks = ({ works }: Props) => {
           />
         ))}
       </div>
-      <ButtonAnimation className="">
-        <OutlineButton
-          text="See More"
-          buttonClassName="py-[0.75rem] px-[1.75rem] rounded-full"
-          className="text-h9Copy5 leading-[1.225rem]"
-        />
-      </ButtonAnimation>
+      {works?.length != 0 && (
+        <ButtonAnimation className="">
+          <OutlineButton
+            text="See More"
+            buttonClassName="py-[0.75rem] px-[1.75rem] rounded-full"
+            className="text-h9Copy5 leading-[1.225rem]"
+          />
+        </ButtonAnimation>
+      )}
     </div>
   );
 };

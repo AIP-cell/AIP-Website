@@ -46,7 +46,7 @@ const Form = () => {
   });
 
   const onSubmit = (formData: TContactSchema) => {
-    console.log("formData::", formData);
+    // console.log("formData::", formData);
     mutate(formData);
   };
   return (

@@ -55,10 +55,8 @@ const ACardWithPlaySign = ({
           </h4>
           <div
             dangerouslySetInnerHTML={{ __html: desc || "" }}
-            className="text-h9Copy4 leading-[1.4rem] font-inter line-clamp-4 md:line-clamp-5 text-ellipsis text-[#DFE0E5] "
-          >
-            {/* {desc} */}
-          </div>
+            className="text-h9Copy4 leading-[1.4rem] font-inter line-clamp-4 md:line-clamp-5 text-ellipsis !text-[#DFE0E5] "
+          ></div>
         </div>
       </div>
       <CustomModal

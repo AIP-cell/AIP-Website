@@ -64,7 +64,7 @@ const CarouselRespNews = () => {
         className="~/lg:~px-[1.25rem]/[18.5rem] flex gap-[1.25rem] pt-[2.5rem] snap-x snap-mandatory overflow-x-scroll no-scrollbar w-full"
       >
         {newsData.map((items, i) => (
-          <NewsCard key={i} src={items.src} text={items.text} />
+          <NewsCard key={i} src={items.src} text={items.text} index={i} />
         ))}
       </div>
       {/* <OutlineButton

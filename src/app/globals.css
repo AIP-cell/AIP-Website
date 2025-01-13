@@ -25,6 +25,17 @@
 .bg-container {
   max-width: 1920px !important;
 }
+.react-player__preview{
+  width: fit-content !important;
+  height: fit-content !important;
+  background-size: auto !important;
+  /* background:none !important; */
+  
+
+}
+.react-player__play-icon{
+  display: none !important;;
+}
 @layer utilities {
   /* Hide scrollbar for Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {

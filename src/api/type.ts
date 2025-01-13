@@ -274,8 +274,9 @@ export type TPeopleOfAipTeams = {
 };
 
 export type TLinks = {
-  link: string;
   _id: string;
+  name: string;
+  link: string;
 };
 export type TSelectedWorks = {
   _id: string;

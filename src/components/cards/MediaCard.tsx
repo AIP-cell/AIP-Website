@@ -3,15 +3,24 @@ import Src from "@public/images/mediaImage.png";
 import React from "react";
 import cn from "@/utils/tailwind";
 import dayjs from "dayjs";
+import Link from "next/link";
 
 type Props = {
-  title: string;
-  desc: string;
-  ddmmyy: string;
+  title?: string;
+  desc?: string;
+  link?: string;
+  ddmmyy?: string;
   index: number;
   mediaArrayLength: number;
 };
-const MediaCard = ({ title, ddmmyy, desc, index, mediaArrayLength }: Props) => {
+const MediaCard = ({
+  title,
+  ddmmyy,
+  desc,
+  index,
+  mediaArrayLength,
+  link,
+}: Props) => {
   const dateFormat = dayjs(ddmmyy).format("D MMMM");
   return (
     <div
@@ -21,12 +30,16 @@ const MediaCard = ({ title, ddmmyy, desc, index, mediaArrayLength }: Props) => {
         { "~pr-[1.25rem]/0": index === mediaArrayLength - 1 }
       )}
     >
-      <div className="relative w-full ~h-[14.51rem]/[16.563rem] overflow-hidden rounded-2xl">
+      <div className="relative w-full ~h-[14.51rem]/[16.563rem] overflow-hidden rounded-2xl cursor-pointer">
         <Image src={Src} alt="media-image" fill className="object-cover" />
       </div>
-      <h4 className="font-semibold text-gray80 pt-[0.75rem] underline decoration-[2px] underline-offset-4">
+      <Link
+        href={link ?? ""}
+        target="_blank"
+        className="font-semibold text-gray80 pt-[0.75rem] underline decoration-[2px] underline-offset-4"
+      >
         {title}
-      </h4>
+      </Link>
       <p className="text-h9Copy5 line-clamp-5 text-ellipsis overflow-hidden leading-[1.225rem] text-gray50 ">
         {desc}
       </p>

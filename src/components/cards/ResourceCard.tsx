@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import dayjs from "dayjs";
 import { StorageUrl } from "@/utils/BaseUrl";
+import Link from "next/link";
 type Props = {
   src?: string;
   title?: string;
@@ -45,6 +46,7 @@ const ResourceCard = ({
   // const link = isLinkOrPdf === "pdf" ? file : fileLink;
   const toDownload = isLinkOrPdf === "pdf" ? true : false;
   const dateFormat = dayjs(date).format("D MMMM");
+  // console.log("dateFormat:::,",dateFormat)
 
   return (
     // justify-center
@@ -60,13 +62,14 @@ const ResourceCard = ({
         </div>
       )}
       <div className="flex flex-col w-full gap-[0.75rem]">
-        <a
-          href={link}
+        <Link
+          href={link ?? ""}
+          target="_blank"
           download={toDownload}
           className=" w-full text-h6M text-gray80 font-inter font-semibold leading-[1.575rem] underline underline-offset-4 decoration-[1.5px]"
         >
           {title}
-        </a>
+        </Link>
         {name && (
           <p className=" w-full text-gray40 font-playFairItalic font-medium ~leading-[1.4rem]/[1.575rem] ">
             {name}
@@ -78,7 +81,7 @@ const ResourceCard = ({
       </div>
       <div className="h-px bg-footerGray w-full"></div>
       <div className="flex justify-between w-full text-h9Copy5 text-gray50 font-inter leading-[1.225rem]">
-        <p>{dateFormat}</p>
+        {date && <p>{dateFormat}</p>}
         <p>{domain}</p>
       </div>
       {/* <div className="h-px bg-footerGray w-full"></div>

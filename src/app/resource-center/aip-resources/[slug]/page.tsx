@@ -298,6 +298,7 @@ const AipResourcesInnerPage = async ({
               title={item?.title}
               desc={item?.description}
               category={item?.domain}
+              date={item?.date}
             />
           ))}
         </div>

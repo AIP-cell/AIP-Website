@@ -28,7 +28,7 @@ export function CarouselNews({ newsArray }: Props) {
             key={i}
             className="md:!basis-1/2 lg:!basis-1/2 xl:!basis-1/3 justify-center gap-[1.25rem] flex  pt-[2.5rem]"
           >
-            <NewsCard src={items.image} text={items.description} />
+            <NewsCard src={items.image} text={items.description} index={i} />
           </CarouselItem>
         ))}
       </CarouselContent>

@@ -36,10 +36,8 @@ const PCardWithPlaySign = ({ image, name, post, desc, linkedin }: Props) => {
         </h4>
         <div
           dangerouslySetInnerHTML={{ __html: desc || "" }}
-          className="text-h9Copy4 leading-[1.4rem] line-clamp-4 md:line-clamp-5 text-ellipsis font-inter text-[#DFE0E5] "
-        >
-          {/* {desc} */}
-        </div>
+          className="text-h9Copy4 leading-[1.4rem] line-clamp-4 md:line-clamp-5 text-ellipsis font-inter !text-[#DFE0E5] "
+        ></div>
       </div>
     </div>
   );

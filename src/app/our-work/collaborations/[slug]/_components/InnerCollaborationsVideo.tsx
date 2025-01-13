@@ -2,14 +2,19 @@
 import React, { useRef } from "react";
 import videoPlaySvg from "@public/svg/playButtonPurple.svg";
 import LeftCurve from "@public/svg/products-and-services/collaborations/leftPeachCurve.svg";
-
+import ReactPlayer from "react-player";
 import Image from "next/image";
 import { StorageUrl } from "@/utils/BaseUrl";
+import useClient from "@/hooks/useClient";
 type Props = {
   video?: string;
   linkOrVideo?: string;
 };
 const InnerCollaborationsVideo = ({ video, linkOrVideo }: Props) => {
+  const client = useClient();
+  if (!client) {
+    return;
+  }
   // const ref = useRef();
   return (
     <div className="relative ">
@@ -22,18 +27,26 @@ const InnerCollaborationsVideo = ({ video, linkOrVideo }: Props) => {
       <div className="~pt-[2rem]/[3.5rem]   container relative flex justify-center mx-auto">
         {linkOrVideo === "Video" ? (
           <div className="w-[64.375rem] relative flex justify-center items-center ~h-[12.313rem]/[35.313rem] overflow-hidden rounded-lg">
-            <video
+            {/* <video
               // ref="video"
               controls
               className="z-10 border-2 absolute inset-0 w-full h-full"
             >
               <source src={StorageUrl + video} type="video/mp4" />
-            </video>
-            <Image
+            </video> */}
+            <ReactPlayer
+              className="z-10 border-2 absolute inset-0 !w-full !h-full flex justify-center items-center"
+              url={StorageUrl + video}
+              light="/svg/playButtonPurple.svg"
+              playing
+              // playIcon={Play}
+              controls
+            />
+            {/* <Image
               src={videoPlaySvg}
               alt="play-svg"
               className="z-50 cursor-pointer"
-            />
+            /> */}
           </div>
         ) : (
           <div className="w-[64.375rem] relative flex justify-center items-center ~h-[12.313rem]/[35.313rem] overflow-hidden rounded-lg">
