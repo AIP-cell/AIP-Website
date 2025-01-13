@@ -239,9 +239,10 @@ const Cities = ({ collaboration, slug }: Props) => {
             alt="image"
           />
           <div className="flex pt-[1.382rem]">
-            <a
-              href={cities?.at(selectedIndex)?.report}
+            <Link 
+              href={cities?.at(selectedIndex)?.report ?? ""}
               download
+              target="_blank"
               className="group bg-darkPurple border-2 border-darkPurple hover:bg-white  transition-all  hover:text-darkPurple text-white hover:border-2 hover:border-darkPurple px-7 py-3 flex items-center gap-[0.75rem] w-fit rounded-3xl"
             >
               <p className=" font-inter  text-h9Copy5 leading-[1.225rem]">
@@ -250,7 +251,7 @@ const Cities = ({ collaboration, slug }: Props) => {
               <div className=" pt-[.1rem]">
                 <DownloadFileSvg className="size-[1.25rem]" />
               </div>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -264,6 +265,7 @@ const Cities = ({ collaboration, slug }: Props) => {
           <div className="container mx-auto relative ~px-[1.25rem]/[7.8rem] ~pt-[5rem]/[12.75rem]">
             <Agenda agendaArray={cities?.at(selectedIndex)?.agenda} />
             <InnerCollaborationsVideo
+            linkOrVideo={cities?.at(selectedIndex)?.linkOrVideo}
               video={cities?.at(selectedIndex)?.Video}
             />
           </div>

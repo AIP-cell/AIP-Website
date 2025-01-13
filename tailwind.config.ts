@@ -43,6 +43,8 @@ const config: Config = {
         gray60: "#575A61",
         footerGray: "#DFE0E580",
         purple10: "#E1CCED",
+        aColor: "#DFE0E5",
+        pColor: "#E1CCED",
         purple40: "#B861B3",
         lightPurplePink: "#E0ABDE",
         bgCollab: "#F3F3F3",

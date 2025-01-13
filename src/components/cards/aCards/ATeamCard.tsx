@@ -43,7 +43,7 @@ const ATeamCard = ({
         sizeClass
       )}
     >
-      {image && <AMediumSizeSvg src={image} className="" />}
+       <AMediumSizeSvg src={image} className="" />
       {linkedin && (
         <Image
           src={Linkedin}

@@ -55,6 +55,7 @@ const CaseStudies = ({ bottomCaseStudyCurveSvg, caseStudyData }: Props) => {
             <CaseStudy
               key={i}
               index={i}
+              slug={item?.slug}
               foundationName={item?.foundationName}
               initiativeName={item?.initiativeName}
               title={item?.philanthropistName}

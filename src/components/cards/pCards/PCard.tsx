@@ -28,14 +28,12 @@ const PCard = ({
       {linkedin && (
         <Image src={Linkedin} alt="" className="absolute top-0 right-0" />
       )}
-      {image && (
         <div className="w-[18.43rem] h-[21.56rem] relative">
           <div className="w-[18.43rem] h-[21.56rem] relative">
             <PSvg src={image} className=" w-[18.43rem] h-[21.56rem]" />
             {/* <Image src={image} alt="" fill /> */}
           </div>
         </div>
-      )}
       <div className="flex flex-col gap-[0.75rem]">
         {slug ? (
           <Link

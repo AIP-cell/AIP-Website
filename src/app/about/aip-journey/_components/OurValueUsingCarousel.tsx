@@ -149,12 +149,12 @@ const OurValueUsingCarousel = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <div className="absolute ~bottom-[6rem]/[-4rem] ~px-[0.5rem]/[2rem] z-[50] flex w-full justify-between">
+            <div className="absolute ~bottom-[6rem]/[-8.3rem] ~px-[0.5rem]/[2rem] z-[50] flex w-full justify-between">
               <CarouselPrevious />
               <CarouselNext />
             </div>
           </div>
-          <div className=" justify-center gap-[1.25rem] pb-[5rem] relative items-center">
+          <div className=" justify-center gap-[1.25rem] py-[5rem] relative items-center">
             <div className="flex  w-full">
               <div className=" w-full flex justify-center shrink-0  container mx-auto ">
                 <div className="relative ~w-[16.125rem]/[38rem] flex justify-center items-center">

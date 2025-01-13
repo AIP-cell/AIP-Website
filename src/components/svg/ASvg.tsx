@@ -3,7 +3,7 @@ import * as React from "react";
 import { SVGProps } from "react";
 
 type Props = {
-  src: string;
+  src?: string;
   className?: string;
 };
 const ASvg = ({ src, ...props }: Props) => {
@@ -23,7 +23,7 @@ const ASvg = ({ src, ...props }: Props) => {
           <defs>
             <mask id={id} maskContentUnits="userSpaceOnUse">
               <path
-                fill="#fff"
+                fill="#DFE0E5"
                 d="M295 147.5C295 66.038 228.962 0 147.5 0S0 66.038 0 147.5 66.038 295 147.5 295h89.657a20.002 20.002 0 0 1 14.213 5.929L295 345V147.5Z"
               />
             </mask>
@@ -41,7 +41,7 @@ const ASvg = ({ src, ...props }: Props) => {
         </>
       ) : (
         <path
-          fill="#fff"
+          fill="#DFE0E5"
           d="M295 147.5C295 66.038 228.962 0 147.5 0S0 66.038 0 147.5 66.038 295 147.5 295h89.657a20.002 20.002 0 0 1 14.213 5.929L295 345V147.5Z"
         />
       )}

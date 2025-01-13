@@ -4,6 +4,7 @@ import React from "react";
 import { ButtonAnimation } from "../animations/ButtonAnimation";
 import { StorageUrl } from "@/utils/BaseUrl";
 import Link from "next/link";
+import CaseStudyDescSection from "../CaseStudyDescSection";
 type Props = {
   title?: string;
   slug?: string;
@@ -78,11 +79,22 @@ const CaseStudy = ({
             {initiativeName}
           </h3>
         )}
-        <p className="text-midGray ~pt-[1rem]/[1.25rem] ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]">
-          {desc}
-        </p>
+
+        <CaseStudyDescSection desc={desc} index={index} />
         {slug ? (
-          isLinkOrPdf && (
+          <Link
+            href={`/our-work/npo/${slug}`}
+            download={toDownload}
+            className="~pt-[2rem]/[2.5rem]"
+          >
+            <ButtonAnimation className=" rounded-full  border-2 border-darkPurple hover:bg-darkPurple ">
+              <h3 className="text-darkPurple hover:text-white font-medium text-h9Copy5 leading-[1.225rem] py-[0.75rem] px-[1.75rem]">
+                Read More
+              </h3>
+            </ButtonAnimation>
+          </Link>
+        ) : (
+          isLinkOrPdf != " " && (
             <Link
               href={StorageUrl + link}
               target="_blank"
@@ -96,18 +108,6 @@ const CaseStudy = ({
               </ButtonAnimation>
             </Link>
           )
-        ) : (
-          <Link
-            href={`/our-work/npo/${slug}`}
-            download={toDownload}
-            className="~pt-[2rem]/[2.5rem]"
-          >
-            <ButtonAnimation className=" rounded-full  border-2 border-darkPurple hover:bg-darkPurple ">
-              <h3 className="text-darkPurple hover:text-white font-medium text-h9Copy5 leading-[1.225rem] py-[0.75rem] px-[1.75rem]">
-                Read More
-              </h3>
-            </ButtonAnimation>
-          </Link>
         )}
       </div>
     </div>

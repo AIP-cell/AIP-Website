@@ -7,6 +7,7 @@ import { Api } from "@/api/Api";
 import { TAipImpact } from "@/api/type";
 import { notFound } from "next/navigation";
 
+export const dynamic = "force-dynamic";
 const geAipImpactApi = async (): Promise<TAipImpact> => {
   const response = await Api.getAipImpact();
   return response.data;

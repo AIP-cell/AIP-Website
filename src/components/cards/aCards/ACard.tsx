@@ -28,11 +28,9 @@ const ACard = ({
       {linkedin && (
         <Image src={Linkedin} alt="" className="absolute top-0 right-0" />
       )}
-      {image && (
         <div className="w-[18.43rem] h-[21.56rem] relative">
           <ASvg src={image} className=" " />
         </div>
-      )}
       <div className="flex flex-col gap-[0.75rem]">
         {slug ? (
           <Link
