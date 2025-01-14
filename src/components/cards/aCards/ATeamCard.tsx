@@ -36,6 +36,7 @@ const ATeamCard = ({
   locationClassName,
   sizeClass,
 }: Props) => {
+  console.log("src:::",image)
   return (
     <div
       className={cn(
@@ -43,7 +44,7 @@ const ATeamCard = ({
         sizeClass
       )}
     >
-       <AMediumSizeSvg src={image} className="" />
+      <AMediumSizeSvg src={image} className="~w-[10rem]/[11.87rem] h-full" />
       {linkedin && (
         <Image
           src={Linkedin}

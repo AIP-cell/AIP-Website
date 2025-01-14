@@ -33,7 +33,7 @@ const PTeamCard = ({
 }: Props) => {
   return (
     <div className="max-[23rem]:w-[8rem] ~w-[10.3rem]/[11.87rem] relative">
-       <PMediumSizeSvg src={image} />
+      <PMediumSizeSvg src={image} />
       {linkedin && (
         <Image
           src={Linkedin}

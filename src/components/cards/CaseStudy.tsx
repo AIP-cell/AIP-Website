@@ -96,7 +96,7 @@ const CaseStudy = ({
         ) : (
           isLinkOrPdf != "" && (
             <Link
-              href={StorageUrl + link}
+              href={link ?? ""}
               target="_blank"
               download={toDownload}
               className="~pt-[2rem]/[2.5rem]"

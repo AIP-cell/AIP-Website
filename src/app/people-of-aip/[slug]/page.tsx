@@ -18,7 +18,7 @@ const tabList = [
     name: "Our Core Founders",
     link: "/people-of-aip/coreFounder",
   },
-  { key: "founder", name: "Founders", link: "/people-of-aip/founder" },
+  { key: "founders", name: "Founders", link: "/people-of-aip/founders" },
   {
     key: "advisoryBoard",
     name: "Our Advisory Board",

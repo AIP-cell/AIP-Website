@@ -19,7 +19,7 @@ const AMediumSizeSvg = ({ src, ...props }: Props) => {
       {src ? (
         <>
           <defs>
-            <mask id={id}>  
+            <mask id={id}>
               <path
                 fill="#DFE0E5"
                 d="M190 95c0-52.467-42.533-95-95-95S0 42.533 0 95s42.533 95 95 95h55.282c5.015 0 9.822 2.005 13.35 5.569L190 222.203V95Z"

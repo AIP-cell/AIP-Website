@@ -63,8 +63,9 @@ const InnerSectionOne = ({ heroSectionData }: Props) => {
             <div className="h-px bg-gray10 w-full md:w-[31.563rem]"></div>
             <div className="flex gap-5">
               {/* <button className=""> */}
-              <a
-                href={heroSectionData?.report}
+              <Link
+                href={StorageUrl + heroSectionData?.report}
+                target="_blank"
                 download
                 className="group bg-darkPurple border-2 border-darkPurple transition-all  hover:bg-white hover:text-darkPurple text-white hover:border-2   hover:border-darkPurple px-7 py-3 flex items-center gap-[0.75rem] w-fit rounded-3xl"
               >
@@ -74,7 +75,7 @@ const InnerSectionOne = ({ heroSectionData }: Props) => {
                 <div className=" pt-[.1rem]">
                   <DownloadFileSvg className="size-[1.25rem]" />
                 </div>
-              </a>
+              </Link>
             </div>
           </div>
           <div className="relative w-[25rem] hidden md:block z-10">
