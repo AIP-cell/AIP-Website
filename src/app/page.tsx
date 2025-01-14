@@ -14,7 +14,7 @@ import { notFound } from "next/navigation";
 export const dynamic = "force-dynamic";
 const getHomePageApi = async (): Promise<THomePageData> => {
   const response = await Api.getHomePage();
-  return response.data;
+  return response?.data;
 };
 const page = async ({
   searchParams,
@@ -27,10 +27,10 @@ const page = async ({
     notFound();
     // return;
   }
-  const eventData = response.event;
-  const teamData = response.team;
-  const countData = response.count;
-  const newsData = response.newsAndUpdates;
+  const eventData = response?.event;
+  const teamData = response?.team;
+  const countData = response?.count;
+  const newsData = response?.newsAndUpdates;
 
   return (
     <div className="bg-bgLightPeach pt-[5rem] overflow-hidden">

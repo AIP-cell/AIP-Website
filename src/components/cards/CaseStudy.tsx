@@ -31,7 +31,7 @@ const CaseStudy = ({
   file,
   fileLink,
 }: Props) => {
-  const link = isLinkOrPdf === "pdf" ? file : fileLink;
+  const link = isLinkOrPdf === "pdf" ? StorageUrl + file : fileLink;
   const toDownload = isLinkOrPdf === "pdf" ? true : false;
   return (
     <div className="relative z-[100] grid grid-cols-1 lg:grid-cols-2 ~gap-[1rem]/[7.81rem]">
@@ -53,7 +53,7 @@ const CaseStudy = ({
             />
           ) : (
             <Image
-              src="/images/case-studies/caseStudy1.png"
+              src="/images/resourceCardThumbnail.png"
               alt="caseStudy-image"
               className="object-cover rounded-3xl h-fit"
               fill

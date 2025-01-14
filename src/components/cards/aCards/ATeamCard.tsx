@@ -8,6 +8,7 @@ import Link from "next/link";
 import cn from "@/utils/tailwind";
 type Props = {
   linkedin: boolean;
+  linkedinLink?: string;
   slug?: string;
   title?: string;
   title2?: string;
@@ -26,6 +27,7 @@ const ATeamCard = ({
   link,
   image,
   linkedin,
+  linkedinLink,
   title,
   title2,
   location,
@@ -36,7 +38,6 @@ const ATeamCard = ({
   locationClassName,
   sizeClass,
 }: Props) => {
-  console.log("src:::",image)
   return (
     <div
       className={cn(
@@ -46,11 +47,12 @@ const ATeamCard = ({
     >
       <AMediumSizeSvg src={image} className="" />
       {linkedin && (
-        <Image
-          src={Linkedin}
-          alt=""
-          className="absolute top-0 right-0 size-[2.5rem]"
-        />
+        <Link
+          href={linkedinLink ?? ""}
+          className="absolute top-0 right-0 size-[2.5rem] z-50"
+        >
+          <Image src={Linkedin} alt="" />
+        </Link>
       )}
       <div className="flex flex-col gap-[0.5rem]">
         {slug ? (

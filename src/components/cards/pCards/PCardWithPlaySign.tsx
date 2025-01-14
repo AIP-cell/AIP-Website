@@ -1,45 +1,85 @@
+"use client";
 import Image from "next/image";
 import Src from "@public/images/pSample.png";
 import PlayButtonPurple from "@public/svg/playButtonPurple.svg";
 import Linkedin from "@public/svg/grayLinkedin.svg";
 
 import PSvg from "@/components/svg/PSvg";
+import Link from "next/link";
+import { useState } from "react";
+import CustomModal from "@/components/custom/CustomModal";
 type Props = {
   image?: string;
+  linkOrVideo?: string;
   name?: string;
+  slug?: string;
   post?: string;
   desc?: string;
   linkedin?: boolean;
+  linkedinLink?: string;
+  video?: string;
+  videoLink?: string;
 };
-const PCardWithPlaySign = ({ image, name, post, desc, linkedin }: Props) => {
+const PCardWithPlaySign = ({
+  image,
+  name,
+  post,
+  slug,
+  desc,
+  linkOrVideo,
+  linkedin,
+  linkedinLink,
+  video,
+  videoLink,
+}: Props) => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="w-[18.43rem] relative ">
-      {linkedin && (
-        <Image src={Linkedin} alt="" className="absolute top-0 right-0" />
-      )}
-      <div className="relative flex justify-center">
-        {image && (
-          <PSvg src={image ?? ""} className="w-[18.438rem] h-[21.563rem]" />
+    <>
+      <div className="w-[18.43rem] relative ">
+        {linkedin && (
+          <Link
+            href={linkedinLink ?? ""}
+            target="_blank"
+            className="absolute top-0 right-0 z-50"
+          >
+            <Image src={Linkedin} alt="" />
+          </Link>
         )}
-        <Image
-          src={PlayButtonPurple}
-          alt=""
-          className="absolute bottom-[4rem] hover:scale-105 transition-all duration-150 cursor-pointer"
-        />
+        <div className="relative flex justify-center">
+          <PSvg src={image} className="w-[18.438rem] h-[21.563rem]" />
+          {linkOrVideo != "" && (
+            <Image
+              src={PlayButtonPurple}
+              onClick={() => setIsOpen(true)}
+              alt=""
+              className="absolute bottom-[4rem] hover:scale-105 transition-all duration-150 cursor-pointer"
+            />
+          )}
+        </div>
+        <div className="flex flex-col gap-[0.75rem]">
+          <Link
+            href={`/people-of-aip/coreFounder/${slug}`}
+            className="text-h4 leading-[2.6rem] text-[#DFE0E5] font-playFair underline underline-offset-4 decoration-[1px]"
+          >
+            {name}
+          </Link>
+          <h4 className="text-h5 font-playFair text-lightPurplePink font-medium italic line-clamp-1 text-ellipsis">
+            {post}
+          </h4>
+          <div
+            dangerouslySetInnerHTML={{ __html: desc || "" }}
+            className="text-h9Copy4 leading-[1.4rem] line-clamp-4 md:line-clamp-5 text-ellipsis font-inter !text-[#DFE0E5] "
+          ></div>
+        </div>
       </div>
-      <div className="flex flex-col gap-[0.75rem]">
-        <h3 className="text-h4 leading-[2.6rem] text-[#DFE0E5] font-playFair underline underline-offset-4 decoration-[1px]">
-          {name}
-        </h3>
-        <h4 className="text-h5 font-playFair text-lightPurplePink font-medium italic line-clamp-1 text-ellipsis">
-          {post}
-        </h4>
-        <div
-          dangerouslySetInnerHTML={{ __html: desc || "" }}
-          className="text-h9Copy4 leading-[1.4rem] line-clamp-4 md:line-clamp-5 text-ellipsis font-inter !text-[#DFE0E5] "
-        ></div>
-      </div>
-    </div>
+      <CustomModal
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+        linkOrVideo={linkOrVideo}
+        video={video}
+        videoLink={videoLink}
+      />
+    </>
   );
 };
 

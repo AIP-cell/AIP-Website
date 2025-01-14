@@ -18,6 +18,7 @@ export type THomePageTeam = {
   designation: string;
   description: string;
   linkedln: string;
+  slug: string;
   image: string;
   linkOrVideo: string;
   video: string;
@@ -247,6 +248,7 @@ export type TTeamMembers = {
   slug: string;
   linkOrVideo: string;
   image: string;
+  linkedin:string
   videoLink: string;
 };
 

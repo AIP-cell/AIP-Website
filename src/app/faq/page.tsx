@@ -7,17 +7,17 @@ import { TFaqs } from "@/api/type";
 export const dynamic = "force-dynamic";
 const getFaqApi = async (category: string): Promise<TFaqs[]> => {
   const response = await Api.getFaq(category);
-  return response.data;
+  return response?.data;
 };
 const FaqPage = async ({
   searchParams,
 }: {
-  searchParams: Promise<{ faq: string }>;
+  searchParams: Promise<{ category: string }>;
 }) => {
   const asyncSearchParams = await searchParams;
-  const category = asyncSearchParams.faq
-    ? asyncSearchParams.faq
-    : "general-inquiry";
+  const category = asyncSearchParams.category
+    ? asyncSearchParams.category
+    : "General Inquiry";
   const response = await getFaqApi(category);
   if (!response) {
     return;

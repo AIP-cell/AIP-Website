@@ -9,6 +9,7 @@ import NetworkContactSection from "./_components/NetworkContactSection";
 import NetworkCaseStudies from "./_components/NetworkCaseStudies";
 import { Api } from "@/api/Api";
 import { TPhilanthropistNetwork, TPhilanthropistNetworkPage } from "@/api/type";
+import { notFound } from "next/navigation";
 
 export const dynamic = "force-dynamic";
 const geFounderNetworkApi = async (): Promise<TPhilanthropistNetwork> => {
@@ -17,6 +18,9 @@ const geFounderNetworkApi = async (): Promise<TPhilanthropistNetwork> => {
 };
 const page = async () => {
   const response = await geFounderNetworkApi();
+  if(!response){
+    notFound()
+  }
   // const philanthropistNetwork = response.philanthropistNetwork.at(0);
   const casestudies = response?.casestudies;
   const peopleData = response?.people;
@@ -27,7 +31,7 @@ const page = async () => {
       <HelpingRivers />
       <NetworkContactSection />
       <JoinTheFlow />
-      {casestudies.length!=0 && <NetworkCaseStudies casestudies={casestudies} />}
+      {casestudies?.length!=0 && <NetworkCaseStudies casestudies={casestudies} />}
       {/* <CaseStudies  bottomCaseStudyCurveSvg={CurvePurple} /> */}
       {peopleData && <PeopleWeWorkWith peopleData={peopleData} />}
     </div>

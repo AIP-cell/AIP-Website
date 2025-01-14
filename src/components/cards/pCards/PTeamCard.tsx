@@ -5,6 +5,7 @@ import PMediumSizeSvg from "@/components/svg/PMediumSizeSvg";
 import Link from "next/link";
 type Props = {
   linkedin: boolean;
+  linkedinLink?: string;
   title?: string;
   slug?: string;
   title2?: string;
@@ -19,6 +20,7 @@ type Props = {
 };
 const PTeamCard = ({
   linkedin,
+  linkedinLink,
   slug,
   image,
   title,
@@ -35,11 +37,13 @@ const PTeamCard = ({
     <div className="max-[23rem]:w-[8rem] ~w-[10.3rem]/[11.87rem] relative">
       <PMediumSizeSvg src={image} />
       {linkedin && (
-        <Image
-          src={Linkedin}
-          alt=""
-          className="absolute top-0 right-0 size-[2.5rem]"
-        />
+        <Link href={linkedinLink ?? ""} className="absolute top-0 right-0 size-[2.5rem] z-50">
+          <Image
+            src={Linkedin}
+            alt=""
+            
+          />
+        </Link>
       )}
       <div className="flex flex-col gap-[0.5rem]">
         {slug ? (

@@ -207,13 +207,24 @@ const Cities = ({ collaboration, slug }: Props) => {
               </p>
 
               <div className="flex gap-4">
-                <Link href="" className="bg-bgGray5 text-darkPurple hover:text-white hover:bg-darkPurple w-[3rem] h-[3rem] rounded-full flex items-center justify-center">
-                  <YoutubeSvg className="size-[2rem]" />
-                </Link>
-
-                <Link href="" className="bg-bgGray5 text-darkPurple hover:text-white hover:bg-darkPurple w-[3rem] h-[3rem] rounded-full flex items-center justify-center ">
+                {cities?.at(selectedIndex)?.catchupDetails.map((items, i) => (
+                  <Link
+                    key={i}
+                    href={items.link}
+                    className="bg-bgGray5 text-darkPurple hover:text-white hover:bg-darkPurple w-[3rem] h-[3rem] rounded-full flex items-center justify-center"
+                  >
+                    <div className="size-[2rem] relative">
+                      <Image src={StorageUrl + items.image} alt="" fill />
+                    </div>
+                  </Link>
+                ))}
+                {/* <YoutubeSvg className="size-[2rem]" /> */}
+                {/* <Link
+                  href=""
+                  className="bg-bgGray5 text-darkPurple hover:text-white hover:bg-darkPurple w-[3rem] h-[3rem] rounded-full flex items-center justify-center "
+                >
                   <XSvg className="w-[1.063rem] h-[1.125rem]" />
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>

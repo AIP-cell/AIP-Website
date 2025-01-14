@@ -11,6 +11,7 @@ type Props = {
   desc?: string;
   nameClass?: string;
   linkedin?: boolean;
+  linkedinLink?: string;
   link?: string;
 };
 const PCard = ({
@@ -21,19 +22,22 @@ const PCard = ({
   desc,
   nameClass,
   linkedin,
+  linkedinLink,
   link,
 }: Props) => {
   return (
     <div className="w-[18.43rem] relative ">
       {linkedin && (
-        <Image src={Linkedin} alt="" className="absolute top-0 right-0" />
+        <Link href={linkedinLink ?? ""} className="absolute top-0 right-0 z-50">
+          <Image src={Linkedin} alt=""  />
+        </Link>
       )}
+      <div className="w-[18.43rem] h-[21.56rem] relative">
         <div className="w-[18.43rem] h-[21.56rem] relative">
-          <div className="w-[18.43rem] h-[21.56rem] relative">
-            <PSvg src={image} className=" w-[18.43rem] h-[21.56rem]" />
-            {/* <Image src={image} alt="" fill /> */}
-          </div>
+          <PSvg src={image} className=" w-[18.43rem] h-[21.56rem]" />
+          {/* <Image src={image} alt="" fill /> */}
         </div>
+      </div>
       <div className="flex flex-col gap-[0.75rem]">
         {slug ? (
           <Link

@@ -79,6 +79,7 @@ const OurCoreFoundersContent = ({ coreFounderMembers }: Props) => {
                       slug={item?.slug}
                       link={`/people-of-aip/coreFounder/${item.slug}`}
                       linkedin
+                      linkedinLink={item?.linkedin}
                       nameClass=" underline decoration-[1px] underline-offset-4 "
                       name={item?.name}
                       desc={item?.description}
@@ -93,6 +94,7 @@ const OurCoreFoundersContent = ({ coreFounderMembers }: Props) => {
                           coreFounderMembers[i + 1]?.slug
                         }`}
                         linkedin
+                        linkedinLink={coreFounderMembers[i + 1]?.linkedin}
                         nameClass=" underline decoration-[1px] underline-offset-4 "
                         name={coreFounderMembers[i + 1]?.name}
                         desc={coreFounderMembers[i + 1]?.description}

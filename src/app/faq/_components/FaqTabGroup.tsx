@@ -11,11 +11,13 @@ const list = [
   { tabNo: 1, key: "founder-network", name: "Founder Network" },
   { tabNo: 2, key: "philanthropic-network", name: "Philanthropic Network" },
   { tabNo: 3, key: "npo", name: "NPO" },
+  { tabNo: 4, key: "world-of-philanthropy", name: "World of Philanthropy" },
 ];
 type Props = { faqData: TFaqs[]; category: string };
 const FaqTabGroup = ({ faqData, category }: Props) => {
-  const [selected, setSelected] = useState(0);
-
+  const SelectedData = list.find((data) => data.name == category);
+  const [selected, setSelected] = useState(category ? SelectedData?.tabNo : 0);
+  console.log("faqData::", faqData);
   return (
     <TabGroup
       selectedIndex={selected}
@@ -25,26 +27,28 @@ const FaqTabGroup = ({ faqData, category }: Props) => {
       <BreadCrump textOne="FAQ's" linkOne="/faq" />
       <div>
         <p className="leading-[3.3rem] text-h2 pb-[3rem] font-playFair">FAQS</p>
-        {faqData.length != 0 && (
-          <div className="">
-            <FaqTab
-              selected={selected}
-              setSelected={setSelected}
-              tabList={list}
-            />
-          </div>
-        )}
+        {/* {faqData.length != 0 && ( */}
+        <div className="">
+          <FaqTab
+            selected={selected}
+            setSelected={setSelected}
+            tabList={list}
+          />
+        </div>
+        {/* )} */}
       </div>
-      <TabPanels className="md:col-span-2">
-        {list.map(
-          (items, index) =>
-            category === items.key && (
-              <TabPanel key={index}>
-                <FaqItem faqData={faqData} />
-              </TabPanel>
+      <div className="md:col-span-2">
+        {faqData.length !=0
+          ? list.map(
+              (items, index) =>
+                category === items.name && (
+                  <div key={index}>
+                    <FaqItem faqData={faqData} />
+                  </div>
+                )
             )
-        )}
-      </TabPanels>
+          : <p className=" flex justify-center pt-[4rem] h-full text-darkPurple">"No Faq Available"</p>}
+      </div>
     </TabGroup>
   );
 };

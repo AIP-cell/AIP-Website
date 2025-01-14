@@ -25,7 +25,7 @@ const TablistData = [
 ];
 
 type Props = {
-  selected: number;
+  selected?: number;
   setSelected: (value: number) => void;
   tabList: { tabNo: number; key: string; name: string }[];
 };
@@ -37,7 +37,7 @@ const FaqTab = ({ selected, setSelected, tabList }: Props) => {
         <TabList className="">
           {tabList.map((items, i) => (
             <Tab
-              onClick={() => router.push(`?faq=${items.key}`, { scroll: false })}
+              onClick={() => router.push(`?category=${items.name}`, { scroll: false })}
               key={i}
               className="group w-full bg-bgGray5 data-[selected]:bg-darkPurple items-center data-[selected]:text-white hover:font-playFairItalic  transition-all p-5 rounded-[1.25rem] flex text-left justify-between mb-3 group data-[selected]:outline-none"
             >

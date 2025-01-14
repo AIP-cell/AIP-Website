@@ -109,53 +109,45 @@ const Founder = ({ teamData }: Props) => {
                   </div>
                 </div>
                 <div className="block lg:hidden relative pt-[3.43rem]">
-                  <AnimatePresence>
-                    <motion.div
-                      key={0}
-                      variants={{
-                        initial: { opacity: 0, x: 100 },
-                        visible: { opacity: 1, x: 0 },
-                        exit: {
-                          opacity: 0,
-                          x: -100,
-                          // transition: {
-                          //   duration: 1.2,
-                          //   ease: "easeInOut",
-                          // },
-                        },
-                      }}
-                      initial="initial"
-                      animate="visible"
-                      exit="exit"
-                      transition={{ ease: "easeInOut", duration: 0.5 }}
-                      className={cn("flex justify-center items-center", {
-                        hidden: select % 2 === 1,
-                      })}
-                    >
-                      <ACardWithPlaySign
-                        linkOrVideo={teamData.at(select)?.linkOrVideo}
-                        linkedin={true}
-                        image={teamData.at(select)?.image}
-                        desc={teamData.at(select)?.description}
-                        post={teamData.at(select)?.designation}
-                        name={teamData.at(select)?.name}
-                      />
-                    </motion.div>
-                    <motion.div
-                      key={1}
-                      className={cn("flex justify-center items-center", {
-                        hidden: select % 2 === 0,
-                      })}
-                    >
-                      <PCardWithPlaySign
-                        linkedin={true}
-                        image={teamData.at(select)?.image}
-                        desc={teamData.at(select)?.description}
-                        post={teamData.at(select)?.designation}
-                        name={teamData.at(select)?.name}
-                      />
-                    </motion.div>
-                  </AnimatePresence>
+                  <div
+                    key={0}
+                    className={cn("flex justify-center items-center", {
+                      hidden: select % 2 === 1,
+                    })}
+                  >
+                    <ACardWithPlaySign
+                      linkOrVideo={teamData.at(select)?.linkOrVideo}
+                      linkedin={true}
+                      slug={teamData.at(select)?.slug}
+                      linkedinLink={teamData.at(select)?.linkedln}
+                      image={teamData.at(select)?.image}
+                      desc={teamData.at(select)?.description}
+                      post={teamData.at(select)?.designation}
+                      name={teamData.at(select)?.name}
+                      videoLink={teamData.at(select)?.videoLink}
+                      video={teamData.at(select)?.video}
+                    />
+                  </div>
+                  <div
+                    key={1}
+                    className={cn("flex justify-center items-center", {
+                      hidden: select % 2 === 0,
+                    })}
+                  >
+                    <PCardWithPlaySign
+                      linkOrVideo={teamData.at(select)?.linkOrVideo}
+                      linkedin={true}
+                      linkedinLink={teamData.at(select)?.linkedln}
+                      image={teamData.at(select)?.image}
+                      slug={teamData.at(select)?.slug}
+                      desc={teamData.at(select)?.description}
+                      post={teamData.at(select)?.designation}
+                      name={teamData.at(select)?.name}
+                      videoLink={teamData.at(select)?.videoLink}
+                      video={teamData.at(select)?.video}
+
+                    />
+                  </div>
                 </div>
                 <div className="md:hidden flex justify-center w-full  pt-[2.5rem]">
                   <div className=" w-[4.5rem] flex gap-[0.5rem] ">
@@ -187,20 +179,30 @@ const Founder = ({ teamData }: Props) => {
                                 linkOrVideo={items?.linkOrVideo}
                                 key={index}
                                 linkedin
+                                linkedinLink={items?.linkedln}
+                                slug={items?.slug}
                                 image={items?.image}
                                 desc={items?.description}
                                 post={items?.designation}
                                 name={items?.name}
+                                videoLink={items?.videoLink}
+                                video={items?.video}
+                                
                               />
                             ) : (
                               index === 1 && (
                                 <PCardWithPlaySign
+                                  linkOrVideo={items?.linkOrVideo}
                                   key={index}
                                   linkedin
+                                  linkedinLink={items?.linkedln}
                                   image={items?.image}
+                                  slug={items?.slug}
                                   desc={items?.description}
                                   post={items?.designation}
                                   name={items?.name}
+                                  videoLink={items?.videoLink}
+                                  video={items?.video}
                                 />
                               )
                             )
@@ -214,19 +216,28 @@ const Founder = ({ teamData }: Props) => {
                                 linkOrVideo={items?.linkOrVideo}
                                 key={i}
                                 linkedin
+                                slug={items?.slug}
+                                linkedinLink={items?.linkedln}
                                 image={items?.image}
                                 desc={items?.description}
                                 post={items?.designation}
                                 name={items?.name}
+                                video={items?.video}
+                                videoLink={items?.videoLink}
                               />
                             ) : (
                               <PCardWithPlaySign
+                                linkOrVideo={items?.linkOrVideo}
                                 key={i}
                                 linkedin
+                                linkedinLink={items?.linkedln}
+                                slug={items?.slug}
                                 image={items?.image}
                                 desc={items?.description}
                                 post={items?.designation}
                                 name={items?.name}
+                                video={items?.video}
+                                videoLink={items?.videoLink}
                               />
                             )
                           )}

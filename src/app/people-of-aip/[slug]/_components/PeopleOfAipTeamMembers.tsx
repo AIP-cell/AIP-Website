@@ -261,6 +261,7 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
                   <div className="flex ~gap-[1.25rem]/[5.6rem] ~px-[1.25rem]/[7.8rem] relative container mx-auto ">
                     <ATeamCard
                       slug={items?.slug}
+                      
                       link={`/people-of-aip/${urlSlug}/${items.slug}`}
                       image={items?.image}
                       title={items?.name}
