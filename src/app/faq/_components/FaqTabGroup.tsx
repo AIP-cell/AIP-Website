@@ -47,7 +47,7 @@ const FaqTabGroup = ({ faqData, category }: Props) => {
                   </div>
                 )
             )
-          : <p className=" flex justify-center pt-[4rem] h-full text-darkPurple">"No Faq Available"</p>}
+          : <p className=" flex justify-center pt-[4rem] h-full text-darkPurple">No Faq Available</p>}
       </div>
     </TabGroup>
   );

@@ -9,6 +9,7 @@ import { CheckIcon, ChevronDownIcon } from "@heroicons/react/20/solid";
 import clsx from "clsx";
 import { useState } from "react";
 import DownTagSvg from "../svg/DownTagSvg";
+import { useRouter } from "next/navigation";
 // import { useRouter } from "next/navigation";
 
 export default function CustomGraySelect({
@@ -22,7 +23,7 @@ export default function CustomGraySelect({
   mainClassName?: string;
   setSelected: (value: any) => void;
 }) {
-  // const router = useRouter();
+  const router = useRouter();
   return (
     <div className={`mx-auto w-full px-[1.25rem] ${mainClassName}`}>
       <Listbox value={data.at(selected)} onChange={setSelected}>
@@ -45,11 +46,16 @@ export default function CustomGraySelect({
           {data.map((item, i) => (
             <ListboxOption
               key={i}
-              value={i}
+              value={item.name}
               className="group flex cursor-default items-center gap-2  py-1.5 px-3 select-none bg-gray-200 text-black data-[focus]:bg-gray-400"
             >
-              {/* <CheckIcon className="invisible size-4 fill-darkPurple group-data-[selected]:visible" /> */}
-              <div className="text-h9Copy4 text-black">{item.name}</div>
+              <div
+               onClick={() => router.push(`?category=${item.name}`, { scroll: false })}
+                className="text-h9Copy4 text-black"
+              >
+                {item.name}
+              </div>
+              
             </ListboxOption>
           ))}
         </ListboxOptions>
