@@ -7,10 +7,10 @@ import { FaqItem } from "./FaqItem";
 import { TFaqs } from "@/api/type";
 
 const list = [
-  "General Inquiry",
-  "Founder Network",
-  "Philanthropic Network",
-  "NPO",
+  { tabNo: 0, key: "general-inquiry", name: "General Inquiry" },
+  { tabNo: 1, key: "founder-network", name: "Founder Network" },
+  { tabNo: 2, key: "philanthropic-network", name: "Philanthropic Network" },
+  { tabNo: 3, key: "npo", name: "NPO" },
 ];
 type Props = { faqData: TFaqs[]; category: string };
 const FaqTabGroup = ({ faqData, category }: Props) => {
@@ -25,18 +25,20 @@ const FaqTabGroup = ({ faqData, category }: Props) => {
       <BreadCrump textOne="FAQ's" linkOne="/faq" />
       <div>
         <p className="leading-[3.3rem] text-h2 pb-[3rem] font-playFair">FAQS</p>
-        <div className="">
-          <FaqTab
-            selected={selected}
-            setSelected={setSelected}
-            tabList={list}
-          />
-        </div>
+        {faqData.length != 0 && (
+          <div className="">
+            <FaqTab
+              selected={selected}
+              setSelected={setSelected}
+              tabList={list}
+            />
+          </div>
+        )}
       </div>
       <TabPanels className="md:col-span-2">
         {list.map(
           (items, index) =>
-            category === items && (
+            category === items.key && (
               <TabPanel key={index}>
                 <FaqItem faqData={faqData} />
               </TabPanel>

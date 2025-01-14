@@ -268,6 +268,7 @@ export type TPeopleOfAipTeams = {
   twitter: string;
   image: string;
   video: string;
+  videoLink:string
   slug: string;
   links: TLinks[];
   selectedWorks: TSelectedWorks[];

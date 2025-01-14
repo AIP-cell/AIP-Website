@@ -1,9 +1,4 @@
-import Agenda from "@/app/our-work/collaborations/[slug]/_components/Agenda";
-import InnerCollaborations from "@/app/our-work/collaborations/[slug]/_components/InnerCollaborations";
-import InnerCollaborationsVideo from "@/app/our-work/collaborations/[slug]/_components/InnerCollaborationsVideo";
-import InnerCollaborationTestimonials from "@/app/our-work/collaborations/[slug]/_components/InnerCollaborationTestimonials";
 import Gallery from "@/app/our-work/projects-and-programs/[slug]/_components/Gallery";
-import Media from "@/app/our-work/projects-and-programs/[slug]/_components/Media";
 import { TCuratedResourcesExpertsInner } from "@/api/type";
 import { Api } from "@/api/Api";
 import InnerExpertsSectionOne from "@/app/resource-center/curated-resources/[slug]/[innerSlug]/_components/InnerExpertsSectionOne";

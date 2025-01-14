@@ -71,24 +71,28 @@ const InnerTeamPage = async ({
 
                   <div className=" ~pt-[2rem]/[2.5rem]  flex-col flex gap-[1rem]">
                     <div className="flex gap-[1rem]">
-                      <Link href={team?.linkedln}>
-                        <ButtonAnimation className="rounded-full ~p-[0.5rem]/[0.875rem] bg-bgGray5">
-                          {/* <LinkedinSvg className="size-[1.5rem]"/> */}
-                          <Image
-                            src={Linkedin}
-                            alt=""
-                            className="w-[1.375rem]"
-                          />
-                        </ButtonAnimation>
-                      </Link>
-                      <Link href={team?.twitter}>
-                        <ButtonAnimation className="rounded-full flex justify-center items-center text-textPurple hover:text-white p-[0.93rem] bg-bgGray5 hover:bg-textPurple">
-                          <XSvg className="size-[1.063rem]" />
-                          {/* <Image src={X} alt="" className="" /> */}
-                        </ButtonAnimation>
-                      </Link>
+                      {team?.linkedln && (
+                        <Link href={team.linkedln}>
+                          <ButtonAnimation className="rounded-full ~p-[0.5rem]/[0.875rem] bg-bgGray5">
+                            {/* <LinkedinSvg className="size-[1.5rem]"/> */}
+                            <Image
+                              src={Linkedin}
+                              alt=""
+                              className="w-[1.375rem]"
+                            />
+                          </ButtonAnimation>
+                        </Link>
+                      )}
+                      {team?.twitter && (
+                        <Link href={team.twitter}>
+                          <ButtonAnimation className="rounded-full flex justify-center items-center text-textPurple hover:text-white p-[0.93rem] bg-bgGray5 hover:bg-textPurple">
+                            <XSvg className="size-[1.063rem]" />
+                            {/* <Image src={X} alt="" className="" /> */}
+                          </ButtonAnimation>
+                        </Link>
+                      )}
                     </div>
-                    {team.links.map((link, i) => (
+                    {team?.links.map((link, i) => (
                       <Link
                         key={i}
                         href={link?.link}
@@ -108,12 +112,10 @@ const InnerTeamPage = async ({
                 </div>
               </div>
               <div className="col-span-1 relative">
-                {team.image && (
-                  <PSvg
-                    src={StorageUrl + team?.image}
-                    className="relative z-10 ~w-[18.438rem]/[25rem]"
-                  />
-                )}
+                <PSvg
+                  src={StorageUrl + team?.image}
+                  className="relative z-10 ~w-[18.438rem]/[25rem]"
+                />
                 <div className=" block md:hidden">
                   <h2 className="~text-h4/h2 text-midGray leading-[3.3rem] font-playFair">
                     {team?.name}
@@ -127,22 +129,20 @@ const InnerTeamPage = async ({
                 </p>
               </div>
             </div>
-            <div className="">
-              <InnerCollaborationsVideo
-                linkOrVideo={team?.linkOrVideo}
-                video={team?.video}
-              />
-              {/* <Image
-                src={SampleVideo}
-                alt="background-svg"
-                className="w-full h-[35.3rem]"
-              /> */}
-            </div>
+            {team.linkOrVideo && (
+              <div className="">
+                <InnerCollaborationsVideo
+                  linkOrVideo={team.linkOrVideo}
+                  video={team?.video}
+                  videoLink={team?.videoLink}
+                />
+              </div>
+            )}
           </div>
         </div>
-        {team.selectedWorks?.length != 0 && (
+        {/* {team.selectedWorks?.length != 0 && (
           <SelectedWorks works={team.selectedWorks} />
-        )}
+        )} */}
       </div>
     </div>
   );

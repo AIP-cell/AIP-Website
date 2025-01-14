@@ -49,7 +49,7 @@ const InnerPage = async ({ params }: { params: Promise<{ slug: string }> }) => {
       {members && urlSlug === "coreFounder" ? (
         <OurCoreFoundersContent coreFounderMembers={members} />
       ) : (
-        members && (
+        members.length!=0 && (
           <PeopleOfAipTeamMembers teamMembers={members} urlSlug={urlSlug} />
         )
       )}

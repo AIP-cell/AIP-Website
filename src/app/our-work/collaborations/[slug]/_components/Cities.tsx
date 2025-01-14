@@ -199,20 +199,6 @@ const Cities = ({ collaboration, slug }: Props) => {
                     </div>
                   </div>
                 ))}
-                {/* <div className="flex items-center bg-white border border-1 border-gray10 rounded-xl ~w-[4.12rem]/[5.388rem] ~h-[4rem]/20 overflow-hidden">
-                  <Image
-                    src={Foundation3}
-                    className=" object-cover "
-                    alt="foundation"
-                  />
-                </div>
-                <div className="flex items-center rounded-xl h-[4rem] w-[4.4rem] overflow-hidden">
-                  <Image
-                    src={Foundation2}
-                    alt="foundation"
-                    className="object-contain"
-                  />
-                </div> */}
               </div>
             </div>
             <div className="order-3 md:order-none pt-[2.5rem] border-t border-gray10 md:border-none">
@@ -221,13 +207,13 @@ const Cities = ({ collaboration, slug }: Props) => {
               </p>
 
               <div className="flex gap-4">
-                <div className="bg-bgGray5 text-darkPurple hover:text-white hover:bg-darkPurple w-[3rem] h-[3rem] rounded-full flex items-center justify-center">
+                <Link href="" className="bg-bgGray5 text-darkPurple hover:text-white hover:bg-darkPurple w-[3rem] h-[3rem] rounded-full flex items-center justify-center">
                   <YoutubeSvg className="size-[2rem]" />
-                </div>
+                </Link>
 
-                <div className="bg-bgGray5 text-darkPurple hover:text-white hover:bg-darkPurple w-[3rem] h-[3rem] rounded-full flex items-center justify-center ">
+                <Link href="" className="bg-bgGray5 text-darkPurple hover:text-white hover:bg-darkPurple w-[3rem] h-[3rem] rounded-full flex items-center justify-center ">
                   <XSvg className="w-[1.063rem] h-[1.125rem]" />
-                </div>
+                </Link>
               </div>
             </div>
           </div>
@@ -239,7 +225,7 @@ const Cities = ({ collaboration, slug }: Props) => {
             alt="image"
           />
           <div className="flex pt-[1.382rem]">
-            <Link 
+            <Link
               href={cities?.at(selectedIndex)?.report ?? ""}
               download
               target="_blank"
@@ -264,10 +250,13 @@ const Cities = ({ collaboration, slug }: Props) => {
         {cities.length != 0 && (
           <div className="container mx-auto relative ~px-[1.25rem]/[7.8rem] ~pt-[5rem]/[12.75rem]">
             <Agenda agendaArray={cities?.at(selectedIndex)?.agenda} />
-            <InnerCollaborationsVideo
-            linkOrVideo={cities?.at(selectedIndex)?.linkOrVideo}
-              video={cities?.at(selectedIndex)?.Video}
-            />
+            {cities?.at(selectedIndex)?.linkOrVideo && (
+              <InnerCollaborationsVideo
+                linkOrVideo={cities?.at(selectedIndex)?.linkOrVideo}
+                video={cities?.at(selectedIndex)?.Video}
+                videoLink={cities?.at(selectedIndex)?.videoLink}
+              />
+            )}
           </div>
         )}
         {cities.length != 0 && (

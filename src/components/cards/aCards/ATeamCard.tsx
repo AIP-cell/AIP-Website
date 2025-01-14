@@ -44,7 +44,7 @@ const ATeamCard = ({
         sizeClass
       )}
     >
-      <AMediumSizeSvg src={image} className="~w-[10rem]/[11.87rem] h-full" />
+      <AMediumSizeSvg src={image} className="" />
       {linkedin && (
         <Image
           src={Linkedin}

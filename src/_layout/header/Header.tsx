@@ -30,7 +30,7 @@ const headerData = [
     label: "People of AIP",
     options: [
       { option: "Our Core Founders", link: "/people-of-aip/coreFounder" },
-      { option: "Founders", link: "/people-of-aip/founder" },
+      { option: "Founders", link: "/people-of-aip/founders" },
       {
         option: "Our Advisory Board",
         link: "/people-of-aip/advisoryBoard",

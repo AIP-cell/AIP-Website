@@ -177,13 +177,13 @@ import { TTeamMembers } from "@/api/type";
 //   },
 // ];
 type Props = {
-  teamMembers: TTeamMembers[];
+  teamMembers?: TTeamMembers[];
   urlSlug: string;
 };
 const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
   return (
     <div className="w-full relative">
-      {teamMembers.length != 0 && (
+      {/* {teamMembers.length != 0 && (
         <>
           <Image
             src={Bg1}
@@ -206,9 +206,9 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
             className="hidden xl:block absolute bottom-[23rem] left-[17rem] size-[12rem]"
           />
         </>
-      )}
-      <div className="pt-[3rem] pb-[7rem] container mx-auto">
-        <div className="flex flex-col  justify-center ~px-[1.25rem]/[20.9rem]">
+      )} */}
+      <div className="pt-[3rem] pb-[7rem] ">
+        <div className="flex flex-col  justify-center ~px-[1.25rem]/[20.9rem] ~pb-[1.83rem]/[3.875rem] container mx-auto">
           {urlSlug === "experts" && (
             <h2 className=" text-center ~text-h4/h2 ~leading-[2.6rem]/[3.3rem] text-textPurple font-playFairItalic">
               Experts
@@ -242,7 +242,7 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
               "It takes a village to raise a child. It takes a team to build an organisation that works toward a common aim: to inform, influence and inspire philanthropists and stakeholders, fostering a deeper understanding of how strategic philanthropy can address pressing social challenges."}
           </p>
         </div>
-        {teamMembers.map((items, i) => {
+        {teamMembers?.map((items, i) => {
           const position = i % 12;
           if (
             position === 0 ||
@@ -255,10 +255,10 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
             return (
               <div
                 key={i}
-                className="~pt-[4.83rem]/[7.875rem] flex md:block flex-col items-center ~px-[1.25rem]/[7.8rem] relative"
+                className="~pt-[3.5rem]/[4rem] flex md:block flex-col items-center "
               >
                 {position === 0 && (
-                  <div className="flex ~gap-[1.25rem]/[5.6rem] ">
+                  <div className="flex ~gap-[1.25rem]/[5.6rem] ~px-[1.25rem]/[7.8rem] relative container mx-auto ">
                     <ATeamCard
                       slug={items?.slug}
                       link={`/people-of-aip/${urlSlug}/${items.slug}`}
@@ -282,31 +282,45 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
                   </div>
                 )}
                 {position === 2 && (
-                  <div className="pt-[4rem] flex ~gap-[1.25rem]/[5.6rem] ">
-                    <ATeamCard
-                      slug={items?.slug}
-                      link={`/people-of-aip/${urlSlug}/${items.slug}`}
-                      image={items?.image}
-                      title={items?.name}
-                      desc={items?.designation}
-                      linkedin={true}
-                    />
-                    {teamMembers[i + 1] && (
-                      <PTeamCard
-                        slug={teamMembers[i + 1]?.slug}
-                        image={teamMembers[i + 1]?.image}
-                        link={`/people-of-aip/${urlSlug}/${
-                          teamMembers[i + 1].slug
-                        }`}
-                        title={teamMembers[i + 1]?.name}
-                        desc={teamMembers[i + 1]?.designation}
+                  <div className="relative">
+                    <>
+                      <Image
+                        src={Bg1}
+                        alt=""
+                        className="hidden lg:block absolute bottom-[-4rem] right-0"
+                      />
+                      <Image
+                        src={OvalPeach}
+                        alt=""
+                        className="hidden lg:block absolute bottom-[15rem] right-[14.125rem] size-[12rem]"
+                      />
+                    </>
+                    <div className=" flex ~gap-[1.25rem]/[5.6rem] ~px-[1.25rem]/[7.8rem] relative container mx-auto ">
+                      <ATeamCard
+                        slug={items?.slug}
+                        link={`/people-of-aip/${urlSlug}/${items.slug}`}
+                        image={items?.image}
+                        title={items?.name}
+                        desc={items?.designation}
                         linkedin={true}
                       />
-                    )}
+                      {teamMembers[i + 1] && (
+                        <PTeamCard
+                          slug={teamMembers[i + 1]?.slug}
+                          image={teamMembers[i + 1]?.image}
+                          link={`/people-of-aip/${urlSlug}/${
+                            teamMembers[i + 1].slug
+                          }`}
+                          title={teamMembers[i + 1]?.name}
+                          desc={teamMembers[i + 1]?.designation}
+                          linkedin={true}
+                        />
+                      )}
+                    </div>
                   </div>
                 )}
                 {position === 4 && (
-                  <div className="justify-center pt-[4rem] flex flex-wrap ~gap-[1.25rem]/[5.6rem]">
+                  <div className="justify-center flex flex-wrap ~gap-[1.25rem]/[5.6rem] ~px-[1.25rem]/[7.8rem] relative container mx-auto">
                     <ATeamCard
                       slug={items?.slug}
                       image={items?.image}
@@ -354,7 +368,7 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
                   </div>
                 )}
                 {position === 8 && (
-                  <div className="pt-[4rem] flex justify-start md:justify-end ~gap-[1.25rem]/[5.6rem]  ">
+                  <div className=" flex justify-start md:justify-end ~gap-[1.25rem]/[5.6rem]  ~px-[1.25rem]/[7.8rem] relative container mx-auto">
                     <ATeamCard
                       slug={items?.slug}
                       image={items?.image}
@@ -378,27 +392,41 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
                   </div>
                 )}
                 {position === 10 && (
-                  <div className="pt-[4rem] flex justify-start md:justify-end ~gap-[1.25rem]/[5.6rem] ">
-                    <ATeamCard
-                      slug={items?.slug}
-                      image={items?.image}
-                      link={`/people-of-aip/${urlSlug}/${items.slug}`}
-                      title={items?.name}
-                      desc={items?.designation}
-                      linkedin={true}
-                    />
-                    {teamMembers[i + 1] && (
-                      <PTeamCard
+                  <div className="relative">
+                    <>
+                      <Image
+                        src={Bg2}
+                        alt=""
+                        className="hidden lg:block absolute bottom-[5rem] left-0"
+                      />
+                      <Image
+                        src={OvalPeach}
+                        alt=""
+                        className="hidden lg:block absolute bottom-[15rem] left-[17rem] size-[12rem]"
+                      />
+                    </>
+                    <div className=" flex justify-start md:justify-end ~gap-[1.25rem]/[5.6rem] ~px-[1.25rem]/[7.8rem] relative container mx-auto">
+                      <ATeamCard
                         slug={items?.slug}
                         image={items?.image}
-                        link={`/people-of-aip/${urlSlug}/${
-                          teamMembers[i + 1]?.slug
-                        }`}
-                        title={teamMembers[i + 1]?.name}
-                        desc={teamMembers[i + 1]?.designation}
+                        link={`/people-of-aip/${urlSlug}/${items.slug}`}
+                        title={items?.name}
+                        desc={items?.designation}
                         linkedin={true}
                       />
-                    )}
+                      {teamMembers[i + 1] && (
+                        <PTeamCard
+                          slug={items?.slug}
+                          image={items?.image}
+                          link={`/people-of-aip/${urlSlug}/${
+                            teamMembers[i + 1]?.slug
+                          }`}
+                          title={teamMembers[i + 1]?.name}
+                          desc={teamMembers[i + 1]?.designation}
+                          linkedin={true}
+                        />
+                      )}
+                    </div>
                   </div>
                 )}
               </div>

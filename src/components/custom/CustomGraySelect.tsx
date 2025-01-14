@@ -18,7 +18,7 @@ export default function CustomGraySelect({
   mainClassName,
 }: {
   selected: any;
-  data: string[];
+  data: { tabNo: number; key: string; name: string }[];
   mainClassName?: string;
   setSelected: (value: any) => void;
 }) {
@@ -32,7 +32,7 @@ export default function CustomGraySelect({
             "focus:outline-none data-[focus]:outline-2 data-[focus]:-outline-offset-2 data-[focus]:outline-white/25"
           )}
         >
-          {data.at(selected)}
+          {data.at(selected)?.name}
           <DownTagSvg className="~w-[1.25rem]/[0.6rem] ~h-[1.25rem]/[0.4rem]" />
         </ListboxButton>
         <ListboxOptions
@@ -49,7 +49,7 @@ export default function CustomGraySelect({
               className="group flex cursor-default items-center gap-2  py-1.5 px-3 select-none bg-gray-200 text-black data-[focus]:bg-gray-400"
             >
               {/* <CheckIcon className="invisible size-4 fill-darkPurple group-data-[selected]:visible" /> */}
-              <div className="text-h9Copy4 text-black">{item}</div>
+              <div className="text-h9Copy4 text-black">{item.name}</div>
             </ListboxOption>
           ))}
         </ListboxOptions>

@@ -121,7 +121,13 @@ const InnerExpertsSectionOne = ({ innerData, params }: Props) => {
             </div>
           </div>
         </div>
-        <InnerCollaborationsVideo video={innerData?.video} />
+        {innerData?.linkOrVideo && (
+          <InnerCollaborationsVideo
+            video={innerData?.video}
+            linkOrVideo={innerData?.linkOrVideo}
+            videoLink={innerData?.videoLink}
+          />
+        )}
       </div>
     </div>
   );

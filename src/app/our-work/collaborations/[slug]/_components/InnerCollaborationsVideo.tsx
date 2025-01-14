@@ -6,11 +6,13 @@ import ReactPlayer from "react-player";
 import Image from "next/image";
 import { StorageUrl } from "@/utils/BaseUrl";
 import useClient from "@/hooks/useClient";
+import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 type Props = {
   video?: string;
+  videoLink?: string;
   linkOrVideo?: string;
 };
-const InnerCollaborationsVideo = ({ video, linkOrVideo }: Props) => {
+const InnerCollaborationsVideo = ({ video,videoLink, linkOrVideo }: Props) => {
   const client = useClient();
   if (!client) {
     return;
@@ -37,9 +39,13 @@ const InnerCollaborationsVideo = ({ video, linkOrVideo }: Props) => {
             <ReactPlayer
               className="z-10 border-2 absolute inset-0 !w-full !h-full flex justify-center items-center"
               url={StorageUrl + video}
-              light="/svg/playButtonPurple.svg"
+              light="/images/upcoming.png"
               playing
-              // playIcon={Play}
+              playIcon={
+                <ButtonAnimation>
+                  <Image src={videoPlaySvg} alt="" className="" />
+                </ButtonAnimation>
+              }
               controls
             />
             {/* <Image
@@ -50,14 +56,26 @@ const InnerCollaborationsVideo = ({ video, linkOrVideo }: Props) => {
           </div>
         ) : (
           <div className="w-[64.375rem] relative flex justify-center items-center ~h-[12.313rem]/[35.313rem] overflow-hidden rounded-lg">
-            <video className="z-10 border-2 absolute inset-0 w-full h-full ">
+            {/* <video className="z-10 border-2 absolute inset-0 w-full h-full ">
               <source src={StorageUrl + video} type="video/mp4" />
-            </video>
-            <Image
+            </video> */}
+            <ReactPlayer
+              className="z-10 border-2 absolute inset-0 !w-full !h-full flex justify-center items-center cursor-pointer"
+              url={StorageUrl + videoLink}
+              // light="/images/upcoming.png"
+              playing
+              playIcon={
+                <ButtonAnimation>
+                  <Image src={videoPlaySvg} alt="" className="" />
+                </ButtonAnimation>
+              }
+              controls
+            />
+            {/* <Image
               src={videoPlaySvg}
               alt="play-svg"
               className="z-50 cursor-pointer"
-            />
+            /> */}
           </div>
         )}
       </div>

@@ -15,7 +15,7 @@ type Props = {
 const OurCoreFoundersContent = ({ coreFounderMembers }: Props) => {
   return (
     <div className="w-full relative">
-      {coreFounderMembers.length != 0 && (
+      {/* {coreFounderMembers.length != 0 && (
         <>
           <Image
             src={Bg}
@@ -28,9 +28,9 @@ const OurCoreFoundersContent = ({ coreFounderMembers }: Props) => {
             className="hidden xl:block absolute  bottom-0  left-0 rotate-180"
           />
         </>
-      )}
-      <div className="~pt-[2.125rem]/[3rem] container mx-auto relative">
-        <div className="flex flex-col items-center justify-center ~px-[1.25rem]/[20.938rem]">
+      )} */}
+      <div className="~pt-[2.125rem]/[3rem]  relative">
+        <div className="flex flex-col items-center justify-center ~px-[1.25rem]/[20.938rem] container mx-auto">
           <h2 className="~text-h4/h2 text-center text-gray80 ~leading-[2.6rem]/[3.2rem] font-playFair">
             <span className="text-textPurple font-playFairItalic">
               &nbsp;Core-Founders
@@ -44,50 +44,68 @@ const OurCoreFoundersContent = ({ coreFounderMembers }: Props) => {
             Our founders are our banks, our north stars, all the same.
           </p>
         </div>
-        {coreFounderMembers.map((item, i) => {
-          const isFirstDesign = Math.floor(i / 2) % 2 === 0;
-          if (i % 2 == 0) {
-            return (
-              <div
-                key={i}
-                className={cn(
-                  "sm:flex-row flex-col flex ~gap-[3.5rem]/[4.56rem] ",
-                  {
-                    "pt-[5rem] pr-12 ~pl-12/[7.8rem] ": isFirstDesign,
-                    "~pt-14/[5.25rem] justify-end pb-[7.37rem] pl-12 ~pr-12/[7.8rem]":
-                      !isFirstDesign,
-                  }
-                )}
-              >
-                <ACard
-                  slug={item?.slug}
-                  link={`/people-of-aip/coreFounder/${item.slug}`}
-                  linkedin
-                  nameClass=" underline decoration-[1px] underline-offset-4 "
-                  name={item?.name}
-                  desc={item?.description}
-                  work={item?.designation}
-                  image={item?.image}
-                />
+        <div className="relative ">
+          {coreFounderMembers.map((item, i) => {
+            const isFirstDesign = Math.floor(i / 2) % 2 === 0;
+            if (i % 2 == 0) {
+              return (
+                <div key={i} className="relative h-full">
+                  {i % 2 == 0 && (
+                    <Image
+                      src={Bg}
+                      alt=""
+                      className={cn("hidden xl:block absolute  top-0  right-0",{"right-auto left-0 rotate-180":!isFirstDesign})}
+                    />
+                  )}
+                  {/* {coreFounderMembers[i + 1] && (
+                    <Image
+                      src={Bg}
+                      alt=""
+                      className="hidden xl:block absolute  bottom-0  left-0 rotate-180"
+                    />
+                  )} */}
 
-                {coreFounderMembers[i + 1] && (
-                  <PCard
-                    slug={item?.slug}
-                    link={`/people-of-aip/coreFounder/${
-                      coreFounderMembers[i + 1]?.slug
-                    }`}
-                    linkedin
-                    nameClass=" underline decoration-[1px] underline-offset-4 "
-                    name={coreFounderMembers[i + 1]?.name}
-                    desc={coreFounderMembers[i + 1]?.description}
-                    work={coreFounderMembers[i + 1]?.designation}
-                    image={coreFounderMembers[i + 1]?.image}
-                  />
-                )}
-              </div>
-            );
-          }
-        })}
+                  <div
+                    className={cn(
+                      "sm:flex-row flex-col flex ~gap-[3.5rem]/[4.56rem] container mx-auto",
+                      {
+                        "pt-[5rem] pr-12 ~pl-12/[7.8rem] ": isFirstDesign,
+                        "~pt-14/[5.25rem] justify-end pb-[7.37rem] pl-12 ~pr-12/[7.8rem]":
+                          !isFirstDesign,
+                      }
+                    )}
+                  >
+                    <ACard
+                      slug={item?.slug}
+                      link={`/people-of-aip/coreFounder/${item.slug}`}
+                      linkedin
+                      nameClass=" underline decoration-[1px] underline-offset-4 "
+                      name={item?.name}
+                      desc={item?.description}
+                      work={item?.designation}
+                      image={item?.image}
+                    />
+
+                    {coreFounderMembers[i + 1] && (
+                      <PCard
+                        slug={item?.slug}
+                        link={`/people-of-aip/coreFounder/${
+                          coreFounderMembers[i + 1]?.slug
+                        }`}
+                        linkedin
+                        nameClass=" underline decoration-[1px] underline-offset-4 "
+                        name={coreFounderMembers[i + 1]?.name}
+                        desc={coreFounderMembers[i + 1]?.description}
+                        work={coreFounderMembers[i + 1]?.designation}
+                        image={coreFounderMembers[i + 1]?.image}
+                      />
+                    )}
+                  </div>
+                </div>
+              );
+            }
+          })}
+        </div>
       </div>
     </div>
   );

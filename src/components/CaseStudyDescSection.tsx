@@ -6,6 +6,7 @@ type Props = {
   desc?: string;
   index: number;
 };
+
 const CaseStudyDescSection = ({ desc, index }: Props) => {
   const [currentIndex, setCurrentIndex] = useState<number | null>(null);
   const [isClamped, setIsClamped] = useState(false);
@@ -26,23 +27,35 @@ const CaseStudyDescSection = ({ desc, index }: Props) => {
       setIsClamped(actualLines > 6); // Check if the text exceeds 6 lines
     }
   }, [desc]);
+
   return (
     <div>
       <div
         ref={textRef}
         className={cn(
-          "text-midGray ~pt-[1rem]/[1.25rem] ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] text-ellipsis",
+          "text-midGray ~pt-[1rem]/[1.25rem] ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] relative",
           {
-            "line-clamp-6": isClamped && currentIndex !== index,
+            "line-clamp-6 overflow-hidden": isClamped && currentIndex !== index,
             "line-clamp-none": currentIndex === index,
           }
         )}
       >
         {desc}
+        {isClamped && currentIndex !== index && (
+          <span className="absolute bottom-0 right-0 bg-white pl-2 text-darkPurple">
+            ...{""}
+            <button
+              onClick={() => toggle(index)}
+              className="inline text-darkPurple ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] font-semibold"
+            >
+              read more 
+            </button>
+          </span>
+        )}
       </div>
-      {isClamped && (
-        <button onClick={() => toggle(index)} className="text-darkPurple mt-2">
-          {currentIndex === index ? "Show Less" : "Read More"}
+      {isClamped && currentIndex === index && (
+        <button onClick={() => toggle(index)} className="text-darkPurple ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] font-semibold">
+          show less
         </button>
       )}
     </div>

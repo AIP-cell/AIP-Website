@@ -1,21 +1,23 @@
 import Image from "next/image";
-import Src from "@public/images/mediaImage.png";
 import React from "react";
 import cn from "@/utils/tailwind";
 import dayjs from "dayjs";
 import Link from "next/link";
+import { StorageUrl } from "@/utils/BaseUrl";
 
 type Props = {
   title?: string;
   desc?: string;
   link?: string;
   ddmmyy?: string;
+  image?: string;
   index: number;
   mediaArrayLength: number;
 };
 const MediaCard = ({
   title,
   ddmmyy,
+  image,
   desc,
   index,
   mediaArrayLength,
@@ -31,7 +33,12 @@ const MediaCard = ({
       )}
     >
       <div className="relative w-full ~h-[14.51rem]/[16.563rem] overflow-hidden rounded-2xl cursor-pointer">
-        <Image src={Src} alt="media-image" fill className="object-cover" />
+        <Image
+          src={image ? StorageUrl + image : "/images/mediaImage.png"}
+          alt="media-image"
+          fill
+          className="object-cover"
+        />
       </div>
       <Link
         href={link ?? ""}

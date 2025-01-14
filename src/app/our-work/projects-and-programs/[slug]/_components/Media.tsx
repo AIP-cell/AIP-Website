@@ -75,11 +75,12 @@ const Media = ({ media }: Props) => {
             <MediaCard
               mediaArrayLength={mediaArrayLength}
               key={i}
+              image={media?.image}
               index={i}
-              link={media.link}
-              title={media.title}
-              desc={media.description}
-              ddmmyy={media.date}
+              link={media?.link}
+              title={media?.title}
+              desc={media?.description}
+              ddmmyy={media?.date}
             />
           ))}
         </div>
