@@ -23,7 +23,7 @@ const page = async () => {
     <div>
       <FoundationFactHeroSection />
       {foundationFacts && <FoundationFacts foundationFacts={foundationFacts} />}
-      {testimonialsData && <Testimonials testimonialsData={testimonialsData} />}
+      {testimonialsData.length!=0 && <Testimonials testimonialsData={testimonialsData} />}
       <ContactSection />
     </div>
   );

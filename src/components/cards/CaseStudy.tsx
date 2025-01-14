@@ -94,7 +94,7 @@ const CaseStudy = ({
             </ButtonAnimation>
           </Link>
         ) : (
-          isLinkOrPdf != " " && (
+          isLinkOrPdf != "" && (
             <Link
               href={StorageUrl + link}
               target="_blank"

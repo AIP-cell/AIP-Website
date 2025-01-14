@@ -24,7 +24,7 @@ const page = async () => {
   return (
     <div className="relative pt-[5rem]">
       <ImpactHeroSection />
-      {caseStudyData.length!=0 && (
+      {caseStudyData.length != 0 && (
         <CaseStudies
           bottomCaseStudyCurveSvg={CurvePeach}
           caseStudyData={caseStudyData}
@@ -33,7 +33,7 @@ const page = async () => {
       {foundationFacts && (
         <FoundationFacts button="View more" foundationFacts={foundationFacts} />
       )}
-      {peopleData.length!=0 && <PeopleWeWorkWith peopleData={peopleData} />}
+      {peopleData.length != 0 && <PeopleWeWorkWith peopleData={peopleData} />}
     </div>
   );
 };
