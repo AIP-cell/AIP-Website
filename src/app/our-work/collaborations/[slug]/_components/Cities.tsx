@@ -154,7 +154,7 @@ const Cities = ({ collaboration, slug }: Props) => {
               <div className="flex gap-4">
                 {cities
                   ?.at(selectedIndex)
-                  ?.organisationDetails.map((items, i) => (
+                  ?.organisationDetails?.map((items, i) => (
                     <div
                       key={i}
                       className=" flex items-center bg-white border border-1 border-gray10 rounded-xl ~w-[9.46rem]/[11.813rem] ~h-[4rem]/20 overflow-hidden"
@@ -201,32 +201,33 @@ const Cities = ({ collaboration, slug }: Props) => {
                 ))}
               </div>
             </div>
-            <div className="order-3 md:order-none pt-[2.5rem] border-t border-gray10 md:border-none">
-              <p className="font-playFair pb-4 ~leading-[1.575rem]/[1.75rem] font-medium tracking-[-.02rem] ~text-h6M/h5 text-gray80">
-                Catch up on Event Updates
-              </p>
+            {cities?.at(selectedIndex)?.youtube ||
+              (cities?.at(selectedIndex)?.twitter && (
+                <div className="order-3 md:order-none pt-[2.5rem] border-t border-gray10 md:border-none">
+                  <p className="font-playFair pb-4 ~leading-[1.575rem]/[1.75rem] font-medium tracking-[-.02rem] ~text-h6M/h5 text-gray80">
+                    Catch up on Event Updates
+                  </p>
 
-              <div className="flex gap-4">
-                {cities?.at(selectedIndex)?.catchupDetails.map((items, i) => (
-                  <Link
-                    key={i}
-                    href={items.link}
-                    className="bg-bgGray5 text-darkPurple hover:text-white hover:bg-darkPurple w-[3rem] h-[3rem] rounded-full flex items-center justify-center"
-                  >
-                    <div className="size-[2rem] relative">
-                      <Image src={StorageUrl + items.image} alt="" fill />
-                    </div>
-                  </Link>
-                ))}
-                {/* <YoutubeSvg className="size-[2rem]" /> */}
-                {/* <Link
-                  href=""
-                  className="bg-bgGray5 text-darkPurple hover:text-white hover:bg-darkPurple w-[3rem] h-[3rem] rounded-full flex items-center justify-center "
-                >
-                  <XSvg className="w-[1.063rem] h-[1.125rem]" />
-                </Link> */}
-              </div>
-            </div>
+                  <div className="flex gap-4">
+                    {cities?.at(selectedIndex)?.youtube && (
+                      <Link
+                        href={cities?.at(selectedIndex)?.youtube ?? ""}
+                        className="bg-bgGray5 text-darkPurple hover:text-white hover:bg-darkPurple w-[3rem] h-[3rem] rounded-full flex items-center justify-center"
+                      >
+                        <YoutubeSvg className="size-[2rem]" />
+                      </Link>
+                    )}
+                    {cities?.at(selectedIndex)?.twitter && (
+                      <Link
+                        href={cities?.at(selectedIndex)?.twitter ?? ""}
+                        className="bg-bgGray5 text-darkPurple hover:text-white hover:bg-darkPurple w-[3rem] h-[3rem] rounded-full flex items-center justify-center "
+                      >
+                        <XSvg className="w-[1.063rem] h-[1.125rem]" />
+                      </Link>
+                    )}
+                  </div>
+                </div>
+              ))}
           </div>
         </div>
         <div className="hidden md:block pt-[5rem]">
@@ -237,7 +238,7 @@ const Cities = ({ collaboration, slug }: Props) => {
           />
           <div className="flex pt-[1.382rem]">
             <Link
-              href={cities?.at(selectedIndex)?.report ?? ""}
+              href={StorageUrl + cities?.at(selectedIndex)?.report}
               download
               target="_blank"
               className="group bg-darkPurple border-2 border-darkPurple hover:bg-white  transition-all  hover:text-darkPurple text-white hover:border-2 hover:border-darkPurple px-7 py-3 flex items-center gap-[0.75rem] w-fit rounded-3xl"
@@ -272,16 +273,24 @@ const Cities = ({ collaboration, slug }: Props) => {
         )}
         {cities.length != 0 && (
           <>
-            <div className="container mx-auto ~pt-[3rem]/0">
-              <Gallery
-                galleryImages={cities?.at(selectedIndex)?.gallery.galleryImages}
-                galleryLink={`/our-work/collaborations/${slug}/event-gallery`}
+            {cities?.at(selectedIndex)?.gallery.galleryImages.length != 0 && (
+              <div className="container mx-auto ~pt-[3rem]/0">
+                <Gallery
+                  galleryImages={
+                    cities?.at(selectedIndex)?.gallery.galleryImages
+                  }
+                  galleryLink={`/our-work/collaborations/${slug}/event-gallery`}
+                />
+              </div>
+            )}
+            {cities?.at(selectedIndex)!.media.length != 0 && (
+              <Media media={cities?.at(selectedIndex)!.media} />
+            )}
+            {cities?.at(selectedIndex)!.testimonials.length != 0 && (
+              <InnerCollaborationTestimonials
+                testimonials={cities?.at(selectedIndex)!.testimonials}
               />
-            </div>
-            <Media media={cities?.at(selectedIndex)!.media} />
-            <InnerCollaborationTestimonials
-              testimonials={cities?.at(selectedIndex)!.testimonials}
-            />
+            )}
           </>
         )}
       </div>

@@ -47,6 +47,7 @@ const SelectedWorks = ({ works }: Props) => {
             name={item.name}
             desc={item.description}
             category={item.category}
+            domain={item.domain}
           />
         ))}
       </div>

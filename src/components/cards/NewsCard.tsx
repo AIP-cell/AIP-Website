@@ -33,16 +33,12 @@ const NewsCard = ({ src, text, index }: Props) => {
   return (
     <div className="flex flex-col w-full gap-[1.25rem] shrink-0 grow-0">
       <div className="relative w-full ~h-[14.8rem]/[22.5rem] rounded-2xl overflow-hidden">
-        {src ? (
-          <Image
-            src={StorageUrl + src}
-            alt="news-image"
-            fill
-            className="object-cover"
-          />
-        ) : (
-          <div className="absolute inset-0 w-full h-full bg-white"></div>
-        )}
+        <Image
+          src={src ? StorageUrl + src : "/images/news/newsDemo.png"}
+          alt="news-image"
+          fill
+          className="object-cover"
+        />
       </div>
       <div>
         <div
@@ -58,7 +54,10 @@ const NewsCard = ({ src, text, index }: Props) => {
           {text}
         </div>
         {isClamped && (
-          <button onClick={() => toggle(index)} className="text-darkPurple mt-2">
+          <button
+            onClick={() => toggle(index)}
+            className="text-darkPurple mt-2"
+          >
             {currentIndex === index ? "Show Less" : "Read More"}
           </button>
         )}

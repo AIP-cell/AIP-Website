@@ -1,36 +1,32 @@
 import Gallery from "@/app/our-work/projects-and-programs/[slug]/_components/Gallery";
-import { TCuratedResourcesExpertsInner } from "@/api/type";
+import {
+  TCuratedResourcesExpertsInner,
+  TCuratedResourcesInner,
+} from "@/api/type";
 import { Api } from "@/api/Api";
 import InnerExpertsSectionOne from "@/app/resource-center/curated-resources/[slug]/[innerSlug]/_components/InnerExpertsSectionOne";
 import { notFound } from "next/navigation";
 
 export const dynamic = "force-dynamic";
-const getCuratedResourcesExpertsInnerApi = async (
+const getNposCaseStudyApi = async (
   slug: string
-): Promise<TCuratedResourcesExpertsInner> => {
-  const response = await Api.getCuratedResourcesExpertsInner(slug);
+): Promise<TCuratedResourcesInner> => {
+  const response = await Api.getNposCaseStudy(slug);
   return response?.data;
 };
-const page = async ({
-  params,
-}: {
-  params: Promise<{ casestudy: string; slug: string }>;
-}) => {
-  const asyncInnerSlug = (await params).casestudy;
+const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
+  const asyncInnerSlug = (await params).slug;
   // const asyncSlug = (await params).slug;
-  const response = await getCuratedResourcesExpertsInnerApi(asyncInnerSlug);
+  const response = await getNposCaseStudyApi(asyncInnerSlug);
   if (!response) {
     notFound();
   }
-  const curatedResource = response?.curatedResource;
-  const galleryImages = response.curatedResource.galleryImages;
+
+  const galleryImages = response?.galleryImages;
   return (
     <div className="pt-[5rem]">
-      {curatedResource && (
-        <InnerExpertsSectionOne
-          innerData={curatedResource}
-          params={asyncInnerSlug}
-        />
+      {response && (
+        <InnerExpertsSectionOne innerData={response} params={asyncInnerSlug} />
       )}
       {galleryImages && (
         <div className="container mx-auto ~pb-[5rem]/[7.5rem]">

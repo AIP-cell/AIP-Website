@@ -26,15 +26,23 @@ const InnerExpertsSectionOne = ({ innerData, params }: Props) => {
         className="hidden md:block absolute top-[8rem] right-0"
       />
       <div className="container mx-auto relative ~px-[1.25rem]/[7.8rem] pt-[5rem]">
+        {innerData?.expertName && (
+          <BreadCrump
+            textOne="Resource Center"
+            linkOne="/resource-center"
+            textTwo="Curated Resources"
+            linkTwo="/resource-center/curated-resources"
+            textThree="Experts"
+            linkThree={`/resource-center/curated-resources/experts`}
+            textFour={innerData?.title}
+            linkFour={`/resource-center/curated-resources/experts/${params}`}
+          />
+        )}
         <BreadCrump
-          textOne="Resource Center"
-          linkOne="/resource-center"
-          textTwo="Curated Resources"
-          linkTwo="/resource-center/curated-resources"
-          textThree="Experts"
-          linkThree={`/resource-center/curated-resources/experts`}
-          textFour={innerData?.title}
-          linkFour={`/resource-center/curated-resources/experts/${params}`}
+          textOne="Npo"
+          linkOne="/our-work/npo"
+          textTwo={innerData?.title}
+          linkTwo={`/our-work/npo/${params}`}
         />
         <div className="relative grid md:grid-cols-3 gap-5 ~pb-[3rem]/0">
           <div className="col-span-2 flex flex-col ~gap-[2rem]/[2.5rem]  ~pe-0/[6.563rem]">
@@ -43,12 +51,14 @@ const InnerExpertsSectionOne = ({ innerData, params }: Props) => {
                 <p className="leading-[3.25rem] tracking-[-.04rem] text-h3 text-midGray ">
                   {innerData?.title}
                 </p>
-                <p className="font-medium  leading-[1.75rem]  font-playFair text-h5 text-gray80 pt-[1rem]">
-                  By{" "}
-                  <span className="underline underline-offset-3 decoration-[1.5px]">
-                    Karthik Muralidharan
-                  </span>
-                </p>
+                {innerData?.expertName && (
+                  <p className="font-medium  leading-[1.75rem]  font-playFair text-h5 text-gray80 pt-[1rem]">
+                    By{" "}
+                    <span className="underline underline-offset-3 decoration-[1.5px]">
+                      {innerData?.expertName}
+                    </span>
+                  </p>
+                )}
                 <p className=" leading-[1.75rem]  font-playFairItalic text-h5 text-gray40 font-medium pt-[1rem]">
                   {innerData?.domain}
                   {/* Reports | Fields */}

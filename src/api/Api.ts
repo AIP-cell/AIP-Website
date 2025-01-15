@@ -121,6 +121,15 @@ export const Api = {
       return null;
     }
   },
+  getNposCaseStudy: async (slug: string) => {
+    try {
+      const response = await axiosClient.get(`npos/${slug}`);
+      return response.data;
+    } catch (error) {
+      console.log(error);
+      return null;
+    }
+  },
   getPeopleOfAip: async (slug: string) => {
     try {
       const response = await axiosClient.get(`aip-team/${slug}`);

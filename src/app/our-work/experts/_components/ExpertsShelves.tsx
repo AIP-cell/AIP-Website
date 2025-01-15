@@ -44,6 +44,7 @@ const ExpertsShelves = ({ expertShelves }: Props) => {
             title={item?.title}
             desc={item?.description}
             category={item?.category}
+            domain={item?.domain}
           />
         ))}
       </div>

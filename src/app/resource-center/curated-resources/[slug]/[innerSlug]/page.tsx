@@ -25,13 +25,17 @@ const page = async ({
   const galleryImages = response.curatedResource.galleryImages;
   return (
     <div className="pt-[5rem]">
-      <InnerExpertsSectionOne
-        innerData={curatedResource}
-        params={asyncInnerSlug}
-      />
-      <div className="container mx-auto ~pb-[5rem]/[7.5rem]">
-        <Gallery galleryImages={galleryImages} />
-      </div>
+      {curatedResource && (
+        <InnerExpertsSectionOne
+          innerData={curatedResource}
+          params={asyncInnerSlug}
+        />
+      )}
+      {galleryImages.length != 0 && (
+        <div className="container mx-auto ~pb-[5rem]/[7.5rem]">
+          <Gallery galleryImages={galleryImages} />
+        </div>
+      )}
     </div>
   );
 };

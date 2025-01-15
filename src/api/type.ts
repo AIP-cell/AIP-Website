@@ -151,6 +151,7 @@ export type TCuratedResourcesInner = {
   video: string;
   linkOrFile: string;
   linkOrVideo: string;
+  expertName:string
   file: string;
   date: string;
   links: TLinks[];
@@ -286,6 +287,7 @@ export type TSelectedWorks = {
   name: string;
   title: string;
   description: string;
+  domain:string
   image: string;
   slug: string;
   category: string;
@@ -411,6 +413,8 @@ export type TCities = {
   linkOrVideo: string;
   report: string;
   videoLink: string;
+  youtube: string;
+  twitter: string;
   organisationDetails: TOrganisationDetails[];
   catchupDetails: TCatchupDetails[];
   gallery: TGallery;

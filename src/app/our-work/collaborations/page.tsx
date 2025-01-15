@@ -11,8 +11,7 @@ import CustomFilter from "@/components/custom/CustomFilter";
 import { Api } from "@/api/Api";
 import { TCollaborationPageData } from "@/api/type";
 import { notFound } from "next/navigation";
-const categoryData = ["Category", "Category", "Category"];
-const dateData = ["Date", "Date", "Date"];
+
 const filterDatas = [
   {
     key: "type",
@@ -100,12 +99,6 @@ const page = async ({
                 shared purpose in driving transformative change.
               </div>
             </div>
-            {/* <p className=" inline-block">
-              When we unite our resources and expertise, we pave the way for
-              resilient interventions to tackle pressing challenges. Engaging
-              with AIP&apos;s talented network has helped foster a sense of
-              shared purpose in driving transformative change.
-            </p> */}
           </div>
           <div className="flex flex-wrap ~pt-[3.25rem]/0 items-center gap-[0.75rem]">
             <p className=" text-gray40  ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]">

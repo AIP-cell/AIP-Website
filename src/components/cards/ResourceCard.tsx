@@ -45,7 +45,7 @@ const ResourceCard = ({
   }
   // const link = isLinkOrPdf === "pdf" ? file : fileLink;
   const toDownload = isLinkOrPdf === "pdf" ? true : false;
-  const dateFormat = dayjs(date).format("D MMMM");
+  const dateFormat = dayjs(date).format("D MMMM YYYY");
   // console.log("dateFormat:::,",dateFormat)
 
   return (
