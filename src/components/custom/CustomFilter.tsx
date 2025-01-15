@@ -5,16 +5,13 @@ import {
   ListboxOption,
   ListboxOptions,
 } from "@headlessui/react";
-import Image from "next/image";
 // import DownArrow from "@public/svg/downArrow.svg";
-import ArrowDownSvg from "@public/svg/arrowDown.svg";
 
-import Link from "next/link";
 import React, { useState } from "react";
 import FilterDownArrowSvg from "../svg/FilterDownArrowSvg";
 import { ApplyFilterResp } from "@/app/resource-center/_components/ApplyFilterResp";
-import { useRouter, useSearchParams } from "next/navigation";
 import { generatingSearchParam } from "@/utils/UrlHelper";
+import { useRouter } from "next-nprogress-bar";
 type Props = {
   optionsArray: any[];
   type: string;
@@ -37,8 +34,7 @@ const CustomFilter = ({
 }: Props) => {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
-//  console.log("isOpen:::::",isOpen)
-  // const domain = searchParams.get('domain');
+
   return (
     <>
       {isOpen && (
@@ -59,7 +55,11 @@ const CustomFilter = ({
               className={`flex gap-[.79rem] text-gray80 text-h9Copy5 ~pl-[0.75rem]/[1.75rem] pr-[1.25rem] py-[0.75rem] items-center w-full justify-between `}
             >
               <p className="text-h9Copy5 leading-[1.225rem] capitalize">
-                {type}
+                {type === "c_type"
+                  ? "Type Of Content"
+                  : type === "o_type"
+                  ? "Organization Type"
+                  : type}
               </p>
               <FilterDownArrowSvg className="size-[1.25rem]" />
             </div>
@@ -75,7 +75,6 @@ const CustomFilter = ({
                 value={items}
                 onClick={() => {
                   const query = generatingSearchParam({
-                    // category,
                     ...searchParams,
                     [filterKey]: items,
                   });

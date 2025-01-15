@@ -3,7 +3,7 @@ import cn from "@/utils/tailwind";
 import Link from "next/link";
 import React from "react";
 import ResourcesSm from "./ResourcesSm";
-import { useRouter } from "next/navigation";
+import { useRouter } from "next-nprogress-bar";
 
 type Props = {
   currentTab?: string;
@@ -46,7 +46,7 @@ const ResourcesTabAndSelect = ({
                   })
                 }
                 className={cn(
-                  "~px-[1.5rem]/[2.5rem] py-[0.75rem] cursor-pointer flex justify-center items-center text-h9Copy5 leading-[1.22rem] font-inter ",
+                  "~px-[1.5rem]/[2.5rem] py-[0.75rem] text-center cursor-pointer flex justify-center items-center text-h9Copy5 leading-[1.22rem] font-inter ",
                   tabClassName,
                   {
                     "!bg-darkPurple !text-white !outline-none !rounded-full":

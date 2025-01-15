@@ -9,7 +9,7 @@ import { CheckIcon, ChevronDownIcon } from "@heroicons/react/20/solid";
 import clsx from "clsx";
 import { useState } from "react";
 import DownTagSvg from "../svg/DownTagSvg";
-import { useRouter } from "next/navigation";
+import { useRouter } from "next-nprogress-bar";
 // import { useRouter } from "next/navigation";
 
 export default function CustomGraySelect({

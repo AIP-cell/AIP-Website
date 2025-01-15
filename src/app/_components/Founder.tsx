@@ -121,8 +121,8 @@ const Founder = ({ teamData }: Props) => {
                       slug={teamData.at(select)?.slug}
                       linkedinLink={teamData.at(select)?.linkedln}
                       image={teamData.at(select)?.image}
-                      desc={teamData.at(select)?.description}
-                      post={teamData.at(select)?.designation}
+                      desc={teamData.at(select)?.quote}
+                      post={teamData.at(select)?.organisation}
                       name={teamData.at(select)?.name}
                       videoLink={teamData.at(select)?.videoLink}
                       video={teamData.at(select)?.video}
@@ -140,12 +140,11 @@ const Founder = ({ teamData }: Props) => {
                       linkedinLink={teamData.at(select)?.linkedln}
                       image={teamData.at(select)?.image}
                       slug={teamData.at(select)?.slug}
-                      desc={teamData.at(select)?.description}
-                      post={teamData.at(select)?.designation}
+                      desc={teamData.at(select)?.quote}
+                      post={teamData.at(select)?.organisation}
                       name={teamData.at(select)?.name}
                       videoLink={teamData.at(select)?.videoLink}
                       video={teamData.at(select)?.video}
-
                     />
                   </div>
                 </div>
@@ -182,12 +181,11 @@ const Founder = ({ teamData }: Props) => {
                                 linkedinLink={items?.linkedln}
                                 slug={items?.slug}
                                 image={items?.image}
-                                desc={items?.description}
-                                post={items?.designation}
+                                desc={items?.quote}
+                                post={items?.organisation}
                                 name={items?.name}
                                 videoLink={items?.videoLink}
                                 video={items?.video}
-                                
                               />
                             ) : (
                               index === 1 && (
@@ -198,8 +196,8 @@ const Founder = ({ teamData }: Props) => {
                                   linkedinLink={items?.linkedln}
                                   image={items?.image}
                                   slug={items?.slug}
-                                  desc={items?.description}
-                                  post={items?.designation}
+                                  desc={items?.quote}
+                                  post={items?.organisation}
                                   name={items?.name}
                                   videoLink={items?.videoLink}
                                   video={items?.video}
@@ -219,8 +217,8 @@ const Founder = ({ teamData }: Props) => {
                                 slug={items?.slug}
                                 linkedinLink={items?.linkedln}
                                 image={items?.image}
-                                desc={items?.description}
-                                post={items?.designation}
+                                desc={items?.quote}
+                                post={items?.organisation}
                                 name={items?.name}
                                 video={items?.video}
                                 videoLink={items?.videoLink}
@@ -233,8 +231,8 @@ const Founder = ({ teamData }: Props) => {
                                 linkedinLink={items?.linkedln}
                                 slug={items?.slug}
                                 image={items?.image}
-                                desc={items?.description}
-                                post={items?.designation}
+                                desc={items?.quote}
+                                post={items?.organisation}
                                 name={items?.name}
                                 video={items?.video}
                                 videoLink={items?.videoLink}

@@ -30,7 +30,7 @@ const ImageArray = [
   },
 ];
 type Props = {
-  galleryImages: TGalleryImages[];
+  galleryImages?: TGalleryImages[];
 };
 const GalleryImages = ({ galleryImages }: Props) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -38,17 +38,21 @@ const GalleryImages = ({ galleryImages }: Props) => {
     return dayjs(date).format("D MMMM YYYY");
   };
   const next = () => {
-    if (selectedIndex === galleryImages.length - 1) {
-      setSelectedIndex(0);
-    } else {
-      setSelectedIndex(selectedIndex + 1);
+    if (galleryImages) {
+      if (selectedIndex === galleryImages.length - 1) {
+        setSelectedIndex(0);
+      } else {
+        setSelectedIndex(selectedIndex + 1);
+      }
     }
   };
   const previous = () => {
-    if (selectedIndex === 0) {
-      setSelectedIndex(galleryImages.length - 1);
-    } else {
-      setSelectedIndex(selectedIndex - 1);
+    if (galleryImages) {
+      if (selectedIndex === 0) {
+        setSelectedIndex(galleryImages?.length - 1);
+      } else {
+        setSelectedIndex(selectedIndex - 1);
+      }
     }
   };
   return (
@@ -74,7 +78,7 @@ const GalleryImages = ({ galleryImages }: Props) => {
         <div>
           <div className="relative  ~w-[21.8rem]/[51.25rem] ~h-[14.3rem]/[34.167rem] rounded-xl overflow-hidden flex items-center justify-center">
             <Image
-              src={StorageUrl + galleryImages.at(selectedIndex)?.image}
+              src={StorageUrl + galleryImages?.at(selectedIndex)?.image}
               alt=""
               fill
               className="object-cover z-10"
@@ -82,15 +86,15 @@ const GalleryImages = ({ galleryImages }: Props) => {
           </div>
           <div className="flex flex-col md:flex-row justify-between ~gap-[0.25rem]/[3rem] ~pt-[1rem]/[0.75rem]">
             <div className="leading-[1.4rem] font-bold  text-midGray">
-              <p className="">{galleryImages.at(selectedIndex)?.title}</p>
+              <p className="">{galleryImages?.at(selectedIndex)?.title}</p>
             </div>
             <p className="leading-[1.4rem] text-midGray">
-              {dateFormat(galleryImages.at(selectedIndex)?.date)}
+              {dateFormat(galleryImages?.at(selectedIndex)?.date)}
             </p>
           </div>
         </div>
-        <div className="flex overflow-x-auto no-scrollbar ~gap-[1.125rem]/[1.25rem] ~pt-[1.5rem]/[1.761rem] ~pb-[2rem]/[9.519rem] md:justify-center items-center">
-          {galleryImages.map(
+        <div className="flex overflow-x-auto no-scrollbar w-full ~gap-[1.125rem]/[1.25rem] ~pt-[1.5rem]/[1.761rem] ~pb-[2rem]/[9.519rem]  items-center">
+          {galleryImages?.map(
             (items, i) =>
               i != selectedIndex && (
                 <div
@@ -99,7 +103,7 @@ const GalleryImages = ({ galleryImages }: Props) => {
                   className="relative ~size-[4.6rem]/[11.875rem] rounded-xl overflow-hidden cursor-pointer"
                 >
                   <Image
-                    src={items.image}
+                    src={StorageUrl + items.image}
                     alt=""
                     fill
                     className="object-cover "

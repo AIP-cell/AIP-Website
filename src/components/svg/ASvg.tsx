@@ -30,13 +30,13 @@ const ASvg = ({ src, ...props }: Props) => {
           </defs>
           <image
             mask={`url(#${id})`}
-            preserveAspectRatio="xMidYMid meet"
+            preserveAspectRatio="xMidYMid slice"
             x="0"
             y="0"
             fill="#fff"
             xlinkHref={StorageUrl + src}
-            width="100%"
-            // height="100%"
+            width="296"
+            height="345"
           />
         </>
       ) : (

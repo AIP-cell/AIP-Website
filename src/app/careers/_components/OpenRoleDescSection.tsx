@@ -1,0 +1,58 @@
+"use client";
+import cn from "@/utils/tailwind";
+import React, { useEffect, useRef, useState } from "react";
+
+type Props = {
+  desc: string;
+  index: number;
+};
+
+const OpenRoleDescSection = ({ desc, index }: Props) => {
+  const [currentIndex, setCurrentIndex] = useState<number | null>(null);
+  console.log("currentIndex:::",index === currentIndex)
+
+  const toggle = (index: number) => {
+    console.log("index::",index)
+    if (index>=0) {
+      if (index === currentIndex) {
+        setCurrentIndex(null);
+      } else setCurrentIndex(index);
+    }
+  };
+  return (
+    <div className="relative">
+      <div
+        className={cn(
+          "py-4 ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] font-inter text-midGray h-[10rem] overflow-hidden",
+          {
+            "h-auto": currentIndex === index,
+          }
+        )}
+        dangerouslySetInnerHTML={{ __html: desc }}
+      ></div>
+      <div className={cn("block absolute bg-gradient-to-b via-transparent from-transparent to-bgLightPeach z-[1] inset-0 size-full",{
+            "hidden": currentIndex === index,})}></div>
+      {currentIndex !== index && (
+        <span className="absolute bottom-0 right-0 text-darkPurple z-10">
+          ...{""}
+          <button
+            onClick={() => toggle(index)}
+            className="inline text-darkPurple ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] font-semibold"
+          >
+            read more
+          </button>
+        </span>
+      )}
+      {currentIndex === index && (
+        <button
+          onClick={() => toggle(index)}
+          className="text-darkPurple ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] font-semibold"
+        >
+          show less
+        </button>
+      )}
+    </div>
+  );
+};
+
+export default OpenRoleDescSection;

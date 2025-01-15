@@ -183,30 +183,7 @@ type Props = {
 const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
   return (
     <div className="w-full relative">
-      {/* {teamMembers.length != 0 && (
-        <>
-          <Image
-            src={Bg1}
-            alt=""
-            className="hidden xl:block absolute top-[19.5rem] right-0"
-          />
-          <Image
-            src={OvalPeach}
-            alt=""
-            className="hidden xl:block absolute top-[39rem] right-[14.125rem] size-[12rem]"
-          />
-          <Image
-            src={Bg2}
-            alt=""
-            className="hidden xl:block absolute bottom-[8rem] left-0"
-          />
-          <Image
-            src={OvalPeach}
-            alt=""
-            className="hidden xl:block absolute bottom-[23rem] left-[17rem] size-[12rem]"
-          />
-        </>
-      )} */}
+      
       <div className="pt-[3rem] pb-[7rem] ">
         <div className="flex flex-col  justify-center ~px-[1.25rem]/[20.9rem] ~pb-[1.83rem]/[3.875rem] container mx-auto">
           {urlSlug === "experts" && (
@@ -302,7 +279,7 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
                         link={`/people-of-aip/${urlSlug}/${items.slug}`}
                         image={items?.image}
                         title={items?.name}
-                        desc={items?.designation}
+                        desc={items?.quote}
                         linkedin={true}
                       />
                       {teamMembers[i + 1] && (
@@ -327,7 +304,7 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
                       image={items?.image}
                       link={`/people-of-aip/${urlSlug}/${items.slug}`}
                       title={items?.name}
-                      desc={items?.designation}
+                      desc={items?.quote}
                       linkedin={true}
                     />
                     {teamMembers[i + 1] && (

@@ -24,7 +24,7 @@ export const Api = {
     slug: string,
     data: {
       domain?: string;
-      typeOfContent?: string;
+      c_type?: string;
       date?: string;
     }
   ) => {
@@ -45,8 +45,8 @@ export const Api = {
     slug: string,
     data: {
       domain?: string;
-      typeOfContent?: string;
-      organisationType?: string;
+      c_type?: string;
+      o_type?: string;
       date?: string;
     }
   ) => {
@@ -217,6 +217,15 @@ export const Api = {
   getOneGalleryCollaborations: async (slug: string) => {
     try {
       const response = await axiosClient.get(`collaborations/${slug}/gallery`);
+      return response.data;
+    } catch (error) {
+      console.log(error);
+      return null;
+    }
+  },
+  getOneGalleryProjectAndPrograms: async (slug: string) => {
+    try {
+      const response = await axiosClient.get(`projects-programs/${slug}/gallery`);
       return response.data;
     } catch (error) {
       console.log(error);

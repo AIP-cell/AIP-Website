@@ -50,12 +50,14 @@ const page = () => {
                 <EnquiryLink
                   image={MessageSvg}
                   alt="email"
+                  type="email"
                   data="info@indianphilanthropy.org"
                 />
 
                 <EnquiryLink
                   image={PhoneSvg}
                   alt="phone"
+                  type="phone"
                   data="+91 9876543210"
                 />
 
@@ -67,6 +69,7 @@ const page = () => {
                 <EnquiryLink
                   image={MessageSvg}
                   alt="email"
+                  type="email"
                   data="sabhyata@indianphilanthropy.org"
                   name="Sabhayata Prakash"
                 />
@@ -78,6 +81,7 @@ const page = () => {
                 <EnquiryLink
                   image={MessageSvg}
                   alt="email"
+                  type="email"
                   data="vishal@indianphilanthropy.org"
                   name="Vishal Dutta"
                 />
@@ -97,14 +101,14 @@ const page = () => {
               </div>
               <ButtonAnimation>
                 <Link
-                  className="font-inter text-textPurple hover:text-white flex items-center gap-[0.875rem] bg-bgGray5 hover:bg-textPurple  py-3 w-fit h-[2.8rem] rounded-[3.125rem] px-[1.25rem] "
+                  className="group font-inter text-textPurple hover:text-white flex items-center gap-[0.875rem] bg-bgGray5 hover:bg-textPurple  py-3 w-fit h-[2.8rem] rounded-[3.125rem] px-[1.25rem] "
                   href=""
                 >
                   <div className="">
                     <LocationSvg className="size-[1.313rem] " />
                   </div>
 
-                  <p className="text-gray80 hover:text-white ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]">
+                  <p className="text-gray80 group-hover:text-white ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]">
                     Open Link on Maps
                   </p>
                 </Link>

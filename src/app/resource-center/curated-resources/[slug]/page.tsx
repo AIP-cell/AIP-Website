@@ -3,8 +3,6 @@ import Link from "next/link";
 import BreadCrump from "@/components/bread-crump/BreadCrump";
 // import ResourcesSm from "../_components/ResourcesSm";
 // import TabListAndRespSelect from "../_components/TabListAndRespSelect";
-import { TabGroup, TabPanel, TabPanels } from "@headlessui/react";
-import CustomSelect from "@/components/custom/CustomSelect";
 import ResourceCard from "@/components/cards/ResourceCard";
 import { Api } from "@/api/Api";
 import { TAipResourcesCategory } from "@/api/type";
@@ -15,31 +13,36 @@ import { notFound } from "next/navigation";
 const tabList = [
   {
     slug: "featured",
+    toSend: "featured",
     name: "Featured",
     link: "/resource-center/curated-resources/featured",
   },
-  {
-    slug: "experts",
-    name: "Experts",
-    link: "/resource-center/curated-resources/experts",
-  },
+  // {
+  //   slug: "experts",
+  //   name: "Experts",
+  //   link: "/resource-center/curated-resources/experts",
+  // },
   {
     slug: "philanthropists",
+    toSend: "philanthropists",
     name: "Philanthropists",
     link: "/resource-center/curated-resources/philanthropists",
   },
   {
     slug: "npo",
+    toSend: "npo",
     name: "NPO",
     link: "/resource-center/curated-resources/npo",
   },
   {
     slug: "partners",
+    toSend: "partners",
     name: "Partners",
     link: "/resource-center/curated-resources/partners",
   },
   {
-    slug: "worldOfPhilanthropy",
+    slug: "world-of-philanthropy",
+    toSend: "worldOfPhilanthropy",
     name: "World of Philanthropy",
     link: "/resource-center/curated-resources/worldOfPhilanthropy",
   },
@@ -65,35 +68,67 @@ const curatedResourcesFilter = [
           "Women & Child",
         ],
       },
-    ],
-  },
-  {
-    filterBy: "experts",
-    filter: [
       {
-        type: "domain",
+        type: "c_type",
         options: [
-          "All",
-          "Art & Culture",
-          "Education",
-          "Environment",
-          "Health & Nutrition",
-          "Legal & Judiciary",
-          "Livelihood",
-          "Disability",
-          "Rural Development",
-          "Sports",
-          "WASH",
-          "Women & Child",
+          "Sector primers",
+          "Giving Journey",
+          "Case Study",
+          "Research Study",
+          "Philanthropist",
+          "Speak",
+          "Books",
+          "Articles",
+          "PoV",
+          "White paper",
+          "Newsletter",
         ],
       },
       {
-        type: "Type of Content",
-        options: ["data1", "data2"],
+        type: "o_type",
+        options: [
+          "Sector primers",
+          "Giving Journey",
+          "Case Study",
+          "Research Study",
+          "Philanthropist",
+          "Speak",
+          "Books",
+          "Articles",
+          "PoV",
+          "White paper",
+          "Newsletter",
+        ],
       },
-      { type: "Date", options: ["data1", "data2"] },
     ],
   },
+  // {
+  //   filterBy: "experts",
+  //   filter: [
+  //     {
+  //       type: "domain",
+  //       options: [
+  //         "All",
+  //         "Art & Culture",
+  //         "Education",
+  //         "Environment",
+  //         "Health & Nutrition",
+  //         "Legal & Judiciary",
+  //         "Livelihood",
+  //         "Disability",
+  //         "Rural Development",
+  //         "Sports",
+  //         "WASH",
+  //         "Women & Child",
+  //       ],
+  //     },
+  //     {
+  //       type: "Type of Content",
+  //       options: ["data1", "data2"],
+  //     },
+  //     { type: "Date", options: ["data1", "data2"] },
+  //   ],
+  // },
   {
     filterBy: "philanthropists",
     filter: [
@@ -114,7 +149,7 @@ const curatedResourcesFilter = [
           "Women & Child",
         ],
       },
-      { type: "Date", options: ["data1", "data2"] },
+      { type: "date", options: ["data1", "data2"] },
     ],
   },
   {
@@ -138,10 +173,10 @@ const curatedResourcesFilter = [
         ],
       },
       {
-        type: "Type of Content",
+        type: "c_type",
         options: ["data1", "data2"],
       },
-      { type: "Date", options: ["data1", "data2"] },
+      { type: "date", options: ["data1", "data2"] },
     ],
   },
   {
@@ -165,14 +200,14 @@ const curatedResourcesFilter = [
         ],
       },
       {
-        type: "Type of Content",
+        type: "c_type",
         options: ["data1", "data2"],
       },
-      { type: "Date", options: ["data1", "data2"] },
+      { type: "date", options: ["data1", "data2"] },
     ],
   },
   {
-    filterBy: "worldOfPhilanthropy",
+    filterBy: "world-of-philanthropy",
     filter: [
       {
         type: "domain",
@@ -192,10 +227,10 @@ const curatedResourcesFilter = [
         ],
       },
       {
-        type: "Type of Content",
+        type: "c_type",
         options: ["data1", "data2"],
       },
-      { type: "Date", options: ["data1", "data2"] },
+      { type: "date", options: ["data1", "data2"] },
     ],
   },
 ];
@@ -205,20 +240,20 @@ const getAipResourcesData = async (
   slug: string,
   {
     domain,
-    typeOfContent,
-    organisationType,
+    c_type,
+    o_type,
     date,
   }: {
     domain: string;
-    typeOfContent: string;
-    organisationType: string;
+    c_type: string;
+    o_type: string;
     date: string;
   }
 ): Promise<TAipResourcesCategory[]> => {
   const response = await Api.getCuratedResources(slug, {
     domain,
-    typeOfContent,
-    organisationType,
+    c_type,
+    o_type,
     date,
   });
   return response.data;
@@ -230,24 +265,24 @@ const CuratedResourcesInnerPage = async ({
   params: Promise<{ slug: string }>;
   searchParams: Promise<{
     domain: string;
-    typeOfContent: string;
+    c_type: string;
     organisationType: string;
     date: string;
   }>;
 }) => {
   const param = await params;
   const SearchParam = await searchParams;
-  const { domain, typeOfContent, organisationType, date } = await searchParams;
-  const response = await getAipResourcesData(param.slug, {
+  const { domain, c_type, organisationType, date } = await searchParams;
+  const filterBySlug = tabList.find((items) => items.slug === param.slug);
+  const response = await getAipResourcesData(filterBySlug!.toSend, {
     domain,
-    typeOfContent,
-    organisationType,
+    c_type,
+    o_type: organisationType,
     date,
   });
   if (!response) {
     notFound();
   }
-  const filterBySlug = tabList.find((items) => items.slug === param.slug);
   const filterData = curatedResourcesFilter.find(
     (item) => item.filterBy === param.slug
   );
@@ -296,6 +331,7 @@ const CuratedResourcesInnerPage = async ({
         <div className="pt-[3.25rem] pb-[7.5rem] grid md:grid-cols-2 lg:grid-cols-3 gap-[4.5rem]">
           {response?.map((item, i) => (
             <ResourceCard
+              index={i}
               slug={item?.slug}
               isLinkOrPdf={item?.isLinkOrPdf}
               file={item?.file}
@@ -306,14 +342,10 @@ const CuratedResourcesInnerPage = async ({
               desc={item?.description}
               domain={item?.domain}
               category={item?.category}
+              date={item?.date}
             />
           ))}
         </div>
-        {/* <AipResourceTabs
-          asyncParam={asyncParam}
-          tabData={aipResourcesSelectedTabData}
-          category={category}
-        /> */}
       </div>
     </div>
   );

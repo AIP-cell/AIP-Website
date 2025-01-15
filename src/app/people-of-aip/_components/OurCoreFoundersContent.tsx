@@ -15,20 +15,6 @@ type Props = {
 const OurCoreFoundersContent = ({ coreFounderMembers }: Props) => {
   return (
     <div className="w-full relative">
-      {/* {coreFounderMembers.length != 0 && (
-        <>
-          <Image
-            src={Bg}
-            alt=""
-            className="hidden xl:block absolute  top-[15.5rem]  right-0"
-          />
-          <Image
-            src={Bg}
-            alt=""
-            className="hidden xl:block absolute  bottom-0  left-0 rotate-180"
-          />
-        </>
-      )} */}
       <div className="~pt-[2.125rem]/[3rem]  relative">
         <div className="flex flex-col items-center justify-center ~px-[1.25rem]/[20.938rem] container mx-auto">
           <h2 className="~text-h4/h2 text-center text-gray80 ~leading-[2.6rem]/[3.2rem] font-playFair">
@@ -54,7 +40,10 @@ const OurCoreFoundersContent = ({ coreFounderMembers }: Props) => {
                     <Image
                       src={Bg}
                       alt=""
-                      className={cn("hidden xl:block absolute  top-0  right-0",{"right-auto left-0 rotate-180":!isFirstDesign})}
+                      className={cn(
+                        "hidden xl:block absolute  top-0  right-0",
+                        { "right-auto left-0 rotate-180": !isFirstDesign }
+                      )}
                     />
                   )}
                   {/* {coreFounderMembers[i + 1] && (
@@ -82,8 +71,8 @@ const OurCoreFoundersContent = ({ coreFounderMembers }: Props) => {
                       linkedinLink={item?.linkedin}
                       nameClass=" underline decoration-[1px] underline-offset-4 "
                       name={item?.name}
-                      desc={item?.description}
-                      work={item?.designation}
+                      desc={item?.quote}
+                      work={item?.organisation}
                       image={item?.image}
                     />
 
@@ -97,8 +86,8 @@ const OurCoreFoundersContent = ({ coreFounderMembers }: Props) => {
                         linkedinLink={coreFounderMembers[i + 1]?.linkedin}
                         nameClass=" underline decoration-[1px] underline-offset-4 "
                         name={coreFounderMembers[i + 1]?.name}
-                        desc={coreFounderMembers[i + 1]?.description}
-                        work={coreFounderMembers[i + 1]?.designation}
+                        desc={coreFounderMembers[i + 1]?.quote}
+                        work={coreFounderMembers[i + 1]?.organisation}
                         image={coreFounderMembers[i + 1]?.image}
                       />
                     )}

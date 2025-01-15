@@ -6,13 +6,15 @@ import Link from "next/link";
 import LeftSlickArrowSvg from "@/components/svg/LeftSlickArrowSvg";
 import RightSlickArrowSvg from "@/components/svg/RightSlickArrowSvg";
 import { TJob } from "@/api/type";
-import { useRouter } from "next/navigation";
+import { useRouter } from "next-nprogress-bar";
+import OpenRoleDescSection from "./OpenRoleDescSection";
 
 type Props = {
   data: TJob[];
   totalPages?: number;
+  totalCount?: number;
 };
-const PositionsGrid = ({ data, totalPages }: Props) => {
+const PositionsGrid = ({ data, totalPages, totalCount }: Props) => {
   const parentDivRef = useRef<any>();
   const router = useRouter();
   const [page, setPage] = useState(1);
@@ -24,27 +26,17 @@ const PositionsGrid = ({ data, totalPages }: Props) => {
   const nextPage = () => {
     if (page > 1) {
       setPage(page + 1);
-      router.push(`/careers/all-positions?page=${page}`);
+      router.push(`/careers/all-positions?page=${page}`, { scroll: false });
     }
-    // setPage((prev) => {
-    //   const newPage = prev + 1;
-    //   if (newPage > totalPage) return 1;
-    //   return newPage;
-    // });
   };
 
   const previousPage = () => {
     if (totalPages) {
       if (page <= totalPages) {
         setPage(page - 1);
-        router.push(`/careers/all-positions?page=${page}`);
+        router.push(`/careers/all-positions?page=${page}`, { scroll: false });
       }
     }
-    // setPage((prev) => {
-    //   const newPage = prev - 1;
-    //   if (newPage < 1) return totalPage;
-    //   return newPage;
-    // });
   };
 
   const handlePageClick = (pageNumber: number) => {
@@ -63,13 +55,16 @@ const PositionsGrid = ({ data, totalPages }: Props) => {
               <p className="font-playFair ~text-h4a/h4 text-gray80 ~leading-[2.113rem]/[2.6rem]">
                 {item?.position_name}
               </p>
-              <div className="relative">
+              {item?.description && (
+                <OpenRoleDescSection desc={item?.description} index={i} />
+              )}
+              {/* <div className="relative">
                 <div
                   className="py-4 ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] font-inter text-midGray h-[10rem] overflow-hidden"
                   dangerouslySetInnerHTML={{ __html: item?.description }}
                 ></div>
-                <div className="absolute bg-gradient-to-b from-transparent to-bgLightPeach z-[1] inset-0 size-full"></div>
-              </div>
+                <div className="absolute bg-gradient-to-b via-transparent from-transparent to-bgLightPeach z-[1] inset-0 size-full"></div>
+              </div> */}
             </div>
             <div className="text-end leading-[1.4rem] ~pt-[2rem]/0 font-inter w-fit flex items-end ~pb-0/4">
               <ButtonAnimation className="">
@@ -86,7 +81,7 @@ const PositionsGrid = ({ data, totalPages }: Props) => {
           </div>
         ))}
       </div>
-      {data.length > itemPerPage && (
+      {totalCount && totalCount > 10 && (
         <div className="flex justify-center ~pt-[2.5rem]/[8.5rem] md:block">
           <div className="flex h-8 items-center justify-center rounded-full">
             <div className="flex h-[3.5rem] w-[3.5rem] items-center justify-center ">

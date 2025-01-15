@@ -27,8 +27,8 @@ const ACard = ({
 }: Props) => {
   return (
     <div className="w-[18.43rem] relative ">
-      {linkedin && (
-        <Link href={linkedinLink ?? ""} className="absolute top-0 right-0 z-50">
+      {linkedinLink && linkedin && (
+        <Link href={linkedinLink} target="_blank" className="absolute top-0 right-0 z-50">
           <Image src={Linkedin} alt=""  />
         </Link>
       )}

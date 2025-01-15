@@ -1,7 +1,7 @@
 import CrossSvg from "@/components/svg/CrossSvg";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { generatingSearchParam } from "@/utils/UrlHelper";
-import { useRouter } from "next/navigation";
+import { useRouter } from "next-nprogress-bar";
 import { useState } from "react";
 
 type Props = {

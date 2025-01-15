@@ -68,8 +68,8 @@ const InnerCollaborations = ({ collaboration, slug }: Props) => {
             linkOne="/our-work"
             textTwo="Collaborations"
             linkTwo="/our-work/collaborations"
-            textThree="slug"
-            linkThree="/our-work/collaborations/slug"
+            textThree={collaboration?.title}
+            linkThree={`/our-work/collaborations/${slug}`}
           />
         </div>
         {collaboration && <Cities collaboration={collaboration} slug={slug} />}

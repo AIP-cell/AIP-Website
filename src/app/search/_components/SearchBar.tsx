@@ -2,7 +2,7 @@
 import CrossSvg from "@/components/svg/CrossSvg";
 import SearchSvg from "@/components/svg/SearchSvg";
 import { generatingSearchParam } from "@/utils/UrlHelper";
-import { useRouter } from "next/navigation";
+import { useRouter } from "next-nprogress-bar";
 import React, { useState } from "react";
 
 const SearchBar = (props: {

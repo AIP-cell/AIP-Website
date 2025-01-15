@@ -33,23 +33,27 @@ const VideoArray = [
 ];
 
 type Props = {
-  galleryVideos: TGalleryVideos[];
+  galleryVideos?: TGalleryVideos[];
 };
 const GalleryVideos = ({ galleryVideos }: Props) => {
   const [change, setChange] = useState<number>(0);
 
   const isDesktop = useMediaQuery({ query: "(min-width: 768px)" });
   const itemsPerSlide = isDesktop ? 2 : 1;
-  const arrayLength = galleryVideos.length;
+  const arrayLength = galleryVideos?.length;
   const previous = () => {
-    if (change <= 0) {
-      setChange(arrayLength - itemsPerSlide);
-    } else setChange(change - itemsPerSlide);
+    if (galleryVideos) {
+      if (change <= 0) {
+        setChange(galleryVideos?.length - itemsPerSlide);
+      } else setChange(change - itemsPerSlide);
+    }
   };
   const next = () => {
-    if (change >= arrayLength - itemsPerSlide) {
-      setChange(0);
-    } else setChange(change + itemsPerSlide);
+    if (galleryVideos) {
+      if (change >= galleryVideos?.length - itemsPerSlide) {
+        setChange(0);
+      } else setChange(change + itemsPerSlide);
+    }
   };
   const isClient = useClient();
   if (!isClient) {
@@ -78,8 +82,8 @@ const GalleryVideos = ({ galleryVideos }: Props) => {
       </div>
       <div className="flex  overflow-x-auto no-scrollbar lg:justify-center  gap-[1.248rem] ~pt-5/[4.997rem]">
         {galleryVideos
-          .slice(change, change + itemsPerSlide)
-          .map((video, index) => {
+          ?.slice(change, change + itemsPerSlide)
+          ?.map((video, index) => {
             return (
               <GalleryVideo
                 key={index}

@@ -39,6 +39,7 @@ const ExpertsShelves = ({ expertShelves }: Props) => {
         {expertShelves?.map((item, i) => (
           <ResourceCard
             slug={item?.slug}
+            index={i}
             key={i}
             src={item?.image}
             title={item?.title}

@@ -28,12 +28,12 @@ const AMediumSizeSvg = ({ src, ...props }: Props) => {
           </defs>
           <image
             mask={`url(#${id})`}
-            preserveAspectRatio="xMidYMid meet"
+            preserveAspectRatio="xMidYMid slice"
             x="0"
             y="0"
             href={StorageUrl + src}
-            width="100%"
-            // height="100%"
+            width="190"
+            height="223"
           />
         </>
       ) : (

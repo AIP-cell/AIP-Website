@@ -46,9 +46,10 @@ const ATeamCard = ({
       )}
     >
       <AMediumSizeSvg src={image} className="" />
-      {linkedin && (
+      {linkedinLink && linkedin && (
         <Link
-          href={linkedinLink ?? ""}
+          href={linkedinLink}
+          target="_blank"
           className="absolute top-0 right-0 size-[2.5rem] z-50"
         >
           <Image src={Linkedin} alt="" />

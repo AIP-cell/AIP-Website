@@ -42,6 +42,9 @@ const SelectedWorks = ({ works }: Props) => {
         {works?.map((item, i) => (
           <ResourceCard
             key={i}
+            index={i}
+            date={item.date}
+            slug={item.slug}
             src={item.image}
             title={item.title}
             name={item.name}

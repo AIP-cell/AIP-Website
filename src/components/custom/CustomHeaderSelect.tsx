@@ -1,16 +1,15 @@
 "use client";
-import { useState } from "react";
 import {
   Listbox,
   ListboxButton,
   ListboxOption,
   ListboxOptions,
 } from "@headlessui/react";
-import Link from "next/link";
 import { ButtonAnimation } from "../animations/ButtonAnimation";
 import DownTagSvg from "../svg/DownTagSvg";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import cn from "@/utils/tailwind";
+import { useRouter } from "next-nprogress-bar";
 
 type Props = {
   items: any;
@@ -18,9 +17,6 @@ type Props = {
   // setIsOpen: (value: boolean) => void;
 };
 const CustomHeaderSelect = ({ items }: Props) => {
-  // console.log("isOpen::::::", isOpen);
-  // const [selected, setSelected] = useState(items.label);
-
   const router = useRouter();
   const pathname = usePathname();
   let isPathname = "";

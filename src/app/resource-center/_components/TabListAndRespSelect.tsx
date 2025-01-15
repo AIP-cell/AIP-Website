@@ -11,8 +11,8 @@ import {
   ListboxOptions,
 } from "@headlessui/react";
 import DownTagSvg from "@/components/svg/DownTagSvg";
-import { useRouter, useSearchParams } from "next/navigation";
 import { generatingSearchParam } from "@/utils/UrlHelper";
+import { useRouter } from "next-nprogress-bar";
 
 type Props = {
   tabArray: any;

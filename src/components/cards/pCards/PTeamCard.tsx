@@ -36,8 +36,8 @@ const PTeamCard = ({
   return (
     <div className="max-[23rem]:w-[8rem] ~w-[10.3rem]/[11.87rem] relative">
       <PMediumSizeSvg src={image} />
-      {linkedin && (
-        <Link href={linkedinLink ?? ""} className="absolute top-0 right-0 size-[2.5rem] z-50">
+      {linkedinLink && linkedin && (
+        <Link target="_blank" href={linkedinLink} className="absolute top-0 right-0 size-[2.5rem] z-50">
           <Image
             src={Linkedin}
             alt=""

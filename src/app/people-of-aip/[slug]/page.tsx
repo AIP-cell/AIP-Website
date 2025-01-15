@@ -25,7 +25,7 @@ const tabList = [
     link: "/people-of-aip/advisoryBoard",
   },
   { key: "teamAIP", name: "Team AIP", link: "/people-of-aip/teamAIP" },
-  { key: "experts", name: "Experts", link: "/people-of-aip/experts" },
+  // { key: "experts", name: "Experts", link: "/people-of-aip/experts" },
 ];
 const InnerPage = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const urlParams = await params;

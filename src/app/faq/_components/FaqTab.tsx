@@ -4,7 +4,7 @@ import List from "./List";
 import FaqTabList from "./FaqTabList";
 import ArrowSvg from "@/components/svg/ArrowSvg";
 import CustomGraySelect from "@/components/custom/CustomGraySelect";
-import { useRouter } from "next/navigation";
+import { useRouter } from "next-nprogress-bar";
 
 const TablistData = [
   {

@@ -5,11 +5,13 @@ import Link from "next/link";
 type Props = {
   alt: string;
   name?: string;
+  type?: string;
   image: StaticImageData;
-  data: string | number;
+  data: string;
 };
 
-const EnquiryLink = ({ image, alt, data, name }: Props) => {
+const EnquiryLink = ({ image, alt, data, name, type }: Props) => {
+  const link = type === "email" ? `mailto:${data}` : `tel:${data}`;
   return (
     <div className="flex items-center gap-[.75rem] pt-3">
       <div className="bg-gray10 w-[2.5rem] h-[2.5rem] rounded-full flex items-center justify-center me-1">
@@ -21,7 +23,12 @@ const EnquiryLink = ({ image, alt, data, name }: Props) => {
             {name}
           </p>
         )}
-        <Link href="" className="font-inter ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] text-gray80">{data}</Link>
+        <Link
+          href={link ?? ""}
+          className="font-inter ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] text-gray80"
+        >
+          {data}
+        </Link>
       </div>
     </div>
   );

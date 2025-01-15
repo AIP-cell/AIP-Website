@@ -3,10 +3,12 @@ import React from "react";
 import dayjs from "dayjs";
 import { StorageUrl } from "@/utils/BaseUrl";
 import Link from "next/link";
+import ResourceDescSection from "../ResourceDescSection";
 type Props = {
   src?: string;
   title?: string;
   desc?: string;
+  index?: number;
   category?: string;
   name?: string;
   date?: string;
@@ -26,6 +28,7 @@ const ResourceCard = ({
   name,
   date,
   file,
+  index,
   fileLink,
   domain,
   isLinkOrPdf,
@@ -82,9 +85,10 @@ const ResourceCard = ({
             {name}
           </p>
         )}
-        <p className="line-clamp-6 text-ellipsis text-h9Copy5 text-gray50 font-inter leading-[1.225rem]">
+        <ResourceDescSection desc={desc} index={index} />
+        {/* <p className="line-clamp-6 text-ellipsis text-h9Copy5 text-gray50 font-inter leading-[1.225rem]">
           {desc}
-        </p>
+        </p> */}
       </div>
       <div className="h-px bg-footerGray w-full"></div>
       <div className="flex justify-between w-full text-h9Copy5 text-gray50 font-inter leading-[1.225rem]">

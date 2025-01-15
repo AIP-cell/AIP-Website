@@ -82,43 +82,47 @@ const InnerExpertsSectionOne = ({ innerData, params }: Props) => {
               <p className="block md:hidden text-h6M text-gray80 font-playFair leading-[1.575rem]">
                 Launch Details
               </p>
-              <Link
-                href={StorageUrl + innerData?.file}
-                download
-                className="mt-[1rem] group bg-darkPurple border-2 border-darkPurple hover:bg-white  transition-all  hover:text-darkPurple text-white hover:border-2 hover:border-darkPurple px-7 py-3 flex items-center gap-[0.75rem] w-fit rounded-3xl"
-              >
-                <p className=" font-inter  text-h9Copy5 leading-[1.225rem]">
-                  Download
-                </p>
-                <div className=" pt-[.1rem]">
-                  <DownloadFileSvg className="size-[1.25rem]" />
-                </div>
-              </Link>
-            </div>
-            <div className="flex flex-col gap-[1rem]">
-              <h2 className="~text-h6M/h4a ~leading-[1.575rem]/[2.113rem] text-gray80 font-playFair  ~pb-0/[1.5rem]">
-                Links
-              </h2>
-              {innerData?.links.map((link, i) => (
+              {innerData?.file && (
                 <Link
-                  href={link?.link}
-                  target="_blank"
-                  key={i}
-                  className="flex w-[17.375rem] gap-[0.98rem] ~pl-[1rem]/[1.25rem] ~py-[0.875rem]/[0.75rem] bg-bgGray5 rounded-full"
+                  href={StorageUrl + innerData?.file}
+                  download
+                  className="mt-[1rem] group bg-darkPurple border-2 border-darkPurple hover:bg-white  transition-all  hover:text-darkPurple text-white hover:border-2 hover:border-darkPurple px-7 py-3 flex items-center gap-[0.75rem] w-fit rounded-3xl"
                 >
-                  <Image src={LinkSvg} alt="" className="" />
-                  <p className="text-gray80 ~leading-[1.225rem]/[1.4rem] ~text-h9Copy5/h9Copy4">
-                    {link?.name}
+                  <p className=" font-inter  text-h9Copy5 leading-[1.225rem]">
+                    Download
                   </p>
+                  <div className=" pt-[.1rem]">
+                    <DownloadFileSvg className="size-[1.25rem]" />
+                  </div>
                 </Link>
-              ))}
-              {/* <div className="flex w-[17.375rem] gap-[0.98rem] ~pl-[1rem]/[1.25rem] ~py-[0.875rem]/[0.75rem] bg-bgGray5 rounded-full">
+              )}
+            </div>
+            {innerData?.links.length != 0 && (
+              <div className="flex flex-col gap-[1rem]">
+                <h2 className="~text-h6M/h4a ~leading-[1.575rem]/[2.113rem] text-gray80 font-playFair  ~pb-0/[1.5rem]">
+                  Links
+                </h2>
+                {innerData?.links.map((link, i) => (
+                  <Link
+                    href={link?.link}
+                    target="_blank"
+                    key={i}
+                    className="flex w-[17.375rem] gap-[0.98rem] ~pl-[1rem]/[1.25rem] ~py-[0.875rem]/[0.75rem] bg-bgGray5 rounded-full"
+                  >
+                    <Image src={LinkSvg} alt="" className="" />
+                    <p className="text-gray80 ~leading-[1.225rem]/[1.4rem] ~text-h9Copy5/h9Copy4">
+                      {link?.name}
+                    </p>
+                  </Link>
+                ))}
+                {/* <div className="flex w-[17.375rem] gap-[0.98rem] ~pl-[1rem]/[1.25rem] ~py-[0.875rem]/[0.75rem] bg-bgGray5 rounded-full">
                 <Image src={LinkSvg} alt="" className="" />
                 <p className="text-gray80 ~leading-[1.225rem]/[1.4rem] ~text-h9Copy5/h9Copy4">
                   abcdxyze_loremipsum
                 </p>
               </div> */}
-            </div>
+              </div>
+            )}
           </div>
           <div className="hidden xl:block pt-[5rem]">
             <div className="relative  w-[25rem] h-[35.313rem]">

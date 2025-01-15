@@ -71,7 +71,7 @@ const CollaborationGrid = ({ collaborationData }: Props) => {
                   >
                     <div className="size-[2.625rem] relative">
                       <Image
-                        src={data?.image ? StorageUrl + data.image :bcgSvg}
+                        src={data?.image ? StorageUrl + data.image :"/images/news/newsDemo.png"}
                         alt="bcg"
                         className="object-cover"
                         fill 

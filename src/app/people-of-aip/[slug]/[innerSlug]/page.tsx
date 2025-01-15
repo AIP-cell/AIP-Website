@@ -72,7 +72,7 @@ const InnerTeamPage = async ({
                   <div className=" ~pt-[2rem]/[2.5rem]  flex-col flex gap-[1rem]">
                     <div className="flex gap-[1rem]">
                       {team?.linkedln && (
-                        <Link href={team.linkedln}>
+                        <Link href={team.linkedln} target="_blank">
                           <ButtonAnimation className="rounded-full ~p-[0.5rem]/[0.875rem] bg-bgGray5">
                             {/* <LinkedinSvg className="size-[1.5rem]"/> */}
                             <Image
@@ -84,7 +84,7 @@ const InnerTeamPage = async ({
                         </Link>
                       )}
                       {team?.twitter && (
-                        <Link href={team.twitter}>
+                        <Link href={team.twitter} target="_blank">
                           <ButtonAnimation className="rounded-full flex justify-center items-center text-textPurple hover:text-white p-[0.93rem] bg-bgGray5 hover:bg-textPurple">
                             <XSvg className="size-[1.063rem]" />
                             {/* <Image src={X} alt="" className="" /> */}
@@ -96,6 +96,7 @@ const InnerTeamPage = async ({
                       <Link
                         key={i}
                         href={link?.link}
+                        target="_blank"
                         className="flex w-[17.375rem] gap-[0.98rem] ~pl-[1rem]/[1.25rem] ~pr-[2.813rem]/[1.25rem] ~py-[0.87rem]/[0.76rem] bg-bgGray5 rounded-full"
                       >
                         <Image
@@ -104,7 +105,7 @@ const InnerTeamPage = async ({
                           className="size-[1.25rem]"
                         />
                         <p className="text-gray80 ~leading-[1.225rem]/[1.4rem] ~text-h9Copy5/h9Copy4">
-                          theconvergencefoundation
+                          {link.name}
                         </p>
                       </Link>
                     ))}
@@ -113,7 +114,7 @@ const InnerTeamPage = async ({
               </div>
               <div className="col-span-1 relative">
                 <PSvg
-                  src={StorageUrl + team?.image}
+                  src={team?.image}
                   className="relative z-10 ~w-[18.438rem]/[25rem]"
                 />
                 <div className=" block md:hidden">

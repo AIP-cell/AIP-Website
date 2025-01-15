@@ -41,7 +41,11 @@ const InnerSectionOne = ({ heroSectionData }: Props) => {
             </div>
             <div className="relative block md:hidden z-10 w-full">
               <Image
-                src={StorageUrl + heroSectionData?.image}
+                src={
+                  heroSectionData?.image
+                    ? StorageUrl + heroSectionData?.image
+                    : "/images/news/newsDemo.png"
+                }
                 className=" object-cover"
                 alt="image"
                 fill
@@ -80,7 +84,11 @@ const InnerSectionOne = ({ heroSectionData }: Props) => {
           </div>
           <div className="relative w-[25rem] hidden md:block z-10">
             <Image
-              src={StorageUrl + heroSectionData?.image}
+              src={
+                heroSectionData?.image
+                  ? StorageUrl + heroSectionData?.image
+                  : "/images/news/newsDemo.png"
+              }
               className="object-cover"
               alt="image"
               fill

@@ -119,6 +119,7 @@ const AipResourceTabs = ({ tabData, category, asyncParam }: Props) => {
                   // title={item.title}
                   // desc={item.description}
                   // category={item.domain}
+                  index={i}
                   slug={item.slug}
                   isLinkOrPdf={item.isLinkOrPdf}
                   file={item.file}

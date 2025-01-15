@@ -63,7 +63,7 @@ const InnerCollaborationsVideo = ({ video,videoLink, linkOrVideo }: Props) => {
               className="z-10 border-2 absolute inset-0 !w-full !h-full flex justify-center items-center cursor-pointer"
               url={StorageUrl + videoLink}
               // light="/images/upcoming.png"
-              playing
+              // playing
               playIcon={
                 <ButtonAnimation>
                   <Image src={videoPlaySvg} alt="" className="" />

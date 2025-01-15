@@ -1,8 +1,7 @@
 "use client";
 
-import { ButtonAnimation } from "../animations/ButtonAnimation";
 import DownTagSvg from "../svg/DownTagSvg";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import cn from "@/utils/tailwind";
 import {
   Accordion,
@@ -11,6 +10,7 @@ import {
   AccordionTrigger,
 } from "../layout/FooterAccordian";
 import Link from "next/link";
+import { useRouter } from "next-nprogress-bar";
 
 type Props = {
   ArrayData: {

@@ -41,7 +41,7 @@ const footerData = [
         link: "/people-of-aip/advisoryBoard",
       },
       { option: "Team AIP", link: "/people-of-aip/teamAIP" },
-      { option: "Experts", link: "/people-of-aip/experts" },
+      // { option: "Experts", link: "/people-of-aip/experts" },
     ],
   },
   {
@@ -267,12 +267,12 @@ const Footer = () => {
                 >
                   <ButtonAnimation>Team AIP</ButtonAnimation>
                 </Link>
-                <Link
+                {/* <Link
                   href="/people-of-aip/experts"
                   className=" text-h9Copy5 font-inter text-white/60"
                 >
                   <ButtonAnimation>Experts</ButtonAnimation>
-                </Link>
+                </Link> */}
               </div>
 
               <p className="pt-[2.25rem] text-h9Copy5 font-inter font-bold text-white">

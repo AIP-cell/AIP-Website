@@ -7,9 +7,9 @@ import {
   ListboxOptions,
 } from "@headlessui/react";
 import DownTagSvg from "@/components/svg/DownTagSvg";
-import { useRouter } from "next/navigation";
 import { TReports } from "@/api/type";
 import cn from "@/utils/tailwind";
+import { useRouter } from "next-nprogress-bar";
 
 type Props = {
   financialArray: TReports[];

@@ -29,7 +29,7 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
     <div className="pt-[5rem]">
       {heroSectionData && <InnerSectionOne heroSectionData={heroSectionData} />}
       {gallery.galleryImages.length != 0 && (
-        <Gallery galleryImages={gallery.galleryImages} />
+        <Gallery galleryLink={`/our-work/projects-and-programs/${asyncParam}/event-gallery`} galleryImages={gallery.galleryImages}/>
       )}
       {media.length != 0 && <Media media={media} />}
       {testimonials.length != 0 && (

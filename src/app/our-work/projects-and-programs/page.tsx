@@ -182,6 +182,7 @@ const page = async ({
               {response?.map((item, i) => (
                 <ResourceCard
                   key={i}
+                  index={i}
                   // link={`/our-work/projects-and-programs/${item.slug}`}
                   projectsAndProgram
                   slug={item.slug}

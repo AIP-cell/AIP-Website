@@ -36,7 +36,7 @@ const headerData = [
         link: "/people-of-aip/advisoryBoard",
       },
       { option: "Team AIP", link: "/people-of-aip/teamAIP" },
-      { option: "Experts", link: "/people-of-aip/experts" },
+      // { option: "Experts", link: "/people-of-aip/experts" },
     ],
   },
   {

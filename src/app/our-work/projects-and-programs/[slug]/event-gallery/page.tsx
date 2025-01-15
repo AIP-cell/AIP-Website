@@ -5,22 +5,23 @@ import SampleImage from "@public/images/sample.png";
 
 import Image from "next/image";
 import BreadCrump from "@/components/bread-crump/BreadCrump";
-import GalleryVideos from "./_components/GalleryVideos";
-import GalleryImages from "./_components/GalleryImages";
+
 import { Api } from "@/api/Api";
 import { TGalleryCollaboration } from "@/api/type";
 import { notFound } from "next/navigation";
+import GalleryVideos from "@/app/our-work/collaborations/[slug]/event-gallery/_components/GalleryVideos";
+import GalleryImages from "@/app/our-work/collaborations/[slug]/event-gallery/_components/GalleryImages";
 
 export const dynamic = "force-dynamic";
-const getOneGalleryCollaborationsApi = async (
+const getOneGalleryProjectAndProgramsApi = async (
   slug: string
 ): Promise<TGalleryCollaboration> => {
-  const response = await Api.getOneGalleryCollaborations(slug);
-  return response.data;
+  const response = await Api.getOneGalleryProjectAndPrograms(slug);
+  return response?.data;
 };
 const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const asyncParam = (await params).slug;
-  const response = await getOneGalleryCollaborationsApi(asyncParam);
+  const response = await getOneGalleryProjectAndProgramsApi(asyncParam);
   if (!response) {
     notFound();
   }
@@ -38,8 +39,8 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
           <BreadCrump
             textOne="Our Work"
             linkOne="/our-work"
-            textTwo="Collaborations"
-            linkTwo="/our-work/collaborations"
+            textTwo="Projects And Programs"
+            linkTwo="/our-work/projects-and-programs"
             textThree={asyncParam}
             linkThree={`/our-work/collaborations/${asyncParam}`}
             textFour="Event Gallery"
@@ -54,10 +55,10 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
             this network and establish personal philanthropy as a means for
             India’s transformation.
           </p>
-          {galleryVideos.length != 0 && (
+          {galleryVideos?.length != 0 && (
             <GalleryVideos galleryVideos={galleryVideos} />
           )}
-          {galleryImages.length != 0 && (
+          {galleryImages?.length != 0 && (
             <GalleryImages galleryImages={galleryImages} />
           )}
         </div>

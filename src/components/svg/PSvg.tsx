@@ -32,8 +32,8 @@ const PSvg = ({ src, ...props }: Props) => {
             x="0"
             y="0"
             href={StorageUrl + src}
-            width="100%"
-            // height="100%"
+            width="295"
+            height="345"
           />
         </>
       ) : (

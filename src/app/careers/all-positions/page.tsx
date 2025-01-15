@@ -25,6 +25,7 @@ const page = async ({
   const response = await getCareersApi(page);
   if (!response) notFound();
   const totalPages = response?.pageCount;
+  const totalCount = response?.totalCount;
   return (
     <div className="pt-[5rem]">
       <div className=" relative bg-container mx-auto ">
@@ -61,7 +62,7 @@ const page = async ({
           </p>
 
           {response.jobs.length != 0 && (
-            <PositionsGrid data={response.jobs} totalPages={totalPages} />
+            <PositionsGrid data={response.jobs} totalPages={totalPages} totalCount={totalCount}/>
           )}
 
           <div className=" ~px-0/[6.563rem] ~pt-[2.5rem]/20 ~pb-[1.5rem]/[7.438rem] ">

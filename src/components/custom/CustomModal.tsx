@@ -25,7 +25,7 @@ export default function CustomModal({
       <Dialog
         open={isOpen}
         as="div"
-        className="relative z-10 focus:outline-none"
+        className="relative z-[100] focus:outline-none"
         onClose={() => setIsOpen(false)}
         __demoMode
       >
@@ -64,23 +64,23 @@ export default function CustomModal({
                     <ReactPlayer
                       className="z-10 border-2 absolute inset-0 !w-full !h-full flex justify-center items-center cursor-pointer"
                       url={StorageUrl + videoLink}
-                      light="/images/upcoming.png"
-                      playing
-                      playIcon={
-                        <ButtonAnimation>
-                          <Image src={videoPlaySvg} alt="" className="" />
-                        </ButtonAnimation>
-                      }
+                      // light="/images/upcoming.png"
+                      // playing
+                      // playIcon={
+                      //   <ButtonAnimation>
+                      //     <Image src={videoPlaySvg} alt="" className="" />
+                      //   </ButtonAnimation>
+                      // }
                       controls
                     />
                     {/* <video className="z-10 border-2 absolute inset-0 w-full h-full ">
                       <source src={StorageUrl + video} type="video/mp4" />
                     </video> */}
-                    <Image
+                    {/* <Image
                       src={videoPlaySvg}
                       alt="play-svg"
                       className="z-50 cursor-pointer"
-                    />
+                    /> */}
                   </div>
                 )}
               </div>

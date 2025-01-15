@@ -201,8 +201,8 @@ const Cities = ({ collaboration, slug }: Props) => {
                 ))}
               </div>
             </div>
-            {cities?.at(selectedIndex)?.youtube ||
-              (cities?.at(selectedIndex)?.twitter && (
+            {(cities?.at(selectedIndex)?.youtube ||
+              cities?.at(selectedIndex)?.twitter) && (
                 <div className="order-3 md:order-none pt-[2.5rem] border-t border-gray10 md:border-none">
                   <p className="font-playFair pb-4 ~leading-[1.575rem]/[1.75rem] font-medium tracking-[-.02rem] ~text-h6M/h5 text-gray80">
                     Catch up on Event Updates
@@ -227,7 +227,7 @@ const Cities = ({ collaboration, slug }: Props) => {
                     )}
                   </div>
                 </div>
-              ))}
+              )}
           </div>
         </div>
         <div className="hidden md:block pt-[5rem]">

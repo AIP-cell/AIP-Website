@@ -15,39 +15,45 @@ import { notFound } from "next/navigation";
 
 const tabList = [
   {
-    slug: "aipUpdates",
+    slug: "aip-updates",
+    toSend: "aipUpdates",
     name: "AIP Updates",
     link: "/resource-center/aip-resources/aipUpdates",
   },
   {
-    slug: "reportsAndPublications",
+    slug: "reports-and-publications",
+    toSend: "reportsAndPublications",
     name: "Reports & Publications",
     link: "/resource-center/aip-resources/reportsAndPublications",
   },
   {
     slug: "newsletter",
+    toSend: "newsletter",
     name: "Newsletter",
     link: "/resource-center/aip-resources/newsletter",
   },
   {
-    slug: "inspirationalVoices",
+    slug: "inspirational-voices",
+    toSend: "inspirationalVoices",
     name: "Inspirational Voices",
     link: "/resource-center/aip-resources/inspirationalVoices",
   },
   {
-    slug: "inTheMedia",
+    slug: "in-the-media",
+    toSend: "inTheMedia",
     name: "In the Media",
     link: "/resource-center/aip-resources/inTheMedia",
   },
   {
     slug: "gallery",
+    toSend: "gallery",
     name: "Gallery",
     link: "/resource-center/aip-resources/gallery",
   },
 ];
 const aipResourcesFilter = [
   {
-    filterBy: "aipUpdates",
+    filterBy: "aip-updates",
     filter: [
       {
         type: "domain",
@@ -69,7 +75,7 @@ const aipResourcesFilter = [
     ],
   },
   {
-    filterBy: "reportsAndPublications",
+    filterBy: "reports-and-publications",
     filter: [
       {
         type: "domain",
@@ -89,10 +95,22 @@ const aipResourcesFilter = [
         ],
       },
       {
-        type: "Type of Content",
-        options: ["data1", "data2"],
+        type: "c_type",
+        options: [
+          "Sector primers",
+          "Giving Journey",
+          "Case Study",
+          "Research Study",
+          "Philanthropist",
+          "Speak",
+          "Books",
+          "Articles",
+          "PoV",
+          "White paper",
+          "Newsletter",
+        ],
       },
-      { type: "Date", options: ["data1", "data2"] },
+      { type: "date", options: ["data1", "data2"] },
     ],
   },
   {
@@ -115,11 +133,11 @@ const aipResourcesFilter = [
           "Women & Child",
         ],
       },
-      { type: "Date", options: ["data1", "data2"] },
+      { type: "date", options: ["data1", "data2"] },
     ],
   },
   {
-    filterBy: "inspirationalVoices",
+    filterBy: "inspirational-voices",
     filter: [
       {
         type: "domain",
@@ -139,14 +157,14 @@ const aipResourcesFilter = [
         ],
       },
       {
-        type: "Type of Content",
+        type: "c_type",
         options: ["data1", "data2"],
       },
-      { type: "Date", options: ["data1", "data2"] },
+      { type: "date", options: ["data1", "data2"] },
     ],
   },
   {
-    filterBy: "inTheMedia",
+    filterBy: "in-the-media",
     filter: [
       {
         type: "domain",
@@ -166,10 +184,10 @@ const aipResourcesFilter = [
         ],
       },
       {
-        type: "Type of Content",
+        type: "c_type",
         options: ["data1", "data2"],
       },
-      { type: "Date", options: ["data1", "data2"] },
+      { type: "date", options: ["data1", "data2"] },
     ],
   },
   {
@@ -193,10 +211,10 @@ const aipResourcesFilter = [
         ],
       },
       {
-        type: "Type of Content",
+        type: "c_type",
         options: ["data1", "data2"],
       },
-      { type: "Date", options: ["data1", "data2"] },
+      { type: "date", options: ["data1", "data2"] },
     ],
   },
 ];
@@ -204,15 +222,11 @@ const aipResourcesFilter = [
 export const dynamic = "force-dynamic";
 const getAipResourcesData = async (
   slug: string,
-  {
-    domain,
-    typeOfContent,
-    date,
-  }: { domain: string; typeOfContent: string; date: string }
+  { domain, c_type, date }: { domain: string; c_type: string; date: string }
 ): Promise<TAipResourcesCategory[]> => {
   const response = await Api.getAipResources(slug, {
     domain,
-    typeOfContent,
+    c_type,
     date,
   });
   return response.data;
@@ -224,23 +238,23 @@ const AipResourcesInnerPage = async ({
   params: Promise<{ slug: string }>;
   searchParams: Promise<{
     domain: string;
-    typeOfContent: string;
+    c_type: string;
     date: string;
   }>;
 }) => {
   const param = await params;
   const SearchParam = await searchParams;
-  const { domain, typeOfContent, date } = await searchParams;
-  const response = await getAipResourcesData(param.slug, {
+  const { domain, c_type, date } = await searchParams;
+  const filterBySlug = tabList.find((items) => items.slug === param.slug);
+  const response = await getAipResourcesData(filterBySlug!.toSend, {
     domain,
-    typeOfContent,
+    c_type,
     date,
   });
   // console.log("response:::::", response);
   if (!response) {
     notFound();
   }
-  const filterBySlug = tabList.find((items) => items.slug === param.slug);
   const filterData = aipResourcesFilter.find(
     (item) => item.filterBy === param.slug
   );
@@ -290,6 +304,8 @@ const AipResourcesInnerPage = async ({
           {response?.map((item, i) => (
             <ResourceCard
               // link={item.link}
+              index={i}
+              slug={item?.slug}
               isLinkOrPdf={item?.isLinkOrPdf}
               file={item?.file}
               fileLink={item?.fileLink}
