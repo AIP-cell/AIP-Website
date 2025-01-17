@@ -13,14 +13,25 @@ import { notFound } from "next/navigation";
 
 export const dynamic = "force-dynamic";
 const getOneGalleryCollaborationsApi = async (
-  slug: string
+  slug: string,
+  city: string
 ): Promise<TGalleryCollaboration> => {
-  const response = await Api.getOneGalleryCollaborations(slug);
-  return response.data;
+  const response = await Api.getOneGalleryCollaborations(slug, city);
+  return response?.data;
 };
-const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
+const page = async ({
+  params,
+  searchParams,
+}: {
+  params: Promise<{ slug: string }>;
+  searchParams: Promise<{ city: string }>;
+}) => {
   const asyncParam = (await params).slug;
-  const response = await getOneGalleryCollaborationsApi(asyncParam);
+  const asyncSearchparams = (await searchParams).city;
+  const response = await getOneGalleryCollaborationsApi(
+    asyncParam,
+    asyncSearchparams
+  );
   if (!response) {
     notFound();
   }
@@ -46,18 +57,15 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
             linkFour={`/our-work/collaborations/${asyncParam}/event-gallery`}
           />
           <p className="font-inter  font-semibold uppercase ~text-h9Copy5/h9Copy4 ~leading-[1.138rem]/[1.3rem] text-purple40">
-            Systemic Impact Exemplars
+           {response?.title}
           </p>
           <p className="~leading-[2.113rem]/[2.6rem] font-playFair ~text-h4a/h4 text-gray80 pt-5 ~pb-0/[5rem] md:tracking-[-0.02rem]">
-            AIP hosts events across cities in the world. AIP is continuously
-            bringing inspirational philanthropists together to help co-create
-            this network and establish personal philanthropy as a means for
-            India’s transformation.
+            {response?.description}
           </p>
-          {galleryVideos.length != 0 && (
+          {galleryVideos && galleryVideos.length != 0 && (
             <GalleryVideos galleryVideos={galleryVideos} />
           )}
-          {galleryImages.length != 0 && (
+          {galleryImages && galleryImages.length != 0 && (
             <GalleryImages galleryImages={galleryImages} />
           )}
         </div>

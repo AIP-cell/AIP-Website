@@ -57,9 +57,7 @@ export const Api = {
       const response = await axiosClient.get(
         `curated-resources?category=${slug}&${query.toString()}`
       );
-      // const response = await axiosClient.get(
-      //   `curated-resources?category=${slug}&${new URLSearchParams(data)}`
-      // );
+
       return response.data;
     } catch (error) {
       console.log(error);
@@ -124,6 +122,15 @@ export const Api = {
   getNposCaseStudy: async (slug: string) => {
     try {
       const response = await axiosClient.get(`npos/${slug}`);
+      return response.data;
+    } catch (error) {
+      console.log(error);
+      return null;
+    }
+  },
+  getOneGalleryNpo: async (slug: string) => {
+    try {
+      const response = await axiosClient.get(`npos/${slug}/gallery`);
       return response.data;
     } catch (error) {
       console.log(error);
@@ -214,10 +221,12 @@ export const Api = {
       return null;
     }
   },
-  getOneGalleryCollaborations: async (slug: string) => {
+  getOneGalleryCollaborations: async (slug: string, city: string) => {
     try {
-      const response = await axiosClient.get(`collaborations/${slug}/gallery`);
-      return response.data;
+      const response = await axiosClient.get(
+        `collaborations/${slug}/gallery?city=${city}`
+      );
+      return response?.data;
     } catch (error) {
       console.log(error);
       return null;
@@ -225,7 +234,9 @@ export const Api = {
   },
   getOneGalleryProjectAndPrograms: async (slug: string) => {
     try {
-      const response = await axiosClient.get(`projects-programs/${slug}/gallery`);
+      const response = await axiosClient.get(
+        `projects-programs/${slug}/gallery`
+      );
       return response.data;
     } catch (error) {
       console.log(error);

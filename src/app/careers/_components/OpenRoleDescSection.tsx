@@ -6,14 +6,17 @@ type Props = {
   desc: string;
   index: number;
 };
+const removeInlineStyles = (html: string) => {
+  return html.replace(/\s*style="[^"]*"/gi, "");
+};
 
 const OpenRoleDescSection = ({ desc, index }: Props) => {
   const [currentIndex, setCurrentIndex] = useState<number | null>(null);
-  console.log("currentIndex:::",index === currentIndex)
+  const cleanedDescription = removeInlineStyles(desc || "");
 
   const toggle = (index: number) => {
-    console.log("index::",index)
-    if (index>=0) {
+    console.log("index::", index);
+    if (index >= 0) {
       if (index === currentIndex) {
         setCurrentIndex(null);
       } else setCurrentIndex(index);
@@ -28,10 +31,16 @@ const OpenRoleDescSection = ({ desc, index }: Props) => {
             "h-auto": currentIndex === index,
           }
         )}
-        dangerouslySetInnerHTML={{ __html: desc }}
+        dangerouslySetInnerHTML={{ __html: cleanedDescription }}
       ></div>
-      <div className={cn("block absolute bg-gradient-to-b via-transparent from-transparent to-bgLightPeach z-[1] inset-0 size-full",{
-            "hidden": currentIndex === index,})}></div>
+      <div
+        className={cn(
+          "block absolute bg-gradient-to-b via-transparent from-transparent to-bgLightPeach z-[1] inset-0 size-full",
+          {
+            hidden: currentIndex === index,
+          }
+        )}
+      ></div>
       {currentIndex !== index && (
         <span className="absolute bottom-0 right-0 text-darkPurple z-10">
           ...{""}

@@ -19,11 +19,9 @@ type Props = {
   searchParams: Record<string, any>;
   setSelected?: (value: string) => void;
   category?: string;
-  queryParamValues?: any;
   filterKey: string;
 };
 const CustomFilter = ({
-  queryParamValues,
   searchParams,
   type,
   optionsArray,

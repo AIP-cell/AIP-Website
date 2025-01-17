@@ -62,10 +62,10 @@ const headerData = [
     label: "Resource Center",
     id: "resource-center",
     options: [
-      { option: "AIP Resources", link: "/resource-center/aip-resources" },
+      { option: "AIP Resources", link: "/resource-center/aip-resources/aip-updates" },
       {
         option: "Curated Resources",
-        link: "/resource-center/curated-resources",
+        link: "/resource-center/curated-resources/featured",
       },
     ],
   },

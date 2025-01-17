@@ -8,6 +8,7 @@ type Props = {
   src?: string;
   title?: string;
   desc?: string;
+  linkKey?: string;
   index?: number;
   category?: string;
   name?: string;
@@ -19,12 +20,14 @@ type Props = {
   slug?: string;
   projectsAndProgram?: Boolean;
   collaboration?: Boolean;
+  gallery?: Boolean;
 };
 const ResourceCard = ({
   src,
   title,
   desc,
   category,
+  linkKey,
   name,
   date,
   file,
@@ -34,6 +37,7 @@ const ResourceCard = ({
   isLinkOrPdf,
   projectsAndProgram,
   collaboration,
+  gallery,
   slug,
 }: Props) => {
   let link;
@@ -43,9 +47,14 @@ const ResourceCard = ({
     link = `/our-work/projects-and-programs/${slug}`;
   } else if (collaboration) {
     link = `/our-work/collaborations/${slug}`;
+  } else if (gallery) {
+    link = `/our-work/collaborations/${slug}`;
+  } else if (linkKey) {
+    link = `/our-work/${linkKey}/${slug}/event-gallery`;
   } else {
     link = isLinkOrPdf === "pdf" ? StorageUrl + file : fileLink;
   }
+
   // const link = isLinkOrPdf === "pdf" ? file : fileLink;
   const toDownload = isLinkOrPdf === "pdf" ? true : false;
   const dateFormat = dayjs(date).format("D MMMM YYYY");

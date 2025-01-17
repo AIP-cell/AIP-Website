@@ -1,17 +1,14 @@
 import React from "react";
-import Link from "next/link";
 import BreadCrump from "@/components/bread-crump/BreadCrump";
 // import ResourcesSm from "../_components/ResourcesSm";
 // import TabListAndRespSelect from "../_components/TabListAndRespSelect";
-import { TabGroup, TabPanel, TabPanels } from "@headlessui/react";
-import CustomSelect from "@/components/custom/CustomSelect";
 import ResourceCard from "@/components/cards/ResourceCard";
 import { Api } from "@/api/Api";
 import { TAipResourcesCategory } from "@/api/type";
-import AipResourceTabs from "../AipResourceTabs";
 import CustomFilter from "@/components/custom/CustomFilter";
 import ResourcesTabAndSelect from "../../_components/ResourcesTabAndSelect";
 import { notFound } from "next/navigation";
+import DateFilter from "@/components/custom/DatePick";
 
 const tabList = [
   {
@@ -110,7 +107,6 @@ const aipResourcesFilter = [
           "Newsletter",
         ],
       },
-      { type: "date", options: ["data1", "data2"] },
     ],
   },
   {
@@ -133,7 +129,6 @@ const aipResourcesFilter = [
           "Women & Child",
         ],
       },
-      { type: "date", options: ["data1", "data2"] },
     ],
   },
   {
@@ -160,7 +155,6 @@ const aipResourcesFilter = [
         type: "c_type",
         options: ["data1", "data2"],
       },
-      { type: "date", options: ["data1", "data2"] },
     ],
   },
   {
@@ -187,7 +181,6 @@ const aipResourcesFilter = [
         type: "c_type",
         options: ["data1", "data2"],
       },
-      { type: "date", options: ["data1", "data2"] },
     ],
   },
   {
@@ -214,7 +207,6 @@ const aipResourcesFilter = [
         type: "c_type",
         options: ["data1", "data2"],
       },
-      { type: "date", options: ["data1", "data2"] },
     ],
   },
 ];
@@ -298,12 +290,20 @@ const AipResourcesInnerPage = async ({
                 optionsArray={data?.options}
               />
             ))}
+            {(filterData?.filterBy === "gallery" ||
+              filterData?.filterBy === "in-the-media" ||
+              filterData?.filterBy === "inspirational-voices" ||
+              filterData?.filterBy === "newsletter" ||
+              filterData?.filterBy === "reports-and-publications") && (
+              <DateFilter searchParams={{ ...SearchParam }} />
+            )}
           </div>
         </div>
         <div className="pt-[3.25rem] pb-[7.5rem] grid md:grid-cols-2 lg:grid-cols-3 gap-[4.5rem]">
           {response?.map((item, i) => (
             <ResourceCard
               // link={item.link}
+              linkKey={item?.key}
               index={i}
               slug={item?.slug}
               isLinkOrPdf={item?.isLinkOrPdf}

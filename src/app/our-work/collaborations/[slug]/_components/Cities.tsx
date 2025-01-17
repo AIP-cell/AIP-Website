@@ -203,31 +203,33 @@ const Cities = ({ collaboration, slug }: Props) => {
             </div>
             {(cities?.at(selectedIndex)?.youtube ||
               cities?.at(selectedIndex)?.twitter) && (
-                <div className="order-3 md:order-none pt-[2.5rem] border-t border-gray10 md:border-none">
-                  <p className="font-playFair pb-4 ~leading-[1.575rem]/[1.75rem] font-medium tracking-[-.02rem] ~text-h6M/h5 text-gray80">
-                    Catch up on Event Updates
-                  </p>
+              <div className="order-3 md:order-none pt-[2.5rem] border-t border-gray10 md:border-none">
+                <p className="font-playFair pb-4 ~leading-[1.575rem]/[1.75rem] font-medium tracking-[-.02rem] ~text-h6M/h5 text-gray80">
+                  Catch up on Event Updates
+                </p>
 
-                  <div className="flex gap-4">
-                    {cities?.at(selectedIndex)?.youtube && (
-                      <Link
-                        href={cities?.at(selectedIndex)?.youtube ?? ""}
-                        className="bg-bgGray5 text-darkPurple hover:text-white hover:bg-darkPurple w-[3rem] h-[3rem] rounded-full flex items-center justify-center"
-                      >
-                        <YoutubeSvg className="size-[2rem]" />
-                      </Link>
-                    )}
-                    {cities?.at(selectedIndex)?.twitter && (
-                      <Link
-                        href={cities?.at(selectedIndex)?.twitter ?? ""}
-                        className="bg-bgGray5 text-darkPurple hover:text-white hover:bg-darkPurple w-[3rem] h-[3rem] rounded-full flex items-center justify-center "
-                      >
-                        <XSvg className="w-[1.063rem] h-[1.125rem]" />
-                      </Link>
-                    )}
-                  </div>
+                <div className="flex gap-4">
+                  {cities?.at(selectedIndex)?.youtube && (
+                    <Link
+                      href={cities?.at(selectedIndex)?.youtube ?? ""}
+                      target="_blank"
+                      className="bg-bgGray5 text-darkPurple hover:text-white hover:bg-darkPurple w-[3rem] h-[3rem] rounded-full flex items-center justify-center"
+                    >
+                      <YoutubeSvg className="size-[2rem]" />
+                    </Link>
+                  )}
+                  {cities?.at(selectedIndex)?.twitter && (
+                    <Link
+                      href={cities?.at(selectedIndex)?.twitter ?? ""}
+                      target="_blank"
+                      className="bg-bgGray5 text-darkPurple hover:text-white hover:bg-darkPurple w-[3rem] h-[3rem] rounded-full flex items-center justify-center "
+                    >
+                      <XSvg className="w-[1.063rem] h-[1.125rem]" />
+                    </Link>
+                  )}
                 </div>
-              )}
+              </div>
+            )}
           </div>
         </div>
         <div className="hidden md:block pt-[5rem]">
@@ -257,7 +259,7 @@ const Cities = ({ collaboration, slug }: Props) => {
         <Image
           src={BottomBg}
           alt="peach-curve"
-          className="hidden lg:block absolute top-[-25rem] h-[75rem] w-full z-10"
+          className="hidden lg:block absolute top-[-23rem] h-[75rem] w-full z-10"
         />
         {cities.length != 0 && (
           <div className="container mx-auto relative ~px-[1.25rem]/[7.8rem] ~pt-[5rem]/[12.75rem]">
@@ -279,7 +281,9 @@ const Cities = ({ collaboration, slug }: Props) => {
                   galleryImages={
                     cities?.at(selectedIndex)?.gallery.galleryImages
                   }
-                  galleryLink={`/our-work/collaborations/${slug}/event-gallery`}
+                  galleryLink={`/our-work/collaborations/${slug}/event-gallery?city=${
+                    cities?.at(selectedIndex)?.name
+                  }`}
                 />
               </div>
             )}

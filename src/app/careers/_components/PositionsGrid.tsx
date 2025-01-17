@@ -21,7 +21,6 @@ const PositionsGrid = ({ data, totalPages, totalCount }: Props) => {
   if (!data) {
     return;
   }
-  const itemPerPage = 10;
 
   const nextPage = () => {
     if (page > 1) {

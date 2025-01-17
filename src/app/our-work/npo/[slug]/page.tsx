@@ -28,9 +28,12 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
       {response && (
         <InnerExpertsSectionOne innerData={response} params={asyncInnerSlug} />
       )}
-      {galleryImages && (
+      {galleryImages && galleryImages?.length != 0 && (
         <div className="container mx-auto ~pb-[5rem]/[7.5rem]">
-          <Gallery galleryImages={galleryImages} />
+          <Gallery
+            galleryLink={`/our-work/npo/${asyncInnerSlug}/event-gallery`}
+            galleryImages={galleryImages}
+          />
         </div>
       )}
     </div>

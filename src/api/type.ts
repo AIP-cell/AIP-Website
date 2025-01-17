@@ -136,6 +136,7 @@ export type TAipResourcesCategory = {
   image: string;
   slug: string;
   link: string;
+  key: string;
   isLinkOrPdf: string;
   fileLink: string;
   file: string;
@@ -452,6 +453,8 @@ export type TAgenda = {
 // Start Gallery Collaboration
 
 export type TGalleryCollaboration = {
+  title: string;
+  description: string;
   gallery: TGallery;
 };
 // End Gallery Collaboration
