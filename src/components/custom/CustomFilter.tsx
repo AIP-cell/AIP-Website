@@ -57,6 +57,8 @@ const CustomFilter = ({
                   ? "Type Of Content"
                   : type === "o_type"
                   ? "Organization Type"
+                  : type === "p_type"
+                  ? "Partner Type"
                   : type}
               </p>
               <FilterDownArrowSvg className="size-[1.25rem]" />

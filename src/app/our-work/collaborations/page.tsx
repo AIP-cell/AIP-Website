@@ -11,58 +11,51 @@ import CustomFilter from "@/components/custom/CustomFilter";
 import { Api } from "@/api/Api";
 import { TCollaborationPageData } from "@/api/type";
 import { notFound } from "next/navigation";
+import DateFilter from "@/components/custom/DatePick";
 
 const filterDatas = [
   {
     key: "type",
-    type: "Type",
+    type: "c_type",
     filter: [
-      "All",
-      "Art & Culture",
-      "Education",
-      "Environment",
-      "Health & Nutrition",
-      "Legal & Judiciary",
-      "Livelihood",
-      "Disability",
-      "Rural Development",
-      "Sports",
-      "WASH",
-      "Women & Child",
+      "Thematic Workshop",
+      "Panel Discussions",
+      "Fireside Chats",
+      "Roundtable Discussions",
+      "Reports",
     ],
   },
   {
     key: "partnerType",
-    type: "Partner Type",
+    type: "p_type",
     filter: ["data1", "data2"],
   },
-  { key: "date", type: "Date", filter: ["data1", "data2"] },
 ];
 export const dynamic = "force-dynamic";
 const getCollaborationsApi = async ({
-  type,
-  partnerType,
+  c_type,
+  p_type,
   date,
 }: {
-  type?: string;
-  partnerType?: string;
+  c_type?: string;
+  p_type?: string;
   date?: string;
 }): Promise<TCollaborationPageData[]> => {
-  const response = await Api.getCollaborations({ type, partnerType, date });
+  const response = await Api.getCollaborations({ c_type, p_type, date });
   return response.data;
 };
 const page = async ({
   searchParams,
 }: {
   searchParams: Promise<{
-    type?: string;
-    partnerType?: string;
+    c_type: string;
+    p_type?: string;
     date?: string;
   }>;
 }) => {
-  const { type, partnerType, date } = await searchParams;
+  const { c_type, p_type, date } = await searchParams;
   const urlsearchParams = await searchParams;
-  const response = await getCollaborationsApi({ type, partnerType, date });
+  const response = await getCollaborationsApi({ c_type, p_type, date });
   if (!response) {
     notFound();
   }
@@ -108,12 +101,13 @@ const page = async ({
               {filterDatas.map((items, i) => (
                 <CustomFilter
                   searchParams={{ ...urlsearchParams }}
-                  filterKey={items.key}
+                  filterKey={items.type}
                   type={items.type}
                   key={i}
                   optionsArray={items.filter}
                 />
               ))}
+              <DateFilter searchParams={{ ...urlsearchParams }} />
             </div>
           </div>
 

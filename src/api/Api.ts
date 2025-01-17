@@ -195,8 +195,8 @@ export const Api = {
     }
   },
   getCollaborations: async (data: {
-    type?: string;
-    partnerType?: string;
+    c_type?: string;
+    p_type?: string;
     date?: string;
   }) => {
     try {
