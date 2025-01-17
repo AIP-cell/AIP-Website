@@ -42,7 +42,7 @@ const CaseStudyDescSection = ({ desc, index }: Props) => {
       >
         {desc}
         {isClamped && currentIndex !== index && (
-          <span className="absolute bottom-0 right-0 bg-white pl-2 text-darkPurple">
+          <span className="absolute bottom-0 right-0 bg-bgLightPeach pl-2 text-darkPurple">
             ...{""}
             <button
               onClick={() => toggle(index)}
