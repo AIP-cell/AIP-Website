@@ -166,8 +166,8 @@ export const Api = {
   },
   getProjectsPrograms: async (data: {
     domain?: string;
-    typeOfContent?: string;
-    organizationType?: string;
+    c_type?: string;
+    o_type?: string;
     events?: string;
     date?: string;
   }) => {

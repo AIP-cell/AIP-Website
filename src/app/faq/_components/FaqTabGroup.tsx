@@ -17,7 +17,6 @@ type Props = { faqData: TFaqs[]; category: string };
 const FaqTabGroup = ({ faqData, category }: Props) => {
   const SelectedData = list.find((data) => data.name == category);
   const [selected, setSelected] = useState(category ? SelectedData?.tabNo : 0);
-  console.log("faqData::", faqData);
   return (
     <TabGroup
       selectedIndex={selected}

@@ -1,57 +1,17 @@
-import Link from "next/link";
 import React from "react";
 import Image from "next/image";
-import ArrowDownSvg from "@public/svg/arrowDown.svg";
 import projectBg from "@public/svg/projects-page/projectBg.svg";
 import ResourceCard from "@/components/cards/ResourceCard";
 import BreadCrump from "@/components/bread-crump/BreadCrump";
-import CustomSelect from "@/components/custom/CustomSelect";
 import CustomFilter from "@/components/custom/CustomFilter";
 import { Api } from "@/api/Api";
 import { TProjectPrograms } from "@/api/type";
 import { notFound } from "next/navigation";
+import DateFilter from "@/components/custom/DatePick";
 
-const datas = [
-  {
-    src: "/svg/resource-page/resource1.svg",
-    title: "Wealth with Purpose",
-    desc: "This report is the result of a collaborative effort between Accelerate Indian Philanthropy (AIP) and the Boston Consulting Group (BCG).",
-    category: "Report",
-  },
-  {
-    src: "/svg/projects-page/report1.svg",
-    title: "Systemic Impact Exemplars",
-    desc: "Unique Approaches Towards Solving India’s Development Challenges by identifying and learning from organisations with systems change.",
-    category: "Report",
-  },
-  {
-    src: "/svg/projects-page/report2.svg",
-    title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Phasellus imperdiet, neque at consequat malesuada Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Phasellus imperdiet, neque at consequat",
-    category: "Report",
-  },
-  {
-    src: "/svg/resource-page/resource1.svg",
-    title: "Wealth with Purpose",
-    desc: "This report is the result of a collaborative effort between Accelerate Indian Philanthropy (AIP) and the Boston Consulting Group (BCG).",
-    category: "Report",
-  },
-  {
-    src: "/svg/projects-page/report1.svg",
-    title: "Systemic Impact Exemplars",
-    desc: "Unique Approaches Towards Solving India’s Development Challenges by identifying and learning from organisations with systems change.",
-    category: "Report",
-  },
-  {
-    src: "/svg/projects-page/report2.svg",
-    title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Phasellus imperdiet, neque at consequat malesuada Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Phasellus imperdiet, neque at consequat",
-    category: "Report",
-  },
-];
 const filterDatas = [
   {
-    type: "Domain",
+    type: "domain",
     key: "domain",
     filter: [
       "All",
@@ -69,7 +29,7 @@ const filterDatas = [
     ],
   },
   {
-    type: "Type of Content",
+    type: "c_type",
     key: "typeOfContent",
     filter: [
       "Thematic Workshop",
@@ -79,32 +39,31 @@ const filterDatas = [
     ],
   },
   {
-    type: "Organization Type",
+    type: "o_type",
     key: "organizationType",
     filter: ["Organization Type1", "Organization Type2"],
   },
-  { type: "Events", key: "events", filter: ["Events1", "Events2"] },
-  { type: "Date", key: "date", filter: ["Date1", "Date2"] },
+  { type: "events", key: "events", filter: ["Events1", "Events2"] },
 ];
 
 export const dynamic = "force-dynamic";
 const getProjectsProgramsApi = async ({
   domain,
-  typeOfContent,
-  organizationType,
+  c_type,
+  o_type,
   events,
   date,
 }: {
   domain?: string;
-  typeOfContent?: string;
-  organizationType?: string;
+  c_type?: string;
+  o_type?: string;
   events?: string;
   date?: string;
 }): Promise<TProjectPrograms[]> => {
   const response = await Api.getProjectsPrograms({
     domain,
-    typeOfContent,
-    organizationType,
+    c_type,
+    o_type,
     events,
     date,
   });
@@ -116,19 +75,18 @@ const page = async ({
 }: {
   searchParams: Promise<{
     domain?: string;
-    typeOfContent?: string;
-    organizationType?: string;
+    c_type?: string;
+    o_type?: string;
     events?: string;
     date?: string;
   }>;
 }) => {
-  const { domain, typeOfContent, organizationType, events, date } =
-    await searchParams;
+  const { domain, c_type, o_type, events, date } = await searchParams;
   const urlsearchParams = await searchParams;
   const response = await getProjectsProgramsApi({
     domain,
-    typeOfContent,
-    organizationType,
+    c_type,
+    o_type,
     events,
     date,
   });
@@ -137,8 +95,8 @@ const page = async ({
   }
   // console.log("searchParams::", searchParams);
   return (
-    <div className="~pt-[4.4rem]/[5rem]">
-      <div className=" relative w-full overflow-hidden ">
+    <div className="~pt-[4.4rem]/[5rem] ">
+      <div className=" relative w-full  ">
         <Image
           src={projectBg}
           alt="bg"
@@ -160,7 +118,7 @@ const page = async ({
             experiences. All to enable shared learning and collaboration with
             insights across sectors and effective giving.
           </p>
-          <div className="flex flex-wrap pt-[3.25rem] items-center gap-[0.75rem]">
+          <div className="flex flex-wrap pt-[3.25rem] items-center gap-[0.75rem] pb-[3.25rem]">
             <p className=" text-gray40  ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]">
               Filter by:
             </p>
@@ -169,16 +127,17 @@ const page = async ({
                 <CustomFilter
                   key={i}
                   searchParams={{ ...urlsearchParams }}
-                  filterKey={items.key}
+                  filterKey={items.type}
                   type={items.type}
                   optionsArray={items.filter}
                 />
               ))}
+              <DateFilter searchParams={{ ...urlsearchParams }} />
             </div>
           </div>
 
           {response.length != 0 && (
-            <div className="pt-[3.25rem] pb-[5rem] grid md:grid-cols-3 gap-[4.5rem]">
+            <div className=" pb-[5rem] grid md:grid-cols-3 gap-[4.5rem]">
               {response?.map((item, i) => (
                 <ResourceCard
                   key={i}

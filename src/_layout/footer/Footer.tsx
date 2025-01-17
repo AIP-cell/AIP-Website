@@ -1,13 +1,10 @@
 import Image from "next/image";
 import React from "react";
-import FooterBg from "../../public/svg/footer/footerBg.svg";
 import Logo from "@public/svg/footer/footerLogo.svg";
 import X from "@public/svg/footer/x.svg";
 import In from "@public/svg/footer/in.svg";
 import Youtube from "@public/svg/footer/youtube.svg";
-// import FooterFish from "../../public/svg/footer/fish/footerFish.svg";
 import Wave from "react-wavify";
-
 import Link from "next/link";
 import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 import FooterFishes from "./FooterFishes";
@@ -65,7 +62,10 @@ const footerData = [
     label: "Resource Center",
     id: "resource-center",
     options: [
-      { option: "AIP Resources", link: "/resource-center/aip-resources/aip-updates" },
+      {
+        option: "AIP Resources",
+        link: "/resource-center/aip-resources/aip-updates",
+      },
       {
         option: "Curated Resources",
         link: "/resource-center/curated-resources/featured",
@@ -76,9 +76,8 @@ const footerData = [
 const Footer = () => {
   return (
     <div className="">
-      <div className="relative w-full overflow-hidden">
-        {/* <div className="absolute   "> */}
-        {/* <Image src={FooterBg} alt="" fill className="inset-x-0 object-cover" /> */}
+      <div className="relative w-full z-[5000]">
+        
         <Wave
           fill="url(#footerGradient)"
           paused={false}
@@ -95,7 +94,6 @@ const Footer = () => {
           </linearGradient>
         </Wave>
         <FooterFishes />
-        {/* </div> */}
         <div className="flex container mx-auto relative w-full ~px-5/[7.813rem]">
           <div className="~pt-[6.5rem]/[8.8rem] ~pb-[10.8rem]/[1.25rem] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 md:grid w-full">
             <div className="w-full md:col-span-2 ">

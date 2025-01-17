@@ -36,9 +36,10 @@ const DateFilter = ({ searchParams }: Props) => {
         </div>
       </div>
       {showDatePicker && (
-        <div className="relative">
-          <div className="absolute top-0 z-50">
+        <div className="relative z-[6000]">
+          <div className="absolute top-2 z-[6000]">
             <DatePicker
+        
               selected={startDate}
               onChange={(date) => {
                 setStartDate(date);

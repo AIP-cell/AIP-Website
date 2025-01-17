@@ -15,7 +15,6 @@ const OpenRoleDescSection = ({ desc, index }: Props) => {
   const cleanedDescription = removeInlineStyles(desc || "");
 
   const toggle = (index: number) => {
-    console.log("index::", index);
     if (index >= 0) {
       if (index === currentIndex) {
         setCurrentIndex(null);

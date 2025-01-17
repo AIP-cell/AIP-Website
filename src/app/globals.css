@@ -33,6 +33,12 @@
 .react-player__play-icon{
   display: none !important;;
 }
+.react-datepicker__current-month {
+  color: #5E165B !important;
+}
+.react-datepicker__day--selected {
+  background-color: #5E165B !important;
+}
 @layer utilities {
   /* Hide scrollbar for Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {
