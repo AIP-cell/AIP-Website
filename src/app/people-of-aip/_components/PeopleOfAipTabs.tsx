@@ -7,11 +7,13 @@ type Props = {
   currentTab: string;
   tabClassName?: string;
   mainClassName?: string;
+  filteredName?: string;
   tabListClassName?: string;
-  tabList: { key: string; name: string; link: string }[];
+  tabList: { slug: string; key: string; name: string; link: string }[];
 };
 const PeopleOfAipTabs = ({
   currentTab,
+  filteredName,
   tabList,
   tabListClassName,
   tabClassName,
@@ -40,7 +42,7 @@ const PeopleOfAipTabs = ({
                   tabClassName,
                   {
                     "!bg-darkPurple !text-white !outline-none !rounded-full":
-                      items.key === currentTab,
+                      items.slug === currentTab,
                   }
                 )}
               >
@@ -50,7 +52,7 @@ const PeopleOfAipTabs = ({
           </div>
         </div>
       </div>
-      <PeopleOfAipRespTab selected={currentTab} listArray={tabList} />
+      <PeopleOfAipRespTab selected={filteredName ?? ""} listArray={tabList} />
     </>
   );
 };

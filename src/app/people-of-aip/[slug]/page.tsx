@@ -14,42 +14,58 @@ const getPeopleOfAipApi = async (slug: string): Promise<TTeamMembers[]> => {
 };
 const tabList = [
   {
+    slug: "core-founder",
     key: "coreFounder",
     name: "Our Core Founders",
-    link: "/people-of-aip/coreFounder",
+    link: "/people-of-aip/core-founder",
   },
-  { key: "founders", name: "Founders", link: "/people-of-aip/founders" },
   {
+    slug: "founders",
+    key: "founders",
+    name: "Founders",
+    link: "/people-of-aip/founders",
+  },
+  {
+    slug: "advisory-board",
     key: "advisoryBoard",
     name: "Our Advisory Board",
-    link: "/people-of-aip/advisoryBoard",
+    link: "/people-of-aip/advisory-board",
   },
-  { key: "teamAIP", name: "Team AIP", link: "/people-of-aip/teamAIP" },
+  {
+    slug: "team-aip",
+    key: "teamAIP",
+    name: "Team AIP",
+    link: "/people-of-aip/team-aip",
+  },
   // { key: "experts", name: "Experts", link: "/people-of-aip/experts" },
 ];
 const InnerPage = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const urlParams = await params;
   const urlSlug = urlParams.slug;
-  const response = await getPeopleOfAipApi(urlSlug);
+  const filtered = tabList.find((item) => item.slug === urlSlug);
+  const response = await getPeopleOfAipApi(
+    filtered?.key ? filtered?.key : "core-founder"
+  );
   if (!response) {
     notFound();
   }
   const members = response;
+  // const innerName = tabList.find((item)=>item.key)
   return (
     <div className="pt-[5rem] overflow-hidden">
       <div className="relative container mx-auto">
         <BreadCrump
           textOne="People of AIP"
           linkOne="/people-of-aip"
-          textTwo="Experts"
-          linkTwo="/people-of-aip/experts"
+          textTwo={filtered?.name}
+          linkTwo={`/people-of-aip/${urlSlug}`}
         />
       </div>
-      <PeopleOfAipTabs tabList={tabList} currentTab={urlSlug} />
-      {members && urlSlug === "coreFounder" ? (
+      <PeopleOfAipTabs tabList={tabList} currentTab={urlSlug} filteredName={filtered?.name} />
+      {members && urlSlug === "core-founder" ? (
         <OurCoreFoundersContent coreFounderMembers={members} />
       ) : (
-        members.length!=0 && (
+        members.length != 0 && (
           <PeopleOfAipTeamMembers teamMembers={members} urlSlug={urlSlug} />
         )
       )}

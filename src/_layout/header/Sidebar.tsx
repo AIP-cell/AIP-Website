@@ -31,13 +31,13 @@ const headerData = [
     label: "People of AIP",
     id: "people-of-aip",
     options: [
-      { option: "Our Core Founders", link: "/people-of-aip/coreFounder" },
-      { option: "Founders", link: "/people-of-aip/founder" },
+      { option: "Our Core Founders", link: "/people-of-aip/core-founder" },
+      { option: "Founders", link: "/people-of-aip/founders" },
       {
         option: "Our Advisory Board",
-        link: "/people-of-aip/advisoryBoard",
+        link: "/people-of-aip/advisory-board",
       },
-      { option: "Team AIP", link: "/people-of-aip/teamAIP" },
+      { option: "Team AIP", link: "/people-of-aip/team-aip" },
       // { option: "Experts", link: "/people-of-aip/experts" },
     ],
   },

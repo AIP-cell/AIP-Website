@@ -183,7 +183,6 @@ type Props = {
 const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
   return (
     <div className="w-full relative">
-      
       <div className="pt-[3rem] pb-[7rem] ">
         <div className="flex flex-col  justify-center ~px-[1.25rem]/[20.9rem] ~pb-[1.83rem]/[3.875rem] container mx-auto">
           {urlSlug === "experts" && (
@@ -196,13 +195,13 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
               Founders
             </h2>
           )}
-          {urlSlug === "teamAIP" && (
+          {urlSlug === "team-aip" && (
             <h2 className=" text-center ~text-h4/h2 text-gray80 ~leading-[2.6rem]/[3.3rem] font-playFair">
               Team{" "}
               <span className="text-textPurple font-playFairItalic">AIP</span>
             </h2>
           )}
-          {urlSlug === "advisoryBoard" && (
+          {urlSlug === "advisory-board" && (
             <h2 className=" text-center ~text-h4/h2 text-gray80 ~leading-[2.6rem]/[3.3rem] font-playFair">
               Advisory{" "}
               <span className="text-textPurple font-playFairItalic">Board</span>
@@ -213,9 +212,9 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
               "Experts in the philanthropic sector are dedicated professionals who possess a deep understanding of social impact, community needs, and strategic giving. They leverage their expertise in areas like fundraising, program development, and resource allocation to drive meaningful change in underserved communities."}
             {urlSlug === "founders" &&
               "Experts in the philanthropic sector are dedicated professionals who possess a deep understanding of social impact, community needs, and strategic giving. They leverage their expertise in areas like fundraising, program development, and resource allocation to drive meaningful change in underserved communities."}
-            {urlSlug === "teamAIP" &&
+            {urlSlug === "team-aip" &&
               "It takes a village to raise a child. It takes a team to build an organisation that works toward a common aim: to inform, influence and inspire philanthropists and stakeholders, fostering a deeper understanding of how strategic philanthropy can address pressing social challenges."}
-            {urlSlug === "advisoryBoard" &&
+            {urlSlug === "advisory-board" &&
               "It takes a village to raise a child. It takes a team to build an organisation that works toward a common aim: to inform, influence and inspire philanthropists and stakeholders, fostering a deeper understanding of how strategic philanthropy can address pressing social challenges."}
           </p>
         </div>
@@ -238,7 +237,6 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
                   <div className="flex ~gap-[1.25rem]/[5.6rem] ~px-[1.25rem]/[7.8rem] relative container mx-auto ">
                     <ATeamCard
                       slug={items?.slug}
-                      
                       link={`/people-of-aip/${urlSlug}/${items.slug}`}
                       image={items?.image}
                       title={items?.name}

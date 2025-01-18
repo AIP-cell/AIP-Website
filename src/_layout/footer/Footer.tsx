@@ -242,10 +242,10 @@ const Footer = () => {
               </p>
               <div className="flex flex-col gap-4 ~pt-[0.75rem]/[1rem]">
                 <Link
-                  href="/people-of-aip/core-founders"
+                  href="/people-of-aip/core-founder"
                   className=" text-h9Copy5 font-inter text-white/60"
                 >
-                  <ButtonAnimation>Core-Founders</ButtonAnimation>
+                  <ButtonAnimation>Core Founders</ButtonAnimation>
                 </Link>
                 <Link
                   href="/people-of-aip/founders"
@@ -254,13 +254,13 @@ const Footer = () => {
                   <ButtonAnimation>Founders</ButtonAnimation>
                 </Link>
                 <Link
-                  href="/people-of-aip/our-advisory-board/slug"
+                  href="/people-of-aip/advisory-board"
                   className=" text-h9Copy5 font-inter text-white/60"
                 >
                   <ButtonAnimation>Advisory Board</ButtonAnimation>
                 </Link>
                 <Link
-                  href="/people-of-aip/team-AIP"
+                  href="/people-of-aip/team-aip"
                   className=" text-h9Copy5 font-inter text-white/60"
                 >
                   <ButtonAnimation>Team AIP</ButtonAnimation>

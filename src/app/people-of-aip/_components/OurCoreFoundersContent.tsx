@@ -8,6 +8,7 @@ import SampleImage from "@public/images/sample.png";
 import PCard from "@/components/cards/pCards/PCard";
 import { TTeamMembers } from "@/api/type";
 import cn from "@/utils/tailwind";
+import CardAnimation from "@/components/animations/CardAnimation";
 
 type Props = {
   coreFounderMembers: TTeamMembers[];
@@ -30,69 +31,64 @@ const OurCoreFoundersContent = ({ coreFounderMembers }: Props) => {
             Our founders are our banks, our north stars, all the same.
           </p>
         </div>
-        <div className="relative ">
+        <div className="relative ~pb-[5rem]/[7.37rem] ">
           {coreFounderMembers.map((item, i) => {
             const isFirstDesign = Math.floor(i / 2) % 2 === 0;
             if (i % 2 == 0) {
               return (
-                <div key={i} className="relative h-full">
-                  {i % 2 == 0 && (
-                    <Image
-                      src={Bg}
-                      alt=""
-                      className={cn(
-                        "hidden xl:block absolute  top-0  right-0",
-                        { "right-auto left-0 rotate-180": !isFirstDesign }
-                      )}
-                    />
-                  )}
-                  {/* {coreFounderMembers[i + 1] && (
-                    <Image
-                      src={Bg}
-                      alt=""
-                      className="hidden xl:block absolute  bottom-0  left-0 rotate-180"
-                    />
-                  )} */}
-
-                  <div
-                    className={cn(
-                      "sm:flex-row flex-col flex ~gap-[3.5rem]/[4.56rem] container mx-auto",
-                      {
-                        "pt-[5rem] pr-12 ~pl-12/[7.8rem] ": isFirstDesign,
-                        "~pt-14/[5.25rem] justify-end pb-[7.37rem] pl-12 ~pr-12/[7.8rem]":
-                          !isFirstDesign,
-                      }
-                    )}
-                  >
-                    <ACard
-                      slug={item?.slug}
-                      link={`/people-of-aip/coreFounder/${item.slug}`}
-                      linkedin
-                      linkedinLink={item?.linkedin}
-                      nameClass=" underline decoration-[1px] underline-offset-4 "
-                      name={item?.name}
-                      desc={item?.quote}
-                      work={item?.organisation}
-                      image={item?.image}
-                    />
-
-                    {coreFounderMembers[i + 1] && (
-                      <PCard
-                        slug={item?.slug}
-                        link={`/people-of-aip/coreFounder/${
-                          coreFounderMembers[i + 1]?.slug
-                        }`}
-                        linkedin
-                        linkedinLink={coreFounderMembers[i + 1]?.linkedin}
-                        nameClass=" underline decoration-[1px] underline-offset-4 "
-                        name={coreFounderMembers[i + 1]?.name}
-                        desc={coreFounderMembers[i + 1]?.quote}
-                        work={coreFounderMembers[i + 1]?.organisation}
-                        image={coreFounderMembers[i + 1]?.image}
+               <CardAnimation index={i} delay={0.1} key={i}>
+                  <div key={i} className="relative h-full">
+                    {i % 2 == 0 && (
+                      <Image
+                        src={Bg}
+                        alt=""
+                        className={cn(
+                          "hidden xl:block absolute  top-0  right-0",
+                          { "right-auto left-0 rotate-180": !isFirstDesign }
+                        )}
                       />
                     )}
+  
+                    <div
+                      className={cn(
+                        "sm:flex-row flex-col flex ~gap-[3.5rem]/[4.56rem] container mx-auto ",
+                        {
+                          "pt-[5rem] pr-12 ~pl-12/[7.8rem] ": isFirstDesign,
+                          "~pt-14/[5.25rem] justify-end  pl-12 ~pr-12/[7.8rem]":
+                            !isFirstDesign,
+                        }
+                      )}
+                    >
+                      <ACard
+                        slug={item?.slug}
+                        link={`/people-of-aip/coreFounder/${item.slug}`}
+                        linkedin
+                        linkedinLink={item?.linkedin}
+                        nameClass=" underline decoration-[1px] underline-offset-4 "
+                        name={item?.name}
+                        desc={item?.quote}
+                        work={item?.organisation}
+                        image={item?.image}
+                      />
+  
+                      {coreFounderMembers[i + 1] && (
+                        <PCard
+                          slug={item?.slug}
+                          link={`/people-of-aip/coreFounder/${
+                            coreFounderMembers[i + 1]?.slug
+                          }`}
+                          linkedin
+                          linkedinLink={coreFounderMembers[i + 1]?.linkedin}
+                          nameClass=" underline decoration-[1px] underline-offset-4 "
+                          name={coreFounderMembers[i + 1]?.name}
+                          desc={coreFounderMembers[i + 1]?.quote}
+                          work={coreFounderMembers[i + 1]?.organisation}
+                          image={coreFounderMembers[i + 1]?.image}
+                        />
+                      )}
+                    </div>
                   </div>
-                </div>
+               </CardAnimation>
               );
             }
           })}
