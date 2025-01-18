@@ -5,6 +5,7 @@ import BreadCrumpSvg from "@public/svg/breadCrumps.svg";
 import React from "react";
 import cn from "@/utils/tailwind";
 import LeftOPenSvg from "../svg/LeftOpenSvg";
+import { ButtonAnimation } from "../animations/ButtonAnimation";
 type Props = {
   textOne: string;
   linkOne: string;
@@ -38,8 +39,8 @@ const BreadCrump = ({
           <LeftOPenSvg className="~size-[0.8rem]/[1rem]" />
         </div>
         {/* <Image src={BreadCrumpSvg} alt="bread-crump-Svg" /> */}
-        {textOne}
-        {textTwo && <p>&nbsp;/&nbsp;</p>}
+        <ButtonAnimation>{textOne}</ButtonAnimation>
+        <ButtonAnimation>{textTwo && <p>&nbsp;/&nbsp;</p>}</ButtonAnimation>
       </Link>
       {linkTwo && (
         <Link
@@ -49,11 +50,11 @@ const BreadCrump = ({
             { "!text-gray50 ": textThree }
           )}
         >
-          <p
+          <ButtonAnimation
             className={cn({ "underline underline-offset-4": textThree })}
           >
             {textTwo}
-          </p>
+          </ButtonAnimation>
           {textThree && <p>&nbsp;/&nbsp;</p>}
         </Link>
       )}
@@ -67,9 +68,11 @@ const BreadCrump = ({
             }
           )}
         >
-          <p className={cn({ "underline underline-offset-4": textFour })}>
+          <ButtonAnimation
+            className={cn({ "underline underline-offset-4": textFour })}
+          >
             {textThree}
-          </p>
+          </ButtonAnimation>
           {textFour && <p>&nbsp;/&nbsp;</p>}
         </Link>
       )}
@@ -78,7 +81,7 @@ const BreadCrump = ({
           href={linkFour}
           className="text-black ~text-h10Copy6/h9Copy5 ~leading-[1rem]/[1.225rem]"
         >
-          {textFour}
+          <ButtonAnimation>{textFour}</ButtonAnimation>
         </Link>
       )}
     </div>

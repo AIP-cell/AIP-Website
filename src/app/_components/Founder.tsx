@@ -86,11 +86,11 @@ const Founder = ({ teamData }: Props) => {
             />
             <div className=" container mx-auto relative ">
               <div className="~px-[1.25rem]/[7.8rem] ">
-                <div className="flex justify-between items-center">
-                  <h3 className="~text-h4/h2 text-white/80 ~leading-[2.6rem]/[3.3rem] relative font-playFair">
-                    From our
+                <div className="flex justify-between items-center ~pt-[2rem]/0">
+                  <h3 className="~text-h4/h2 text-white/70 ~leading-[2.6rem]/[3.3rem] relative font-playFair">
+                    From our&nbsp;
                     <span className="text-white font-playFairItalic block md:inline-block">
-                      &nbsp;Core-Founders
+                      Core-Founders
                     </span>
                   </h3>
                   <div className=" flex gap-[1.25rem] relative">

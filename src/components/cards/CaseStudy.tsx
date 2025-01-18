@@ -44,21 +44,14 @@ const CaseStudy = ({
         )}
       >
         <div className="w-full ~h-[17.5rem]/[20rem] rounded-3xl overflow-hidden relative ">
-          {image ? (
-            <Image
-              src={StorageUrl + image}
-              alt="caseStudy-image"
-              className="object-cover rounded-3xl h-fit"
-              fill
-            />
-          ) : (
-            <Image
-              src="/images/resourceCardThumbnail.png"
-              alt="caseStudy-image"
-              className="object-cover rounded-3xl h-fit"
-              fill
-            />
-          )}
+          <Image
+            src={
+              image ? StorageUrl + image : "/images/resourceCardThumbnail.png"
+            }
+            alt="caseStudy-image"
+            className="object-cover rounded-3xl h-fit"
+            fill
+          />
         </div>
       </div>
       <div

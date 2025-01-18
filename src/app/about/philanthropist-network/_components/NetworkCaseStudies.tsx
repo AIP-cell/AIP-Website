@@ -4,13 +4,14 @@ import React from "react";
 import CurvePurple from "@public/svg/purpleCurveCaseStudy.svg";
 import CurveBg from "@public/svg/about/aip-impact/caseStudyPeachCurve.svg";
 import { TCaseStudies } from "@/api/type";
+import CardSlideAnimation from "@/components/animations/CardSlideAnimation";
 
 type Props = {
   casestudies?: TCaseStudies[];
 };
 const NetworkCaseStudies = ({ casestudies }: Props) => {
   return (
-    <div className="relative w-full">
+    <div className="relative w-full overflow-hidden">
       <Image
         src={CurveBg}
         alt=""
@@ -30,19 +31,20 @@ const NetworkCaseStudies = ({ casestudies }: Props) => {
         </h2>
         <div className="~pt-[2.5rem]/[6.56rem]  flex flex-col ~gap-[3.5rem]/[5.5rem] ~px-[1.25rem]/[7.8rem]">
           {casestudies?.map((item, i: number) => (
-            <CaseStudy
-              key={i}
-              index={i}
-              foundationName={item?.organisationName}
-              foundationNameClassName="!~pt-[1rem]/[1.25rem] !~text-h6M/h5"
-              initiativeName={item?.initiativeName}
-              title={item?.title}
-              desc={item?.description}
-              image={item?.image}
-              isLinkOrPdf={item?.isLinkOrPdf}
-              file={item?.file}
-              fileLink={item?.fileLink}
+            <CardSlideAnimation index={i} delay={0.1} key={i}>
+              <CaseStudy
+                index={i}
+                foundationName={item?.organisationName}
+                foundationNameClassName="!~pt-[1rem]/[1.25rem] !~text-h6M/h5"
+                initiativeName={item?.initiativeName}
+                title={item?.title}
+                desc={item?.description}
+                image={item?.image}
+                isLinkOrPdf={item?.isLinkOrPdf}
+                file={item?.file}
+                fileLink={item?.fileLink}
               />
+            </CardSlideAnimation>
           ))}
         </div>
       </div>

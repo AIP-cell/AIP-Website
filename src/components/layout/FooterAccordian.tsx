@@ -7,6 +7,7 @@ import cn from "@/utils/tailwind";
 import PlusSvg from "@public/svg/faq/plus.svg";
 import MinusSvg from "@public/svg/faq/minus.svg";
 import Image from "next/image";
+import { ButtonAnimation } from "../animations/ButtonAnimation";
 
 const Accordion = AccordionPrimitive.Root;
 
@@ -36,7 +37,7 @@ const AccordionTrigger = React.forwardRef<
       {...props}
     >
       {children}
-      <ChevronDownIcon className="size-[1.375rem] shrink-0 text-muted-foreground transition-transform duration-200" />
+      <ChevronDownIcon className="size-[1.375rem] hover:scale-110  shrink-0 text-muted-foreground transition-transform duration-200 text-white" />
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 ));

@@ -1,4 +1,5 @@
 import { TCaseStudies } from "@/api/type";
+import CardSlideAnimation from "@/components/animations/CardSlideAnimation";
 import CaseStudy from "@/components/cards/CaseStudy";
 import CurveBg from "@public/svg/about/aip-impact/caseStudyPeachCurve.svg";
 import Image from "next/image";
@@ -52,19 +53,21 @@ const CaseStudies = ({ bottomCaseStudyCurveSvg, caseStudyData }: Props) => {
         </h2>
         <div className="~pt-[2.5rem]/[6.56rem] flex flex-col ~gap-[3.5rem]/[5.5rem] ~px-[1.25rem]/[7.8rem]">
           {caseStudyData.map((item, i: number) => (
-            <CaseStudy
-              key={i}
-              index={i}
-              slug={item?.slug}
-              foundationName={item?.foundationName}
-              initiativeName={item?.initiativeName}
-              title={item?.philanthropistName}
-              desc={item?.description}
-              image={item?.image}
-              isLinkOrPdf={item?.isLinkOrPdf}
-              file={item?.file}
-              fileLink={item?.fileLink}
-            />
+            <CardSlideAnimation index={i} delay={0.3} key={i}>
+              <CaseStudy
+                key={i}
+                index={i}
+                slug={item?.slug}
+                foundationName={item?.foundationName}
+                initiativeName={item?.initiativeName}
+                title={item?.philanthropistName}
+                desc={item?.description}
+                image={item?.image}
+                isLinkOrPdf={item?.isLinkOrPdf}
+                file={item?.file}
+                fileLink={item?.fileLink}
+              />
+            </CardSlideAnimation>
           ))}
         </div>
       </div>

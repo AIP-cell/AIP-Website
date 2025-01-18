@@ -4,11 +4,8 @@ import GivingArchetype from "./_components/GivingArchetype";
 import Bg from "@public/svg/about/giving-roadmap/givingRoadMapHeroSectionBg.svg";
 import SmBg from "@public/svg/about/giving-roadmap/smPurpleBg.svg";
 import OvalPurple from "@public/svg/ovalPurple.svg";
-import PeachCurveBg from "@public/svg/about/giving-roadmap/givingRoadMapPeachCurveBg.svg";
-import PeachBigCircleBg from "@public/svg/about/giving-roadmap/givingRoadMapBigCircleBg.svg";
-import PeachSmallCircleBg from "@public/svg/about/giving-roadmap/givingRoadMapSmallCircleBg.svg";
+
 import Image from "next/image";
-import Link from "next/link";
 import BreadCrump from "@/components/bread-crump/BreadCrump";
 
 const page = () => {

@@ -5,6 +5,7 @@ import bottomCaseStudyCurveSvg from "@public/svg/peach-bg-curve-founders.svg";
 
 import Image from "next/image";
 import cn from "@/utils/tailwind";
+import CardAnimation from "@/components/animations/CardAnimation";
 
 const datas = [
   {
@@ -54,27 +55,28 @@ const HelpingRivers = () => {
         </p>
         <div className="flex flex-col ~gap-[0.5rem]/0">
           {datas.map((items, i) => (
-            <div
-              key={i}
-              className={cn(
-                "flex flex-col md:flex-row items-center ~gap-0/[1rem] ~pl-[2.8rem]/[8rem] ~pr-[2.8rem]/[14.3rem] max-[20rem]:!px-[0.5rem]",
-                {
-                  "md:flex-row-reverse  !~pr-[2.8rem]/[8rem] !~pl-[2.8rem]/[14.3rem] max-[20rem]:!px-[0.5rem]":
-                    i % 2 == 1,
-                }
-              )}
-            >
-              <OvalPurple
-                textClass1="!leading-[2.113rem] !text-h4a !font-playFair"
-                textClass2="!leading-[2.113rem] !text-h4a !font-playFair"
-                sizeClass="~size-[16.5rem]/[18.438rem]"
-                text1={items.text1}
-                text2={items.text2}
-              />
-              <p className="~leading-[1.225rem]/[1.4rem] ~text-h9Copy5/h9Copy4 text-center md:text-left text-midGray">
-                {items.desc}
-              </p>
-            </div>
+            <CardAnimation index={i} delay={0.1} key={i}>
+              <div
+                className={cn(
+                  "flex flex-col md:flex-row items-center ~gap-0/[1rem] ~pl-[2.8rem]/[8rem] ~pr-[2.8rem]/[14.3rem] max-[20rem]:!px-[0.5rem]",
+                  {
+                    "md:flex-row-reverse  !~pr-[2.8rem]/[8rem] !~pl-[2.8rem]/[14.3rem] max-[20rem]:!px-[0.5rem]":
+                      i % 2 == 1,
+                  }
+                )}
+              >
+                <OvalPurple
+                  textClass1="!leading-[2.113rem] !text-h4a !font-playFair"
+                  textClass2="!leading-[2.113rem] !text-h4a !font-playFair"
+                  sizeClass="~size-[16.5rem]/[18.438rem]"
+                  text1={items.text1}
+                  text2={items.text2}
+                />
+                <p className="~leading-[1.225rem]/[1.4rem] ~text-h9Copy5/h9Copy4 text-center md:text-left text-midGray">
+                  {items.desc}
+                </p>
+              </div>
+            </CardAnimation>
           ))}
         </div>
       </div>

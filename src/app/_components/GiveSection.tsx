@@ -2,6 +2,7 @@ import ImgTitleDescVer from "@/components/cards/ImgTitleDescVer";
 import Image from "next/image";
 import Bg from "../../../public/svg/give-section/giveBg.svg";
 import React from "react";
+import CardAnimation from "@/components/animations/CardAnimation";
 const giveData = [
   {
     src: "/svg/give-section/giveMore.svg",
@@ -28,18 +29,19 @@ const GiveSection = () => {
       <Image
         src={Bg}
         alt="give-section-Bg"
-        className="absolute ~/md:~bottom-[15rem]/[10rem] top-auto lg:bottom-auto lg:top-[-11rem] right-0 ~w-[7.842rem]/[13.125rem] ~h-[29.87rem]/[50rem] "
+        className="absolute ~/md:~bottom-[16rem]/[10rem] top-auto lg:bottom-auto lg:top-[-11rem] right-0 ~w-[7.842rem]/[13.125rem] ~h-[29.87rem]/[50rem] "
       />
       <div className="container mx-auto  ~pt-[3.2rem]/[3.5rem] ~px-[2.8rem]/[7rem] relative">
         <div className=" flex flex-col lg:flex-row justify-center xl:justify-normal ~gap-[1.25rem]/[3rem]">
           {giveData.map((item, i) => (
-            <ImgTitleDescVer
-              key={i}
-              src={item.src}
-              title={item.title}
-              span={item.span}
-              desc={item.desc}
-            />
+            <CardAnimation delay={0.2} index={i} key={i}>
+              <ImgTitleDescVer
+                src={item.src}
+                title={item.title}
+                span={item.span}
+                desc={item.desc}
+              />
+            </CardAnimation>
           ))}
         </div>
       </div>

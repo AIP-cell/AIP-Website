@@ -1,4 +1,5 @@
 import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
+import CardAnimation from "@/components/animations/CardAnimation";
 import BgButton from "@/components/buttons/BgButton";
 import TitleDescCard from "@/components/cards/TitleDescCard";
 import DownloadFileSvg from "@/components/svg/DowloadFileSvg";
@@ -50,9 +51,11 @@ const GivingArchetype = () => {
         </p>
         <div className="grid lg:grid-cols-2 xl:grid-cols-3 ~gap-x-[2.5rem]/0 ~gap-y-[0.75rem]/[3.781rem] ~py-[2rem]/[3.5rem] w-full justify-center px-[1.563rem] md:~px-[4rem]/0">
           {itemsArray.map((items, i) => (
-            <div key={i} className="col-span-1 flex justify-center">
-              <TitleDescCard key={i} title1={items.title1} desc={items.desc} />
-            </div>
+            <CardAnimation index={i} delay={0.1} key={i}>
+              <div  className="col-span-1 flex justify-center">
+                <TitleDescCard key={i} title1={items.title1} desc={items.desc} />
+              </div>
+            </CardAnimation>
           ))}
         </div>
         <div className="~pt-0/[2.5rem] flex w-full justify-center">

@@ -6,6 +6,8 @@ import PeachCurveBg from "@public/svg/about/giving-roadmap/givingRoadMapPeachCur
 import PeachBigCircleBg from "@public/svg/about/giving-roadmap/givingRoadMapBigCircleBg.svg";
 import PeachSmallCircleBg from "@public/svg/about/giving-roadmap/givingRoadMapSmallCircleBg.svg";
 import React from "react";
+import Link from "next/link";
+import CardAnimation from "@/components/animations/CardAnimation";
 const itemsArray = [
   {
     title1: "Treasure",
@@ -53,7 +55,9 @@ const GivingJourney = () => {
         </p>
         <div className="flex flex-col md:flex-row ~gap-[0.75rem]/[2.5rem] ~py-[2rem]/[3.5rem] w-full justify-center ~px-[1.563rem]/0">
           {itemsArray.map((items, i) => (
-            <TitleDescCard key={i} title1={items.title1} desc={items.desc} />
+            <CardAnimation index={i} delay={0.2} key={i}>
+              <TitleDescCard key={i} title1={items.title1} desc={items.desc} />
+            </CardAnimation>
           ))}
         </div>
         <div className="~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] text-center ~px-[1.56rem]/[11rem] text-midGray ">
@@ -69,14 +73,16 @@ const GivingJourney = () => {
           </p>
         </div>
         <div className="~pt-[2rem]/[2.5rem] flex w-full justify-center">
-          <ButtonAnimation
-            type="submit"
-            className="text-white hover:text-darkPurple text-h9Copy5 flex gap-[0.5rem] leading-[1.225rem] hover:bg-white bg-darkPurple px-[1.75rem] py-[0.75rem] rounded-[1.5rem] cursor-pointer"
-          >
-            <p> Discover Your Path</p>
+          <Link href="" target="_blank">
+            <ButtonAnimation
+              type="submit"
+              className="text-white hover:text-darkPurple text-h9Copy5 flex gap-[0.5rem] leading-[1.225rem] hover:bg-white bg-darkPurple px-[1.75rem] py-[0.75rem] rounded-[1.5rem] cursor-pointer"
+            >
+              <p> Discover Your Path</p>
 
-            <DownloadFileSvg className="size-[1.25rem]" />
-          </ButtonAnimation>
+              <DownloadFileSvg className="size-[1.25rem]" />
+            </ButtonAnimation>
+          </Link>
         </div>
       </div>
     </div>

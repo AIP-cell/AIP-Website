@@ -76,7 +76,7 @@ const footerData = [
 const Footer = () => {
   return (
     <div className="">
-      <div className="relative w-full z-[5000]">
+      <div className="relative w-full z-[5000] overflow-hidden">
         
         <Wave
           fill="url(#footerGradient)"

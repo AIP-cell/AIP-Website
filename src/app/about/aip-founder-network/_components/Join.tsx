@@ -2,6 +2,7 @@ import React from "react";
 import ATeamCard from "@/components/cards/aCards/ATeamCard";
 import PTeamCard from "@/components/cards/pCards/PTeamCard";
 import { TMethodsOfJoining } from "@/api/type";
+import CardAnimation from "@/components/animations/CardAnimation";
 
 type Props = {
   methodsOfJoining: TMethodsOfJoining[];
@@ -27,33 +28,35 @@ const Join = ({ methodsOfJoining }: Props) => {
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 ~gap-x-[1.25rem]/[5.625rem] ~gap-y-[1rem]/[5.625rem]  w-full justify-center ~pt-[1.25rem]/[4rem] ~px-[1.25rem]/[7.813rem]">
           {methodsOfJoining.map((join, i) => (
-            <div key={i} className="flex justify-center">
-              {i % 2 == 0 ? (
-                <ATeamCard
-                  image={join?.image}
-                  titleClassName="underline decoration-[1px] underline-offset-4"
-                  title2ClassName="underline decoration-[1px] underline-offset-4"
-                  // location={join.location}
-                  email={join?.email}
-                  title={join?.name}
-                  // title2={join.title2}
-                  desc={join?.designation}
-                  linkedin={false}
-                />
-              ) : (
-                <PTeamCard
-                  titleClassName="underline decoration-[1px] underline-offset-4"
-                  title2ClassName="underline decoration-[1px] underline-offset-4"
-                  image={join?.image}
-                  // location={join.location}
-                  email={join?.email}
-                  title={join?.name}
-                  // title2={join.title2}
-                  desc={join?.designation}
-                  linkedin={false}
-                />
-              )}
-            </div>
+           <CardAnimation index={i} delay={0.1} key={i}>
+              <div key={i} className="flex justify-center">
+                {i % 2 == 0 ? (
+                  <ATeamCard
+                    image={join?.image}
+                    titleClassName="underline decoration-[1px] underline-offset-4"
+                    title2ClassName="underline decoration-[1px] underline-offset-4"
+                    // location={join.location}
+                    email={join?.email}
+                    title={join?.name}
+                    // title2={join.title2}
+                    desc={join?.designation}
+                    linkedin={false}
+                  />
+                ) : (
+                  <PTeamCard
+                    titleClassName="underline decoration-[1px] underline-offset-4"
+                    title2ClassName="underline decoration-[1px] underline-offset-4"
+                    image={join?.image}
+                    // location={join.location}
+                    email={join?.email}
+                    title={join?.name}
+                    // title2={join.title2}
+                    desc={join?.designation}
+                    linkedin={false}
+                  />
+                )}
+              </div>
+           </CardAnimation>
           ))}
         </div>
       </div>

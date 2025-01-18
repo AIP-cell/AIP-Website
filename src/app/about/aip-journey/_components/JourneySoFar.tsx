@@ -45,16 +45,15 @@ const JourneySoFar = () => {
             collection of case studies and insights from diverse philanthropic
             journeys, covering a wide range of sectors and “theories of change.”
             Additionally, we have a growing database of close to{" "}
-            <span className="font-bold">1,500 credible NGOs</span>, enabling
-            us to guide philanthropic efforts towards building effective and
+            <span className="font-bold">1,500 credible NGOs</span>, enabling us
+            to guide philanthropic efforts towards building effective and
             impactful giving portfolios
           </p>
           <p>
             Over the past three years, AIP has stayed true to its unique
-            <span className="font-bold">pro-bono model</span>, while
-            maintaining a neutral, non-judgmental, and “philanthropist-first”
-            approach, focusing solely on maximizing the impact and scale of
-            giving.
+            <span className="font-bold">pro-bono model</span>, while maintaining
+            a neutral, non-judgmental, and “philanthropist-first” approach,
+            focusing solely on maximizing the impact and scale of giving.
           </p>
           <p>
             AIP is driven by the belief that India’s wealth creators are eager

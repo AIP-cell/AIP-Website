@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/carousel";
 import NewsCard from "@/components/cards/NewsCard";
 import { THomePageNewsInTheMedia } from "@/api/type";
+import CardAnimation from "@/components/animations/CardAnimation";
 
 type Props = {
   newsArray: THomePageNewsInTheMedia[];
@@ -28,7 +29,9 @@ export function CarouselNews({ newsArray }: Props) {
             key={i}
             className="md:!basis-1/2 lg:!basis-1/2 xl:!basis-1/3 justify-center gap-[1.25rem] flex  pt-[2.5rem]"
           >
-            <NewsCard src={items.image} text={items.description} index={i} />
+            <CardAnimation delay={0.2} index={i}>
+              <NewsCard src={items.image} text={items.description} index={i} />
+            </CardAnimation>
           </CarouselItem>
         ))}
       </CarouselContent>

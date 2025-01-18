@@ -17,9 +17,9 @@ const page = () => {
           alt=""
           className="absolute ~top-[-26rem]/[-4rem]  right-0"
         />
-        <ApproachHeroSection/>
-        <ShapeTheFlow/>
-        <FourPillars/>
+        <ApproachHeroSection />
+        <ShapeTheFlow />
+        <FourPillars />
         <FivePModel />
       </div>
     </div>

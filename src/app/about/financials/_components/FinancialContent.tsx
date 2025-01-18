@@ -6,6 +6,7 @@ import { TReports } from "@/api/type";
 import Link from "next/link";
 import { StorageUrl } from "@/utils/BaseUrl";
 import FinancialTabAndResp from "./FinancialTabAndResp";
+import CardAnimation from "@/components/animations/CardAnimation";
 
 type Props = {
   filterDataByYear: TReports | undefined;
@@ -33,21 +34,23 @@ const FinancialContent = ({
             </p>
             <div>
               {filterDataByYear?.financialReports.map((data, index) => (
-                <div
-                  key={index}
-                  className="flex justify-between text-textPurple py-[2.063rem] w-full px-[1.25rem] border-b-2 border-footerGray "
-                >
-                  <p className="leading-[1.4rem] text-gray80">{data.name}</p>
-                  <Link
-                    href={StorageUrl + data.report}
-                    target="_blank"
-                    download
+                <CardAnimation key={index} index={index} delay={0.1}>
+                  <div
+                    key={index}
+                    className="flex justify-between text-textPurple py-[2.063rem] w-full px-[1.25rem] border-b-2 border-footerGray "
                   >
-                    <ButtonAnimation className="">
-                      <DownloadFileSvg className="size-[2rem]" />
-                    </ButtonAnimation>
-                  </Link>
-                </div>
+                    <p className="leading-[1.4rem] text-gray80">{data.name}</p>
+                    <Link
+                      href={StorageUrl + data.report}
+                      target="_blank"
+                      download
+                    >
+                      <ButtonAnimation className="">
+                        <DownloadFileSvg className="size-[2rem]" />
+                      </ButtonAnimation>
+                    </Link>
+                  </div>
+                </CardAnimation>
               ))}
             </div>
             <div className="flex w-full justify-end">

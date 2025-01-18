@@ -1,4 +1,5 @@
 import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
+import CardAnimation from "@/components/animations/CardAnimation";
 import BgButton from "@/components/buttons/BgButton";
 import TitleDescCard from "@/components/cards/TitleDescCard";
 import MailSvg from "@/components/svg/MailSvg";
@@ -45,13 +46,15 @@ const NetworkContactSection = () => {
       <div className="~pt-[2rem]/[2.5rem] flex justify-center ">
         <div className="grid  md:grid-cols-2 ~gap-x-[3rem]/[5rem] ~gap-y-[1.75rem]/[3.5rem]">
           {itemsArray.map((item, i) => (
-            <TitleDescCard
-              key={i}
-              title1={item.title1}
-              title2={item.title2}
-              desc={item.desc}
-              topClassName="~w-[18.438rem]/[29rem]"
-            />
+            <CardAnimation index={i} delay={0.1} key={i}>
+              <TitleDescCard
+                key={i}
+                title1={item.title1}
+                title2={item.title2}
+                desc={item.desc}
+                topClassName="~w-[18.438rem]/[29rem]"
+              />
+            </CardAnimation>
           ))}
         </div>
       </div>
@@ -59,6 +62,7 @@ const NetworkContactSection = () => {
         <ButtonAnimation className="text-white hover:text-darkPurple bg-darkPurple hover:bg-white rounded-full  py-[0.75rem] px-[1.75rem]">
           <Link
             href="/contact"
+
             className=" flex items-center text-h9Copy5 leading-[1.225rem] gap-[0.5rem]"
           >
             <p className="">Contact Us</p>

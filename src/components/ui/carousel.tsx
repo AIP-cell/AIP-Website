@@ -75,7 +75,7 @@ const Carousel = React.forwardRef<
       if (!api) {
         return;
       }
-      
+
       setCanScrollPrev(api.canScrollPrev());
       setCanScrollNext(api.canScrollNext());
     }, []);
@@ -188,7 +188,7 @@ const CarouselItem = React.forwardRef<
       aria-roledescription="slide"
       className={cn(
         "min-w-0 shrink-0 basis-full",
-        orientation === "horizontal" ? "pl-4" : "pt-4",
+        orientation === "horizontal" ? "~pl-0/4" : "pt-4",
         className
       )}
       {...props}
@@ -210,7 +210,7 @@ const CarouselPrevious = React.forwardRef<
       size={size}
       className={cn(
         // "absolute text-white leading-[22.4px] font-inter bg-darkPurple rounded-tl-3xl rounded-bl-3xl rounded-tr-xl rounded-br-xl p-[0.75rem]",
-        " hover:text-white text-darkPurple leading-[22.4px] font-inter hover:bg-darkPurple bg-white rounded-tl-3xl rounded-bl-3xl rounded-tr-xl rounded-br-xl p-[0.75rem] h-fit",
+        "hover:text-white hover:scale-110 duration-150 transition-all text-darkPurple leading-[22.4px] font-inter hover:bg-darkPurple bg-white rounded-tl-3xl rounded-bl-3xl rounded-tr-xl rounded-br-xl p-[0.75rem] h-fit",
         // orientation === "horizontal"
         //   ? // -left-12
         //     // -translate-y-1/2
@@ -226,7 +226,6 @@ const CarouselPrevious = React.forwardRef<
       {/* <LeftSlickArrowSvg className="w-[1rem] h-[0.57rem] " /> */}
       {/* <ArrowLeftIcon className="h-4 w-4" /> */}
       {/* <LeftSlickArrowSvg className="h-4 w-4" /> */}
-      <span className="sr-only">Previous slide</span>
     </Button>
   );
 });

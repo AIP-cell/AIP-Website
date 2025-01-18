@@ -16,7 +16,9 @@ const TestimonialsFromFounders = ({ testimonials }: Props) => {
       <p className="~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] text-midGray ~pt-[0.8rem]/[1.25rem] text-center">
         Some testimonials from our Founders.
       </p>
-      {testimonials && <TestimonialSlick slickArray={testimonials} />}
+      {testimonials && testimonials.length != 0 && (
+        <TestimonialSlick slickArray={testimonials} />
+      )}
       {/* <TestimonialRespSlick slickArray={testimonialsArray} /> */}
     </div>
   );

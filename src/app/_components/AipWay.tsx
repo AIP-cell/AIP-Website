@@ -1,8 +1,8 @@
+"use client";
 import React from "react";
 import StoryBg from "@public/svg/home/aipWayBg.svg";
 import LeftHomePagePeachCurve from "@public/svg/leftHomePagePeach.svg";
 import OvalPeachSvg from "@public/svg/ovalPeach.svg";
-
 import Image from "next/image";
 import OvalPeach from "@/components/ovals/OvalPeach";
 const AipWay = () => {
@@ -16,7 +16,7 @@ const AipWay = () => {
       <Image
         src={StoryBg}
         alt="bg-image"
-        className="block absolute ~left-[-6rem]/0 ~top-[1.5rem]/[2rem] ~w-[15rem]/[26rem] ~h-[25rem]/[37.5rem]"
+        className="block absolute ~left-[-6rem]/0 ~top-[2rem]/[2rem] ~w-[16rem]/[26rem] ~h-[25rem]/[37.5rem]"
       />
       <OvalPeach
         mainClass="absolute ~top-[7.75rem]/[5rem] flex justify-center w-full md:w-auto md:block ~md:~left-0/[14.093rem]"

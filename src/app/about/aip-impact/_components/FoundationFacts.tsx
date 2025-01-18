@@ -6,6 +6,7 @@ import Bg from "@public/svg/about/aip-impact/foundationFactBg.svg";
 import Link from "next/link";
 import OvalPeachCount from "@/components/ovals/OvalPeachCount";
 import { TFoundationFacts } from "@/api/type";
+import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 type Props = {
   button?: string;
   foundationFacts: TFoundationFacts;
@@ -83,13 +84,12 @@ const FoundationFacts = ({ button, foundationFacts }: Props) => {
         {/* pt-[47rem] */}
         {button && (
           <div className="flex justify-center absolute ~bottom-[-2rem]/0 w-full ">
-            <Link
-              href="/about/aip-impact/foundation-fact-sheet"
-              className="bg-darkPurple rounded-full"
-            >
-              <p className="px-[1.75rem] py-[0.75rem] text-white leading-[1.4rem]">
-                {button}
-              </p>
+            <Link href="/about/aip-impact/foundation-fact-sheet">
+              <ButtonAnimation className="bg-darkPurple hover:bg-white text-white hover:text-darkPurple rounded-full">
+                <p className="px-[1.75rem] py-[0.75rem] leading-[1.4rem]">
+                  {button}
+                </p>
+              </ButtonAnimation>
             </Link>
           </div>
         )}

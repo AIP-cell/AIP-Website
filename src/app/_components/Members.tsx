@@ -41,7 +41,7 @@ const Members = ({ countData }: Props) => {
             <Image
               src={SmBg}
               alt=""
-              className="block md:hidden object-cover absolute w-full bottom-[-32rem] "
+              className="block md:hidden object-cover absolute w-full bottom-[-30rem] "
             />
             <OvalPurple
               sizeClass="~size-[13rem]/[17.3rem]"

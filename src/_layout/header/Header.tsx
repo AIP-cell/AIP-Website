@@ -7,6 +7,7 @@ import Link from "next/link";
 import Sidebar from "./Sidebar";
 import SearchSvg from "@/components/svg/SearchSvg";
 import NormalLinks from "./NormalLinks";
+import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 const headerData = [
   {
     width: " w-[6rem] ",
@@ -62,7 +63,10 @@ const headerData = [
     label: "Resource Center",
     id: "resource-center",
     options: [
-      { option: "AIP Resources", link: "/resource-center/aip-resources/aip-updates" },
+      {
+        option: "AIP Resources",
+        link: "/resource-center/aip-resources/aip-updates",
+      },
       {
         option: "Curated Resources",
         link: "/resource-center/curated-resources/featured",
@@ -111,8 +115,10 @@ const Header = () => {
             </h3>
           </div>
           <div className="bg-white rounded-tr-full rounded-br-full flex items-center justify-center">
-            <Link href="/search" className="px-[1.46rem] ">
-              <SearchHeaderSvg />
+            <Link href="/search" className="flex items-center justify-center">
+              <ButtonAnimation className="px-[1.46rem]">
+                <SearchHeaderSvg />
+              </ButtonAnimation>
             </Link>
           </div>
         </div>

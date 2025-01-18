@@ -3,6 +3,7 @@ import { ButtonAnimation } from "../../../../../components/animations/ButtonAnim
 import MailSvg from "../../../../../components/svg/MailSvg";
 import BgButton from "../../../../../components/buttons/BgButton";
 import TitleDescCard from "../../../../../components/cards/TitleDescCard";
+import CardAnimation from "@/components/animations/CardAnimation";
 
 const itemsArray = [
   {
@@ -34,12 +35,14 @@ const ContactSection = () => {
       <div className="~pt-[3rem]/[5rem] flex justify-center ~px-[1.25rem]/[19rem]">
         <div className="grid md:grid-cols-2 ~gap-x-[3rem]/[5rem] ~gap-y-[1.75rem]/[2.5rem]">
           {itemsArray.map((item, i) => (
-            <TitleDescCard
-              key={i}
-              title1={item.title1}
-              desc={item.desc}
-              topClassName="  w-[18.438rem] "
-            />
+            <CardAnimation key={i} index={i} delay={0.1}>
+              <TitleDescCard
+                key={i}
+                title1={item.title1}
+                desc={item.desc}
+                topClassName="  w-[18.438rem] "
+              />
+            </CardAnimation>
           ))}
         </div>
       </div>

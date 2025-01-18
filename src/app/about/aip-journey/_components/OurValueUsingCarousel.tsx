@@ -154,11 +154,11 @@ const OurValueUsingCarousel = () => {
               <CarouselNext />
             </div>
           </div>
-          <div className=" justify-center gap-[1.25rem] py-[5rem] relative items-center">
+          <div className=" justify-center gap-[1.25rem] ~pt-[1.25rem]/[5rem] pb-[5rem] relative items-center">
             <div className="flex  w-full">
               <div className=" w-full flex justify-center shrink-0  container mx-auto ">
                 <div className="relative ~w-[16.125rem]/[38rem] flex justify-center items-center">
-                  <p className=" text-center ~text-h9Copy5/h9Copy4 text-midGray ~leading-[1.225rem]/[1.4rem]">
+                  <p className=" text-center ~text-h9Copy5/h9Copy4 text-midGray ~h-[12rem]/[10rem] line-clamp-[10] ~leading-[1.225rem]/[1.4rem]">
                     {ourValues.at(current)?.desc}
                   </p>
                 </div>

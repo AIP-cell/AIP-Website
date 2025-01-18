@@ -1,3 +1,4 @@
+import CardAnimation from "@/components/animations/CardAnimation";
 import ImgTitleDescHor from "@/components/cards/ImgTitleDescHor";
 import LeftHomePagePeachCurve from "@public/svg/leftHomePagePeach.svg";
 import Image from "next/image";
@@ -31,12 +32,13 @@ const MakeDifference = () => {
         </p>
         <div className="grid lg:grid-cols-2 gap-[1.25rem] ~px-[2.9rem]/[7.8rem] ~pt-[2rem]/[5rem]">
           {dataS.map((items, i) => (
-            <ImgTitleDescHor
-              key={i}
-              src={items.src}
-              desc={items.desc}
-              title={items.title}
-            />
+            <CardAnimation delay={0.2} index={i} key={i}>
+              <ImgTitleDescHor
+                src={items.src}
+                desc={items.desc}
+                title={items.title}
+              />
+            </CardAnimation>
           ))}
         </div>
       </div>
