@@ -49,7 +49,7 @@ const JourneyHeroSection = () => {
       <div className="relative container mx-auto">
         <BreadCrump
           textOne="About Us"
-          linkOne="/about"
+          linkOne="/about/aip-journey"
           textTwo="AIP Journey"
           linkTwo="/about/aip-journey"
         />

@@ -4,7 +4,7 @@ import FoundationFacts from "./_components/FoundationFacts";
 import PeopleWeWorkWith from "./_components/PeopleWeWorkWith";
 import CurvePeach from "@public/svg/peach-bg-curve-founders.svg";
 import { Api } from "@/api/Api";
-import { TAipImpact, TAipImpactPageData } from "@/api/type";
+import { TAipImpact } from "@/api/type";
 import { notFound } from "next/navigation";
 
 export const dynamic = "force-dynamic";
