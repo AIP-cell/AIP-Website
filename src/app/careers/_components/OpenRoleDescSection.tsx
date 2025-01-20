@@ -1,4 +1,5 @@
 "use client";
+import useClient from "@/hooks/useClient";
 import cn from "@/utils/tailwind";
 import React, { useEffect, useRef, useState } from "react";
 
@@ -13,7 +14,10 @@ const removeInlineStyles = (html: string) => {
 const OpenRoleDescSection = ({ desc, index }: Props) => {
   const [currentIndex, setCurrentIndex] = useState<number | null>(null);
   const cleanedDescription = removeInlineStyles(desc || "");
-
+  const client = useClient();
+  if (!client) {
+    return;
+  }
   const toggle = (index: number) => {
     if (index >= 0) {
       if (index === currentIndex) {
@@ -41,7 +45,7 @@ const OpenRoleDescSection = ({ desc, index }: Props) => {
         )}
       ></div>
       {currentIndex !== index && (
-        <span className="absolute bottom-0 right-0 text-darkPurple z-10">
+        <span className="absolute bottom-[-0.8rem] left-0 text-darkPurple z-10">
           ...{""}
           <button
             onClick={() => toggle(index)}

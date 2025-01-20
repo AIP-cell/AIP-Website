@@ -22,7 +22,6 @@ const TestimonialSlick = ({ slickArray }: Props) => {
   const isDesktop = useMediaQuery({ query: "(min-width: 768px)" });
   const itemsPerSlide = isDesktop ? 2 : 1;
   const arrayLength = slickArray.length;
-  // console.log("change::", change);
   const previous = () => {
     if (change <= 0) {
       setChange(arrayLength - 1);

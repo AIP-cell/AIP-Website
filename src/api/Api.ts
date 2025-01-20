@@ -67,7 +67,6 @@ export const Api = {
   getCuratedResourcesExpertsInner: async (slug: string) => {
     try {
       const response = await axiosClient.get(`curated-resources/${slug}`);
-      console.log("response,data:::", response.data);
       return response.data;
     } catch (error) {
       console.log(error);
@@ -280,7 +279,6 @@ export const Api = {
     }
   },
   postContact: async (body: object) => {
-    console.log("body:::", body);
     try {
       const response = await axiosClient.post(`contact-form`, body);
       return response.data;
