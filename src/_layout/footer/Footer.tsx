@@ -77,7 +77,6 @@ const Footer = () => {
   return (
     <div className="">
       <div className="relative w-full z-[5000] overflow-hidden">
-        
         <Wave
           fill="url(#footerGradient)"
           paused={false}
@@ -113,8 +112,15 @@ const Footer = () => {
                   accordionTriggerClassName="!text-white"
                 />
                 <div className="flex text-h9Copy5 leading-[1.225rem] flex-wrap gap-[1rem] text-white pt-[1rem]">
-                  <p>Careers</p>|<p>FAQs</p>|<p>Foundation Fact Sheet</p>|
-                  <p>Join our learning circle</p>
+                  <Link href="/careers">Careers</Link>|
+                  <Link href="/faq">FAQs</Link>|
+                  <Link href="/about/aip-impact/foundation-fact-sheet">
+                    Foundation Fact Sheet
+                  </Link>
+                  |
+                  <Link href="/join-our-learning-circle">
+                    Join our learning circle
+                  </Link>
                 </div>
                 <div className=" md:basis-3/4 flex w-full md:justify-start pt-[2.5rem] max-md:order-2">
                   <div className="w-full md:~w-[21rem]/[25rem] h-[2.8rem] bg-white flex rounded-full relative rounded-br-full   items-center justify-end">
@@ -323,7 +329,7 @@ const Footer = () => {
               </div>
 
               <div className="pt-[2.25rem] text-h9Copy5 font-inter font-bold text-white">
-                <Link href="/career">
+                <Link href="/careers">
                   <ButtonAnimation>Career</ButtonAnimation>
                 </Link>
               </div>
