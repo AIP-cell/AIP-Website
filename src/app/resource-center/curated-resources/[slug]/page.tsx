@@ -341,7 +341,7 @@ const CuratedResourcesInnerPage = async ({
           tabClassName="!w-full  !px-0"
           tabListClassName="!w-full"
         />
-        <div className="flex flex-wrap pt-[2rem] items-center gap-[0.75rem]">
+        <div className="flex flex-col md:flex-row pt-[2rem] md:items-center ~gap-0/[0.75rem]">
           <p className="~pb-[1.25rem]/0 text-gray40  ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]">
             Filter by:
           </p>

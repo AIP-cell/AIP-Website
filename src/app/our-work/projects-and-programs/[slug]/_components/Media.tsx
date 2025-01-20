@@ -69,10 +69,7 @@ const Media = ({ media }: Props) => {
         <div className="text-center font-playFair ~pb-[2.5rem]/20 ~leading-[2.6rem]/[3.3rem] tracking-[-.04rem] ~text-h4/h2 text-gray80">
           In the Media
         </div>
-        <div
-          ref={carouselRef}
-          className="flex snap-x snap-mandatory overflow-y-hidden  w-full overflow-x-scroll no-scrollbar  ~gap-[1.25rem]/[4.5rem] lg:justify-center "
-        >
+        <div className="flex snap-x snap-mandatory overflow-y-hidden  w-full overflow-x-scroll no-scrollbar  ~gap-[1.25rem]/[4.5rem] lg:justify-center ">
           {media?.map((media, i) => (
             <CardAnimation index={i} delay={0.2} key={i}>
               <MediaCard

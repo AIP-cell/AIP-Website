@@ -24,7 +24,11 @@ const TestimonialSlick = ({ slickArray }: Props) => {
   const arrayLength = slickArray.length;
   const previous = () => {
     if (change <= 0) {
-      setChange(arrayLength - 1);
+      // setChange(arrayLength - itemsPerSlide);
+      const remainder = arrayLength % itemsPerSlide;
+      const lastIndex =
+        remainder === 0 ? arrayLength - itemsPerSlide : arrayLength - remainder;
+      setChange(lastIndex);
     } else setChange(change - itemsPerSlide);
   };
   const next = () => {
@@ -36,6 +40,8 @@ const TestimonialSlick = ({ slickArray }: Props) => {
   if (!isClient) {
     return;
   }
+
+  console.log("change::::", change);
   return (
     <div>
       <div className=" ~pt-[2.5rem]/[5rem] container mx-auto">

@@ -182,10 +182,10 @@ const Footer = () => {
                 <span className="pr-2">
                   ©2024-25 Accelerate Indian Philanthropy
                 </span>
-                <Link href={""} className="border-s bottom-1 px-2">
+                <Link href="#" className="border-s bottom-1 px-2">
                   T&C
                 </Link>
-                <Link href={""} className="border-s bottom-1 ps-2">
+                <Link href="#" className="border-s bottom-1 ps-2">
                   Privacy Policy
                 </Link>
                 <p className="text-white/60">
