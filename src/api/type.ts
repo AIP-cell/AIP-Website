@@ -337,7 +337,7 @@ export type TOneProjectPrograms = {
   date: string;
   title: string;
   field: string;
-  partners: TPartners[];
+  partners: TPartners;
   description: string;
   report: string;
   image: string;

@@ -1,12 +1,9 @@
 import React from "react";
 import Image from "next/image";
-import ArrowDownSvg from "@public/svg/arrowDown.svg";
 import projectBg from "@public/svg/projects-page/projectBg.svg";
-import Link from "next/link";
 import bottomRightWave from "@public/svg/products-and-services/project-and-programs/rightVertWave.svg";
 import CollaborationGrid from "./_components/CollaborationGrid";
 import BreadCrump from "@/components/bread-crump/BreadCrump";
-import CustomSelect from "@/components/custom/CustomSelect";
 import CustomFilter from "@/components/custom/CustomFilter";
 import { Api } from "@/api/Api";
 import { TCollaborationPageData } from "@/api/type";

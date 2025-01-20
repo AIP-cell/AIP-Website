@@ -1,4 +1,5 @@
 import { TPeople } from "@/api/type";
+import CardAnimation from "@/components/animations/CardAnimation";
 import ATeamCard from "@/components/cards/aCards/ATeamCard";
 import PTeamCard from "@/components/cards/pCards/PTeamCard";
 import React from "react";
@@ -18,25 +19,27 @@ const NposPartners = ({ people }: Props) => {
       <div className="~pt-[2.5rem]/[5rem] ~px-[1.25rem]/[7.8rem]">
         <div className=" grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center ~gap-[1.25rem]/[5.625rem]">
           {people?.map((people, i) => (
-            <div key={i} className="">
-              {i % 2 == 0 ? (
-                <ATeamCard
-                  title={people?.name}
-                  // title2={people.title2}
-                  desc={people?.designation}
-                  image={people?.image}
-                  linkedin={false}
-                />
-              ) : (
-                <PTeamCard
-                  title={people?.name}
-                  // title2={people.title2}
-                  desc={people?.designation}
-                  image={people?.image}
-                  linkedin={false}
-                />
-              )}
-            </div>
+            <CardAnimation index={i} delay={0.2}>
+              <div key={i} className="">
+                {i % 2 == 0 ? (
+                  <ATeamCard
+                    title={people?.name}
+                    // title2={people.title2}
+                    desc={people?.designation}
+                    image={people?.image}
+                    linkedin={false}
+                  />
+                ) : (
+                  <PTeamCard
+                    title={people?.name}
+                    // title2={people.title2}
+                    desc={people?.designation}
+                    image={people?.image}
+                    linkedin={false}
+                  />
+                )}
+              </div>
+            </CardAnimation>
           ))}
         </div>
       </div>

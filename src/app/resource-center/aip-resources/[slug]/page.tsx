@@ -15,13 +15,13 @@ const tabList = [
     slug: "aip-updates",
     toSend: "aipUpdates",
     name: "AIP Updates",
-    link: "/resource-center/aip-resources/aipUpdates",
+    link: "/resource-center/aip-resources/aip-updates",
   },
   {
     slug: "reports-and-publications",
     toSend: "reportsAndPublications",
     name: "Reports & Publications",
-    link: "/resource-center/aip-resources/reportsAndPublications",
+    link: "/resource-center/aip-resources/reports-and-publications",
   },
   {
     slug: "newsletter",
@@ -33,13 +33,13 @@ const tabList = [
     slug: "inspirational-voices",
     toSend: "inspirationalVoices",
     name: "Inspirational Voices",
-    link: "/resource-center/aip-resources/inspirationalVoices",
+    link: "/resource-center/aip-resources/inspirational-voices",
   },
   {
     slug: "in-the-media",
     toSend: "inTheMedia",
     name: "In the Media",
-    link: "/resource-center/aip-resources/inTheMedia",
+    link: "/resource-center/aip-resources/in-the-media",
   },
   {
     slug: "gallery",
@@ -153,7 +153,19 @@ const aipResourcesFilter = [
       },
       {
         type: "c_type",
-        options: ["data1", "data2"],
+        options: [
+          "Sector primers",
+          "Giving Journey",
+          "Case Study",
+          "Research Study",
+          "Philanthropist",
+          "Speak",
+          "Books",
+          "Articles",
+          "PoV",
+          "White paper",
+          "Newsletter",
+        ],
       },
     ],
   },
@@ -179,7 +191,19 @@ const aipResourcesFilter = [
       },
       {
         type: "c_type",
-        options: ["data1", "data2"],
+        options: [
+          "Sector primers",
+          "Giving Journey",
+          "Case Study",
+          "Research Study",
+          "Philanthropist",
+          "Speak",
+          "Books",
+          "Articles",
+          "PoV",
+          "White paper",
+          "Newsletter",
+        ],
       },
     ],
   },
@@ -205,7 +229,19 @@ const aipResourcesFilter = [
       },
       {
         type: "c_type",
-        options: ["data1", "data2"],
+        options: [
+          "Sector primers",
+          "Giving Journey",
+          "Case Study",
+          "Research Study",
+          "Philanthropist",
+          "Speak",
+          "Books",
+          "Articles",
+          "PoV",
+          "White paper",
+          "Newsletter",
+        ],
       },
     ],
   },
@@ -243,7 +279,6 @@ const AipResourcesInnerPage = async ({
     c_type,
     date,
   });
-  // console.log("response:::::", response);
   if (!response) {
     notFound();
   }
@@ -319,11 +354,6 @@ const AipResourcesInnerPage = async ({
             />
           ))}
         </div>
-        {/* <AipResourceTabs
-          asyncParam={asyncParam}
-          tabData={aipResourcesSelectedTabData}
-          category={category}
-        /> */}
       </div>
     </div>
   );

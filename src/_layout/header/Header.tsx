@@ -87,7 +87,9 @@ const Header = () => {
           <LogoSmSVG className="h-[2.75rem] w-[4.5rem]" />
         </Link>
         <div className="flex items-center text-white gap-[1rem] xl:hidden">
-          <SearchSvg className="size-[1.5rem]" />
+          <Link href="/search">
+            <SearchSvg className="size-[1.5rem]" />
+          </Link>
           <Sidebar />
         </div>
         <div className="hidden xl:flex gap-[2.5rem] ">

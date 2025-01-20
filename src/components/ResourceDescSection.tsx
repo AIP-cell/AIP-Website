@@ -11,9 +11,8 @@ const ResourceDescSection = ({ desc, index }: Props) => {
   const [currentIndex, setCurrentIndex] = useState<number | null>(null);
   const [isClamped, setIsClamped] = useState(false);
   const textRef = useRef<HTMLDivElement>(null);
-
   const toggle = (index: number | undefined) => {
-    if (index) {
+    if (index != undefined) {
       if (index === currentIndex) {
         setCurrentIndex(null);
       } else setCurrentIndex(index);
@@ -26,7 +25,7 @@ const ResourceDescSection = ({ desc, index }: Props) => {
       const computedStyle = getComputedStyle(element);
       const lineHeight = parseFloat(computedStyle.lineHeight);
       const actualLines = Math.ceil(element.offsetHeight / lineHeight);
-      setIsClamped(actualLines > 6); // Check if the text exceeds 6 lines
+      setIsClamped(actualLines > 6);
     }
   }, [desc]);
 
@@ -44,7 +43,7 @@ const ResourceDescSection = ({ desc, index }: Props) => {
       >
         {desc}
         {isClamped && currentIndex !== index && (
-          <span className="absolute bottom-0 right-0 bg-white pl-2 text-darkPurple">
+          <span className="absolute bottom-0 right-0 bg-bgLightPeach pl-2 text-darkPurple">
             ...{""}
             <button
               onClick={() => toggle(index)}

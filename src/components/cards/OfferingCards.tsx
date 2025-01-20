@@ -3,27 +3,27 @@ import OvalPurple from "../ovals/OvalPurple";
 import cn from "@/utils/tailwind";
 import { ButtonAnimation } from "../animations/ButtonAnimation";
 type Props = {
-  text1: string;
-  text2?: string;
-  text3?: string;
+  desc: string;
   index: number;
+  text1: string;
+  text2: string;
+  text3?: string;
 };
-const OfferingCard = ({ text1, text2, text3, index }: Props) => {
+const OfferingCard = ({ desc, index, text1, text2, text3 }: Props) => {
   return (
     <div className=" grid grid-cols-1 lg:grid-cols-5 gap-[1.25rem]">
       <div
-        className={cn(
-          "col-span-2  flex justify-center items-center",
-          {
-            "lg:order-2 ": index % 2 == 1,
-          }
-        )}
+        className={cn("col-span-2  flex justify-center items-center", {
+          "lg:order-2 ": index % 2 == 1,
+        })}
       >
         <OvalPurple
           textClass2="font-playFair ~text-h4a/h4"
           textClass1="font-playFair ~text-h4a/h4 "
-          text1="Networking &"
-          text2="Convening"
+          textClass3="font-playFair ~text-h4a/h4"
+          text1={text1}
+          text2={text2}
+          text3={text3}
           sizeClass="~size-[20rem]/[24.938rem]"
         />
       </div>
@@ -33,7 +33,7 @@ const OfferingCard = ({ text1, text2, text3, index }: Props) => {
         })}
       >
         <p className="~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]  text-midGray">
-          {text1}
+          {desc}
         </p>
         {/* <p className="leading-[1.4rem] text-gray80 pt-[2rem]">
           {text2}

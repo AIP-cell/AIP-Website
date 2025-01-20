@@ -35,7 +35,7 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
           alt="bg"
           className="hidden lg:block absolute top-[-8.5rem] w-full h-[30rem] "
         />
-        <div className="container mx-auto relative ~px-5/[7.8rem] ~pt-[4.313rem]/[5rem]">
+        <div className="container mx-auto relative ~px-5/[7.8rem] ~pt-[5.2rem]/[5rem]">
           <BreadCrump
             textOne="Our Work"
             linkOne="/our-work"
@@ -52,10 +52,10 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
           <p className="~leading-[2.113rem]/[2.6rem] font-playFair ~text-h4a/h4 text-gray80 pt-5 ~pb-0/[5rem] md:tracking-[-0.02rem]">
             {response?.description}
           </p>
-          {galleryVideos?.length != 0 && (
+          {galleryVideos && galleryVideos?.length != 0 && (
             <GalleryVideos galleryVideos={galleryVideos} />
           )}
-          {galleryImages?.length != 0 && (
+          {galleryImages && galleryImages?.length != 0 && (
             <GalleryImages galleryImages={galleryImages} />
           )}
         </div>

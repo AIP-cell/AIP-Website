@@ -79,22 +79,24 @@ const InnerExpertsSectionOne = ({ innerData, params }: Props) => {
               </div>
             </div>
             <div className="">
-              <p className="block md:hidden text-h6M text-gray80 font-playFair leading-[1.575rem]">
-                Launch Details
-              </p>
               {innerData?.file && (
-                <Link
-                  href={StorageUrl + innerData?.file}
-                  download
-                  className="mt-[1rem] group bg-darkPurple border-2 border-darkPurple hover:bg-white  transition-all  hover:text-darkPurple text-white hover:border-2 hover:border-darkPurple px-7 py-3 flex items-center gap-[0.75rem] w-fit rounded-3xl"
-                >
-                  <p className=" font-inter  text-h9Copy5 leading-[1.225rem]">
-                    Download
+                <>
+                  <p className="block md:hidden text-h6M text-gray80 font-playFair leading-[1.575rem]">
+                    Launch Details
                   </p>
-                  <div className=" pt-[.1rem]">
-                    <DownloadFileSvg className="size-[1.25rem]" />
-                  </div>
-                </Link>
+                  <Link
+                    href={StorageUrl + innerData?.file}
+                    download
+                    className="mt-[1rem] group bg-darkPurple border-2 border-darkPurple hover:bg-white  transition-all  hover:text-darkPurple text-white hover:border-2 hover:border-darkPurple px-7 py-3 flex items-center gap-[0.75rem] w-fit rounded-3xl"
+                  >
+                    <p className=" font-inter  text-h9Copy5 leading-[1.225rem]">
+                      Download
+                    </p>
+                    <div className=" pt-[.1rem]">
+                      <DownloadFileSvg className="size-[1.25rem]" />
+                    </div>
+                  </Link>
+                </>
               )}
             </div>
             {innerData?.links.length != 0 && (
@@ -115,12 +117,6 @@ const InnerExpertsSectionOne = ({ innerData, params }: Props) => {
                     </p>
                   </Link>
                 ))}
-                {/* <div className="flex w-[17.375rem] gap-[0.98rem] ~pl-[1rem]/[1.25rem] ~py-[0.875rem]/[0.75rem] bg-bgGray5 rounded-full">
-                <Image src={LinkSvg} alt="" className="" />
-                <p className="text-gray80 ~leading-[1.225rem]/[1.4rem] ~text-h9Copy5/h9Copy4">
-                  abcdxyze_loremipsum
-                </p>
-              </div> */}
               </div>
             )}
           </div>

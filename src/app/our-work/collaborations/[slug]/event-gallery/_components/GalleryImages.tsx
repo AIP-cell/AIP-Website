@@ -1,5 +1,7 @@
 "use client";
 import { TGalleryImages } from "@/api/type";
+import CardAnimation from "@/components/animations/CardAnimation";
+import FadeInAnimation from "@/components/animations/FadeInAnimation";
 import LeftSlickArrowSvg from "@/components/svg/LeftSlickArrowSvg";
 import RightSlickArrowSvg from "@/components/svg/RightSlickArrowSvg";
 import { StorageUrl } from "@/utils/BaseUrl";
@@ -7,28 +9,6 @@ import dayjs from "dayjs";
 import Image from "next/image";
 import React, { useState } from "react";
 
-const ImageArray = [
-  {
-    src: "/images/galleryVideoThumbnail.png",
-    desc: "0Amitabh at Systemic Impact Exemplars launch",
-    ddmmyy: "11 Jul 2024",
-  },
-  {
-    src: "/images/sample.png",
-    desc: "1Amitabh at Systemic Impact Exemplars launch",
-    ddmmyy: "11 Jul 2024",
-  },
-  {
-    src: "/images/aSample.png",
-    desc: "2Amitabh at Systemic Impact Exemplars launch",
-    ddmmyy: "11 Jul 2024",
-  },
-  {
-    src: "/images/galleryVideoThumbnail.png",
-    desc: "3Amitabh at Systemic Impact Exemplars launch",
-    ddmmyy: "11 Jul 2024",
-  },
-];
 type Props = {
   galleryImages?: TGalleryImages[];
 };
@@ -76,14 +56,16 @@ const GalleryImages = ({ galleryImages }: Props) => {
           </button>
         </div>
         <div>
-          <div className="relative  ~w-[21.8rem]/[51.25rem] ~h-[14.3rem]/[34.167rem] rounded-xl overflow-hidden flex items-center justify-center">
-            <Image
-              src={StorageUrl + galleryImages?.at(selectedIndex)?.image}
-              alt=""
-              fill
-              className="object-cover z-10"
-            />
-          </div>
+          <FadeInAnimation delay={0.2}>
+            <div className="relative  ~w-[21.8rem]/[51.25rem] ~h-[14.3rem]/[34.167rem] rounded-xl overflow-hidden flex items-center justify-center">
+              <Image
+                src={StorageUrl + galleryImages?.at(selectedIndex)?.image}
+                alt=""
+                fill
+                className="object-cover z-10"
+              />
+            </div>
+          </FadeInAnimation>
           <div className="flex flex-col md:flex-row justify-between ~gap-[0.25rem]/[3rem] ~pt-[1rem]/[0.75rem]">
             <div className="leading-[1.4rem] font-bold  text-midGray">
               <p className="">{galleryImages?.at(selectedIndex)?.title}</p>
@@ -97,18 +79,20 @@ const GalleryImages = ({ galleryImages }: Props) => {
           {galleryImages?.map(
             (items, i) =>
               i != selectedIndex && (
-                <div
-                  key={i}
-                  onClick={() => setSelectedIndex(i)}
-                  className="relative ~size-[4.6rem]/[11.875rem] rounded-xl overflow-hidden cursor-pointer"
-                >
-                  <Image
-                    src={StorageUrl + items.image}
-                    alt=""
-                    fill
-                    className="object-cover "
-                  />
-                </div>
+                <CardAnimation index={i} delay={0.2} key={i}>
+                  <div
+                    key={i}
+                    onClick={() => setSelectedIndex(i)}
+                    className="relative ~size-[4.6rem]/[11.875rem] rounded-xl overflow-hidden cursor-pointer"
+                  >
+                    <Image
+                      src={StorageUrl + items.image}
+                      alt=""
+                      fill
+                      className="object-cover "
+                    />
+                  </div>
+                </CardAnimation>
               )
           )}
         </div>

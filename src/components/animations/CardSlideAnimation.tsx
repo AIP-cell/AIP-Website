@@ -22,7 +22,12 @@ const CardSlideAnimation = ({ children, className, index, delay }: Props) => {
         animate: () => ({
           opacity: 1,
           x: 0,
-          transition: { delay: delay * index, ease: "easeIn", duration: 0.6 },
+          transition: {
+            delay: delay * index,
+            duration: 1,
+            type: "spring",
+            ease: [0.76, 0, 0.24, 1],
+          },
         }),
       }}
       initial="initial"

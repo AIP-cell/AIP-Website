@@ -1,12 +1,11 @@
 import BreadCrump from "@/components/bread-crump/BreadCrump";
-import CrossSvg from "@/components/svg/CrossSvg";
-import SearchSvg from "@/components/svg/SearchSvg";
 import React from "react";
 import CustomFilter from "@/components/custom/CustomFilter";
 import AllTabContent from "./_components/AllTabContent";
 import { Api } from "@/api/Api";
 import { TSearch } from "@/api/type";
 import SearchBar from "./_components/SearchBar";
+import { notFound } from "next/navigation";
 
 const searchFilter = [
   {
@@ -64,7 +63,7 @@ const getSearchApi = async ({
     type,
     date,
   });
-  return response.data;
+  return response?.data;
 };
 const page = async ({
   searchParams,
@@ -79,6 +78,9 @@ const page = async ({
   const asyncSearchParam = await searchParams;
   const { key, field, type, date } = await searchParams;
   const response = await getSearchApi({ key, field, type, date });
+  if (!response) {
+    notFound();
+  }
   return (
     <div className="pt-[5rem]">
       <div className="relative container mx-auto ~pt-[4.313rem]/[5.5rem] ~px-[1.25rem]/[7.8rem]">
@@ -106,7 +108,7 @@ const page = async ({
               &quot;Search result for {key}&quot;
             </p>
           )}
-          <AllTabContent searchData={response} />
+          {response && <AllTabContent searchData={response} />}
         </div>
       </div>
     </div>

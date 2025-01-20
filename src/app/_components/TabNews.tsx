@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
+import { TabGroup, TabPanel, TabPanels } from "@headlessui/react";
 // import NewsCard from "@/components/cards/NewsCard";
 // import CarouselNews from "./CarouselNews";
 import TabListAndRespSelect from "../resource-center/_components/TabListAndRespSelect";

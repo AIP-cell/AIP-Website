@@ -28,6 +28,8 @@ const InnerSectionOne = ({ heroSectionData }: Props) => {
           linkOne="/our-work"
           textTwo="Projects and Programs"
           linkTwo="/our-work/projects-and-programs"
+          textThree={heroSectionData?.title}
+          linkThree='#'
         />
         <div className="grid md:grid-cols-3 gap-5">
           <div className="col-span-2 flex flex-col ~gap-[2rem]/[2.5rem]  ~pr-0/[6.563rem]">
@@ -54,16 +56,21 @@ const InnerSectionOne = ({ heroSectionData }: Props) => {
             <p className="font-inter ~leading-[1.225rem]/[1.4rem] ~text-h9Copy5/h9Copy4  text-midGray md:max-w-[31.563rem]">
               {heroSectionData?.description}
             </p>
-            <div>
-              <p className="font-playFair ~pb-[0.75rem]/[1rem] ~leading-[1.575rem]/[1.75rem] font-medium tracking-[-.02rem] ~text-h6M/h5 text-gray80">
-                In collaboration with
-              </p>
-              <Image
-                src={bcgSvg}
-                className="border border-1 border-gray10 rounded-xl py-3 px-[.92rem] ~w-[4.25rem]/[5.313rem] ~h-[4rem]/20 bg-bgCollab"
-                alt="bcg"
-              />
-            </div>
+            {heroSectionData?.partners?.image && (
+              <div>
+                <p className="font-playFair ~pb-[0.75rem]/[1rem] ~leading-[1.575rem]/[1.75rem] font-medium tracking-[-.02rem] ~text-h6M/h5 text-gray80">
+                  In collaboration with
+                </p>
+                <div className="relative border border-1 border-gray10 rounded-xl py-3 px-[.92rem] ~w-[4.25rem]/[5.313rem] ~h-[4rem]/20 bg-bgCollab">
+                  <Image
+                    src={StorageUrl + heroSectionData.partners.image}
+                    fill
+                    className=""
+                    alt="bcg"
+                  />
+                </div>
+              </div>
+            )}
             <div className="h-px bg-gray10 w-full md:w-[31.563rem]"></div>
             <div className="flex gap-5">
               {/* <button className=""> */}

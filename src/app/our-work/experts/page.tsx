@@ -29,8 +29,8 @@ const page = async () => {
       <AsAnExperts />
       <ExpertsJoinTheFlow />
       <WhyPartner />
-      {people.length != 0 && <NetworkOfExperts people={people} />}
-      {expertShelves.length != 0 && (
+      {people && people.length != 0 && <NetworkOfExperts people={people} />}
+      {expertShelves && expertShelves.length != 0 && (
         <ExpertsShelves expertShelves={expertShelves} />
       )}
     </div>

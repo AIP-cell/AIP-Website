@@ -40,12 +40,14 @@ const ExpertHeroSection = () => {
           </linearGradient>
         </Wave>
       </div>
-      <BreadCrump
-        textOne="Our Work"
-        linkOne="/our-work"
-        textTwo="Experts"
-        linkTwo="/our-work/experts"
-      />
+      <div className="relative container mx-auto">
+        <BreadCrump
+          textOne="Our Work"
+          linkOne="/our-work"
+          textTwo="Experts"
+          linkTwo="/our-work/experts"
+        />
+      </div>
       <div className="relative">
         <Wave
           fill="#b861b4a6"

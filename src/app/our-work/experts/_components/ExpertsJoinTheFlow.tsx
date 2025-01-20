@@ -40,7 +40,7 @@ const ExpertsJoinTheFlow = () => {
           </p>
           <ButtonAnimation className=" ~mt-[2rem]/[2.5rem] text-darkPurple border-2 border-darkPurple hover:text-white bg-white hover:bg-darkPurple rounded-full  py-[0.75rem] px-[1.75rem]">
             <Link
-              href=""
+              href="/contact"
               className=" flex items-center text-h9Copy5 gap-[0.5rem]"
             >
               <p className="">Contact Us</p>

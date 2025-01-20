@@ -9,6 +9,7 @@ import { TAipResourcesCategory } from "@/api/type";
 import CustomFilter from "@/components/custom/CustomFilter";
 import ResourcesTabAndSelect from "../../_components/ResourcesTabAndSelect";
 import { notFound } from "next/navigation";
+import DateFilter from "@/components/custom/DatePick";
 
 const tabList = [
   {
@@ -44,7 +45,7 @@ const tabList = [
     slug: "world-of-philanthropy",
     toSend: "worldOfPhilanthropy",
     name: "World of Philanthropy",
-    link: "/resource-center/curated-resources/worldOfPhilanthropy",
+    link: "/resource-center/curated-resources/world-of-philanthropy",
   },
 ];
 const curatedResourcesFilter = [
@@ -87,17 +88,13 @@ const curatedResourcesFilter = [
       {
         type: "o_type",
         options: [
-          "Sector primers",
-          "Giving Journey",
-          "Case Study",
-          "Research Study",
-          "Philanthropist",
-          "Speak",
-          "Books",
-          "Articles",
-          "PoV",
-          "White paper",
-          "Newsletter",
+          "Think Tanks",
+          "Academia",
+          "Foundations & other Philanthropy Orgs",
+          "Development & Multilateral Orgs",
+          "Governmental & Semi",
+          "Impact Consultancies",
+          "M&E Orgs",
         ],
       },
     ],
@@ -149,7 +146,6 @@ const curatedResourcesFilter = [
           "Women & Child",
         ],
       },
-      { type: "date", options: ["data1", "data2"] },
     ],
   },
   {
@@ -174,9 +170,20 @@ const curatedResourcesFilter = [
       },
       {
         type: "c_type",
-        options: ["data1", "data2"],
+        options: [
+          "Sector primers",
+          "Giving Journey",
+          "Case Study",
+          "Research Study",
+          "Philanthropist",
+          "Speak",
+          "Books",
+          "Articles",
+          "PoV",
+          "White paper",
+          "Newsletter",
+        ],
       },
-      { type: "date", options: ["data1", "data2"] },
     ],
   },
   {
@@ -201,9 +208,20 @@ const curatedResourcesFilter = [
       },
       {
         type: "c_type",
-        options: ["data1", "data2"],
+        options: [
+          "Sector primers",
+          "Giving Journey",
+          "Case Study",
+          "Research Study",
+          "Philanthropist",
+          "Speak",
+          "Books",
+          "Articles",
+          "PoV",
+          "White paper",
+          "Newsletter",
+        ],
       },
-      { type: "date", options: ["data1", "data2"] },
     ],
   },
   {
@@ -228,9 +246,20 @@ const curatedResourcesFilter = [
       },
       {
         type: "c_type",
-        options: ["data1", "data2"],
+        options: [
+          "Sector primers",
+          "Giving Journey",
+          "Case Study",
+          "Research Study",
+          "Philanthropist",
+          "Speak",
+          "Books",
+          "Articles",
+          "PoV",
+          "White paper",
+          "Newsletter",
+        ],
       },
-      { type: "date", options: ["data1", "data2"] },
     ],
   },
 ];
@@ -326,6 +355,14 @@ const CuratedResourcesInnerPage = async ({
                 optionsArray={data.options}
               />
             ))}
+            {(filterData?.filterBy === "partners" ||
+              filterData?.filterBy === "world-of-philanthropy" ||
+              filterData?.filterBy === "npo" ||
+              filterData?.filterBy === "philanthropists" ||
+              filterData?.filterBy === "experts" ||
+              filterData?.filterBy === "featured") && (
+              <DateFilter searchParams={{ ...SearchParam }} />
+            )}
           </div>
         </div>
         <div className="pt-[3.25rem] pb-[7.5rem] grid md:grid-cols-2 lg:grid-cols-3 gap-[4.5rem]">

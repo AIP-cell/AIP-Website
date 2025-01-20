@@ -1,3 +1,4 @@
+import CardAnimation from "@/components/animations/CardAnimation";
 import ImgTitleDescVer from "@/components/cards/ImgTitleDescVer";
 import React from "react";
 
@@ -44,8 +45,7 @@ const AipAndNpo = () => {
   return (
     <div className="~pt-[5rem]/[6.688rem] pb-[5rem] container mx-auto">
       <h1 className="~text-h4/h2 ~leading-[2.6rem]/[3.3rem] font-playFair text-center w-full">
-        AIP <span className="font-playFairItalic text-textPurple">&</span>{" "}
-        NPOs
+        AIP <span className="font-playFairItalic text-textPurple">&</span> NPOs
       </h1>
       <div className="~px-[1.25rem]/[14.375rem] flex flex-col w-full items-center ~gap-[0.7rem]/[1rem] pt-[2.5rem] text-center">
         <p className="text-gray80 ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]">
@@ -74,16 +74,17 @@ const AipAndNpo = () => {
       </div>
       <div className="~pt-[2rem]/[5rem] flex flex-wrap justify-center gap-x-[4.563rem] ~gap-y-[1.25rem]/[3rem] !~px-[2.8rem]/[6.438rem] ">
         {npos.map((items, i) => (
-          <ImgTitleDescVer
-            titleClassName="!text-h4 !leading-[2.6rem]"
-            totalWidth="!w-[19rem]"
-            imageWidth="!w-[11.875rem]"
-            key={i}
-            title={items.title1}
-            title2={items.title2}
-            desc={items.desc}
-            src={items.src}
-          />
+          <CardAnimation index={i} delay={0.2} key={i}>
+            <ImgTitleDescVer
+              titleClassName="!text-h4 !leading-[2.6rem]"
+              totalWidth="!w-[19rem]"
+              imageWidth="!w-[11.875rem]"
+              title={items.title1}
+              title2={items.title2}
+              desc={items.desc}
+              src={items.src}
+            />
+          </CardAnimation>
         ))}
       </div>
     </div>

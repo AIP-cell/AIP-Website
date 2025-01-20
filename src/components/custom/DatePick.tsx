@@ -25,7 +25,7 @@ const DateFilter = ({ searchParams }: Props) => {
   return (
     <div>
       <div
-        className="border-2 border-[#DFE0E5] rounded-lg cursor-pointer"
+        className="border-2 border-[#DFE0E5] rounded-lg cursor-pointer w-fit"
         onClick={toggleDatePicker}
       >
         <div
@@ -37,9 +37,8 @@ const DateFilter = ({ searchParams }: Props) => {
       </div>
       {showDatePicker && (
         <div className="relative z-[6000]">
-          <div className="absolute top-2 right-[-4.5rem] z-[6000]">
+          <div className="absolute top-2 sm:right-[-4.5rem] sm:left-auto right-auto left-0 z-[6000]">
             <DatePicker
-        
               selected={startDate}
               onChange={(date) => {
                 setStartDate(date);

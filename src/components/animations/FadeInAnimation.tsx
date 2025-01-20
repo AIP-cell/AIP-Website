@@ -6,8 +6,8 @@ import { motion } from 'framer-motion';
 type Props = {
     children: ReactNode;
     delay: number;
-    x1?: number;
-    x2?: number;
+    x1?: number | string;
+    x2?: number | string;
     y1?: number;
     y2?: number;
     className?: string;

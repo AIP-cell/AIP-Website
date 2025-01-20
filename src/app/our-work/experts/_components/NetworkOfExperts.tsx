@@ -1,4 +1,5 @@
 import { TExperts } from "@/api/type";
+import CardAnimation from "@/components/animations/CardAnimation";
 import ATeamCard from "@/components/cards/aCards/ATeamCard";
 import PTeamCard from "@/components/cards/pCards/PTeamCard";
 import React from "react";
@@ -52,7 +53,7 @@ type Props = {
 };
 const NetworkOfExperts = ({ people }: Props) => {
   return (
-    <div className="~pt-[7.5rem]/[12.5rem] ~pb-[7.5rem]/0 container mx-auto">
+    <div className="~pt-[7.5rem]/[12.5rem] ~pb-[7rem]/[12.5rem]  container mx-auto">
       <h2 className="~text-h4/h2 ~leading-[2.6rem]/[3.3rem] font-playFair text-darkBrown text-center">
         <span className="text-textPurple font-playFairItalic">
           Network&nbsp;
@@ -66,31 +67,33 @@ const NetworkOfExperts = ({ people }: Props) => {
       <div className="~pt-[3.5rem]/[5rem] ~px-[1.25rem]/[7.8rem]">
         <div className=" grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center ~gap-x-[1.25rem]/[5.625rem] ~gap-y-[3.5rem]/[4.5rem]">
           {people?.map((people, i) => (
-            <div key={i} className="">
-              {i % 2 == 0 ? (
-                <ATeamCard
-                  link=""
-                  image={people?.image}
-                  titleClassName="underline decoration-[1.5px] underline-offset-4"
-                  title2ClassName="underline decoration-[1.5px] underline-offset-4"
-                  title={people?.name}
-                  // title2={people.title2}
-                  desc={people?.organisation}
-                  linkedin={false}
-                />
-              ) : (
-                <PTeamCard
-                  link=""
-                  image={people?.image}
-                  titleClassName="underline decoration-[1.5px] underline-offset-4"
-                  title2ClassName="underline decoration-[1.5px] underline-offset-4"
-                  title={people?.name}
-                  // title2={people.title2}
-                  desc={people?.organisation}
-                  linkedin={false}
-                />
-              )}
-            </div>
+            <CardAnimation delay={0.2} index={i} key={i}>
+              <div key={i} className="">
+                {i % 2 == 0 ? (
+                  <ATeamCard
+                    link=""
+                    image={people?.image}
+                    titleClassName="underline decoration-[1.5px] underline-offset-4"
+                    title2ClassName="underline decoration-[1.5px] underline-offset-4"
+                    title={people?.name}
+                    // title2={people.title2}
+                    desc={people?.organisation}
+                    linkedin={false}
+                  />
+                ) : (
+                  <PTeamCard
+                    link=""
+                    image={people?.image}
+                    titleClassName="underline decoration-[1.5px] underline-offset-4"
+                    title2ClassName="underline decoration-[1.5px] underline-offset-4"
+                    title={people?.name}
+                    // title2={people.title2}
+                    desc={people?.organisation}
+                    linkedin={false}
+                  />
+                )}
+              </div>
+            </CardAnimation>
           ))}
         </div>
       </div>

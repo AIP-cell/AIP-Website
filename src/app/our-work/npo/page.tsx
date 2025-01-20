@@ -23,11 +23,13 @@ const page = async () => {
   const casestudies = response.casestudies;
   const people = response.people;
   return (
-    <div className="pt-[5rem]">
+    <div className="pt-[5rem] overflow-x-hidden">
       <NpoHeroSection />
       <AipAndNpo />
       <NpoJoinTheFlow />
-      {casestudies.length!=0 && <NpoSpotlight casestudies={casestudies} />}
+      {casestudies && casestudies.length != 0 && (
+        <NpoSpotlight casestudies={casestudies} />
+      )}
       {people && <NposPartners people={people} />}
     </div>
   );

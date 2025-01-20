@@ -53,8 +53,8 @@ const OurCoreFoundersContent = ({ coreFounderMembers }: Props) => {
                       className={cn(
                         "sm:flex-row flex-col flex ~gap-[3.5rem]/[4.56rem] container mx-auto ",
                         {
-                          "pt-[5rem] pr-12 ~pl-12/[7.8rem] ": isFirstDesign,
-                          "~pt-14/[5.25rem] justify-end  pl-12 ~pr-12/[7.8rem]":
+                          "pt-[5rem] pr-12 ~pl-12/[7.8rem] max-[20rem]:pr-[0.7rem] max-[20rem]:pl-[0.7rem]": isFirstDesign,
+                          "~pt-14/[5.25rem] justify-end  pl-12 max-[20rem]:pr-[0.7rem] max-[20rem]:pl-[0.7rem] ~pr-12/[7.8rem]":
                             !isFirstDesign,
                         }
                       )}

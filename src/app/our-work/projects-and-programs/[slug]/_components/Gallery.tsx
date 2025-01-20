@@ -5,6 +5,7 @@ import Link from "next/link";
 import { TGallery, TGalleryImages } from "@/api/type";
 import cn from "@/utils/tailwind";
 import { StorageUrl } from "@/utils/BaseUrl";
+import CardAnimation from "@/components/animations/CardAnimation";
 
 type Props = {
   galleryLink?: string;
@@ -21,6 +22,7 @@ const Gallery = ({ galleryLink, galleryImages }: Props) => {
         </p>
         <div className="~pt-[2rem]/[4rem] grid grid-cols-2 lg:grid-cols-5 lg:grid-rows-2 ~gap-[1rem]/[1.25rem]">
           {galleryImages?.map((items, i) => (
+            // <CardAnimation index={i} delay={0.1} key={i}>
             <div
               key={i}
               className={cn(
@@ -31,13 +33,16 @@ const Gallery = ({ galleryLink, galleryImages }: Props) => {
                 }
               )}
             >
-              <Image
-                src={StorageUrl + items?.image}
-                alt=""
-                fill
-                className=" w-full h-full object-cover"
-              />
+              {/* <CardAnimation index={i} delay={0.1} > */}
+                <Image
+                  src={StorageUrl + items?.image}
+                  alt=""
+                  fill
+                  className=" w-full h-full object-cover"
+                />
+              {/* </CardAnimation> */}
             </div>
+            // </CardAnimation>
           ))}
         </div>
         {galleryImages?.length != 0 && (

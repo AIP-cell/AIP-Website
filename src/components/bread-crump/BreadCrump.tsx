@@ -31,7 +31,7 @@ const BreadCrump = ({
       <Link
         href={linkOne}
         className={cn(
-          "text-black flex items-center gap-[0.5rem] ~text-h10Copy6/h9Copy5 ~leading-[1rem]/[1.225rem]",
+          "text-black flex items-center gap-[0.5rem] ~text-h10Copy6/h9Copy5 leading-[1.225rem] text-left",
           { "!text-gray50": textTwo }
         )}
       >
@@ -39,19 +39,19 @@ const BreadCrump = ({
           <LeftOPenSvg className="~size-[0.8rem]/[1rem]" />
         </div>
         {/* <Image src={BreadCrumpSvg} alt="bread-crump-Svg" /> */}
-        <ButtonAnimation>{textOne}</ButtonAnimation>
-        <ButtonAnimation>{textTwo && <p>&nbsp;/&nbsp;</p>}</ButtonAnimation>
+        <ButtonAnimation className="text-left">{textOne}</ButtonAnimation>
+        <ButtonAnimation className="text-left">{textTwo && <p>&nbsp;/&nbsp;</p>}</ButtonAnimation>
       </Link>
       {linkTwo && (
         <Link
           href={linkTwo}
           className={cn(
-            " text-black flex gap-[0.5rem] ~text-h10Copy6/h9Copy5 ~leading-[1rem]/[1.225rem]",
+            " text-black flex gap-[0.5rem] ~text-h10Copy6/h9Copy5 leading-[1.225rem] text-left",
             { "!text-gray50 ": textThree }
           )}
         >
           <ButtonAnimation
-            className={cn({ "underline underline-offset-4": textThree })}
+            className={cn("text-left",{ "underline underline-offset-4": textThree })}
           >
             {textTwo}
           </ButtonAnimation>
@@ -62,14 +62,14 @@ const BreadCrump = ({
         <Link
           href={linkThree}
           className={cn(
-            "text-black ~text-h10Copy6/h9Copy5 flex ~leading-[1rem]/[1.225rem]",
+            "text-black  ~text-h10Copy6/h9Copy5 flex leading-[1.225rem] text-left",
             {
               "!text-gray50": textFour,
             }
           )}
         >
           <ButtonAnimation
-            className={cn({ "underline underline-offset-4": textFour })}
+            className={cn("text-left",{ "underline underline-offset-4 ": textFour })}
           >
             {textThree}
           </ButtonAnimation>
@@ -79,9 +79,9 @@ const BreadCrump = ({
       {textFour && linkFour && (
         <Link
           href={linkFour}
-          className="text-black ~text-h10Copy6/h9Copy5 ~leading-[1rem]/[1.225rem]"
+          className="text-black ~text-h10Copy6/h9Copy5 leading-[1.225rem] text-left"
         >
-          <ButtonAnimation>{textFour}</ButtonAnimation>
+          <ButtonAnimation className="text-left">{textFour}</ButtonAnimation>
         </Link>
       )}
     </div>

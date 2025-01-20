@@ -13,7 +13,7 @@ const NotFound = () => {
   return (
     <div className="pt-[5rem]  container mx-auto">
       <div className="relative">
-        <BreadCrump textOne="home" linkOne="/" />
+        <BreadCrump textOne="Home" linkOne="/" />
       </div>
       <div className="~pt-[8rem]/[12.5rem] flex flex-col items-center justify-center">
         <h1 className="~text-h4/h1 ~leading-[2.6rem]/[3.713rem] font-playFair text-gray80">

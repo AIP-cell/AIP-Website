@@ -1,5 +1,6 @@
 "use client";
 import { TGalleryVideos } from "@/api/type";
+import CardAnimation from "@/components/animations/CardAnimation";
 import GalleryVideo from "@/components/cards/GalleryVideo";
 import LeftSlickArrowSvg from "@/components/svg/LeftSlickArrowSvg";
 import RightSlickArrowSvg from "@/components/svg/RightSlickArrowSvg";
@@ -83,8 +84,8 @@ const GalleryVideos = ({ galleryVideos }: Props) => {
       <div className="flex  overflow-x-auto no-scrollbar lg:justify-center  gap-[1.248rem] ~pt-5/[4.997rem]">
         {galleryVideos
           ?.slice(change, change + itemsPerSlide)
-          ?.map((video, index) => {
-            return (
+          ?.map((video, index) => (
+            <CardAnimation index={index} delay={0.2} key={index}>
               <GalleryVideo
                 key={index}
                 src={video?.video}
@@ -92,8 +93,8 @@ const GalleryVideos = ({ galleryVideos }: Props) => {
                 date={video?.date}
                 // desc2={video.desc2}
               />
-            );
-          })}
+            </CardAnimation>
+          ))}
       </div>
     </div>
   );

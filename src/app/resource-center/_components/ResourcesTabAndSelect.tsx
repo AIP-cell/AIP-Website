@@ -26,7 +26,7 @@ const ResourcesTabAndSelect = ({
     <>
       <div
         className={cn(
-          "z-[200] w-full hidden lg:flex justify-center items-center ~pt-8/[4.75rem] ",
+          "z-[200] w-full hidden lg:flex justify-center items-center ~pt-0/[4.75rem] ",
           mainClassName
         )}
       >

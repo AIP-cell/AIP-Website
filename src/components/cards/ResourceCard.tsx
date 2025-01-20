@@ -104,16 +104,6 @@ const ResourceCard = ({
         {date && <p>{dateFormat}</p>}
         <p>{domain}</p>
       </div>
-      {/* <div className="h-px bg-footerGray w-full"></div>
-      <div className="flex justify-start w-full gap-[.75rem]">
-        <div className="group text-darkPurple bg-bgGray5 w-[2.5rem] hover:text-white  hover:bg-darkPurple  transition-all  h-[2.5rem] rounded-full flex items-center justify-center p-[.5rem]">
-          <EyeSvg className="size-[1.5rem]" />
-        </div>
-
-        <div className="group text-darkPurple hover:text-white bg-bgGray5 w-[2.5rem]  hover:bg-darkPurple  transition-all  h-[2.5rem] rounded-full flex items-center justify-center p-[.5rem]">
-          <DownloadFileSvg className="size-[1.5rem]" />
-        </div>
-      </div> */}
     </div>
   );
 };

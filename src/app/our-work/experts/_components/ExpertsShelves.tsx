@@ -28,7 +28,7 @@ type Props = {
 };
 const ExpertsShelves = ({ expertShelves }: Props) => {
   return (
-    <div className="~pt-[7rem]/[12.5rem] container mx-auto flex flex-col items-center">
+    <div className=" container mx-auto flex flex-col items-center">
       <h2 className="~text-h4/h2 ~leading-[2.6rem]/[3.3rem]  text-center font-playFair text-gray80">
         From Experts’ Shelves
       </h2>

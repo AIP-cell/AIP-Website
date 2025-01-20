@@ -1,5 +1,6 @@
 "use client";
 import { TMedia } from "@/api/type";
+import CardAnimation from "@/components/animations/CardAnimation";
 import MediaCard from "@/components/cards/MediaCard";
 import LeftSlickArrowSvg from "@/components/svg/LeftSlickArrowSvg";
 import RightSlickArrowSvg from "@/components/svg/RightSlickArrowSvg";
@@ -50,7 +51,7 @@ const Media = ({ media }: Props) => {
   return (
     <div className="~pt-[5rem]/[7.53rem] ">
       <div className="relative container mx-auto ~pb-[1.988rem]/0">
-        <div className="absolute flex z-10 gap-[1.25rem] w-full md:w-auto justify-center md:justify-normal bottom-[-2rem] md:bottom-auto md:top-0 right-[1rem]">
+        <div className="absolute flex z-10 gap-[1.25rem] w-full md:w-auto justify-center md:justify-normal bottom-[-2rem] md:bottom-auto md:top-0 ~right-0/[1rem]">
           <button
             onClick={previous}
             className="  text-white leading-[22.4px] font-inter bg-darkPurple rounded-tl-3xl rounded-bl-3xl rounded-tr-xl rounded-br-xl py-[1.15rem] px-[0.92rem]"
@@ -69,19 +70,21 @@ const Media = ({ media }: Props) => {
         </div>
         <div
           ref={carouselRef}
-          className="flex snap-x snap-mandatory  w-full overflow-x-scroll no-scrollbar  ~gap-[1.25rem]/[4.5rem] lg:justify-center "
+          className="flex snap-x snap-mandatory overflow-y-hidden  w-full overflow-x-scroll no-scrollbar  ~gap-[1.25rem]/[4.5rem] lg:justify-center "
         >
           {media?.map((media, i) => (
-            <MediaCard
-              mediaArrayLength={mediaArrayLength}
-              key={i}
-              image={media?.image}
-              index={i}
-              link={media?.link}
-              title={media?.title}
-              desc={media?.description}
-              ddmmyy={media?.date}
-            />
+            <CardAnimation index={i} delay={0.2} key={i}>
+              <MediaCard
+                mediaArrayLength={mediaArrayLength}
+                key={i}
+                image={media?.image}
+                index={i}
+                link={media?.link}
+                title={media?.title}
+                desc={media?.description}
+                ddmmyy={media?.date}
+              />
+            </CardAnimation>
           ))}
         </div>
       </div>

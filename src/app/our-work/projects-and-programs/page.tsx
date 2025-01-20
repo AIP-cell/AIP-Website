@@ -8,6 +8,7 @@ import { Api } from "@/api/Api";
 import { TProjectPrograms } from "@/api/type";
 import { notFound } from "next/navigation";
 import DateFilter from "@/components/custom/DatePick";
+import CardAnimation from "@/components/animations/CardAnimation";
 
 const filterDatas = [
   {
@@ -122,35 +123,39 @@ const page = async ({
             <p className=" text-gray40  ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]">
               Filter by:
             </p>
-            <div className="flex flex-wrap gap-[.75rem]">
-              {filterDatas.map((items, i) => (
-                <CustomFilter
-                  key={i}
-                  searchParams={{ ...urlsearchParams }}
-                  filterKey={items.type}
-                  type={items.type}
-                  optionsArray={items.filter}
-                />
-              ))}
+            <div className="flex flex-col lg:flex-row  gap-[.75rem]">
+              <div className="flex flex-wrap gap-[.75rem]">
+                {filterDatas.map((items, i) => (
+                  <CustomFilter
+                    key={i}
+                    searchParams={{ ...urlsearchParams }}
+                    filterKey={items.type}
+                    type={items.type}
+                    optionsArray={items.filter}
+                  />
+                ))}
+              </div>
               <DateFilter searchParams={{ ...urlsearchParams }} />
             </div>
           </div>
 
           {response.length != 0 && (
-            <div className=" pb-[5rem] grid md:grid-cols-3 gap-[4.5rem]">
+            <div className=" pb-[5rem] grid sm:grid-cols-2 lg:grid-cols-3 ~gap-[2.5rem]/[4.5rem]">
               {response?.map((item, i) => (
-                <ResourceCard
-                  key={i}
-                  index={i}
-                  // link={`/our-work/projects-and-programs/${item.slug}`}
-                  projectsAndProgram
-                  slug={item.slug}
-                  src={item.image}
-                  title={item.title}
-                  desc={item.description}
-                  // category={item.category}
-                  date={item.date}
-                />
+                <CardAnimation index={i} delay={0.2} key={i}>
+                  <ResourceCard
+                    key={i}
+                    index={i}
+                    // link={`/our-work/projects-and-programs/${item.slug}`}
+                    projectsAndProgram
+                    slug={item.slug}
+                    src={item.image}
+                    title={item.title}
+                    desc={item.description}
+                    // category={item.category}
+                    date={item.date}
+                  />
+                </CardAnimation>
               ))}
             </div>
           )}

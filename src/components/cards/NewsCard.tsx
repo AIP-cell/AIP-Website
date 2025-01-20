@@ -1,3 +1,4 @@
+"use client"
 import { StorageUrl } from "@/utils/BaseUrl";
 import cn from "@/utils/tailwind";
 import Image from "next/image";

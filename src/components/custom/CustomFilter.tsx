@@ -15,38 +15,40 @@ import { useRouter } from "next-nprogress-bar";
 type Props = {
   optionsArray: any[];
   type: string;
-  selected?: string;
   searchParams: Record<string, any>;
-  setSelected?: (value: string) => void;
-  category?: string;
   filterKey: string;
 };
 const CustomFilter = ({
   searchParams,
   type,
   optionsArray,
-  selected,
-  setSelected,
-  category,
   filterKey,
 }: Props) => {
   const router = useRouter();
-  const [isOpen, setIsOpen] = useState(false);
-
+  const [selected, setSelected] = useState(
+    type === "c_type"
+      ? searchParams.c_type
+      : type === "o_type"
+      ? searchParams.c_type
+      : type === "p_type"
+      ? searchParams.p_type
+      : ""
+  );
   return (
     <>
-      {isOpen && (
+      {/* {isOpen && ( */}
+      <div className="md:hidden block">
         <ApplyFilterResp
           type={type}
           optionsArray={optionsArray}
           filterKey={filterKey}
           searchParams={searchParams}
-          // setSelected={setSelected}
-          setIsOpen={setIsOpen}
-          isOpen={isOpen}
+          setSelected={setSelected}
+          selected={selected}
         />
-      )}
-      <div onClick={() => setIsOpen(!isOpen)}>
+      </div>
+      {/* )} */}
+      <div className="hidden md:block">
         <Listbox value={selected} onChange={setSelected}>
           <ListboxButton className={`border-2 border-[#DFE0E5] rounded-lg`}>
             <div
@@ -82,7 +84,7 @@ const CustomFilter = ({
                     scroll: false,
                   });
                 }}
-                className="group flex gap-[0.75rem] text-start items-center  rounded-md border-gray10 data-[focus]:bg-blue-100 no-scrollbar text-black text-h9Copy5 leading-[1.225rem] cursor-pointer"
+                className="group flex gap-[0.75rem] text-start items-center  rounded-md border-gray10  no-scrollbar text-black text-h9Copy5 leading-[1.225rem] cursor-pointer"
               >
                 <div className="size-[0.833rem] border-2 border-gray80 rounded-sm flex justify-center items-center">
                   <div className="size-[0.45rem] bg-gray80 rounded-md invisible group-data-[selected]:visible"></div>

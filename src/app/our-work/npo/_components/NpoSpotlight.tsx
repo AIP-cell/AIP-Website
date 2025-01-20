@@ -1,4 +1,5 @@
 import { TCaseStudies } from "@/api/type";
+import CardSlideAnimation from "@/components/animations/CardSlideAnimation";
 import CaseStudy from "@/components/cards/CaseStudy";
 import CurveBg from "@public/svg/about/aip-impact/caseStudyPeachCurve.svg";
 import CurvePeach from "@public/svg/peach-bg-curve-founders.svg";
@@ -51,20 +52,22 @@ const NpoSpotlight = ({ casestudies }: Props) => {
         </h2>
         <div className="~pt-[2.5rem]/[6.56rem] flex flex-col ~gap-[3.5rem]/[5.5rem] ~px-[1.25rem]/[7.8rem]">
           {casestudies?.map((item, i: number) => (
-            <CaseStudy
-              key={i}
-              index={i}
-              slug={item?.slug}
-              foundationName={item?.organisation}
-              foundationNameClassName="!pt-[1.25rem]"
-              initiativeName={item?.initiativeName}
-              title={item?.title}
-              desc={item?.description}
-              image={item?.image}
-              isLinkOrPdf={item?.isLinkOrPdf}
-              file={item?.file}
-              fileLink={item?.fileLink}
-            />
+            <CardSlideAnimation index={i} delay={0.1} key={i}>
+              <CaseStudy
+                key={i}
+                index={i}
+                slug={item?.slug}
+                foundationName={item?.organisation}
+                foundationNameClassName="!pt-[1.25rem]"
+                initiativeName={item?.initiativeName}
+                title={item?.title}
+                desc={item?.description}
+                image={item?.image}
+                isLinkOrPdf={item?.isLinkOrPdf}
+                file={item?.file}
+                fileLink={item?.fileLink}
+              />
+            </CardSlideAnimation>
           ))}
         </div>
       </div>

@@ -29,15 +29,15 @@ const footerData = [
   },
   {
     id: "people-of-aip/founders",
-    label: "people-of-aip",
+    label: "People of AIP",
     options: [
-      { option: "Our Core Founders", link: "/people-of-aip/coreFounder" },
+      { option: "Our Core Founders", link: "/people-of-aip/core-founder" },
       { option: "Founders", link: "/people-of-aip/founders" },
       {
         option: "Our Advisory Board",
-        link: "/people-of-aip/advisoryBoard",
+        link: "/people-of-aip/advisory-board",
       },
-      { option: "Team AIP", link: "/people-of-aip/teamAIP" },
+      { option: "Team AIP", link: "/people-of-aip/team-aip" },
       // { option: "Experts", link: "/people-of-aip/experts" },
     ],
   },
@@ -309,13 +309,13 @@ const Footer = () => {
               </p>
               <div className="flex flex-col gap-4 ~pt-[0.75rem]/[1rem]">
                 <Link
-                  href="/resource-center/aip-resources"
+                  href="/resource-center/aip-resources/aip-updates"
                   className=" text-h9Copy5 font-inter text-white/60"
                 >
                   <ButtonAnimation>AIP Resources</ButtonAnimation>
                 </Link>
                 <Link
-                  href="/resource-center/curated-resources"
+                  href="/resource-center/curated-resources/featured"
                   className=" text-h9Copy5 font-inter text-white/60"
                 >
                   <ButtonAnimation>Curated Resources</ButtonAnimation>

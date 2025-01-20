@@ -40,12 +40,14 @@ const NpoHeroSection = () => {
           </linearGradient>
         </Wave>
       </div>
-      <BreadCrump
-        textOne="Our Work"
-        linkOne="/our-work"
-        textTwo="NPOs & Philanthropy"
-        linkTwo="/our-work/what-we-do"
-      />
+      <div className="relative container mx-auto">
+        <BreadCrump
+          textOne="Our Work"
+          linkOne="/our-work"
+          textTwo="NPOs & Philanthropy"
+          linkTwo="/our-work/npo"
+        />
+      </div>
       <div className="relative">
         <Wave
           fill="#b861b4a6"

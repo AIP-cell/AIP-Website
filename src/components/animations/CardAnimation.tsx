@@ -21,7 +21,11 @@ const CardAnimation = ({ children, className, index, delay }: Props) => {
         animate: () => ({
           opacity: 1,
           y: 0,
-          transition: { delay: delay * index, ease: "easeInOut" },
+          transition: {
+            delay: delay * index,
+            ease: "easeInOut",
+            // duration: 0.8,
+          },
         }),
       }}
       initial="initial"
