@@ -5,24 +5,7 @@ import FaqTabList from "./FaqTabList";
 import ArrowSvg from "@/components/svg/ArrowSvg";
 import CustomGraySelect from "@/components/custom/CustomGraySelect";
 import { useRouter } from "next-nprogress-bar";
-
-const TablistData = [
-  {
-    name: "General Inquiry",
-  },
-  {
-    name: "Founder Network",
-  },
-  {
-    name: "Philanthropic Network",
-  },
-  {
-    name: "NPO",
-  },
-  {
-    name: "World of Philanthropy",
-  },
-];
+import CardAnimation from "@/components/animations/CardAnimation";
 
 type Props = {
   selected?: number;
@@ -36,18 +19,22 @@ const FaqTab = ({ selected, setSelected, tabList }: Props) => {
       <div className="hidden md:block">
         <TabList className="">
           {tabList.map((items, i) => (
-            <Tab
-              onClick={() => router.push(`?category=${items.name}`, { scroll: false })}
-              key={i}
-              className="group w-full bg-bgGray5 data-[selected]:bg-darkPurple items-center data-[selected]:text-white hover:font-playFairItalic  transition-all p-5 rounded-[1.25rem] flex text-left justify-between mb-3 group data-[selected]:outline-none"
-            >
-              <p className="font-playFair font-medium group-hover:italic text-xl tracking-[.02rem] ">
-                {items.name}
-              </p>
-              <div className="p-[0.375rem] group text-midGray group-data-[selected]:text-white group-hover:text-midGray">
-                <ArrowSvg />
-              </div>
-            </Tab>
+            <CardAnimation index={i} delay={0.2} key={i}>
+              <Tab
+                onClick={() =>
+                  router.push(`?category=${items.name}`, { scroll: false })
+                }
+                key={i}
+                className="group w-full bg-bgGray5 data-[selected]:bg-darkPurple items-center data-[selected]:text-white hover:font-playFairItalic  transition-all p-5 rounded-[1.25rem] flex text-left justify-between mb-3 group data-[selected]:outline-none"
+              >
+                <p className="font-playFair font-medium group-hover:italic text-xl tracking-[.02rem] ">
+                  {items.name}
+                </p>
+                <div className="p-[0.375rem] group text-midGray group-data-[selected]:text-white group-hover:text-midGray">
+                  <ArrowSvg />
+                </div>
+              </Tab>
+            </CardAnimation>
           ))}
         </TabList>
       </div>

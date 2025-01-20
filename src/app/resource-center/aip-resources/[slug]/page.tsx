@@ -286,8 +286,8 @@ const AipResourcesInnerPage = async ({
     (item) => item.filterBy === param.slug
   );
   return (
-    <div className="pt-[5rem]">
-      <div className="container mx-auto relative ~px-5/[7.5rem]">
+    <div className="pt-[5rem] overflow-x-hidden">
+      <div className="container mx-auto relative ~px-5/[7.5rem] pb-[7.5rem]">
         <div className="~px-5/flex ~pt-0/[1.25rem] gap-[.75rem][7.8rem]">
           <BreadCrump
             textOne="Resource Center"
@@ -311,7 +311,7 @@ const AipResourcesInnerPage = async ({
           tabClassName="!w-full  !px-0"
           tabListClassName="!w-full"
         />
-        <div className="flex flex-wrap pt-[2rem] items-center gap-[0.75rem]">
+        <div className="flex flex-wrap pt-[2rem] items-center gap-[0.75rem] ">
           <p className="~pb-[1.25rem]/0 text-gray40  ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]">
             Filter by:
           </p>
@@ -334,26 +334,28 @@ const AipResourcesInnerPage = async ({
             )}
           </div>
         </div>
-        <div className="pt-[3.25rem] pb-[7.5rem] grid md:grid-cols-2 lg:grid-cols-3 gap-[4.5rem]">
-          {response?.map((item, i) => (
-            <ResourceCard
-              // link={item.link}
-              linkKey={item?.key}
-              index={i}
-              slug={item?.slug}
-              isLinkOrPdf={item?.isLinkOrPdf}
-              file={item?.file}
-              fileLink={item?.fileLink}
-              key={i}
-              src={item?.image}
-              title={item?.title}
-              desc={item?.description}
-              category={item?.domain}
-              domain={item?.domain}
-              date={item?.date}
-            />
-          ))}
-        </div>
+        {response.length != 0 && (
+          <div className="pt-[3.25rem] grid md:grid-cols-2 lg:grid-cols-3 gap-[4.5rem]">
+            {response?.map((item, i) => (
+              <ResourceCard
+                // link={item.link}
+                linkKey={item?.key}
+                index={i}
+                slug={item?.slug}
+                isLinkOrPdf={item?.isLinkOrPdf}
+                file={item?.file}
+                fileLink={item?.fileLink}
+                key={i}
+                src={item?.image}
+                title={item?.title}
+                desc={item?.description}
+                category={item?.domain}
+                domain={item?.domain}
+                date={item?.date}
+              />
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

@@ -1,3 +1,4 @@
+import CardAnimation from "@/components/animations/CardAnimation";
 import ImgTitleDescVer from "@/components/cards/ImgTitleDescVer";
 import React from "react";
 const works = [
@@ -39,15 +40,16 @@ const WhyWorkWithAip = () => {
       </div>
       <div className=" ~px-[2.8rem]/[8.438rem] grid md:grid-cols-2 ~gap-x-[3rem]/[5rem] ~gap-y-[1.25rem]/[3rem] relative">
         {works.map((item, i) => (
-          <ImgTitleDescVer
-            key={i}
-            imageWidth="!~w-[10rem]/[11.9rem]"
-            src={item.src}
-            title={item.title}
-            titleClassName=" !text-gray80 !text-h4 leading-[2.6rem]"
-            descClassName="px-[0.5rem] leading-[1.4rem]"
-            desc={item.desc}
-          />
+          <CardAnimation index={i} delay={0.2} key={i}>
+            <ImgTitleDescVer
+              imageWidth="!~w-[10rem]/[11.9rem]"
+              src={item.src}
+              title={item.title}
+              titleClassName=" !text-gray80 !text-h4 leading-[2.6rem]"
+              descClassName="px-[0.5rem] leading-[1.4rem]"
+              desc={item.desc}
+            />
+          </CardAnimation>
         ))}
       </div>
     </div>

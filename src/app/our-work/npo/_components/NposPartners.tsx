@@ -19,7 +19,7 @@ const NposPartners = ({ people }: Props) => {
       <div className="~pt-[2.5rem]/[5rem] ~px-[1.25rem]/[7.8rem]">
         <div className=" grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center ~gap-[1.25rem]/[5.625rem]">
           {people?.map((people, i) => (
-            <CardAnimation index={i} delay={0.2}>
+            <CardAnimation index={i} delay={0.2} key={i}>
               <div key={i} className="">
                 {i % 2 == 0 ? (
                   <ATeamCard

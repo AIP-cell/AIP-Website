@@ -5,6 +5,7 @@ import BreadCrump from "@/components/bread-crump/BreadCrump";
 import FaqTab from "./FaqTab";
 import { FaqItem } from "./FaqItem";
 import { TFaqs } from "@/api/type";
+import CardAnimation from "@/components/animations/CardAnimation";
 
 const list = [
   { tabNo: 0, key: "general-inquiry", name: "General Inquiry" },
@@ -21,10 +22,10 @@ const FaqTabGroup = ({ faqData, category }: Props) => {
     <TabGroup
       selectedIndex={selected}
       onChange={setSelected}
-      className="relative container mx-auto ~px-[1.25rem]/[7.75rem] pt-[5rem] grid md:grid-cols-3 ~gap-[1rem]/[3.75rem] h-screen"
+      className="relative container mx-auto ~px-[1.25rem]/[7.75rem] pt-[5rem] grid md:grid-cols-3 ~gap-[3.375rem]/[3.75rem]"
     >
       <BreadCrump textOne="FAQ's" linkOne="/faq" />
-      <div>
+      <div className="col-span-1">
         <p className="leading-[3.3rem] text-h2 pb-[3rem] font-playFair">FAQS</p>
         {/* {faqData.length != 0 && ( */}
         <div className="">
@@ -37,16 +38,22 @@ const FaqTabGroup = ({ faqData, category }: Props) => {
         {/* )} */}
       </div>
       <div className="md:col-span-2">
-        {faqData.length !=0
-          ? list.map(
-              (items, index) =>
-                category === items.name && (
+        {faqData.length != 0 ? (
+          list.map(
+            (items, index) =>
+              category === items.name && (
+                <CardAnimation index={index} delay={0.2} key={index}>
                   <div key={index}>
                     <FaqItem faqData={faqData} />
                   </div>
-                )
-            )
-          : <p className=" flex justify-center pt-[4rem] h-full text-darkPurple">No Faq Available</p>}
+                </CardAnimation>
+              )
+          )
+        ) : (
+          <p className=" flex justify-center pt-[4rem] h-full text-darkPurple">
+            No Faq Available
+          </p>
+        )}
       </div>
     </TabGroup>
   );

@@ -24,7 +24,7 @@ const FaqPage = async ({
   }
   return (
     <div className="pt-[5rem]">
-      <div className=" relative h-screen ">
+      <div className=" relative min-h-screen ">
         <Image
           src={BgFaq}
           alt=""

@@ -24,7 +24,7 @@ const CareerPage = async () => {
       <CareersHeroSection />
       <WhyWorkWithAip />
 
-      {jobs.length != 0 && <OpenRules jobs={jobs} />}
+      {jobs && jobs.length != 0 && <OpenRules jobs={jobs} />}
 
       <div className="w-full relative pb-[5rem]">
         <Image

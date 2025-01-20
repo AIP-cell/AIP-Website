@@ -68,13 +68,13 @@ const LocationTabs = ({
         </ListboxButton>
         <ListboxOptions
           anchor="bottom"
-          className=" w-[var(--button-width)] mt-[0.4rem] z-[10000] bg-bgGray5 border-2  flex flex-col gap-[1.625rem] rounded-xl   py-[1.313rem]"
+          className=" w-[var(--button-width)] mt-[0.4rem] z-[10000] bg-bgGray5 border-2  flex flex-col gap-[0.5rem] rounded-xl   py-[0.5rem]"
         >
           {tabArray?.map((items, i: number) => (
             <ListboxOption
               key={i}
               value={i}
-              className="data-[focus]:bg-blue-100 text-darkPurple text-center text-h9Copy5 leading-[1.225rem] cursor-pointer"
+              className="data-[focus]:bg-darkPurple data-[focus]:text-white text-darkPurple text-center text-h9Copy5 leading-[1.225rem] cursor-pointer"
             >
               {items.name}
             </ListboxOption>

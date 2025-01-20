@@ -11,7 +11,7 @@ import BreadCrump from "@/components/bread-crump/BreadCrump";
 
 const NotFound = () => {
   return (
-    <div className="pt-[5rem]  container mx-auto">
+    <div className="pt-[5rem]  container mx-auto h-screen">
       <div className="relative">
         <BreadCrump textOne="Home" linkOne="/" />
       </div>

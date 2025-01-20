@@ -25,7 +25,7 @@ const OpenRules = ({ jobs }: Props) => {
               &nbsp;Roles
             </span>
           </p>
-          <div className="px-[4.1rem]">
+          <div className="~px-[3.8rem]/[4rem]">
             <p className="font-inter text-midGray text-center ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]">
               Join the movement to bring about
             </p>
@@ -53,12 +53,12 @@ const OpenRules = ({ jobs }: Props) => {
               Can’t Find what you are looking for?
             </p>
             <p className="font-inter text-h9Copy5 leading-[1.4rem] pt-3 text-midGray">
-              Send in your resume and portfolio at
+              Send in your resume and portfolio at&nbsp;
               <Link
                 href="mailto:careers@indianphilanthropy.org"
                 className="text-textPurple inline-block underline"
               >
-                &nbsp;careers@indianphilanthropy.org
+                careers@indianphilanthropy.org
               </Link>
             </p>
           </div>

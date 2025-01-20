@@ -4,9 +4,10 @@ import * as React from "react";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import { ChevronDownIcon } from "@radix-ui/react-icons";
 import cn from "@/utils/tailwind";
-import PlusSvg from "@public/svg/faq/plus.svg";
-import MinusSvg from "@public/svg/faq/minus.svg";
+
 import Image from "next/image";
+import PlusSvg from "../svg/PlusSvg";
+import MinusSvg from "../svg/MinusSvg";
 
 const Accordion = AccordionPrimitive.Root;
 
@@ -43,6 +44,27 @@ const AccordionTrigger = React.forwardRef<
   </AccordionPrimitive.Header>
 ));
 AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName;
+const AccordionTriggerFaq = React.forwardRef<
+  React.ElementRef<typeof AccordionPrimitive.Trigger>,
+  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
+>(({ className, children, ...props }, ref) => (
+  <AccordionPrimitive.Header className="flex">
+    <AccordionPrimitive.Trigger
+      ref={ref}
+      className={cn(
+        "group ~py-[1.25rem]/[1.75rem] px-[1.25rem] text-gray80 flex justify-between w-full  items-center text-h6M font-inter text-left transition-all data-[state=open]:text-textPurple [&[data-state=open]>svg]:rotate-180 ",
+        className
+      )}
+      {...props}
+    >
+      {children}
+      {/* <Image src={MinusSvg} alt="Minus Image" className="data-[state=open]:hidden data-[state=closed]:block transition-transform duration-200"/> */}
+      <PlusSvg className="h-4 w-4 block group-data-[state=open]:hidden text-muted-foreground  transition-transform duration-200" />
+      <MinusSvg className="h-4 w-4 hidden group-data-[state=open]:block text-muted-foreground  transition-transform duration-200" />
+    </AccordionPrimitive.Trigger>
+  </AccordionPrimitive.Header>
+));
+AccordionTriggerFaq.displayName = AccordionPrimitive.Trigger.displayName;
 
 const AccordionContent = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Content>,
@@ -58,4 +80,10 @@ const AccordionContent = React.forwardRef<
 ));
 AccordionContent.displayName = AccordionPrimitive.Content.displayName;
 
-export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };
+export {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionTriggerFaq,
+  AccordionContent,
+};
