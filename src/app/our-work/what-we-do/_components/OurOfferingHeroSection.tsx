@@ -46,7 +46,7 @@ const OurOfferingHeroSection = () => {
       <div className="relative container mx-auto">
         <BreadCrump
           textOne="Our Work"
-          linkOne="/our-work"
+          linkOne="#"
           textTwo="What We Do"
           linkTwo="/our-work/what-we-do"
         />

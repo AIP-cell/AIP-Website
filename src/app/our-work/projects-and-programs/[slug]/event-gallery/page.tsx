@@ -38,13 +38,13 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
         <div className="container mx-auto relative ~px-5/[7.8rem] ~pt-[5.2rem]/[5rem]">
           <BreadCrump
             textOne="Our Work"
-            linkOne="/our-work"
+            linkOne="#"
             textTwo="Projects And Programs"
             linkTwo="/our-work/projects-and-programs"
-            textThree={asyncParam}
-            linkThree={`/our-work/collaborations/${asyncParam}`}
+            textThree={response?.title}
+            linkThree={`/our-work/projects-and-programs/${asyncParam}`}
             textFour="Event Gallery"
-            linkFour={`/our-work/collaborations/${asyncParam}/event-gallery`}
+            linkFour={`/our-work/projects-and-programs/${asyncParam}/event-gallery`}
           />
           <p className="font-inter  font-semibold uppercase ~text-h9Copy5/h9Copy4 ~leading-[1.138rem]/[1.3rem] text-purple40">
             {response?.title}

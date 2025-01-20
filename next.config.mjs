@@ -13,6 +13,21 @@ const nextConfig = {
         destination: "/resource-center/curated-resources/featured",
         permanent: true,
       },
+      {
+        source: "/people-of-aip",
+        destination: "/people-of-aip/core-founder",
+        permanent: true,
+      },
+      {
+        source: "/about",
+        destination: "/about/aip-journey",
+        permanent: true,
+      },
+      {
+        source: "/our-work",
+        destination: "/our-work/what-we-do",
+        permanent: true,
+      },
     ];
   },
   images: {

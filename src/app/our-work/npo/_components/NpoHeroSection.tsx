@@ -43,7 +43,7 @@ const NpoHeroSection = () => {
       <div className="relative container mx-auto">
         <BreadCrump
           textOne="Our Work"
-          linkOne="/our-work"
+          linkOne="#"
           textTwo="NPOs & Philanthropy"
           linkTwo="/our-work/npo"
         />

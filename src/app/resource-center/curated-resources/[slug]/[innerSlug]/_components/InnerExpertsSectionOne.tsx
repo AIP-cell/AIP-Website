@@ -29,7 +29,7 @@ const InnerExpertsSectionOne = ({ innerData, params }: Props) => {
         {innerData?.expertName && (
           <BreadCrump
             textOne="Resource Center"
-            linkOne="/resource-center"
+            linkOne="#"
             textTwo="Curated Resources"
             linkTwo="/resource-center/curated-resources"
             textThree="Experts"
@@ -39,10 +39,12 @@ const InnerExpertsSectionOne = ({ innerData, params }: Props) => {
           />
         )}
         <BreadCrump
-          textOne="Npo"
-          linkOne="/our-work/npo"
-          textTwo={innerData?.title}
-          linkTwo={`/our-work/npo/${params}`}
+          textOne="Our Work"
+          linkOne="#"
+          textTwo="NPO"
+          linkTwo="/our-work/npo"
+          textThree={innerData?.title}
+          linkThree={`/our-work/npo/${params}`}
         />
         <div className="relative grid md:grid-cols-3 gap-5 ~pb-[3rem]/0">
           <div className="col-span-2 flex flex-col ~gap-[2rem]/[2.5rem]  ~pe-0/[6.563rem]">

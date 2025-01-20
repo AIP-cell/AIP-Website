@@ -1,5 +1,6 @@
 "use client";
 import { TMedia } from "@/api/type";
+import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 import CardAnimation from "@/components/animations/CardAnimation";
 import MediaCard from "@/components/cards/MediaCard";
 import LeftSlickArrowSvg from "@/components/svg/LeftSlickArrowSvg";
@@ -52,18 +53,18 @@ const Media = ({ media }: Props) => {
     <div className="~pt-[5rem]/[7.53rem] ">
       <div className="relative container mx-auto ~pb-[1.988rem]/0">
         <div className="absolute flex z-10 gap-[1.25rem] w-full md:w-auto justify-center md:justify-normal bottom-[-2rem] md:bottom-auto md:top-0 ~right-0/[1rem]">
-          <button
+          <ButtonAnimation
             onClick={previous}
             className="  text-white leading-[22.4px] font-inter bg-darkPurple rounded-tl-3xl rounded-bl-3xl rounded-tr-xl rounded-br-xl py-[1.15rem] px-[0.92rem]"
           >
             <LeftSlickArrowSvg className="w-[1rem] h-[0.57rem]" />
-          </button>
-          <button
+          </ButtonAnimation>
+          <ButtonAnimation
             onClick={next}
             className=" text-white leading-[22.4px] font-inter bg-darkPurple rounded-tr-3xl rounded-br-3xl rounded-tl-xl rounded-bl-xl py-[1.15rem] px-[0.92rem]"
           >
             <RightSlickArrowSvg className="w-[1rem] h-[0.57rem]" />
-          </button>
+          </ButtonAnimation>
         </div>
         <div className="text-center font-playFair ~pb-[2.5rem]/20 ~leading-[2.6rem]/[3.3rem] tracking-[-.04rem] ~text-h4/h2 text-gray80">
           In the Media

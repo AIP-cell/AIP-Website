@@ -1,5 +1,6 @@
 "use client";
 import { TGalleryImages } from "@/api/type";
+import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 import CardAnimation from "@/components/animations/CardAnimation";
 import FadeInAnimation from "@/components/animations/FadeInAnimation";
 import LeftSlickArrowSvg from "@/components/svg/LeftSlickArrowSvg";
@@ -42,18 +43,18 @@ const GalleryImages = ({ galleryImages }: Props) => {
       </h2>
       <div className="relative w-full flex flex-col items-center justify-center">
         <div className="absolute bottom-[-2rem] md:bottom-auto gap-[1.25rem] w-full flex justify-center md:justify-between">
-          <button
+          <ButtonAnimation
             onClick={previous}
             className="  text-white leading-[22.4px] font-inter bg-darkPurple rounded-tl-3xl rounded-bl-3xl rounded-tr-xl rounded-br-xl py-[1.15rem] px-[0.92rem]"
           >
             <LeftSlickArrowSvg className="w-[1rem] h-[0.57rem]" />
-          </button>
-          <button
+          </ButtonAnimation>
+          <ButtonAnimation
             onClick={next}
             className="  text-white  leading-[22.4px] font-inter bg-darkPurple rounded-tr-3xl rounded-br-3xl rounded-tl-xl rounded-bl-xl py-[1.15rem] px-[0.92rem]"
           >
             <RightSlickArrowSvg className="w-[1rem] h-[0.57rem]" />
-          </button>
+          </ButtonAnimation>
         </div>
         <div>
           <FadeInAnimation delay={0.2}>

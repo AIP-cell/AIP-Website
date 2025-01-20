@@ -6,6 +6,7 @@ import { Api } from "@/api/Api";
 import { TSearch } from "@/api/type";
 import SearchBar from "./_components/SearchBar";
 import { notFound } from "next/navigation";
+import DateFilter from "@/components/custom/DatePick";
 
 const searchFilter = [
   {
@@ -28,21 +29,12 @@ const searchFilter = [
   {
     type: "type",
     options: [
-      "All",
-      "Art & Culture",
-      "Education",
-      "Environment",
-      "Health & Nutrition",
-      "Legal & Judiciary",
-      "Livelihood",
-      "Disability",
-      "Rural Development",
-      "Sports",
-      "WASH",
-      "Women & Child",
+      "Thematic Workshop",
+      "Panel Discussions",
+      "Fireside Chats",
+      "Roundtable Discussions",
     ],
   },
-  { type: "date", options: ["data1", "data2"] },
 ];
 
 export const dynamic = "force-dynamic";
@@ -101,6 +93,7 @@ const page = async ({
                   optionsArray={items.options}
                 />
               ))}
+              <DateFilter searchParams={{ ...asyncSearchParam }} />
             </div>
           </div>
           {key && (
@@ -108,7 +101,9 @@ const page = async ({
               &quot;Search result for {key}&quot;
             </p>
           )}
-          {response && <AllTabContent searchData={response} />}
+          {response && response.length != 0 && (
+            <AllTabContent searchData={response} />
+          )}
         </div>
       </div>
     </div>

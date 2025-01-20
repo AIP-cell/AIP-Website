@@ -39,26 +39,23 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
           <BreadCrump
             textOne="Our Work"
             linkOne="/our-work"
-            textTwo="Projects And Programs"
-            linkTwo="/our-work/projects-and-programs"
-            textThree={asyncParam}
-            linkThree={`/our-work/collaborations/${asyncParam}`}
+            textTwo="NPO"
+            linkTwo="/our-work/npo"
+            textThree={response?.title}
+            linkThree={`/our-work/npo/${asyncParam}`}
             textFour="Event Gallery"
-            linkFour={`/our-work/collaborations/${asyncParam}/event-gallery`}
+            linkFour={`/our-work/npo/${asyncParam}/event-gallery`}
           />
           <p className="font-inter  font-semibold uppercase ~text-h9Copy5/h9Copy4 ~leading-[1.138rem]/[1.3rem] text-purple40">
-            Systemic Impact Exemplars
+            {response?.title}
           </p>
           <p className="~leading-[2.113rem]/[2.6rem] font-playFair ~text-h4a/h4 text-gray80 pt-5 ~pb-0/[5rem] md:tracking-[-0.02rem]">
-            AIP hosts events across cities in the world. AIP is continuously
-            bringing inspirational philanthropists together to help co-create
-            this network and establish personal philanthropy as a means for
-            India’s transformation.
+            {response?.description}
           </p>
-          {galleryVideos?.length != 0 && (
+          {galleryVideos && galleryVideos?.length != 0 && (
             <GalleryVideos galleryVideos={galleryVideos} />
           )}
-          {galleryImages?.length != 0 && (
+          {galleryImages && galleryImages?.length != 0 && (
             <GalleryImages galleryImages={galleryImages} />
           )}
         </div>

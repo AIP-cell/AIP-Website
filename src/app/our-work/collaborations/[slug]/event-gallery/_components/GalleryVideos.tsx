@@ -1,5 +1,6 @@
 "use client";
 import { TGalleryVideos } from "@/api/type";
+import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 import CardAnimation from "@/components/animations/CardAnimation";
 import GalleryVideo from "@/components/cards/GalleryVideo";
 import LeftSlickArrowSvg from "@/components/svg/LeftSlickArrowSvg";
@@ -68,18 +69,18 @@ const GalleryVideos = ({ galleryVideos }: Props) => {
         </h2>
       </div>
       <div className=" absolute bottom-0 w-full  md:w-auto md:bottom-auto md:top-0 right-0  flex justify-center md:justify-end gap-[1.5rem] ">
-        <button
+        <ButtonAnimation
           onClick={previous}
           className="  text-white leading-[22.4px] font-inter bg-darkPurple rounded-tl-3xl rounded-bl-3xl rounded-tr-xl rounded-br-xl py-[1.15rem] px-[0.92rem]"
         >
           <LeftSlickArrowSvg className="w-[1rem] h-[0.57rem]" />
-        </button>
-        <button
+        </ButtonAnimation>
+        <ButtonAnimation
           onClick={next}
           className=" text-white leading-[22.4px] font-inter bg-darkPurple rounded-tr-3xl rounded-br-3xl rounded-tl-xl rounded-bl-xl py-[1.15rem] px-[0.92rem]"
         >
           <RightSlickArrowSvg className="w-[1rem] h-[0.57rem]" />
-        </button>
+        </ButtonAnimation>
       </div>
       <div className="flex  overflow-x-auto no-scrollbar lg:justify-center  gap-[1.248rem] ~pt-5/[4.997rem]">
         {galleryVideos

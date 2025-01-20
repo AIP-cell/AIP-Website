@@ -48,10 +48,10 @@ const page = async ({
         <div className="container mx-auto relative ~px-5/[7.8rem] ~pt-[4.313rem]/[5rem]">
           <BreadCrump
             textOne="Our Work"
-            linkOne="/our-work"
+            linkOne="#"
             textTwo="Collaborations"
             linkTwo="/our-work/collaborations"
-            textThree={asyncParam}
+            textThree={response?.title}
             linkThree={`/our-work/collaborations/${asyncParam}`}
             textFour="Event Gallery"
             linkFour={`/our-work/collaborations/${asyncParam}/event-gallery`}

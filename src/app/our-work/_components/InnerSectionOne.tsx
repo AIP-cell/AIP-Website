@@ -25,7 +25,7 @@ const InnerSectionOne = ({ heroSectionData }: Props) => {
       <div className="container mx-auto relative ~px-[1.25rem]/[7.8rem] ~pb-[3rem]/0 ~pt-[4.3rem]/[4.875rem]">
         <BreadCrump
           textOne="Our Work"
-          linkOne="/our-work"
+          linkOne="#"
           textTwo="Projects and Programs"
           linkTwo="/our-work/projects-and-programs"
           textThree={heroSectionData?.title}

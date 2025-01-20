@@ -56,7 +56,7 @@ const InnerPage = async ({ params }: { params: Promise<{ slug: string }> }) => {
       <div className="relative container mx-auto">
         <BreadCrump
           textOne="People of AIP"
-          linkOne="/people-of-aip"
+          linkOne={`/people-of-aip/${urlSlug}`}
           textTwo={filtered?.name}
           linkTwo={`/people-of-aip/${urlSlug}`}
         />

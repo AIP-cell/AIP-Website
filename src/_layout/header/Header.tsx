@@ -112,9 +112,9 @@ const Header = () => {
 
         <div className="hidden xl:flex rounded-full border-2 border-darkPurple relative">
           <div className="rounded-full bg-darkPurple  px-[1.75rem] py-[0.75rem] ">
-            <h3 className="text-white text-h9Copy5 leading-[1.225rem]">
+            <Link href="/contact" className="text-white text-h9Copy5 leading-[1.225rem] ">
               Get Involved
-            </h3>
+            </Link>
           </div>
           <div className="bg-white rounded-tr-full rounded-br-full flex items-center justify-center">
             <Link href="/search" className="flex items-center justify-center">

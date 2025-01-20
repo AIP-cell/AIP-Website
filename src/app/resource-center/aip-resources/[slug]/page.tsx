@@ -291,7 +291,7 @@ const AipResourcesInnerPage = async ({
         <div className="~px-5/flex ~pt-0/[1.25rem] gap-[.75rem][7.8rem]">
           <BreadCrump
             textOne="Resource Center"
-            linkOne="/resource-center"
+            linkOne="#"
             textTwo="AIP Resources"
             linkTwo="/resource-center/aip-resources"
             textThree={filterBySlug?.name}

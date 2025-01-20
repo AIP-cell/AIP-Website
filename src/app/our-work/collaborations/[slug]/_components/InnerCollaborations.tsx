@@ -65,7 +65,7 @@ const InnerCollaborations = ({ collaboration, slug }: Props) => {
         <div className="container mx-auto relative ~px-[1.25rem]/[7.8rem] pt-[5rem]">
           <BreadCrump
             textOne="Our Work"
-            linkOne="/our-work"
+            linkOne="#"
             textTwo="Collaborations"
             linkTwo="/our-work/collaborations"
             textThree={collaboration?.title}
