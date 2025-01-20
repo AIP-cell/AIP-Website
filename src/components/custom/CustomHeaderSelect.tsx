@@ -75,13 +75,13 @@ const CustomHeaderSelect = ({ items }: Props) => {
                 router.push(`${items.link}`);
               }}
               className={cn("w-full rounded-2xl hover:bg-[#2B092A4D] flex", {
-                "!bg-[#2B092A4D]": pathname === items.link,
+                "!bg-[#2B092A4D]": pathname.includes(items.link),
               })}
             >
               <div
                 className={cn(
                   "hover:font-playFairItalic text-left pl-[1.25rem] transition-all duration-150 py-[0.8rem] w-full",
-                  { "!font-playFairItalic": pathname === items.link }
+                  { "!font-playFairItalic": pathname.includes(items.link) }
                 )}
               >
                 {items.option}
