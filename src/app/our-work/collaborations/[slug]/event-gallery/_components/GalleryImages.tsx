@@ -37,7 +37,7 @@ const GalleryImages = ({ galleryImages }: Props) => {
     }
   };
   return (
-    <div className="~pt-[5rem]/[6.175rem] ~pb-[5rem]/0">
+    <div className="~pt-[6rem]/[6.175rem] ~pb-[5rem]/0">
       <h2 className="~text-h4/h2 text-gray80 ~leading-[2.6rem]/[3.3rem] font-playFair !text-center w-full ~pb-[1.25rem]/[5rem]">
         Images
       </h2>

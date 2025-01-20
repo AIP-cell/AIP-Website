@@ -26,11 +26,8 @@ const MediaCard = ({
   const dateFormat = dayjs(ddmmyy).format("D MMMM");
   return (
     <div
-      className={cn(
-        "snap-center ~w-[16.125rem]/[18.438rem] shrink-0  flex flex-col gap-[0.75rem]",
-        { "~pl-[1.25rem]/0": index === 0 },
-        { "~pr-[1.25rem]/0": index === mediaArrayLength - 1 }
-      )}
+      // ~w-[16.125rem]/[18.438rem]
+      className={cn("  flex flex-col gap-[0.75rem] w-full")}
     >
       <div className="relative w-full ~h-[14.51rem]/[16.563rem] overflow-hidden rounded-2xl cursor-pointer">
         <Image
@@ -43,11 +40,11 @@ const MediaCard = ({
       <Link
         href={link ?? ""}
         target="_blank"
-        className="font-semibold text-gray80 pt-[0.75rem] underline decoration-[2px] underline-offset-4"
+        className="font-semibold line-clamp-2 text-ellipsis md:line-clamp-none  text-gray80  pt-[0.75rem] underline decoration-[2px] underline-offset-4"
       >
         {title}
       </Link>
-      <p className="text-h9Copy5 line-clamp-5 text-ellipsis overflow-hidden leading-[1.225rem] text-gray50 ">
+      <p className="text-h9Copy5 line-clamp-4 text-ellipsis overflow-hidden leading-[1.225rem] text-gray50 ">
         {desc}
       </p>
       <div className="bg-[#DFE0E5] h-px"></div>

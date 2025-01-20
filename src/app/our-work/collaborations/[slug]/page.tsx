@@ -8,24 +8,15 @@ const getOneCollaborationsApi = async (
   slug: string
 ): Promise<TOneCollaborationPageData> => {
   const response = await Api.getOneCollaborations(slug);
-  return response.data;
+  return response?.data;
 };
-const page = async ({
-  params,
-  searchParams,
-}: {
-  params: Promise<{ slug: string }>;
-  searchParams: Promise<{ city: string }>;
-}) => {
+const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const asyncParam = (await params).slug;
-  const asyncSearchParam = (await searchParams).city;
-  let defaultCity: string = asyncSearchParam;
   const response = await getOneCollaborationsApi(asyncParam);
-
-  const collaboration = response.collaboration;
   if (!response) {
     notFound();
   }
+  const collaboration = response?.collaboration;
   return (
     <div className="pt-[5rem]">
       {collaboration && (

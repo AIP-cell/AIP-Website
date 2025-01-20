@@ -29,9 +29,9 @@ export function CarouselNews({ newsArray }: Props) {
             key={i}
             className="md:!basis-1/2 lg:!basis-1/2 xl:!basis-1/3 justify-center px-2 gap-[1.25rem] flex  pt-[2.5rem]"
           >
-            <CardAnimation delay={0.2} index={i}>
+            {/* <CardAnimation delay={0.2} index={i}> */}
               <NewsCard src={items.image} text={items.description} index={i} />
-            </CardAnimation>
+            {/* </CardAnimation> */}
           </CarouselItem>
         ))}
       </CarouselContent>

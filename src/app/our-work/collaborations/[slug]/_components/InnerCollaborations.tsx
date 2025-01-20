@@ -56,7 +56,7 @@ const agendaArray = [
 const InnerCollaborations = ({ collaboration, slug }: Props) => {
   return (
     <>
-      <div className="relative w-full ~pb-[5rem]/[12.75rem]">
+      <div className="relative w-full ~pb-[5rem]/[7.5rem]">
         <Image
           src={PurpleTopSvg}
           alt="purple-curve"

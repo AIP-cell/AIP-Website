@@ -62,13 +62,13 @@ const GalleryVideos = ({ galleryVideos }: Props) => {
     return;
   }
   return (
-    <div className="~mt-[5rem]/[5.688rem] relative ~pb-[2rem]/0">
-      <div className=" flex items-center w-full">
+    <div className="~mt-[5rem]/[5.688rem] relative ~pb-[2rem]/0 ">
+      <div className=" flex items-center w-full ">
         <h2 className="~text-h4/h2 text-gray80 ~leading-[2.6rem]/[3.3rem] font-playFair !text-center w-full">
           Videos
         </h2>
       </div>
-      <div className=" absolute bottom-0 w-full  md:w-auto md:bottom-auto md:top-0 right-0  flex justify-center md:justify-end gap-[1.5rem] ">
+      <div className=" absolute bottom-[-2rem] w-full  md:w-auto md:bottom-auto md:top-0 right-0  flex justify-center md:justify-end gap-[1.5rem] ">
         <ButtonAnimation
           onClick={previous}
           className="  text-white leading-[22.4px] font-inter bg-darkPurple rounded-tl-3xl rounded-bl-3xl rounded-tr-xl rounded-br-xl py-[1.15rem] px-[0.92rem]"

@@ -33,11 +33,6 @@ const GalleryVideo = ({ src, date, title, desc2 }: Props) => {
           }
           controls
         />
-        {/* {src && (
-          <video className="absolute inset-0 w-full h-full object-cover z-10">
-            <source src={StorageUrl + src} type="video/mp4" />
-          </video>
-        )} */}
         {/* <Image
           src={PlayButtonPurple}
           alt=""

@@ -41,7 +41,7 @@ const InnerSectionOne = ({ heroSectionData }: Props) => {
                 {heroSectionData?.category}
               </p>
             </div>
-            <div className="relative block md:hidden z-10 w-full">
+            <div className="relative block md:hidden h-[30.89rem] z-10 w-full ">
               <Image
                 src={
                   heroSectionData?.image

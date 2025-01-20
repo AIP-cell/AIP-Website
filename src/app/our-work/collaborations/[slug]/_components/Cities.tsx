@@ -117,12 +117,13 @@ const Cities = ({ collaboration, slug }: Props) => {
               <Image
                 src={Systemic}
                 className=" w-full h-[30.89rem] object-cover"
-                alt="image"
+                alt="Systemic-image"
               />
-              <div className="flex pt-[2rem]">
-                <a
-                  href={cities?.at(selectedIndex)?.report}
+             {cities?.at(selectedIndex)?.report  && <div className="flex pt-[2rem]">
+                <Link
+                  href={cities?.at(selectedIndex)?.report ?? ""}
                   download
+                  target="_blank"
                   className="group bg-darkPurple border-2 border-darkPurple hover:bg-white  transition-all  hover:text-darkPurple text-white hover:border-2 hover:border-darkPurple px-7 py-3 flex items-center gap-[0.75rem] w-fit rounded-3xl"
                 >
                   <p className=" font-inter  text-h9Copy5 leading-[1.225rem]">
@@ -131,8 +132,8 @@ const Cities = ({ collaboration, slug }: Props) => {
                   <div className=" pt-[.1rem]">
                     <DownloadFileSvg className="size-[1.25rem]" />
                   </div>
-                </a>
-              </div>
+                </Link>
+              </div>}
             </div>
             <div className="">
               <h2 className="~text-h6M/h4 ~leading-[1.575rem]/[2.6rem] font-playFair ~pt-[2rem]/[1.25rem] text-gray80">
@@ -151,7 +152,7 @@ const Cities = ({ collaboration, slug }: Props) => {
               <p className="font-playFair ~pb-[0.75rem]/4  ~leading-[1.575rem]/[1.75rem] font-medium tracking-[-.02rem] ~text-h6M/h5 text-gray80">
                 Organised By
               </p>
-              <div className="flex gap-4">
+              <div className="flex flex-wrap gap-4">
                 {cities
                   ?.at(selectedIndex)
                   ?.organisationDetails?.map((items, i) => (
@@ -258,8 +259,8 @@ const Cities = ({ collaboration, slug }: Props) => {
       <div className="relative">
         <Image
           src={BottomBg}
-          alt="peach-curve"
-          className="hidden lg:block absolute top-[-23rem] h-[75rem] w-full z-10"
+          alt="peach-long-curve"
+          className="hidden lg:block absolute lg:~top-[-31rem]/[-23rem] h-[75rem] w-full z-10"
         />
         {cities.length != 0 && (
           <div className="container mx-auto relative ~px-[1.25rem]/[7.8rem] ~pt-[5rem]/[12.75rem]">
