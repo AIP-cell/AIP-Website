@@ -22,7 +22,7 @@ const FoundationFactHeroSection = () => {
           />
           <BreadCrump
             textOne="About"
-            linkOne="/about"
+            linkOne="#"
             textTwo="AIP Impact"
             linkTwo="/about/aip-impact"
             textThree="Foundation Fact Sheet"

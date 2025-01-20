@@ -37,7 +37,7 @@ const page = async ({
           <div className="relative container mx-auto  ~px-5/[7.8rem] ~pt-[4.31rem]/[5rem]">
             <BreadCrump
               textOne="About Us"
-              linkOne="/about"
+              linkOne="#"
               textTwo="Financial Reports"
               linkTwo="/about/financials"
             />

@@ -32,21 +32,17 @@ const ThankYouPage = () => {
             href="mailto:info@indianphilanthropy.org"
             className="relative text-textPurple leading-[1.4rem] underline"
           >
-            info@indianphilanthropy.org
+            <ButtonAnimation>info@indianphilanthropy.org</ButtonAnimation>
           </Link>
         </div>
-        <div className="~pt-[5rem]/[4.5rem] flex justify-center">
+        <div className="~pt-[5rem]/[4.5rem] flex justify-center pb-[8.3rem]">
           <ButtonAnimation className=" py-[0.75rem] px-[2rem]  rounded-full bg-darkPurple">
             <Link href="/" className="text-white flex gap-[0.5rem]">
               <FilterDownArrowSvg className="size-[1.25rem] shrink-0 rotate-[90deg]" />
-  
               <p className=" text-h9Copy5 leading-[1.225rem]">Go Back</p>
             </Link>
           </ButtonAnimation>
         </div>
-        <p className="text-midGray text-h8Copy3 pt-[3.5rem] pb-[8.3rem] leading-[1.57rem]">
-          WIP
-        </p>
       </div>
     </div>
   );

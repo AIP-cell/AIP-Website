@@ -14,7 +14,7 @@ const ApproachHeroSection = () => {
       <div className="relative overflow-hidden container mx-auto">
         <BreadCrump
           textOne="About Us"
-          linkOne="/about"
+          linkOne="#"
           textTwo="The AIP Approach"
           linkTwo="/about/our-approach"
         />

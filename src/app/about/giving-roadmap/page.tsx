@@ -27,7 +27,7 @@ const page = () => {
           <div className="container mx-auto relative">
             <BreadCrump
               textOne="About Us"
-              linkOne="/about"
+              linkOne="#"
               textTwo="Giving Roadmap"
               linkTwo="/about/giving-roadmap"
             />

@@ -24,7 +24,7 @@ const FounderNetworkHeroSection = ({ desc1, desc2 }: Props) => {
         />
         <BreadCrump
           textOne="About Us"
-          linkOne="/about"
+          linkOne="#"
           textTwo="AIP Founder Network"
           linkTwo="/about/aip-founder-network"
         />

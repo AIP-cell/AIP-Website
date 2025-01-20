@@ -10,7 +10,7 @@ const ImpactHeroSection = () => {
       <div className="relative container mx-auto ">
         <BreadCrump
           textOne="About Us"
-          linkOne="/about"
+          linkOne="#"
           textTwo="AIP Impact"
           linkTwo="/about/aip-impact"
         />
