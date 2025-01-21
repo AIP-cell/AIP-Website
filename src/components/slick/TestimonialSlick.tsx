@@ -41,7 +41,6 @@ const TestimonialSlick = ({ slickArray }: Props) => {
     return;
   }
 
-  console.log("change::::", change);
   return (
     <div>
       <div className=" ~pt-[2.5rem]/[5rem] container mx-auto">

@@ -12,7 +12,12 @@ export const cleanURLSearchParams: CleanURLSearchParams = (params) => {
 
   Object.entries(params).forEach(([key, value]) => {
     if (value !== undefined && value !== "undefined" && value !== null) {
-      searchParams.append(key, String(value));
+      // Replace & with "and" in string values
+      const sanitizedValue =
+        typeof value === "string" ? value.replace(/&/g, "and") : value;
+
+      // Append the sanitized key-value pair to URLSearchParams
+      searchParams.append(key, String(sanitizedValue));
     }
   });
 
@@ -20,7 +25,6 @@ export const cleanURLSearchParams: CleanURLSearchParams = (params) => {
 };
 
 // Function to generate and clean search params
-
 export const generatingSearchParam = (
   param: Record<string, any>
 ): URLSearchParams => {

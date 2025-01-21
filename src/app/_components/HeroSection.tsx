@@ -7,6 +7,7 @@ import React from "react";
 const HeroSection = () => {
   return (
     <div className=" w-full relative ">
+      {/* <HomepageHeroSvg className="hidden lg:block absolute top-[-2rem] w-full  h-[46rem]  object-fill"/> */}
       <Image
         src={HeroBg}
         alt=""

@@ -12,10 +12,11 @@ type Props = {
 const Members = ({ countData }: Props) => {
   return (
     <div className=" relative w-full">
+      {/* <MembersWavePeachRightSvg className="hidden md:block max-cover absolute size-[70rem] ~md:~bottom-[0rem]/[-5rem]" /> */}
       <Image
         src={Bg}
         alt=""
-        className="hidden md:block   max-cover absolute w-[300rem] h-full ~md:~bottom-[0rem]/[-5rem]"
+        className="hidden md:block max-cover absolute w-[300rem] h-full ~md:~bottom-[0rem]/[-5rem]"
       />
       <div className=" container mx-auto ~pt-[5rem]/[13.25rem]">
         <div className="relative flex flex-col xl:flex-row w-full ~h-[45rem]/[49rem]  ~gap-[2rem]/0">

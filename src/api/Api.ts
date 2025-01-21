@@ -109,6 +109,15 @@ export const Api = {
       return null;
     }
   },
+  getFinancialDownloadAll: async () => {
+    try {
+      const response = await axiosClient.get(`financial-reports/download`);
+      return response.data;
+    } catch (error) {
+      console.log(error);
+      return null;
+    }
+  },
   getNpos: async () => {
     try {
       const response = await axiosClient.get(`npos`);

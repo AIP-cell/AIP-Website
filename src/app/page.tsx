@@ -42,7 +42,7 @@ const page = async ({
       <AipWay />
       {teamData && <Founder teamData={teamData} />}
       {/* {newsData && ( */}
-        <News newsData={newsData} searchParams={asyncSearchParams.selected} />
+      <News newsData={newsData} searchParams={asyncSearchParams.selected} />
       {/* )} */}
     </div>
   );

@@ -1,4 +1,5 @@
 "use client";
+import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 import CrossSvg from "@/components/svg/CrossSvg";
 import SearchSvg from "@/components/svg/SearchSvg";
 import { generatingSearchParam } from "@/utils/UrlHelper";
@@ -38,12 +39,12 @@ const SearchBar = (props: {
         className="text-h4 leading-[2.6rem] w-full font-playFair pb-[0.625rem] outline-none"
       />
       <div className="absolute right-0 flex gap-[1.5rem] text-textPurple">
-        <div className="cursor-pointer" onClick={() => setKey("")}>
+        <ButtonAnimation className="cursor-pointer" onClick={() => setKey("")}>
           <CrossSvg className="size-[1.5rem]" />
-        </div>
-        <button type="submit" onClick={handleSearch}>
+        </ButtonAnimation>
+        <ButtonAnimation type="submit" onClick={handleSearch}>
           <SearchSvg className="size-[1.5rem]" />
-        </button>
+        </ButtonAnimation>
       </div>
     </form>
   );

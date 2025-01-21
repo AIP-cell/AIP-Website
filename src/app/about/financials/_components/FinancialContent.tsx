@@ -7,6 +7,7 @@ import Link from "next/link";
 import { StorageUrl } from "@/utils/BaseUrl";
 import FinancialTabAndResp from "./FinancialTabAndResp";
 import CardAnimation from "@/components/animations/CardAnimation";
+import { Api } from "@/api/Api";
 
 type Props = {
   filterDataByYear: TReports | undefined;
@@ -18,6 +19,9 @@ const FinancialContent = ({
   currentYear,
   response,
 }: Props) => {
+  const downloadAllFunction = async () => {
+    await Api.getFinancialDownloadAll();
+  };
   return (
     <>
       <div className="flex flex-col justify-center items-center">
@@ -55,7 +59,10 @@ const FinancialContent = ({
             </div>
             <div className="flex w-full justify-end">
               <Link href="">
-                <ButtonAnimation className=" flex gap-2 0 rounded-3xl items-center text-darkPurple hover:text-white bg-white hover:bg-darkPurple py-[0.75rem] px-[1.75rem] border-2 bottom-2 border-darkPurple w-fit">
+                <ButtonAnimation
+                  onClick={downloadAllFunction}
+                  className=" flex gap-2 0 rounded-3xl items-center text-darkPurple hover:text-white bg-white hover:bg-darkPurple py-[0.75rem] px-[1.75rem] border-2 bottom-2 border-darkPurple w-fit"
+                >
                   <p className="text-h9Copy5 font-medium leading-[1.225rem]  ">
                     Download All
                   </p>

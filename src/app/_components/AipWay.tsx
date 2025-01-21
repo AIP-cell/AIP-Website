@@ -5,6 +5,7 @@ import LeftHomePagePeachCurve from "@public/svg/leftHomePagePeach.svg";
 import OvalPeachSvg from "@public/svg/ovalPeach.svg";
 import Image from "next/image";
 import OvalPeach from "@/components/ovals/OvalPeach";
+import AipWaySvg from "@/components/svg/background-svg/AipWaySvg";
 const AipWay = () => {
   return (
     <div className="w-full relative">
@@ -13,11 +14,12 @@ const AipWay = () => {
         alt=""
         className="hidden left-0 absolute top-[15rem] ~w-[6.956rem]/[13.125rem] ~h-[37.5rem]/[19.875rem]"
       />
-      <Image
+      <AipWaySvg className="block absolute ~left-[-6rem]/0 ~top-[2rem]/[2rem] ~w-[16rem]/[26rem] ~h-[25rem]/[37.5rem]" />
+      {/* <Image
         src={StoryBg}
         alt="bg-image"
         className="block absolute ~left-[-6rem]/0 ~top-[2rem]/[2rem] ~w-[16rem]/[26rem] ~h-[25rem]/[37.5rem]"
-      />
+      /> */}
       <OvalPeach
         mainClass="absolute ~top-[7.75rem]/[5rem] flex justify-center w-full md:w-auto md:block ~md:~left-0/[14.093rem]"
         text1="The"

@@ -41,6 +41,7 @@ const nextConfig = {
         hostname: "**",
       },
     ],
+    unoptimized: process.env.IMAGE_UNOPTIMIZE == "true",
   },
 };
 

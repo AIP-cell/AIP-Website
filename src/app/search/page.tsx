@@ -1,12 +1,12 @@
 import BreadCrump from "@/components/bread-crump/BreadCrump";
 import React from "react";
 import CustomFilter from "@/components/custom/CustomFilter";
-import AllTabContent from "./_components/AllTabContent";
 import { Api } from "@/api/Api";
 import { TSearch } from "@/api/type";
 import SearchBar from "./_components/SearchBar";
-import { notFound } from "next/navigation";
 import DateFilter from "@/components/custom/DatePick";
+import ContentOne from "./_components/ContentOne";
+import ContentGallery from "./_components/ContentGallery";
 
 const searchFilter = [
   {
@@ -70,9 +70,7 @@ const page = async ({
   const asyncSearchParam = await searchParams;
   const { key, field, type, date } = await searchParams;
   const response = await getSearchApi({ key, field, type, date });
-  if (!response) {
-    notFound();
-  }
+
   return (
     <div className="pt-[5rem]">
       <div className="relative container mx-auto ~pt-[4.313rem]/[5.5rem] ~px-[1.25rem]/[7.8rem]">
@@ -101,8 +99,60 @@ const page = async ({
               &quot;Search result for {key}&quot;
             </p>
           )}
-          {response && response.length != 0 && (
+          {/* {response && response.length != 0 && (
             <AllTabContent searchData={response} />
+          )} */}
+          {response && response.length != 0 && (
+            <div className="pt-[1rem] pb-[7.46rem]">
+              <div className="flex flex-col ">
+                {response.map((content, i) => {
+                  const keyPresent =
+                    content.key === "curatedResource" ||
+                    content.key === "aipImpactCasestudies" ||
+                    content.key === "aipImpactPeople" ||
+                    content.key === "aipImpactTestimonials" ||
+                    content.key === "npoCasestudies" ||
+                    content.key === "npoPeople" ||
+                    content.key === "philanthropistNetworkCasestudies" ||
+                    content.key === "founderNetworkTestimonials" ||
+                    content.key === "founderNetworkMethods" ||
+                    content.key === "aipResource" ||
+                    content.key === "aipTeam" ||
+                    content.key === "collaborations" ||
+                    content.key === "projectAndPrograms";
+                  const galleryImage = content.key === "galleryImages";
+                  if (keyPresent) {
+                    return (
+                      <ContentOne
+                        index={i}
+                        key={i}
+                        searchData={response}
+                        title={content.title}
+                        description={content.description}
+                        designation={content.designation}
+                        initiativeName={content.initiativeName}
+                        image={content.image}
+                        organisationName={content.organisationName}
+                        video={content.video}
+                      />
+                    );
+                  }
+                  if (galleryImage) {
+                    return (
+                      <ContentGallery
+                        key={i}
+                        title={content.title}
+                        description={content.description}
+                        index={i}
+                        searchData={response}
+                        galleryImages={content.galleryImages}
+                      />
+                    );
+                  }
+                })}
+              </div>
+            </div>
+            // </div>
           )}
         </div>
       </div>

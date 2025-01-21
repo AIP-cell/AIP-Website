@@ -286,7 +286,7 @@ const AipResourcesInnerPage = async ({
     (item) => item.filterBy === param.slug
   );
   return (
-    <div className="pt-[5rem] overflow-x-hidden">
+    <div className="pt-[5rem] overflow-x-hidden min-h-screen">
       <div className="container mx-auto relative ~px-5/[7.5rem] pb-[7.5rem]">
         <div className="~px-5/flex ~pt-0/[1.25rem] gap-[.75rem][7.8rem]">
           <BreadCrump
