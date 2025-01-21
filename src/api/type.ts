@@ -141,6 +141,7 @@ export type TAipResourcesCategory = {
   fileLink: string;
   file: string;
   category: string;
+  city: string;
 };
 export type TCuratedResourcesExpertsInner = {
   curatedResource: TCuratedResourcesInner;

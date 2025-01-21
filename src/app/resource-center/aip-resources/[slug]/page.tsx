@@ -338,7 +338,7 @@ const AipResourcesInnerPage = async ({
           <div className="pt-[3.25rem] grid md:grid-cols-2 lg:grid-cols-3 gap-[4.5rem]">
             {response?.map((item, i) => (
               <ResourceCard
-                // link={item.link}
+                city={item.city}
                 linkKey={item?.key}
                 index={i}
                 slug={item?.slug}

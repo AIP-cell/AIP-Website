@@ -21,6 +21,7 @@ type Props = {
   projectsAndProgram?: Boolean;
   collaboration?: Boolean;
   gallery?: Boolean;
+  city?: string;
 };
 const ResourceCard = ({
   src,
@@ -39,6 +40,7 @@ const ResourceCard = ({
   collaboration,
   gallery,
   slug,
+  city,
 }: Props) => {
   let link;
   if (category === "experts") {
@@ -50,7 +52,11 @@ const ResourceCard = ({
   } else if (gallery) {
     link = `/our-work/collaborations/${slug}`;
   } else if (linkKey) {
-    link = `/our-work/${linkKey}/${slug}/event-gallery`;
+    if (linkKey === "collaborations") {
+      link = `/our-work/${linkKey}/${slug}/event-gallery?city=${city}`;
+    } else {
+      link = `/our-work/${linkKey}/${slug}/event-gallery`;
+    }
   } else {
     link = isLinkOrPdf === "pdf" ? StorageUrl + file : fileLink;
   }
