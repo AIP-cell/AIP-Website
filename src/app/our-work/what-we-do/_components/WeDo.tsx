@@ -7,6 +7,7 @@ import BottomLeftCurve from "@public/svg/products-and-services/offerings/peachLe
 import React from "react";
 import CardAnimation from "@/components/animations/CardAnimation";
 import TextStaggerAnimation from "@/components/animations/TextStaggerAnimation";
+import FadeInAnimation from "@/components/animations/FadeInAnimation";
 const offeringsData = [
   {
     text1: "Networking &",
@@ -41,18 +42,23 @@ const WeDo = () => {
               &nbsp;We Do
             </span>
           </h2> */}
-          <TextStaggerAnimation text="What <color>We Do</color>" className="font-playFair text-gray80 ~text-h4/h2 ~leading-[2.6rem]/[3.3rem] text-center"/>
+          <TextStaggerAnimation
+            text="What <color>We Do</color>"
+            className="font-playFair text-gray80 ~text-h4/h2 ~leading-[2.6rem]/[3.3rem] text-center"
+          />
           <p className="~leading-[1.225rem]/[1.4rem] ~text-h9Copy5/h9Copy4 text-gray80 text-center ~pt-[0.75rem]/[1.25rem]">
             AIP has four core offerings for propelling and guiding <br />
             philanthropists in their giving journey
           </p>
         </div>
         <div className=" relative">
-          <Image
-            src={TopLeftCurve}
-            alt=""
-            className="h-[26.663rem] lg:h-auto w-[17.498rem] lg:w-auto absolute top-[-7.5rem] left-0 z-[-1]"
-          />
+          <FadeInAnimation delay={0.2} x1={-20} x2={0}>
+            <Image
+              src={TopLeftCurve}
+              alt=""
+              className="h-[26.663rem] lg:h-auto w-[17.498rem] lg:w-auto absolute top-[-7.5rem] left-0 z-[-1]"
+            />
+          </FadeInAnimation>
           <Image
             src={TopRightCurve}
             alt=""

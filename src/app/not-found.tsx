@@ -1,13 +1,9 @@
 import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
-import LeftOPenSvg from "@/components/svg/LeftOpenSvg";
 import Link from "next/link";
 import React from "react";
-import ArrowDownSvg from "@public/svg/arrowDown.svg";
-import Image from "next/image";
-import ArrowSvg from "@/components/svg/ArrowSvg";
-import DownTagSvg from "@/components/svg/DownTagSvg";
 import FilterDownArrowSvg from "@/components/svg/FilterDownArrowSvg";
 import BreadCrump from "@/components/bread-crump/BreadCrump";
+import WordStaggerAnimation from "@/components/animations/WordStaggerAnimation";
 
 const NotFound = () => {
   return (
@@ -16,12 +12,16 @@ const NotFound = () => {
         <BreadCrump textOne="Home" linkOne="/" />
       </div>
       <div className="~pt-[8rem]/[12.5rem] flex flex-col items-center justify-center">
-        <h1 className="~text-h4/h1 ~leading-[2.6rem]/[3.713rem] font-playFair text-gray80">
+        {/* <h1 className="~text-h4/h1 ~leading-[2.6rem]/[3.713rem] font-playFair text-gray80">
           Oops!
           <span className="font-playFairItalic text-textPurple">
             &nbsp;Nothing here!
           </span>
-        </h1>
+        </h1> */}
+        <WordStaggerAnimation
+          text="Oops! <color>Nothing here!</color>"
+          className="~text-h4/h1 ~leading-[2.6rem]/[3.713rem] font-playFair text-gray80"
+        />
         <div className="~pt-[5rem]/[4.5rem] flex justify-center">
           <ButtonAnimation className="  py-[0.75rem] px-[2rem]  rounded-full bg-darkPurple">
             <Link

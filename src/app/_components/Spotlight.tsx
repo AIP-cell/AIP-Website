@@ -5,6 +5,8 @@ import ShapelessBrown from "@public/svg/shapelessBrown.svg";
 import React from "react";
 import { THomePageEvent } from "@/api/type";
 import { StorageUrl } from "@/utils/BaseUrl";
+import TextStaggerAnimation from "@/components/animations/TextStaggerAnimation";
+import FadeInAnimation from "@/components/animations/FadeInAnimation";
 
 type Props = {
   eventData: THomePageEvent;
@@ -15,9 +17,13 @@ const Spotlight = ({ eventData }: Props) => {
     <div className="grid grid-cols-2  container mx-auto  ~gap-[2rem]/0 ~pt-[5rem]/[12.75rem] ~pl-[1.2rem]/[7.8rem] ~pr-[1.2rem]/[6.56rem]">
       <div className=" md:pr-[6rem] col-span-2 lg:col-span-1">
         <div className="bg-purpleToPink bg-clip-text ">
-          <h3 className="text-transparent ~text-h9Copy5/h9Copy4 font-inter font-bold ~leading-[1.2rem]/[1.4rem]">
+          {/* <h3 className="text-transparent ~text-h9Copy5/h9Copy4 font-inter font-bold ~leading-[1.2rem]/[1.4rem]">
             IN THE SPOTLIGHT
-          </h3>
+          </h3> */}
+          <TextStaggerAnimation
+            text="IN THE SPOTLIGHT"
+            className="text-transparent ~text-h9Copy5/h9Copy4 font-inter font-bold ~leading-[1.2rem]/[1.4rem]"
+          />
         </div>
         <div className="">
           <h4 className="~text-h4/h2 text-darkBlack pt-[0.75rem] ~leading-[2.6rem]/[3.3rem] font-playFair">
@@ -43,18 +49,20 @@ const Spotlight = ({ eventData }: Props) => {
         )}
       </div>
       <div className="relative col-span-2 lg:col-span-1">
-        <div className="relative z-[10] shrink-0  ~h-[14rem]/[22.1rem] rounded-2xl overflow-hidden">
-          <Image
-            src={StorageUrl + eventData?.image}
-            // src={Upcoming}
-            alt="upcoming-Image"
-            fill
-            className="object-cover h-full w-full overflow-y-scroll"
-          />
-        </div>
-        <div className="absolute ~bottom-[-1.8rem]/[-1.5rem]  ~right-[-1.6rem]/[-4.5rem] ~size-[10.3rem]/[18.4rem]">
-          <Image src={ShapelessBrown} alt="" fill />
-        </div>
+        <FadeInAnimation delay={0.1} x1={-20} x2={0}>
+          <div className="relative z-[10] shrink-0  ~h-[14rem]/[22.1rem] rounded-2xl overflow-hidden">
+            <Image
+              src={StorageUrl + eventData?.image}
+              // src={Upcoming}
+              alt="upcoming-Image"
+              fill
+              className="object-cover h-full w-full overflow-y-scroll"
+            />
+          </div>
+          <div className="absolute ~bottom-[-1.8rem]/[-1.5rem]  ~right-[-1.6rem]/[-4.5rem] ~size-[10.3rem]/[18.4rem]">
+            <Image src={ShapelessBrown} alt="" fill />
+          </div>
+        </FadeInAnimation>
       </div>
     </div>
   );

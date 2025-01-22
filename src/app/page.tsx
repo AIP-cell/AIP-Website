@@ -25,7 +25,6 @@ const page = async ({
   const response = await getHomePageApi();
   if (!response) {
     notFound();
-    // return;
   }
   const eventData = response?.event;
   const teamData = response?.team;

@@ -6,6 +6,8 @@ import SmBg from "@public/svg/home/smMemberBg.svg";
 import { THomePageCount } from "@/api/type";
 import OvalPurpleCount from "@/components/ovals/OvalPurpleCount";
 import WordStaggerAnimation from "@/components/animations/WordStaggerAnimation";
+import FadeInAnimation from "@/components/animations/FadeInAnimation";
+// import MembersWavePeachRightSvg from "@/components/svg/background-svg/MembersWavePeachRightSvg";
 
 type Props = {
   countData: THomePageCount;
@@ -13,7 +15,8 @@ type Props = {
 const Members = ({ countData }: Props) => {
   return (
     <div className=" relative w-full">
-      {/* <MembersWavePeachRightSvg className="hidden md:block max-cover absolute size-[70rem] ~md:~bottom-[0rem]/[-5rem]" /> */}
+      {/* <MembersWavePeachRightSvg className="hidden md:block max-cover absolute w-[300rem] h-full ~md:~bottom-[0rem]/[-5rem]" /> */}
+
       <Image
         src={Bg}
         alt=""

@@ -19,6 +19,7 @@ import useClient from "@/hooks/useClient";
 import { THomePageTeam } from "@/api/type";
 import { AnimatePresence } from "framer-motion";
 import WordStaggerAnimation from "@/components/animations/WordStaggerAnimation";
+import FadeInAnimation from "@/components/animations/FadeInAnimation";
 const founderData = [
   {
     image: "/images/aSample.png",
@@ -75,11 +76,13 @@ const Founder = ({ teamData }: Props) => {
       <div className="w-full bg-founderGradient ~/md:~h-[50rem]/[37rem] lg:~h-[77rem]/[68rem] relative mt-[-1px]">
         <div className="absolute top-0 w-full">
           <div className="w-full  relative">
-            <Image
-              src={PurPleCurveSvg}
-              alt=""
-              className="hidden lg:block absolute top-0 right-0"
-            />
+            <FadeInAnimation duration={1.2} delay={0.15} x1={30} x2={0}>
+              <Image
+                src={PurPleCurveSvg}
+                alt=""
+                className="hidden lg:block absolute top-0 right-0"
+              />
+            </FadeInAnimation>
             <Image
               src={BlueCurveSvg}
               alt=""
