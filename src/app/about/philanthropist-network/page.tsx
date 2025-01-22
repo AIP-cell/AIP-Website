@@ -14,7 +14,7 @@ import { notFound } from "next/navigation";
 export const dynamic = "force-dynamic";
 const geFounderNetworkApi = async (): Promise<TPhilanthropistNetwork> => {
   const response = await Api.getPhilanthropistNetwork();
-  return response.data;
+  return response?.data;
 };
 const page = async () => {
   const response = await geFounderNetworkApi();

@@ -62,19 +62,24 @@ Props) {
       {isOpen && (
         <div className="block md:hidden fixed bottom-0 z-[8000] inset-x-0 w-full bg-white h-[80vh] rounded-t-lg  px-[1.25rem] pt-[2rem] pb-[1.25rem] overflow-hidden ">
           <div className=" ">
-            <div className="pb-[0.773rem] border-b-[1.5px] text-h8Copy3 leading-[1.575rem] gap-[0.5rem] border-b-gray20 text-gray80 flex relative items-center">
-              <p className=" text-gray20">Filter By:</p>{" "}
-              <div className="capitalize ">
-                {type === "c_type"
-                  ? "Type Of Content"
-                  : type === "o_type"
-                  ? "Organization Type"
-                  : type === "p_type"
-                  ? "Partner Type"
-                  : type}
+            <div className="pb-[0.773rem] border-b-[1.5px] text-h8Copy3 leading-[1.575rem] gap-[0.5rem] border-b-gray20 text-gray80 flex relative items-center justify-between">
+              <div className="flex relative items-center gap-[0.5rem] text-h8Copy3 leading-[1.575rem]">
+                <p className=" text-gray20">Filter By:</p>{" "}
+                <div className="capitalize ">
+                  {type === "c_type"
+                    ? "Type Of Content"
+                    : type === "o_type"
+                    ? "Organization Type"
+                    : type === "p_type"
+                    ? "Partner Type"
+                    : type}
+                </div>
               </div>
-              <div onClick={() => setIsOpen(false)}>
-                <CrossSvg className="absolute right-0 size-[1rem] cursor-pointer" />
+              <div
+                onClick={() => setIsOpen(false)}
+                className="flex justify-end"
+              >
+                <CrossSvg className=" size-[1rem] cursor-pointer" />
               </div>
             </div>
             <RadioGroup

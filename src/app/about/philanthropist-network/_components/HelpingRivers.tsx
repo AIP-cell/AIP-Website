@@ -54,7 +54,7 @@ const HelpingRivers = () => {
           text="Helping Rivers <color>Give</color>"
           className="~text-h4/h2 ~leading-[2.6rem]/[3.3rem] font-playFair text-gray80"
         />
-        <p className="text-midGray ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] ~w-[21.8rem]/[27.224rem] text-center   ~pt-[0.75rem]/[1.25rem] ~pb-[1.25rem]/[5rem]">
+        <p className="text-midGray ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] max-[20rem]:w-[19rem] ~w-[21.8rem]/[27.224rem] text-center   ~pt-[0.75rem]/[1.25rem] ~pb-[1.25rem]/[5rem]">
           At AIP, we believe in the transformative power of philanthropy to
           catalyse India’s progress.
         </p>

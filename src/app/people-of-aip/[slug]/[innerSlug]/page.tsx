@@ -14,6 +14,7 @@ import { TPeopleOfAipGetOne } from "@/api/type";
 import { StorageUrl } from "@/utils/BaseUrl";
 import SelectedWorks from "./_components/SelectedWorks";
 import { notFound } from "next/navigation";
+import FadeInAnimation from "@/components/animations/FadeInAnimation";
 
 export const dynamic = "force-dynamic";
 const getPeopleOfAipGetOneApi = async (
@@ -33,6 +34,19 @@ const InnerTeamPage = async ({
     notFound();
   }
   const team = response?.teams;
+  let textTwoBreadCrump;
+  if (urlParams.slug === "team-aip") {
+    textTwoBreadCrump = "Team AIP";
+  } else if (urlParams.slug === "core-founder") {
+    textTwoBreadCrump = "Our Core Founders";
+  } else if (urlParams.slug === "founders") {
+    textTwoBreadCrump = "Founders";
+  } else if (urlParams.slug === "advisory-board") {
+    textTwoBreadCrump = "Our Advisory Board";
+  } else if (urlParams.slug === "experts") {
+    textTwoBreadCrump = "Experts";
+  }
+
   return (
     <div className="pt-[5rem]">
       <div className="w-full relative ">
@@ -46,17 +60,19 @@ const InnerTeamPage = async ({
             <BreadCrump
               textOne="People of AIP"
               linkOne="/people-of-aip"
-              textTwo={urlParams.slug}
-              linkTwo="/people-of-aip/core-founders"
+              textTwo={textTwoBreadCrump}
+              linkTwo={`/people-of-aip/${urlParams.slug}`}
               textThree={`${team?.name}`}
               linkThree={`/people-of-aip/${urlParams.slug}/${urlParams.innerSlug}`}
             />
             <div className="~pt-[4.3rem]/[5rem] flex flex-col-reverse lg:grid grid-cols-3 gap-[1.238rem]">
               <div className="col-span-2  relative">
                 <div className=" hidden md:block">
-                  <h2 className="~text-h4/h2 text-midGray leading-[3.3rem] font-playFair">
-                    {team?.name}
-                  </h2>
+                  <FadeInAnimation delay={0.1} x1={-20} x2={0}>
+                    <h2 className="~text-h4/h2 text-midGray leading-[3.3rem] font-playFair">
+                      {team?.name}
+                    </h2>
+                  </FadeInAnimation>
                   <h4 className="pt-[1rem] ~text-h6/h5 text-gray40 font-playFairItalic ~pr-[4rem]/0">
                     {team?.designation}
                   </h4>
@@ -113,10 +129,12 @@ const InnerTeamPage = async ({
                 </div>
               </div>
               <div className="col-span-1 relative">
-                <PSvg
-                  src={team?.image}
-                  className="relative z-10 ~w-[18.438rem]/[25rem]"
-                />
+                <FadeInAnimation delay={0.1} x1={20} x2={0}>
+                  <PSvg
+                    src={team?.image}
+                    className="relative z-10 ~w-[18.438rem]/[25rem]"
+                  />
+                </FadeInAnimation>
                 <div className=" block md:hidden">
                   <h2 className="~text-h4/h2 text-midGray leading-[3.3rem] font-playFair">
                     {team?.name}
@@ -125,9 +143,13 @@ const InnerTeamPage = async ({
                     {team?.designation}
                   </h4>
                 </div>
-                <p className="text-h5 pt-[2rem] text-gray90 font-playFair font-medium leading-[1.75rem]">
-                  {team?.quote}
-                </p>
+                {team?.quote && (
+                  <FadeInAnimation delay={0.1} x1={20} x2={0}>
+                    <p className="text-h5 pt-[2rem] text-gray90 font-playFair font-medium leading-[1.75rem]">
+                      {team?.quote}
+                    </p>
+                  </FadeInAnimation>
+                )}
               </div>
             </div>
             {team.linkOrVideo && (

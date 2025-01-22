@@ -38,7 +38,7 @@ const page = () => {
                 alt=""
                 className="absolute ~bottom-[4rem]/[3rem] ~w-[10rem]/[11.875rem] ~right-0/[7.8rem]"
               />
-              <FadeInAnimation delay={0.1} x2={-20} x1={0}>
+              <FadeInAnimation delay={0.1} x1={-20} x2={0}>
                 <p className="~px-[1.25rem]/[7rem] ~pt-[4.313rem]/[7.5rem] ~pb-[15rem]/[19.5rem] ~text-h4a/h3 text-gray80 font-playFair md:tracking-[-0.5px] ~leading-[2.113rem]/[2.6rem] ">
                   At AIP, we believe in the transformative power of philanthropy.
                   Philanthropists can make a difference. Philanthropists want to

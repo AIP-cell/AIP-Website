@@ -42,9 +42,12 @@ const page = async ({
               textTwo="Financial Reports"
               linkTwo="/about/financials"
             />
-            <div className="~pb-0/[5rem]  ~text-h4/h2 ~leading-[2.6rem]/[3.3rem] font-playFair">
+            <div className="~pb-[2.5rem]/[5rem]  ~text-h4/h2 ~leading-[2.6rem]/[3.3rem] font-playFair">
               {/* <p className=" text-gray80">Financial Reports & Certificates</p> */}
-              <WordStaggerAnimation text="Financial Reports & Certificates" className="text-gray80"/>
+              <WordStaggerAnimation
+                text="Financial Reports & Certificates"
+                className="text-gray80"
+              />
             </div>
           </div>
           {response && (

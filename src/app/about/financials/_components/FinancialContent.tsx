@@ -37,7 +37,10 @@ const FinancialContent = ({
             {/* <p className="text-center font-playFair ~text-h4a/h2 ~leading-[2.113rem]/[2.6rem] tracking-[-0.02rem] text-gray80">
               FY {currentYear}
             </p> */}
-            <TextStaggerAnimation text={`FY ${currentYear}`} className="text-center font-playFair ~text-h4a/h2 ~leading-[2.113rem]/[2.6rem] tracking-[-0.02rem] text-gray80"/>
+            <TextStaggerAnimation
+              text={`FY ${currentYear}`}
+              className="text-center font-playFair ~text-h4a/h2 ~leading-[2.113rem]/[2.6rem] tracking-[-0.02rem] text-gray80"
+            />
             <div>
               {filterDataByYear?.financialReports.map((data, index) => (
                 <CardAnimation key={index} index={index} delay={0.1}>

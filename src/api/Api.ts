@@ -111,8 +111,7 @@ export const Api = {
   },
   getFinancialDownloadAll: async () => {
     try {
-      const response = await axiosClient.get(`financial-reports/download`);
-      return response.data;
+      await axiosClient.get(`financial-reports/download`);
     } catch (error) {
       console.log(error);
       return null;
