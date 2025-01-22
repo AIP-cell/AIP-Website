@@ -1,5 +1,6 @@
 import { TExperts } from "@/api/type";
 import CardAnimation from "@/components/animations/CardAnimation";
+import TextStaggerAnimation from "@/components/animations/TextStaggerAnimation";
 import ATeamCard from "@/components/cards/aCards/ATeamCard";
 import PTeamCard from "@/components/cards/pCards/PTeamCard";
 import React from "react";
@@ -54,12 +55,16 @@ type Props = {
 const NetworkOfExperts = ({ people }: Props) => {
   return (
     <div className="~pt-[7.5rem]/[12.5rem] ~pb-[7rem]/[12.5rem]  container mx-auto">
-      <h2 className="~text-h4/h2 ~leading-[2.6rem]/[3.3rem] font-playFair text-darkBrown text-center">
+      {/* <h2 className="~text-h4/h2 ~leading-[2.6rem]/[3.3rem] font-playFair text-darkBrown text-center">
         <span className="text-textPurple font-playFairItalic">
           Network&nbsp;
         </span>
         Of Experts
-      </h2>
+      </h2> */}
+      <TextStaggerAnimation
+        text="<color>Network</color> Of Experts"
+        className="~text-h4/h2 ~leading-[2.6rem]/[3.3rem] font-playFair text-darkBrown text-center"
+      />
       <p className="~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] px-[2.8rem] text-midGray text-center ~pt-[0.75rem]/[1.25rem]">
         Were thrilled and grateful for the pro-bono support of experts in our
         network

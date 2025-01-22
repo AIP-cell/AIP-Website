@@ -2,6 +2,7 @@
 import { TGalleryVideos } from "@/api/type";
 import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 import CardAnimation from "@/components/animations/CardAnimation";
+import TextStaggerAnimation from "@/components/animations/TextStaggerAnimation";
 import GalleryVideo from "@/components/cards/GalleryVideo";
 import LeftSlickArrowSvg from "@/components/svg/LeftSlickArrowSvg";
 import RightSlickArrowSvg from "@/components/svg/RightSlickArrowSvg";
@@ -64,9 +65,10 @@ const GalleryVideos = ({ galleryVideos }: Props) => {
   return (
     <div className="~mt-[5rem]/[5.688rem] relative ~pb-[2rem]/0 ">
       <div className=" flex items-center w-full ">
-        <h2 className="~text-h4/h2 text-gray80 ~leading-[2.6rem]/[3.3rem] font-playFair !text-center w-full">
-          Videos
-        </h2>
+        <TextStaggerAnimation
+          text="Videos"
+          className="~text-h4/h2 text-gray80 ~leading-[2.6rem]/[3.3rem] font-playFair !text-center w-full"
+        />
       </div>
       <div className=" absolute bottom-[-2rem] w-full  md:w-auto md:bottom-auto md:top-0 right-0  flex justify-center md:justify-end gap-[1.5rem] ">
         <ButtonAnimation

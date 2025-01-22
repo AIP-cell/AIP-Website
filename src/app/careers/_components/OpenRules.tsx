@@ -6,6 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { TJob } from "@/api/type";
 import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
+import TextStaggerAnimation from "@/components/animations/TextStaggerAnimation";
 type Props = {
   jobs: TJob[];
 };
@@ -19,12 +20,16 @@ const OpenRules = ({ jobs }: Props) => {
       />
       <div className="container relative mx-auto ~px-5/[7.581rem] ">
         <div className="flex flex-col justify-center items-center ">
-          <p className="~pt-[5rem]/[12.5rem] font-playFair tracking-[-.04rem] ~text-h4/h2 text-gray80 ~leading-[2.6rem]/[3.3rem] ~pb-[1rem]/5">
+          {/* <p className="~pt-[5rem]/[12.5rem] font-playFair tracking-[-.04rem] ~text-h4/h2 text-gray80 ~leading-[2.6rem]/[3.3rem] ~pb-[1rem]/5">
             Open
             <span className="font-playFairItalic text-textPurple">
               &nbsp;Roles
             </span>
-          </p>
+          </p> */}
+          <TextStaggerAnimation
+            text="Open <color>Roles</color>"
+            className="~pt-[5rem]/[12.5rem] font-playFair tracking-[-.04rem] ~text-h4/h2 text-gray80 ~leading-[2.6rem]/[3.3rem] ~pb-[1rem]/5"
+          />
           <div className="~px-[3.8rem]/[4rem]">
             <p className="font-inter text-midGray text-center ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]">
               Join the movement to bring about
@@ -58,7 +63,9 @@ const OpenRules = ({ jobs }: Props) => {
                 href="mailto:careers@indianphilanthropy.org"
                 className="text-textPurple inline-block underline"
               >
-                careers@indianphilanthropy.org
+                <ButtonAnimation className=" inline-block underline">
+                  careers@indianphilanthropy.org
+                </ButtonAnimation>
               </Link>
             </p>
           </div>

@@ -30,6 +30,8 @@ import useClient from "@/hooks/useClient";
 import { StorageUrl } from "@/utils/BaseUrl";
 import Gallery from "@/app/our-work/projects-and-programs/[slug]/_components/Gallery";
 import Media from "@/app/our-work/projects-and-programs/[slug]/_components/Media";
+import FadeInAnimation from "@/components/animations/FadeInAnimation";
+import CardAnimation from "@/components/animations/CardAnimation";
 
 const agendaArray = [
   {
@@ -89,15 +91,21 @@ const Cities = ({ collaboration, slug }: Props) => {
       <div className="relative grid lg:grid-cols-3 gap-5 container mx-auto ~px-[1.25rem]/[7.8rem] z-50">
         <div className="lg:col-span-2 flex flex-col gap-10  ~pr-0/[6.563rem]">
           <div className="font-playFair">
-            <p className="leading-[3.25rem] tracking-[-.04rem] text-h3 text-midGray">
-              {collaboration?.title}
-            </p>
-            <p className=" leading-[1.75rem] tracking-[-.02rem] font-playFairItalic text-h5 text-gray40 font-medium pt-[1rem]">
-              {collaboration?.category}
-            </p>
-            <p className="font-inter leading-[1.4rem]  text-midGray  ~pt-[2rem]/[1.25rem] ~pr-0/[3rem]">
-              {collaboration?.description}
-            </p>
+            <FadeInAnimation delay={0.1} x1={-20} x2={0}>
+              <p className="leading-[3.25rem] tracking-[-.04rem] text-h3 text-midGray">
+                {collaboration?.title}
+              </p>
+            </FadeInAnimation>
+            <FadeInAnimation delay={0.2} x1={-20} x2={0}>
+              <p className=" leading-[1.75rem] tracking-[-.02rem] font-playFairItalic text-h5 text-gray40 font-medium pt-[1rem]">
+                {collaboration?.category}
+              </p>
+            </FadeInAnimation>
+            <FadeInAnimation delay={0.3} y1={20} y2={0}>
+              <p className="font-inter leading-[1.4rem]  text-midGray  ~pt-[2rem]/[1.25rem] ~pr-0/[3rem]">
+                {collaboration?.description}
+              </p>
+            </FadeInAnimation>
           </div>
 
           <div className="">
@@ -114,26 +122,30 @@ const Cities = ({ collaboration, slug }: Props) => {
               />
             </TabGroup>
             <div className="block md:hidden pt-[2rem]">
-              <Image
-                src={Systemic}
-                className=" w-full h-[30.89rem] object-cover"
-                alt="Systemic-image"
-              />
-             {cities?.at(selectedIndex)?.report  && <div className="flex pt-[2rem]">
-                <Link
-                  href={cities?.at(selectedIndex)?.report ?? ""}
-                  download
-                  target="_blank"
-                  className="group bg-darkPurple border-2 border-darkPurple hover:bg-white  transition-all  hover:text-darkPurple text-white hover:border-2 hover:border-darkPurple px-7 py-3 flex items-center gap-[0.75rem] w-fit rounded-3xl"
-                >
-                  <p className=" font-inter  text-h9Copy5 leading-[1.225rem]">
-                    Download Event Report
-                  </p>
-                  <div className=" pt-[.1rem]">
-                    <DownloadFileSvg className="size-[1.25rem]" />
-                  </div>
-                </Link>
-              </div>}
+              <FadeInAnimation delay={0.1} x1={-20} x2={0}>
+                <Image
+                  src={Systemic}
+                  className=" w-full h-[30.89rem] object-cover"
+                  alt="Systemic-image"
+                />
+              </FadeInAnimation>
+              {cities?.at(selectedIndex)?.report && (
+                <div className="flex pt-[2rem]">
+                  <Link
+                    href={cities?.at(selectedIndex)?.report ?? ""}
+                    download
+                    target="_blank"
+                    className="group bg-darkPurple border-2 border-darkPurple hover:bg-white  transition-all  hover:text-darkPurple text-white hover:border-2 hover:border-darkPurple px-7 py-3 flex items-center gap-[0.75rem] w-fit rounded-3xl"
+                  >
+                    <p className=" font-inter  text-h9Copy5 leading-[1.225rem]">
+                      Download Event Report
+                    </p>
+                    <div className=" pt-[.1rem]">
+                      <DownloadFileSvg className="size-[1.25rem]" />
+                    </div>
+                  </Link>
+                </div>
+              )}
             </div>
             <div className="">
               <h2 className="~text-h6M/h4 ~leading-[1.575rem]/[2.6rem] font-playFair ~pt-[2rem]/[1.25rem] text-gray80">
@@ -156,19 +168,18 @@ const Cities = ({ collaboration, slug }: Props) => {
                 {cities
                   ?.at(selectedIndex)
                   ?.organisationDetails?.map((items, i) => (
-                    <div
-                      key={i}
-                      className=" flex items-center bg-white border border-1 border-gray10 rounded-xl ~w-[9.46rem]/[11.813rem] ~h-[4rem]/20 overflow-hidden"
-                    >
-                      <div className="relative ~w-[9.46rem]/[11.813rem] ~h-[4rem]/20">
-                        <Image
-                          src={StorageUrl + items?.image}
-                          className="object-contain "
-                          fill
-                          alt="foundation"
-                        />
+                    <CardAnimation index={i} delay={0.1} key={i}>
+                      <div className=" flex items-center bg-white border border-1 border-gray10 rounded-xl ~w-[9.46rem]/[11.813rem] ~h-[4rem]/20 overflow-hidden">
+                        <div className="relative ~w-[9.46rem]/[11.813rem] ~h-[4rem]/20">
+                          <Image
+                            src={StorageUrl + items?.image}
+                            className="object-contain "
+                            fill
+                            alt="foundation"
+                          />
+                        </div>
                       </div>
-                    </div>
+                    </CardAnimation>
                   ))}
                 {/* <div className="flex items-center border border-1 bg-white border-gray10 rounded-xl ~w-[5.49rem]/[6.863rem] ~h-[4rem]/20 overflow-hidden">
                   <Image
@@ -185,20 +196,19 @@ const Cities = ({ collaboration, slug }: Props) => {
               </p>
               <div className="flex gap-4">
                 {cities?.at(selectedIndex)?.collaborations?.map((items, i) => (
-                  <div
-                    key={i}
-                    className="~w-[7.75rem]/[9.688rem] bg-white flex items-center ~h-[4rem]/[5rem] border border-1 border-gray10 rounded-xl overflow-hidden"
-                  >
-                    {/* ~py-[0.7rem]/[0.89rem] px-[0.3rem] */}
-                    <div className="relative ~w-[7.75rem]/[9.688rem] ~h-[4rem]/[5rem]">
-                      <Image
-                        src={StorageUrl + items?.image}
-                        className=" object-contain "
-                        fill
-                        alt="foundation"
-                      />
+                  <CardAnimation index={i} delay={0.1} key={i}>
+                    <div className="~w-[7.75rem]/[9.688rem] bg-white flex items-center ~h-[4rem]/[5rem] border border-1 border-gray10 rounded-xl overflow-hidden">
+                      {/* ~py-[0.7rem]/[0.89rem] px-[0.3rem] */}
+                      <div className="relative ~w-[7.75rem]/[9.688rem] ~h-[4rem]/[5rem]">
+                        <Image
+                          src={StorageUrl + items?.image}
+                          className=" object-contain "
+                          fill
+                          alt="foundation"
+                        />
+                      </div>
                     </div>
-                  </div>
+                  </CardAnimation>
                 ))}
               </div>
             </div>
@@ -234,11 +244,13 @@ const Cities = ({ collaboration, slug }: Props) => {
           </div>
         </div>
         <div className="hidden md:block pt-[5rem]">
-          <Image
-            src={Systemic}
-            className=" w-[25rem] object-cover"
-            alt="image"
-          />
+          <FadeInAnimation delay={0.1} x1={20} x2={0}>
+            <Image
+              src={Systemic}
+              className=" w-[25rem] object-cover"
+              alt="image"
+            />
+          </FadeInAnimation>
           <div className="flex pt-[1.382rem]">
             <Link
               href={StorageUrl + cities?.at(selectedIndex)?.report}

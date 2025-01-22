@@ -7,6 +7,7 @@ import Link from "next/link";
 import OvalPeachCount from "@/components/ovals/OvalPeachCount";
 import { TFoundationFacts } from "@/api/type";
 import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
+import TextStaggerAnimation from "@/components/animations/TextStaggerAnimation";
 type Props = {
   button?: string;
   foundationFacts: TFoundationFacts;
@@ -20,10 +21,14 @@ const FoundationFacts = ({ button, foundationFacts }: Props) => {
         className="block h-[95rem] object-cover  absolute ~top-[-22rem]/[-12rem] w-[500rem]"
       />
       <div className="relative container mx-auto ">
-        <h2 className=" ~text-h4/h2 text-center font-playFair ~leading-[2.6rem]/[3.3rem]">
+        {/* <h2 className=" ~text-h4/h2 text-center font-playFair ~leading-[2.6rem]/[3.3rem]">
           Foundation{" "}
           <span className="text-textPurple font-playFairItalic">Facts</span>
-        </h2>
+        </h2> */}
+        <TextStaggerAnimation
+          text="Foundation <color>Facts</color>"
+          className="~text-h4/h2 text-center font-playFair ~leading-[2.6rem]/[3.3rem]"
+        />
         <div className="relative pb-[50.8rem]">
           {foundationFacts?.eventsCount > 0 && (
             <OvalPeach

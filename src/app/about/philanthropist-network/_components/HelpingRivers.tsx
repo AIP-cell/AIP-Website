@@ -6,6 +6,7 @@ import bottomCaseStudyCurveSvg from "@public/svg/peach-bg-curve-founders.svg";
 import Image from "next/image";
 import cn from "@/utils/tailwind";
 import CardAnimation from "@/components/animations/CardAnimation";
+import TextStaggerAnimation from "@/components/animations/TextStaggerAnimation";
 
 const datas = [
   {
@@ -43,12 +44,16 @@ const HelpingRivers = () => {
         className="hidden lg:block absolute  bottom-[-16rem]  right-0"
       />
       <div className=" flex flex-col items-center container mx-auto relative">
-        <h2 className="~text-h4/h2 ~leading-[2.6rem]/[3.3rem] font-playFair text-gray80">
+        {/* <h2 className="~text-h4/h2 ~leading-[2.6rem]/[3.3rem] font-playFair text-gray80">
           Helping Rivers
           <span className="text-textPurple font-playFairItalic">
             &nbsp;Give
           </span>
-        </h2>
+        </h2> */}
+        <TextStaggerAnimation
+          text="Helping Rivers <color>Give</color>"
+          className="~text-h4/h2 ~leading-[2.6rem]/[3.3rem] font-playFair text-gray80"
+        />
         <p className="text-midGray ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] ~w-[21.8rem]/[27.224rem] text-center   ~pt-[0.75rem]/[1.25rem] ~pb-[1.25rem]/[5rem]">
           At AIP, we believe in the transformative power of philanthropy to
           catalyse India’s progress.

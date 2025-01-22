@@ -18,6 +18,7 @@ import { useMediaQuery } from "react-responsive";
 import useClient from "@/hooks/useClient";
 import { THomePageTeam } from "@/api/type";
 import { AnimatePresence } from "framer-motion";
+import WordStaggerAnimation from "@/components/animations/WordStaggerAnimation";
 const founderData = [
   {
     image: "/images/aSample.png",
@@ -87,12 +88,24 @@ const Founder = ({ teamData }: Props) => {
             <div className=" container mx-auto relative ">
               <div className="~px-[1.25rem]/[7.8rem] ">
                 <div className="flex justify-between items-center ~pt-[2rem]/0">
-                  <h3 className="~text-h4/h2 text-white/70 ~leading-[2.6rem]/[3.3rem] relative font-playFair">
+                  {/* <h3 className="~text-h4/h2 text-white/70 ~leading-[2.6rem]/[3.3rem] relative font-playFair">
                     From our&nbsp;
                     <span className="text-white font-playFairItalic block md:inline-block">
                       Core-Founders
                     </span>
-                  </h3>
+                  </h3> */}
+
+                  <div className=" sm:flex ~text-h4/h2  ~leading-[2.6rem]/[3.3rem] relative font-playFair">
+                    <WordStaggerAnimation
+                      text="From our "
+                      className="text-white/70"
+                    />
+                    <WordStaggerAnimation
+                      text="Core-Founders"
+                      className="text-white font-playFairItalic block md:inline-block"
+                    />
+                  </div>
+
                   <div className=" flex gap-[1.25rem] relative">
                     <ButtonAnimation
                       onClick={previous}

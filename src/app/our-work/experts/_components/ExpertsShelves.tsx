@@ -1,4 +1,5 @@
 import { TSelectedWorks } from "@/api/type";
+import TextStaggerAnimation from "@/components/animations/TextStaggerAnimation";
 import BgButton from "@/components/buttons/BgButton";
 import ResourceCard from "@/components/cards/ResourceCard";
 import React from "react";
@@ -29,9 +30,10 @@ type Props = {
 const ExpertsShelves = ({ expertShelves }: Props) => {
   return (
     <div className=" container mx-auto flex flex-col items-center">
-      <h2 className="~text-h4/h2 ~leading-[2.6rem]/[3.3rem]  text-center font-playFair text-gray80">
+      {/* <h2 className="~text-h4/h2 ~leading-[2.6rem]/[3.3rem]  text-center font-playFair text-gray80">
         From Experts’ Shelves
-      </h2>
+      </h2> */}
+      <TextStaggerAnimation text="From Experts’ Shelves" className="~text-h4/h2 ~leading-[2.6rem]/[3.3rem]  text-center font-playFair text-gray80"/>
       <p className="text-midGray px-[2.8rem] ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] ~pt-[0.75rem]/[1.25rem] text-center ~pb-[2.5rem]/[5rem]">
         A showcase of inspirational work done by collaborators in our network
       </p>

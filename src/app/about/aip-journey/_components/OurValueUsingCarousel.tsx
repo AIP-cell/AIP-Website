@@ -20,6 +20,7 @@ import {
 } from "@/components/ui/carousel";
 import { useMediaQuery } from "react-responsive";
 import useClient from "@/hooks/useClient";
+import TextStaggerAnimation from "@/components/animations/TextStaggerAnimation";
 
 const OurValueUsingCarousel = () => {
   const [api, setApi] = React.useState<CarouselApi>();
@@ -108,9 +109,13 @@ const OurValueUsingCarousel = () => {
           className="~pt-[5rem]/[10rem] relative container mx-auto w-full items-center"
         >
           <div className="flex flex-col justify-center items-center ">
-            <h3 className="~text-h4/h2 text-darkGray font-playFair leading-[52.8px]">
+            {/* <h3 className="~text-h4/h2 text-darkGray font-playFair leading-[52.8px]">
               Our <i className="text-textPurple">Values</i>
-            </h3>
+            </h3> */}
+            <TextStaggerAnimation
+              text="Our <color>Values</color>"
+              className="~text-h4/h2 text-darkGray font-playFair leading-[52.8px]"
+            />
             <p className="~pt-[0.5rem]/[1.25rem] ~px-[4.1rem]/[20.938rem] text-center text-midGray  font-inter ~text-h9Copy5/h9Copy4 ~leading-[1.4rem]/[1.225rem]">
               The foundations that drive AIP to drive positive change
             </p>

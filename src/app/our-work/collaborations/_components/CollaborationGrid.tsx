@@ -6,6 +6,7 @@ import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 import { TCollaborationPageData } from "@/api/type";
 import dayjs from "dayjs";
 import { StorageUrl } from "@/utils/BaseUrl";
+import CardAnimation from "@/components/animations/CardAnimation";
 
 const datas = [
   {
@@ -36,53 +37,59 @@ const CollaborationGrid = ({ collaborationData }: Props) => {
   return (
     <div>
       {collaborationData.map((item, i) => (
-        <div
-          key={i}
-          className="relative flex flex-col justify-between ~pt-[2.5rem]/8 w-full  ~pb-[1.25rem]/9 border-b border-gray10"
-        >
-          <div className="w-full  flex flex-col md:flex-row ~gap-[1.25rem]/[2rem]">
-            <div className="flex md:flex-col ~gap-[1rem]/0 leading-[1.4rem] w-full items-center md:items-start md:w-[16%] pt-[0.7rem]">
-              <p className="font-bold text-midGray leading-[1.4rem]">
-                {dateFormat(item.date)}
-              </p>
-              <p className="~pt-0/3 ~pb-0/[2.125rem] text-midGray leading-[1.4rem]">
-                Report
-              </p>
-            </div>
-            <div className="w-full md:w-[80%]">
-              <Link href={`/our-work/collaborations/${item.slug}`}>
-                <p className="font-playFair ~text-h4a/h4 text-gray80 ~leading-[2.113rem]/[2.6rem] underline underline-offset-4 decoration-[1px]">
-                  {item?.title}
+        <CardAnimation index={i} delay={0.1} key={i} >
+          <div
+            key={i}
+            className="relative flex flex-col justify-between ~pt-[2.5rem]/8 w-full  ~pb-[1.25rem]/9 border-b border-gray10"
+          >
+            <div className="w-full  flex flex-col md:flex-row ~gap-[1.25rem]/[2rem]">
+              <div className="flex md:flex-col ~gap-[1rem]/0 leading-[1.4rem] w-full items-center md:items-start md:w-[16%] pt-[0.7rem]">
+                <p className="font-bold text-midGray leading-[1.4rem]">
+                  {dateFormat(item.date)}
                 </p>
-              </Link>
-              <p className="~pt-[1.25rem]/4 line-clamp-4 text-ellipsis  leading-[1.4rem] font-inter text-midGray ">
-                {item?.description}
-              </p>
-            </div>
-            <div className="w-full md:w-[35%] flex flex-col md:items-end leading-[1.4rem] ~pt-0/4">
-              <p className="text-gray50 ~pb-[0.5rem]/3">
-                In Collaboration with:
-              </p>
-              <div className="flex  md:justify-end gap-[0.75rem] flex-wrap">
-                {item?.collaborations?.map((data, index) => (
-                  <div
-                    key={index}
-                    className="py-[0.563rem] shrink-0 px-[.68rem] w-fit bg-bgCollab rounded-[1.25rem] "
-                  >
-                    <div className="size-[2.625rem] relative">
-                      <Image
-                        src={data?.image ? StorageUrl + data.image :"/images/news/newsDemo.png"}
-                        alt="bcg"
-                        className="object-cover"
-                        fill 
-                      />
+                <p className="~pt-0/3 ~pb-0/[2.125rem] text-midGray leading-[1.4rem]">
+                  Report
+                </p>
+              </div>
+              <div className="w-full md:w-[80%]">
+                <Link href={`/our-work/collaborations/${item.slug}`}>
+                  <ButtonAnimation className="font-playFair ~text-h4a/h4 text-gray80 ~leading-[2.113rem]/[2.6rem] underline underline-offset-4 decoration-[1px]">
+                    {item?.title}
+                  </ButtonAnimation>
+                </Link>
+                <p className="~pt-[1.25rem]/4 line-clamp-4 text-ellipsis  leading-[1.4rem] font-inter text-midGray ">
+                  {item?.description}
+                </p>
+              </div>
+              <div className="w-full md:w-[35%] flex flex-col md:items-end leading-[1.4rem] ~pt-0/4">
+                <p className="text-gray50 ~pb-[0.5rem]/3">
+                  In Collaboration with:
+                </p>
+                <div className="flex  md:justify-end gap-[0.75rem] flex-wrap">
+                  {item?.collaborations?.map((data, index) => (
+                    <div
+                      key={index}
+                      className="py-[0.563rem] shrink-0 px-[.68rem] w-fit bg-bgCollab rounded-[1.25rem] "
+                    >
+                      <div className="size-[2.625rem] relative">
+                        <Image
+                          src={
+                            data?.image
+                              ? StorageUrl + data.image
+                              : "/images/news/newsDemo.png"
+                          }
+                          alt="bcg"
+                          className="object-cover"
+                          fill
+                        />
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </CardAnimation>
       ))}
     </div>
   );

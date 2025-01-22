@@ -6,6 +6,7 @@ import BottomRightCurve from "@public/svg/products-and-services/offerings/peachR
 import BottomLeftCurve from "@public/svg/products-and-services/offerings/peachLeftBottomCurve.svg";
 import React from "react";
 import CardAnimation from "@/components/animations/CardAnimation";
+import TextStaggerAnimation from "@/components/animations/TextStaggerAnimation";
 const offeringsData = [
   {
     text1: "Networking &",
@@ -34,12 +35,13 @@ const WeDo = () => {
     <div className="w-full relative">
       <div className="~pt-[4.625rem]/[6.63rem] ~pb-[5rem]/[7.5rem] relative">
         <div className="relative container mx-auto">
-          <h2 className="font-playFair text-gray80 ~text-h4/h2 ~leading-[2.6rem]/[3.3rem] text-center">
+          {/* <h2 className="font-playFair text-gray80 ~text-h4/h2 ~leading-[2.6rem]/[3.3rem] text-center">
             What
             <span className="font-playFairItalic text-textPurple">
               &nbsp;We Do
             </span>
-          </h2>
+          </h2> */}
+          <TextStaggerAnimation text="What <color>We Do</color>" className="font-playFair text-gray80 ~text-h4/h2 ~leading-[2.6rem]/[3.3rem] text-center"/>
           <p className="~leading-[1.225rem]/[1.4rem] ~text-h9Copy5/h9Copy4 text-gray80 text-center ~pt-[0.75rem]/[1.25rem]">
             AIP has four core offerings for propelling and guiding <br />
             philanthropists in their giving journey

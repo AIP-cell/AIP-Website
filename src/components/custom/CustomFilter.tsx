@@ -84,9 +84,9 @@ const CustomFilter = ({
                     scroll: false,
                   });
                 }}
-                className="group flex gap-[0.75rem] text-start items-center  rounded-md border-gray10  no-scrollbar text-black text-h9Copy5 leading-[1.225rem] cursor-pointer"
+                className="group flex gap-[0.75rem] text-start items-start   rounded-md border-gray10  no-scrollbar text-black text-h9Copy5 leading-[1.225rem] cursor-pointer"
               >
-                <div className="size-[0.833rem] border-2 border-gray80 rounded-sm flex justify-center items-center">
+                <div className="size-[0.833rem] shrink-0 border-2 border-gray80 rounded-sm flex justify-center items-center mt-1">
                   <div className="size-[0.45rem] bg-gray80 rounded-md invisible group-data-[selected]:visible"></div>
                 </div>
                 <p>{items}</p>

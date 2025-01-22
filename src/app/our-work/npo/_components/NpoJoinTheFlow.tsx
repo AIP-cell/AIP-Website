@@ -8,6 +8,7 @@ import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 import BgButton from "@/components/buttons/BgButton";
 import OutlineButton from "@/components/buttons/OutlineButton";
 import FadeInAnimation from "@/components/animations/FadeInAnimation";
+import TextStaggerAnimation from "@/components/animations/TextStaggerAnimation";
 
 const NpoJoinTheFlow = () => {
   return (
@@ -31,10 +32,11 @@ const NpoJoinTheFlow = () => {
       {/* </FadeInAnimation> */}
       <div className="relative container mx-auto">
         <div className="relative flex flex-col items-center justify-center ~pt-0/[8.43rem]">
-          <h2 className="font-playFair text-gray80 ~text-h4/h2 ~leading-[2.6rem]/[3.3rem]">
+          {/* <h2 className="font-playFair text-gray80 ~text-h4/h2 ~leading-[2.6rem]/[3.3rem]">
             <span className="text-textPurple font-playFairItalic">Join</span>{" "}
             The Flow
-          </h2>
+          </h2> */}
+          <TextStaggerAnimation text="<color>Join</color> The Flow" className="font-playFair text-gray80 ~text-h4/h2 ~leading-[2.6rem]/[3.3rem]"/>
           <p className="text-midGray text-center ~px-5/[20.94rem] ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] ~pt-[1.5rem]/[1.25rem]">
             We invite you to join our Core Founders, Founders, and our growing
             network of philanthropists and sector experts to see strategic

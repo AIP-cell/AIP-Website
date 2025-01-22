@@ -6,6 +6,8 @@ import { TGallery, TGalleryImages } from "@/api/type";
 import cn from "@/utils/tailwind";
 import { StorageUrl } from "@/utils/BaseUrl";
 import CardAnimation from "@/components/animations/CardAnimation";
+import TextStaggerAnimation from "@/components/animations/TextStaggerAnimation";
+import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 
 type Props = {
   galleryLink?: string;
@@ -17,9 +19,13 @@ const Gallery = ({ galleryLink, galleryImages }: Props) => {
   return (
     <div className="relative ">
       <div className="~pt-[2rem]/[12.5rem] container mx-auto ~px-[1.25rem]/[7.8rem]">
-        <p className=" text-center font-playFair  ~leading-[2.6rem]/[3.3rem] tracking-[-.04rem] ~text-h4/h2 text-gray80">
+        {/* <p className=" text-center font-playFair  ~leading-[2.6rem]/[3.3rem] tracking-[-.04rem] ~text-h4/h2 text-gray80">
           Gallery
-        </p>
+        </p> */}
+        <TextStaggerAnimation
+          text="Gallery"
+          className="text-center font-playFair  ~leading-[2.6rem]/[3.3rem] tracking-[-.04rem] ~text-h4/h2 text-gray80"
+        />
         <div className="~pt-[2rem]/[4rem] grid grid-cols-2 lg:grid-cols-5 lg:grid-rows-2 ~gap-[1rem]/[1.25rem]">
           {galleryImages?.map((items, i) => (
             // <CardAnimation index={i} delay={0.1} key={i}>
@@ -34,12 +40,12 @@ const Gallery = ({ galleryLink, galleryImages }: Props) => {
               )}
             >
               {/* <CardAnimation index={i} delay={0.1} > */}
-                <Image
-                  src={StorageUrl + items?.image}
-                  alt=""
-                  fill
-                  className=" w-full h-full object-cover"
-                />
+              <Image
+                src={StorageUrl + items?.image}
+                alt=""
+                fill
+                className=" w-full h-full object-cover"
+              />
               {/* </CardAnimation> */}
             </div>
             // </CardAnimation>
@@ -50,11 +56,11 @@ const Gallery = ({ galleryLink, galleryImages }: Props) => {
             href={galleryLink ?? ""}
             className="~pt-[2rem]/[2.5rem] flex justify-center"
           >
-            <button className="rounded-full border-2 border-darkPurple hover:text-white hover:bg-darkPurple text-darkPurple">
+            <ButtonAnimation className="rounded-full border-2 border-darkPurple hover:text-white hover:bg-darkPurple text-darkPurple">
               <p className="text-h9Copy5 leading-[1.225rem] font-medium py-[0.75rem] px-[1.75rem]">
                 View All Images
               </p>
-            </button>
+            </ButtonAnimation>
           </Link>
         )}
       </div>

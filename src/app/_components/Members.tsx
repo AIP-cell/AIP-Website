@@ -5,6 +5,7 @@ import Bg from "@public/svg/wavePeachRight.svg";
 import SmBg from "@public/svg/home/smMemberBg.svg";
 import { THomePageCount } from "@/api/type";
 import OvalPurpleCount from "@/components/ovals/OvalPurpleCount";
+import WordStaggerAnimation from "@/components/animations/WordStaggerAnimation";
 
 type Props = {
   countData: THomePageCount;
@@ -21,7 +22,7 @@ const Members = ({ countData }: Props) => {
       <div className=" container mx-auto ~pt-[5rem]/[13.25rem]">
         <div className="relative flex flex-col xl:flex-row w-full ~h-[45rem]/[49rem]  ~gap-[2rem]/0">
           <div className=" w-full xl:w-[65%] ~pl-[1.25rem]/[7rem] ~/md:~pr-[1.25rem]/[2rem] xl:pr-0">
-            <h2 className="~text-h4/h2  font-playFair text-gray50 ~leading-[2.6rem]/[3.3rem]">
+            {/* <h2 className="~text-h4/h2  font-playFair text-gray50 ~leading-[2.6rem]/[3.3rem]">
               Accelerate Indian
             </h2>
             <h2 className="~text-h4/h2  font-playFair text-gray50 ~leading-[2.6rem]/[3.3rem] ">
@@ -35,7 +36,19 @@ const Members = ({ countData }: Props) => {
                 for philanthropists
               </span>
               &nbsp;to support their giving efforts.
-            </h2>
+            </h2> */}
+            <WordStaggerAnimation
+              text="Accelerate Indian"
+              className="~text-h4/h2  font-playFair text-gray50 ~leading-[2.6rem]/[3.3rem]"
+            />
+            <WordStaggerAnimation
+              text="Philanthropy is a peer network set up <color>by philanthropists,</color>"
+              className="~text-h4/h2  font-playFair text-gray50 ~leading-[2.6rem]/[3.3rem]"
+            />
+            <WordStaggerAnimation
+              text="<color>for philanthropists</color> to support their giving efforts."
+              className="~text-h4/h2  font-playFair text-gray50 ~leading-[2.6rem]/[3.3rem]"
+            />
           </div>
           {/* <OvalPurpleSvg className="-top-[4rem] right-[11.85rem]"/> */}
           <div className="w-full xl:w-[35%] relative flex justify-center ">

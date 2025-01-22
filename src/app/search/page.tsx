@@ -7,6 +7,7 @@ import SearchBar from "./_components/SearchBar";
 import DateFilter from "@/components/custom/DatePick";
 import ContentOne from "./_components/ContentOne";
 import ContentGallery from "./_components/ContentGallery";
+import CardAnimation from "@/components/animations/CardAnimation";
 
 const searchFilter = [
   {
@@ -123,30 +124,34 @@ const page = async ({
                   const galleryImage = content.key === "galleryImages";
                   if (keyPresent) {
                     return (
-                      <ContentOne
-                        index={i}
-                        key={i}
-                        searchData={response}
-                        title={content.title}
-                        description={content.description}
-                        designation={content.designation}
-                        initiativeName={content.initiativeName}
-                        image={content.image}
-                        organisationName={content.organisationName}
-                        video={content.video}
-                      />
+                      <CardAnimation delay={0.1} index={i} key={i}>
+                        <ContentOne
+                          index={i}
+                          key={i}
+                          searchData={response}
+                          title={content.title}
+                          description={content.description}
+                          designation={content.designation}
+                          initiativeName={content.initiativeName}
+                          image={content.image}
+                          organisationName={content.organisationName}
+                          video={content.video}
+                        />
+                      </CardAnimation>
                     );
                   }
                   if (galleryImage) {
                     return (
-                      <ContentGallery
-                        key={i}
-                        title={content.title}
-                        description={content.description}
-                        index={i}
-                        searchData={response}
-                        galleryImages={content.galleryImages}
-                      />
+                      <CardAnimation index={i} delay={0.05} key={i}>
+                        <ContentGallery
+                          key={i}
+                          title={content.title}
+                          description={content.description}
+                          index={i}
+                          searchData={response}
+                          galleryImages={content.galleryImages}
+                        />
+                      </CardAnimation>
                     );
                   }
                 })}

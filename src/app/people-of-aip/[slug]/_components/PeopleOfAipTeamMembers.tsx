@@ -5,6 +5,8 @@ import Bg1 from "@public/svg/people-of-aip/peachCurveRightTeamAip.svg";
 import OvalPeach from "@public/svg/ovalPeach.svg";
 import Bg2 from "@public/svg/people-of-aip/peachCurveLeftTeamAip.svg";
 import { TTeamMembers } from "@/api/type";
+import WordStaggerAnimation from "@/components/animations/WordStaggerAnimation";
+import TextStaggerAnimation from "@/components/animations/TextStaggerAnimation";
 
 // const TeamArray = [
 //   {
@@ -186,37 +188,56 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
       <div className="pt-[3rem] pb-[7rem] ">
         <div className="flex flex-col  justify-center ~px-[1.25rem]/[20.9rem] ~pb-[1.83rem]/[3.875rem] container mx-auto">
           {urlSlug === "experts" && (
-            <h2 className=" text-center ~text-h4/h2 ~leading-[2.6rem]/[3.3rem] text-textPurple font-playFairItalic">
-              Experts
-            </h2>
+            // <h2 className=" text-center ~text-h4/h2 ~leading-[2.6rem]/[3.3rem] text-textPurple font-playFairItalic">
+            //   Experts
+            // </h2>
+            <WordStaggerAnimation
+              text="<color>Experts</color>"
+              className="text-center ~text-h4/h2 ~leading-[2.6rem]/[3.3rem] text-textPurple font-playFairItalic"
+            />
           )}
           {urlSlug === "founders" && (
-            <h2 className=" text-center ~text-h4/h2 ~leading-[2.6rem]/[3.3rem] text-textPurple font-playFairItalic">
-              Founders
-            </h2>
+            <WordStaggerAnimation
+              text="<color>Founders</color>"
+              className="text-center ~text-h4/h2 ~leading-[2.6rem]/[3.3rem] text-textPurple font-playFairItalic"
+            />
           )}
           {urlSlug === "team-aip" && (
-            <h2 className=" text-center ~text-h4/h2 text-gray80 ~leading-[2.6rem]/[3.3rem] font-playFair">
-              Team{" "}
-              <span className="text-textPurple font-playFairItalic">AIP</span>
-            </h2>
+            // <h2 className=" text-center ~text-h4/h2 text-gray80 ~leading-[2.6rem]/[3.3rem] font-playFair">
+            //   Team{" "}
+            //   <span className="text-textPurple font-playFairItalic">AIP</span>
+            // </h2>
+            <WordStaggerAnimation
+              text="Team <color>AIP</color>"
+              className="text-center ~text-h4/h2 text-gray80 ~leading-[2.6rem]/[3.3rem] font-playFair"
+            />
           )}
           {urlSlug === "advisory-board" && (
-            <h2 className=" text-center ~text-h4/h2 text-gray80 ~leading-[2.6rem]/[3.3rem] font-playFair">
-              Advisory{" "}
-              <span className="text-textPurple font-playFairItalic">Board</span>
-            </h2>
+            // <h2 className=" text-center ~text-h4/h2 text-gray80 ~leading-[2.6rem]/[3.3rem] font-playFair">
+            //   Advisory{" "}
+            //   <span className="text-textPurple font-playFairItalic">Board</span>
+            // </h2>
+            <WordStaggerAnimation
+              text="Advisory <color>Board</color>"
+              className=" text-center ~text-h4/h2 text-gray80 ~leading-[2.6rem]/[3.3rem] font-playFair"
+            />
           )}
-          <p className="~pt-[2rem]/[1.25rem]  text-midGray text-center ~text-h9Copy5/h9Copy4 !leading-[1.225rem]/[1.4rem] max-[21rem]:px-[0.5rem]">
-            {urlSlug === "experts" &&
-              "Experts in the philanthropic sector are dedicated professionals who possess a deep understanding of social impact, community needs, and strategic giving. They leverage their expertise in areas like fundraising, program development, and resource allocation to drive meaningful change in underserved communities."}
-            {urlSlug === "founders" &&
-              "Experts in the philanthropic sector are dedicated professionals who possess a deep understanding of social impact, community needs, and strategic giving. They leverage their expertise in areas like fundraising, program development, and resource allocation to drive meaningful change in underserved communities."}
-            {urlSlug === "team-aip" &&
-              "It takes a village to raise a child. It takes a team to build an organisation that works toward a common aim: to inform, influence and inspire philanthropists and stakeholders, fostering a deeper understanding of how strategic philanthropy can address pressing social challenges."}
-            {urlSlug === "advisory-board" &&
-              "It takes a village to raise a child. It takes a team to build an organisation that works toward a common aim: to inform, influence and inspire philanthropists and stakeholders, fostering a deeper understanding of how strategic philanthropy can address pressing social challenges."}
-          </p>
+          <div className="~pt-[2rem]/[1.25rem]  text-midGray text-center ~text-h9Copy5/h9Copy4 !leading-[1.225rem]/[1.4rem] max-[21rem]:px-[0.5rem]">
+            <TextStaggerAnimation
+              text={
+                urlSlug === "experts"
+                  ? "Experts in the philanthropic sector are dedicated professionals who possess a deep understanding of social impact, community needs, and strategic giving. They leverage their expertise in areas like fundraising, program development, and resource allocation to drive meaningful change in underserved communities."
+                  : urlSlug === "founders"
+                  ? "founders in the philanthropic sector are dedicated professionals who possess a deep understanding of social impact, community needs, and strategic giving. They leverage their expertise in areas like fundraising, program development, and resource allocation to drive meaningful change in underserved communities."
+                  : urlSlug === "team-aip"
+                  ? "team-aip It takes a village to raise a child. It takes a team to build an organisation that works toward a common aim: to inform, influence and inspire philanthropists and stakeholders, fostering a deeper understanding of how strategic philanthropy can address pressing social challenges."
+                  : urlSlug === "advisory-board"
+                  ? " advisory-board It takes a village to raise a child. It takes a team to build an organisation that works toward a common aim: to inform, influence and inspire philanthropists and stakeholders, fostering a deeper understanding of how strategic philanthropy can address pressing social challenges."
+                  : ""
+              }
+              className="font-inter ~leading-[1.225rem]/[1.4rem] ~text-h9Copy5/h9Copy4 text-center text-gray80 ~pt-[2rem]/[1.25rem] ~px-[1rem]/0"
+            />
+          </div>
         </div>
         {teamMembers?.map((items, i) => {
           const position = i % 12;

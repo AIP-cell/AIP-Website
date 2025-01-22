@@ -3,6 +3,7 @@ import { TGalleryImages } from "@/api/type";
 import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 import CardAnimation from "@/components/animations/CardAnimation";
 import FadeInAnimation from "@/components/animations/FadeInAnimation";
+import TextStaggerAnimation from "@/components/animations/TextStaggerAnimation";
 import LeftSlickArrowSvg from "@/components/svg/LeftSlickArrowSvg";
 import RightSlickArrowSvg from "@/components/svg/RightSlickArrowSvg";
 import { StorageUrl } from "@/utils/BaseUrl";
@@ -38,9 +39,13 @@ const GalleryImages = ({ galleryImages }: Props) => {
   };
   return (
     <div className="~pt-[6rem]/[6.175rem] ~pb-[5rem]/0">
-      <h2 className="~text-h4/h2 text-gray80 ~leading-[2.6rem]/[3.3rem] font-playFair !text-center w-full ~pb-[1.25rem]/[5rem]">
+      {/* <h2 className="~text-h4/h2 text-gray80 ~leading-[2.6rem]/[3.3rem] font-playFair !text-center w-full ~pb-[1.25rem]/[5rem]">
         Images
-      </h2>
+      </h2> */}
+      <TextStaggerAnimation
+        text="Images"
+        className="~text-h4/h2 text-gray80 ~leading-[2.6rem]/[3.3rem] font-playFair !text-center w-full ~pb-[1.25rem]/[5rem]"
+      />
       <div className="relative w-full flex flex-col items-center justify-center">
         <div className="absolute bottom-[-2rem] md:bottom-auto gap-[1.25rem] w-full flex justify-center md:justify-between">
           <ButtonAnimation

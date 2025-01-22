@@ -5,6 +5,7 @@ import JoinCirclesOne from "@public/svg/about/circlesPeach.svg";
 import JoinCirclesRight from "@public/svg/about/aip-founder-network/JoinCirclesRight.svg";
 import PeachLeftSemiCircle from "@public/svg/about/philanthropist-network/leftCircles.svg";
 import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
+import TextStaggerAnimation from "@/components/animations/TextStaggerAnimation";
 
 const JoinTheFlow = () => {
   return (
@@ -26,12 +27,16 @@ const JoinTheFlow = () => {
       /> */}
       <div className="relative container mx-auto">
         <div className="relative flex flex-col items-center justify-center ~pt-[7.5rem]/[8.43rem]">
-          <h2 className="font-playFair text-gray80 ~text-h4/h2 ~leading-[2.6rem]/[3.3rem]">
+          {/* <h2 className="font-playFair text-gray80 ~text-h4/h2 ~leading-[2.6rem]/[3.3rem]">
             <span className="text-textPurple font-playFairItalic">
               Join
             </span>{" "}
             The Flow
-          </h2>
+          </h2> */}
+          <TextStaggerAnimation
+          text="<color>Join</color> The Flow"
+          className="font-playFair text-gray80 ~text-h4/h2 ~leading-[2.6rem]/[3.3rem]"
+        />
           <p className="text-midGray text-center ~px-[2.813rem]/[20.94rem] ~pt-[1rem]/[1.25rem] ~leading-[1.225rem]/[1.4rem] ~text-h9Copy5/h9Copy4">
             We invite you to join our Core Founders, Founders, and our growing
             network of philanthropists and sector experts to see strategic

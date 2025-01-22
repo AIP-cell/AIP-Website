@@ -1,4 +1,5 @@
 import CardAnimation from "@/components/animations/CardAnimation";
+import TextStaggerAnimation from "@/components/animations/TextStaggerAnimation";
 import OvalPurple from "@/components/ovals/OvalPurple";
 import cn from "@/utils/tailwind";
 import CurveBg from "@public/svg/about/aip-impact/caseStudyPeachCurve.svg";
@@ -42,13 +43,14 @@ const AipAndExperts = () => {
         className="hidden lg:block absolute  bottom-[-12rem]  right-0"
       />
       <div className="~pt-[4.5rem]/[6.688rem] ~pb-0/[5rem] container mx-auto">
-        <h1 className="~text-h4/h2 ~leading-[2.6rem]/[3.3rem] font-playFair text-center w-full">
+        {/* <h1 className="~text-h4/h2 ~leading-[2.6rem]/[3.3rem] font-playFair text-center w-full">
           AIP
           <span className="font-playFairItalic text-textPurple">
             &nbsp;&&nbsp;
           </span>
           Experts
-        </h1>
+        </h1> */}
+        <TextStaggerAnimation text="AIP <color>&</color> Experts" className="~text-h4/h2 ~leading-[2.6rem]/[3.3rem] font-playFair text-center w-full"/>
         <div className="~px-[1.25rem]/[14.375rem] flex flex-col w-full items-center ~gap-[0.7rem]/[1rem] ~pt-[0.75rem]/[2.5rem] text-center">
           <p className="text-midGray ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]">
             Experts play a vital role in AIP’s mission by contributing their

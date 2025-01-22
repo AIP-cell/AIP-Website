@@ -12,6 +12,9 @@ import InnerCollaborationsVideo from "@/app/our-work/collaborations/[slug]/_comp
 import { TCuratedResourcesInner } from "@/api/type";
 import { StorageUrl } from "@/utils/BaseUrl";
 import Link from "next/link";
+import WordStaggerAnimation from "@/components/animations/WordStaggerAnimation";
+import FadeInAnimation from "@/components/animations/FadeInAnimation";
+import TextStaggerAnimation from "@/components/animations/TextStaggerAnimation";
 
 type Props = {
   innerData?: TCuratedResourcesInner;
@@ -50,9 +53,12 @@ const InnerExpertsSectionOne = ({ innerData, params }: Props) => {
           <div className="col-span-2 flex flex-col ~gap-[2rem]/[2.5rem]  ~pe-0/[6.563rem]">
             <div>
               <div className="font-playFair">
-                <p className="leading-[3.25rem] tracking-[-.04rem] text-h3 text-midGray ">
-                  {innerData?.title}
-                </p>
+                <FadeInAnimation delay={0.1} y1={0} y2={20}>
+                  <p className="leading-[3.25rem] tracking-[-.04rem] text-h3 text-midGray ">
+                    {innerData?.title}
+                  </p>
+                </FadeInAnimation>
+
                 {innerData?.expertName && (
                   <p className="font-medium  leading-[1.75rem]  font-playFair text-h5 text-gray80 pt-[1rem]">
                     By{" "}
@@ -66,9 +72,11 @@ const InnerExpertsSectionOne = ({ innerData, params }: Props) => {
                   {/* Reports | Fields */}
                 </p>
               </div>
-              <p className="font-inter leading-[1.4rem]  text-midGray  pt-[1rem] ~pr-0/[3rem]">
-                {innerData?.description}
-              </p>
+              <FadeInAnimation delay={0.2} x1={-20} x2={0}>
+                <p className="font-inter leading-[1.4rem]  text-midGray  pt-[1rem] ~pr-0/[3rem]">
+                  {innerData?.description}
+                </p>
+              </FadeInAnimation>
             </div>
             <div className="block xl:hidden ">
               <div className="relative w-full h-[30.89rem]">
@@ -123,14 +131,16 @@ const InnerExpertsSectionOne = ({ innerData, params }: Props) => {
             )}
           </div>
           <div className="hidden xl:block pt-[5rem]">
-            <div className="relative  w-[25rem] h-[35.313rem]">
-              <Image
-                src={StorageUrl + innerData?.image}
-                className="object-cover"
-                fill
-                alt="image"
-              />
-            </div>
+            <FadeInAnimation delay={0.1} x1={-20} x2={0}>
+              <div className="relative  w-[25rem] h-[35.313rem]">
+                <Image
+                  src={StorageUrl + innerData?.image}
+                  className="object-cover"
+                  fill
+                  alt="image"
+                />
+              </div>
+            </FadeInAnimation>
           </div>
         </div>
         {innerData?.linkOrVideo && (

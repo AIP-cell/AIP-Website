@@ -37,6 +37,7 @@ const CareerPage = async () => {
             <p className="~pt-[5rem]/[12.5rem] text-darkBlack text-center tracking-[0.04rem] ~text-h4/h2 ~leading-[2.6rem]/[3.3rem] font-playFair">
               Testimonials
             </p>
+            
             <TestimonialSlick slickArray={testimonials} />
           </div>
         )}

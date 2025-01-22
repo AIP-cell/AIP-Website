@@ -5,6 +5,7 @@ import SmallBg from "@public/svg/careerHeroSvg.svg";
 
 import OvalPurple from "@public/svg/ovalPurple.svg";
 import React from "react";
+import WordStaggerAnimation from "@/components/animations/WordStaggerAnimation";
 
 const CareersHeroSection = () => {
   return (
@@ -28,11 +29,15 @@ const CareersHeroSection = () => {
             alt=""
             className="absolute ~bottom-[4rem]/[2rem] size-[10rem] md:size-auto ~right-0/[7.8rem]"
           />
-          <p className=" ~px-5/[13.313rem] ~pt-[3.5rem]/[7.5rem] ~pb-[15rem]/[21.531rem] ~text-h4/h1 text-gray80 ~leading-[2.6rem]/[3.713rem] font-playFair tracking-[-.04rem]">
+          {/* <p className=" ~px-5/[13.313rem] ~pt-[3.5rem]/[7.5rem] ~pb-[15rem]/[21.531rem] ~text-h4/h1 text-gray80 ~leading-[2.6rem]/[3.713rem] font-playFair tracking-[-.04rem]">
             <span className="font-playFairItalic text-textPurple">
               Inspiring. Supportive. Inclusive. Innovative. Growing.
             </span>
-          </p>
+          </p> */}
+          <WordStaggerAnimation
+            text="<color>Inspiring. Supportive. Inclusive. Innovative. Growing.</color>"
+            className="~px-5/[13.313rem] ~pt-[3.5rem]/[7.5rem] ~pb-[15rem]/[21.531rem] ~text-h4/h1 text-gray80 ~leading-[2.6rem]/[3.713rem] font-playFair tracking-[-.04rem]"
+          />
         </div>
       </div>
     </div>

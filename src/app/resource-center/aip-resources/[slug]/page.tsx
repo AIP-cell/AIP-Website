@@ -9,6 +9,8 @@ import CustomFilter from "@/components/custom/CustomFilter";
 import ResourcesTabAndSelect from "../../_components/ResourcesTabAndSelect";
 import { notFound } from "next/navigation";
 import DateFilter from "@/components/custom/DatePick";
+import WordStaggerAnimation from "@/components/animations/WordStaggerAnimation";
+import CardAnimation from "@/components/animations/CardAnimation";
 
 const tabList = [
   {
@@ -298,9 +300,13 @@ const AipResourcesInnerPage = async ({
             linkThree={`/resource-center/aip-resources/${param.slug}`}
           />
           <div className="max-w-[51.188rem] ~pt-[4.3rem]/[5rem] ~pb-[2.5rem]/[4rem]">
-            <p className="font-playFair leading-[3.3rem] ~text-h4/[3rem] text-gray80">
+            {/* <p className="font-playFair leading-[3.3rem] ~text-h4/[3rem] text-gray80">
               AIP Resources
-            </p>
+            </p> */}
+            <WordStaggerAnimation
+              text="AIP Resources"
+              className="font-playFair leading-[3.3rem] ~text-h4/[3rem] text-gray80"
+            />
           </div>
         </div>
         <ResourcesTabAndSelect
@@ -337,22 +343,24 @@ const AipResourcesInnerPage = async ({
         {response.length != 0 && (
           <div className="pt-[3.25rem] grid md:grid-cols-2 lg:grid-cols-3 gap-[4.5rem]">
             {response?.map((item, i) => (
-              <ResourceCard
-                city={item.city}
-                linkKey={item?.key}
-                index={i}
-                slug={item?.slug}
-                isLinkOrPdf={item?.isLinkOrPdf}
-                file={item?.file}
-                fileLink={item?.fileLink}
-                key={i}
-                src={item?.image}
-                title={item?.title}
-                desc={item?.description}
-                category={item?.domain}
-                domain={item?.domain}
-                date={item?.date}
-              />
+              <CardAnimation index={i} delay={0.1} key={i}>
+                <ResourceCard
+                  city={item.city}
+                  linkKey={item?.key}
+                  index={i}
+                  slug={item?.slug}
+                  isLinkOrPdf={item?.isLinkOrPdf}
+                  file={item?.file}
+                  fileLink={item?.fileLink}
+                  key={i}
+                  src={item?.image}
+                  title={item?.title}
+                  desc={item?.description}
+                  category={item?.domain}
+                  domain={item?.domain}
+                  date={item?.date}
+                />
+              </CardAnimation>
             ))}
           </div>
         )}

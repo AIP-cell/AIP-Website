@@ -72,7 +72,7 @@ const ResourceCard = ({
       <div className="relative w-full ~h-[19.688rem]/[16.594rem]">
         <Image
           src={src ? StorageUrl + src : "/images/resourceCardThumbnail.png"}
-          alt="svg"
+          alt="image"
           fill
           className="object-cover rounded-[1.25rem]"
         />

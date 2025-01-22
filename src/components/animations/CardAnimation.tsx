@@ -25,6 +25,7 @@ const CardAnimation = ({ children, className, index, delay }: Props) => {
             delay: delay * index,
             ease: "easeInOut",
             // duration: 0.8,
+            // ease: [0.8, 0.5, 0.22, 1],
           },
         }),
       }}

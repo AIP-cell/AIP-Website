@@ -1,3 +1,6 @@
+import CardAnimation from "@/components/animations/CardAnimation";
+import TextStaggerAnimation from "@/components/animations/TextStaggerAnimation";
+import WordStaggerAnimation from "@/components/animations/WordStaggerAnimation";
 import ImgTitleDescVer from "@/components/cards/ImgTitleDescVer";
 import React from "react";
 const threeIs = [
@@ -20,23 +23,29 @@ const threeIs = [
 const ShapeTheFlow = () => {
   return (
     <div className="container mx-auto  ~pt-[5rem]/[12.5rem] ~pb-[5rem]/[7.5rem] ~px-[2.938rem]/[7.8rem] relative">
-      <h3 className="~text-h4/h2 font-playFair text-center text-gray80">
+      {/* <h3 className="~text-h4/h2 font-playFair text-center text-gray80">
         <span className="text-textPurple font-playFairItalic">Shape</span>
         &nbsp;The Flow
-      </h3>
+      </h3> */}
+      <WordStaggerAnimation
+        text="Shape <color>The Flow</color>"
+        className="~text-h4/h2 font-playFair text-center text-gray80"
+      />
       <p className="text-midGray text-center ~pt-[0.75rem]/[1.25rem] ~leading-[1.225rem]/[1.4rem]">
         Our commitment towards philanthropy that define our role in the journey
       </p>
       <div className="~pt-10/[5rem] flex flex-col lg:flex-row  ~gap-[1.25rem]/[4.56rem]">
         {threeIs.map((item, i) => (
-          <ImgTitleDescVer
-            key={i}
-            src={item.src}
-            title={item.title}
-            titleClassName="font-playFairItalic !text-gray80"
-            descClassName="~px-[1.15rem]/[0.5rem]"
-            desc={item.desc}
-          />
+          <CardAnimation delay={0.2} index={i} key={i}>
+            <ImgTitleDescVer
+              key={i}
+              src={item.src}
+              title={item.title}
+              titleClassName="font-playFairItalic !text-gray80"
+              descClassName="~px-[1.15rem]/[0.5rem]"
+              desc={item.desc}
+            />
+          </CardAnimation>
         ))}
       </div>
     </div>

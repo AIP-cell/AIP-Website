@@ -8,6 +8,7 @@ import { StorageUrl } from "@/utils/BaseUrl";
 import FinancialTabAndResp from "./FinancialTabAndResp";
 import CardAnimation from "@/components/animations/CardAnimation";
 import { Api } from "@/api/Api";
+import TextStaggerAnimation from "@/components/animations/TextStaggerAnimation";
 
 type Props = {
   filterDataByYear: TReports | undefined;
@@ -33,9 +34,10 @@ const FinancialContent = ({
         />
         <div className=" w-full ~pt-[2.5rem]/[5rem]">
           <div className="flex flex-col gap-[3rem] ~px-[1.25rem]/[14.375rem] ~pb-[3.875rem]/[7.5rem]">
-            <p className="text-center font-playFair ~text-h4a/h2 ~leading-[2.113rem]/[2.6rem] tracking-[-0.02rem] text-gray80">
+            {/* <p className="text-center font-playFair ~text-h4a/h2 ~leading-[2.113rem]/[2.6rem] tracking-[-0.02rem] text-gray80">
               FY {currentYear}
-            </p>
+            </p> */}
+            <TextStaggerAnimation text={`FY ${currentYear}`} className="text-center font-playFair ~text-h4a/h2 ~leading-[2.113rem]/[2.6rem] tracking-[-0.02rem] text-gray80"/>
             <div>
               {filterDataByYear?.financialReports.map((data, index) => (
                 <CardAnimation key={index} index={index} delay={0.1}>

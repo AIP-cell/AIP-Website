@@ -1,16 +1,18 @@
 import Image from "next/image";
 import React from "react";
 import ASvg from "@public/images/aSample.png";
+import TextStaggerAnimation from "@/components/animations/TextStaggerAnimation";
 const JourneySoFar = () => {
   return (
     <div className="flex flex-col items-center w-full container mx-auto ~pt-[5rem]/[10rem]">
-      <h2 className="text-gray80 font-playFair ~text-h4/h2 ~leading-[2.6rem]/[3.3rem] ">
+      {/* <h2 className="text-gray80 font-playFair ~text-h4/h2 ~leading-[2.6rem]/[3.3rem] ">
         The
         <span className="font-playFairItalic text-textPurple">
           &nbsp;Journey
         </span>
         &nbsp; So Far
-      </h2>
+      </h2> */}
+      <TextStaggerAnimation text="The <color>Journey</color> So Far" className="text-gray80 font-playFair ~text-h4/h2 ~leading-[2.6rem]/[3.3rem] "/>
       <div className="flex flex-col md:flex-row ~gap-[2rem]/[6.563rem] ~pl-[1.25rem]/[6.121rem] ~pr-[1.25rem]/[9.563rem] pt-[3.5rem]">
         <Image
           src={ASvg}

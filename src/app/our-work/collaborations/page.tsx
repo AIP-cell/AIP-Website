@@ -9,6 +9,7 @@ import { Api } from "@/api/Api";
 import { TCollaborationPageData } from "@/api/type";
 import { notFound } from "next/navigation";
 import DateFilter from "@/components/custom/DatePick";
+import FadeInAnimation from "@/components/animations/FadeInAnimation";
 
 const filterDatas = [
   {
@@ -76,20 +77,24 @@ const page = async ({
             textTwo="Collaborations"
             linkTwo="/our-work/collaborations"
           />
-          <p className="font-inter ~text-h9Copy5/h9Copy4  font-semibold uppercase ~leading-[1.138rem]/[1.3rem] text-purple40">
-            Collaborations
-          </p>
-          <div className="~leading-[2.113rem]/[2.6rem] font-playFair ~text-h4a/h4 text-gray80 pt-5 ~pb-0/[4.9rem] md:tracking-[-0.02rem]">
-            <div className="">
-              Collaborative philanthropy is a powerful catalyst for change.
-              <div className="inline md:block ">
-                When we unite our resources and expertise, we pave the way for
-                resilient interventions to tackle pressing challenges. Engaging
-                with AIP&apos;s talented network has helped foster a sense of
-                shared purpose in driving transformative change.
+          <FadeInAnimation delay={0.1} y1={20} y2={0}>
+            <p className="font-inter ~text-h9Copy5/h9Copy4  font-semibold uppercase ~leading-[1.138rem]/[1.3rem] text-purple40">
+              Collaborations
+            </p>
+          </FadeInAnimation>
+          <FadeInAnimation delay={0.1} x1={-20} x2={0}>
+            <div className="~leading-[2.113rem]/[2.6rem] font-playFair ~text-h4a/h4 text-gray80 pt-5 ~pb-0/[4.9rem] md:tracking-[-0.02rem]">
+              <div className="">
+                Collaborative philanthropy is a powerful catalyst for change.
+                <div className="inline md:block ">
+                  When we unite our resources and expertise, we pave the way for
+                  resilient interventions to tackle pressing challenges.
+                  Engaging with AIP&apos;s talented network has helped foster a
+                  sense of shared purpose in driving transformative change.
+                </div>
               </div>
             </div>
-          </div>
+          </FadeInAnimation>
           <div className="flex flex-wrap ~pt-[3.25rem]/0 items-center gap-[0.75rem]">
             <p className=" text-gray40  ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]">
               Filter by:

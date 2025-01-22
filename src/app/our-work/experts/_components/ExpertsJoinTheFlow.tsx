@@ -5,6 +5,7 @@ import JoinCirclesOne from "@public/svg/about/circlesPeach.svg";
 import JoinCirclesRight from "@public/svg/about/aip-founder-network/JoinCirclesRight.svg";
 import PeachLeftSemiCircle from "@public/svg/about/philanthropist-network/leftCircles.svg";
 import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
+import TextStaggerAnimation from "@/components/animations/TextStaggerAnimation";
 
 const ExpertsJoinTheFlow = () => {
   return (
@@ -25,13 +26,14 @@ const ExpertsJoinTheFlow = () => {
         className="hidden lg:block absolute top-[1rem] right-0 w-[15.313rem] h-[15.125rem]"
       />
       <div className="relative container mx-auto">
-        <div className="relative flex flex-col items-center justify-center ~pt-0/[8.43rem]">
-          <h2 className="font-playFair text-gray80 ~text-h4/h2 ~leading-[2.6rem]/[3.3rem]">
+        <div className="relative flex flex-col items-center justify-center ">
+          {/* <h2 className="font-playFair text-gray80 ~text-h4/h2 ~leading-[2.6rem]/[3.3rem]">
             <span className="text-textPurple font-playFairItalic">
               Join
             </span>{" "}
             The Flow
-          </h2>
+          </h2> */}
+          <TextStaggerAnimation text="<color>Join</color> The Flow" className="font-playFair text-gray80 ~text-h4/h2 ~leading-[2.6rem]/[3.3rem]"/>
           <p className="text-midGray ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] text-center ~px-5/[20.94rem] ~pt-[1rem]/[2.5rem]">
             At AIP, experts are not just contributors—they are partners in the
             journey of transforming philanthropy to build a better future for

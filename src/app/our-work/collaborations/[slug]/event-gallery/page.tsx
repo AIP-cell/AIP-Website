@@ -10,6 +10,7 @@ import GalleryImages from "./_components/GalleryImages";
 import { Api } from "@/api/Api";
 import { TGalleryCollaboration } from "@/api/type";
 import { notFound } from "next/navigation";
+import FadeInAnimation from "@/components/animations/FadeInAnimation";
 
 export const dynamic = "force-dynamic";
 const getOneGalleryCollaborationsApi = async (
@@ -56,12 +57,16 @@ const page = async ({
             textFour="Event Gallery"
             linkFour={`/our-work/collaborations/${asyncParam}/event-gallery`}
           />
-          <p className="font-inter  font-semibold uppercase ~text-h9Copy5/h9Copy4 ~leading-[1.138rem]/[1.3rem] text-purple40">
-           {response?.title}
-          </p>
-          <p className="~leading-[2.113rem]/[2.6rem] font-playFair ~text-h4a/h4 text-gray80 pt-5 ~pb-0/[5rem] md:tracking-[-0.02rem]">
-            {response?.description}
-          </p>
+         <FadeInAnimation delay={0.1} y1={20} y2={0}>
+            <p className="font-inter  font-semibold uppercase ~text-h9Copy5/h9Copy4 ~leading-[1.138rem]/[1.3rem] text-purple40">
+             {response?.title}
+            </p>
+         </FadeInAnimation>
+          <FadeInAnimation delay={0.1} x1={-20} x2={0} >
+            <p className="~leading-[2.113rem]/[2.6rem] font-playFair ~text-h4a/h4 text-gray80 pt-5 ~pb-0/[5rem] md:tracking-[-0.02rem]">
+              {response?.description}
+            </p>
+          </FadeInAnimation>
           {galleryVideos && galleryVideos.length != 0 && (
             <GalleryVideos galleryVideos={galleryVideos} />
           )}

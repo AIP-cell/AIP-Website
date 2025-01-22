@@ -2,6 +2,7 @@
 import { TMedia } from "@/api/type";
 import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 import CardAnimation from "@/components/animations/CardAnimation";
+import TextStaggerAnimation from "@/components/animations/TextStaggerAnimation";
 import MediaCard from "@/components/cards/MediaCard";
 import LeftSlickArrowSvg from "@/components/svg/LeftSlickArrowSvg";
 import RightSlickArrowSvg from "@/components/svg/RightSlickArrowSvg";
@@ -58,9 +59,10 @@ const Media = ({ media }: Props) => {
   const mediaArrayLength = media.length;
   return (
     <div className="~pt-[5rem]/[7.53rem] overflow-hidden ">
-      <div className="text-center font-playFair  ~leading-[2.6rem]/[3.3rem] tracking-[-.04rem] ~text-h4/h2 text-gray80">
+      {/* <div className="text-center font-playFair  ~leading-[2.6rem]/[3.3rem] tracking-[-.04rem] ~text-h4/h2 text-gray80">
         In the Media
-      </div>
+      </div> */}
+      <TextStaggerAnimation text="In the Media" className="text-center font-playFair  ~leading-[2.6rem]/[3.3rem] tracking-[-.04rem] ~text-h4/h2 text-gray80"/>
       <Carousel
         opts={{
           align: "start",

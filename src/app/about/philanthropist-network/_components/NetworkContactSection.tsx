@@ -1,5 +1,6 @@
 import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 import CardAnimation from "@/components/animations/CardAnimation";
+import TextStaggerAnimation from "@/components/animations/TextStaggerAnimation";
 import BgButton from "@/components/buttons/BgButton";
 import TitleDescCard from "@/components/cards/TitleDescCard";
 import MailSvg from "@/components/svg/MailSvg";
@@ -31,12 +32,16 @@ const itemsArray = [
 const NetworkContactSection = () => {
   return (
     <div className="flex flex-col items-center pt-[6rem] pb-[1rem] container mx-auto">
-      <h2 className="~text-h4/h2 text-center ~leading-[2.6rem]/[3.3rem] text-gray80 font-playFair">
+      {/* <h2 className="~text-h4/h2 text-center ~leading-[2.6rem]/[3.3rem] text-gray80 font-playFair">
         Reason to
         <span className="text-textPurple font-playFairItalic">
           &nbsp;Connect
         </span>
-      </h2>
+      </h2> */}
+      <TextStaggerAnimation
+          text="Reason to <color>Connect</color>"
+          className="~text-h4/h2 text-center ~leading-[2.6rem]/[3.3rem] text-gray80 font-playFair"
+        />
       <p className="~leading-[1.225rem]/[1.4rem] ~text-h9Copy5/h9Copy4 ~pt-[2rem]/[2.5rem] ~px-[2.813rem]/[15.813rem] text-center">
         We believe in dedicating to an independent, sector agnostic, and deeply
         focused approach, personally catering to how one defines their

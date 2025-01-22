@@ -1,3 +1,5 @@
+import TextStaggerAnimation from "@/components/animations/TextStaggerAnimation";
+import WordStaggerAnimation from "@/components/animations/WordStaggerAnimation";
 import BreadCrump from "@/components/bread-crump/BreadCrump";
 import React from "react";
 import Wave from "react-wavify";
@@ -62,10 +64,19 @@ const NpoHeroSection = () => {
 
         <div className=" bg-[#b861b4a6] ~pt-[3rem]/[6.25rem] ~pb-[3rem]/[7.6rem] w-full ">
           <div className="container mx-auto flex justify-center flex-col items-center relative z-50 ~px-5/[9rem] ">
-            <h3 className=" ~leading-[1.129rem]/[1.29rem] ~text-h9Copy5/h9Copy4 uppercase font-inter text-white/60 font-semibold">
+            {/* <h3 className=" ~leading-[1.129rem]/[1.29rem] ~text-h9Copy5/h9Copy4 uppercase font-inter text-white/60 font-semibold">
               NPOs & Philanthropy
-            </h3>
-            <h2 className="pt-[1.25rem] tracking-[-1px] text-center ~text-h4a/h3 ~leading-[2.113rem]/[2.6rem] font-playFair text-white">
+            </h3> */}
+            <TextStaggerAnimation text="NPOs & Philanthropy" className="~leading-[1.129rem]/[1.29rem] ~text-h9Copy5/h9Copy4 uppercase font-inter text-white/60 font-semibold"/>
+            <WordStaggerAnimation text="In India, the vast number of non-profit organizations (NPOs) can
+              make it challenging for philanthropists to discover credible and
+              impactful partners for their giving initiatives. With over 30 lakh
+              NPOs operating across the country, the process of identifying
+              organizations that align with strategic philanthropic goals can be
+              overwhelming. This structural gap in the discovery of reliable
+              NPOs often hinders effective philanthropy."
+              className="pt-[1.25rem] tracking-[-1px] text-center ~text-h4a/h3 ~leading-[2.113rem]/[2.6rem] font-playFair text-white"/>
+            {/* <h2 className="pt-[1.25rem] tracking-[-1px] text-center ~text-h4a/h3 ~leading-[2.113rem]/[2.6rem] font-playFair text-white">
               In India, the vast number of non-profit organizations (NPOs) can
               make it challenging for philanthropists to discover credible and
               impactful partners for their giving initiatives. With over 30 lakh
@@ -73,7 +84,7 @@ const NpoHeroSection = () => {
               organizations that align with strategic philanthropic goals can be
               overwhelming. This structural gap in the discovery of reliable
               NPOs often hinders effective philanthropy.
-            </h2>
+            </h2> */}
           </div>
         </div>
         <Wave

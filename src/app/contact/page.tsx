@@ -9,6 +9,8 @@ import Image from "next/image";
 import BreadCrump from "@/components/bread-crump/BreadCrump";
 import LocationSvg from "@/components/svg/LocationSvg";
 import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
+import WordStaggerAnimation from "@/components/animations/WordStaggerAnimation";
+import FadeInAnimation from "@/components/animations/FadeInAnimation";
 
 const page = () => {
   return (
@@ -23,18 +25,27 @@ const page = () => {
           <div className=" pt-[5rem] grid md:grid-cols-2">
             <BreadCrump textOne="Contacts" linkOne="/contact" />
             <div className=" ">
-              <p className="font-playFair ~text-h4/h3 leading-[3.3rem]">
+              {/* <p className="font-playFair ~text-h4/h3 leading-[3.3rem]">
                 Get in Touch
-              </p>
-              <p className="font-inter text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] pt-[1.25rem]  text-midGray md:text-gray60">
-                Please fill the form below to connect with a specific office or
-                department that can best meet your needs. Need to talk to our
-                team, please use the below information to connect with them.
-              </p>
+              </p> */}
+              <WordStaggerAnimation
+                text="Get in Touch"
+                className="font-playFair ~text-h4/h3 leading-[3.3rem]"
+              />
+              <FadeInAnimation delay={0.1} x1={-20} x2={0}>
+                <p className="font-inter text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] pt-[1.25rem]  text-midGray md:text-gray60">
+                  Please fill the form below to connect with a specific office
+                  or department that can best meet your needs. Need to talk to
+                  our team, please use the below information to connect with
+                  them.
+                </p>
+              </FadeInAnimation>
             </div>
           </div>
           <div className="~pt-[2.5rem]/[1.813rem]">
-            <Form />
+            <FadeInAnimation x1={-20} x2={0} delay={0.1}>
+              <Form />
+            </FadeInAnimation>
           </div>
 
           {/* <div className="hidden md:block">
@@ -88,9 +99,11 @@ const page = () => {
               </div>
             </div>
             <div className="lg:pl-[7.875rem] flex flex-col gap-5 ~pt-20/14 justify-end">
-              <h2 className=" font-playFairItalic text-h4 leading-[2.6rem] text-gray50">
-                Reach us at
-              </h2>
+              <FadeInAnimation delay={0.1} x1={20} x2={0}>
+                <h2 className=" font-playFairItalic text-h4 leading-[2.6rem] text-gray50">
+                  Reach us at
+                </h2>
+              </FadeInAnimation>
               <div className="~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] flex flex-col text-midGray">
                 <span className="font-bold">
                   Foundation For Accelerating Philanthropy

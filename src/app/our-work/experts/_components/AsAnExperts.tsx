@@ -1,16 +1,18 @@
 import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
+import TextStaggerAnimation from "@/components/animations/TextStaggerAnimation";
 import OutlineButton from "@/components/buttons/OutlineButton";
 import React from "react";
 
 const AsAnExperts = () => {
   return (
-    <div className="~pt-[7.5rem]/[10.124rem]  container mx-auto ~px-[1.25rem]/[14.375rem] flex flex-col items-center">
-      <h2 className="~text-h4/h2 ~leading-[2.6rem]/[3.3rem] font-playFair text-center text-gray80">
+    <div className="~pt-[7.5rem]/[10.124rem]  container mx-auto ~px-[1.25rem]/[14.375rem] flex flex-col items-center relative z-50">
+      {/* <h2 className="~text-h4/h2 ~leading-[2.6rem]/[3.3rem] font-playFair text-center text-gray80">
         <span className="font-playFairItalic text-textPurple">
           Partner&nbsp;
         </span>
         as an Expert
-      </h2>
+      </h2> */}
+      <TextStaggerAnimation text="<color>Partner</color> as an Expert" className="~text-h4/h2 ~leading-[2.6rem]/[3.3rem] font-playFair text-center text-gray80"/>
       <div className="~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] text-midGray flex flex-col  ~gap-[0.7rem]/[1rem] ~pt-[1rem]/[2.5rem] text-center">
         <p>
           AIP is expanding its panel of subject-matter experts. If you’re a

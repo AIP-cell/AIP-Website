@@ -10,6 +10,7 @@ import XSvg from "@/components/svg/XSvg";
 import YoutubeSvg from "@/components/svg/YoutubeSvg";
 import { TOneProjectPrograms, TProjectPrograms } from "@/api/type";
 import { StorageUrl } from "@/utils/BaseUrl";
+import FadeInAnimation from "@/components/animations/FadeInAnimation";
 
 type Props = {
   heroSectionData: TOneProjectPrograms;
@@ -29,14 +30,17 @@ const InnerSectionOne = ({ heroSectionData }: Props) => {
           textTwo="Projects and Programs"
           linkTwo="/our-work/projects-and-programs"
           textThree={heroSectionData?.title}
-          linkThree='#'
+          linkThree="#"
         />
         <div className="grid md:grid-cols-3 gap-5">
           <div className="col-span-2 flex flex-col ~gap-[2rem]/[2.5rem]  ~pr-0/[6.563rem]">
             <div className="font-playFair">
-              <p className="~leading-[2.6rem]/[3.3rem] tracking-[-.04rem] ~text-h4/h2 text-midGray">
-                {heroSectionData?.title}
-              </p>
+              <FadeInAnimation delay={0.1} x1={-20} x2={0}>
+                <p className="~leading-[2.6rem]/[3.3rem] tracking-[-.04rem] ~text-h4/h2 text-midGray">
+                  {heroSectionData?.title}
+                </p>
+              </FadeInAnimation>
+
               <p className=" ~leading-[1.575rem]/[1.75rem] tracking-[-.02rem] font-playFairItalic ~text-h6M/h5 text-gray40 font-medium ~pt-[0.75rem]/4">
                 {heroSectionData?.category}
               </p>

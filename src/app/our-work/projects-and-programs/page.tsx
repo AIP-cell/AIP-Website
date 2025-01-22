@@ -9,6 +9,7 @@ import { TProjectPrograms } from "@/api/type";
 import { notFound } from "next/navigation";
 import DateFilter from "@/components/custom/DatePick";
 import CardAnimation from "@/components/animations/CardAnimation";
+import FadeInAnimation from "@/components/animations/FadeInAnimation";
 
 const filterDatas = [
   {
@@ -42,7 +43,15 @@ const filterDatas = [
   {
     type: "o_type",
     key: "organizationType",
-    filter: ["Organization Type1", "Organization Type2"],
+    filter: [
+      "Think Tanks",
+      "Academia",
+      "Foundations & other Philanthropy Orgs",
+      "Development & Multilateral Orgs",
+      "Governmental & Semi",
+      "Impact Consultancies",
+      "M&E Orgs",
+    ],
   },
   { type: "events", key: "events", filter: ["Events1", "Events2"] },
 ];
@@ -110,15 +119,19 @@ const page = async ({
             textTwo="Projects and Programs"
             linkTwo="/our-work/projects-and-programs"
           />
-          <p className=" ~text-h9Copy5/h9Copy4 font-inter font-semibold uppercase ~leading-[1.138rem]/[1.3rem] text-purple40">
-            Projects and Programs
-          </p>
-          <p className="~leading-[2.113rem]/[2.6rem] font-playFair ~text-h4a/h4 text-gray80 pt-5  md:tracking-[-0.02rem]">
-            Through our projects and programs, we inspire and influence each
-            other by sharing their motivations, knowledge, ideas and
-            experiences. All to enable shared learning and collaboration with
-            insights across sectors and effective giving.
-          </p>
+          <FadeInAnimation delay={0.1} y1={20} y2={0}>
+            <p className=" ~text-h9Copy5/h9Copy4 font-inter font-semibold uppercase ~leading-[1.138rem]/[1.3rem] text-purple40">
+              Projects and Programs
+            </p>
+          </FadeInAnimation>
+          <FadeInAnimation delay={0.1} x1={-20} x2={0}>
+            <p className="~leading-[2.113rem]/[2.6rem] font-playFair ~text-h4a/h4 text-gray80 pt-5  md:tracking-[-0.02rem]">
+              Through our projects and programs, we inspire and influence each
+              other by sharing their motivations, knowledge, ideas and
+              experiences. All to enable shared learning and collaboration with
+              insights across sectors and effective giving.
+            </p>
+          </FadeInAnimation>
           <div className="flex flex-wrap pt-[3.25rem] items-center gap-[0.75rem] pb-[3.25rem]">
             <p className=" text-gray40  ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]">
               Filter by:

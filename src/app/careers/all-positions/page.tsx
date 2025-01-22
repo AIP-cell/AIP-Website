@@ -9,6 +9,8 @@ import BreadCrump from "@/components/bread-crump/BreadCrump";
 import { Api } from "@/api/Api";
 import { TAllPositions } from "@/api/type";
 import { notFound } from "next/navigation";
+import FadeInAnimation from "@/components/animations/FadeInAnimation";
+import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 
 export const dynamic = "force-dynamic";
 const getCareersApi = async (page: string): Promise<TAllPositions> => {
@@ -51,18 +53,26 @@ const page = async ({
             textTwo="All Positions"
             linkTwo="/careers/all-positions"
           />
-          <p className="font-inter font-semibold uppercase ~text-h9Copy5/h9Copy4 ~leading-[1.138rem]/[1.3rem] text-purple40 tracking-[.02rem]">
-            All Positions
-          </p>
-          <p className="~leading-[2.113rem]/[2.6rem] font-playFair ~text-h4a/h4 text-gray80 pt-5 tracking-[0.02rem]">
-            See where you fit into the movement!{" "}
-          </p>
-          <p className="~leading-[2.113rem]/[2.6rem] font-playFair ~text-h4a/h4 text-gray80 ~pb-[7.3rem]/[5rem]">
-            Apply now. We’ll surely get back to you at the soonest.
-          </p>
+          <FadeInAnimation delay={0.1} y1={20} y2={0}>
+            <p className="font-inter font-semibold uppercase ~text-h9Copy5/h9Copy4 ~leading-[1.138rem]/[1.3rem] text-purple40 tracking-[.02rem]">
+              All Positions
+            </p>
+          </FadeInAnimation>
+          <FadeInAnimation delay={0.1} x1={-20} x2={0}>
+            <p className="~leading-[2.113rem]/[2.6rem] font-playFair ~text-h4a/h4 text-gray80 pt-5 tracking-[0.02rem]">
+              See where you fit into the movement!{" "}
+            </p>
+            <p className="~leading-[2.113rem]/[2.6rem] font-playFair ~text-h4a/h4 text-gray80 ~pb-[7.3rem]/[5rem]">
+              Apply now. We’ll surely get back to you at the soonest.
+            </p>
+          </FadeInAnimation>
 
           {response.jobs.length != 0 && (
-            <PositionsGrid data={response.jobs} totalPages={totalPages} totalCount={totalCount}/>
+            <PositionsGrid
+              data={response.jobs}
+              totalPages={totalPages}
+              totalCount={totalCount}
+            />
           )}
 
           <div className=" ~px-0/[6.563rem] ~pt-[2.5rem]/20 ~pb-[1.5rem]/[7.438rem] ">
@@ -71,12 +81,14 @@ const page = async ({
                 Can’t Find what you are looking for?
               </p>
               <p className="font-inter text-h9Copy5 leading-[1.4rem] pt-3 text-midGray">
-                Send in your resume and portfolio at
+                Send in your resume and portfolio at&nbsp;
                 <Link
                   href="mailto:careers@indianphilanthropy.org"
                   className="text-textPurple inline-block underline"
                 >
-                  &nbsp;careers@indianphilanthropy.org
+                  <ButtonAnimation className="inline-block underline">
+                    careers@indianphilanthropy.org
+                  </ButtonAnimation>
                 </Link>
               </p>
             </div>

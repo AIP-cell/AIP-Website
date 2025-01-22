@@ -1,5 +1,6 @@
 import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 import CardAnimation from "@/components/animations/CardAnimation";
+import TextStaggerAnimation from "@/components/animations/TextStaggerAnimation";
 import BgButton from "@/components/buttons/BgButton";
 import TitleDescCard from "@/components/cards/TitleDescCard";
 import DownloadFileSvg from "@/components/svg/DowloadFileSvg";
@@ -35,10 +36,15 @@ const GivingArchetype = () => {
     <div className="flex flex-col text-center w-full items-center ~pb-[5rem]/[7.56rem] container mx-auto relative">
       <div className="~px-[1.25rem]/[9.844rem]">
         <div className="font-playFair ~text-h4/h2 text-gray80 ~leading-[2.6rem]/[3.3rem]">
-          What&apos;s your
-          <h2 className="font-playFairItalic text-textPurple">
+        <TextStaggerAnimation text="What's your" className="" />
+          <TextStaggerAnimation
+            text="<color>Giving Architype?</color>"
+            className=""
+          />
+          {/* What&apos;s your */}
+          {/* <h2 className="font-playFairItalic text-textPurple">
             Giving Architype?
-          </h2>
+          </h2> */}
         </div>
 
         <p className=" ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]  ~px-[1.563rem]/[11rem] text-midGray ~pt-[1rem]/[2.5rem]">

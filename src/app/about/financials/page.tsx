@@ -6,6 +6,7 @@ import BreadCrump from "@/components/bread-crump/BreadCrump";
 import { Api } from "@/api/Api";
 import { TReports } from "@/api/type";
 import { notFound } from "next/navigation";
+import WordStaggerAnimation from "@/components/animations/WordStaggerAnimation";
 
 const getFinancialReportApi = async (): Promise<TReports[]> => {
   const response = await Api.getFinancialReport();
@@ -42,7 +43,8 @@ const page = async ({
               linkTwo="/about/financials"
             />
             <div className="~pb-0/[5rem]  ~text-h4/h2 ~leading-[2.6rem]/[3.3rem] font-playFair">
-              <p className=" text-gray80">Financial Reports & Certificates</p>
+              {/* <p className=" text-gray80">Financial Reports & Certificates</p> */}
+              <WordStaggerAnimation text="Financial Reports & Certificates" className="text-gray80"/>
             </div>
           </div>
           {response && (

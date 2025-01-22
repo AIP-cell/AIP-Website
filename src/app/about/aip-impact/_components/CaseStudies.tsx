@@ -1,5 +1,6 @@
 import { TCaseStudies } from "@/api/type";
 import CardSlideAnimation from "@/components/animations/CardSlideAnimation";
+import TextStaggerAnimation from "@/components/animations/TextStaggerAnimation";
 import CaseStudy from "@/components/cards/CaseStudy";
 import CurveBg from "@public/svg/about/aip-impact/caseStudyPeachCurve.svg";
 import Image from "next/image";
@@ -45,12 +46,16 @@ const CaseStudies = ({ bottomCaseStudyCurveSvg, caseStudyData }: Props) => {
         className="hidden lg:block absolute  bottom-[-2rem]  right-0"
       />
       <div className=" relative container mx-auto ~pt-[4.7rem]/[12.5rem]">
-        <h2 className="text-center ~text-h4/h2 ~leading-[2.6rem]/[3.3rem] text-darkBrown font-playFair">
+        {/* <h2 className="text-center ~text-h4/h2 ~leading-[2.6rem]/[3.3rem] text-darkBrown font-playFair">
           Case
           <span className="text-textPurple font-playFairItalic">
             &nbsp;Studies
           </span>
-        </h2>
+        </h2> */}
+        <TextStaggerAnimation
+          text="Case <color>Studies</color>"
+          className="text-center ~text-h4/h2 ~leading-[2.6rem]/[3.3rem] text-darkBrown font-playFair"
+        />
         <div className="~pt-[2.5rem]/[6.56rem] flex flex-col ~gap-[3.5rem]/[5.5rem] ~px-[1.25rem]/[7.8rem]">
           {caseStudyData.map((item, i: number) => (
             <CardSlideAnimation index={i} delay={0.3} key={i}>

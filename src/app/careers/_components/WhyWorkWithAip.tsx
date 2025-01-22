@@ -1,4 +1,5 @@
 import CardAnimation from "@/components/animations/CardAnimation";
+import TextStaggerAnimation from "@/components/animations/TextStaggerAnimation";
 import ImgTitleDescVer from "@/components/cards/ImgTitleDescVer";
 import React from "react";
 const works = [
@@ -27,16 +28,25 @@ const WhyWorkWithAip = () => {
   return (
     <div className="pt-[1rem] container mx-auto">
       <div className="flex flex-col w-full justify-center items-center">
-        <p className="~text-h4/h2 text-center text-gray80 ~leading-[2.6rem]/[3.713rem] font-playFair tracking-[-.04rem] ~pb-[1rem]/5">
+        {/* <p className="~text-h4/h2 text-center text-gray80 ~leading-[2.6rem]/[3.713rem] font-playFair tracking-[-.04rem] ~pb-[1rem]/5">
           Why Work With
           <span className="font-playFairItalic text-textPurple">
             &nbsp;AIP?
           </span>
-        </p>
-        <p className="font-inter ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] text-center text-midGray ~pb-[2.5rem]/20 ~px-[4.1rem]/[20.875rem]">
+        </p> */}
+        <TextStaggerAnimation
+          text="Why Work With <color>AIP?</color>"
+          className="~text-h4/h2 text-center text-gray80 ~leading-[2.6rem]/[3.713rem] font-playFair tracking-[-.04rem] ~pb-[1rem]/5"
+        />
+        {/* <p className="font-inter ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] text-center text-midGray ~pb-[2.5rem]/20 ~px-[4.1rem]/[20.875rem]">
           Join AIP, where careers run deep with purpose, carving pathways for
           social impact and carrying the spirit of philanthropy forward
-        </p>
+        </p> */}
+        <TextStaggerAnimation delay={0.1}
+          text="Join AIP, where careers run deep with purpose, carving pathways for
+          social impact and carrying the spirit of philanthropy forward"
+          className="font-inter ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] text-center text-midGray ~pb-[2.5rem]/20 ~px-[4.1rem]/[20.875rem]"
+        />
       </div>
       <div className=" ~px-[2.8rem]/[8.438rem] grid md:grid-cols-2 ~gap-x-[3rem]/[5rem] ~gap-y-[1.25rem]/[3rem] relative">
         {works.map((item, i) => (

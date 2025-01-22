@@ -10,6 +10,8 @@ import CustomFilter from "@/components/custom/CustomFilter";
 import ResourcesTabAndSelect from "../../_components/ResourcesTabAndSelect";
 import { notFound } from "next/navigation";
 import DateFilter from "@/components/custom/DatePick";
+import WordStaggerAnimation from "@/components/animations/WordStaggerAnimation";
+import CardAnimation from "@/components/animations/CardAnimation";
 
 const tabList = [
   {
@@ -328,9 +330,13 @@ const CuratedResourcesInnerPage = async ({
             linkThree={`/resource-center/curated-resources/${param.slug}`}
           />
           <div className="max-w-[51.188rem] ~pt-[4.3rem]/[5rem] ~pb-[2.5rem]/[4rem]">
-            <p className="font-playFair leading-[3.3rem] ~text-h4/[3rem] text-gray80">
+            {/* <p className="font-playFair leading-[3.3rem] ~text-h4/[3rem] text-gray80">
               Curated Resources
-            </p>
+            </p> */}
+            <WordStaggerAnimation
+              text="Curated Resources"
+              className="font-playFair leading-[3.3rem] ~text-h4/[3rem] text-gray80"
+            />
           </div>
         </div>
         <ResourcesTabAndSelect
@@ -367,20 +373,22 @@ const CuratedResourcesInnerPage = async ({
         </div>
         <div className="pt-[3.25rem] pb-[7.5rem] grid md:grid-cols-2 lg:grid-cols-3 gap-[4.5rem]">
           {response?.map((item, i) => (
-            <ResourceCard
-              index={i}
-              slug={item?.slug}
-              isLinkOrPdf={item?.isLinkOrPdf}
-              file={item?.file}
-              fileLink={item?.fileLink}
-              key={i}
-              src={item?.image}
-              title={item?.title}
-              desc={item?.description}
-              domain={item?.domain}
-              category={item?.category}
-              date={item?.date}
-            />
+            <CardAnimation index={i} delay={0.1} key={i}>
+              <ResourceCard
+                index={i}
+                slug={item?.slug}
+                isLinkOrPdf={item?.isLinkOrPdf}
+                file={item?.file}
+                fileLink={item?.fileLink}
+                key={i}
+                src={item?.image}
+                title={item?.title}
+                desc={item?.description}
+                domain={item?.domain}
+                category={item?.category}
+                date={item?.date}
+              />
+            </CardAnimation>
           ))}
         </div>
       </div>

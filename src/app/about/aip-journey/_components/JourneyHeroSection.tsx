@@ -6,6 +6,8 @@ import HeroBg2 from "@public/svg/about/aip-journey/heroBg2.svg";
 import HeroBgSVg from "@/components/svg/HeroBgSVg";
 import Wave from "react-wavify";
 import BreadCrump from "@/components/bread-crump/BreadCrump";
+import FadeInAnimation from "@/components/animations/FadeInAnimation";
+import WordStaggerAnimation from "@/components/animations/WordStaggerAnimation";
 
 const JourneyHeroSection = () => {
   return (
@@ -68,14 +70,22 @@ const JourneyHeroSection = () => {
 
         <div className=" bg-[#faecc894] backdrop-blur-[24px] ~pt-[3.1rem]/[6.25rem] ~pb-[3.8rem]/[7.6rem] w-full ">
           <div className="container mx-auto flex justify-center flex-col items-center relative z-50 ~px-[1.375rem]/[20.938rem] ">
-            <h3 className="~text-h9Copy5/h9Copy4 leading-[20.64px] font-inter text-lightPeach/60 font-semibold">
-              PHILANTHROPY IS WHAT IT DOES.
-            </h3>
-            <h2 className="pt-[1.25rem] text-center ~text-h4/h3 ~leading-[2.563rem]/[3.25rem] font-playFair text-gray80">
+            <FadeInAnimation delay={0.1} y1={0} y2={10}>
+              <h3 className="~text-h9Copy5/h9Copy4 leading-[20.64px] font-inter text-lightPeach/60 font-semibold">
+                PHILANTHROPY IS WHAT IT DOES.
+              </h3>
+            </FadeInAnimation>
+            <WordStaggerAnimation
+              text="A philanthropist’s wealth is the origin. Philanthropy is the
+              river. No two rivers are the same; No two philanthropists are the
+              same; No two journeys are alike. And AIP helps channel the flow."
+              className="pt-[1.25rem] text-center ~text-h4/h3 ~leading-[2.563rem]/[3.25rem] font-playFair text-gray80"
+            />
+            {/* <h2 className="pt-[1.25rem] text-center ~text-h4/h3 ~leading-[2.563rem]/[3.25rem] font-playFair text-gray80">
               A philanthropist’s wealth is the origin. Philanthropy is the
               river. No two rivers are the same; No two philanthropists are the
               same; No two journeys are alike. And AIP helps channel the flow.
-            </h2>
+            </h2> */}
           </div>
         </div>
         <Wave
