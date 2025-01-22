@@ -123,11 +123,18 @@ const Cities = ({ collaboration, slug }: Props) => {
             </TabGroup>
             <div className="block md:hidden pt-[2rem]">
               <FadeInAnimation delay={0.1} x1={-20} x2={0}>
-                <Image
-                  src={Systemic}
-                  className=" w-full h-[30.89rem] object-cover"
-                  alt="Systemic-image"
-                />
+                <div className="relative w-full h-[30.89rem]">
+                  <Image
+                    src={
+                      collaboration.image
+                        ? StorageUrl + collaboration.image
+                        : "/images/news/newsDemo.png"
+                    }
+                    className="  object-cover"
+                    fill
+                    alt="Systemic-image"
+                  />
+                </div>
               </FadeInAnimation>
               {cities?.at(selectedIndex)?.report && (
                 <div className="flex pt-[2rem]">
@@ -245,11 +252,18 @@ const Cities = ({ collaboration, slug }: Props) => {
         </div>
         <div className="hidden md:block pt-[5rem]">
           <FadeInAnimation delay={0.1} x1={20} x2={0}>
-            <Image
-              src={Systemic}
-              className=" w-[25rem] object-cover"
-              alt="image"
-            />
+            <div className="relative w-[25rem] h-[30.89rem]">
+              <Image
+                src={
+                  collaboration.image
+                    ? StorageUrl + collaboration.image
+                    : "/images/news/newsDemo.png"
+                }
+                className="  object-cover"
+                alt="image"
+                fill
+              />
+            </div>
           </FadeInAnimation>
           <div className="flex pt-[1.382rem]">
             <Link

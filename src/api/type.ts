@@ -405,6 +405,7 @@ export type TOneCollaborationPageData = {
 export type TOneCollaboration = {
   _id: string;
   category: string;
+  image: string;
   date: string;
   title: string;
   description: string;
