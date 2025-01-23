@@ -10,7 +10,7 @@ import WordStaggerAnimation from "@/components/animations/WordStaggerAnimation";
 
 const getFinancialReportApi = async (): Promise<TReports[]> => {
   const response = await Api.getFinancialReport();
-  return response.data;
+  return response?.data;
 };
 const page = async ({
   searchParams,

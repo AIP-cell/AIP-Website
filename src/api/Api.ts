@@ -109,14 +109,15 @@ export const Api = {
       return null;
     }
   },
-  getFinancialDownloadAll: async () => {
-    try {
-      await axiosClient.get(`financial-reports/download`);
-    } catch (error) {
-      console.log(error);
-      return null;
-    }
-  },
+  // getFinancialDownloadAll: async (year: string) => {
+  //   try {
+  //     console.log("year:::",year)
+  //     await axiosClient.get(`financial-reports/download?year=${year}`);
+  //   } catch (error) {
+  //     console.log(error);
+  //     return null;
+  //   }
+  // },
   getNpos: async () => {
     try {
       const response = await axiosClient.get(`npos`);

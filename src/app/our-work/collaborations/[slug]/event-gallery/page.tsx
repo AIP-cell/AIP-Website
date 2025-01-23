@@ -57,12 +57,12 @@ const page = async ({
             textFour="Event Gallery"
             linkFour={`/our-work/collaborations/${asyncParam}/event-gallery`}
           />
-         <FadeInAnimation delay={0.1} y1={20} y2={0}>
+          <FadeInAnimation delay={0.1} y1={20} y2={0}>
             <p className="font-inter  font-semibold uppercase ~text-h9Copy5/h9Copy4 ~leading-[1.138rem]/[1.3rem] text-purple40">
-             {response?.title}
+              {response?.title}
             </p>
-         </FadeInAnimation>
-          <FadeInAnimation delay={0.1} x1={-20} x2={0} >
+          </FadeInAnimation>
+          <FadeInAnimation delay={0.1} x1={-20} x2={0}>
             <p className="~leading-[2.113rem]/[2.6rem] font-playFair ~text-h4a/h4 text-gray80 pt-5 ~pb-0/[5rem] md:tracking-[-0.02rem]">
               {response?.description}
             </p>

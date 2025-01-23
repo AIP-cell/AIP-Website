@@ -4,10 +4,9 @@ import DownloadFileSvg from "@/components/svg/DowloadFileSvg";
 import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 import { TReports } from "@/api/type";
 import Link from "next/link";
-import { StorageUrl } from "@/utils/BaseUrl";
+import { BaseUrl, StorageUrl } from "@/utils/BaseUrl";
 import FinancialTabAndResp from "./FinancialTabAndResp";
 import CardAnimation from "@/components/animations/CardAnimation";
-import { Api } from "@/api/Api";
 import TextStaggerAnimation from "@/components/animations/TextStaggerAnimation";
 
 type Props = {
@@ -20,9 +19,6 @@ const FinancialContent = ({
   currentYear,
   response,
 }: Props) => {
-  const downloadAllFunction = async () => {
-    await Api.getFinancialDownloadAll();
-  };
   return (
     <>
       <div className="flex flex-col justify-center items-center">
@@ -62,19 +58,28 @@ const FinancialContent = ({
                 </CardAnimation>
               ))}
             </div>
-            <div className="flex w-full justify-end">
-              <Link href="">
-                <ButtonAnimation
-                  onClick={downloadAllFunction}
-                  className=" flex gap-2 0 rounded-3xl items-center text-darkPurple hover:text-white bg-white hover:bg-darkPurple py-[0.75rem] px-[1.75rem] border-2 bottom-2 border-darkPurple w-fit"
+            {filterDataByYear?.originalYear && (
+              <div className="flex w-full justify-end">
+                <Link
+                  href={
+                    BaseUrl +
+                    `financial-reports/download?year=${filterDataByYear?.originalYear}`
+                  }
                 >
-                  <p className="text-h9Copy5 font-medium leading-[1.225rem]  ">
-                    Download All
-                  </p>
-                  <DownloadFileSvg className="size-[1.25rem]" />
-                </ButtonAnimation>
-              </Link>
-            </div>
+                  <ButtonAnimation
+                    // onClick={() =>
+                    //   downloadAllFunction(filterDataByYear?.originalYear ?? "")
+                    // }
+                    className=" flex gap-2 0 rounded-3xl items-center text-darkPurple hover:text-white bg-white hover:bg-darkPurple py-[0.75rem] px-[1.75rem] border-2 bottom-2 border-darkPurple w-fit"
+                  >
+                    <p className="text-h9Copy5 font-medium leading-[1.225rem]  ">
+                      Download All
+                    </p>
+                    <DownloadFileSvg className="size-[1.25rem]" />
+                  </ButtonAnimation>
+                </Link>
+              </div>
+            )}
           </div>
         </div>
       </div>

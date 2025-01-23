@@ -33,6 +33,7 @@ const GalleryVideo = ({ src, date, title, desc2 }: Props) => {
           }
           controls
         />
+
         {/* <Image
           src={PlayButtonPurple}
           alt=""

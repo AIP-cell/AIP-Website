@@ -44,24 +44,24 @@ const OurValueUsingCarousel = () => {
     ? (ourValues = [
         {},
         {
-          text1: "1Respect",
+          text1: "Respect",
           text2: "Agency",
-          desc: "1It highlights the belief that success is achieved through collaboration, and collective efforts of individuals and teams. . It promotes a culture of teamwork, shared responsibility, effective communication, and continuous learning, creating an environment where everyone can thrive and contribute to the organizations success.",
+          desc: "It highlights the belief that success is achieved through collaboration, and collective efforts of individuals and teams. . It promotes a culture of teamwork, shared responsibility, effective communication, and continuous learning, creating an environment where everyone can thrive and contribute to the organizations success.",
         },
         {
-          text1: "2Respect",
-          text2: "Agency",
-          desc: "2 believe in fostering an environment where every individual's voice is heard and respected, encouraging them to take ownership of their work, make independent decisions, and contribute to the organisation’s success.",
+          text1: "Work",
+          text2: "Together",
+          desc: "believe in fostering an environment where every individual's voice is heard and respected, encouraging them to take ownership of their work, make independent decisions, and contribute to the organisation’s success.",
         },
         {
-          text1: "3 Respect",
-          text2: "Agency",
-          desc: "3 believe in fostering an environment where every individual's voice is heard and respected, encouraging them to take ownership of their work, make independent decisions, and contribute to the organisation’s success.",
+          text1: "Ever",
+          text2: "Evolving",
+          desc: "believe in fostering an environment where every individual's voice is heard and respected, encouraging them to take ownership of their work, make independent decisions, and contribute to the organisation’s success.",
         },
         {
-          text1: "4 Respect",
+          text1: "Respect",
           text2: "Agency",
-          desc: "4 believe in fostering an environment where every individual's voice is heard and respected, encouraging them to take ownership of their work, make independent decisions, and contribute to the organisation’s success.",
+          desc: "believe in fostering an environment where every individual's voice is heard and respected, encouraging them to take ownership of their work, make independent decisions, and contribute to the organisation’s success.",
         },
         {},
       ])

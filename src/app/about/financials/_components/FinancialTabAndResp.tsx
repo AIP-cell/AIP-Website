@@ -54,7 +54,11 @@ const FinancialTabAndResp = ({
         ))}
       </div>
 
-      <Listbox value={currentYear} as="div" className="block lg:hidden w-full px-[1.25rem]">
+      <Listbox
+        value={currentYear}
+        as="div"
+        className="block lg:hidden w-full px-[1.25rem]"
+      >
         <ListboxButton
           as="div"
           className={`  bg-bgGray5 rounded-full flex items-center  w-full  pr-[1.25rem] ${listboxButtonClassName}`}
@@ -70,20 +74,23 @@ const FinancialTabAndResp = ({
           anchor="bottom"
           className=" w-[var(--button-width)] mt-[0.4rem] z-[10000] bg-bgGray5 border-2  flex flex-col rounded-xl outline-none"
         >
-          {financialArray?.map((items, i: number) => (
-            <ListboxOption
-              onClick={() => {
-                router.push(`/about/financials?year=${items.year}`, {
-                  scroll: false,
-                });
-              }}
-              key={i}
-              value={items.year}
-              className="data-[focus]:bg-darkPurple data-[focus]:text-white py-[0.5rem] text-darkPurple text-center text-h9Copy5 leading-[1.225rem] cursor-pointer"
-            >
-              {items?.year}
-            </ListboxOption>
-          ))}
+          {financialArray?.map(
+            (items, i: number) =>
+              items?.year != currentYear && (
+                <ListboxOption
+                  onClick={() => {
+                    router.push(`/about/financials?year=${items.year}`, {
+                      scroll: false,
+                    });
+                  }}
+                  key={i}
+                  value={items.year}
+                  className="data-[focus]:bg-darkPurple data-[focus]:text-white py-[0.5rem] text-darkPurple text-center text-h9Copy5 leading-[1.225rem] cursor-pointer"
+                >
+                  {items?.year}
+                </ListboxOption>
+              )
+          )}
         </ListboxOptions>
       </Listbox>
     </>

@@ -58,7 +58,7 @@ const LocationTabs = ({
           className={`  bg-bgGray5 rounded-full flex items-center  w-full  pr-[1.25rem] `}
         >
           <div
-            className={`flex gap-[.79rem] text-darkPurple text-h9Copy5 pl-[1.75rem] py-[1rem] items-center w-full justify-between `}
+            className={`flex gap-[.79rem] text-darkPurple outline-none text-h9Copy5 pl-[1.75rem] py-[1rem] items-center w-full justify-between `}
           >
             <p className="   leading-[1.4rem] ">
               {tabArray.at(selectedIndex)?.name}
@@ -68,7 +68,7 @@ const LocationTabs = ({
         </ListboxButton>
         <ListboxOptions
           anchor="bottom"
-          className=" w-[var(--button-width)] mt-[0.4rem] z-[10000] bg-bgGray5 border-2  flex flex-col gap-[0.5rem] rounded-xl"
+          className=" w-[var(--button-width)] mt-[0.4rem] z-[10000] bg-bgGray5 border-2  outline-none flex flex-col gap-[0.5rem] rounded-xl"
         >
           {tabArray?.map(
             (items, i: number) =>
@@ -76,7 +76,7 @@ const LocationTabs = ({
                 <ListboxOption
                   key={i}
                   value={i}
-                  className="data-[focus]:bg-darkPurple data-[focus]:text-white text-darkPurple text-center text-h9Copy5 leading-[1.225rem] cursor-pointer py-[0.4rem]"
+                  className="data-[focus]:bg-darkPurple data-[focus]:text-white outline-none text-darkPurple text-start text-h9Copy5 leading-[1.225rem] cursor-pointer py-[0.5rem] pl-[1.75rem]"
                 >
                   {items.name}
                 </ListboxOption>

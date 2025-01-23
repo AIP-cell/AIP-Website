@@ -223,6 +223,7 @@ export type TFinancialReportPageData = {
 export type TReports = {
   financialReports: TFinancialReports[];
   year: string;
+  originalYear: string;
 };
 export type TFinancialReports = {
   report: string;

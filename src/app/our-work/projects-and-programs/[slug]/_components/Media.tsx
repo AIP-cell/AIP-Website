@@ -36,38 +36,21 @@ type Props = {
   media: TMedia[];
 };
 const Media = ({ media }: Props) => {
-  const carouselRef = useRef<HTMLDivElement>(null);
-  const previous = () => {
-    if (carouselRef.current) {
-      const card = carouselRef.current.querySelector("div");
-      if (card) {
-        const cardWidth = card.offsetWidth;
-        carouselRef.current.scrollBy({ left: -cardWidth, behavior: "smooth" });
-      }
-    }
-  };
-
-  const next = () => {
-    if (carouselRef.current) {
-      const card = carouselRef.current.querySelector("div");
-      if (card) {
-        const cardWidth = card.offsetWidth;
-        carouselRef.current.scrollBy({ left: cardWidth, behavior: "smooth" });
-      }
-    }
-  };
   const mediaArrayLength = media.length;
   return (
     <div className="~pt-[5rem]/[7.53rem] overflow-hidden ">
       {/* <div className="text-center font-playFair  ~leading-[2.6rem]/[3.3rem] tracking-[-.04rem] ~text-h4/h2 text-gray80">
         In the Media
       </div> */}
-      <TextStaggerAnimation text="In the Media" className="text-center font-playFair  ~leading-[2.6rem]/[3.3rem] tracking-[-.04rem] ~text-h4/h2 text-gray80"/>
+      <TextStaggerAnimation
+        text="In the Media"
+        className="text-center font-playFair  ~leading-[2.6rem]/[3.3rem] tracking-[-.04rem] ~text-h4/h2 text-gray80"
+      />
       <Carousel
         opts={{
           align: "start",
         }}
-        className="w-full container mx-auto relative ~pt-[2.5rem]/[5rem] ~pb-[1.988rem]/0 ~px-0/[5.8rem] min-h-[90vh]"
+        className="w-full container mx-auto relative ~pt-[2.5rem]/[5rem] ~pb-[3.5rem]/0 ~px-0/[5.8rem] "
       >
         <CarouselContent className=" w-full ">
           {media?.map((media, i) => (

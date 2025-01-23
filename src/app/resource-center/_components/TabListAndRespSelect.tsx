@@ -79,26 +79,29 @@ const TabListAndRespSelect = ({
         </ListboxButton>
         <ListboxOptions
           anchor="bottom"
-          className=" w-[var(--button-width)] mt-[0.4rem] z-[10000] bg-bgGray5 border-2  flex flex-col gap-[1.625rem] rounded-xl   py-[1.313rem]"
+          className=" w-[var(--button-width)] mt-[0.4rem] z-[10000] bg-bgGray5 border-2  flex flex-col gap-[0.625rem] rounded-xl  outline-none"
         >
-          {tabArray?.map((items: any, i: number) => (
-            <ListboxOption
-              onClick={() => {
-                const query = generatingSearchParam({
-                  selected: items?.tab,
-                  // domain: domain,
-                });
-                router.push(`?${query.toString()}`, {
-                  scroll: false,
-                });
-              }}
-              key={i}
-              value={i}
-              className="data-[focus]:bg-blue-100 text-darkPurple text-center text-h9Copy5 leading-[1.225rem] cursor-pointer"
-            >
-              {items?.tab}
-            </ListboxOption>
-          ))}
+          {tabArray?.map(
+            (items: any, i: number) =>
+              items?.tab != tabArray?.at(selectedIndex)?.tab && (
+                <ListboxOption
+                  onClick={() => {
+                    const query = generatingSearchParam({
+                      selected: items?.tab,
+                      // domain: domain,
+                    });
+                    router.push(`?${query.toString()}`, {
+                      scroll: false,
+                    });
+                  }}
+                  key={i}
+                  value={i}
+                  className="data-[focus]:bg-darkPurple py-[0.5rem] data-[focus]:text-white text-darkPurple text-center text-h9Copy5 leading-[1.225rem] cursor-pointer"
+                >
+                  {items?.tab}
+                </ListboxOption>
+              )
+          )}
         </ListboxOptions>
       </Listbox>
     </>

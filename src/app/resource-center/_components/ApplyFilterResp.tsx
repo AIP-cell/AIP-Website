@@ -1,3 +1,4 @@
+import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 import CrossSvg from "@/components/svg/CrossSvg";
 import FilterDownArrowSvg from "@/components/svg/FilterDownArrowSvg";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
@@ -61,7 +62,7 @@ Props) {
       </div>
       {isOpen && (
         <div className="block md:hidden fixed bottom-0 z-[8000] inset-x-0 w-full bg-white h-[80vh] rounded-t-lg  px-[1.25rem] pt-[2rem] pb-[1.25rem] overflow-hidden ">
-          <div className=" ">
+          <div className="pb-[2rem] ">
             <div className="pb-[0.773rem] border-b-[1.5px] text-h8Copy3 leading-[1.575rem] gap-[0.5rem] border-b-gray20 text-gray80 flex relative items-center justify-between">
               <div className="flex relative items-center gap-[0.5rem] text-h8Copy3 leading-[1.575rem]">
                 <p className=" text-gray20">Filter By:</p>{" "}
@@ -83,7 +84,7 @@ Props) {
               </div>
             </div>
             <RadioGroup
-              className="flex flex-col px-[0.75rem] h-[55vh] overflow-y-scroll no-scrollbar relative"
+              className="flex flex-col px-[0.75rem] h-[60vh] overflow-y-scroll no-scrollbar relative"
               defaultValue={selected}
               onValueChange={setSelected}
             >
@@ -102,15 +103,15 @@ Props) {
                 </div>
               ))}
             </RadioGroup>
-            <div className="pt-[2rem]">
-              <button
-                // type="submit"
-                onClick={handleSubmit}
-                className="py-[0.75rem] w-full rounded-full text-h9Copy5 leading-[1.225rem] text-white bg-darkPurple text-center"
-              >
-                Apply Filter
-              </button>
-            </div>
+          </div>
+          <div className=" absolute bottom-[1.25rem] inset-x-0 px-[1.25rem]">
+            <ButtonAnimation
+              // type="submit"
+              onClick={handleSubmit}
+              className="py-[0.75rem] w-full rounded-full text-h9Copy5 leading-[1.225rem] text-white bg-darkPurple text-center"
+            >
+              Apply Filter
+            </ButtonAnimation>
           </div>
         </div>
       )}
