@@ -330,7 +330,7 @@ const Footer = () => {
 
               <div className="pt-[2.25rem] text-h9Copy5 font-inter font-bold text-white">
                 <Link href="/careers">
-                  <ButtonAnimation>Career</ButtonAnimation>
+                  <ButtonAnimation>Careers</ButtonAnimation>
                 </Link>
               </div>
               <div className="pt-[2.25rem] text-h9Copy5 font-inter font-bold text-white">
