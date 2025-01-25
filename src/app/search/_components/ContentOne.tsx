@@ -29,6 +29,8 @@ const ContentOne = ({
   video,
 }: Props) => {
   const arrayLength = searchData.length;
+  const isOnlyEmptyParagraph =  /^\s*<p>\s*<\/p>\s*$/i.test(description!);
+
   return (
     <div
       className={cn(
@@ -95,10 +97,10 @@ const ContentOne = ({
             </div>
           </div>
         )}
-        {description && description != "" && (
+        {description && description != "" && !isOnlyEmptyParagraph  && (
           <div
             dangerouslySetInnerHTML={{
-              __html: description || "",
+              __html: description,
             }}
             className="~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] text-midGray"
           ></div>

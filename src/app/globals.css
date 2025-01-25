@@ -30,14 +30,14 @@
   height: fit-content !important;
   background-size: auto !important;
 } */
-.react-player__play-icon{
-  display: none !important;;
+.react-player__play-icon {
+  display: none !important;
 }
 .react-datepicker__current-month {
-  color: #5E165B !important;
+  color: #5e165b !important;
 }
 .react-datepicker__day--selected {
-  background-color: #5E165B !important;
+  background-color: #5e165b !important;
 }
 @layer utilities {
   /* Hide scrollbar for Chrome, Safari and Opera */

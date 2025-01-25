@@ -21,6 +21,7 @@ const ContentGallery = ({
   description,
 }: Props) => {
   const arrayLength = searchData.length;
+  // const isEmptyParagraph = /^\s*<p>\s*<\/p>\s*$/i.test(description);
   return (
     <div className="pt-[1rem] ">
       <div className="flex flex-col ">
@@ -34,7 +35,7 @@ const ContentGallery = ({
               {title}
             </h3>
           )}
-          {description && description != "" && (
+          {description &&  description != "" && (
             <div
               dangerouslySetInnerHTML={{
                 __html: description || "",

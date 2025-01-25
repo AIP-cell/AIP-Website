@@ -1,4 +1,3 @@
-// "use client";
 import CustomHeaderSelect from "@/components/custom/CustomHeaderSelect";
 import LogoHeaderSvg from "@/components/svg/LogoHeaderSvg";
 import LogoSmSVG from "@/components/svg/LogoSmSVG";
@@ -109,10 +108,12 @@ const Header = () => {
             </div>
           ))}
         </div>
-
         <div className="hidden xl:flex rounded-full border-2 border-darkPurple relative">
           <div className="rounded-full bg-darkPurple  px-[1.75rem] py-[0.75rem] ">
-            <Link href="/contact" className="text-white text-h9Copy5 leading-[1.225rem] ">
+            <Link
+              href="/contact"
+              className="text-white text-h9Copy5 leading-[1.225rem] "
+            >
               Get Involved
             </Link>
           </div>

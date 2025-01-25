@@ -61,7 +61,7 @@ Props) {
         </div>
       </div>
       {isOpen && (
-        <div className="block md:hidden fixed bottom-0 z-[8000] inset-x-0 w-full bg-white h-[80vh] rounded-t-lg  px-[1.25rem] pt-[2rem] pb-[1.25rem] overflow-hidden ">
+        <div className="block md:hidden fixed bottom-0 z-[8000] inset-x-0 w-full bg-white h-[80dvh] rounded-t-lg  px-[1.25rem] pt-[2rem] pb-[1.25rem] overflow-hidden ">
           <div className="pb-[2rem] ">
             <div className="pb-[0.773rem] border-b-[1.5px] text-h8Copy3 leading-[1.575rem] gap-[0.5rem] border-b-gray20 text-gray80 flex relative items-center justify-between">
               <div className="flex relative items-center gap-[0.5rem] text-h8Copy3 leading-[1.575rem]">
@@ -84,7 +84,8 @@ Props) {
               </div>
             </div>
             <RadioGroup
-              className="flex flex-col px-[0.75rem] h-[60vh] overflow-y-scroll no-scrollbar relative"
+              data-lenis-prevent
+              className="flex flex-col px-[0.75rem] h-[57dvh] overflow-y-scroll no-scrollbar relative"
               defaultValue={selected}
               onValueChange={setSelected}
             >

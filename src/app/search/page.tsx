@@ -124,7 +124,7 @@ const page = async ({
                   const galleryImage = content.key === "galleryImages";
                   if (keyPresent) {
                     return (
-                      <CardAnimation delay={0.1} index={i} key={i}>
+                      <CardAnimation delay={0.03} index={i} key={i}>
                         <ContentOne
                           index={i}
                           key={i}
@@ -142,7 +142,7 @@ const page = async ({
                   }
                   if (galleryImage) {
                     return (
-                      <CardAnimation index={i} delay={0.05} key={i}>
+                      <CardAnimation index={i} delay={0.03} key={i}>
                         <ContentGallery
                           key={i}
                           title={content.title}

@@ -94,9 +94,12 @@ const Sidebar = () => {
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: "100%", opacity: 0 }}
             transition={{ duration: 0.7, ease: "easeInOut" }}
-            className="xl:hidden fixed h-full top-0 left-0 flex w-full bg-[#979796]"
+            className="xl:hidden fixed  top-0 left-0 h-[100dvh] no-scrollbar flex w-full bg-[#979796]"
           >
-            <div className="relative w-[70%] pt-[2.5rem] px-[1.25rem] rounded-tr-lg  rounded-br-lg overflow-hidden bg-purpleToBlue xl:hidden gap-[2.5rem] ">
+            <div
+              data-lenis-prevent
+              className="relative w-[70%] h-[100dvh] overflow-y-auto no-scrollbar pt-[2.5rem] px-[1.25rem] rounded-tr-lg  rounded-br-lg overflow-hidden bg-purpleToBlue xl:hidden gap-[2.5rem] "
+            >
               <div className="flex flex-col text-white items-start">
                 <Link
                   href="/"

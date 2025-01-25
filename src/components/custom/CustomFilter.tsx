@@ -68,6 +68,7 @@ const CustomFilter = ({
           </ListboxButton>
           {/* w-[var(--button-width)] */}
           <ListboxOptions
+            data-lenis-prevent
             anchor="bottom"
             className="hidden  w-[10.25rem] !max-h-[14.5rem] no-scrollbar mt-[0.4rem] z-[10000] bg-white border-2 border-[#DFE0E5] md:flex flex-col gap-[0.75rem] rounded-md   px-[0.863rem] py-[0.8rem]"
           >
