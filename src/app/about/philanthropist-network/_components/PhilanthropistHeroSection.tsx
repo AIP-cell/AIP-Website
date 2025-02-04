@@ -24,11 +24,12 @@ const PhilanthropistHeroSection = () => {
           linkTwo="/about/philanthropist-network"
         />
         <div className="~pl-5/[7.81rem] ~pr-5/[14.375rem]">
-          <h4 className="~leading-[1.138rem]/[1.3rem] ~text-h9Copy5/h9Copy4 font-semibold uppercase text-purple40 ~pt-[4.313rem]/[6.5rem]">
+          {/* <h4 className="~leading-[1.138rem]/[1.3rem] ~text-h9Copy5/h9Copy4 font-semibold uppercase text-purple40 ~pt-[4.313rem]/[6.5rem]">
             NETWORK {">"} NET WORTH
-          </h4>
-          <div className="~pt-[1.25rem]/[0.75rem] ">
-            <div className="  ~text-h5/h4 text-gray80 ~leading-[1.75rem]/[2.6rem] font-playFair tracking-[-0.3px]">
+          </h4> */}
+          {/* ~pt-[1.25rem]/[0.75rem] */}
+          <div className=" ~pt-[4.313rem]/[6.5rem]">
+            <div className="  ~text-h5/h6 text-gray80 ~leading-[1.75rem]/[2.6rem] font-playFair tracking-[-0.3px]">
               <FadeInAnimation delay={0.1} x1={-20} x2={0}>
                 <p className="hidden md:block">
                   We work with philanthropist on a project level.

@@ -101,6 +101,7 @@ const config: Config = {
         h2: "3rem",
         h3: "2.5rem",
         h4: "2rem",
+        h6: "1.8rem",
         h4a: "1.625rem",
         h6Copy1: "1.5rem",
         h7Copy3: "1.375rem",

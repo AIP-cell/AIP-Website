@@ -27,9 +27,9 @@ const page = async () => {
       <NpoHeroSection />
       <AipAndNpo />
       <NpoJoinTheFlow />
-      {casestudies && casestudies.length != 0 && (
+      {/* {casestudies && casestudies.length != 0 && (
         <NpoSpotlight casestudies={casestudies} />
-      )}
+      )} */}
       {people && <NposPartners people={people} />}
     </div>
   );

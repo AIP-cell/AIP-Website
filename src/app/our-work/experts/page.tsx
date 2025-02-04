@@ -27,7 +27,7 @@ const page = async () => {
       <ExpertHeroSection />
       <AipAndExperts />
       <AsAnExperts />
-      <ExpertsJoinTheFlow />
+      {/* <ExpertsJoinTheFlow /> */}
       <WhyPartner />
       {people && people.length != 0 && <NetworkOfExperts people={people} />}
       {expertShelves && expertShelves.length != 0 && (

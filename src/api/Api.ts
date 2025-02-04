@@ -287,6 +287,15 @@ export const Api = {
       return null;
     }
   },
+  getContact: async () => {
+    try {
+      const response = await axiosClient.get(`get-in-touch`);
+      return response.data;
+    } catch (error) {
+      console.log(error);
+      return null;
+    }
+  },
   postContact: async (body: object) => {
     try {
       const response = await axiosClient.post(`contact-form`, body);

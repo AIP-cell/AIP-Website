@@ -35,7 +35,7 @@ const FounderNetworkHeroSection = ({ desc1, desc2 }: Props) => {
           </h4> */}
           <div className="~pt-[1.25rem]/[0.75rem] ">
            <FadeInAnimation delay={0.1} x1={-20} x2={0}>
-              <div className=" ~text-h5/h4 text-gray80  ~leading-[1.75rem]/[2.6rem] font-medium font-playFair">
+              <div className=" ~text-h5/h6 text-gray80  ~leading-[1.75rem]/[2.6rem] font-medium font-playFair">
                 {desc1}
               </div>
            </FadeInAnimation>

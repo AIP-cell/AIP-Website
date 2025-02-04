@@ -11,8 +11,21 @@ import LocationSvg from "@/components/svg/LocationSvg";
 import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 import WordStaggerAnimation from "@/components/animations/WordStaggerAnimation";
 import FadeInAnimation from "@/components/animations/FadeInAnimation";
+import { Api } from "@/api/Api";
+import { notFound } from "next/navigation";
+import { TGetInTouch } from "@/api/type";
 
-const page = () => {
+export const dynamic = "force-dynamic";
+const getContactApi = async (): Promise<TGetInTouch> => {
+  const response = await Api.getContact();
+  return response?.data;
+};
+const page = async () => {
+   const response = await getContactApi();
+    if (!response) {
+      notFound();
+    }
+
   return (
     <div className="pt-[5rem]">
       <div className="relative w-full">
@@ -25,9 +38,6 @@ const page = () => {
           <div className=" pt-[5rem] grid md:grid-cols-2">
             <BreadCrump textOne="Contacts" linkOne="/contact" />
             <div className=" ">
-              {/* <p className="font-playFair ~text-h4/h3 leading-[3.3rem]">
-                Get in Touch
-              </p> */}
               <WordStaggerAnimation
                 text="Get in Touch"
                 className="font-playFair ~text-h4/h3 leading-[3.3rem]"
@@ -62,39 +72,39 @@ const page = () => {
                   image={MessageSvg}
                   alt="email"
                   type="email"
-                  data="info@indianphilanthropy.org"
+                  data={response.email}
                 />
 
                 <EnquiryLink
                   image={PhoneSvg}
                   alt="phone"
                   type="phone"
-                  data="+91 9876543210"
+                  data={response.phoneNumber}
                 />
 
                 <div className="h-px bg-footerGray mt-5 mb-5"></div>
 
-                <p className="font-playFair italic font-medium text-gray50 text-xl tracking-[.02rem]">
+                {/* <p className="font-playFair italic font-medium text-gray50 text-xl tracking-[.02rem]">
                   Network Team
-                </p>
+                </p> */}
                 <EnquiryLink
                   image={MessageSvg}
                   alt="email"
                   type="email"
-                  data="sabhyata@indianphilanthropy.org"
-                  name="Sabhayata Prakash"
+                  data={response?.networkTeamEmail}
+                  name={response?.networkTeamName}
                 />
                 <div className="h-px bg-footerGray mt-5 mb-5"></div>
 
-                <p className="font-playFair italic font-medium text-gray50 text-xl tracking-[.02rem]">
+                {/* <p className="font-playFair italic font-medium text-gray50 text-xl tracking-[.02rem]">
                   Knowledge Team
-                </p>
+                </p> */}
                 <EnquiryLink
                   image={MessageSvg}
                   alt="email"
                   type="email"
-                  data="vishal@indianphilanthropy.org"
-                  name="Vishal Dutta"
+                  data={response?.knowlwdgeTeamEmail}
+                  name={response?.knowlwdgeTeamName}
                 />
               </div>
             </div>

@@ -8,13 +8,15 @@ import OvalPeachCount from "@/components/ovals/OvalPeachCount";
 import { TFoundationFacts } from "@/api/type";
 import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 import TextStaggerAnimation from "@/components/animations/TextStaggerAnimation";
+import cn from "@/utils/tailwind";
 type Props = {
   button?: string;
   foundationFacts: TFoundationFacts;
+  className?: string;
 };
-const FoundationFacts = ({ button, foundationFacts }: Props) => {
+const FoundationFacts = ({ button, foundationFacts, className }: Props) => {
   return (
-    <div className="relative w-full ~pt-[5rem]/[16rem]">
+    <div className={cn("relative w-full ~pt-[5rem]/[16rem]", className)}>
       <Image
         src={Bg}
         alt=""

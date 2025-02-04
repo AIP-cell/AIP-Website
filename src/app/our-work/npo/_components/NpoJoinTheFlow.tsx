@@ -43,7 +43,7 @@ const NpoJoinTheFlow = () => {
             philanthropy impact India’s transformation.
           </p>
           <div className="flex flex-col justify-center md:flex-row ~gap-[0.75rem]/[1.5rem] items-center ~pt-[1.5rem]/[2.5rem]">
-            <BgButton
+            {/* <BgButton
               text="Register With Us"
               className="text-h9Copy5 leading-[1.225rem] py-[0.75rem] px-[1.75rem]"
             />
@@ -53,10 +53,10 @@ const NpoJoinTheFlow = () => {
                 className="text-h9Copy5 leading-[1.225rem] py-[0.75rem] px-[1.75rem] font-medium "
                 buttonClassName="rounded-full h-fit "
               />
-            </ButtonAnimation>
+            </ButtonAnimation> */}
             <ButtonAnimation className=" text-white hover:text-darkPurple bg-darkPurple hover:bg-white rounded-full  py-[0.75rem] px-[1.75rem]">
               <Link
-                href=""
+                href="/contact"
                 className=" flex items-center text-h9Copy5 gap-[0.5rem]"
               >
                 <p className="">Contact Us</p>

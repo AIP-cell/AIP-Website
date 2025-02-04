@@ -8,7 +8,7 @@ type Props = {
   name?: string;
   type?: string;
   image: StaticImageData;
-  data: string;
+  data?: string;
 };
 
 const EnquiryLink = ({ image, alt, data, name, type }: Props) => {
@@ -24,12 +24,14 @@ const EnquiryLink = ({ image, alt, data, name, type }: Props) => {
             {name}
           </p>
         )}
-        <Link
-          href={link ?? ""}
-          className="font-inter ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] text-gray80"
-        >
-          <ButtonAnimation>{data}</ButtonAnimation>
-        </Link>
+        {data && (
+          <Link
+            href={link ?? ""}
+            className="font-inter ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] text-gray80"
+          >
+            <ButtonAnimation>{data}</ButtonAnimation>
+          </Link>
+        )}
       </div>
     </div>
   );

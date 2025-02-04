@@ -48,10 +48,10 @@ const headerData = [
       { option: "What We Do", link: "/our-work/what-we-do" },
       { option: "NPO Registry", link: "/our-work/npo" },
       { option: "Experts", link: "/our-work/experts" },
-      {
-        option: "Projects and Programs",
-        link: "/our-work/projects-and-programs",
-      },
+      // {
+      //   option: "Projects and Programs",
+      //   link: "/our-work/projects-and-programs",
+      // },
       {
         option: "Collaborations",
         link: "/our-work/collaborations",
@@ -66,10 +66,10 @@ const headerData = [
         option: "AIP Resources",
         link: "/resource-center/aip-resources/aip-updates",
       },
-      {
-        option: "Curated Resources",
-        link: "/resource-center/curated-resources/featured",
-      },
+      // {
+      //   option: "Curated Resources",
+      //   link: "/resource-center/curated-resources/featured",
+      // },
     ],
   },
 ];

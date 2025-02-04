@@ -73,7 +73,14 @@ const CaseStudy = ({
           </h3>
         )}
 
-        <CaseStudyDescSection desc={desc} index={index} />
+        {/* <CaseStudyDescSection desc={desc} index={index} /> */}
+        <div
+          className={cn(
+            "text-midGray ~pt-[1rem]/[1.25rem] ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] relative"
+          )}
+        >
+          {desc}
+        </div>
         {slug ? (
           <Link
             href={`/our-work/npo/${slug}`}

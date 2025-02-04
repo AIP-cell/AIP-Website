@@ -1,7 +1,7 @@
 import ImpactHeroSection from "./_components/ImpactHeroSection";
 import CaseStudies from "./_components/CaseStudies";
 import FoundationFacts from "./_components/FoundationFacts";
-import PeopleWeWorkWith from "./_components/PeopleWeWorkWith";
+// import PeopleWeWorkWith from "./_components/PeopleWeWorkWith";
 import CurvePeach from "@public/svg/peach-bg-curve-founders.svg";
 import { Api } from "@/api/Api";
 import { TAipImpact } from "@/api/type";
@@ -18,7 +18,7 @@ const page = async () => {
     notFound();
   }
   const caseStudyData = response.casestudies;
-  const peopleData = response.people;
+  // const peopleData = response.people;
   const foundationFacts = response.foundationFacts;
 
   return (
@@ -31,9 +31,13 @@ const page = async () => {
         />
       )}
       {foundationFacts && (
-        <FoundationFacts button="View more" foundationFacts={foundationFacts} />
+        <FoundationFacts
+          button="View more"
+          foundationFacts={foundationFacts}
+          className=" ~pb-[5rem]/[7.5rem]"
+        />
       )}
-      {peopleData.length != 0 && <PeopleWeWorkWith peopleData={peopleData} />}
+      {/* {peopleData.length != 0 && <PeopleWeWorkWith peopleData={peopleData} />} */}
     </div>
   );
 };

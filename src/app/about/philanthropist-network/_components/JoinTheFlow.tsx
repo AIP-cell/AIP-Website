@@ -9,7 +9,7 @@ import TextStaggerAnimation from "@/components/animations/TextStaggerAnimation";
 
 const JoinTheFlow = () => {
   return (
-    <div className="w-full relative">
+    <div className="w-full relative ">
       <Image
         src={JoinCirclesOne}
         alt=""

@@ -48,10 +48,10 @@ const footerData = [
       { option: "What We Do", link: "/our-work/what-we-do" },
       { option: "NPO Registry", link: "/our-work/npo" },
       { option: "Experts", link: "/our-work/experts" },
-      {
-        option: "Projects and Programs",
-        link: "/our-work/projects-and-programs",
-      },
+      // {
+      //   option: "Projects and Programs",
+      //   link: "/our-work/projects-and-programs",
+      // },
       {
         option: "Collaborations",
         link: "/our-work/collaborations",
@@ -66,10 +66,10 @@ const footerData = [
         option: "AIP Resources",
         link: "/resource-center/aip-resources/aip-updates",
       },
-      {
-        option: "Curated Resources",
-        link: "/resource-center/curated-resources/featured",
-      },
+      // {
+      //   option: "Curated Resources",
+      //   link: "/resource-center/curated-resources/featured",
+      // },
     ],
   },
 ];
@@ -295,12 +295,12 @@ const Footer = () => {
                 >
                   <ButtonAnimation> NPO Registry</ButtonAnimation>
                 </Link>
-                <Link
+                {/* <Link
                   href="/our-work/projects-and-programs"
                   className=" text-h9Copy5 font-inter text-white/60"
                 >
                   <ButtonAnimation>Projects and Programs</ButtonAnimation>
-                </Link>
+                </Link> */}
                 <Link
                   href="/our-work/collaborations"
                   className=" text-h9Copy5 font-inter text-white/60"
@@ -320,12 +320,12 @@ const Footer = () => {
                 >
                   <ButtonAnimation>AIP Resources</ButtonAnimation>
                 </Link>
-                <Link
+                {/* <Link
                   href="/resource-center/curated-resources/featured"
                   className=" text-h9Copy5 font-inter text-white/60"
                 >
                   <ButtonAnimation>Curated Resources</ButtonAnimation>
-                </Link>
+                </Link> */}
               </div>
 
               <div className="pt-[2.25rem] text-h9Copy5 font-inter font-bold text-white">

@@ -18,8 +18,8 @@ const geFounderNetworkApi = async (): Promise<TPhilanthropistNetwork> => {
 };
 const page = async () => {
   const response = await geFounderNetworkApi();
-  if(!response){
-    notFound()
+  if (!response) {
+    notFound();
   }
   // const philanthropistNetwork = response.philanthropistNetwork.at(0);
   const casestudies = response?.casestudies;
@@ -30,10 +30,12 @@ const page = async () => {
       {/* <FourPillars /> */}
       <HelpingRivers />
       <NetworkContactSection />
-      <JoinTheFlow />
-      {casestudies?.length!=0 && <NetworkCaseStudies casestudies={casestudies} />}
+      <div className="~pb-[4.702rem]/[12.5rem]">
+        <JoinTheFlow />
+      </div>
+      {/* {casestudies?.length!=0 && <NetworkCaseStudies casestudies={casestudies} />} */}
       {/* <CaseStudies  bottomCaseStudyCurveSvg={CurvePurple} /> */}
-      {peopleData && <PeopleWeWorkWith peopleData={peopleData} />}
+      {/* {peopleData && <PeopleWeWorkWith peopleData={peopleData} />} */}
     </div>
   );
 };

@@ -155,7 +155,7 @@ export type TCuratedResourcesInner = {
   video: string;
   linkOrFile: string;
   linkOrVideo: string;
-  expertName:string
+  expertName: string;
   file: string;
   date: string;
   links: TLinks[];
@@ -256,7 +256,7 @@ export type TTeamMembers = {
   slug: string;
   linkOrVideo: string;
   image: string;
-  linkedin:string
+  linkedin: string;
   videoLink: string;
 };
 
@@ -278,7 +278,7 @@ export type TPeopleOfAipTeams = {
   twitter: string;
   image: string;
   video: string;
-  videoLink:string
+  videoLink: string;
   slug: string;
   links: TLinks[];
   selectedWorks: TSelectedWorks[];
@@ -294,7 +294,7 @@ export type TSelectedWorks = {
   name: string;
   title: string;
   description: string;
-  domain:string
+  domain: string;
   image: string;
   slug: string;
   category: string;
@@ -510,4 +510,13 @@ export type TAllPositions = {
   totalCount: number;
   currentPage: number;
   pageCount: number;
+};
+export type TGetInTouch = {
+  _id: string;
+  email: string;
+  phoneNumber: string;
+  networkTeamName: string;
+  networkTeamEmail: string;
+  knowlwdgeTeamName: string;
+  knowlwdgeTeamEmail: string;
 };

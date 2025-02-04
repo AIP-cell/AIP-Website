@@ -38,7 +38,7 @@ const GivingArchetype = () => {
         <div className="font-playFair ~text-h4/h2 text-gray80 ~leading-[2.6rem]/[3.3rem]">
         <TextStaggerAnimation text="What's your" className="" />
           <TextStaggerAnimation
-            text="<color>Giving Architype?</color>"
+            text="<color>Giving Archetype?</color>"
             className=""
           />
           {/* What&apos;s your */}

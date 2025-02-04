@@ -30,7 +30,7 @@ const AsAnExperts = () => {
           social challenges.
         </p>
       </div>
-      <div className="~pt-[2rem]/[3.268rem]">
+      {/* <div className="~pt-[2rem]/[3.268rem]">
        <ButtonAnimation >
           <OutlineButton
             text="Join The Flow"
@@ -38,7 +38,7 @@ const AsAnExperts = () => {
             className="py-[0.75rem] px-[1.75rem] hover:text-white"
           />
        </ButtonAnimation>
-      </div>
+      </div> */}
     </div>
   );
 };

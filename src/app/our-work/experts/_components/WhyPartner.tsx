@@ -1,6 +1,9 @@
+import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 import CardAnimation from "@/components/animations/CardAnimation";
 import TextStaggerAnimation from "@/components/animations/TextStaggerAnimation";
 import ImgTitleDescVer from "@/components/cards/ImgTitleDescVer";
+import MailSvg from "@/components/svg/MailSvg";
+import Link from "next/link";
 import React from "react";
 
 const datas = [
@@ -31,11 +34,14 @@ const datas = [
 ];
 const WhyPartner = () => {
   return (
-    <div className="~px-[2.84rem]/[18.656rem] ~pt-[7.5rem]/[12.5rem] container mx-auto">
+    <div className="~px-[2.84rem]/[18.656rem] ~pt-[7.5rem]/[12.5rem] ~pb-[7.5rem]/[8rem] container mx-auto flex flex-col items-center w-full">
       {/* <h2 className="~text-h4/h2 ~leading-[2.6rem]/[3.3rem] text-gray80 font-playFair text-center">
         <span className="text-textPurple font-playFairItalic">Why</span> Partner
       </h2> */}
-      <TextStaggerAnimation text="<color>Why</color> Partner" className="~text-h4/h2 ~leading-[2.6rem]/[3.3rem] text-gray80 font-playFair text-center"/>
+      <TextStaggerAnimation
+        text="<color>Why</color> Partner"
+        className="~text-h4/h2 ~leading-[2.6rem]/[3.3rem] text-gray80 font-playFair text-center"
+      />
       <p className="text-midGray ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] ~pt-[0.75rem]/[1.5rem] text-center">
         As an expert engaged with AIP, you will experience a range of
         opportunities that extend beyond the immediate ones for knowledge
@@ -56,6 +62,15 @@ const WhyPartner = () => {
           </CardAnimation>
         ))}
       </div>
+      <ButtonAnimation className=" ~mt-[2rem]/[3rem] text-darkPurple border-2 border-darkPurple hover:text-white bg-white hover:bg-darkPurple rounded-full  py-[0.75rem] px-[1.75rem]">
+        <Link
+          href="/contact"
+          className=" flex items-center text-h9Copy5 gap-[0.5rem]"
+        >
+          <p className="">Contact Us</p>
+          <MailSvg />
+        </Link>
+      </ButtonAnimation>
     </div>
   );
 };
