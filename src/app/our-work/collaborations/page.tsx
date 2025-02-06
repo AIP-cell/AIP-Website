@@ -11,35 +11,17 @@ import { notFound } from "next/navigation";
 import DateFilter from "@/components/custom/DatePick";
 import FadeInAnimation from "@/components/animations/FadeInAnimation";
 
-const filterDatas = [
-  {
-    key: "type",
-    type: "c_type",
-    filter: [
-      "Thematic Workshop",
-      "Panel Discussions",
-      "Fireside Chats",
-      "Roundtable Discussions",
-      "Reports",
-    ],
-  },
-  {
-    key: "partnerType",
-    type: "p_type",
-    filter: ["data1", "data2"],
-  },
-];
 export const dynamic = "force-dynamic";
 const getCollaborationsApi = async ({
   c_type,
-  p_type,
+  p_id,
   date,
 }: {
   c_type?: string;
-  p_type?: string;
+  p_id?: string;
   date?: string;
-}): Promise<TCollaborationPageData[]> => {
-  const response = await Api.getCollaborations({ c_type, p_type, date });
+}): Promise<TCollaborationPageData> => {
+  const response = await Api.getCollaborations({ c_type, p_id, date });
   return response.data;
 };
 const page = async ({
@@ -47,16 +29,37 @@ const page = async ({
 }: {
   searchParams: Promise<{
     c_type: string;
-    p_type?: string;
+    p_id?: string;
     date?: string;
   }>;
 }) => {
-  const { c_type, p_type, date } = await searchParams;
+  const { c_type, p_id, date } = await searchParams;
   const urlsearchParams = await searchParams;
-  const response = await getCollaborationsApi({ c_type, p_type, date });
+  const response = await getCollaborationsApi({ c_type, p_id, date });
   if (!response) {
     notFound();
   }
+  const partnerFilter = response.partners;
+  const collaborations = response.collaborations;
+  const filterDatas = [
+    {
+      key: "type",
+      type: "c_type",
+      filter: [
+        "Thematic Workshop",
+        "Panel Discussions",
+        "Fireside Chats",
+        "Roundtable Discussions",
+        "Reports",
+      ],
+    },
+    {
+      key: "partnerType",
+      type: "p_id",
+      filter: partnerFilter,
+    },
+  ];
+
   return (
     <div className="~pt-[4.4rem]/[5rem]">
       <div className="relative w-full  pb-[7.5rem]">
@@ -113,8 +116,8 @@ const page = async ({
             </div>
           </div>
 
-          {response.length != 0 && (
-            <CollaborationGrid collaborationData={response} />
+          {collaborations.length != 0 && (
+            <CollaborationGrid collaborationData={collaborations} />
           )}
         </div>
       </div>

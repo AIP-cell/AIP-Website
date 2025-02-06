@@ -13,7 +13,7 @@ type Props = {
   searchParams: Record<string, any>;
   setSelected: (value: string) => void;
   // setIsOpen: (value: boolean) => void;
-  selected: string;
+  selected: any;
 };
 export function ApplyFilterResp({
   type,
@@ -32,13 +32,14 @@ Props) {
     // console.log("hiiiiiiiiii")
     const query = generatingSearchParam({
       ...searchParams,
-      [filterKey]: selected,
+      [filterKey]: selected.name ? selected._id : selected,
     });
     router.push(`?${query.toString()}`, {
       scroll: false,
     });
     setIsOpen(false);
   };
+  
   return (
     <div>
       <div
@@ -53,7 +54,7 @@ Props) {
               ? "Type Of Content"
               : type === "o_type"
               ? "Organization Type"
-              : type === "p_type"
+              : type === "p_id"
               ? "Partner Type"
               : type}
           </p>
@@ -71,7 +72,7 @@ Props) {
                     ? "Type Of Content"
                     : type === "o_type"
                     ? "Organization Type"
-                    : type === "p_type"
+                    : type === "p_id"
                     ? "Partner Type"
                     : type}
                 </div>
@@ -94,12 +95,12 @@ Props) {
                   key={index}
                   className="flex items-center gap-[0.938rem] py-[1.25rem]"
                 >
-                  <RadioGroupItem value={items} id={items} />
+                  <RadioGroupItem value={items._id ? items._id : items} id={items._id ? items._id : items} />
                   <label
-                    htmlFor={items}
+                    htmlFor={items._id ? items._id : items}
                     className="text-h9Copy5 leading-[1.225rem] text-gray80"
                   >
-                    {items}
+                    {items.name ? items.name : items}
                   </label>
                 </div>
               ))}

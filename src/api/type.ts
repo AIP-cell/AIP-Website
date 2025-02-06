@@ -400,6 +400,10 @@ export type TMedia = {
 // Start Collaboration
 
 export type TCollaborationPageData = {
+  collaborations:TCollaborationsArray[]
+  partners: TPartnerCollaboration[];
+};
+export type TCollaborationsArray = {
   _id: string;
   title: string;
   date: string;
@@ -412,6 +416,10 @@ export type TCollaboration = {
   _id: string;
   name: string;
   image: string;
+};
+export type TPartnerCollaboration = {
+  _id: string;
+  name: string;
 };
 
 // End Collaboration

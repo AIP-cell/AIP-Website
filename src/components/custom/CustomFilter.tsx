@@ -30,10 +30,11 @@ const CustomFilter = ({
       ? searchParams.c_type
       : type === "o_type"
       ? searchParams.c_type
-      : type === "p_type"
-      ? searchParams.p_type
+      : type === "p_id"
+      ? searchParams.p_id
       : ""
   );
+  console.log("selected:::",selected)
   return (
     <>
       {/* {isOpen && ( */}
@@ -59,7 +60,7 @@ const CustomFilter = ({
                   ? "Type Of Content"
                   : type === "o_type"
                   ? "Organization Type"
-                  : type === "p_type"
+                  : type === "p_id"
                   ? "Partner Type"
                   : type}
               </p>
@@ -72,27 +73,29 @@ const CustomFilter = ({
             anchor="bottom"
             className="hidden  w-[10.25rem] !max-h-[14.5rem] no-scrollbar mt-[0.4rem] z-[10000] bg-white border-2 border-[#DFE0E5] md:flex flex-col gap-[0.75rem] rounded-md   px-[0.863rem] py-[0.8rem]"
           >
-            {optionsArray?.map((items: any, i: number) => (
-              <ListboxOption
-                key={i}
-                value={items}
-                onClick={() => {
-                  const query = generatingSearchParam({
-                    ...searchParams,
-                    [filterKey]: items,
-                  });
-                  router.push(`?${query.toString()}`, {
-                    scroll: false,
-                  });
-                }}
-                className="group flex gap-[0.75rem] text-start items-start   rounded-md border-gray10  no-scrollbar text-black text-h9Copy5 leading-[1.225rem] cursor-pointer"
-              >
-                <div className="size-[0.833rem] shrink-0 border-2 border-gray80 rounded-sm flex justify-center items-center mt-1">
-                  <div className="size-[0.45rem] bg-gray80 rounded-md invisible group-data-[selected]:visible"></div>
-                </div>
-                <p>{items}</p>
-              </ListboxOption>
-            ))}
+            {optionsArray?.map((items: any, i: number) => {
+              return (
+                <ListboxOption
+                  key={i}
+                  value={items._id ? items._id : items}
+                  onClick={() => {
+                    const query = generatingSearchParam({
+                      ...searchParams,
+                      [filterKey]: items._id ? items._id : items,
+                    });
+                    router.push(`?${query.toString()}`, {
+                      scroll: false,
+                    });
+                  }}
+                  className="group flex gap-[0.75rem] text-start items-start   rounded-md border-gray10  no-scrollbar text-black text-h9Copy5 leading-[1.225rem] cursor-pointer"
+                >
+                  <div className="size-[0.833rem] shrink-0 border-2 border-gray80 rounded-sm flex justify-center items-center mt-1">
+                    <div className="size-[0.45rem] bg-gray80 rounded-md invisible group-data-[selected]:visible"></div>
+                  </div>
+                  <p>{items.name ? items.name : items}</p>
+                </ListboxOption>
+              );
+            })}
           </ListboxOptions>
         </Listbox>
       </div>

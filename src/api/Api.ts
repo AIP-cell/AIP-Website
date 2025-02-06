@@ -213,7 +213,7 @@ export const Api = {
   },
   getCollaborations: async (data: {
     c_type?: string;
-    p_type?: string;
+    p_id?: string;
     date?: string;
   }) => {
     try {

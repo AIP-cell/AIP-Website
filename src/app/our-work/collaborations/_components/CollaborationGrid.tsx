@@ -1,9 +1,9 @@
 import React from "react";
-import bcgSvg from "@public/svg/projects-page/bcg.svg";
+// import bcgSvg from "@public/svg/projects-page/bcg.svg";
 import Image from "next/image";
 import Link from "next/link";
 import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
-import { TCollaborationPageData } from "@/api/type";
+import {  TCollaborationsArray } from "@/api/type";
 import dayjs from "dayjs";
 import { StorageUrl } from "@/utils/BaseUrl";
 import CardAnimation from "@/components/animations/CardAnimation";
@@ -27,7 +27,7 @@ const datas = [
   },
 ];
 type Props = {
-  collaborationData: TCollaborationPageData[];
+  collaborationData: TCollaborationsArray[];
 };
 const CollaborationGrid = ({ collaborationData }: Props) => {
   const dateFormat = (date: string) => {
