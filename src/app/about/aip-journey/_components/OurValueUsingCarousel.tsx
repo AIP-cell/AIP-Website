@@ -21,8 +21,12 @@ import {
 import { useMediaQuery } from "react-responsive";
 import useClient from "@/hooks/useClient";
 import TextStaggerAnimation from "@/components/animations/TextStaggerAnimation";
+import { TOurValues } from "@/api/type";
 
-const OurValueUsingCarousel = () => {
+type Props = {
+  ourValueData: TOurValues[];
+};
+const OurValueUsingCarousel = ({ ourValueData }: Props) => {
   const [api, setApi] = React.useState<CarouselApi>();
 
   const [current, setCurrent] = React.useState(0);
@@ -39,55 +43,55 @@ const OurValueUsingCarousel = () => {
   const client = useClient();
   if (!client) return;
 
-  let ourValues;
-  isDesktop
-    ? (ourValues = [
-        {},
-        {
-          text1: "Respect",
-          text2: "Agency",
-          desc: "It highlights the belief that success is achieved through collaboration, and collective efforts of individuals and teams. . It promotes a culture of teamwork, shared responsibility, effective communication, and continuous learning, creating an environment where everyone can thrive and contribute to the organizations success.",
-        },
-        {
-          text1: "Work",
-          text2: "Together",
-          desc: "believe in fostering an environment where every individual's voice is heard and respected, encouraging them to take ownership of their work, make independent decisions, and contribute to the organisation’s success.",
-        },
-        {
-          text1: "Ever",
-          text2: "Evolving",
-          desc: "believe in fostering an environment where every individual's voice is heard and respected, encouraging them to take ownership of their work, make independent decisions, and contribute to the organisation’s success.",
-        },
-        {
-          text1: "Respect",
-          text2: "Agency",
-          desc: "believe in fostering an environment where every individual's voice is heard and respected, encouraging them to take ownership of their work, make independent decisions, and contribute to the organisation’s success.",
-        },
-        {},
-      ])
-    : (ourValues = [
-        {
-          text1: "1Respect",
-          text2: "Agency",
-          desc: "1 It highlights the belief that success is achieved through collaboration, and collective efforts of individuals and teams. . It promotes a culture of teamwork, shared responsibility, effective communication, and continuous learning, creating an environment where everyone can thrive and contribute to the organizations success.",
-        },
-        {
-          text1: "2 Respect",
-          text2: "Agency",
-          desc: "2 believe in fostering an environment where every individual's voice is heard and respected, encouraging them to take ownership of their work, make independent decisions, and contribute to the organisation’s success.",
-        },
-        {
-          text1: "3 Respect",
-          text2: "Agency",
-          desc: "3 believe in fostering an environment where every individual's voice is heard and respected, encouraging them to take ownership of their work, make independent decisions, and contribute to the organisation’s success.",
-        },
-        {
-          text1: "4 Respect",
-          text2: "Agency",
-          desc: "4 believe in fostering an environment where every individual's voice is heard and respected, encouraging them to take ownership of their work, make independent decisions, and contribute to the organisation’s success.",
-        },
-      ]);
-
+  // let ourValues;
+  // isDesktop
+  //   ? (ourValues = [
+  //       {},
+  //       {
+  //         text1: "Respect",
+  //         text2: "Agency",
+  //         desc: "It highlights the belief that success is achieved through collaboration, and collective efforts of individuals and teams. . It promotes a culture of teamwork, shared responsibility, effective communication, and continuous learning, creating an environment where everyone can thrive and contribute to the organizations success.",
+  //       },
+  //       {
+  //         text1: "Work",
+  //         text2: "Together",
+  //         desc: "believe in fostering an environment where every individual's voice is heard and respected, encouraging them to take ownership of their work, make independent decisions, and contribute to the organisation’s success.",
+  //       },
+  //       {
+  //         text1: "Ever",
+  //         text2: "Evolving",
+  //         desc: "believe in fostering an environment where every individual's voice is heard and respected, encouraging them to take ownership of their work, make independent decisions, and contribute to the organisation’s success.",
+  //       },
+  //       {
+  //         text1: "Respect",
+  //         text2: "Agency",
+  //         desc: "believe in fostering an environment where every individual's voice is heard and respected, encouraging them to take ownership of their work, make independent decisions, and contribute to the organisation’s success.",
+  //       },
+  //       {},
+  //     ])
+  //   : (ourValues = [
+  //       {
+  //         text1: "1Respect",
+  //         text2: "Agency",
+  //         desc: "1 It highlights the belief that success is achieved through collaboration, and collective efforts of individuals and teams. . It promotes a culture of teamwork, shared responsibility, effective communication, and continuous learning, creating an environment where everyone can thrive and contribute to the organizations success.",
+  //       },
+  //       {
+  //         text1: "2 Respect",
+  //         text2: "Agency",
+  //         desc: "2 believe in fostering an environment where every individual's voice is heard and respected, encouraging them to take ownership of their work, make independent decisions, and contribute to the organisation’s success.",
+  //       },
+  //       {
+  //         text1: "3 Respect",
+  //         text2: "Agency",
+  //         desc: "3 believe in fostering an environment where every individual's voice is heard and respected, encouraging them to take ownership of their work, make independent decisions, and contribute to the organisation’s success.",
+  //       },
+  //       {
+  //         text1: "4 Respect",
+  //         text2: "Agency",
+  //         desc: "4 believe in fostering an environment where every individual's voice is heard and respected, encouraging them to take ownership of their work, make independent decisions, and contribute to the organisation’s success.",
+  //       },
+  //     ]);
+  const ourValues:Partial<TOurValues>[] = isDesktop ? [{}, ...ourValueData, {}] : ourValueData;
   return (
     <>
       <div className="w-full relative ">
@@ -122,7 +126,7 @@ const OurValueUsingCarousel = () => {
           </div>
           <div className="relative">
             <CarouselContent className="~pt-[2.5rem]/[5rem] relative ">
-              {ourValues.map((items, i) => (
+              {ourValues.map((items:Partial<TOurValues>, i) => (
                 <CarouselItem
                   key={i}
                   className="basis:1/1 xl:!basis-1/3 justify-center gap-[1.25rem] flex "
@@ -134,8 +138,8 @@ const OurValueUsingCarousel = () => {
                         <OvalPurple
                           sizeClass="~size-[14.25rem]/[18.4rem]"
                           mainClass=" snap-center "
-                          text1={items.text1}
-                          text2={items.text2}
+                          text1={items?.title1}
+                          text2={items?.title2}
                           textClass1="~text-h5/h4 font-playFair text-purple10 ~leading-[1.75rem]/[2.6rem]"
                           textClass2=" font-playFairItalic ~text-h5/h4 ~leading-[1.75rem]/[2.6rem]"
                         />
@@ -144,8 +148,8 @@ const OurValueUsingCarousel = () => {
                       <OvalPurple
                         sizeClass="~size-[14.25rem]/[18.4rem]"
                         mainClass=" snap-center "
-                        text1={items.text1}
-                        text2={items.text2}
+                        text1={items?.title1}
+                        text2={items?.title2}
                         textClass1="~text-h5/h4 font-playFair text-purple10 ~leading-[1.75rem]/[2.6rem]"
                         textClass2=" font-playFairItalic ~text-h5/h4 ~leading-[1.75rem]/[2.6rem]"
                       />
@@ -164,7 +168,7 @@ const OurValueUsingCarousel = () => {
               <div className=" w-full flex justify-center shrink-0  container mx-auto ">
                 <div className="relative ~w-[16.125rem]/[38rem] flex justify-center items-center">
                   <p className=" text-center ~text-h9Copy5/h9Copy4 text-midGray ~h-[12rem]/[10rem] line-clamp-[10] ~leading-[1.225rem]/[1.4rem]">
-                    {ourValues.at(current)?.desc}
+                    {ourValues.at(current)?.description}
                   </p>
                 </div>
               </div>

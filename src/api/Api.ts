@@ -20,6 +20,15 @@ export const Api = {
       return null;
     }
   },
+  getAipJourney: async () => {
+    try {
+      const response = await axiosClient.get("aip-journey");
+      return response.data;
+    } catch (error) {
+      console.log(error);
+      return null;
+    }
+  },
   getAipResources: async (
     slug: string,
     data: {

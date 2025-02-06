@@ -123,7 +123,25 @@ export type TPeople = {
   searchKeywords: [string];
 };
 
-// Enc Aip Impact Types
+// Enc Aip Impact Types\
+
+// Start Aip journey
+export type TAipJourney = {
+  ourValues: TOurValues[];
+};
+export type TOurValues = {
+  _id: string;
+  description: string;
+  title1: string;
+  title2: string;
+};
+export type TJourney = {
+  _id: string;
+  description: string;
+  image: string;
+  searchKeywords: [string];
+};
+// End Aip journey
 
 // Start Resource center
 
