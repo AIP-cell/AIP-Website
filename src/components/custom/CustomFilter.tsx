@@ -41,7 +41,6 @@ const CustomFilter = ({
     ? searchParams.p_id || ""
     : ""
   );
-  console.log("selected:::",selected)
   return (
     <>
       {/* {isOpen && ( */}
