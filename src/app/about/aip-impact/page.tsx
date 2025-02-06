@@ -26,6 +26,7 @@ const page = async () => {
       <ImpactHeroSection />
       {caseStudyData.length != 0 && (
         <CaseStudies
+          isReadMoreButton={true}
           bottomCaseStudyCurveSvg={CurvePeach}
           caseStudyData={caseStudyData}
         />

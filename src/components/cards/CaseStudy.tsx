@@ -17,6 +17,7 @@ type Props = {
   isLinkOrPdf?: string;
   file?: string;
   fileLink?: string;
+  isReadMoreButton?: boolean;
 };
 const CaseStudy = ({
   title,
@@ -30,6 +31,7 @@ const CaseStudy = ({
   isLinkOrPdf,
   file,
   fileLink,
+  isReadMoreButton,
 }: Props) => {
   const link = isLinkOrPdf === "pdf" ? StorageUrl + file : fileLink;
   const toDownload = isLinkOrPdf === "pdf" ? true : false;
@@ -73,41 +75,45 @@ const CaseStudy = ({
           </h3>
         )}
 
-        {/* <CaseStudyDescSection desc={desc} index={index} /> */}
-        <div
+        <CaseStudyDescSection desc={desc} index={index} />
+        {/* <div
           className={cn(
             "text-midGray ~pt-[1rem]/[1.25rem] ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] relative"
           )}
         >
           {desc}
-        </div>
-        {slug ? (
-          <Link
-            href={`/our-work/npo/${slug}`}
-            download={toDownload}
-            className="~pt-[2rem]/[2.5rem]"
-          >
-            <ButtonAnimation className=" rounded-full  border-2 border-darkPurple hover:bg-darkPurple ">
-              <h3 className="text-darkPurple hover:text-white font-medium text-h9Copy5 leading-[1.225rem] py-[0.75rem] px-[1.75rem]">
-                Read More
-              </h3>
-            </ButtonAnimation>
-          </Link>
-        ) : (
-          isLinkOrPdf != "" && (
-            <Link
-              href={link ?? ""}
-              target="_blank"
-              download={toDownload}
-              className="~pt-[2rem]/[2.5rem]"
-            >
-              <ButtonAnimation className=" rounded-full  border-2 border-darkPurple hover:bg-darkPurple ">
-                <h3 className="text-darkPurple hover:text-white font-medium text-h9Copy5 leading-[1.225rem] py-[0.75rem] px-[1.75rem]">
-                  Read More
-                </h3>
-              </ButtonAnimation>
-            </Link>
-          )
+        </div> */}
+        {!isReadMoreButton && (
+          <>
+            {slug ? (
+              <Link
+                href={`/our-work/npo/${slug}`}
+                download={toDownload}
+                className="~pt-[2rem]/[2.5rem]"
+              >
+                <ButtonAnimation className=" rounded-full  border-2 border-darkPurple hover:bg-darkPurple ">
+                  <h3 className="text-darkPurple hover:text-white font-medium text-h9Copy5 leading-[1.225rem] py-[0.75rem] px-[1.75rem]">
+                    Read More
+                  </h3>
+                </ButtonAnimation>
+              </Link>
+            ) : (
+              isLinkOrPdf != "" && (
+                <Link
+                  href={link ?? ""}
+                  target="_blank"
+                  download={toDownload}
+                  className="~pt-[2rem]/[2.5rem]"
+                >
+                  <ButtonAnimation className=" rounded-full  border-2 border-darkPurple hover:bg-darkPurple ">
+                    <h3 className="text-darkPurple hover:text-white font-medium text-h9Copy5 leading-[1.225rem] py-[0.75rem] px-[1.75rem]">
+                      Read More
+                    </h3>
+                  </ButtonAnimation>
+                </Link>
+              )
+            )}
+          </>
         )}
       </div>
     </div>

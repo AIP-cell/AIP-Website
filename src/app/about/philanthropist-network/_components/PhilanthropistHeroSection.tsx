@@ -29,7 +29,7 @@ const PhilanthropistHeroSection = () => {
           </h4> */}
           {/* ~pt-[1.25rem]/[0.75rem] */}
           <div className=" ~pt-[4.313rem]/[6.5rem]">
-            <div className="  ~text-h5/h6 text-gray80 ~leading-[1.75rem]/[2.6rem] font-playFair tracking-[-0.3px]">
+            <div className="  ~text-h5/h7 text-gray80 ~leading-[1.75rem]/[2.6rem] font-playFair tracking-[-0.3px]">
               <FadeInAnimation delay={0.1} x1={-20} x2={0}>
                 <p className="hidden md:block">
                   We work with philanthropist on a project level.
@@ -53,7 +53,7 @@ const PhilanthropistHeroSection = () => {
               </FadeInAnimation>
             </div>
             <FadeInAnimation delay={0.2} x1={-20} x2={0}>
-              <div className="  ~text-h5/h4 text-gray80 ~leading-[1.75rem]/[2.6rem] font-playFair ~pt-[2rem]/[3rem]">
+              <div className="  ~text-h5/h7 text-gray80 ~leading-[1.75rem]/[2.6rem] font-playFair ~pt-[2rem]/[3rem]">
                 We pride ourselves on providing pro-bono support. This ensures our
                 engagement remains neutral, unbiased, and devoid of conflicts. You
                 don&apos;t need to be a founder to engage with us.

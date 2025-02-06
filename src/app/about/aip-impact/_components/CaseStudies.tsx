@@ -31,8 +31,13 @@ import Image from "next/image";
 type Props = {
   bottomCaseStudyCurveSvg: string;
   caseStudyData: TCaseStudies[];
+  isReadMoreButton?: boolean;
 };
-const CaseStudies = ({ bottomCaseStudyCurveSvg, caseStudyData }: Props) => {
+const CaseStudies = ({
+  bottomCaseStudyCurveSvg,
+  caseStudyData,
+  isReadMoreButton,
+}: Props) => {
   return (
     <div className="relative w-full">
       <Image
@@ -62,6 +67,7 @@ const CaseStudies = ({ bottomCaseStudyCurveSvg, caseStudyData }: Props) => {
               <CaseStudy
                 key={i}
                 index={i}
+                isReadMoreButton={isReadMoreButton}
                 slug={item?.slug}
                 foundationName={item?.foundationName}
                 initiativeName={item?.initiativeName}
