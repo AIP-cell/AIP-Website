@@ -26,13 +26,20 @@ const CustomFilter = ({
 }: Props) => {
   const router = useRouter();
   const [selected, setSelected] = useState(
+    // type === "c_type"
+    //   ? searchParams.c_type
+    //   : type === "o_type"
+    //   ? searchParams.o_type
+    //   : type === "p_id"
+    //   ? searchParams.p_id
+    //   : ""
     type === "c_type"
-      ? searchParams.c_type
-      : type === "o_type"
-      ? searchParams.c_type
-      : type === "p_id"
-      ? searchParams.p_id
-      : ""
+    ? searchParams.c_type || ""
+    : type === "o_type"
+    ? searchParams.o_type || ""
+    : type === "p_id"
+    ? searchParams.p_id || ""
+    : ""
   );
   console.log("selected:::",selected)
   return (
