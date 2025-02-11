@@ -346,6 +346,17 @@ export type TProjectPrograms = {
 };
 
 // End People Of Aip
+// Start People Of Aip
+
+export type TRoadMap = {
+  _id: string;
+  link: string
+  isLink: boolean;
+  isFile: boolean;
+  file: string;
+};
+
+// End People Of Aip
 
 // Start Inner People Of Aip
 
@@ -400,7 +411,7 @@ export type TMedia = {
 // Start Collaboration
 
 export type TCollaborationPageData = {
-  collaborations:TCollaborationsArray[]
+  collaborations: TCollaborationsArray[];
   partners: TPartnerCollaboration[];
 };
 export type TCollaborationsArray = {

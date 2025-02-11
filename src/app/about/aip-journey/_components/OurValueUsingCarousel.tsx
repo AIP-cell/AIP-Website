@@ -27,6 +27,7 @@ type Props = {
   ourValueData: TOurValues[];
 };
 const OurValueUsingCarousel = ({ ourValueData }: Props) => {
+  console.log("ourValueData:::::",ourValueData)
   const [api, setApi] = React.useState<CarouselApi>();
 
   const [current, setCurrent] = React.useState(0);
@@ -92,6 +93,7 @@ const OurValueUsingCarousel = ({ ourValueData }: Props) => {
   //       },
   //     ]);
   const ourValues:Partial<TOurValues>[] = isDesktop ? [{}, ...ourValueData, {}] : ourValueData;
+  console.log("current:::::::",current)
   return (
     <>
       <div className="w-full relative ">

@@ -9,6 +9,9 @@ import React from "react";
 import Link from "next/link";
 import CardAnimation from "@/components/animations/CardAnimation";
 import TextStaggerAnimation from "@/components/animations/TextStaggerAnimation";
+import { TRoadMap } from "@/api/type";
+import LinkSvg from "@/components/svg/LinkSvg";
+import { StorageUrl } from "@/utils/BaseUrl";
 const itemsArray = [
   {
     title1: "Treasure",
@@ -23,7 +26,12 @@ const itemsArray = [
     desc: " How do you use your voice and influence to inspire others and advocate for meaningful causes?",
   },
 ];
-const GivingJourney = () => {
+type Props = {
+  response: TRoadMap;
+};
+const GivingJourney = ({ response }: Props) => {
+  const isLink = response.isLink;
+  const isFile = response.isFile;
   return (
     <div className="flex flex-col text-center ~pb-[7.5rem]/[12.5rem] relative">
       <Image
@@ -74,17 +82,29 @@ const GivingJourney = () => {
             drive for impact.
           </p>
         </div>
-        <div className="~pt-[2rem]/[2.5rem] flex w-full justify-center">
-          <Link href="" target="_blank">
-            <ButtonAnimation
-              type="submit"
-              className="text-white hover:text-darkPurple text-h9Copy5 flex gap-[0.5rem] leading-[1.225rem] hover:bg-white bg-darkPurple px-[1.75rem] py-[0.75rem] rounded-[1.5rem] cursor-pointer"
-            >
-              <p> Discover Your Path</p>
-
-              <DownloadFileSvg className="size-[1.25rem]" />
-            </ButtonAnimation>
-          </Link>
+        <div className="~pt-[2rem]/[2.5rem] flex w-full flex-col md:flex-row items-center gap-[1rem] justify-center">
+          {isFile && (
+            <Link href={StorageUrl + response.file} download target="_blank">
+              <ButtonAnimation
+                type="submit"
+                className="text-white hover:text-darkPurple text-h9Copy5 flex gap-[0.5rem] leading-[1.225rem] hover:bg-white bg-darkPurple px-[1.75rem] py-[0.75rem] rounded-[1.5rem] cursor-pointer"
+              >
+                <p> Discover Your Path</p>
+                <DownloadFileSvg className="size-[1.25rem]" />
+              </ButtonAnimation>
+            </Link>
+          )}
+          {isLink && (
+            <Link href={response.link ?? ""} target="_blank">
+              <ButtonAnimation
+                type="submit"
+                className="text-white hover:text-darkPurple text-h9Copy5 flex items-center gap-[0.5rem] leading-[1.225rem] hover:bg-white bg-darkPurple px-[1.75rem] py-[0.75rem] rounded-[1.5rem] cursor-pointer"
+              >
+                <p> Discover Your Path</p>
+                <LinkSvg className="size-[1rem]" />
+              </ButtonAnimation>
+            </Link>
+          )}
         </div>
       </div>
     </div>

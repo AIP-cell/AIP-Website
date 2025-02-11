@@ -66,8 +66,8 @@ const ImpactHeroSection = () => {
             }}
           />
 
-          <div className=" bg-[#b861b4a6] ~pt-[3rem]/[6.25rem] ~pb-[3rem]/[7.6rem] w-full ">
-            <div className="container mx-auto flex justify-center flex-col items-center relative z-50 ~px-5/[14.375rem] ">
+          <div className=" bg-[#b861b4a6] ~pt-[3rem]/[6rem] ~pb-[3rem]/[7rem] w-full ">
+            <div className="container mx-auto flex justify-center flex-col items-center relative z-50 ~px-5/[14rem] ">
               {/* <h3 className=" ~leading-[1.129rem]/[1.29rem] ~text-h9Copy5/h9Copy4 font-inter text-white/60 font-semibold">
                 IMPACT BEGINS AT HOME
               </h3> */}
@@ -81,7 +81,7 @@ const ImpactHeroSection = () => {
                 Philanthropy is clearly one of the means than can augment impact
                 and lead to transformational change. AIP believes strategic
                 personal philanthropy can impact India’s transformation."
-                className="pt-[1.25rem] text-center ~text-h4/h3 ~leading-[2.6rem]/[3.25rem] font-playFair text-white tracking-[-0.5px]"
+                className="pt-[1.25rem] text-center ~text-h4/h3 ~leading-[2.6rem]/[3.25rem] font-playFair text-white tracking-[-1px]"
               />
             </div>
           </div>

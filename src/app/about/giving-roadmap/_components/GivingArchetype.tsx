@@ -4,6 +4,7 @@ import TextStaggerAnimation from "@/components/animations/TextStaggerAnimation";
 import BgButton from "@/components/buttons/BgButton";
 import TitleDescCard from "@/components/cards/TitleDescCard";
 import DownloadFileSvg from "@/components/svg/DowloadFileSvg";
+import Link from "next/link";
 import React from "react";
 const itemsArray = [
   {
@@ -16,19 +17,19 @@ const itemsArray = [
   },
   {
     title1: "Strategic Enablers",
-    desc: "  How do you use your voice and influence to inspire others and advocate for meaningful causes?",
+    desc: "How do you use your voice and influence to inspire others and advocate for meaningful causes?",
   },
   {
     title1: "Core Givers",
-    desc: " How do you strategically allocate your financial resources to create the greatest impact?",
+    desc: "How do you leverage your time, talent, and connections to amplify the change you wish to see?",
   },
   {
     title1: "Cause Champions",
-    desc: " How do you use your voice and influence to inspire others and advocate for meaningful causes?",
+    desc: "How do you use your voice and influence to inspire others and advocate for meaningful causes?",
   },
   {
     title1: "Rainmakers",
-    desc: " How do you use your voice and influence to inspire others and advocate for meaningful causes?",
+    desc: "How do you use your voice and influence to inspire others and advocate for meaningful causes?",
   },
 ];
 const GivingArchetype = () => {
@@ -55,7 +56,7 @@ const GivingArchetype = () => {
           Where do you see yourself? AIP can support you in navigating the
           giving landscape and elevating your impact in philanthropy.
         </p>
-        <div className="grid lg:grid-cols-2 xl:grid-cols-3 ~gap-x-[2.5rem]/0 ~gap-y-[0.75rem]/[3.781rem] ~py-[2rem]/[3.5rem] w-full justify-center px-[1.563rem] md:~px-[4rem]/0">
+        <div className="grid lg:grid-cols-2 xl:grid-cols-3 ~gap-x-0/[2.5rem] ~gap-y-[0.75rem]/[3.781rem] ~py-[2rem]/[3.5rem] w-full justify-center px-[1.563rem] md:~px-[4rem]/0">
           {itemsArray.map((items, i) => (
             <CardAnimation index={i} delay={0.1} key={i}>
               <div  className="col-span-1 flex justify-center">
@@ -65,10 +66,12 @@ const GivingArchetype = () => {
           ))}
         </div>
         <div className="~pt-0/[2.5rem] flex w-full justify-center">
-          <BgButton
-            className="px-[1.75rem] py-[0.75rem]"
-            text="Join The Flow"
-          />
+          <Link href="/contact">
+            <BgButton
+              className="px-[1.75rem] py-[0.75rem]"
+              text="Join The Flow"
+            />
+          </Link>
         </div>
       </div>
     </div>

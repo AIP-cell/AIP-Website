@@ -29,6 +29,15 @@ export const Api = {
       return null;
     }
   },
+  getRoadMap: async () => {
+    try {
+      const response = await axiosClient.get("giving-roadmap");
+      return response.data;
+    } catch (error) {
+      console.log(error);
+      return null;
+    }
+  },
   getAipResources: async (
     slug: string,
     data: {

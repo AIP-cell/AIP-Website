@@ -12,7 +12,7 @@ import TextStaggerAnimation from "@/components/animations/TextStaggerAnimation";
 
 const NpoJoinTheFlow = () => {
   return (
-    <div className="w-full relative">
+    <div className="w-full relative ">
       <Image
         src={JoinCirclesOne}
         alt=""
@@ -30,7 +30,7 @@ const NpoJoinTheFlow = () => {
         className="hidden lg:block absolute bottom-[-3.9rem] right-0 w-[15.313rem] h-[15.125rem]"
       />
       {/* </FadeInAnimation> */}
-      <div className="relative container mx-auto">
+      <div className="relative container mx-auto ">
         <div className="relative flex flex-col items-center justify-center ~pt-0/[8.43rem]">
           {/* <h2 className="font-playFair text-gray80 ~text-h4/h2 ~leading-[2.6rem]/[3.3rem]">
             <span className="text-textPurple font-playFairItalic">Join</span>{" "}

@@ -11,22 +11,22 @@ const itemsArray = [
   {
     title1: "Build & Shape Your ",
     title2: "Philanthropic Journey ",
-    desc: "Turn your philanthropic intent into a lasting legacy with AIP’s guidance and support.",
+    desc: "Grow your philanthropy transforming it into own legacy with our support, aligning your giving with passion and purpose",
   },
   {
     title1: "Engage With Like-Minded",
     title2: "Peers & Experts",
-    desc: "Access valuable knowledge resources to deepen your perspective and align your giving with purpose.",
+    desc: "Connect and collaborate with fellow philanthropists through our wide network to gain perspectives and understanding",
   },
   {
     title1: "Access Insightful ",
     title2: "Knowledge Resources",
-    desc: "Collaborate with like-minded philanthropists through AIP’s expansive network to amplify your impact.",
+    desc: "Have access to valuable context setting resources curated by us for your customized understanding and philanthropic needs",
   },
   {
     title1: "Enable & ",
     title2: "Evangelize Good",
-    desc: "Share and inspire with powerful philanthropic stories that resonate and drive change.",
+    desc: "Philanthropists are best at inspiring one another; sharing your stories and experiences sparks new ideas and inspiration",
   },
 ];
 const NetworkContactSection = () => {
@@ -42,7 +42,7 @@ const NetworkContactSection = () => {
           text="Reason to <color>Connect</color>"
           className="~text-h4/h2 text-center ~leading-[2.6rem]/[3.3rem] text-gray80 font-playFair"
         />
-      <p className="~leading-[1.225rem]/[1.4rem] ~text-h9Copy5/h9Copy4 ~pt-[2rem]/[2.5rem] ~px-[2.813rem]/[15.813rem] text-center">
+      <p className="~leading-[1.225rem]/[1.4rem] ~text-h9Copy5/h9Copy4 text-midGray ~pt-[2rem]/[2.5rem] ~px-[2.813rem]/[15.813rem] text-center">
         We believe in dedicating to an independent, sector agnostic, and deeply
         focused approach, personally catering to how one defines their
         philanthropy and here they wish to take it to. Valuing long-lasting

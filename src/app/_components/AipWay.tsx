@@ -31,14 +31,14 @@ const AipWay = () => {
       /> */}
 
       {/* <FadeInAnimation delay={0.1} y1={-20} y2={0} duration={1} className="absolute ~top-[7.75rem]/[5rem] flex justify-center w-full md:w-auto md:block"> */}
-        <OvalPeach
-          mainClass="absolute ~top-[7.75rem]/[5rem] flex justify-center w-full md:w-auto md:block ~md:~left-0/[14.093rem]"
-          text1="The"
-          textClass1="~text-h4/h2 ~leading-[2.6rem]/[3.3rem] !text-midGray !font-playFair !text-center"
-          sizeClass="~size-[17rem]/[24.166rem]"
-          text2="AIP Way"
-          textClass2=" ~text-h4/h2 ~leading-[2.6rem]/[3.3rem] !text-textPurple !font-playFairItalic"
-        />
+      <OvalPeach
+        mainClass="absolute ~top-[7.75rem]/[5rem] flex justify-center w-full md:w-auto md:block ~md:~left-0/[14.093rem]"
+        text1="The"
+        textClass1="~text-h4/h2 ~leading-[2.6rem]/[3.3rem] !text-midGray !font-playFair !text-center"
+        sizeClass="~size-[17rem]/[24.166rem]"
+        text2="AIP Way"
+        textClass2=" ~text-h4/h2 ~leading-[2.6rem]/[3.3rem] !text-textPurple !font-playFairItalic"
+      />
       {/* </FadeInAnimation> */}
       <div className="hidden md:block absolute bottom-[3.125rem] right-[14.366rem]">
         <Image src={OvalPeachSvg} alt="" className="size-[8.726rem]" />
@@ -72,8 +72,7 @@ const AipWay = () => {
           </div>
 
           <div className="relative flex flex-col font-playFair font-medium pl-[5rem] text-midGray  ~text-h9Copy5/h9Copy4 ~leading-[1.138rem]/[1.4rem]">
-            <p>AIP is the gentle uplifting spirit,</p>
-            <p>The bank that holds, that shapes it all.</p>
+            <p>AIP is the bank that holds and shapes it.</p>
             <p>To form & connect networks.</p> <p>That bridge gaps.</p>
             <p>Taking a philanthropist,</p> <p>From inspiration to impact.</p>
           </div>
