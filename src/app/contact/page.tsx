@@ -21,10 +21,10 @@ const getContactApi = async (): Promise<TGetInTouch> => {
   return response?.data;
 };
 const page = async () => {
-   const response = await getContactApi();
-    if (!response) {
-      notFound();
-    }
+  const response = await getContactApi();
+  if (!response) {
+    notFound();
+  }
 
   return (
     <div className="pt-[5rem]">
@@ -84,9 +84,9 @@ const page = async () => {
 
                 <div className="h-px bg-footerGray mt-5 mb-5"></div>
 
-                {/* <p className="font-playFair italic font-medium text-gray50 text-xl tracking-[.02rem]">
-                  Network Team
-                </p> */}
+                <p className="font-playFair italic font-medium text-gray50 text-xl tracking-[.02rem]">
+                  Media Team
+                </p>
                 <EnquiryLink
                   image={MessageSvg}
                   alt="email"
@@ -96,9 +96,9 @@ const page = async () => {
                 />
                 <div className="h-px bg-footerGray mt-5 mb-5"></div>
 
-                {/* <p className="font-playFair italic font-medium text-gray50 text-xl tracking-[.02rem]">
+                <p className="font-playFair italic font-medium text-gray50 text-xl tracking-[.02rem]">
                   Knowledge Team
-                </p> */}
+                </p>
                 <EnquiryLink
                   image={MessageSvg}
                   alt="email"
