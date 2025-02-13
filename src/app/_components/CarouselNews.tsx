@@ -23,7 +23,7 @@ export function CarouselNews({ newsArray }: Props) {
       }}
       className="w-full container mx-auto relative "
     >
-      <CarouselContent className="~px-[1.25rem] w-fit ">
+      <CarouselContent className=" w-full ">
         {newsArray.map((items, i) => (
           <CarouselItem
             key={i}

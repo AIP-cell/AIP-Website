@@ -41,7 +41,7 @@ const TabNews = ({ newsData, searchParams }: Props) => {
             listboxButtonClassName="w-full"
           />
         </div>
-        <TabPanels className="~px-[1.25rem]/0">
+        <TabPanels className="~px-[1.25rem]/0 w-full">
           {newsTabArray.map((items, i) => {
             return (
               <TabPanel key={i}>
