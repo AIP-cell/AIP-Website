@@ -113,7 +113,7 @@ const Footer = () => {
                 />
                 <div className="flex text-h9Copy5 leading-[1.225rem] flex-wrap gap-[1rem] text-white pt-[1rem]">
                   <Link href="/careers">Careers</Link>|
-                  <Link href="/faq">FAQs</Link>|
+                  {/* <Link href="/faq">FAQs</Link>| */}
                   <Link href="/about/aip-impact/foundation-fact-sheet">
                     Foundation Fact Sheet
                   </Link>
@@ -338,11 +338,11 @@ const Footer = () => {
                   <ButtonAnimation>Contact</ButtonAnimation>
                 </Link>
               </div>
-              <div className="pt-[2.25rem] text-h9Copy5 font-inter font-bold text-white">
+              {/* <div className="pt-[2.25rem] text-h9Copy5 font-inter font-bold text-white">
                 <Link href="/faq">
                   <ButtonAnimation>FAQs</ButtonAnimation>
                 </Link>
-              </div>
+              </div> */}
               <div className="pt-[2.25rem] text-h9Copy5 font-inter font-bold text-white">
                 <Link href="/about/aip-impact/foundation-fact-sheet">
                   <ButtonAnimation>Foundation Fact Sheet</ButtonAnimation>

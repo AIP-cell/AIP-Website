@@ -10,7 +10,8 @@ type Props = {
 };
 const PeopleWeWorkWith = ({ peopleData }: Props) => {
   return (
-    <div className="~pt-[7rem]/[12.5rem] ~pb-[5rem]/[7.5rem] container mx-auto">
+    // ~pt-[7rem]/[12.5rem]
+    <div className=" ~pb-[5rem]/[7.5rem] container mx-auto">
       {/* <h2 className="~text-h4/h2 ~leading-[2.6rem]/[3.3rem] font-playFair text-darkBrown text-center">
         People We
         <span className="text-textPurple font-playFairItalic">

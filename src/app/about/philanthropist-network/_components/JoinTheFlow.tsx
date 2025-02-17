@@ -47,8 +47,8 @@ const JoinTheFlow = () => {
               href="/contact"
               className=" flex items-center text-h9Copy5 gap-[0.5rem]"
             >
-              <p className="">Contact Us</p>
-              <MailSvg />
+              <p className="">Join the Flow</p>
+              {/* <MailSvg /> */}
             </Link>
           </ButtonAnimation>
         </div>

@@ -33,9 +33,11 @@ const page = async () => {
       {/* <div className="~pb-[4.702rem]/[12.5rem]"> */}
       <JoinTheFlow />
       {/* </div> */}
-      {casestudies && casestudies?.length != 0 && (
-        <NetworkCaseStudies casestudies={casestudies} />
-      )}
+      <div className="~pb-[7rem]/[12.5rem]">
+        {casestudies && casestudies?.length != 0 && (
+          <NetworkCaseStudies casestudies={casestudies} />
+        )}
+      </div>
       {/* <CaseStudies  bottomCaseStudyCurveSvg={CurvePurple} /> */}
       {peopleData && peopleData.length != 0 && (
         <PeopleWeWorkWith peopleData={peopleData} />

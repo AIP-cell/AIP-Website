@@ -4,6 +4,7 @@ import MailSvg from "../../../../../components/svg/MailSvg";
 import BgButton from "../../../../../components/buttons/BgButton";
 import TitleDescCard from "../../../../../components/cards/TitleDescCard";
 import CardAnimation from "@/components/animations/CardAnimation";
+import Link from "next/link";
 
 const itemsArray = [
   {
@@ -47,10 +48,12 @@ const ContactSection = () => {
         </div>
       </div>
       <div className="~pt-[2rem]/[5rem]">
-        <BgButton
-          text="Join The Flow"
-          className="text-h9Copy5 leading-[1.225rem] px-[1.75rem] py-[0.75rem]"
-        />
+        <Link href="/contact">
+          <BgButton
+            text="Join The Flow"
+            className="text-h9Copy5 leading-[1.225rem] px-[1.75rem] py-[0.75rem]"
+          />
+        </Link>
       </div>
     </div>
   );

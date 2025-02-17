@@ -10,7 +10,7 @@ type Props = {
 };
 const NposPartners = ({ people }: Props) => {
   return (
-    <div className="~pt-[5rem]/[10rem] ~pb-[5rem]/[7.5rem] container mx-auto">
+    <div className=" ~pb-[5rem]/[7.5rem] container mx-auto">
       {/* <h2 className="~text-h4/h2 ~leading-[2.6rem]/[3.3rem] font-playFair text-darkBrown text-center">
         NPOs We
         <span className="text-textPurple font-playFairItalic">

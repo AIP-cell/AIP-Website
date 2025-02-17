@@ -44,7 +44,8 @@ const NpoSpotlight = ({ casestudies }: Props) => {
         alt=""
         className="hidden xl:block absolute  bottom-[-2rem]  right-0"
       />
-      <div className=" relative container mx-auto ~pt-[5rem]/[12.5rem]">
+      {/* ~pt-[5rem]/[12.5rem] */}
+      <div className=" relative container mx-auto ~pb-[5rem]/[10rem]">
         {/* <h2 className="text-center ~text-h4/h2 ~leading-[2.6rem]/[3.3rem] text-darkBrown font-playFair">
           NPO
           <span className="text-textPurple font-playFairItalic">

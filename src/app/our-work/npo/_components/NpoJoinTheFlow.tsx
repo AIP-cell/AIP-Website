@@ -21,16 +21,16 @@ const NpoJoinTheFlow = () => {
       <Image
         src={PeachLeftSemiCircle}
         alt=""
-        className="hidden lg:block absolute bottom-[-9.2rem] left-0  w-[18.625rem] h-[18.438rem]"
+        className="hidden lg:block absolute top-[13rem] left-0  w-[18.625rem] h-[18.438rem]"
       />
       {/* <FadeInAnimation delay={0.2} x1="0" x2="-100%" className="hidden w-[15.313rem] h-[15.125rem] lg:block absolute bottom-[-3.9rem] right-0"> */}
       <Image
         src={JoinCirclesRight}
         alt=""
-        className="hidden lg:block absolute bottom-[-3.9rem] right-0 w-[15.313rem] h-[15.125rem]"
+        className="hidden lg:block absolute top-[10rem] right-0 w-[15.313rem] h-[15.125rem]"
       />
       {/* </FadeInAnimation> */}
-      <div className="relative container mx-auto ">
+      <div className="relative container mx-auto ~pb-[5rem]/[10rem]">
         <div className="relative flex flex-col items-center justify-center ~pt-0/[8.43rem]">
           {/* <h2 className="font-playFair text-gray80 ~text-h4/h2 ~leading-[2.6rem]/[3.3rem]">
             <span className="text-textPurple font-playFairItalic">Join</span>{" "}
