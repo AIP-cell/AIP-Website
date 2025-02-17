@@ -49,6 +49,7 @@ const FinancialContent = ({
                       href={StorageUrl + data.report}
                       target="_blank"
                       download
+                      
                     >
                       <ButtonAnimation className="">
                         <DownloadFileSvg className="size-[2rem]" />

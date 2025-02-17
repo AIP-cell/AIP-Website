@@ -30,12 +30,16 @@ const page = async () => {
       {/* <FourPillars /> */}
       <HelpingRivers />
       <NetworkContactSection />
-      <div className="~pb-[4.702rem]/[12.5rem]">
-        <JoinTheFlow />
-      </div>
-      {/* {casestudies?.length!=0 && <NetworkCaseStudies casestudies={casestudies} />} */}
+      {/* <div className="~pb-[4.702rem]/[12.5rem]"> */}
+      <JoinTheFlow />
+      {/* </div> */}
+      {casestudies && casestudies?.length != 0 && (
+        <NetworkCaseStudies casestudies={casestudies} />
+      )}
       {/* <CaseStudies  bottomCaseStudyCurveSvg={CurvePurple} /> */}
-      {/* {peopleData && <PeopleWeWorkWith peopleData={peopleData} />} */}
+      {peopleData && peopleData.length != 0 && (
+        <PeopleWeWorkWith peopleData={peopleData} />
+      )}
     </div>
   );
 };

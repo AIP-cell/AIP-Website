@@ -52,7 +52,7 @@ const DateFilter = ({ searchParams }: Props) => {
                 });
                 setShowDatePicker(false);
               }}
-              minDate={new Date()}
+              // minDate={new Date()}
               dateFormat="dd/MM/yyyy"
               placeholderText="DD/MM/YY"
               inline // Ensures it renders properly as a dropdown-like UI

@@ -28,8 +28,12 @@ const ACard = ({
   return (
     <div className="w-[18.43rem] relative ">
       {linkedinLink && linkedin && (
-        <Link href={linkedinLink} target="_blank" className="absolute top-0 right-0 z-50">
-          <Image src={Linkedin} alt=""  />
+        <Link
+          href={linkedinLink}
+          target="_blank"
+          className="absolute top-0 right-0 z-50"
+        >
+          <Image src={Linkedin} alt="" />
         </Link>
       )}
       <div className="w-[18.43rem] h-[21.56rem] relative">
