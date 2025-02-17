@@ -12,6 +12,7 @@ import FilterDownArrowSvg from "../svg/FilterDownArrowSvg";
 import { ApplyFilterResp } from "@/app/resource-center/_components/ApplyFilterResp";
 import { generatingSearchParam } from "@/utils/UrlHelper";
 import { useRouter } from "next-nprogress-bar";
+import CrossSvg from "../svg/CrossSvg";
 type Props = {
   optionsArray: any[];
   type: string;
@@ -33,13 +34,15 @@ const CustomFilter = ({
     //   : type === "p_id"
     //   ? searchParams.p_id
     //   : ""
-    type === "c_type"
-    ? searchParams.c_type || ""
-    : type === "o_type"
-    ? searchParams.o_type || ""
-    : type === "p_id"
-    ? searchParams.p_id || ""
-    : ""
+    type === "domain"
+      ? searchParams.domain || ""
+      : type === "c_type"
+      ? searchParams.c_type || ""
+      : type === "o_type"
+      ? searchParams.o_type || ""
+      : type === "p_id"
+      ? searchParams.p_id || ""
+      : ""
   );
   return (
     <>
@@ -62,15 +65,28 @@ const CustomFilter = ({
               className={`flex gap-[.79rem] text-gray80 text-h9Copy5 ~pl-[0.75rem]/[1.75rem] pr-[1.25rem] py-[0.75rem] items-center w-full justify-between `}
             >
               <p className="text-h9Copy5 leading-[1.225rem] capitalize">
-                {type === "c_type"
-                  ? "Type Of Content"
-                  : type === "o_type"
-                  ? "Organization Type"
-                  : type === "p_id"
+                {type === "p_id"
                   ? "Partner Type"
-                  : type}
+                  : !selected
+                  ? type === "domain"
+                    ? "Domain"
+                    : type === "c_type"
+                    ? "Type Of Content"
+                    : type === "o_type"
+                    ? "Organization Type"
+                    : type
+                  : selected}
               </p>
-              <FilterDownArrowSvg className="size-[1.25rem]" />
+
+              <div className="flex gap-[0.5rem] items-center">
+                {selected && (
+                  <CrossSvg
+                    className="size-[0.8rem]"
+                    onClick={() => setSelected("")}
+                  />
+                )}
+                <FilterDownArrowSvg className="size-[1.25rem]" />
+              </div>
             </div>
           </ListboxButton>
           {/* w-[var(--button-width)] */}

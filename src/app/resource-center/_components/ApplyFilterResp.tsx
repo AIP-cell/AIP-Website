@@ -39,7 +39,7 @@ Props) {
     });
     setIsOpen(false);
   };
-  
+
   return (
     <div>
       <div
@@ -50,15 +50,28 @@ Props) {
           className={`flex gap-[.79rem] text-gray80 text-h9Copy5 ~pl-[0.75rem]/[1.75rem] pr-[1.25rem] py-[0.75rem] items-center w-full justify-between `}
         >
           <p className="text-h9Copy5 leading-[1.225rem] capitalize">
-            {type === "c_type"
-              ? "Type Of Content"
-              : type === "o_type"
-              ? "Organization Type"
-              : type === "p_id"
+            {type === "p_id"
               ? "Partner Type"
-              : type}
+              : !selected
+              ? type === "c_type"
+                ? "Type Of Content"
+                : type === "o_type"
+                ? "Organization Type"
+                : type
+              : selected}
           </p>
-          <FilterDownArrowSvg className="size-[1.25rem]" />
+          <div className="flex gap-[0.5rem] items-center">
+            {selected && (
+              <CrossSvg
+                className=" size-[0.8rem] cursor-pointer"
+                onClick={() => {
+                  setSelected("");
+                  setIsOpen(false);
+                }}
+              />
+            )}
+            <FilterDownArrowSvg className="size-[1.25rem]" />
+          </div>
         </div>
       </div>
       {isOpen && (
@@ -68,13 +81,15 @@ Props) {
               <div className="flex relative items-center gap-[0.5rem] text-h8Copy3 leading-[1.575rem]">
                 <p className=" text-gray20">Filter By:</p>{" "}
                 <div className="capitalize ">
-                  {type === "c_type"
-                    ? "Type Of Content"
-                    : type === "o_type"
-                    ? "Organization Type"
-                    : type === "p_id"
-                    ? "Partner Type"
-                    : type}
+                  {!selected
+                    ? type === "c_type"
+                      ? "Type Of Content"
+                      : type === "o_type"
+                      ? "Organization Type"
+                      : type === "p_id"
+                      ? "Partner Type"
+                      : type
+                    : selected}
                 </div>
               </div>
               <div
@@ -95,7 +110,10 @@ Props) {
                   key={index}
                   className="flex items-center gap-[0.938rem] py-[1.25rem]"
                 >
-                  <RadioGroupItem value={items._id ? items._id : items} id={items._id ? items._id : items} />
+                  <RadioGroupItem
+                    value={items._id ? items._id : items}
+                    id={items._id ? items._id : items}
+                  />
                   <label
                     htmlFor={items._id ? items._id : items}
                     className="text-h9Copy5 leading-[1.225rem] text-gray80"
