@@ -82,7 +82,16 @@ const CustomFilter = ({
                 {selected && (
                   <CrossSvg
                     className="size-[0.8rem]"
-                    onClick={() => setSelected("")}
+                    onClick={() => {
+                      setSelected("");
+                      const query = generatingSearchParam({
+                        ...searchParams,
+                        [filterKey]: "",
+                      });
+                      router.push(`?${query.toString()}`, {
+                        scroll: false,
+                      });
+                    }}
                   />
                 )}
                 <FilterDownArrowSvg className="size-[1.25rem]" />

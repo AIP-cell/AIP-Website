@@ -13,7 +13,6 @@ type Props = {
   urlSlug: string;
 };
 const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
-  console.log("urlSlug::::",urlSlug)
   return (
     <div className="w-full relative min-h-[90vh]">
       <div className="pt-[3rem] pb-[7rem] ">

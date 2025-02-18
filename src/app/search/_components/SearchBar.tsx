@@ -6,24 +6,19 @@ import { generatingSearchParam } from "@/utils/UrlHelper";
 import { useRouter } from "next-nprogress-bar";
 import React, { useState } from "react";
 
-const SearchBar = (props: {
-  key?: string;
-  searchParams: Record<string, any>;
-}) => {
+const SearchBar = (props: { searchParams: Record<string, any> }) => {
   const router = useRouter();
-  const [key, setKey] = useState(props.key ?? "");
-  const handleSearch = (event: any) => {
+  const [searchKey, setSearchKey] = useState(props.searchParams.key ?? ""); // Avoid using 'key' as a state variable
+
+  const handleSearch = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+
     const query = generatingSearchParam({
       ...props.searchParams,
-      key: key,
+      key: searchKey,
     });
-    router.push(`?${query.toString()}`, {
-      scroll: false,
-    });
-    // router.push(
-    //   "/search?" + new URLSearchParams({ ...props.searchParams, key: key })
-    // );
+
+    router.push(`?${query.toString()}`, { scroll: false });
   };
 
   return (
@@ -33,16 +28,23 @@ const SearchBar = (props: {
     >
       <input
         type="text"
-        value={key ?? ""}
-        onChange={(e) => setKey(e.target.value)}
+        value={searchKey}
+        onChange={(e) => setSearchKey(e.target.value)}
         placeholder="Search"
         className="text-h4 leading-[2.6rem] w-full font-playFair pb-[0.625rem] outline-none"
       />
       <div className="absolute right-0 flex gap-[1.5rem] text-textPurple">
-        <ButtonAnimation className="cursor-pointer" onClick={() => setKey("")}>
+        {/* Clear input */}
+        <ButtonAnimation
+          className="cursor-pointer"
+          type="button"
+          onClick={() => setSearchKey("")}
+        >
           <CrossSvg className="size-[1.5rem]" />
         </ButtonAnimation>
-        <ButtonAnimation type="submit" onClick={handleSearch}>
+
+        {/* Submit button (NO onClick needed, form handles submission) */}
+        <ButtonAnimation className="cursor-pointer" type="submit">
           <SearchSvg className="size-[1.5rem]" />
         </ButtonAnimation>
       </div>
