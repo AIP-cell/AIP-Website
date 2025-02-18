@@ -5,9 +5,10 @@ import "react-datepicker/dist/react-datepicker.css";
 import FilterDownArrowSvg from "../svg/FilterDownArrowSvg";
 import { generatingSearchParam } from "@/utils/UrlHelper";
 import { useRouter } from "next-nprogress-bar";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import dayjs from "dayjs";
 import useClient from "@/hooks/useClient";
+import CrossSvg from "../svg/CrossSvg";
 
 type Props = {
   searchParams: Record<string, any>;
@@ -16,12 +17,32 @@ const DateFilter = ({ searchParams }: Props) => {
   const router = useRouter();
   const [startDate, setStartDate] = useState<Date | null>(new Date());
   const [showDatePicker, setShowDatePicker] = useState(false);
+  const datePickerRef = useRef<HTMLDivElement>(null);
   const client = useClient();
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        datePickerRef.current &&
+        !datePickerRef.current.contains(event.target as Node)
+      ) {
+        setShowDatePicker(false);
+      }
+    };
+
+    if (showDatePicker) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [showDatePicker]);
   if (!client) return;
   const toggleDatePicker = () => {
     setShowDatePicker(!showDatePicker);
   };
 
+  console.log("searchParams.date:::", searchParams.date);
   return (
     <div className="w-[15rem]">
       <div
@@ -31,8 +52,27 @@ const DateFilter = ({ searchParams }: Props) => {
         <div
           className={`flex gap-[.79rem] text-gray80 text-h9Copy5 ~pl-[0.75rem]/[1.75rem] pr-[1.25rem] py-[0.75rem] items-center w-full justify-between`}
         >
-          <p className="text-h9Copy5 leading-[1.225rem] capitalize">Date</p>
-          <FilterDownArrowSvg className="size-[1.25rem]" />
+          <p className="text-h9Copy5 leading-[1.225rem] capitalize">
+            {searchParams.date ? searchParams.date.replace(/ /g, "-") : "Date"}
+          </p>
+          <div className="flex gap-[0.5rem] items-center">
+            {searchParams.date && (
+              <CrossSvg
+                className="size-[0.8rem]"
+                onClick={() => {
+                  setStartDate(null);
+                  const query = generatingSearchParam({
+                    ...searchParams,
+                    date: "",
+                  });
+                  router.push(`?${query.toString()}`, {
+                    scroll: false,
+                  });
+                }}
+              />
+            )}
+            <FilterDownArrowSvg className="size-[1.25rem]" />
+          </div>
         </div>
       </div>
       {showDatePicker && (
@@ -40,6 +80,10 @@ const DateFilter = ({ searchParams }: Props) => {
           {/* sm:right-[-4.5rem] sm:left-auto right-auto */}
           <div className="absolute  top-1 left-0 z-[6000]">
             <DatePicker
+              onClickOutside={(e) => {
+                e.preventDefault();
+                !showDatePicker;
+              }}
               selected={startDate}
               onChange={(date) => {
                 setStartDate(date);
@@ -55,7 +99,7 @@ const DateFilter = ({ searchParams }: Props) => {
               // minDate={new Date()}
               dateFormat="dd/MM/yyyy"
               placeholderText="DD/MM/YY"
-              inline // Ensures it renders properly as a dropdown-like UI
+              inline
             />
           </div>
         </div>
