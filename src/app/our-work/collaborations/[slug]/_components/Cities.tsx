@@ -197,28 +197,32 @@ const Cities = ({ collaboration, slug }: Props) => {
                 </div> */}
               </div>
             </div>
-            <div className="order-1 md:order-none ~pt-0/[2.5rem] ~pb-[2.5rem]/0 border-b border-gray10 md:border-none">
-              <p className="font-playFair ~pb-[0.75rem]/4 ~leading-[1.575rem]/[1.75rem] font-medium tracking-[-.02rem] ~text-h6M/h5 text-gray80">
-                In Collaboration With
-              </p>
-              <div className="flex gap-4">
-                {cities?.at(selectedIndex)?.collaborations?.map((items, i) => (
-                  <CardAnimation index={i} delay={0.1} key={i}>
-                    <div className="~w-[7.75rem]/[9.688rem] bg-white flex items-center ~h-[4rem]/[5rem] border border-1 border-gray10 rounded-xl overflow-hidden">
-                      {/* ~py-[0.7rem]/[0.89rem] px-[0.3rem] */}
-                      <div className="relative ~w-[7.75rem]/[9.688rem] ~h-[4rem]/[5rem]">
-                        <Image
-                          src={StorageUrl + items?.image}
-                          className=" object-contain "
-                          fill
-                          alt="foundation"
-                        />
-                      </div>
-                    </div>
-                  </CardAnimation>
-                ))}
+            {cities?.at(selectedIndex)?.collaborations.length != 0 && (
+              <div className="order-1 md:order-none ~pt-0/[2.5rem] ~pb-[2.5rem]/0 border-b border-gray10 md:border-none">
+                <p className="font-playFair ~pb-[0.75rem]/4 ~leading-[1.575rem]/[1.75rem] font-medium tracking-[-.02rem] ~text-h6M/h5 text-gray80">
+                  In Collaboration With
+                </p>
+                <div className="flex gap-4">
+                  {cities
+                    ?.at(selectedIndex)
+                    ?.collaborations?.map((items, i) => (
+                      <CardAnimation index={i} delay={0.1} key={i}>
+                        <div className="~w-[7.75rem]/[9.688rem] bg-white flex items-center ~h-[4rem]/[5rem] border border-1 border-gray10 rounded-xl overflow-hidden">
+                          {/* ~py-[0.7rem]/[0.89rem] px-[0.3rem] */}
+                          <div className="relative ~w-[7.75rem]/[9.688rem] ~h-[4rem]/[5rem]">
+                            <Image
+                              src={StorageUrl + items?.image}
+                              className=" object-contain "
+                              fill
+                              alt="foundation"
+                            />
+                          </div>
+                        </div>
+                      </CardAnimation>
+                    ))}
+                </div>
               </div>
-            </div>
+            )}
             {(cities?.at(selectedIndex)?.youtube ||
               cities?.at(selectedIndex)?.twitter) && (
               <div className="order-3 md:order-none pt-[2.5rem] border-t border-gray10 md:border-none">

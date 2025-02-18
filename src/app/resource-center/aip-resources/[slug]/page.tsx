@@ -11,6 +11,7 @@ import { notFound } from "next/navigation";
 import DateFilter from "@/components/custom/DatePick";
 import WordStaggerAnimation from "@/components/animations/WordStaggerAnimation";
 import CardAnimation from "@/components/animations/CardAnimation";
+import NoData from "@/components/NoData";
 
 const tabList = [
   {
@@ -58,16 +59,17 @@ const aipResourcesFilter = [
         type: "domain",
         options: [
           "All",
-          "Art & Culture",
+          "Art and Culture",
           "Education",
           "Environment",
-          "Health & Nutrition",
-          "Legal & Judiciary",
+          "Health and Nutrition",
+          "Legal and Judiciary",
           "Livelihood",
           "Disability",
           "Rural Development",
           "Sports",
           "WASH",
+          "Philanthrophy",
           "Women & Child",
         ],
       },
@@ -80,16 +82,17 @@ const aipResourcesFilter = [
         type: "domain",
         options: [
           "All",
-          "Art & Culture",
+          "Art and Culture",
           "Education",
           "Environment",
-          "Health & Nutrition",
-          "Legal & Judiciary",
+          "Health and Nutrition",
+          "Legal and Judiciary",
           "Livelihood",
           "Disability",
           "Rural Development",
           "Sports",
           "WASH",
+          "Philanthrophy",
           "Women & Child",
         ],
       },
@@ -98,10 +101,8 @@ const aipResourcesFilter = [
         options: [
           "Sector primers",
           "Giving Journey",
-          "Case Study",
           "Research Study",
-          "Philanthropist",
-          "Speak",
+          "Philanthropist Speak",
           "Books",
           "Articles",
           "PoV",
@@ -118,16 +119,17 @@ const aipResourcesFilter = [
         type: "domain",
         options: [
           "All",
-          "Art & Culture",
+          "Art and Culture",
           "Education",
           "Environment",
-          "Health & Nutrition",
-          "Legal & Judiciary",
+          "Health and Nutrition",
+          "Legal and Judiciary",
           "Livelihood",
           "Disability",
           "Rural Development",
           "Sports",
           "WASH",
+          "Philanthrophy",
           "Women & Child",
         ],
       },
@@ -140,17 +142,17 @@ const aipResourcesFilter = [
         type: "domain",
         options: [
           "All",
-          "Art & Culture",
+          "Art and Culture",
           "Education",
           "Environment",
-          "Health & Nutrition",
-          "Legal & Judiciary",
+          "Health and Nutrition",
+          "Legal and Judiciary",
           "Livelihood",
           "Disability",
-          "Philanthropy",
           "Rural Development",
           "Sports",
           "WASH",
+          "Philanthrophy",
           "Women & Child",
         ],
       },
@@ -159,10 +161,8 @@ const aipResourcesFilter = [
         options: [
           "Sector primers",
           "Giving Journey",
-          "Case Study",
           "Research Study",
-          "Philanthropist",
-          "Speak",
+          "Philanthropist Speak",
           "Books",
           "Articles",
           "PoV",
@@ -179,17 +179,17 @@ const aipResourcesFilter = [
         type: "domain",
         options: [
           "All",
-          "Art & Culture",
+          "Art and Culture",
           "Education",
           "Environment",
-          "Health & Nutrition",
-          "Legal & Judiciary",
+          "Health and Nutrition",
+          "Legal and Judiciary",
           "Livelihood",
           "Disability",
-          "Philanthropy",
           "Rural Development",
           "Sports",
           "WASH",
+          "Philanthrophy",
           "Women & Child",
         ],
       },
@@ -198,10 +198,8 @@ const aipResourcesFilter = [
         options: [
           "Sector primers",
           "Giving Journey",
-          "Case Study",
           "Research Study",
-          "Philanthropist",
-          "Speak",
+          "Philanthropist Speak",
           "Books",
           "Articles",
           "PoV",
@@ -218,17 +216,17 @@ const aipResourcesFilter = [
         type: "domain",
         options: [
           "All",
-          "Art & Culture",
+          "Art and Culture",
           "Education",
           "Environment",
-          "Health & Nutrition",
-          "Legal & Judiciary",
+          "Health and Nutrition",
+          "Legal and Judiciary",
           "Livelihood",
           "Disability",
-          "Philanthropy",
           "Rural Development",
           "Sports",
           "WASH",
+          "Philanthrophy",
           "Women & Child",
         ],
       },
@@ -237,10 +235,8 @@ const aipResourcesFilter = [
         options: [
           "Sector primers",
           "Giving Journey",
-          "Case Study",
           "Research Study",
-          "Philanthropist",
-          "Speak",
+          "Philanthropist Speak",
           "Books",
           "Articles",
           "PoV",
@@ -343,7 +339,7 @@ const AipResourcesInnerPage = async ({
             )}
           </div>
         </div>
-        {response.length != 0 && (
+        {response.length != 0 ? (
           <div className="pt-[3.25rem] grid md:grid-cols-2 lg:grid-cols-3 gap-[4.5rem]">
             {response?.map((item, i) => (
               <CardAnimation index={i} delay={0.1} key={i}>
@@ -366,6 +362,8 @@ const AipResourcesInnerPage = async ({
               </CardAnimation>
             ))}
           </div>
+        ) : (
+          <NoData />
         )}
       </div>
     </div>

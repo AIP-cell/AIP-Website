@@ -1,0 +1,11 @@
+import React from "react";
+
+const NoData = () => {
+  return (
+    <div className="font-playFairItalic text-darkPurple w-full justify-center min-h-[40vh] flex items-center">
+      no data available
+    </div>
+  );
+};
+
+export default NoData;

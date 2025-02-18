@@ -6,6 +6,7 @@ import { Api } from "@/api/Api";
 import PeopleOfAipTeamMembers from "./_components/PeopleOfAipTeamMembers";
 import OurCoreFoundersContent from "../_components/OurCoreFoundersContent";
 import { notFound } from "next/navigation";
+import NoData from "@/components/NoData";
 
 export const dynamic = "force-dynamic";
 const getPeopleOfAipApi = async (slug: string): Promise<TTeamMembers[]> => {
@@ -61,13 +62,21 @@ const InnerPage = async ({ params }: { params: Promise<{ slug: string }> }) => {
           linkTwo={`/people-of-aip/${urlSlug}`}
         />
       </div>
-      <PeopleOfAipTabs tabList={tabList} currentTab={urlSlug} filteredName={filtered?.name} />
-      {members && urlSlug === "core-founder" ? (
-        <OurCoreFoundersContent coreFounderMembers={members} />
-      ) : (
-        members.length != 0 && (
-          <PeopleOfAipTeamMembers teamMembers={members} urlSlug={urlSlug} />
+      <PeopleOfAipTabs
+        tabList={tabList}
+        currentTab={urlSlug}
+        filteredName={filtered?.name}
+      />
+      {urlSlug === "core-founder" ? (
+        members && members.length != 0 ? (
+          <OurCoreFoundersContent coreFounderMembers={members} />
+        ) : (
+          <NoData />
         )
+      ) : members && members.length != 0 ? (
+        <PeopleOfAipTeamMembers teamMembers={members} urlSlug={urlSlug} />
+      ) : (
+        <NoData />
       )}
     </div>
   );
