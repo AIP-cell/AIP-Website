@@ -10,6 +10,7 @@ import { TCollaborationPageData } from "@/api/type";
 import { notFound } from "next/navigation";
 import DateFilter from "@/components/custom/DatePick";
 import FadeInAnimation from "@/components/animations/FadeInAnimation";
+import NoData from "@/components/NoData";
 
 export const dynamic = "force-dynamic";
 const getCollaborationsApi = async ({
@@ -116,8 +117,10 @@ const page = async ({
             </div>
           </div>
 
-          {collaborations.length != 0 && (
+          {collaborations.length != 0 ? (
             <CollaborationGrid collaborationData={collaborations} />
+          ) : (
+            <NoData />
           )}
         </div>
       </div>

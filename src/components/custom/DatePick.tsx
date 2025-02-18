@@ -17,32 +17,12 @@ const DateFilter = ({ searchParams }: Props) => {
   const router = useRouter();
   const [startDate, setStartDate] = useState<Date | null>(new Date());
   const [showDatePicker, setShowDatePicker] = useState(false);
-  const datePickerRef = useRef<HTMLDivElement>(null);
   const client = useClient();
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (
-        datePickerRef.current &&
-        !datePickerRef.current.contains(event.target as Node)
-      ) {
-        setShowDatePicker(false);
-      }
-    };
-
-    if (showDatePicker) {
-      document.addEventListener("mousedown", handleClickOutside);
-    }
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [showDatePicker]);
   if (!client) return;
   const toggleDatePicker = () => {
     setShowDatePicker(!showDatePicker);
   };
 
-  console.log("searchParams.date:::", searchParams.date);
   return (
     <div className="w-[15rem]">
       <div
