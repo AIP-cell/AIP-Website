@@ -60,10 +60,6 @@ const DateFilter = ({ searchParams }: Props) => {
           {/* sm:right-[-4.5rem] sm:left-auto right-auto */}
           <div className="absolute  top-1 left-0 z-[6000]">
             <DatePicker
-              onClickOutside={(e) => {
-                e.preventDefault();
-                !showDatePicker;
-              }}
               selected={startDate}
               onChange={(date) => {
                 setStartDate(date);
