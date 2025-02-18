@@ -61,6 +61,7 @@ const DateFilter = ({ searchParams }: Props) => {
           <div className="absolute  top-1 left-0 z-[6000]">
             <DatePicker
               selected={startDate}
+              onClickOutside={() => setShowDatePicker(false)}
               onChange={(date) => {
                 setStartDate(date);
                 const query = generatingSearchParam({

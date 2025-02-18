@@ -8,6 +8,7 @@ import DateFilter from "@/components/custom/DatePick";
 import ContentOne from "./_components/ContentOne";
 import ContentGallery from "./_components/ContentGallery";
 import CardAnimation from "@/components/animations/CardAnimation";
+import NoData from "@/components/NoData";
 
 const searchFilter = [
   {
@@ -109,7 +110,7 @@ const page = async ({
           {/* {response && response.length != 0 && (
             <AllTabContent searchData={response} />
           )} */}
-          {response && response.length != 0 && (
+          {response && response.length != 0 ? (
             <div className="pt-[1rem] pb-[7.46rem]">
               <div className="flex flex-col ">
                 {response.map((content, i) => {
@@ -163,7 +164,9 @@ const page = async ({
                 })}
               </div>
             </div>
+          ) : (
             // </div>
+            <NoData />
           )}
         </div>
       </div>
