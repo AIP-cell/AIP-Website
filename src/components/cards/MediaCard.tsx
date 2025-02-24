@@ -31,7 +31,7 @@ const MediaCard = ({
     >
       <div className="relative w-full ~h-[14.51rem]/[16.563rem] overflow-hidden rounded-2xl cursor-pointer">
         <Image
-          src={image ? StorageUrl + image : "/images/mediaImage.png"}
+          src={image ? StorageUrl + image : "/images/resourceCardThumbnail.png"}
           alt="media-image"
           fill
           className="object-cover"

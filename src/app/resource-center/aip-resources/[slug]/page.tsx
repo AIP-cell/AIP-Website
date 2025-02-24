@@ -209,43 +209,43 @@ const aipResourcesFilter = [
       },
     ],
   },
-  {
-    filterBy: "gallery",
-    filter: [
-      {
-        type: "domain",
-        options: [
-          "All",
-          "Art and Culture",
-          "Education",
-          "Environment",
-          "Health and Nutrition",
-          "Legal and Judiciary",
-          "Livelihood",
-          "Disability",
-          "Rural Development",
-          "Sports",
-          "WASH",
-          "Philanthrophy",
-          "Women & Child",
-        ],
-      },
-      {
-        type: "c_type",
-        options: [
-          "Sector primers",
-          "Giving Journey",
-          "Research Study",
-          "Philanthropist Speak",
-          "Books",
-          "Articles",
-          "PoV",
-          "White paper",
-          "Newsletter",
-        ],
-      },
-    ],
-  },
+  // {
+  //   filterBy: "gallery",
+  //   filter: [
+  //     {
+  //       type: "domain",
+  //       options: [
+  //         "All",
+  //         "Art and Culture",
+  //         "Education",
+  //         "Environment",
+  //         "Health and Nutrition",
+  //         "Legal and Judiciary",
+  //         "Livelihood",
+  //         "Disability",
+  //         "Rural Development",
+  //         "Sports",
+  //         "WASH",
+  //         "Philanthrophy",
+  //         "Women & Child",
+  //       ],
+  //     },
+  //     {
+  //       type: "c_type",
+  //       options: [
+  //         "Sector primers",
+  //         "Giving Journey",
+  //         "Research Study",
+  //         "Philanthropist Speak",
+  //         "Books",
+  //         "Articles",
+  //         "PoV",
+  //         "White paper",
+  //         "Newsletter",
+  //       ],
+  //     },
+  //   ],
+  // },
 ];
 
 export const dynamic = "force-dynamic";
@@ -316,29 +316,31 @@ const AipResourcesInnerPage = async ({
           tabClassName="!w-full  !px-0"
           tabListClassName="!w-full"
         />
-        <div className="flex flex-col md:flex-row md:items-center pt-[2rem]  ~gap-0/[0.75rem] ">
-          <p className="~pb-[1.25rem]/0 text-gray40  ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]">
-            Filter by:
-          </p>
-          <div className="relative flex flex-wrap gap-[.75rem]">
-            {filterData?.filter.map((data, i) => (
-              <CustomFilter
-                key={i}
-                searchParams={{ ...SearchParam }}
-                filterKey={data?.type}
-                type={data?.type}
-                optionsArray={data?.options}
-              />
-            ))}
-            {(filterData?.filterBy === "gallery" ||
-              filterData?.filterBy === "in-the-media" ||
-              filterData?.filterBy === "inspirational-voices" ||
-              filterData?.filterBy === "newsletter" ||
-              filterData?.filterBy === "reports-and-publications") && (
-              <DateFilter searchParams={{ ...SearchParam }} />
-            )}
+        {filterData && (
+          <div className="flex flex-col md:flex-row md:items-center pt-[2rem]  ~gap-0/[0.75rem] ">
+            <p className="~pb-[1.25rem]/0 text-gray40  ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]">
+              Filter by:
+            </p>
+            <div className="relative flex flex-wrap gap-[.75rem]">
+              {filterData?.filter.map((data, i) => (
+                <CustomFilter
+                  key={i}
+                  searchParams={{ ...SearchParam }}
+                  filterKey={data?.type}
+                  type={data?.type}
+                  optionsArray={data?.options}
+                />
+              ))}
+              {(filterData?.filterBy === "gallery" ||
+                filterData?.filterBy === "in-the-media" ||
+                filterData?.filterBy === "inspirational-voices" ||
+                filterData?.filterBy === "newsletter" ||
+                filterData?.filterBy === "reports-and-publications") && (
+                <DateFilter searchParams={{ ...SearchParam }} />
+              )}
+            </div>
           </div>
-        </div>
+        )}
         {response.length != 0 ? (
           <div className="pt-[3.25rem] grid md:grid-cols-2 lg:grid-cols-3 gap-[4.5rem]">
             {response?.map((item, i) => (

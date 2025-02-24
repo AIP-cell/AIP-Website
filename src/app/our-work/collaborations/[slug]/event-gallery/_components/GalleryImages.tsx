@@ -72,11 +72,13 @@ const GalleryImages = ({ galleryImages }: Props) => {
               />
             </div>
           </FadeInAnimation>
-          <div className="flex flex-col md:flex-row justify-between ~gap-[0.25rem]/[3rem] ~pt-[1rem]/[0.75rem]">
-            <div className="leading-[1.4rem] font-bold  text-midGray">
-              <p className="">{galleryImages?.at(selectedIndex)?.title}</p>
+          <div className="flex flex-col md:flex-row ~w-[21.8rem]/[51.25rem] justify-between ~gap-[0.25rem]/[3rem] ~pt-[1rem]/[0.75rem]">
+            <div className="leading-[1.4rem] font-bold  text-midGray md:w-[80%]">
+              <p className="">
+                {galleryImages?.at(selectedIndex)?.title}
+              </p>
             </div>
-            <p className="leading-[1.4rem] text-midGray">
+            <p className="leading-[1.4rem] text-midGray md:w-[20%] md:text-right">
               {dateFormat(galleryImages?.at(selectedIndex)?.date)}
             </p>
           </div>
