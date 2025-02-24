@@ -38,7 +38,14 @@ const SearchBar = (props: { searchParams: Record<string, any> }) => {
         <ButtonAnimation
           className="cursor-pointer"
           type="button"
-          onClick={() => setSearchKey("")}
+          onClick={() => {
+            const query = generatingSearchParam({
+              ...props.searchParams,
+              key: "",
+            });
+
+            router.push(`?${query.toString()}`, { scroll: false });
+          }}
         >
           <CrossSvg className="size-[1.5rem]" />
         </ButtonAnimation>
