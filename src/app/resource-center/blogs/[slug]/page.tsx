@@ -1,0 +1,122 @@
+import React from "react";
+import BreadCrump from "@/components/bread-crump/BreadCrump";
+// import ResourcesSm from "../_components/ResourcesSm";
+// import TabListAndRespSelect from "../_components/TabListAndRespSelect";
+import ResourceCard from "@/components/cards/ResourceCard";
+import WordStaggerAnimation from "@/components/animations/WordStaggerAnimation";
+import CardAnimation from "@/components/animations/CardAnimation";
+import Image from "next/image";
+import CrossSvg from "@/components/svg/CrossSvg";
+import XSvg from "@/components/svg/XSvg";
+import LinkedinSvg from "@/components/svg/LinkedinSvg";
+import YoutubeSvg from "@/components/svg/YoutubeSvg";
+import LinkSvg from "@/components/svg/LinkSvg";
+import FilledYoutubeSvg from "@/components/svg/FilledYoutubeSvg";
+import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
+
+// export const dynamic = "force-dynamic";
+const dummyArray = [
+  {
+    title: "title",
+    description: "description",
+    domain: "domain",
+    date: "",
+  },
+  {
+    title: "title",
+    description: "description",
+    domain: "domain",
+    date: "",
+  },
+  {
+    title: "title",
+    description: "description",
+    domain: "domain",
+    date: "",
+  },
+  {
+    title: "title",
+    description: "description",
+    domain: "domain",
+    date: "",
+  },
+];
+const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
+  const param = await params;
+  return (
+    <div className="pt-[5rem] overflow-x-hidden min-h-screen">
+      <div className="container mx-auto relative ~pl-5/[7.5rem] ~pr-5/[19rem] ~pb-[5rem]/[7.5rem]">
+        <div className=" ~pt-0/[1.25rem] gap-[.75rem][7.8rem]">
+          <BreadCrump
+            textOne="Resource Center"
+            linkOne="#"
+            textTwo="Blogs"
+            linkTwo="/resource-center/blogs"
+            textThree={param.slug}
+            linkThree={`/resource-center/blogs/${param.slug}`}
+          />
+          <div className=" ~pt-[4.3rem]/[5rem]">
+            <WordStaggerAnimation
+              text="Strengthening Philanthropic Potential: Accelerate Indian Philanthropy's Approach to Strategic Giving"
+              className="font-playFair leading-[3.25rem] ~text-h4/h3 text-gray80 tracking-[-1px]"
+            />
+          </div>
+          <div className="pt-[2.5rem]">
+            <p className="font-medium leading-[1.75rem] font-playFair text-h5 text-gray80 ">
+              By{" "}
+              <span className="underline underline-offset-3 decoration-[1.5px]">
+                Karthik Muralidharan
+              </span>
+            </p>
+            <p className="leading-[1.4rem] text-midGray pt-[0.5rem] ">
+              Nov 5, 2024 | 10 min read
+            </p>
+            <p className="leading-[1.4rem] text-midGray pt-[0.5rem] ">
+              Updated: Nov 26, 2024
+            </p>
+          </div>
+          <div className="w-full h-[1.5px] bg-gray10 my-[2.5rem] "></div>
+          <div className="w-full h-[25rem] relative overflow-hidden">
+            <Image src="/images/resourceCardThumbnail.png" alt="image" fill />
+          </div>
+          <div className="pt-[2.5rem] ~text-h9Copy5/[1rem] ~leading-[1.22rem]/[1.4rem] text-midGray">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi in
+            quas soluta aut. Consequuntur quisquam hic veniam earum et
+            voluptatem exercitationem beatae, impedit perferendis praesentium
+            repellendus sequi. Voluptates, saepe eos?
+          </div>
+          <p className="text-h9Copy5  leading-[1.225rem] py-[2.5rem] italic text-midGray">
+            Radhika and Bhavana's interview was originally published in
+            <span className="text-textPurple underline underline-offset-2">
+              {" "}The CSR Universe
+            </span>
+          </p>
+          <div className="flex ~gap-[1rem]/[1.25rem] items-center text-midGray ">
+            <p className="text-h9Copy5 leading-[1.225rem]">Tags</p>
+            <button className="bg-purple10 py-[0.75rem] px-[1rem] rounded-full flex gap-[0.5rem] items-center">
+              <p className="text-h9Copy5 leading-[1.225rem]">Philanthropy Future</p>
+              <CrossSvg className=" cursor-pointer size-[1rem]" />
+            </button>
+          </div>
+          <div className="w-full h-[1.5px] bg-gray10 my-[2.5rem] "></div>
+          <div className="flex gap-[1.25rem] items-center">
+            <ButtonAnimation className="bg-gray50 text-white hover:bg-white hover:!text-gray50 rounded-full p-[0.75rem]">
+              <XSvg className="size-[1rem]" />
+            </ButtonAnimation>
+            <ButtonAnimation className="bg-gray50 text-white hover:bg-white hover:text-gray50 rounded-full p-[0.75rem]">
+              <LinkedinSvg className="size-[1rem]" />
+            </ButtonAnimation>
+            <ButtonAnimation className="bg-gray50 text-white hover:bg-white hover:text-gray50 rounded-full p-[0.75rem]">
+              <FilledYoutubeSvg className="size-[1rem]" />
+            </ButtonAnimation>
+            <ButtonAnimation className="bg-gray50 text-white hover:bg-white hover:text-gray50 rounded-full p-[0.75rem]">
+              <LinkSvg className="size-[1rem]" />
+            </ButtonAnimation>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default page;

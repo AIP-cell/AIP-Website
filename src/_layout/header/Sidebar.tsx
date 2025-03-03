@@ -70,6 +70,10 @@ const headerData = [
       //   option: "Curated Resources",
       //   link: "/resource-center/curated-resources/featured",
       // },
+      {
+        option: "Blogs",
+        link: "/resource-center/blogs",
+      },
     ],
   },
 ];
