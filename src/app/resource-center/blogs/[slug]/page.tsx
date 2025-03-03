@@ -58,7 +58,7 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
           <div className=" ~pt-[4.3rem]/[5rem]">
             <WordStaggerAnimation
               text="Strengthening Philanthropic Potential: Accelerate Indian Philanthropy's Approach to Strategic Giving"
-              className="font-playFair leading-[3.25rem] ~text-h4/h3 text-gray80 tracking-[-1px]"
+              className="font-playFair ~leading-[2.5rem]/[3.25rem] ~text-h4/h3 text-gray80 tracking-[-1px]"
             />
           </div>
           <div className="pt-[2.5rem]">
