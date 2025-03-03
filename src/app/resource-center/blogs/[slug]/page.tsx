@@ -86,7 +86,7 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
             repellendus sequi. Voluptates, saepe eos?
           </div>
           <p className="text-h9Copy5  leading-[1.225rem] py-[2.5rem] italic text-midGray">
-            Radhika and Bhavana's interview was originally published in
+            Radhika and Bhavana&apos;s interview was originally published in
             <span className="text-textPurple underline underline-offset-2">
               {" "}The CSR Universe
             </span>
