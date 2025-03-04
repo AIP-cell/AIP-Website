@@ -3,6 +3,7 @@ import Image from "next/image";
 import Linkedin from "@public/svg/grayLinkedin.svg";
 import React from "react";
 import Link from "next/link";
+import cn from "@/utils/tailwind";
 type Props = {
   slug?: string;
   image?: string;
@@ -28,13 +29,22 @@ const PCard = ({
   return (
     <div className="w-[18.43rem] relative ">
       {linkedinLink && linkedin && (
-        <Link href={linkedinLink} target="_blank" className="absolute top-0 right-0 z-50">
-          <Image src={Linkedin} alt=""  />
+        <Link
+          href={linkedinLink}
+          target="_blank"
+          className="absolute top-0 right-0 z-50"
+        >
+          <Image src={Linkedin} alt="" />
         </Link>
       )}
       <div className="w-[18.43rem] h-[21.56rem] relative">
         <div className="w-[18.43rem] h-[21.56rem] relative">
-          <PSvg src={image} className=" w-[18.43rem] h-[21.56rem]" />
+          <PSvg
+            src={image}
+            className={cn(" w-[18.43rem] h-[21.56rem]  ", {
+              "cursor-pointer": slug,
+            })}
+          />
           {/* <Image src={image} alt="" fill /> */}
         </div>
       </div>

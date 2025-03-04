@@ -195,6 +195,10 @@ export type TInnerBlog = {
   image: string;
   updatedAt: string;
   slug: string;
+  twitter: string;
+  linkedIn: string;
+  youtube: string;
+  otherLink:string;
   tags: string[];
 };
 

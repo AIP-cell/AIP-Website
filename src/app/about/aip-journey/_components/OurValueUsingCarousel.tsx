@@ -35,9 +35,9 @@ const OurValueUsingCarousel = ({ ourValueData }: Props) => {
     if (!api) {
       return;
     }
-    setCurrent(api.selectedScrollSnap() + (isDesktop ? 1 : 0));
+    setCurrent(api.selectedScrollSnap());
     api.on("select", () => {
-      setCurrent(api.selectedScrollSnap() + (isDesktop ? 1 : 0));
+      setCurrent(api.selectedScrollSnap());
     });
   }, [api, isDesktop]);
   const client = useClient();
@@ -91,7 +91,7 @@ const OurValueUsingCarousel = ({ ourValueData }: Props) => {
   //         desc: "4 believe in fostering an environment where every individual's voice is heard and respected, encouraging them to take ownership of their work, make independent decisions, and contribute to the organisation’s success.",
   //       },
   //     ]);
-  const ourValues:Partial<TOurValues>[] = isDesktop ? [{}, ...ourValueData, {}] : ourValueData;
+  const ourValues:Partial<TOurValues>[] =  ourValueData;
   return (
     <>
       <div className="w-full relative ">
@@ -108,6 +108,7 @@ const OurValueUsingCarousel = ({ ourValueData }: Props) => {
         <Carousel
           opts={{
             align: "start",
+            loop:true
           }}
           setApi={setApi}
           className="~pt-[5rem]/[10rem] relative container mx-auto w-full items-center"
@@ -132,7 +133,7 @@ const OurValueUsingCarousel = ({ ourValueData }: Props) => {
                   className="basis:1/1 xl:!basis-1/3 justify-center gap-[1.25rem] flex "
                 >
                   <div className=" flex justify-center  ~size-[14.25rem]/[18.4rem]">
-                    {isDesktop ? (
+                    {/* {isDesktop ? (
                       i != 0 &&
                       i != ourValues.length - 1 && (
                         <OvalPurple
@@ -144,7 +145,7 @@ const OurValueUsingCarousel = ({ ourValueData }: Props) => {
                           textClass2=" font-playFairItalic ~text-h5/h4 ~leading-[1.75rem]/[2.6rem]"
                         />
                       )
-                    ) : (
+                    ) : ( */}
                       <OvalPurple
                         sizeClass="~size-[14.25rem]/[18.4rem]"
                         mainClass=" snap-center "
@@ -153,7 +154,7 @@ const OurValueUsingCarousel = ({ ourValueData }: Props) => {
                         textClass1="~text-h5/h4 font-playFair text-purple10 ~leading-[1.75rem]/[2.6rem]"
                         textClass2=" font-playFairItalic ~text-h5/h4 ~leading-[1.75rem]/[2.6rem]"
                       />
-                    )}
+                    {/* )} */}
                   </div>
                 </CarouselItem>
               ))}

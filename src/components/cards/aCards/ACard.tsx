@@ -3,6 +3,7 @@ import Image from "next/image";
 import Linkedin from "@public/svg/grayLinkedin.svg";
 import React from "react";
 import Link from "next/link";
+import cn from "@/utils/tailwind";
 type Props = {
   slug?: string;
   image?: string;
@@ -37,7 +38,12 @@ const ACard = ({
         </Link>
       )}
       <div className="w-[18.43rem] h-[21.56rem] relative">
-        <ASvg src={image} className=" " />
+        <ASvg
+          src={image}
+          className={cn("", {
+            "cursor-pointer": slug,
+          })}
+        />
       </div>
       <div className="flex flex-col gap-[0.75rem]">
         {slug ? (

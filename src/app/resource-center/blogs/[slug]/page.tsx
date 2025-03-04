@@ -18,6 +18,8 @@ import { notFound } from "next/navigation";
 import { StorageUrl } from "@/utils/BaseUrl";
 import dayjs from "dayjs";
 import { TInnerBlog } from "@/api/type";
+import Link from "next/link";
+import Tags from "./_components/Tags";
 
 // export const dynamic = "force-dynamic";
 const dummyArray = [
@@ -57,8 +59,10 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   if (!response) {
     notFound();
   }
+  console.log("response:::", response);
   const dateFormat = dayjs(response.date).format("D MMMM");
   const UpdateDateFormat = dayjs(response.updatedAt).format("D MMMM");
+
   return (
     <div className="pt-[5rem] overflow-x-hidden min-h-screen">
       <div className="container mx-auto relative ~pl-5/[7.5rem] ~pr-5/[19rem] ~pb-[5rem]/[7.5rem]">
@@ -108,30 +112,38 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
             </span>
           </p> */}
           <div className="flex ~gap-[1rem]/[1.25rem]  text-midGray ~pt-[2rem]/[2.5rem] ">
-            <p className="text-h9Copy5 leading-[1.225rem] pt-[0.75rem]">Tags</p>
-           <div className="flex flex-wrap ~gap-[1rem]/[1.25rem]">
-              {response.tags.map((tag, i) => (
-                <button key={i} className="bg-purple10 py-[0.75rem] px-[1rem] rounded-full flex gap-[0.5rem] items-center">
-                  <p className="text-h9Copy5 leading-[1.225rem]">{tag}</p>
-                  <CrossSvg className=" cursor-pointer size-[1rem]" />
-                </button>
-              ))}
-           </div>
+            <Tags tagArray={response.tags} />
           </div>
           <div className="w-full h-[1.5px] bg-gray10 my-[2.5rem] "></div>
           <div className="flex gap-[1.25rem] items-center">
-            <ButtonAnimation className="bg-gray50 text-white hover:bg-white hover:!text-gray50 rounded-full p-[0.75rem]">
-              <XSvg className="size-[1rem]" />
-            </ButtonAnimation>
-            <ButtonAnimation className="bg-gray50 text-white hover:bg-white hover:text-gray50 rounded-full p-[0.75rem]">
-              <LinkedinSvg className="size-[1rem]" />
-            </ButtonAnimation>
-            <ButtonAnimation className="bg-gray50 text-white hover:bg-white hover:text-gray50 rounded-full p-[0.75rem]">
-              <FilledYoutubeSvg className="size-[1rem]" />
-            </ButtonAnimation>
-            <ButtonAnimation className="bg-gray50 text-white hover:bg-white hover:text-gray50 rounded-full p-[0.75rem]">
-              <LinkSvg className="size-[1rem]" />
-            </ButtonAnimation>
+            {response.twitter && response.twitter != "" && (
+              <Link href={response.twitter}>
+                <ButtonAnimation className="bg-gray50 text-white hover:bg-white hover:!text-gray50 rounded-full p-[0.75rem]">
+                  <XSvg className="size-[1rem]" />
+                </ButtonAnimation>
+              </Link>
+            )}
+            {response.linkedIn && response.linkedIn != "" && (
+              <Link href={response.linkedIn}>
+                <ButtonAnimation className="bg-gray50 text-white hover:bg-white hover:text-gray50 rounded-full p-[0.75rem]">
+                  <LinkedinSvg className="size-[1rem]" />
+                </ButtonAnimation>
+              </Link>
+            )}
+            {response.youtube && response.youtube != "" && (
+              <Link href={response.youtube}>
+                <ButtonAnimation className="bg-gray50 text-white hover:bg-white hover:text-gray50 rounded-full p-[0.75rem]">
+                  <FilledYoutubeSvg className="size-[1rem]" />
+                </ButtonAnimation>
+              </Link>
+            )}
+            {response.otherLink && response.otherLink != "" && (
+              <Link href={response.otherLink}>
+                <ButtonAnimation className="bg-gray50 text-white hover:bg-white hover:text-gray50 rounded-full p-[0.75rem]">
+                  <LinkSvg className="size-[1rem]" />
+                </ButtonAnimation>
+              </Link>
+            )}
           </div>
         </div>
       </div>

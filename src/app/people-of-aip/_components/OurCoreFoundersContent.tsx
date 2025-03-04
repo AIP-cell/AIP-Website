@@ -25,21 +25,26 @@ const OurCoreFoundersContent = ({ coreFounderMembers }: Props) => {
               &nbsp;Core-Founders
             </span>
           </h2> */}
-          <WordStaggerAnimation text="<color>Our Core Founders</color>" className="~text-h4/h2 text-center text-gray80 ~leading-[2.6rem]/[3.2rem]"/>
-          
-          <TextStaggerAnimation text="Our Founders are the foundations of the common purpose: create a
+          <WordStaggerAnimation
+            text="<color>Our Core Founders</color>"
+            className="~text-h4/h2 text-center text-gray80 ~leading-[2.6rem]/[3.2rem]"
+          />
+
+          <TextStaggerAnimation
+            text="Our Founders are the foundations of the common purpose: create a
             transformative impact of philanthropic efforts across a range of
             sectors from education to healthcare to climate and the arts, with
             innovative initiatives and their profound effects on communities.
             Our founders are our banks, our north stars, all the same."
-            className="font-inter ~leading-[1.225rem]/[1.4rem] ~text-h9Copy5/h9Copy4 text-center text-gray80 ~pt-[2rem]/[1.25rem] ~px-[1rem]/0"/>
+            className="font-inter ~leading-[1.225rem]/[1.4rem] ~text-h9Copy5/h9Copy4 text-center text-gray80 ~pt-[2rem]/[1.25rem] ~px-[1rem]/0"
+          />
         </div>
         <div className="relative ~pb-[5rem]/[7.37rem] ">
           {coreFounderMembers.map((item, i) => {
             const isFirstDesign = Math.floor(i / 2) % 2 === 0;
             if (i % 2 == 0) {
               return (
-               <CardAnimation index={i} delay={0.1} key={i}>
+                <CardAnimation index={i} delay={0.1} key={i}>
                   <div key={i} className="relative h-full">
                     {i % 2 == 0 && (
                       <Image
@@ -51,12 +56,12 @@ const OurCoreFoundersContent = ({ coreFounderMembers }: Props) => {
                         )}
                       />
                     )}
-  
                     <div
                       className={cn(
                         "sm:flex-row flex-col flex ~gap-[3.5rem]/[4.56rem] container mx-auto ",
                         {
-                          "pt-[5rem] pr-12 ~pl-12/[7.8rem] max-[20rem]:pr-[0.7rem] max-[20rem]:pl-[0.7rem]": isFirstDesign,
+                          "pt-[5rem] pr-12 ~pl-12/[7.8rem] max-[20rem]:pr-[0.7rem] max-[20rem]:pl-[0.7rem]":
+                            isFirstDesign,
                           "~pt-14/[5.25rem] justify-end  pl-12 max-[20rem]:pr-[0.7rem] max-[20rem]:pl-[0.7rem] ~pr-12/[7.8rem]":
                             !isFirstDesign,
                         }
@@ -73,7 +78,7 @@ const OurCoreFoundersContent = ({ coreFounderMembers }: Props) => {
                         work={item?.organisation}
                         image={item?.image}
                       />
-  
+
                       {coreFounderMembers[i + 1] && (
                         <PCard
                           slug={item?.slug}
@@ -91,7 +96,7 @@ const OurCoreFoundersContent = ({ coreFounderMembers }: Props) => {
                       )}
                     </div>
                   </div>
-               </CardAnimation>
+                </CardAnimation>
               );
             }
           })}
