@@ -323,4 +323,22 @@ export const Api = {
       return null;
     }
   },
+  getAllBlog: async () => {
+    try {
+      const response = await axiosClient.get(`blogs`);
+      return response.data;
+    } catch (error) {
+      console.log(error);
+      return null;
+    }
+  },
+  getOneBlog: async (slug: string) => {
+    try {
+      const response = await axiosClient.get(`blogs/${slug}`);
+      return response.data;
+    } catch (error) {
+      console.log(error);
+      return null;
+    }
+  },
 };

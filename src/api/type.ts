@@ -160,6 +160,8 @@ export type TAipResourcesCategory = {
   file: string;
   category: string;
   city: string;
+  readingTime: string;
+  author: string;
 };
 export type TCuratedResourcesExpertsInner = {
   curatedResource: TCuratedResourcesInner;
@@ -182,6 +184,18 @@ export type TCuratedResourcesInner = {
   fileLink: string;
   typeOfContent: string;
   videoLink: string;
+};
+export type TInnerBlog = {
+  _id: string;
+  title: string;
+  readingTime: string;
+  author: string;
+  description: string;
+  date: string;
+  image: string;
+  updatedAt: string;
+  slug: string;
+  tags: string[];
 };
 
 // End Resource center
@@ -350,7 +364,7 @@ export type TProjectPrograms = {
 
 export type TRoadMap = {
   _id: string;
-  link: string
+  link: string;
   isLink: boolean;
   isFile: boolean;
   file: string;
