@@ -155,6 +155,7 @@ export type TAipResourcesCategory = {
   slug: string;
   link: string;
   key: string;
+  shortDescription: string;
   isLinkOrPdf: string;
   fileLink: string;
   file: string;

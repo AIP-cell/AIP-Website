@@ -47,7 +47,6 @@ const page = async () => {
   if (!response) {
     notFound();
   }
-  // console.log("response::::::", response);
   return (
     <div className="pt-[5rem] overflow-x-hidden min-h-screen">
       <div className="container mx-auto relative ~px-5/[7.5rem] pb-[7.5rem]">
@@ -82,7 +81,7 @@ const page = async () => {
                 key={i}
                 src={item?.image}
                 title={item?.title}
-                desc={item?.description}
+                desc={item?.shortDescription}
                 category={item?.domain}
                 domain={item?.domain}
                 date={item?.date}

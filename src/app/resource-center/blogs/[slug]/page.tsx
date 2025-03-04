@@ -59,7 +59,6 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   if (!response) {
     notFound();
   }
-  console.log("response:::", response);
   const dateFormat = dayjs(response.date).format("D MMMM");
   const UpdateDateFormat = dayjs(response.updatedAt).format("D MMMM");
 
@@ -72,7 +71,7 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
             linkOne="#"
             textTwo="Blogs"
             linkTwo="/resource-center/blogs"
-            textThree={param.slug}
+            textThree={response.title}
             linkThree={`/resource-center/blogs/${param.slug}`}
           />
           <div className=" ~pt-[4.3rem]/[5rem]">
@@ -117,28 +116,28 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
           <div className="w-full h-[1.5px] bg-gray10 my-[2.5rem] "></div>
           <div className="flex gap-[1.25rem] items-center">
             {response.twitter && response.twitter != "" && (
-              <Link href={response.twitter}>
+              <Link href={response.twitter} target="_blank">
                 <ButtonAnimation className="bg-gray50 text-white hover:bg-white hover:!text-gray50 rounded-full p-[0.75rem]">
                   <XSvg className="size-[1rem]" />
                 </ButtonAnimation>
               </Link>
             )}
             {response.linkedIn && response.linkedIn != "" && (
-              <Link href={response.linkedIn}>
+              <Link href={response.linkedIn} target="_blank">
                 <ButtonAnimation className="bg-gray50 text-white hover:bg-white hover:text-gray50 rounded-full p-[0.75rem]">
                   <LinkedinSvg className="size-[1rem]" />
                 </ButtonAnimation>
               </Link>
             )}
             {response.youtube && response.youtube != "" && (
-              <Link href={response.youtube}>
+              <Link href={response.youtube} target="_blank">
                 <ButtonAnimation className="bg-gray50 text-white hover:bg-white hover:text-gray50 rounded-full p-[0.75rem]">
                   <FilledYoutubeSvg className="size-[1rem]" />
                 </ButtonAnimation>
               </Link>
             )}
             {response.otherLink && response.otherLink != "" && (
-              <Link href={response.otherLink}>
+              <Link href={response.otherLink} target="_blank">
                 <ButtonAnimation className="bg-gray50 text-white hover:bg-white hover:text-gray50 rounded-full p-[0.75rem]">
                   <LinkSvg className="size-[1rem]" />
                 </ButtonAnimation>

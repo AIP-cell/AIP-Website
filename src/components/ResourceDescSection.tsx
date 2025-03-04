@@ -1,6 +1,5 @@
 "use client";
 import cn from "@/utils/tailwind";
-import React, { useEffect, useRef, useState } from "react";
 
 type Props = {
   desc?: string;
@@ -8,60 +7,15 @@ type Props = {
 };
 
 const ResourceDescSection = ({ desc, index }: Props) => {
-  const [currentIndex, setCurrentIndex] = useState<number | null>(null);
-  const [isClamped, setIsClamped] = useState(false);
-  const textRef = useRef<HTMLDivElement>(null);
-  const toggle = (index: number | undefined) => {
-    if (index != undefined) {
-      if (index === currentIndex) {
-        setCurrentIndex(null);
-      } else setCurrentIndex(index);
-    }
-  };
-
-  useEffect(() => {
-    if (textRef.current) {
-      const element = textRef.current;
-      const computedStyle = getComputedStyle(element);
-      const lineHeight = parseFloat(computedStyle.lineHeight);
-      const actualLines = Math.ceil(element.offsetHeight / lineHeight);
-      setIsClamped(actualLines > 6);
-    }
-  }, [desc]);
-
   return (
     <div>
       <div
-        ref={textRef}
         className={cn(
-          "text-gray50  ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] relative",
-          {
-            "line-clamp-6 overflow-hidden": isClamped && currentIndex !== index,
-            "line-clamp-none": currentIndex === index,
-          }
+          "text-gray50  ~text-h9Copy5/h9Copy4 line-clamp-6 text-ellipsis overflow-hidden ~leading-[1.225rem]/[1.4rem] relative"
         )}
       >
         {desc}
-        {isClamped && currentIndex !== index && (
-          <span className="absolute bottom-0 right-0 bg-bgLightPeach pl-2 text-darkPurple">
-            ...{""}
-            <button
-              onClick={() => toggle(index)}
-              className="inline text-darkPurple ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] font-semibold"
-            >
-              read more
-            </button>
-          </span>
-        )}
       </div>
-      {isClamped && currentIndex === index && (
-        <button
-          onClick={() => toggle(index)}
-          className="text-darkPurple ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] font-semibold"
-        >
-          show less
-        </button>
-      )}
     </div>
   );
 };

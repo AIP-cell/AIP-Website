@@ -26,7 +26,6 @@ const FinancialTabAndResp = ({
   listboxButtonClassName,
 }: Props) => {
   const router = useRouter();
-
   return (
     <>
       <div
