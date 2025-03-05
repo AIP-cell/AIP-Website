@@ -13,7 +13,6 @@ type Props = {
   urlSlug: string;
 };
 const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
-  // console.log("teamMembers::::",teamMembers)
   return (
     <div className="w-full relative min-h-[90vh]">
       <div className="pt-[3rem] pb-[7rem] ">
@@ -245,7 +244,7 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
                       {teamMembers[i + 1] && (
                         <PTeamCard
                           // slug={items?.slug}
-                          image={items?.image}
+                          image={teamMembers[i + 1]?.image}
                           // link={`/people-of-aip/${urlSlug}/${
                           //   teamMembers[i + 1]?.slug
                           // }`}
