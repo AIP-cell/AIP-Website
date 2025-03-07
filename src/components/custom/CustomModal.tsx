@@ -25,7 +25,7 @@ export default function CustomModal({
       <Dialog
         open={isOpen}
         as="div"
-        className="relative z-[100] focus:outline-none"
+        className="relative z-[10000] focus:outline-none"
         onClose={() => setIsOpen(false)}
         __demoMode
       >

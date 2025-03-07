@@ -13,17 +13,10 @@ const Join = ({ methodsOfJoining }: Props) => {
     <div className="w-full relative">
       <div className="relative container mx-auto ">
         <div className="relative flex flex-col items-center justify-center ~pt-[7.5rem]/[12.5rem]">
-          {/* <h2 className="font-playFair text-gray80 ~text-h4/h2 ~leading-[2.6rem]/[3.3rem]">
-            Methods of
-            <span className="text-textPurple font-playFairItalic">
-              &nbsp;Joining
-            </span>
-          </h2> */}
           <TextStaggerAnimation
             text="Methods of <color>Joining</color>"
             className="font-playFair text-gray80 ~text-h4/h2 ~leading-[2.6rem]/[3.3rem]"
           />
-
           <p className="text-midGray text-center ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] ~px-[2.813rem]/[20.93rem] ~pt-[1rem]/[1.25rem]">
             We invite you to join our growing network of philanthropists to see
             strategic philanthropy impact India’s transformation.
@@ -35,7 +28,7 @@ const Join = ({ methodsOfJoining }: Props) => {
         <div className="grid grid-cols-2 lg:grid-cols-4 ~gap-x-[1.25rem]/[5.625rem] ~gap-y-[1rem]/[5.625rem]  w-full justify-center ~pt-[1.25rem]/[4rem] ~px-[1.25rem]/[7.813rem]">
           {methodsOfJoining.map((join, i) => (
             <CardAnimation index={i} delay={0.1} key={i}>
-              <div key={i} className="flex justify-center">
+              <div key={i} className="flex  h-full">
                 {i % 2 == 0 ? (
                   <ATeamCard
                     image={join?.image}

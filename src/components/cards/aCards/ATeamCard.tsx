@@ -41,11 +41,14 @@ const ATeamCard = ({
   return (
     <div
       className={cn(
-        "max-[23rem]:w-[8rem] ~w-[10rem]/[11.87rem] relative",
+        "max-[23rem]:w-[8rem] flex flex-col ~w-[10rem]/[11.87rem] relative",
         sizeClass
       )}
     >
-      <AMediumSizeSvg src={image} className="" />
+      <AMediumSizeSvg
+        src={image}
+        className="max-[23rem]:w-[8rem] ~w-[10rem]/[11.87rem]"
+      />
       {linkedinLink && linkedin && (
         <Link
           href={linkedinLink}
@@ -55,7 +58,7 @@ const ATeamCard = ({
           <Image src={Linkedin} alt="" />
         </Link>
       )}
-      <div className="flex flex-col gap-[0.5rem]">
+      <div className="flex flex-col grow justify-between gap-[0.5rem]">
         {slug ? (
           <Link
             href={`${link}`}
@@ -70,11 +73,13 @@ const ATeamCard = ({
             {title}
           </div>
         )}
-        <h3
-          className={`~text-h4a/h4 ~leading-[2.1rem]/[2.6rem] text-gray80 font-playFair ${title2ClassName}`}
-        >
-          {title2}
-        </h3>
+        {title2 && (
+          <h3
+            className={`~text-h4a/h4 ~leading-[2.1rem]/[2.6rem] text-gray80 font-playFair ${title2ClassName}`}
+          >
+            {title2}
+          </h3>
+        )}
         {location && (
           <p
             className={`~text-h4a/h5 ~leading-[2.113rem]/[1.75rem] text-gray80 font-playFair ${locationClassName}`}
@@ -85,12 +90,14 @@ const ATeamCard = ({
         <p className=" ~text-h6M/h5 text-gray40 ~leading-[1.575rem]/[1.75rem] font-playFairItalic ">
           {desc}
         </p>
-        <Link
-          href={`mailto:${email}`}
-          className=" ~text-h9Copy5/h8Copy3 text-textPurple ~leading-[1.225rem]/[1.575rem] italic underline decoration-[1px] "
-        >
-          {email}
-        </Link>
+        {email && (
+          <Link
+            href={`mailto:${email}`}
+            className="break-words break-all ~text-h9Copy5/h8Copy3 text-textPurple ~leading-[1.225rem]/[1.575rem] italic underline decoration-[1px] "
+          >
+            {email}
+          </Link>
+        )}
       </div>
     </div>
   );

@@ -34,18 +34,21 @@ const PTeamCard = ({
   link,
 }: Props) => {
   return (
-    <div className="max-[23rem]:w-[8rem] ~w-[10.3rem]/[11.87rem] relative">
-      <PMediumSizeSvg src={image} />
+    <div className="max-[23rem]:w-[8rem]  flex flex-col ~w-[10.3rem]/[11.87rem] relative">
+      <PMediumSizeSvg
+        src={image}
+        className="max-[23rem]:w-[8rem] ~w-[10.3rem]/[11.87rem]"
+      />
       {linkedinLink && linkedin && (
-        <Link target="_blank" href={linkedinLink} className="absolute top-0 right-0 size-[2.5rem] z-50">
-          <Image
-            src={Linkedin}
-            alt=""
-            
-          />
+        <Link
+          target="_blank"
+          href={linkedinLink}
+          className="absolute top-0 right-0 size-[2.5rem] z-50"
+        >
+          <Image src={Linkedin} alt="" />
         </Link>
       )}
-      <div className="flex flex-col gap-[0.5rem]">
+      <div className="flex flex-col grow justify-between gap-[0.5rem]">
         {slug ? (
           <Link
             href={`${link}`}
@@ -75,12 +78,14 @@ const PTeamCard = ({
         <p className="~text-h6M/h5 font-playFairItalic  text-gray40 ~leading-[1.575rem]/[1.75rem]  ">
           {desc}
         </p>
-        <Link
-          href=""
-          className=" ~text-h9Copy5/h8Copy3 text-textPurple italic  ~leading-[1.225rem]/[1.575rem] underline decoration-[1px] "
-        >
-          {email}
-        </Link>
+        {email && (
+          <Link
+            href=""
+            className="break-words break-all ~text-h9Copy5/h8Copy3 text-textPurple italic  ~leading-[1.225rem]/[1.575rem] underline decoration-[1px] "
+          >
+            {email}
+          </Link>
+        )}
       </div>
     </div>
   );

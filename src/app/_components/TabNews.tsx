@@ -9,9 +9,9 @@ import { CarouselNews } from "./CarouselNews";
 import { THomePageNews } from "@/api/type";
 const newsTabArray = [
   { tabNo: 0, key: "aipUpdates", tab: "About AIP" },
-  { tabNo: 1, key: "partner", tab: "From Partners" },
-  { tabNo: 2, key: "inTheMedia", tab: "In the Media" },
-  { tabNo: 3, key: "worldOfPhilanthropy", tab: "World of Philanthropy" },
+  // { tabNo: 1, key: "partner", tab: "From Partners" },
+  { tabNo: 1, key: "inTheMedia", tab: "In the Media" },
+  // { tabNo: 3, key: "worldOfPhilanthropy", tab: "World of Philanthropy" },
 ];
 type Props = {
   newsData: THomePageNews;
@@ -48,12 +48,12 @@ const TabNews = ({ newsData, searchParams }: Props) => {
                 {items.tab == "In the Media" && (
                   <CarouselNews newsArray={newsData.inTheMedia} />
                 )}
-                {items.tab == "From Partners" && (
+                {/* {items.tab == "From Partners" && (
                   <CarouselNews newsArray={newsData.partner} />
-                )}
-                {items.tab == "World of Philanthropy" && (
+                )} */}
+                {/* {items.tab == "World of Philanthropy" && (
                   <CarouselNews newsArray={newsData.worldOfPhilanthropy} />
-                )}
+                )} */}
                 {items.tab == "About AIP" && (
                   <CarouselNews newsArray={newsData.aipUpdates} />
                 )}

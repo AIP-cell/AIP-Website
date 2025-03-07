@@ -10,10 +10,6 @@ type Props = {
 const TestimonialsFromFounders = ({ testimonials }: Props) => {
   return (
     <div className="~pt-[8.125rem]/[12.5rem] pb-[7.404rem]">
-      {/* <h2 className="font-playFair ~leading-[2.6rem]/[3.3rem] text-gray80 ~text-h4/h2 text-center">
-        Philanthropist
-        <span className="font-playFairItalic text-textPurple">&nbsp;Speak</span>
-      </h2> */}
       <TextStaggerAnimation
         text="Philanthropist <color>Speak</color>"
         className="font-playFair ~leading-[2.6rem]/[3.3rem] text-gray80 ~text-h4/h2 text-center"
@@ -24,7 +20,6 @@ const TestimonialsFromFounders = ({ testimonials }: Props) => {
       {testimonials && testimonials.length != 0 && (
         <TestimonialSlick slickArray={testimonials} />
       )}
-      {/* <TestimonialRespSlick slickArray={testimonialsArray} /> */}
     </div>
   );
 };

@@ -8,6 +8,7 @@ import PSvg from "@/components/svg/PSvg";
 import Link from "next/link";
 import { useState } from "react";
 import CustomModal from "@/components/custom/CustomModal";
+import cn from "@/utils/tailwind";
 type Props = {
   image?: string;
   linkOrVideo?: string;
@@ -16,6 +17,7 @@ type Props = {
   post?: string;
   desc?: string;
   linkedin?: boolean;
+  darkText?: boolean;
   linkedinLink?: string;
   video?: string;
   videoLink?: string;
@@ -31,6 +33,7 @@ const PCardWithPlaySign = ({
   linkedinLink,
   video,
   videoLink,
+  darkText,
 }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -59,16 +62,27 @@ const PCardWithPlaySign = ({
         <div className="flex flex-col gap-[0.75rem]">
           <Link
             href={`/people-of-aip/coreFounder/${slug}`}
-            className="text-h4 leading-[2.6rem] text-[#DFE0E5] font-playFair underline underline-offset-4 decoration-[1px]"
+            className={cn(
+              "!text-h4 leading-[2.6rem] text-[#DFE0E5] font-playFair underline underline-offset-4 decoration-[1px]",
+              { "text-gray80": darkText }
+            )}
           >
             {name}
           </Link>
-          <h4 className="text-h5 font-playFair text-lightPurplePink font-medium italic line-clamp-1 text-ellipsis">
+          <h4
+            className={cn(
+              "!text-h5 font-playFair text-lightPurplePink font-medium italic line-clamp-1 text-ellipsis",
+              { "text-gray50": darkText }
+            )}
+          >
             {post}
           </h4>
           <div
             dangerouslySetInnerHTML={{ __html: desc || "" }}
-            className="text-h9Copy4 leading-[1.4rem] line-clamp-4 md:line-clamp-5 text-ellipsis font-inter !text-[#DFE0E5] "
+            className={cn(
+              "!text-h9Copy4 leading-[1.4rem] line-clamp-4 md:line-clamp-5 text-ellipsis font-inter !text-[#DFE0E5] ",
+              { "!text-midGray": darkText }
+            )}
           ></div>
         </div>
       </div>

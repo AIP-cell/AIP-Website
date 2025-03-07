@@ -87,6 +87,7 @@ export type TTestimonials = {
   image: string;
   isActive: true;
   _id: string;
+  videoLink: string;
   searchKeywords: [string];
 };
 export type TCaseStudies = {

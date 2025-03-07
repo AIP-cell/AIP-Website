@@ -13,12 +13,17 @@ import { ButtonAnimation } from "../animations/ButtonAnimation";
 import cn from "@/utils/tailwind";
 import useClient from "@/hooks/useClient";
 import { TTestimonials } from "@/api/type";
+import { usePathname } from "next/navigation";
+import ACardWithPlaySign from "../cards/aCards/ACardWithPlaySign";
+import PCardWithPlaySign from "../cards/pCards/PCardWithPlaySign";
 type Props = {
   slickArray: TTestimonials[];
 };
 const TestimonialSlick = ({ slickArray }: Props) => {
   const [change, setChange] = useState<number>(0);
-
+  const pathname = usePathname();
+  const playtestimonialCard =
+    pathname.includes("careers") || pathname.includes("aip-founder-network");
   const isDesktop = useMediaQuery({ query: "(min-width: 768px)" });
   const itemsPerSlide = isDesktop ? 2 : 1;
   const arrayLength = slickArray.length;
@@ -54,24 +59,45 @@ const TestimonialSlick = ({ slickArray }: Props) => {
                   // console.log("actualIndex", actualIndex);
                   return (
                     <div key={actualIndex}>
-                      {actualIndex % 2 == 0 && (
-                        <ACard
-                          key={i}
-                          image={items?.image}
-                          name={items?.name}
-                          work={items?.designation}
-                          desc={items?.description}
-                        />
-                      )}
-                      {actualIndex % 2 == 1 && (
-                        <PCard
-                          key={i}
-                          image={items?.image}
-                          name={items?.name}
-                          work={items?.designation}
-                          desc={items?.description}
-                        />
-                      )}
+                      {actualIndex % 2 == 0 &&
+                        (playtestimonialCard ? (
+                          <ACardWithPlaySign
+                            key={i}
+                            darkText={playtestimonialCard}
+                            image={items?.image}
+                            name={items?.name}
+                            post={items?.designation}
+                            linkOrVideo={items?.videoLink}
+                            desc={items?.description}
+                          />
+                        ) : (
+                          <ACard
+                            key={i}
+                            image={items?.image}
+                            name={items?.name}
+                            work={items?.designation}
+                            desc={items?.description}
+                          />
+                        ))}
+                      {actualIndex % 2 == 1 &&
+                        (playtestimonialCard ? (
+                          <PCardWithPlaySign
+                            key={i}
+                            darkText={playtestimonialCard}
+                            image={items?.image}
+                            name={items?.name}
+                            post={items?.designation}
+                            desc={items?.description}
+                          />
+                        ) : (
+                          <PCard
+                            key={i}
+                            image={items?.image}
+                            name={items?.name}
+                            work={items?.designation}
+                            desc={items?.description}
+                          />
+                        ))}
                     </div>
                   );
                 })}

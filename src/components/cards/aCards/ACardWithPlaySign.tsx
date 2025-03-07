@@ -7,6 +7,7 @@ import PlayButtonPurple from "@public/svg/playButtonPurple.svg";
 import ASvg from "@/components/svg/ASvg";
 import CustomModal from "@/components/custom/CustomModal";
 import Link from "next/link";
+import cn from "@/utils/tailwind";
 type Props = {
   image?: string;
   name?: string;
@@ -18,6 +19,7 @@ type Props = {
   video?: string;
   linkedin?: boolean;
   linkedinLink?: string;
+  darkText?: boolean;
 };
 // "  "
 const ACardWithPlaySign = ({
@@ -31,6 +33,7 @@ const ACardWithPlaySign = ({
   linkOrVideo,
   video,
   videoLink,
+  darkText,
 }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
   const isVideo = linkOrVideo === "Video";
@@ -61,16 +64,27 @@ const ACardWithPlaySign = ({
         <div className="flex flex-col gap-[0.75rem]">
           <Link
             href={`/people-of-aip/coreFounder/${slug}`}
-            className="text-h4 leading-[2.6rem] text-[#DFE0E5] font-playFair underline underline-offset-4 decoration-[1px] "
+            className={cn(
+              "!text-h4 leading-[2.6rem] text-[#DFE0E5] font-playFair underline underline-offset-4 decoration-[1px] ",
+              { "text-gray80": darkText }
+            )}
           >
             {name}
           </Link>
-          <h4 className="text-h5 font-playFair text-lightPurplePink font-medium italic line-clamp-1 text-ellipsis">
+          <h4
+            className={cn(
+              "!text-h5 font-playFair text-lightPurplePink font-medium italic line-clamp-1 text-ellipsis",
+              { "text-gray50": darkText }
+            )}
+          >
             {post}
           </h4>
           <div
             dangerouslySetInnerHTML={{ __html: desc || "" }}
-            className="text-h9Copy4 leading-[1.4rem] font-inter line-clamp-4 md:line-clamp-5 text-ellipsis !text-[#DFE0E5] "
+            className={cn(
+              "!text-h9Copy4 leading-[1.4rem] font-inter line-clamp-4 md:line-clamp-5 text-ellipsis !text-[#DFE0E5] ",
+              { "!text-midGray": darkText }
+            )}
           ></div>
         </div>
       </div>
