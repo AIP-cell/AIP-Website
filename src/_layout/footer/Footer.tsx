@@ -331,7 +331,7 @@ const Footer = () => {
                   <ButtonAnimation>Curated Resources</ButtonAnimation>
                 </Link> */}
                 <Link
-                  href="/blogs"
+                  href="/resource-center/blogs"
                   className=" text-h9Copy5 font-inter text-white/60"
                 >
                   <ButtonAnimation>Blogs</ButtonAnimation>
