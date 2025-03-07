@@ -47,7 +47,7 @@ const AipWay = () => {
       <div className=" ~/md:~pt-[25rem]/[5rem] container mx-auto  relative  flex flex-col justify-center items-end ~pl-[1.75rem]/0  ~md:~pr-[1.75rem]/[16rem]">
         <div className=" ~pt-[2rem]/[5rem]  flex flex-col ~gap-[1.5rem]/[1.625rem]">
           <div className="flex font-playFair font-medium flex-col text-midGray   pr-[5rem] ~text-h9Copy5/h9Copy4 ~leading-[1.138rem]/[1.4rem]">
-            <p> A philanthropist's journey is like a river,</p>
+            <p> A philanthropist&apos;s journey is like a river,</p>
             <p>It gives as much as it can,</p>
           </div>
           <div className="flex flex-col font-playFair font-medium text-midGray  pl-[5rem] ~text-h9Copy5/h9Copy4 ~leading-[1.138rem]/[1.4rem]">
