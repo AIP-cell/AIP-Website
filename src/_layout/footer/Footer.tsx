@@ -143,7 +143,7 @@ const Footer = () => {
                 Accelerate Indian Philanthropy
               </h3>
               <p className="pt-[0.75rem] ~text-h10Copy6/h9Copy5 font-inter text-white/60">
-                Ananda, 242 Okhla Industrial Estate
+                242 Okhla Industrial Estate
               </p>
               <p className=" ~text-h10Copy6/h9Copy5 font-inter text-white/60">
                 Phase III, New Delhi, India 110020
