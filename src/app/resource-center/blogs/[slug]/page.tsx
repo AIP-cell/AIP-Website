@@ -64,7 +64,7 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
 
   return (
     <div className="pt-[5rem] overflow-x-hidden min-h-screen">
-      <div className="container mx-auto relative ~pl-5/[7.5rem] ~pr-5/[19rem] ~pb-[5rem]/[7.5rem]">
+      <div className="container mx-auto relative ~pl-5/[7.5rem] ~pr-5/[19rem] ~pb-[3rem]/[7.5rem]">
         <div className=" ~pt-0/[1.25rem] gap-[.75rem][7.8rem]">
           <BreadCrump
             textOne="Resource Center"
@@ -74,13 +74,13 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
             textThree={response.title}
             linkThree={`/resource-center/blogs/${param.slug}`}
           />
-          <div className=" ~pt-[4.3rem]/[5rem]">
+          <div className=" ~pt-[4.6rem]/[5rem]">
             <WordStaggerAnimation
               text={response.title}
               className="font-playFair ~leading-[2.5rem]/[3.25rem] ~text-h4/h3 text-gray80 tracking-[-1px]"
             />
           </div>
-          <div className="pt-[2.5rem]">
+          <div className="~pt-[2rem]/[2.5rem]">
             <p className="font-medium leading-[1.75rem] font-playFair text-h5 text-gray80 ">
               By{" "}
               <span className="underline underline-offset-3 decoration-[1.5px]">
@@ -95,13 +95,13 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
               {UpdateDateFormat}
             </p>
           </div>
-          <div className="w-full h-[1.5px] bg-gray10 my-[2.5rem] "></div>
+          <div className="w-full h-[1.5px] bg-gray10 ~my-[2rem]/[2.5rem] "></div>
           <div className="w-full h-[25rem] relative overflow-hidden">
             <Image src={StorageUrl + response.image} alt="image" fill />
           </div>
           <div
             dangerouslySetInnerHTML={{ __html: response?.description || "" }}
-            className="pt-[2.5rem] ~text-h9Copy5/[1rem] ~leading-[1.22rem]/[1.4rem] text-midGray"
+            className="~pt-[2rem]/[2.5rem] ~text-h9Copy5/[1rem] ~leading-[1.22rem]/[1.4rem] text-midGray"
           ></div>
           {/* <p className="text-h9Copy5  leading-[1.225rem] py-[2.5rem] italic text-midGray">
             Radhika and Bhavana&apos;s interview was originally published in
@@ -113,8 +113,8 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
           <div className="flex ~gap-[1rem]/[1.25rem]  text-midGray ~pt-[2rem]/[2.5rem] ">
             <Tags tagArray={response.tags} />
           </div>
-          <div className="w-full h-[1.5px] bg-gray10 my-[2.5rem] "></div>
-          <div className="flex gap-[1.25rem] items-center">
+          <div className="w-full h-[1.5px] bg-gray10 ~my-[2rem]/[2.5rem] "></div>
+          <div className="flex ~gap-[0.7rem]/[1.25rem] items-center">
             {response.twitter && response.twitter != "" && (
               <Link href={response.twitter} target="_blank">
                 <ButtonAnimation className="bg-gray50 text-white hover:bg-white hover:!text-gray50 rounded-full p-[0.75rem]">
