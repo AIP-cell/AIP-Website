@@ -167,7 +167,7 @@ const Cities = ({ collaboration, slug }: Props) => {
             </div>
           </div>
           <div className="flex flex-col ">
-            {cities?.at(selectedIndex)?.organisationDetails.length != 0 && (
+            {cities?.at(selectedIndex)?.organisationDetails?.length != 0 && (
               <div className="order-2 md:order-none  ~pb-[2.5rem]/0  ~pt-[2.5rem]/0">
                 <p className="font-playFair ~pb-[0.75rem]/4  ~leading-[1.575rem]/[1.75rem] font-medium tracking-[-.02rem] ~text-h6M/h5 text-gray80">
                   Organised By
@@ -199,7 +199,7 @@ const Cities = ({ collaboration, slug }: Props) => {
                 </div>
               </div>
             )}
-            {cities?.at(selectedIndex)?.collaborations.length != 0 && (
+            {cities?.at(selectedIndex)?.collaborations?.length != 0 && (
               <div className="order-1 md:order-none ~pt-0/[2.5rem] ~pb-[2.5rem]/0 border-b border-gray10 md:border-none">
                 <p className="font-playFair ~pb-[0.75rem]/4 ~leading-[1.575rem]/[1.75rem] font-medium tracking-[-.02rem] ~text-h6M/h5 text-gray80">
                   In Collaboration With
@@ -289,8 +289,8 @@ const Cities = ({ collaboration, slug }: Props) => {
         </div>
       </div>
       <div className="relative">
-        {(cities?.at(selectedIndex)?.organisationDetails.length != 0 &&
-          cities?.at(selectedIndex)?.collaborations.length != 0) && (
+        {(cities?.at(selectedIndex)?.organisationDetails?.length != 0 &&
+          cities?.at(selectedIndex)?.collaborations?.length != 0) && (
           <Image
             src={BottomBg}
             alt="peach-long-curve"
@@ -311,11 +311,11 @@ const Cities = ({ collaboration, slug }: Props) => {
         )}
         {cities.length != 0 && (
           <>
-            {cities?.at(selectedIndex)?.gallery.galleryImages.length != 0 && (
+            {cities?.at(selectedIndex)?.gallery?.galleryImages?.length != 0 && (
               <div className="container mx-auto ~pt-[3rem]/0">
                 <Gallery
                   galleryImages={
-                    cities?.at(selectedIndex)?.gallery.galleryImages
+                    cities?.at(selectedIndex)?.gallery?.galleryImages
                   }
                   galleryLink={`/our-work/collaborations/${slug}/event-gallery?city=${
                     cities?.at(selectedIndex)?.name
@@ -323,10 +323,10 @@ const Cities = ({ collaboration, slug }: Props) => {
                 />
               </div>
             )}
-            {cities?.at(selectedIndex)!.media.length != 0 && (
+            {cities?.at(selectedIndex)!.media?.length != 0 && (
               <Media media={cities?.at(selectedIndex)!.media} />
             )}
-            {cities?.at(selectedIndex)!.testimonials.length != 0 && (
+            {cities?.at(selectedIndex)!.testimonials?.length != 0 && (
               <InnerCollaborationTestimonials
                 testimonials={cities?.at(selectedIndex)!.testimonials}
               />
