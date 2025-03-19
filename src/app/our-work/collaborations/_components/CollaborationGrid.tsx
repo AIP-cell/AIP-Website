@@ -48,12 +48,12 @@ const CollaborationGrid = ({ collaborationData }: Props) => {
                   {dateFormat(item.date)}
                 </p>
                 <p className="~pt-0/3 ~pb-0/[2.125rem] text-midGray leading-[1.4rem]">
-                  Report
+                  {item.category}
                 </p>
               </div>
               <div className="w-full md:w-[80%]">
                 <Link href={`/our-work/collaborations/${item.slug}`}>
-                  <ButtonAnimation className="font-playFair ~text-h4a/h4 text-gray80 ~leading-[2.113rem]/[2.6rem] underline underline-offset-4 decoration-[1px]">
+                  <ButtonAnimation className="font-playFair ~text-h4a/h4 text-left text-gray80 ~leading-[2.113rem]/[2.6rem] underline underline-offset-4 decoration-[1px]">
                     {item?.title}
                   </ButtonAnimation>
                 </Link>
