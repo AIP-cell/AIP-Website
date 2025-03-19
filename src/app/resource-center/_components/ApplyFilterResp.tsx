@@ -29,7 +29,6 @@ Props) {
   const router = useRouter();
   const handleSubmit = () => {
     // e.preventDefault();
-    // console.log("hiiiiiiiiii")
     const query = generatingSearchParam({
       ...searchParams,
       [filterKey]: selected.name ? selected._id : selected,
