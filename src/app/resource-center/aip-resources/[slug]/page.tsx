@@ -258,7 +258,7 @@ const getAipResourcesData = async (
     c_type,
     date,
   });
-  return response.data;
+  return response?.data;
 };
 const AipResourcesInnerPage = async ({
   params,
