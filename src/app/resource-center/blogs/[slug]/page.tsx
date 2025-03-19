@@ -51,7 +51,7 @@ const dummyArray = [
 export const dynamic = "force-dynamic";
 const getOneBlogApi = async (slug: string): Promise<TInnerBlog> => {
   const response = await Api.getOneBlog(slug);
-  return response.data;
+  return response?.data;
 };
 const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const param = await params;

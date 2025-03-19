@@ -13,7 +13,7 @@ import { notFound } from "next/navigation";
 export const dynamic = "force-dynamic";
 const geFounderNetworkApi = async (): Promise<TFounderNetwork> => {
   const response = await Api.getFounderNetwork();
-  return response.data;
+  return response?.data;
 };
 const page = async () => {
   const response = await geFounderNetworkApi();

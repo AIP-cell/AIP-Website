@@ -10,7 +10,7 @@ import { notFound } from "next/navigation";
 export const dynamic = "force-dynamic";
 const geAipImpactApi = async (): Promise<TAipImpact> => {
   const response = await Api.getAipImpact();
-  return response.data;
+  return response?.data;
 };
 const page = async () => {
   const response = await geAipImpactApi();
@@ -22,9 +22,9 @@ const page = async () => {
   return (
     <div>
       <FoundationFactHeroSection />
-      {foundationFacts && <FoundationFacts foundationFacts={foundationFacts} />}
       {testimonialsData.length!=0 && <Testimonials testimonialsData={testimonialsData} />}
       <ContactSection />
+      {foundationFacts && <FoundationFacts foundationFacts={foundationFacts} />}
     </div>
   );
 };

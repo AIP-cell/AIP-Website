@@ -77,7 +77,7 @@ const getProjectsProgramsApi = async ({
     events,
     date,
   });
-  return response.data;
+  return response?.data;
 };
 
 const page = async ({

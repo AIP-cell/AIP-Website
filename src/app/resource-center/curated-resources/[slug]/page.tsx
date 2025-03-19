@@ -284,7 +284,7 @@ const getAipResourcesData = async (
     o_type,
     date,
   });
-  return response.data;
+  return response?.data;
 };
 const CuratedResourcesInnerPage = async ({
   params,

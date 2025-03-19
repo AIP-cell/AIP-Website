@@ -23,7 +23,7 @@ const getCollaborationsApi = async ({
   date?: string;
 }): Promise<TCollaborationPageData> => {
   const response = await Api.getCollaborations({ c_type, p_id, date });
-  return response.data;
+  return response?.data;
 };
 const page = async ({
   searchParams,

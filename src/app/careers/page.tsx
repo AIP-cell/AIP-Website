@@ -12,7 +12,7 @@ import { TCareersPage } from "@/api/type";
 export const dynamic = "force-dynamic";
 const getCareersPageApi = async (): Promise<TCareersPage> => {
   const response = await Api.getCareersPage();
-  return response.data;
+  return response?.data;
 };
 const CareerPage = async () => {
   const response = await getCareersPageApi();

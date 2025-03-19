@@ -13,7 +13,7 @@ import { notFound } from "next/navigation";
 export const dynamic = "force-dynamic";
 const getOurWorkExpertsApi = async (): Promise<TOurWorkExpertsData> => {
   const response = await Api.getOurWorkExperts();
-  return response.data;
+  return response?.data;
 };
 const page = async () => {
   const response = await getOurWorkExpertsApi();

@@ -40,7 +40,7 @@ import BlogCard from "@/components/cards/BlogCard";
 export const dynamic = "force-dynamic";
 const getAllBlogApi = async (): Promise<TAipResourcesCategory[]> => {
   const response = await Api.getAllBlog();
-  return response.data;
+  return response?.data;
 };
 const page = async () => {
   const response = await getAllBlogApi();

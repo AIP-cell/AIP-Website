@@ -15,7 +15,7 @@ import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 export const dynamic = "force-dynamic";
 const getCareersApi = async (page: string): Promise<TAllPositions> => {
   const response = await Api.getCareers(page);
-  return response.data;
+  return response?.data;
 };
 
 const page = async ({

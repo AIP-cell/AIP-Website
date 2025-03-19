@@ -16,7 +16,7 @@ type Props = {
 };
 const FoundationFacts = ({ button, foundationFacts, className }: Props) => {
   return (
-    <div className={cn("relative w-full ~pt-[5rem]/[16rem]", className)}>
+    <div className={cn("relative w-full ~pt-[5rem]/[14rem]", className)}>
       <Image
         src={Bg}
         alt=""
@@ -80,7 +80,7 @@ const FoundationFacts = ({ button, foundationFacts, className }: Props) => {
               text1={foundationFacts?.footprintCount}
               textClass1="~text-h4/h3 ~leading-[2.6rem]/[3.25rem] font-semibold "
               sizeClass="~size-[14.2rem]/[17.38rem]"
-              text2="Continents"
+              text2="Countries"
               textClass2=" font-bold text-h6Copy1 leading-[2.1rem]  "
               text3="Footprint"
               textClass3=" ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]"

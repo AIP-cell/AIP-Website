@@ -11,7 +11,7 @@ import PeopleWeWorkWith from "./_components/PeopleWeWorkWith";
 export const dynamic = "force-dynamic";
 const geAipImpactApi = async (): Promise<TAipImpact> => {
   const response = await Api.getAipImpact();
-  return response.data;
+  return response?.data;
 };
 const page = async () => {
   const response = await geAipImpactApi();
