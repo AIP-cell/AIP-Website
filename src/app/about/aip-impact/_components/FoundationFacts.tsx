@@ -16,7 +16,7 @@ type Props = {
 };
 const FoundationFacts = ({ button, foundationFacts, className }: Props) => {
   return (
-    <div className={cn("relative w-full ~pt-[5rem]/[14rem]", className)}>
+    <div className={cn("relative w-full ~pt-[5rem]/[10rem]", className)}>
       <Image
         src={Bg}
         alt=""

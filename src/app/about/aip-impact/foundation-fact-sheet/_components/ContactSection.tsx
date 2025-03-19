@@ -27,7 +27,7 @@ const itemsArray = [
 const ContactSection = () => {
   return (
     // ~pb-[5rem]/[7.5rem]
-    <div className="flex flex-col items-center ~pt-[10rem]/[12.5rem] ">
+    <div className="flex flex-col items-center ~pt-[5rem]/[12.5rem] ">
       <h2 className="~text-h4/h2 ~leading-[2.6rem]/[3.3rem] text-center text-gray80 font-playFair">
         Reason to
         <span className="text-textPurple font-playFairItalic">
