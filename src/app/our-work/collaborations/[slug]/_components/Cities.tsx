@@ -85,7 +85,7 @@ const Cities = ({ collaboration, slug }: Props) => {
   const fromDate = dayjs(cities.at(selectedIndex)?.fromDate).format("D");
   const toDate = dayjs(cities.at(selectedIndex)?.toDate).format("D MMMM YYYY");
   const timeFormate = dayjs(cities.at(selectedIndex)?.time).format("HH IST");
-
+console.log("cities?.at(selectedIndex)?.organisationDetails?.length:::",cities?.at(selectedIndex)?.organisationDetails?.length)
   return (
     <div className="">
       <div className="relative grid lg:grid-cols-3 gap-5 container mx-auto ~px-[1.25rem]/[7.8rem] z-50">
@@ -167,7 +167,7 @@ const Cities = ({ collaboration, slug }: Props) => {
             </div>
           </div>
           <div className="flex flex-col ">
-            {cities?.at(selectedIndex)?.organisationDetails?.length != 0 && (
+            {(cities?.at(selectedIndex)?.organisationDetails && cities?.at(selectedIndex)?.organisationDetails?.length != 0) && (
               <div className="order-2 md:order-none  ~pb-[2.5rem]/0  ~pt-[2.5rem]/0">
                 <p className="font-playFair ~pb-[0.75rem]/4  ~leading-[1.575rem]/[1.75rem] font-medium tracking-[-.02rem] ~text-h6M/h5 text-gray80">
                   Organised By
