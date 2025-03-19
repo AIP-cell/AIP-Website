@@ -85,7 +85,7 @@ const Cities = ({ collaboration, slug }: Props) => {
   const fromDate = dayjs(cities.at(selectedIndex)?.fromDate).format("D");
   const toDate = dayjs(cities.at(selectedIndex)?.toDate).format("D MMMM YYYY");
   const timeFormate = dayjs(cities.at(selectedIndex)?.time).format("HH IST");
-console.log("cities?.at(selectedIndex)?.organisationDetails?.length:::",cities?.at(selectedIndex)?.organisationDetails?.length)
+
   return (
     <div className="">
       <div className="relative grid lg:grid-cols-3 gap-5 container mx-auto ~px-[1.25rem]/[7.8rem] z-50">
