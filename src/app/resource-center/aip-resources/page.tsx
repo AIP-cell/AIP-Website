@@ -1,7 +1,3 @@
-import ShimmerResourceCard from "@/components/shimmer/ShimmerResourceCard";
-import { redirect } from "next/navigation";
-import { Suspense } from "react";
-
 const page = () => {
   // //  redirect("/resource-center/aip-resources/reports-and-publications");
   // return (
