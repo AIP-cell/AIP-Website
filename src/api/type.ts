@@ -200,7 +200,7 @@ export type TInnerBlog = {
   twitter: string;
   linkedIn: string;
   youtube: string;
-  otherLink:string;
+  otherLink: string;
   tags: string[];
 };
 
@@ -414,6 +414,8 @@ export type TGalleryImages = {
 export type TGalleryVideos = {
   title: string;
   date: string;
+  linkOrVideo: string;
+  link: string;
   video: string;
   _id: string;
 };

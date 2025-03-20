@@ -7,38 +7,61 @@ import ReactPlayer from "react-player";
 import { ButtonAnimation } from "../animations/ButtonAnimation";
 
 type Props = {
-  src?: string;
+  video?: string;
+  link?: string;
   date?: string;
   title?: string;
   desc2?: string;
+  linkOrVideo?: string;
 };
-const GalleryVideo = ({ src, date, title, desc2 }: Props) => {
+const GalleryVideo = ({
+  video,
+  date,
+  title,
+  desc2,
+  linkOrVideo,
+  link,
+}: Props) => {
   const format = dayjs(date).format("D MMMM YYYY");
   return (
-    <div>
-      <div className="relative shrink-0 ~w-[21.8rem]/[31.5rem] ~h-[14.3rem]/[20.698rem] rounded-xl overflow-hidden flex items-center justify-center">
-        <ReactPlayer
-          className="z-10 border-2 absolute inset-0 !w-full !h-full flex justify-center items-center"
-          url={StorageUrl + src}
-          light="/images/upcoming.png"
-          playing
-          playIcon={
-            <ButtonAnimation>
-              <Image
-                src={PlayButtonPurple}
-                alt="video-icon"
-                className="size-[3.312rem]"
-              />
-            </ButtonAnimation>
-          }
-          controls
-        />
-
-        {/* <Image
-          src={PlayButtonPurple}
-          alt=""
-          className="z-20 hover:scale-105 transition-all duration-150 cursor-pointer size-[3.312rem]"
-        /> */}
+    <div className="w-full">
+      {/* ~w-[21.8rem]/[31.5rem] */}
+      <div className="relative shrink-0 w-full ~h-[14.3rem]/[20.698rem] rounded-xl overflow-hidden flex items-center justify-center">
+        {linkOrVideo === "Video" ? (
+          <ReactPlayer
+            className="z-10 border-2 absolute inset-0 !w-full !h-full flex justify-center items-center"
+            url={StorageUrl + video}
+            light="/images/upcoming.png"
+            playing
+            playIcon={
+              <ButtonAnimation>
+                <Image
+                  src={PlayButtonPurple}
+                  alt="video-icon"
+                  className="size-[3.312rem]"
+                />
+              </ButtonAnimation>
+            }
+            controls
+          />
+        ) : (
+          <ReactPlayer
+            className="z-10 border-2 absolute inset-0 !w-full !h-full flex justify-center items-center"
+            url={StorageUrl + link}
+            light="/images/upcoming.png"
+            playing
+            playIcon={
+              <ButtonAnimation>
+                <Image
+                  src={PlayButtonPurple}
+                  alt="video-icon"
+                  className="size-[3.312rem]"
+                />
+              </ButtonAnimation>
+            }
+            controls
+          />
+        )}
       </div>
       <div className="flex flex-col md:flex-row justify-between ~gap-[0.25rem]/[3rem] ~pt-[1rem]/[0.75rem]">
         <div className="leading-[1.4rem] font-bold  text-midGray">

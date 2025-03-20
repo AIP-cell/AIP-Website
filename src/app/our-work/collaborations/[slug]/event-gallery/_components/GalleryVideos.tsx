@@ -10,38 +10,13 @@ import useClient from "@/hooks/useClient";
 import React, { useState } from "react";
 import { useMediaQuery } from "react-responsive";
 
-const VideoArray = [
-  {
-    src: "/images/galleryVideoThumbnail.png",
-    desc: "0Amitabh at Systemic Impact Exemplars launch",
-    ddmmyy: "11 Jul 2024",
-  },
-  {
-    src: "/images/galleryVideoThumbnail.png",
-    desc: "1Amitabh at Systemic Impact Exemplars launch",
-    desc2: "Amitabh at Systemic Impact Exemplars launch",
-    ddmmyy: "11 Jul 2024",
-  },
-  {
-    src: "/images/galleryVideoThumbnail.png",
-    desc: "2Amitabh at Systemic Impact Exemplars launch",
-    ddmmyy: "11 Jul 2024",
-  },
-  {
-    src: "/images/galleryVideoThumbnail.png",
-    desc: "3Amitabh at Systemic Impact Exemplars launch",
-    desc2: "Amitabh at Systemic Impact Exemplars launch",
-    ddmmyy: "11 Jul 2024",
-  },
-];
-
 type Props = {
   galleryVideos?: TGalleryVideos[];
 };
 const GalleryVideos = ({ galleryVideos }: Props) => {
   const [change, setChange] = useState<number>(0);
 
-  const isDesktop = useMediaQuery({ query: "(min-width: 768px)" });
+  const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
   const itemsPerSlide = isDesktop ? 2 : 1;
   const arrayLength = galleryVideos?.length;
   const previous = () => {
@@ -84,14 +59,16 @@ const GalleryVideos = ({ galleryVideos }: Props) => {
           <RightSlickArrowSvg className="w-[1rem] h-[0.57rem]" />
         </ButtonAnimation>
       </div>
-      <div className="flex  overflow-x-auto no-scrollbar lg:justify-center  gap-[1.248rem] ~pt-5/[4.997rem]">
+      <div className=" grid grid-cols-1 lg:grid-cols-2  md:justify-center  gap-[1.248rem] ~pt-5/[4.997rem]">
         {galleryVideos
           ?.slice(change, change + itemsPerSlide)
           ?.map((video, index) => (
-            <CardAnimation index={index} delay={0.2} key={index}>
+            <CardAnimation index={index} delay={0.2} key={index} className="w-full">
               <GalleryVideo
+                linkOrVideo={video.linkOrVideo}
+                link={video.link}
+                video={video?.video}
                 key={index}
-                src={video?.video}
                 title={video?.title}
                 date={video?.date}
                 // desc2={video.desc2}
