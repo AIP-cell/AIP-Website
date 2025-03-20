@@ -42,7 +42,7 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
             textTwo="Aip Resources"
             linkTwo="/resource-center/aip-resources"
             textThree={response?.title}
-            linkThree={`/resource-center/aip-resources/${asyncParam}`}
+            linkThree={`/resource-center/aip-resources/${asyncParam}/event-gallery`}
             textFour="Event Gallery"
             linkFour={`/resource-center/aip-resources/${asyncParam}/event-gallery`}
           />
