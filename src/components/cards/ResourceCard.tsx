@@ -56,6 +56,8 @@ const ResourceCard = ({
   } else if (linkKey) {
     if (linkKey === "collaborations") {
       link = `/our-work/${linkKey}/${slug}/event-gallery?city=${city}`;
+    } else if (linkKey === "gallery") {
+      link = `/resource-center/aip-resources/${slug}/event-gallery`;
     } else {
       link = `/our-work/${linkKey}/${slug}/event-gallery`;
     }

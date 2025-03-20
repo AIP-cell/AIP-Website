@@ -269,6 +269,15 @@ export const Api = {
       return null;
     }
   },
+  getOneGalleryAipResources: async (slug: string) => {
+    try {
+      const response = await axiosClient.get(`aip-resources/${slug}/gallery`);
+      return response.data;
+    } catch (error) {
+      console.log(error);
+      return null;
+    }
+  },
   getSearch: async (data: {
     key?: string;
     field?: string;
