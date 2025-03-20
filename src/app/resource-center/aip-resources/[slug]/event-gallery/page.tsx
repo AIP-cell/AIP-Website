@@ -39,7 +39,7 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
           <BreadCrump
             textOne="Resource Center"
             linkOne="/resource-center"
-            textTwo="Aip Resources"
+            textTwo="AIP Resources"
             linkTwo="/resource-center/aip-resources"
             textThree={response?.title}
             linkThree={`/resource-center/aip-resources/${asyncParam}/event-gallery`}
