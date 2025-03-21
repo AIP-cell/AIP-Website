@@ -36,7 +36,7 @@ export function CarouselNews({ newsArray }: Props) {
         ))}
       </CarouselContent>
       {length != 0 && (
-        <div className="absolute bottom-[-5rem] lg:bottom-auto w-full  lg:top-[-15rem] lg:~right-0/[5rem] flex justify-center lg:justify-end gap-[1.25rem] ">
+        <div className="absolute bottom-[-5rem] lg:bottom-auto w-full  lg:top-[-9.5rem] lg:~right-0/[5rem] flex justify-center lg:justify-end gap-[1.25rem] ">
           <CarouselPrevious />
           <CarouselNext />
         </div>

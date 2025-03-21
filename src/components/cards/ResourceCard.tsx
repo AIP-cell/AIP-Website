@@ -72,16 +72,16 @@ const ResourceCard = ({
 
   return (
     // justify-center
-    <div className="flex flex-col  items-center ~gap-[1.25rem]/[0.75rem]">
-      <div className="relative w-full ~h-[19.688rem]/[16.594rem]">
+    <div className="flex flex-col h-full justify-between items-center ~gap-[1.25rem]/[0.75rem]">
+      <div className="relative w-full shrink-0 ~h-[19.688rem]/[16.594rem]">
         <Image
           src={src ? StorageUrl + src : "/images/resourceCardThumbnail.png"}
           alt="image"
           fill
-          className="object-cover rounded-[1.25rem]"
+          className="object-cover rounded-[1.25rem] "
         />
       </div>
-      <div className="flex flex-col w-full gap-[0.75rem]">
+      <div className="flex h-full flex-col w-full gap-[0.75rem]">
         {!slug ? (
           <Link
             href={link ?? ""}

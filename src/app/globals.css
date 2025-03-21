@@ -25,6 +25,9 @@
 .bg-container {
   max-width: 1920px !important;
 }
+.blog-description-section p {
+  margin-top: 0.7rem !important;
+}
 /* .react-player__preview{
   width: fit-content !important;
   height: fit-content !important;

@@ -27,7 +27,7 @@ const GalleryVideo = ({
     <div className="w-full">
       {/* ~w-[21.8rem]/[31.5rem] */}
       <div className="relative shrink-0 w-full ~h-[14.3rem]/[20.698rem] rounded-xl overflow-hidden flex items-center justify-center">
-        {linkOrVideo === "Video" ? (
+        {linkOrVideo === "video" ? (
           <ReactPlayer
             className="z-10 border-2 absolute inset-0 !w-full !h-full flex justify-center items-center"
             url={StorageUrl + video}

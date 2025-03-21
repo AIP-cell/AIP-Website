@@ -167,38 +167,39 @@ const Cities = ({ collaboration, slug }: Props) => {
             </div>
           </div>
           <div className="flex flex-col ">
-            {(cities?.at(selectedIndex)?.organisationDetails && cities?.at(selectedIndex)?.organisationDetails?.length != 0) && (
-              <div className="order-2 md:order-none  ~pb-[2.5rem]/0  ~pt-[2.5rem]/0">
-                <p className="font-playFair ~pb-[0.75rem]/4  ~leading-[1.575rem]/[1.75rem] font-medium tracking-[-.02rem] ~text-h6M/h5 text-gray80">
-                  Organised By
-                </p>
-                <div className="flex flex-wrap gap-4">
-                  {cities
-                    ?.at(selectedIndex)
-                    ?.organisationDetails?.map((items, i) => (
-                      <CardAnimation index={i} delay={0.1} key={i}>
-                        <div className=" flex items-center bg-white border border-1 border-gray10 rounded-xl ~w-[9.46rem]/[11.813rem] ~h-[4rem]/20 overflow-hidden">
-                          <div className="relative ~w-[9.46rem]/[11.813rem] ~h-[4rem]/20">
-                            <Image
-                              src={StorageUrl + items?.image}
-                              className="object-contain "
-                              fill
-                              alt="foundation"
-                            />
+            {cities?.at(selectedIndex)?.organisationDetails &&
+              cities?.at(selectedIndex)?.organisationDetails?.length != 0 && (
+                <div className="order-2 md:order-none  ~pb-[2.5rem]/0  ~pt-[2.5rem]/0">
+                  <p className="font-playFair ~pb-[0.75rem]/4  ~leading-[1.575rem]/[1.75rem] font-medium tracking-[-.02rem] ~text-h6M/h5 text-gray80">
+                    Organised By
+                  </p>
+                  <div className="flex flex-wrap gap-4">
+                    {cities
+                      ?.at(selectedIndex)
+                      ?.organisationDetails?.map((items, i) => (
+                        <CardAnimation index={i} delay={0.1} key={i}>
+                          <div className=" flex items-center bg-white border border-1 border-gray10 rounded-xl ~w-[9.46rem]/[11.813rem] ~h-[4rem]/20 overflow-hidden">
+                            <div className="relative ~w-[9.46rem]/[11.813rem] ~h-[4rem]/20">
+                              <Image
+                                src={StorageUrl + items?.image}
+                                className="object-contain "
+                                fill
+                                alt="foundation"
+                              />
+                            </div>
                           </div>
-                        </div>
-                      </CardAnimation>
-                    ))}
-                  {/* <div className="flex items-center border border-1 bg-white border-gray10 rounded-xl ~w-[5.49rem]/[6.863rem] ~h-[4rem]/20 overflow-hidden">
+                        </CardAnimation>
+                      ))}
+                    {/* <div className="flex items-center border border-1 bg-white border-gray10 rounded-xl ~w-[5.49rem]/[6.863rem] ~h-[4rem]/20 overflow-hidden">
                   <Image
                     src={Impact}
                     className="object-contain   "
                     alt="foundation"
                   />
                 </div> */}
+                  </div>
                 </div>
-              </div>
-            )}
+              )}
             {cities?.at(selectedIndex)?.collaborations?.length != 0 && (
               <div className="order-1 md:order-none ~pt-0/[2.5rem] ~pb-[2.5rem]/0 border-b border-gray10 md:border-none">
                 <p className="font-playFair ~pb-[0.75rem]/4 ~leading-[1.575rem]/[1.75rem] font-medium tracking-[-.02rem] ~text-h6M/h5 text-gray80">
@@ -271,43 +272,49 @@ const Cities = ({ collaboration, slug }: Props) => {
               />
             </div>
           </FadeInAnimation>
-          <div className="flex pt-[1.382rem]">
-            <Link
-              href={StorageUrl + cities?.at(selectedIndex)?.report}
-              download
-              target="_blank"
-              className="group bg-darkPurple border-2 border-darkPurple hover:bg-white  transition-all  hover:text-darkPurple text-white hover:border-2 hover:border-darkPurple px-7 py-3 flex items-center gap-[0.75rem] w-fit rounded-3xl"
-            >
-              <p className=" font-inter  text-h9Copy5 leading-[1.225rem]">
-                Download Event Report
-              </p>
-              <div className=" pt-[.1rem]">
-                <DownloadFileSvg className="size-[1.25rem]" />
-              </div>
-            </Link>
-          </div>
+          {cities?.at(selectedIndex)?.report && (
+            <div className="flex pt-[1.382rem]">
+              <Link
+                href={StorageUrl + cities?.at(selectedIndex)?.report}
+                download
+                target="_blank"
+                className="group bg-darkPurple border-2 border-darkPurple hover:bg-white  transition-all  hover:text-darkPurple text-white hover:border-2 hover:border-darkPurple px-7 py-3 flex items-center gap-[0.75rem] w-fit rounded-3xl"
+              >
+                <p className=" font-inter  text-h9Copy5 leading-[1.225rem]">
+                  Download Event Report
+                </p>
+                <div className=" pt-[.1rem]">
+                  <DownloadFileSvg className="size-[1.25rem]" />
+                </div>
+              </Link>
+            </div>
+          )}
         </div>
       </div>
       <div className="relative">
-        {(cities?.at(selectedIndex)?.organisationDetails?.length != 0 &&
-          cities?.at(selectedIndex)?.collaborations?.length != 0) && (
-          <Image
-            src={BottomBg}
-            alt="peach-long-curve"
-            className="hidden lg:block absolute lg:~top-[-31rem]/[-23rem] h-[75rem] w-full z-10"
-          />
-        )}
-        {cities.length != 0 && (
-          <div className="container mx-auto relative ~px-[1.25rem]/[7.8rem] ~pt-[5rem]/[12.75rem]">
-            <Agenda agendaArray={cities?.at(selectedIndex)?.agenda} />
-            {cities?.at(selectedIndex)?.linkOrVideo && (
-              <InnerCollaborationsVideo
-                linkOrVideo={cities?.at(selectedIndex)?.linkOrVideo}
-                video={cities?.at(selectedIndex)?.Video}
-                videoLink={cities?.at(selectedIndex)?.videoLink}
-              />
+        {cities?.at(selectedIndex)?.agenda.length != 0 && (
+          <>
+            {cities?.at(selectedIndex)?.organisationDetails?.length != 0 &&
+              cities?.at(selectedIndex)?.collaborations?.length != 0 && (
+                <Image
+                  src={BottomBg}
+                  alt="peach-long-curve"
+                  className="hidden lg:block absolute lg:~top-[-31rem]/[-23rem] h-[75rem] w-full z-10"
+                />
+              )}
+            {cities.length != 0 && (
+              <div className="container mx-auto relative ~px-[1.25rem]/[7.8rem] ~pt-[5rem]/[12.75rem]">
+                <Agenda agendaArray={cities?.at(selectedIndex)?.agenda} />
+                {cities?.at(selectedIndex)?.linkOrVideo && (
+                  <InnerCollaborationsVideo
+                    linkOrVideo={cities?.at(selectedIndex)?.linkOrVideo}
+                    video={cities?.at(selectedIndex)?.Video}
+                    videoLink={cities?.at(selectedIndex)?.videoLink}
+                  />
+                )}
+              </div>
             )}
-          </div>
+          </>
         )}
         {cities.length != 0 && (
           <>

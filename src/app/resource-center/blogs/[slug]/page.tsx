@@ -97,11 +97,11 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
           </div>
           <div className="w-full h-[1.5px] bg-gray10 ~my-[2rem]/[2.5rem] "></div>
           <div className="w-full h-[25rem] relative overflow-hidden">
-            <Image src={StorageUrl + response.image} alt="image" fill />
+            <Image src={StorageUrl + response.image} alt="image" fill className="object-cover"/>
           </div>
           <div
             dangerouslySetInnerHTML={{ __html: response?.description || "" }}
-            className="~pt-[2rem]/[2.5rem] ~text-h9Copy5/[1rem] ~leading-[1.22rem]/[1.4rem] text-midGray"
+            className="blog-description-section ~pt-[2rem]/[2.5rem] ~text-h9Copy5/[1rem] ~leading-[1.22rem]/[1.4rem] text-midGray"
           ></div>
           {/* <p className="text-h9Copy5  leading-[1.225rem] py-[2.5rem] italic text-midGray">
             Radhika and Bhavana&apos;s interview was originally published in
