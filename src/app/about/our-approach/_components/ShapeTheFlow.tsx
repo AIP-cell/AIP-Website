@@ -12,7 +12,7 @@ const threeIs = [
   {
     src: "/svg/about/aip-journey/three-I-s/influence.svg",
     title: "Influence",
-    desc: "IHelping build purpose and perspective to guide philanthropic action.",
+    desc: "Helping build purpose and perspective to guide philanthropic action.",
   },
   {
     src: "/svg/about/aip-journey/three-I-s/inspire.svg",
