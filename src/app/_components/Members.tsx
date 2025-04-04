@@ -16,7 +16,6 @@ const Members = ({ countData }: Props) => {
   return (
     <div className=" relative w-full">
       {/* <MembersWavePeachRightSvg className="hidden md:block max-cover absolute w-[300rem] h-full ~md:~bottom-[0rem]/[-5rem]" /> */}
-
       <Image
         src={Bg}
         alt=""
@@ -41,17 +40,18 @@ const Members = ({ countData }: Props) => {
               &nbsp;to support their giving efforts.
             </h2> */}
             <WordStaggerAnimation
-              text="Accelerate Indian"
+              text="We believe Philanthropy can catalyse India's transformation; 
+              Philanthropists are keen to make a difference; and Philanthropists are best at inspiring each other."
               className="~text-h4/h2  font-playFair text-gray50 ~leading-[2.6rem]/[3.3rem]"
             />
             <WordStaggerAnimation
-              text="Philanthropy is a peer network set up <color>by philanthropists,</color>"
-              className="~text-h4/h2  font-playFair text-gray50 ~leading-[2.6rem]/[3.3rem]"
+              text="With our Core Founders, Founders and purposefully engaged philanthropists, the AIP network is growing and shaping personal giving by UHNIs and helping catalyse strategic giving."
+              className="text-midGray ~leading-[1.22rem]/[1.4rem] pt-[0.7875rem] ~pr-[1rem]/[18rem]"
             />
-            <WordStaggerAnimation
+            {/* <WordStaggerAnimation
               text="<color>for philanthropists</color> to support their giving efforts."
               className="~text-h4/h2  font-playFair text-gray50 ~leading-[2.6rem]/[3.3rem]"
-            />
+            /> */}
           </div>
           {/* <OvalPurpleSvg className="-top-[4rem] right-[11.85rem]"/> */}
           <div className="w-full xl:w-[35%] relative flex justify-center ">

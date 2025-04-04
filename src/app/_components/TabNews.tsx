@@ -7,11 +7,12 @@ import TabListAndRespSelect from "../resource-center/_components/TabListAndRespS
 import CarouselRespNews from "./CarouselRespNews";
 import { CarouselNews } from "./CarouselNews";
 import { THomePageNews } from "@/api/type";
+import NoData from "@/components/NoData";
 const newsTabArray = [
-  { tabNo: 0, key: "aipUpdates", tab: "About AIP" },
-  // { tabNo: 1, key: "partner", tab: "From Partners" },
+  { tabNo: 0, key: "aipUpdates", tab: "What's New" },
+  { tabNo: 1, key: "partner", tab: "Partners" },
   { tabNo: 1, key: "inTheMedia", tab: "In the Media" },
-  // { tabNo: 3, key: "worldOfPhilanthropy", tab: "World of Philanthropy" },
+  { tabNo: 3, key: "worldOfPhilanthropy", tab: "World of Philanthropy" },
 ];
 type Props = {
   newsData: THomePageNews;
@@ -19,9 +20,11 @@ type Props = {
 };
 
 const TabNews = ({ newsData, searchParams }: Props) => {
+  console.log("newsArray:::", newsData);
   const SelectedData = newsTabArray.find(
     (newsTab) => newsTab.tab == searchParams
   );
+
   const [selectedIndex, setSelectedIndex] = useState(
     searchParams ? SelectedData?.tabNo : 0
   );
@@ -45,18 +48,30 @@ const TabNews = ({ newsData, searchParams }: Props) => {
           {newsTabArray.map((items, i) => {
             return (
               <TabPanel key={i}>
-                {items.tab == "In the Media" && (
-                  <CarouselNews newsArray={newsData.inTheMedia} />
-                )}
-                {/* {items.tab == "From Partners" && (
-                  <CarouselNews newsArray={newsData.partner} />
-                )} */}
-                {/* {items.tab == "World of Philanthropy" && (
-                  <CarouselNews newsArray={newsData.worldOfPhilanthropy} />
-                )} */}
-                {items.tab == "About AIP" && (
-                  <CarouselNews newsArray={newsData.aipUpdates} />
-                )}
+                {items.tab == "In the Media" &&
+                  (newsData.inTheMedia.length != 0 ? (
+                    <CarouselNews newsArray={newsData.inTheMedia} />
+                  ) : (
+                    <NoData />
+                  ))}
+                {items.tab == "Partners" &&
+                  (newsData.partner.length != 0 ? (
+                    <CarouselNews newsArray={newsData.partner} />
+                  ) : (
+                    <NoData />
+                  ))}
+                {items.tab == "World of Philanthropy" &&
+                  (newsData.worldOfPhilanthropy.length != 0 ? (
+                    <CarouselNews newsArray={newsData.worldOfPhilanthropy} />
+                  ) : (
+                    <NoData />
+                  ))}
+                {items.tab == "What's New" &&
+                  (newsData.aipUpdates.length != 0 ? (
+                    <CarouselNews newsArray={newsData.aipUpdates} />
+                  ) : (
+                    <NoData />
+                  ))}
               </TabPanel>
             );
           })}

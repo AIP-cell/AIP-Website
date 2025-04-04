@@ -22,6 +22,8 @@ const WordStaggerAnimation = ({
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false, margin: "0% 0% -50px 0%" });
   const words = text
+    .replaceAll("<br>", " <br> ")
+    .replaceAll("<br/>", " <br> ")
     .replaceAll("<color>", " <color> ")
     .replaceAll("</color>", " </color> ")
     .split(" ")
@@ -60,6 +62,9 @@ const WordStaggerAnimation = ({
       className={cn(className)}
     >
       {words.map((word: string, index: number) => {
+         if (word == "<br>") {
+          return <span className="block" key={index}></span>;
+        }
         if (word == "<color>") {
           isColor = true;
           return "";
