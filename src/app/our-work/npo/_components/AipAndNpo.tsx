@@ -54,7 +54,7 @@ const AipAndNpo = () => {
       />
       <div className="~px-[1.25rem]/[14.375rem] flex flex-col w-full items-center ~gap-[0.7rem]/[1rem] pt-[2.5rem] text-center">
         <p className="text-gray80 ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]">
-        AIP's NPO repository is a curated platform for connecting philanthropists with credible NPOs, fostering informed giving and strategic philanthropy in India.  It serves as a dynamic tool for various AIP initiatives, featuring NPOs assessed through secondary data and in-depth interviews. However inclusion in this repository does not guarantee fundraising. Philanthropists are also encouraged to carry out their own due diligence.
+        AIP&apos;s NPO repository is a curated platform for connecting philanthropists with credible NPOs, fostering informed giving and strategic philanthropy in India.  It serves as a dynamic tool for various AIP initiatives, featuring NPOs assessed through secondary data and in-depth interviews. However inclusion in this repository does not guarantee fundraising. Philanthropists are also encouraged to carry out their own due diligence.
         </p>
 
        
