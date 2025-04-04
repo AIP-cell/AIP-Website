@@ -7,17 +7,17 @@ const threeIs = [
   {
     src: "/svg/about/aip-journey/three-I-s/inform.svg",
     title: "Inform",
-    desc: "Guide philanthropists to make informed decisions",
+    desc: "Creating and curating research, knowledge and sector specific information for the philanthropic ecosystem.",
   },
   {
     src: "/svg/about/aip-journey/three-I-s/influence.svg",
     title: "Influence",
-    desc: "Influence change with strategic philanthropy",
+    desc: "IHelping build purpose and perspective to guide philanthropic action.",
   },
   {
     src: "/svg/about/aip-journey/three-I-s/inspire.svg",
     title: "Inspire",
-    desc: "Inspire philanthropists to give more, give better, give sooner",
+    desc: "Highlighting inspirational stories and fostering meaningful connects amongst ecosystem players.",
   },
 ];
 const ShapeTheFlow = () => {
@@ -28,7 +28,7 @@ const ShapeTheFlow = () => {
         &nbsp;The Flow
       </h3> */}
       <WordStaggerAnimation
-        text="Shape <color>The Flow</color>"
+        text="Helping <color>Shape </color>  The Flow"
         className="~text-h4/h2 font-playFair text-center text-gray80"
       />
       <p className="text-midGray text-center ~pt-[0.75rem]/[1.25rem] ~leading-[1.225rem]/[1.4rem]">

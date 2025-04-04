@@ -54,28 +54,10 @@ const AipAndNpo = () => {
       />
       <div className="~px-[1.25rem]/[14.375rem] flex flex-col w-full items-center ~gap-[0.7rem]/[1rem] pt-[2.5rem] text-center">
         <p className="text-gray80 ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]">
-          At AIP, we recognized the need for a comprehensive and credible
-          repository that could serve as a bridge between philanthropists and
-          NPOs. Our NPO repository is meticulously curated to address this gap,
-          providing our network members with a trusted resource that showcases
-          organizations demonstrating leadership, strategy, impact,
-          transparency, scale, and sustainability. By doing so, we not only
-          facilitate informed giving decisions but also enhance the overall
-          effectiveness and impact of philanthropy in India
+        AIP's NPO repository is a curated platform for connecting philanthropists with credible NPOs, fostering informed giving and strategic philanthropy in India.  It serves as a dynamic tool for various AIP initiatives, featuring NPOs assessed through secondary data and in-depth interviews. However inclusion in this repository does not guarantee fundraising. Philanthropists are also encouraged to carry out their own due diligence.
         </p>
 
-        <p className="text-gray80 ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]">
-          Our repository is more than just a database—it is a dynamic tool that
-          feeds into various facets of our work, including Giving Plans, Sector
-          Primers, Thematic Workshops, and Field Visits. The NPOs featured in
-          our repository are carefully assessed through secondary data and
-          in-depth interviews with their founders and senior management,
-          ensuring that they meet the high standards expected by our
-          philanthropist network. This repository is not about due diligence;
-          it’s about building meaningful connections between philanthropists and
-          NPOs, fostering collaboration, and driving India’s transformation
-          through strategic philanthropy.
-        </p>
+       
       </div>
       <div className="~pt-[2rem]/[5rem] flex flex-wrap justify-center gap-x-[4.563rem] ~gap-y-[1.25rem]/[3rem] !~px-[2.8rem]/[6.438rem] ">
         {npos.map((items, i) => (

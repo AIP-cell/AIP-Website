@@ -11,39 +11,39 @@ const threeP = [
   {
     src: "/svg/about/our-approach/perspectiveModel.svg",
     title: "Perspective",
-    desc: "By fostering peer and expert convenings, roundtable discussions, and sharing sectoral insights, we broaden the horizons of philanthropists, offering a wealth of knowledge, research, and case studies that inspire impactful giving. ",
+    desc: "Build perspective through:  curated knowledge; connects between philanthropists, experts and NPOs; and field visits to guide impactful giving.",
   },
   {
     src: "/svg/about/our-approach/purposeModel.svg",
     title: "Purpose",
-    desc: "We help philanthropists clarify the mission and vision of their giving through workshops and immersive learning expeditions, allowing them to deeply understand the issues they care about. ",
+    desc: "Help philanthropists and foundations clarify their  vision and  mission and build intergenerational alignment  through meaningful conversations and workshops ",
   },
   {
     src: "/svg/about/our-approach/processModel.svg",
     title: "Process",
-    desc: "We provide guidance on best practices and benchmarks, helping set up giving vehicles and ensuring that philanthropists have a solid, efficient approach to their philanthropy. ",
+    desc: "Provide guidance and support to set up and streamline the giving process through- setting up giving vehicles, building organisations, helping recruit leadership, and designing core philanthropic processes ",
   },
   {
     src: "/svg/about/our-approach/portfolioModel.svg",
     title: "Portfolio",
-    desc: "Our team designs evidence-based giving roadmaps and helps identify and match the right NPOs across sectors, ensuring strategic alignment with the philanthropist’s goals.",
+    desc: "Build a philanthropic portfolio that aligns with purpose and intent. Drawing up giving plans with a recommended set of impactful NPOs fit for purpose. Helping budget annual philanthropic giving.",
   },
   {
     src: "/svg/about/our-approach/performanceModel.svg",
     title: "Performance",
-    desc: "We equip philanthropists with frameworks and tools for impact assessments and facilitate partnerships with monitoring and evaluation (M&E) service providers, ensuring their giving is measurable and impactful.",
+    desc: "Equip philanthropists with frameworks and tools for impact assessments and facilitate partnerships with monitoring and evaluation (M&E) service providers, ensuring their giving is measurable and impactful.",
   },
 ];
 const twoP = [
   {
     src: "/svg/about/our-approach/portfolioModel.svg",
     title: "Portfolio",
-    desc: "Our team designs evidence-based giving roadmaps and helps identify and match the right NPOs across sectors, ensuring strategic alignment with the philanthropist’s goals.",
+    desc: "Build a philanthropic portfolio that aligns with purpose and intent. Drawing up giving plans with a recommended set of impactful NPOs fit for purpose. Helping budget annual philanthropic giving.",
   },
   {
     src: "/svg/about/our-approach/performanceModel.svg",
     title: "Performance",
-    desc: "We equip philanthropists with frameworks and tools for impact assessments and facilitate partnerships with monitoring and evaluation (M&E) service providers, ensuring their giving is measurable and impactful.",
+    desc: "Equip philanthropists with frameworks and tools for impact assessments and facilitate partnerships with monitoring and evaluation (M&E) service providers, ensuring their giving is measurable and impactful.",
   },
 ];
 const FivePModel = () => {

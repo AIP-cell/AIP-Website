@@ -85,15 +85,7 @@ const OurOfferingHeroSection = () => {
               lies.
             </h2> */}
             <WordStaggerAnimation
-              text="AIP is a sector-agnostic organization, meaning we do not
-              specialize in any one sector but instead offer our expertise
-              across a wide range of fields. We work in any sector that aligns
-              with the philanthropists goals, ensuring that their contributions
-              are strategically guided and effectively implemented. By not being
-              confined to a specific sector, we are able to tailor our approach
-              to meet the unique needs and aspirations of each philanthropist,
-              empowering them to create meaningful change wherever their passion
-              lies."
+              text="AIP is sector, organisation and method agnostic. We work across a range of causes and methods which align with philanthropists' goals. This tailored approach allows us to meet the unique needs of each philanthropist and empower them to create meaningful change."
               className="pt-[1.25rem] md:tracking-[-1px] text-center ~text-h7Copy3/h3 ~leading-[1.788rem]/[2.6rem] font-playFair text-gray80"
             />
           </div>

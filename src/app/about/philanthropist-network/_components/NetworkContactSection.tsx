@@ -11,7 +11,7 @@ const itemsArray = [
   {
     title1: "Build & Shape Your ",
     title2: "Philanthropic Journey ",
-    desc: "Grow your philanthropy transforming it into own legacy with our support, aligning your giving with passion and purpose",
+    desc: "Grow and build your philanthropic legacy and align it with your passion and purpose with our support.",
   },
   {
     title1: "Engage With Like-Minded",
@@ -43,10 +43,7 @@ const NetworkContactSection = () => {
           className="~text-h4/h2 text-center ~leading-[2.6rem]/[3.3rem] text-gray80 font-playFair"
         />
       <p className="~leading-[1.225rem]/[1.4rem] ~text-h9Copy5/h9Copy4 text-midGray ~pt-[2rem]/[2.5rem] ~px-[2.813rem]/[15.813rem] text-center">
-        We believe in dedicating to an independent, sector agnostic, and deeply
-        focused approach, personally catering to how one defines their
-        philanthropy and here they wish to take it to. Valuing long-lasting
-        relationships built on a strong legacy and an inspiring network.
+      We believe in an independent, sector agnostic, and deeply focused approach. Valuing long-lasting relationships built on a strong legacy and an inspiring network.
       </p>
       <div className="~pt-[2rem]/[2.5rem] flex justify-center ">
         <div className="grid  md:grid-cols-2 ~gap-x-[3rem]/[5rem] ~gap-y-[1.75rem]/[3.5rem]">

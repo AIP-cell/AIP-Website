@@ -46,7 +46,7 @@ const NpoHeroSection = () => {
         <BreadCrump
           textOne="Our Work"
           linkOne="#"
-          textTwo="NPOs & Philanthropy"
+          textTwo=" Non-Profit Organizations"
           linkTwo="/our-work/npo"
         />
       </div>
@@ -67,7 +67,7 @@ const NpoHeroSection = () => {
             {/* <h3 className=" ~leading-[1.129rem]/[1.29rem] ~text-h9Copy5/h9Copy4 uppercase font-inter text-white/60 font-semibold">
               NPOs & Philanthropy
             </h3> */}
-            <TextStaggerAnimation text="NPOs & Philanthropy" className="~leading-[1.129rem]/[1.29rem] ~text-h9Copy5/h9Copy4 uppercase font-inter text-white/60 font-semibold"/>
+            <TextStaggerAnimation text="Philanthropy and Non-Profit Organizations" className="~leading-[1.129rem]/[1.29rem] ~text-h9Copy5/h9Copy4 uppercase font-inter text-white/60 font-semibold"/>
             <WordStaggerAnimation text="In India, the vast number of non-profit organizations (NPOs) can
               make it challenging for philanthropists to discover credible and
               impactful partners for their giving initiatives. With over 30 lakh

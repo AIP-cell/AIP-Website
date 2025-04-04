@@ -41,7 +41,9 @@ const HeroSection = () => {
             </span>
           </div> */}
           <WordStaggerAnimation
-            text="AIP is a <color>peer network;</color> a movement by and for <color>philanthropists.</color>"
+            text="Accelerate Indian 
+Philanthropy is a peer network set up  <color>by philanthropists, 
+for philanthropists </color> to support their giving efforts."
             className="relative tracking-[-1px] shrink-0 w-auto xl:w-[38.125rem] z-[1000] ~text-h4/h1 font-playFair ~leading-[2.6rem]/[3.7rem] px-[0.6rem] md:px-0  text-gray80"
           />
           <FadeInAnimation

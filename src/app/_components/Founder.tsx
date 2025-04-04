@@ -22,16 +22,16 @@ import WordStaggerAnimation from "@/components/animations/WordStaggerAnimation";
 import FadeInAnimation from "@/components/animations/FadeInAnimation";
 const founderData = [
   {
-    image: "/images/aSample.png",
-    name: "0Ashish Dhawan",
-    post: "The Convergence Foundation",
-    desc: "I believe a lot more needs to be done particularly to encourage first-time givers. AIP aims to fill this gap and spur philanthropy in a very structured manner.",
+    image: "/images/pSample.png",
+    name: "0Rohini Nilekani",
+    post: "Rohini Nilekani Philanthropies",
+    desc: "I believe those who are already in philanthropy and enjoying it and making a difference have a responsibility to share their stories widely, and to be very transparent about their giving. By promoting such accountability, AIP is playing an essential role in building trust with the communities we serve.",
   },
   {
     image: "/images/pSample.png",
-    name: "1Rohini Nilekani",
-    post: "Rohini Nilekani Philanthropies",
-    desc: "I believe those who are already in philanthropy and enjoying it and making a difference have a responsibility to share their stories widely, and to be very transparent about their giving. By promoting such accountability, AIP is playing an essential role in building trust with the communities we serve.",
+    name: "1Amit Chandra",
+    post: "ATE Chandra Foundation",
+    desc: "“I believe those who are already in philanthropy and enjoying it and making a difference have a responsibility to share their stories widely, and to be very transparent about their giving. By promoting such accountability, AIP is playing an essential role in building trust with the communities we serve.”",
   },
   {
     image: "/images/aSample.png",
@@ -40,11 +40,14 @@ const founderData = [
     desc: "Effective philanthropy is not just about the act of giving, but a commitment to social transformation. Like in businesses and in professional life, it is time that we think about philanthropy in terms of scale with a lasting and sustainable long term impact. AIP brings together a strong group of changemakers to enable this change in thought process.",
   },
   {
-    image: "/images/pSample.png",
-    name: "3Amit Chandra",
-    post: "ATE Chandra Foundation",
-    desc: "“I believe those who are already in philanthropy and enjoying it and making a difference have a responsibility to share their stories widely, and to be very transparent about their giving. By promoting such accountability, AIP is playing an essential role in building trust with the communities we serve.”",
+    image: "/images/aSample.png",
+    name: "3Ashish Dhawan",
+    post: "The Convergence Foundation",
+    desc: "I believe a lot more needs to be done particularly to encourage first-time givers. AIP aims to fill this gap and spur philanthropy in a very structured manner.",
   },
+  
+  
+  
 ];
 type Props = {
   teamData: THomePageTeam[];

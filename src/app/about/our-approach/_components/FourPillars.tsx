@@ -9,9 +9,9 @@ import WordStaggerAnimation from "@/components/animations/WordStaggerAnimation";
 import CardAnimation from "@/components/animations/CardAnimation";
 const datas = [
   {
-    text1: "Convening &",
-    text2: "Networking",
-    desc: "By facilitating spaces for philanthropists to exchange motivations, ideas, and experiences, we create a community that inspires and influences strategic philanthropy.",
+    text1: "Networking &",
+    text2: "Convening",
+    desc: "By facilitating spaces for philanthropists to exchange motivations, ideas, and experiences, we help create a community that inspires and influences strategic philanthropy.",
   },
   {
     text1: "Knowledge",
@@ -26,8 +26,8 @@ const datas = [
   {
     text1: "Thought",
     text2: "Leadership",
-    desc: " We champion a thriving philanthropic ecosystem, influencing the broader landscape to unlock catalytic funding and deepen the impact of philanthropy.",
-  },
+    desc: "We champion a thriving philanthropic ecosystem, influencing the broader landscape to unlock catalytic funding, deepen philanthropic impact and promote “Ease of Giving”.- change whole text ",
+  }
 ];
 const FourPillars = () => {
   return (

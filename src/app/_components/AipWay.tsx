@@ -48,34 +48,44 @@ const AipWay = () => {
         <div className=" ~/md:~pt-[25rem]/[5rem] container mx-auto  relative  flex flex-col justify-center items-end ~pl-[1.75rem]/0  ~md:~pr-[1.75rem]/[16rem]">
           <div className=" ~pt-[2rem]/[5rem]  flex flex-col ~gap-[1.5rem]/[1.625rem]">
             <div className="flex font-playFair font-medium flex-col text-midGray   pr-[5rem] ~text-h9Copy5/h9Copy4 ~leading-[1.138rem]/[1.4rem]">
-              <p> A philanthropist&apos;s journey is like a river,</p>
-              <p>It gives as much as it can,</p>
+              <p> A philanthropist&apos;s wealth is the origin</p>
+              <p>and Philanthropy is the river. </p>
             </div>
             <div className="flex flex-col font-playFair font-medium text-midGray  pl-[5rem] ~text-h9Copy5/h9Copy4 ~leading-[1.138rem]/[1.4rem]">
-              <p>nurtures ecosystems,</p>
-              <p>connects communities and</p>
-              <p>sculpts the landscape.</p>
+              <p>When a river flows, </p>
+              <p>it gives as much as it can </p>
+              <p>To everyone on its way  </p>
+              
             </div>
   
             <div className="flex flex-col font-playFair font-medium pr-[5rem] text-midGray  ~text-h9Copy5/h9Copy4 ~leading-[1.138rem]/[1.4rem]">
-              <p>Unlocking human potential.</p>
-              <p>Inspiring change.</p>
+              <p>It nurtures ecosystems; </p>
+              <p>connects communities</p>
+              <p>and sculpts the landscape </p>
               {/* <p>and sculpts the landscape</p> */}
             </div>
   
             <div className="flex flex-col font-playFair font-medium pl-[5rem] text-midGray  ~text-h9Copy5/h9Copy4 ~leading-[1.138rem]/[1.4rem]">
-              <p>No two rivers are the same;</p> <p>No two philanthropic</p>
-              <p>journeys are the same.</p>
+              <p>To enable conversations. 
+              </p>
+               <p>To foster understanding.</p>
+              <p>That inspires change.</p>
             </div>
             <div className="flex flex-col font-playFair font-medium pr-[5rem] text-midGray  ~text-h9Copy5/h9Copy4 ~leading-[1.138rem]/[1.4rem]">
-              <p>AIP helps shape the</p>
-              <p>journeys and the flow,</p>
-              <p>from its origin to its destination.</p>
+              <p>No two rivers are the same; 
+              </p>
+              <p>No two philanthropists are the same; </p>
+              <p>No two journeys are alike.</p>
             </div>
   
             <div className="relative flex flex-col font-playFair font-medium pl-[5rem] text-midGray  ~text-h9Copy5/h9Copy4 ~leading-[1.138rem]/[1.4rem]">
-              <p> From inspiration</p>
-              <p>to Impact.</p>
+              <p> AIP is the gentle uplifting spirit, 
+              </p>
+              <p>The bank that holds, that shapes it all.</p>
+              <p>To form & connect networks.</p>
+              <p>That bridge gaps.</p>
+              <p>Taking a philanthropist,</p>
+              <p>From inspiration to impact. </p>
             </div>
           </div>
         </div>

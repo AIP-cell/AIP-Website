@@ -42,15 +42,7 @@ const JourneySoFar = () => {
             their philanthropic investments. We do not “push” or “sell” any
             sector, organization or method of philanthropic investments.
           </p>
-          <p>
-            AIP has a small but extremely experienced team of 13 people across
-            philanthropist facing functions as well as research. As an
-            organization, AIP is supported by Its core founders and founders who
-            believe in AIP&apos;s mission and fund the organization. We are not
-            grant-makers and our members&apos; giving is done directly by them
-            and not routed through us. AIP does not charge any fee and our work
-            is completely pro-bono.
-          </p>
+         
         </div>
       </div>
     </div>

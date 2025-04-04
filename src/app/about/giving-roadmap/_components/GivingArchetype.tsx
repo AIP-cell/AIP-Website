@@ -9,27 +9,27 @@ import React from "react";
 const itemsArray = [
   {
     title1: "Inspiration Seekers",
-    desc: "How do you strategically allocate your financial resources to create the greatest impact?",
+    desc: "Inspiration Seekers are on the verge of starting their philanthropic journey. Their giving is sporadic and spontaneous, and often limited to a small set of organisations present in their network.- replace old text",
   },
   {
     title1: "Emerging Givers",
-    desc: "How do you leverage your time, talent, and connections to amplify the change you wish to see?",
+    desc: "Emerging Givers experiment with different causes and organisations, allocating a small percentage of their Treasure. Their personal involvement in philanthropy remains low as they are still active in their careers.",
   },
   {
     title1: "Strategic Enablers",
-    desc: "How do you use your voice and influence to inspire others and advocate for meaningful causes?",
+    desc: "Strategic Enablers leverage their Time, Talent and Ties to support organisations and stimulate the broader philanthropic ecosystem. They generously provide Treasure, but their main mode of engagement is personal involvement.",
   },
   {
     title1: "Core Givers",
-    desc: "How do you leverage your time, talent, and connections to amplify the change you wish to see?",
+    desc: "Core Givers provide long-term and substantial financial funding to multiple NPOs that directly helps them in scaling their reach and expanding their footprint. They are the backbone of the funding for the social sector.",
   },
   {
     title1: "Cause Champions",
-    desc: "How do you use your voice and influence to inspire others and advocate for meaningful causes?",
+    desc: "Cause Champions have strategic and long-term involvement in their passion or cause of choice, where they commit fully to significantly move the needle instead of branching out.",
   },
   {
     title1: "Rainmakers",
-    desc: "How do you use your voice and influence to inspire others and advocate for meaningful causes?",
+    desc: "Rainmakers are the most influential figures across the philanthropic ecosystem with extensive contribution and visionary approach. They take on a broader approach to address systems and root causes.",
   },
 ];
 const GivingArchetype = () => {
