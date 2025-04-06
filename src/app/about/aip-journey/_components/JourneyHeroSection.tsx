@@ -69,7 +69,7 @@ const JourneyHeroSection = () => {
         />
 
         <div className=" bg-[#faecc894] backdrop-blur-[24px] ~pt-[3.1rem]/[6.25rem] ~pb-[3.8rem]/[7.6rem] w-full ">
-          <div className="container mx-auto flex justify-center flex-col items-center relative z-50 ~px-[1.375rem]/[18rem] ">
+          <div className="container mx-auto flex justify-center flex-col items-center relative z-50 px-[1.375rem] ">
             <FadeInAnimation delay={0.1} y1={0} y2={10}>
               <h3 className="~text-h9Copy5/h9Copy4 leading-[20.64px] font-inter text-lightPeach/60 font-semibold">
                 PHILANTHROPY IS WHAT IT DOES.

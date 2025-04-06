@@ -85,8 +85,12 @@ const OurOfferingHeroSection = () => {
               lies.
             </h2> */}
             <WordStaggerAnimation
+              text="AIP is sector, organisation and method agnostic.<br> We work across a range of causes and methods <br> which align with philanthropists' goals. This <br> tailored approach allows us to meet the unique <br> needs of each philanthropist and empower them <br> to create meaningful change."
+              className="hidden md:block pt-[1.25rem] md:tracking-[-1px] text-center ~text-h7Copy3/h4 ~leading-[1.788rem]/[2.6rem] font-playFair text-gray80"
+            />
+            <WordStaggerAnimation
               text="AIP is sector, organisation and method agnostic. We work across a range of causes and methods which align with philanthropists' goals. This tailored approach allows us to meet the unique needs of each philanthropist and empower them to create meaningful change."
-              className="pt-[1.25rem] md:tracking-[-1px] text-center ~text-h7Copy3/h3 ~leading-[1.788rem]/[2.6rem] font-playFair text-gray80"
+              className="block md:hidden pt-[1.25rem] md:tracking-[-1px] text-center ~text-h7Copy3/h4 ~leading-[1.788rem]/[2.6rem] font-playFair text-gray80"
             />
           </div>
         </div>

@@ -1,6 +1,9 @@
 import Image from "next/image";
 import React from "react";
-import ASvg from "@public/images/aSample.png";
+import JourneyOne from "@public/svg/journey-so-far/journeyOne.svg";
+import JourneyTwo from "@public/svg/journey-so-far/journeyTwo.svg";
+import JourneyThree from "@public/svg/journey-so-far/journeyThree.svg";
+import JourneyFour from "@public/svg/journey-so-far/journeyFour.svg";
 import TextStaggerAnimation from "@/components/animations/TextStaggerAnimation";
 const JourneySoFar = () => {
   return (
@@ -9,13 +12,30 @@ const JourneySoFar = () => {
         text="The <color>Journey</color> So Far"
         className="text-gray80 font-playFair ~text-h4/h2 ~leading-[2.6rem]/[3.3rem] "
       />
-      <div className="flex flex-col md:flex-row ~gap-[2rem]/[6.563rem] ~pl-[1.25rem]/[6.121rem] ~pr-[1.25rem]/[9.563rem] pt-[3.5rem]">
-        <Image
-          src={ASvg}
-          alt=""
-          className="~w-[18.438rem]/[19.688rem] ~h-[21.563rem]/[23.024rem] "
-        />
-        <div className="~text-h9Copy5/h9Copy4 text-midGray ~leading-[1.225rem]/[1.4rem] pt-[1.688rem] flex flex-col gap-[1rem]">
+      <div className="flex flex-col md:flex-row ~gap-[2rem]/[3.375rem] ~pl-[1.25rem]/[6.121rem] ~pr-[1.25rem]/[9.563rem] ~pt-[3rem]/[3.5rem] w-full">
+        <div className="grid grid-cols-2 ~gap-x-[1.5rem]/[2.125rem] ~gap-y-[0.5rem] md:w-[38%] h-fit">
+          <Image
+            src={JourneyOne}
+            alt=""
+            className=" w-[10.4811rem] h-[12.2575rem] md:h-[10.5rem] lg:h-[12.2575rem]"
+          />
+          <Image
+            src={JourneyTwo}
+            alt=""
+            className=" w-[10.4811rem] h-[12.2575rem] md:h-[10.5rem] lg:h-[12.2575rem] "
+          />
+          <Image
+            src={JourneyThree}
+            alt=""
+            className=" w-[10.4811rem] h-[12.2575rem] md:h-[10.5rem] lg:h-[12.2575rem] "
+          />
+          <Image
+            src={JourneyFour}
+            alt=""
+            className="w-[10.4811rem] h-[12.2575rem] md:h-[10.5rem] lg:h-[12.2575rem] "
+          />
+        </div>
+        <div className=" md:w-[62%] ~text-h9Copy5/h9Copy4 text-midGray ~leading-[1.225rem]/[1.4rem] pt-[1.688rem] flex flex-col gap-[1rem]">
           <p>
             AIP was formed about three years ago with the objective of helping
             India&apos;s wealth creators with their philanthropic work and

@@ -23,35 +23,21 @@ const Members = ({ countData }: Props) => {
       />
       <div className=" container mx-auto ~pt-[5rem]/[13.25rem]">
         <div className="relative flex flex-col xl:flex-row w-full ~h-[45rem]/[49rem]  ~gap-[2rem]/0">
-          <div className=" w-full xl:w-[65%] ~pl-[1.25rem]/[7rem] ~/md:~pr-[1.25rem]/[2rem] xl:pr-0">
-            {/* <h2 className="~text-h4/h2  font-playFair text-gray50 ~leading-[2.6rem]/[3.3rem]">
-              Accelerate Indian
-            </h2>
-            <h2 className="~text-h4/h2  font-playFair text-gray50 ~leading-[2.6rem]/[3.3rem] ">
-              Philanthropy is a peer network set up
-              <span className="text-textPurple font-playFairItalic">
-                &nbsp;by philanthropists,
-              </span>
-            </h2>
-            <h2 className="~text-h4/h2 font-playFair text-gray50 ~leading-[2.6rem]/[3.3rem] ">
-              <span className="text-textPurple font-playFairItalic">
-                for philanthropists
-              </span>
-              &nbsp;to support their giving efforts.
-            </h2> */}
+          <div className=" w-full xl:w-[65%] ~pl-[1.25rem]/[7rem] ~/md:~pr-[1.25rem]/[2rem] xl:pr-0 z-40">
             <WordStaggerAnimation
-              text="We believe Philanthropy can catalyse India's transformation; 
+              text="We believe Philanthropy can <br> catalyse India's transformation;<br>
+              Philanthropists are keen to make a <br> difference; and Philanthropists are <br> best at inspiring each other."
+              className="hidden md:block ~text-h4/h3  font-playFair text-gray50 ~leading-[2.6rem]/[3.3rem] z-40"
+            />
+            <WordStaggerAnimation
+              text="We believe Philanthropy can catalyse India's transformation;
               Philanthropists are keen to make a difference; and Philanthropists are best at inspiring each other."
-              className="~text-h4/h2  font-playFair text-gray50 ~leading-[2.6rem]/[3.3rem]"
+              className="block md:hidden ~text-h4/h3  font-playFair text-gray50 ~leading-[2.6rem]/[3.3rem] z-40"
             />
             <WordStaggerAnimation
               text="With our Core Founders, Founders and purposefully engaged philanthropists, the AIP network is growing and shaping personal giving by UHNIs and helping catalyse strategic giving."
-              className="text-midGray ~leading-[1.22rem]/[1.4rem] pt-[0.7875rem] ~pr-[1rem]/[18rem]"
+              className="text-midGray ~leading-[1.22rem]/[1.4rem] pt-[0.7875rem] ~pr-[1rem]/[18rem] z-40"
             />
-            {/* <WordStaggerAnimation
-              text="<color>for philanthropists</color> to support their giving efforts."
-              className="~text-h4/h2  font-playFair text-gray50 ~leading-[2.6rem]/[3.3rem]"
-            /> */}
           </div>
           {/* <OvalPurpleSvg className="-top-[4rem] right-[11.85rem]"/> */}
           <div className="w-full xl:w-[35%] relative flex justify-center ">

@@ -7,17 +7,21 @@ import { useInView } from "react-intersection-observer";
 type Props = {
   countEnd: number;
   text2?: string;
+  text3?: string;
   mainClass?: string;
   countClass?: string;
   textClass2?: string;
+  textClass3?: string;
   sizeClass: string;
 };
 const OvalPurpleCount = ({
   countEnd,
   text2,
+  text3,
   mainClass,
   countClass,
   textClass2,
+  textClass3,
   sizeClass,
 }: Props) => {
   const { ref, inView } = useInView({
@@ -36,15 +40,16 @@ const OvalPurpleCount = ({
               start={0}
               end={countEnd}
               duration={2.75}
-              className="~text-h4/h3 ~leading-[2.6rem]/[3.25rem] font-semibold "
+              className="~text-h4/h3 ~leading-[2.6rem]/[3.25rem] font-semibold text-white"
             />
           )}
-          <span className=" ~text-h4/h3 ~leading-[2.6rem]/[3.25rem] font-semibold">
+          <span className=" ~text-h4/h3 ~leading-[2.6rem]/[3.25rem] font-semibold text-white">
             +
           </span>
         </div>
         <div className={`text-center pt-[0.25rem] z-50  `}>
-          <div className={`text-gray80 ${textClass2} `}>{text2}</div>
+          <div className={`text-white ${textClass2} `}>{text2}</div>
+          <div className={`text-white ${textClass3} `}>{text3}</div>
         </div>
       </div>
     </div>

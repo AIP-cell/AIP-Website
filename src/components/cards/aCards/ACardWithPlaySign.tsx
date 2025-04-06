@@ -36,7 +36,6 @@ const ACardWithPlaySign = ({
   darkText,
 }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
-  const isVideo = linkOrVideo === "Video";
   return (
     <>
       <div className="w-[18.43rem] relative ">

@@ -8,7 +8,7 @@ import FadeInAnimation from "@/components/animations/FadeInAnimation";
 
 const HeroSection = () => {
   return (
-    <div className=" w-full relative ">
+    <div className=" w-full relative lg:h-[130vh] xl:h-auto h-auto">
       {/* <HomepageHeroSvg className="hidden lg:block absolute top-[-2rem] w-full  h-[46rem]  object-fill"/> */}
       <FadeInAnimation
         delay={0.2}
@@ -42,9 +42,15 @@ const HeroSection = () => {
           </div> */}
           <WordStaggerAnimation
             text="Accelerate Indian 
-Philanthropy is a peer network set up  <color>by philanthropists, 
+Philanthropy is a <br>peer network set up <br> <color>by philanthropists,<br> 
+for philanthropists </color> <br> to support their giving efforts."
+            className="hidden md:block relative tracking-[-1px] shrink-0 w-auto xl:w-[38.125rem] z-[1000] ~text-h4/h1 font-playFair ~leading-[2.6rem]/[3.7rem] px-[0.6rem] md:px-0  text-gray80"
+          />
+          <WordStaggerAnimation
+            text="Accelerate Indian 
+Philanthropy is a peer network set up <color>by philanthropists,
 for philanthropists </color> to support their giving efforts."
-            className="relative tracking-[-1px] shrink-0 w-auto xl:w-[38.125rem] z-[1000] ~text-h4/h1 font-playFair ~leading-[2.6rem]/[3.7rem] px-[0.6rem] md:px-0  text-gray80"
+            className="block md:hidden relative tracking-[-1px] shrink-0 w-auto xl:w-[38.125rem] z-[1000] ~text-h4/h1 font-playFair ~leading-[2.6rem]/[3.7rem] px-[0.6rem] md:px-0  text-gray80"
           />
           <FadeInAnimation
             delay={0.1}
@@ -56,7 +62,7 @@ for philanthropists </color> to support their giving efforts."
             <Image
               src={SmHeroBg}
               alt="sm-hero-bg"
-              className="block lg:hidden absolute ~/md:~bottom-0/[-12rem]  w-[100rem] inset-x-0 object-cover"
+              className="block lg:hidden absolute ~/md:~bottom-0/[1rem]  w-[100rem] inset-x-0 object-cover"
             />
           </FadeInAnimation>
           <FadeInAnimation duration={0.7} delay={0.1}>

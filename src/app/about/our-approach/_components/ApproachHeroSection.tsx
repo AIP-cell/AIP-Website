@@ -39,7 +39,7 @@ const ApproachHeroSection = () => {
             </h3>
           </FadeInAnimation>
         </div>
-        <div className="container mx-auto relative ~pt-20/[12.5rem] ~pb-[0rem]/[5rem] ~pr-5/[14.375rem] ~pl-5/[14.375rem] lg:~pl-5/[27.5rem]">
+        <div className="container mx-auto relative ~pt-20/[12.5rem] ~pb-[0rem]/[5rem] ~pr-5/[14.2rem] ~pl-5/[14.375rem] lg:~pl-5/[27.5rem]">
           <Image
             src={ovalPeach}
             alt=""

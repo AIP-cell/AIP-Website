@@ -20,7 +20,6 @@ type Props = {
 };
 
 const TabNews = ({ newsData, searchParams }: Props) => {
-  console.log("newsArray:::", newsData);
   const SelectedData = newsTabArray.find(
     (newsTab) => newsTab.tab == searchParams
   );

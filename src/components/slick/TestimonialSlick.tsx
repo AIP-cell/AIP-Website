@@ -56,7 +56,6 @@ const TestimonialSlick = ({ slickArray }: Props) => {
                 .slice(change, change + itemsPerSlide)
                 .map((items, i) => {
                   const actualIndex = (change + i) % arrayLength;
-                  // console.log("actualIndex", actualIndex);
                   return (
                     <div key={actualIndex}>
                       {actualIndex % 2 == 0 &&
@@ -67,7 +66,9 @@ const TestimonialSlick = ({ slickArray }: Props) => {
                             image={items?.image}
                             name={items?.name}
                             post={items?.designation}
-                            linkOrVideo={items?.videoLink}
+                            linkOrVideo={items?.linkOrVideo}
+                            video={items?.video}
+                            videoLink={items?.videoLink}
                             desc={items?.description}
                           />
                         ) : (
@@ -84,6 +85,9 @@ const TestimonialSlick = ({ slickArray }: Props) => {
                           <PCardWithPlaySign
                             key={i}
                             darkText={playtestimonialCard}
+                            linkOrVideo={items?.linkOrVideo}
+                            video={items?.video}
+                            videoLink={items?.videoLink}
                             image={items?.image}
                             name={items?.name}
                             post={items?.designation}

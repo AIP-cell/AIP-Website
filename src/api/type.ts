@@ -79,6 +79,10 @@ export type TFoundationFacts = {
   foundersCount: number;
   knowledgeProductsCount: number;
   membersCount: number;
+  knowledgeResourcesCount:number;
+  networkMembersCount:number;
+  purposefulEngagementsCount:number;
+  researchReportsCount:number;
 };
 export type TTestimonials = {
   name: string;
@@ -87,6 +91,8 @@ export type TTestimonials = {
   image: string;
   isActive: true;
   _id: string;
+  linkOrVideo: string;
+  video: string;
   videoLink: string;
   searchKeywords: [string];
 };

@@ -69,7 +69,7 @@ const ExpertHeroSection = () => {
             </h3> */}
             <TextStaggerAnimation text="Experts" className=" ~leading-[1.129rem]/[1.29rem] ~text-h9Copy5/h9Copy4 uppercase font-inter text-white/60 font-semibold"/>
             <WordStaggerAnimation text="At AIP, we believe informed philanthropy can drive meaningful change. Our approach is powered by subject-matter experts who provide valuable insights to help philanthropists make impactful decisions. These leaders enrich our network’s understanding of key sectors, guiding strategic giving aligned with India's development needs. We collaborate with experts to create knowledge products, host workshops, and design tailored learning experiences, connecting our network with innovative solutions to catalyse real change."
-              className="pt-[1.25rem] tracking-[-1px] text-center ~text-h5/h3 ~leading-[1.75rem]/[2.6rem] font-playFair text-white"
+              className="pt-[1.25rem] tracking-[-1px] text-center ~text-h5/h4 ~leading-[1.75rem]/[2.6rem] font-playFair text-white"
               />
           </div>
         </div>

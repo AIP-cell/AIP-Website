@@ -9,7 +9,7 @@ import AipWaySvg from "@/components/svg/background-svg/AipWaySvg";
 import FadeInAnimation from "@/components/animations/FadeInAnimation";
 const AipWay = () => {
   return (
-    <div className="~pt-[15rem]/0">
+    <div className="~pt-[14.5rem]/0">
       <div className="w-full relative">
         <Image
           src={LeftHomePagePeachCurve}

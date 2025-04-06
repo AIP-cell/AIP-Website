@@ -25,7 +25,6 @@ const page = async () => {
   const methodsOfJoining = response?.methodsOfJoining;
   const desc1 = response?.description1;
   const desc2 = response?.description2;
-
   return (
     <div className="pt-[5rem]">
       {desc1 && <FounderNetworkHeroSection desc1={desc1} desc2={desc2} />}

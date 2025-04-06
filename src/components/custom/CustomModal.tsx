@@ -36,7 +36,7 @@ export default function CustomModal({
               className="w-fit  rounded-xl bg-white/5 p-6 backdrop-blur-2xl duration-300 ease-out data-[closed]:transform-[scale(95%)] data-[closed]:opacity-0"
             >
               <div className=" container relative flex justify-center items-center mx-auto">
-                {linkOrVideo === "Video" ? (
+                {linkOrVideo === "video" ? (
                   <div className="shrink-0 w-[64.375rem] relative flex justify-center items-center ~h-[12.313rem]/[20.313rem] overflow-hidden rounded-lg">
                     <ReactPlayer
                       className="z-10 border-2 absolute inset-0 !w-full !h-full flex justify-center items-center cursor-pointer"

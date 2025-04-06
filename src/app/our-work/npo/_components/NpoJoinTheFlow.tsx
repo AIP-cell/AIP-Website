@@ -36,11 +36,13 @@ const NpoJoinTheFlow = () => {
             <span className="text-textPurple font-playFairItalic">Join</span>{" "}
             The Flow
           </h2> */}
-          <TextStaggerAnimation text="Join The NPO Repository " className="font-playFair text-gray80 ~text-h4/h2 ~leading-[2.6rem]/[3.3rem]"/>
+          <TextStaggerAnimation
+            text="Join The NPO Repository "
+            className="font-playFair text-gray80 ~text-h4/h2 ~leading-[2.6rem]/[3.3rem]"
+          />
           <p className="text-midGray text-center ~px-5/[20.94rem] ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] ~pt-[1.5rem]/[1.25rem]">
-            We invite you to join our Core Founders, Founders, and our growing
-            network of philanthropists and sector experts to see strategic
-            philanthropy impact India’s transformation.
+            We invite you to showcase your work and get the opportunity to join
+            our NPO repository.
           </p>
           <div className="flex flex-col justify-center md:flex-row ~gap-[0.75rem]/[1.5rem] items-center ~pt-[1.5rem]/[2.5rem]">
             {/* <BgButton
