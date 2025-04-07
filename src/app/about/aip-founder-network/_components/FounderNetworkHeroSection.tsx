@@ -10,6 +10,7 @@ type Props = {
   desc2?: string;
 };
 const FounderNetworkHeroSection = ({ desc1, desc2 }: Props) => {
+  // console.log("desc1:::", desc1);
   return (
     <div className="w-full  relative">
       <Image
@@ -35,6 +36,7 @@ const FounderNetworkHeroSection = ({ desc1, desc2 }: Props) => {
           </h4> */}
           <div className="~pt-[1.25rem]/[0.75rem] ">
             <FadeInAnimation delay={0.1} x1={-20} x2={0}>
+            {/* dangerouslySetInnerHTML={{ __html: desc1! }} */}
               <div className=" ~text-h5/h7 text-gray80  ~leading-[1.75rem]/[2.6rem] font-medium font-playFair">
                 {desc1}
               </div>

@@ -61,7 +61,7 @@ const FivePModel = () => {
                 &nbsp;The Flow
               </h3> */}
               <WordStaggerAnimation
-                text="Partnering <color>The Flow</color>"
+                text="<color>Partnering</color> The Flow"
                 className="~text-h4/h3 text-center text-gray80 ~leading-[2.6rem]/[3.1rem] font-playFair"
               />
               <p className="text-midGray ~pt-[0.75rem]/[1.25rem] ~px-[2.8rem]/[21rem] ~text-h9Copy5/h9Copy4 text-center ~leading-[1.225rem]/[1.4rem]">
