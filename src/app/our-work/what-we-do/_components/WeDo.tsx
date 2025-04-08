@@ -47,8 +47,8 @@ const WeDo = () => {
             className="font-playFair text-gray80 ~text-h4/h2 ~leading-[2.6rem]/[3.3rem] text-center"
           />
           <p className="~leading-[1.225rem]/[1.4rem] ~text-h9Copy5/h9Copy4 text-gray80 text-center ~pt-[0.75rem]/[1.25rem]">
-            AIP has four core offerings for propelling and guiding <br />
-            philanthropists in their giving journey
+            AIP has four core pillars of work supporting the journey of
+            Philanthropy
           </p>
         </div>
         <div className=" relative">

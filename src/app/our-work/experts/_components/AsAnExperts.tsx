@@ -25,7 +25,7 @@ const AsAnExperts = () => {
           As an AIP expert, you’ll engage with motivated philanthropists,
           co-create research, lead workshops, and guide learning expeditions.
           Your insights will help shape the future of philanthropy in India. If
-          youre interested, please share your background and areas of expertise.
+          you are interested, please share your background and areas of expertise.
           We’re eager to connect with those passionate about addressing India’s
           social challenges.
         </p>

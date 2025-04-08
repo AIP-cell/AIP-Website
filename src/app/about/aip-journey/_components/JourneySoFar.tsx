@@ -14,26 +14,34 @@ const JourneySoFar = () => {
       />
       <div className="flex flex-col md:flex-row ~gap-[2rem]/[3.375rem] ~pl-[1.25rem]/[6.121rem] ~pr-[1.25rem]/[9.563rem] ~pt-[3rem]/[3.5rem] w-full">
         <div className="grid grid-cols-2 ~gap-x-[1.5rem]/[2.125rem] ~gap-y-[0.5rem] md:w-[38%] h-fit">
-          <Image
-            src={JourneyOne}
-            alt=""
-            className=" w-[10.4811rem] h-[12.2575rem] md:h-[10.5rem] lg:h-[12.2575rem]"
-          />
-          <Image
-            src={JourneyTwo}
-            alt=""
-            className=" w-[10.4811rem] h-[12.2575rem] md:h-[10.5rem] lg:h-[12.2575rem] "
-          />
-          <Image
-            src={JourneyThree}
-            alt=""
-            className=" w-[10.4811rem] h-[12.2575rem] md:h-[10.5rem] lg:h-[12.2575rem] "
-          />
-          <Image
-            src={JourneyFour}
-            alt=""
-            className="w-[10.4811rem] h-[12.2575rem] md:h-[10.5rem] lg:h-[12.2575rem] "
-          />
+          <div className="flex justify-center w-full">
+            <Image
+              src={JourneyOne}
+              alt=""
+              className=" w-[10.4811rem] h-[12.2575rem] md:h-[10.5rem] lg:h-[12.2575rem]"
+            />
+          </div>
+          <div className="flex justify-center w-full">
+            <Image
+              src={JourneyTwo}
+              alt=""
+              className=" w-[10.4811rem] h-[12.2575rem] md:h-[10.5rem] lg:h-[12.2575rem] "
+            />
+          </div>
+          <div className="flex justify-center w-full">
+            <Image
+              src={JourneyThree}
+              alt=""
+              className=" w-[10.4811rem] h-[12.2575rem] md:h-[10.5rem] lg:h-[12.2575rem] "
+            />
+          </div>
+          <div className="flex justify-center w-full">
+            <Image
+              src={JourneyFour}
+              alt=""
+              className="w-[10.4811rem] h-[12.2575rem] md:h-[10.5rem] lg:h-[12.2575rem] "
+            />
+          </div>
         </div>
         <div className=" md:w-[62%] ~text-h9Copy5/h9Copy4 text-midGray ~leading-[1.225rem]/[1.4rem] pt-[1.688rem] flex flex-col gap-[1rem]">
           <p>

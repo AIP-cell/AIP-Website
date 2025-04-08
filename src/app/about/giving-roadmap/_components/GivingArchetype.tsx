@@ -9,7 +9,7 @@ import React from "react";
 const itemsArray = [
   {
     title1: "Inspiration Seekers",
-    desc: "Inspiration Seekers are on the verge of starting their philanthropic journey. Their giving is sporadic and spontaneous, and often limited to a small set of organisations present in their network.- replace old text",
+    desc: "Inspiration Seekers are on the verge of starting their philanthropic journey. Their giving is sporadic and spontaneous, and often limited to a small set of organisations present in their network.",
   },
   {
     title1: "Emerging Givers",
