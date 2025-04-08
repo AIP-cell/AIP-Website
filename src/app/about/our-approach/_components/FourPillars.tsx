@@ -16,7 +16,7 @@ const datas = [
   {
     text1: "Knowledge",
     text2: "Work",
-    desc: "With our well-founded knowledge resources, we enable philanthropists to engage in shared learning, providing insights across sectors and highlighting effective giving practices.",
+    desc: "With our well researched knowledge resources, we enable philanthropists to engage in shared learning, providing insights across sectors and highlighting effective giving practices.",
   },
   {
     text1: "Bespoke",
@@ -26,7 +26,7 @@ const datas = [
   {
     text1: "Thought",
     text2: "Leadership",
-    desc: "We champion a thriving philanthropic ecosystem, influencing the broader landscape to unlock catalytic funding, deepen philanthropic impact and promote “Ease of Giving”.- change whole text ",
+    desc: "We champion a thriving philanthropic ecosystem, influencing the broader landscape to unlock catalytic funding, deepen philanthropic impact and promote “Ease of Giving”.",
   }
 ];
 const FourPillars = () => {

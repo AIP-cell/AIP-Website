@@ -50,7 +50,7 @@ const FivePModel = () => {
   return (
     <div className="relative  w-full">
       <Image src={TopImage} alt="" className="w-full " />
-      <div className="w-full bg-fivePBackground ~/md:~h-[110rem]/[71rem] lg:~h-[140rem]/[36.5rem] relative">
+      <div className="w-full bg-fivePBackground ~/md:~h-[110rem]/[71rem] lg:~h-[140rem]/[37rem] relative">
         <div className="absolute ~top-0/[-13rem] w-full">
           <div className="relative container mx-auto">
             <div className="relative flex flex-col items-center container mx-auto">

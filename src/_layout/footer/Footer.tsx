@@ -46,7 +46,7 @@ const footerData = [
     id: "our-work",
     options: [
       { option: "What We Do", link: "/our-work/what-we-do" },
-      { option: "NPO Registry", link: "/our-work/npo" },
+      { option: "Non-Profit Organizations", link: "/our-work/npo" },
       { option: "Experts", link: "/our-work/experts" },
       // {
       //   option: "Projects and Programs",
@@ -297,7 +297,7 @@ const Footer = () => {
                   href="/our-work/npo"
                   className=" text-h9Copy5 font-inter text-white/60"
                 >
-                  <ButtonAnimation> NPO Registry</ButtonAnimation>
+                  <ButtonAnimation> Non-Profit Organizations</ButtonAnimation>
                 </Link>
                 {/* <Link
                   href="/our-work/projects-and-programs"

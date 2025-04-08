@@ -22,13 +22,13 @@ const offeringsData = [
   {
     text1: "Bespoke",
     text2: "Partnering",
-    desc: "We engage with philanthropists helping them build perspective in their areas of interest, fostering connections with peers and subject matter experts. Through personalized insights and analysis, we enable philanthropists to embark on an informed, purpose-driven journey, transforming their passion into impactful action.",
+    desc: "We engage with philanthropists to help build purpose,perspective and their philanthropic portfolios  in their chosen area of interest. We foster connections with peers, subject matter experts and NPOs thus building personalized insights. We also work on the process of philanthropy and help with the right way to measure impact.",
   },
   {
     text1: "Advocacy &",
     text2: "Thought",
     text3: "Leadership",
-    desc: "We advocate for a supportive regulatory environment that incentivizes philanthropy. Through forums, workshops, authored blogs and articles, and engagement with policymakers, we aim to facilitate a landscape that encourages thoughtful philanthropy.",
+    desc: "We advance and promote philanthropy through thought leadership and help build an enabling environment, through research, workshops,blogs, articles, and engagement with subject matter experts.",
   },
 ];
 const WeDo = () => {

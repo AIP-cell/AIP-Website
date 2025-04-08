@@ -31,11 +31,7 @@ const OurCoreFoundersContent = ({ coreFounderMembers }: Props) => {
           />
 
           <TextStaggerAnimation
-            text="Our Founders are the foundations of the common purpose: create a
-            transformative impact of philanthropic efforts across a range of
-            sectors from education to healthcare to climate and the arts, with
-            innovative initiatives and their profound effects on communities.
-            Our founders are our banks, our north stars, all the same."
+            text="Our Core Founders are amongst the foremost philanthropists of the country who have contributed immensely to developing the philanthropic ecosystem in India with their visionary thinking and philanthropic work across sectors. Their impactful work is an inspiration to all philanthropists, from emerging to well established."
             className="font-inter ~leading-[1.225rem]/[1.4rem] ~text-h9Copy5/h9Copy4 text-center text-gray80 ~pt-[2rem]/[1.25rem] ~px-[1rem]/0"
           />
         </div>

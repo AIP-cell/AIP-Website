@@ -11,22 +11,23 @@ const datas = [
   {
     text1: "Convening &",
     text2: "Networking",
-    desc: "These essential knowledge products are co-created with experts. From scoping the research and validating hypotheses through key informant interviews to reviewing the final product, the experts’ input ensures the depth and accuracy of our findings. Their insights help shape primers that provide philanthropists with a well-rounded understanding of the sector, the challenges it faces, and the opportunities for philanthropic intervention.",
+    desc: "Our thematic workshops are designed in collaboration with experts who help define the agenda and curate topics for discussion. Experts not only guide the content but also actively participate, sharing their well-founded views on the challenges, opportunities, and effective interventions in the ecosystem. Their evidence-based insights and best practices offer philanthropists a thorough understanding of the thematic landscape.",
   },
   {
     text1: "Knowledge",
     text2: "Work",
-    desc: "Our thematic workshops are designed in collaboration with experts who help define the agenda and curate topics for discussion. Experts not only guide the content but also actively participate, sharing their well-founded views on the challenges, opportunities, and effective interventions in the ecosystem. Their evidence-based insights and best practices offer philanthropists a thorough understanding of the thematic landscape.",
+    desc: "These essential knowledge products are co-created with experts. From scoping the research and validating hypotheses through key informant interviews to reviewing the final product, the experts’ input ensures the depth and accuracy of our findings. Their insights help shape primers that provide philanthropists with a well-rounded understanding of the sector, the challenges it faces, and the opportunities for philanthropic intervention.",
   },
   {
     text1: "Bespoke",
     text2: "Partnering",
-    desc: "When philanthropists seek to deepen their knowledge in a specific area, we curate personalized learning expeditions with the guidance of our experts. These immersive teaching and learning experiences, either through one-on-one engagements or in-the-field interventions, allow philanthropists to learn from the experts' vertical and functional specialism. Experts provide nuanced insights that leave a lasting impact on the philanthropists’ approach to tackling social challenges.",
+    desc: "We work with experts to design and inform philanthropic efforts of our network members at every step of the way thus deepening their knowledge and approach to social challenges.",
+    // desc: "When philanthropists seek to deepen their knowledge in a specific area, we curate personalized learning expeditions with the guidance of our experts. These immersive teaching and learning experiences, either through one-on-one engagements or in-the-field interventions, allow philanthropists to learn from the experts' vertical and functional specialism. Experts provide nuanced insights that leave a lasting impact on the philanthropists’ approach to tackling social challenges.",
   },
   {
     text1: "Ever",
     text2: "Evolving",
-    desc: "As part of our convening and networking events, experts contribute to dynamic panel discussions and fireside chats. These sessions are designed to inspire and inform, with experts offering their first-hand experience on critical topics. By engaging directly with philanthropists, they help spark new ideas and strategies for high-impact giving.",
+    desc: "We work with experts across the spectrum to co-author articles and papers on subjects relevant to philanthropy. These could be sector specific or on areas that impact philanthropy more widely, including systemic philanthropy, ease of giving, etc.",
   },
 ];
 const AipAndExperts = () => {

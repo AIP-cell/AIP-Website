@@ -46,7 +46,7 @@ const headerData = [
     id: "our-work",
     options: [
       { option: "What We Do", link: "/our-work/what-we-do" },
-      { option: "NPO Registry", link: "/our-work/npo" },
+      { option: "Non-Profit Organizations", link: "/our-work/npo" },
       { option: "Experts", link: "/our-work/experts" },
       // {
       //   option: "Projects and Programs",
