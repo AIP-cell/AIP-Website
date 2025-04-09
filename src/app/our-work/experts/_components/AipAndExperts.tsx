@@ -25,8 +25,8 @@ const datas = [
     // desc: "When philanthropists seek to deepen their knowledge in a specific area, we curate personalized learning expeditions with the guidance of our experts. These immersive teaching and learning experiences, either through one-on-one engagements or in-the-field interventions, allow philanthropists to learn from the experts' vertical and functional specialism. Experts provide nuanced insights that leave a lasting impact on the philanthropists’ approach to tackling social challenges.",
   },
   {
-    text1: "Ever",
-    text2: "Evolving",
+    text1: "Advocacy &",
+    text2: "Leadership",
     desc: "We work with experts across the spectrum to co-author articles and papers on subjects relevant to philanthropy. These could be sector specific or on areas that impact philanthropy more widely, including systemic philanthropy, ease of giving, etc.",
   },
 ];

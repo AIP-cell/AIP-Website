@@ -31,9 +31,9 @@ const ShapeTheFlow = () => {
         text="Helping <color>Shape </color>  The Flow"
         className="~text-h4/h2 font-playFair text-center text-gray80"
       />
-      <p className="text-midGray text-center ~pt-[0.75rem]/[1.25rem] ~leading-[1.225rem]/[1.4rem]">
+      {/* <p className="text-midGray text-center ~pt-[0.75rem]/[1.25rem] ~leading-[1.225rem]/[1.4rem]">
         Our commitment towards philanthropy that define our role in the journey
-      </p>
+      </p> */}
       <div className="~pt-10/[5rem] flex flex-col lg:flex-row  ~gap-[1.25rem]/[4.56rem]">
         {threeIs.map((item, i) => (
           <CardAnimation delay={0.2} index={i} key={i}>

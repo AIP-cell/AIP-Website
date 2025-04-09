@@ -91,7 +91,8 @@ const OurValueUsingCarousel = ({ ourValueData }: Props) => {
   //         desc: "4 believe in fostering an environment where every individual's voice is heard and respected, encouraging them to take ownership of their work, make independent decisions, and contribute to the organisation’s success.",
   //       },
   //     ]);
-  const ourValues:Partial<TOurValues>[] =  ourValueData;
+
+  const ourValues: Partial<TOurValues>[] = ourValueData;
   return (
     <>
       <div className="w-full relative ">
@@ -107,8 +108,8 @@ const OurValueUsingCarousel = ({ ourValueData }: Props) => {
         />
         <Carousel
           opts={{
-            align: "start",
-            loop:true
+            align: "center",
+            loop: true,
           }}
           setApi={setApi}
           className="~pt-[5rem]/[10rem] relative container mx-auto w-full items-center"
@@ -121,18 +122,25 @@ const OurValueUsingCarousel = ({ ourValueData }: Props) => {
               text="Our <color>Values</color>"
               className="~text-h4/h2 text-darkGray font-playFair leading-[52.8px]"
             />
-            <p className="~pt-[0.5rem]/[1.25rem] ~px-[4.1rem]/[20.938rem] text-center text-midGray  font-inter ~text-h9Copy5/h9Copy4 ~leading-[1.4rem]/[1.225rem]">
+            {/* <p className="~pt-[0.5rem]/[1.25rem] ~px-[4.1rem]/[20.938rem] text-center text-midGray  font-inter ~text-h9Copy5/h9Copy4 ~leading-[1.4rem]/[1.225rem]">
               The foundations that drive AIP to drive positive change
-            </p>
+            </p> */}
           </div>
           <div className="relative">
             <CarouselContent className="~pt-[2.5rem]/[5rem] relative ">
-              {ourValues.map((items:Partial<TOurValues>, i) => (
+              {ourValues.map((items: Partial<TOurValues>, i) => (
                 <CarouselItem
                   key={i}
                   className="basis:1/1 xl:!basis-1/3 justify-center gap-[1.25rem] flex "
                 >
-                  <div className=" flex justify-center  ~size-[14.25rem]/[18.4rem]">
+                  <div
+                    className={cn(
+                      " flex justify-center  ~size-[14.25rem]/[15.4rem] transition-all duration-200 scale-100",
+                      {
+                        "~size-[14.25rem]/[18.4rem] !scale-110 ": current === i,
+                      }
+                    )}
+                  >
                     {/* {isDesktop ? (
                       i != 0 &&
                       i != ourValues.length - 1 && (
@@ -146,14 +154,16 @@ const OurValueUsingCarousel = ({ ourValueData }: Props) => {
                         />
                       )
                     ) : ( */}
-                      <OvalPurple
-                        sizeClass="~size-[14.25rem]/[18.4rem]"
-                        mainClass=" snap-center "
-                        text1={items?.title1}
-                        text2={items?.title2}
-                        textClass1="~text-h5/h4 font-playFair text-purple10 ~leading-[1.75rem]/[2.6rem]"
-                        textClass2=" font-playFairItalic ~text-h5/h4 ~leading-[1.75rem]/[2.6rem]"
-                      />
+                    <OvalPurple
+                      sizeClass={cn("~size-[14.25rem]/[15.4rem]", {
+                        "~size-[14.25rem]/[18.4rem] !scale-125 ": current === i,
+                      })}
+                      mainClass=" snap-center "
+                      text1={items?.title1}
+                      text2={items?.title2}
+                      textClass1="~text-h5/h7 font-playFair text-purple10 ~leading-[1.75rem]/[2.6rem]"
+                      textClass2=" font-playFairItalic ~text-h5/h7 ~leading-[1.75rem]/[2.6rem]"
+                    />
                     {/* )} */}
                   </div>
                 </CarouselItem>

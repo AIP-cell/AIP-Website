@@ -23,7 +23,7 @@ const datas = [
     src: "/svg/about/aip-journey/three-I-s/inform.svg",
     title1: "Enable",
     title2: "Transformation",
-    desc: "Shape the way philanthropists think about their giving, and influence high-impact strategies that address systemic social issues.",
+    desc: "Shape the way philanthropists and other stakeholders think about social change, and influence high-impact strategies that address systemic social issues.",
   },
   {
     src: "/svg/about/our-approach/purposeModel.svg",

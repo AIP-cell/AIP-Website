@@ -10,9 +10,9 @@ import { THomePageNews } from "@/api/type";
 import NoData from "@/components/NoData";
 const newsTabArray = [
   { tabNo: 0, key: "aipUpdates", tab: "What's New" },
-  { tabNo: 1, key: "partner", tab: "Partners" },
+  // { tabNo: 1, key: "partner", tab: "Partners" },
   { tabNo: 1, key: "inTheMedia", tab: "In the Media" },
-  { tabNo: 3, key: "worldOfPhilanthropy", tab: "World of Philanthropy" },
+  // { tabNo: 3, key: "worldOfPhilanthropy", tab: "World of Philanthropy" },
 ];
 type Props = {
   newsData: THomePageNews;
@@ -53,7 +53,7 @@ const TabNews = ({ newsData, searchParams }: Props) => {
                   ) : (
                     <NoData />
                   ))}
-                {items.tab == "Partners" &&
+                {/* {items.tab == "Partners" &&
                   (newsData.partner.length != 0 ? (
                     <CarouselNews newsArray={newsData.partner} />
                   ) : (
@@ -64,7 +64,7 @@ const TabNews = ({ newsData, searchParams }: Props) => {
                     <CarouselNews newsArray={newsData.worldOfPhilanthropy} />
                   ) : (
                     <NoData />
-                  ))}
+                  ))} */}
                 {items.tab == "What's New" &&
                   (newsData.aipUpdates.length != 0 ? (
                     <CarouselNews newsArray={newsData.aipUpdates} />

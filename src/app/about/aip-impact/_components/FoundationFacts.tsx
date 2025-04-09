@@ -16,7 +16,6 @@ type Props = {
   className?: string;
 };
 const FoundationFacts = ({ button, foundationFacts, className }: Props) => {
-  console.log("foundationFacts:::", foundationFacts);
   return (
     <div className={cn("relative w-full ~pt-[5rem]/[10rem]", className)}>
       <Image

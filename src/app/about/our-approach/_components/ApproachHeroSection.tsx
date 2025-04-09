@@ -32,7 +32,6 @@ const ApproachHeroSection = () => {
               gathering conviction and strength, and finally maturing into a
               joyful and fulfilling life experience. Just as rivers carry water,
               philanthropy channels resources like money or time towards causes,
-              circulating goodwill.
               <span className="text-textPurple font-playFairItalic">
                 &nbsp;AIP channels the flow.
               </span>

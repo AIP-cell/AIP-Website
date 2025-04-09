@@ -58,19 +58,17 @@ const JourneySoFar = () => {
 
           <p>
             The idea of AIP was conceived by Ashish Dhawan, Rohini Nilekani and
-            Amit Chandra along with Vishal Tulsyan who joined them later as a
-            “Core Founder”. Today AIP has over 40 other “Founders” as well, who
+            Amit Chandra along with Vishal Tulsyan who joined them as a “Core
+            Founder”. Today AIP has over 40 other “Founders” as well, who
             support the organization and enable us to do what we do. AIP Has its
             own advisory Board.
           </p>
           <p>
-            Our core philosophy and lens has always been to put philanthropists
-            first and philanthropists always. We believe philanthropists
-            themselves are in the best position to decide where and how to make
-            their philanthropic investments. We do not “push” or “sell” any
-            sector, organization or method of philanthropic investments.
+            We believe philanthropists themselves are in the best position to
+            decide where and how to make their philanthropic investments. We do
+            not “push” or “sell” any sector, organization or method of
+            philanthropic investments.
           </p>
-         
         </div>
       </div>
     </div>
