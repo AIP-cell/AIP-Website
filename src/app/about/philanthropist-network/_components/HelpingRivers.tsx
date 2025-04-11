@@ -10,8 +10,8 @@ import TextStaggerAnimation from "@/components/animations/TextStaggerAnimation";
 
 const datas = [
   {
-    text1: "Convening &",
-    text2: "Networking",
+    text1: "Networking &",
+    text2: "Convening",
     desc: "AIP gets philanthropists together, to share their stories, learnings and experience. This helps inspire and build a sense of community amongst the philanthropists.",
   },
   {
@@ -25,7 +25,7 @@ const datas = [
     desc: "We work with the philanthropists to help them build a perspective of sectors, so they can identify their sector of interest.  We help them define their philanthropic purpose and provide personalized consulting services to develop effective giving strategies, identify high-impact opportunities, and align their philanthropic goals with their values.",
   },
   {
-    text1: "Advocacy &",
+    text1: "Thought",
     text2: "Leadership",
     desc: "Creating a space and enabling a space of regulatory environment for philanthropy to be incentivised. We believe that by advocating for policy changes and legislative reforms, we can foster a more supportive landscape for philanthropy.",
   },

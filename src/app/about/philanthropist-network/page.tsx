@@ -1,7 +1,5 @@
 import React from "react";
-import FourPillars from "./_components/FourPillars";
 import JoinTheFlow from "./_components/JoinTheFlow";
-import CaseStudies from "../aip-impact/_components/CaseStudies";
 import PeopleWeWorkWith from "../aip-impact/_components/PeopleWeWorkWith";
 import PhilanthropistHeroSection from "./_components/PhilanthropistHeroSection";
 import HelpingRivers from "./_components/HelpingRivers";

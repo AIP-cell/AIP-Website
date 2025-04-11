@@ -61,7 +61,14 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   }
   const dateFormat = dayjs(response.date).format("D MMMM");
   const UpdateDateFormat = dayjs(response.updatedAt).format("D MMMM");
-
+  const processedDescription = response?.description
+    // remove all inline styles
+    ?.replace(/style="[^"]*"/g, "")
+    // ensure all <a> tags open in new tab with safe attributes
+    .replace(
+      /<a(?![^>]*target=)/g,
+      '<a target="_blank" rel="noopener noreferrer" '
+    );
   return (
     <div className="pt-[5rem] overflow-x-hidden min-h-screen">
       <div className="container mx-auto relative ~pl-5/[7.5rem] ~pr-5/[19rem] ~pb-[3rem]/[7.5rem]">
@@ -97,11 +104,17 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
           </div>
           <div className="w-full h-[1.5px] bg-gray10 ~my-[2rem]/[2.5rem] "></div>
           <div className="w-full h-[25rem] relative overflow-hidden">
-            <Image src={StorageUrl + response.image} alt="image" fill className="object-cover"/>
+            <Image
+              src={StorageUrl + response.image}
+              alt="image"
+              fill
+              className="object-cover"
+            />
           </div>
           <div
-            dangerouslySetInnerHTML={{ __html: response?.description || "" }}
-            className="blog-description-section ~pt-[2rem]/[2.5rem] ~text-h9Copy5/[1rem] ~leading-[1.22rem]/[1.4rem] text-midGray"
+            dangerouslySetInnerHTML={{ __html: processedDescription || "" }}
+            className="blog-description-section ~pt-[2rem]/[2.5rem] ~text-h9Copy5/[1rem] ~leading-[1.22rem]/[1.4rem] text-midGray font-sans text-base
+             [&_a]:text-blue-400 [&_a]:underline "
           ></div>
           {/* <p className="text-h9Copy5  leading-[1.225rem] py-[2.5rem] italic text-midGray">
             Radhika and Bhavana&apos;s interview was originally published in
