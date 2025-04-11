@@ -25,9 +25,8 @@ const offeringsData = [
     desc: "We engage with philanthropists to help build purpose,perspective and their philanthropic portfolios  in their chosen area of interest. We foster connections with peers, subject matter experts and NPOs thus building personalized insights. We also work on the process of philanthropy and help with the right way to measure impact.",
   },
   {
-    text1: "Advocacy &",
-    text2: "Thought",
-    text3: "Leadership",
+    text1: "Thought",
+    text2: "Leadership",
     desc: "We advance and promote philanthropy through thought leadership and help build an enabling environment, through research, workshops,blogs, articles, and engagement with subject matter experts.",
   },
 ];
@@ -82,7 +81,7 @@ const WeDo = () => {
                   desc={items.desc}
                   text1={items.text1}
                   text2={items.text2}
-                  text3={items.text3}
+                  // text3={items.text3}
                 />
               </CardAnimation>
             ))}

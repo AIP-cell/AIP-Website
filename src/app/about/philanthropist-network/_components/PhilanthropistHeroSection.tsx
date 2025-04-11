@@ -31,9 +31,9 @@ const PhilanthropistHeroSection = () => {
           <div className=" ~pt-[4.313rem]/[6.5rem]">
             <div className="  ~text-h5/h7 text-gray80 ~leading-[1.75rem]/[2.6rem] font-playFair tracking-[-0.3px]">
               <FadeInAnimation delay={0.1} x1={-20} x2={0}>
-                <p className="hidden md:block">
+                {/* <p className="hidden md:block">
                   We work with philanthropist on a project level.
-                </p>
+                </p> */}
                 <p className="hidden md:block ">
                   AIP has created an enabling support structure for wealth
                   creators throughout their personal philanthropic journey. We are
