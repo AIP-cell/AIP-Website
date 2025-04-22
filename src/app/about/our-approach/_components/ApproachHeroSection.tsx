@@ -46,10 +46,10 @@ const ApproachHeroSection = () => {
           />
           <FadeInAnimation x1={-20} x2={0} delay={0.1}>
             <h3 className="relative text-gray80 ~text-h4a/h4 font-playFair leading-[2.6rem]">
-              Founded in 2021 with an objective to transform the strategic giving
-              landscape in India. AIP works with ultra-high net worth individuals
-              and families (in India and the diaspora) to create sustainable
-              impact by inspiring and enabling them to
+              Founded in 2021 with an objective to transform the strategic
+              giving landscape in India, AIP works with ultra-high net worth
+              individuals and families (in India and the diaspora) to create
+              sustainable impact by inspiring and enabling them to
               <span className="text-textPurple font-playFairItalic">
                 &nbsp;give more, give sooner, and give better
               </span>

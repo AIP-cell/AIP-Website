@@ -58,9 +58,6 @@ const page = async () => {
             </FadeInAnimation>
           </div>
 
-          {/* <div className="hidden md:block">
-            <Form />
-          </div> */}
           <div className=" grid lg:grid-cols-2 ~py-[5rem]/[7.106rem] ~gap-[2.5rem]/0">
             <div className=" relative ">
               <div className="bg-bgGray5 ~p-5/[2rem] rounded-[1.25rem]  w-full md:w-[22.9rem] h-[29.25 rem]">
@@ -125,7 +122,9 @@ const page = async () => {
               <ButtonAnimation>
                 <Link
                   className="group font-inter text-textPurple hover:text-white flex items-center gap-[0.875rem] bg-bgGray5 hover:bg-textPurple  py-3 w-fit h-[2.8rem] rounded-[3.125rem] px-[1.25rem] "
-                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://maps.app.goo.gl/CNssM8UcJhTVqYXU7"
                 >
                   <div className="">
                     <LocationSvg className="size-[1.313rem] " />

@@ -52,15 +52,15 @@ const JourneySoFar = () => {
             a difference to India&apos;s transformation; that philanthropists
             were keen to make this difference and finally that philanthropists
             themselves are in the best position to inspire other
-            philanthropists. In this sense AIP was conceived off as a movement
-            of philanthropists and for philanthropists.
+            philanthropists. In this sense AIP was conceived as a movement of
+            philanthropists and for philanthropists.
           </p>
 
           <p>
             The idea of AIP was conceived by Ashish Dhawan, Rohini Nilekani and
             Amit Chandra along with Vishal Tulsyan who joined them as a “Core
             Founder”. Today AIP has over 40 other “Founders” as well, who
-            support the organization and enable us to do what we do. AIP Has its
+            support the organization and enable us to do what we do. AIP has its
             own advisory Board.
           </p>
           <p>

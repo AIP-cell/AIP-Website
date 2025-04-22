@@ -22,12 +22,12 @@ const offeringsData = [
   {
     text1: "Bespoke",
     text2: "Partnering",
-    desc: "We engage with philanthropists to help build purpose,perspective and their philanthropic portfolios  in their chosen area of interest. We foster connections with peers, subject matter experts and NPOs thus building personalized insights. We also work on the process of philanthropy and help with the right way to measure impact.",
+    desc: "We engage with philanthropists to help build purpose, perspective and their philanthropic portfolios  in their chosen area of interest. We foster connections with peers, subject matter experts and NPOs thus building personalized insights. We also work on the process of philanthropy and help with the right way to measure impact.",
   },
   {
     text1: "Thought",
     text2: "Leadership",
-    desc: "We advance and promote philanthropy through thought leadership and help build an enabling environment, through research, workshops,blogs, articles, and engagement with subject matter experts.",
+    desc: "We advance and promote philanthropy through thought leadership and help build an enabling environment, through research, workshops, blogs, articles, and engagement with subject matter experts.",
   },
 ];
 const WeDo = () => {
@@ -35,12 +35,6 @@ const WeDo = () => {
     <div className="w-full relative">
       <div className="~pt-[4.625rem]/[6.63rem] ~pb-[5rem]/[7.5rem] relative">
         <div className="relative container mx-auto">
-          {/* <h2 className="font-playFair text-gray80 ~text-h4/h2 ~leading-[2.6rem]/[3.3rem] text-center">
-            What
-            <span className="font-playFairItalic text-textPurple">
-              &nbsp;We Do
-            </span>
-          </h2> */}
           <TextStaggerAnimation
             text="What <color>We Do</color>"
             className="font-playFair text-gray80 ~text-h4/h2 ~leading-[2.6rem]/[3.3rem] text-center"
