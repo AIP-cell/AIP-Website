@@ -223,6 +223,10 @@ export type TFounderNetwork = {
   description2: string;
   testimonials: TTestimonials[];
   methodsOfJoining: TMethodsOfJoining[];
+   casestudies: TCaseStudies[];
+     people: TPeople[];
+      teamMembers: TTeamMembers[];
+  
 };
 export type TMethodsOfJoining = {
   name: string;
