@@ -29,7 +29,7 @@ const ShapeTheFlow = () => {
       />
         <WordStaggerAnimation
         text=" Our commitment towards philanthropy that define our role in the journey"
-        className="~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] text-center text-midGray"
+        className="~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] text-center text-midGray ~pt-[0.75rem]/[1rem]"
       />
       <div className="~pt-10/[5rem] flex flex-col lg:flex-row  ~gap-[1.25rem]/[4.56rem]">
         {threeIs.map((item, i) => (

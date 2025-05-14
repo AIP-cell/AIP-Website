@@ -11,22 +11,22 @@ const datas = [
   {
     text1: "Networking &",
     text2: "Convening",
-    desc: "By facilitating spaces for philanthropists to exchange motivations, ideas, and experiences, we help create a community that inspires and influences strategic philanthropy.",
+    desc: " AIP gets philanthropists together, to share their stories, learnings and experience. This helps build a sense of community amongst the philanthropists which inspires and influences strategic philanthropy.",
   },
   {
     text1: "Knowledge",
     text2: "Work",
-    desc: "With our well researched knowledge resources, we enable philanthropists to engage in shared learning, providing insights across sectors and highlighting effective giving practices.",
+    desc: " With our well researched knowledge resources and comprehensive perspectives on sectors, topics, and themes we inform and inspire philanthropists at various stages of their philanthropic journey. We enable philanthropists to engage in shared learning, providing insights across sectors and highlighting effective giving practices.",
   },
   {
     text1: "Bespoke",
     text2: "Partnering",
-    desc: " We collaborate with individual philanthropists and UHNIs to craft personalized giving plans and learning journeys tailored to their unique motivations.",
+    desc: "  We work with individual philanthropists and UHNIs to help define their philanthropic purpose, build perspective in their areas of interest, craft personalized giving plans and learning journeys tailored to their unique motivations",
   },
   {
     text1: "Thought",
     text2: "Leadership",
-    desc: "We champion a thriving philanthropic ecosystem, influencing the broader landscape to unlock catalytic funding, deepen philanthropic impact and promote “Ease of Giving”.",
+    desc: " We work towards creating and advancing a thriving philanthropic ecosystem in India.Thus,influencing the broader landscape to unlock catalytic funding, deepen philanthropic impact and promote “Ease of Giving”",
   }
 ];
 const FourPillars = () => {
