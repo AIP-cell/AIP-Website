@@ -163,7 +163,8 @@ export const Api = {
       return null;
     }
   },
-  getPeopleOfAip: async (slug: string) => {
+  getPeopleOfAip: async (slug:string) => {
+
     try {
       const response = await axiosClient.get(`aip-team/${slug}`);
       return response.data;

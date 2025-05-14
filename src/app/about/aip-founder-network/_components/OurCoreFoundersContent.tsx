@@ -13,7 +13,7 @@ import WordStaggerAnimation from "@/components/animations/WordStaggerAnimation";
 import TextStaggerAnimation from "@/components/animations/TextStaggerAnimation";
 
 type Props = {
-  coreFounderMembers: TTeamMembers[];
+  coreFounderMembers?: TTeamMembers[];
 };
 const OurCoreFoundersContent = ({ coreFounderMembers }: Props) => {
   return (
@@ -36,7 +36,7 @@ const OurCoreFoundersContent = ({ coreFounderMembers }: Props) => {
           />
         </div>
         <div className="relative ~pb-[5rem]/[7.37rem] ">
-          {coreFounderMembers.map((item, i) => {
+          {coreFounderMembers?.map((item, i) => {
             const isFirstDesign = Math.floor(i / 2) % 2 === 0;
             if (i % 2 == 0) {
               return (

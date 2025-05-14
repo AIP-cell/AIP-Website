@@ -10,6 +10,7 @@ import NoData from "@/components/NoData";
 
 export const dynamic = "force-dynamic";
 const getPeopleOfAipApi = async (slug: string): Promise<TTeamMembers[]> => {
+ 
   const response = await Api.getPeopleOfAip(slug);
   return response?.data;
 };

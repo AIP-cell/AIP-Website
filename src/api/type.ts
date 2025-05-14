@@ -79,10 +79,10 @@ export type TFoundationFacts = {
   foundersCount: number;
   knowledgeProductsCount: number;
   membersCount: number;
-  knowledgeResourcesCount:number;
-  networkMembersCount:number;
-  purposefulEngagementsCount:number;
-  researchReportsCount:number;
+  knowledgeResourcesCount: number;
+  networkMembersCount: number;
+  purposefulEngagementsCount: number;
+  researchReportsCount: number;
 };
 export type TTestimonials = {
   name: string;
@@ -223,10 +223,9 @@ export type TFounderNetwork = {
   description2: string;
   testimonials: TTestimonials[];
   methodsOfJoining: TMethodsOfJoining[];
-   casestudies: TCaseStudies[];
-     people: TPeople[];
-      teamMembers: TTeamMembers[];
-  
+  casestudies: TCaseStudies[];
+  people: TPeople[];
+  teamMembers: TTeamMembers[];
 };
 export type TMethodsOfJoining = {
   name: string;
@@ -291,8 +290,25 @@ export type TNpos = {
 
 // Start People Of Aip
 
+export type TCoreFoundersAndFounders = {
+  teamMembers: TTeamMembers[];
+  coreFounderMembers: TCoreFounders[];
+};
 export type TPeopleOfAip = {
   teamMembers: TTeamMembers[];
+};
+export type TCoreFounders = {
+  _id: string;
+  name: string;
+  designation: string;
+  description: string;
+  quote: string;
+  organisation: string;
+  slug: string;
+  linkOrVideo: string;
+  image: string;
+  linkedin: string;
+  videoLink: string;
 };
 export type TTeamMembers = {
   _id: string;

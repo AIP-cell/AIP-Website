@@ -40,16 +40,16 @@ const FounderNetworkHeroSection = ({ desc1, desc2 }: Props) => {
             <FadeInAnimation delay={0.1} x1={-20} x2={0}>
               {/* dangerouslySetInnerHTML={{ __html: desc1! }} */}
               <div
-                className=" ~text-h5/h7 text-gray80  ~leading-[1.75rem]/[2.6rem] font-medium font-playFair "
+                className="founder-text ~text-h5/h7 text-gray80  ~leading-[1.75rem]/[2.6rem] font-medium font-playFair "
                 dangerouslySetInnerHTML={{ __html: desc1 || "" }}
               />
 
             
             </FadeInAnimation>
+          </div>
             {/* <div className=" ~text-h5/h4 text-gray80  ~leading-[1.75rem]/[2.6rem] font-medium font-playFair ~pt-[2rem]/[3rem]">
               {desc2}
             </div> */}
-          </div>
         </div>
       </div>
     </div>

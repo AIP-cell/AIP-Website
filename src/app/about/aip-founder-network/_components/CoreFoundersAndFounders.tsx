@@ -4,7 +4,10 @@ import React, { useState } from "react";
 import OurCoreFoundersContent from "./OurCoreFoundersContent";
 import PeopleOfAipTeamMembers from "./PeopleOfAipTeamMembers";
 import PeopleOfAipTabs from "./PeopleOfAipTabs";
-
+import { useQuery } from "@tanstack/react-query";
+import { Api } from "@/api/Api";
+import { TCoreFoundersAndFounders, TTeamMembers } from "@/api/type";
+import NoData from "@/components/NoData";
 
 const tabList = [
   {
@@ -17,9 +20,7 @@ const tabList = [
     key: "founders",
     name: "Founders",
   },
-
 ];
-
 
 const data = [
   {
@@ -52,18 +53,65 @@ const data1 = [
   },
 ];
 
+export const dynamic = "force-dynamic";
+const getPeopleOfAip = async (slug:string): Promise<TCoreFoundersAndFounders> => {
+  const response = await Api.getPeopleOfAip(slug);
+
+  return response?.data;
+};
+
 const CoreFoundersAndFounders = () => {
- const [currentTab, setCurrentTab] = useState<string>("core-founder");
+  const [currentTab, setCurrentTab] = useState<string>("core-founder");
+
+
+
+  
+
+
+  const { data: response } = useQuery({
+    queryKey: ["peopleOfAip", currentTab],
+    queryFn: () =>
+      getPeopleOfAip(currentTab === "founders" ? "founders" : "coreFounder"),
+  });
+
+  console.log("res", response);
+  if (!response) {
+    return;
+  }
+
+  const members = Array.isArray(response) ? response : [];
+
+
   return (
     <div>
-        <PeopleOfAipTabs
-
-        setOpentab={setCurrentTab} // Set active tab
+      <PeopleOfAipTabs
+        setOpentab={setCurrentTab}
         tabList={tabList}
-        currentTab={currentTab} // Pass the active tab
-         />
-    {currentTab === "core-founder" && <OurCoreFoundersContent coreFounderMembers={data} />}
-      {currentTab === "founders" && <PeopleOfAipTeamMembers teamMembers={data1} />}
+        currentTab={currentTab}
+        
+      />
+
+
+  {/* {currentTab === "core-founder" ? (
+        members && members.length != 0 ? (
+          <OurCoreFoundersContent coreFounderMembers={members as TTeamMembers[]} />
+        ) : (
+          <NoData />
+        )
+      ) : members && members.length != 0 ? (
+        <PeopleOfAipTeamMembers teamMembers={members}/>
+      ) : (
+        <NoData />
+      )} */}
+
+
+
+      {currentTab === "core-founder" && (
+        <OurCoreFoundersContent coreFounderMembers={members} />
+      )}
+      {currentTab === "founders" && (
+        <PeopleOfAipTeamMembers teamMembers={members as TTeamMembers[]} />
+      )}
     </div>
   );
 };

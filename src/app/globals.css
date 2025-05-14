@@ -228,6 +228,10 @@ body {
   }
 }
 
+.founder-text p {
+  padding-bottom: 0.50rem; /* Adjust as needed */
+}
+
 /* @layer base {
   * {
     @apply border-border;
