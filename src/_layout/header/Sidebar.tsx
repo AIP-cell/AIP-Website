@@ -20,11 +20,15 @@ const headerData = [
       { option: "AIP Impact", link: "/about/aip-impact" },
       { option: "Giving Roadmap", link: "/about/giving-roadmap" },
       { option: "Financial Reports", link: "/about/financials" },
-      { option: "AIP Founder Network", link: "/about/aip-founder-network" },
+      { option: "AIP Founders Network", link: "/about/aip-founders-network" },
       {
-        option: "Philanthropist Network",
-        link: "/about/philanthropist-network",
+        option: "Advisory Board",
+        link: "/about/advisory-board",
       },
+      // {
+      //   option: "Philanthropist Network",
+      //   link: "/about/philanthropist-network",
+      // },
     ],
   },
   {

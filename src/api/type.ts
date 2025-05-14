@@ -326,6 +326,38 @@ export type TTeamMembers = {
 
 // End People Of Aip
 
+// people aip
+
+export type TPeopleAip = {
+ boardOfDirectors:TboardOfDirectors[];
+ teamAIP:TteamAIP[]
+};
+
+export type TboardOfDirectors = {
+   _id: string;
+        name: string;
+        designation:string;
+        quote:string;
+        linkedln:string;
+        linkOrVideo: string;
+        slug: string;
+        image: string;
+};
+
+export type TteamAIP = {
+   _id: string;
+        name: string;
+        designation:string;
+        quote:string;
+        linkedln:string;
+        linkOrVideo: string;
+        slug: string;
+        image: string;
+};
+
+
+
+
 // Start People Of Aip Get One
 
 export type TPeopleOfAipGetOne = {

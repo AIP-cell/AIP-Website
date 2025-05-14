@@ -21,26 +21,13 @@ const footerData = [
       { option: "Giving Roadmap", link: "/about/giving-roadmap" },
       { option: "Financial Reports", link: "/about/financials" },
       { option: "AIP Founder Network", link: "/about/aip-founder-network" },
-      {
-        option: "Philanthropist Network",
-        link: "/about/philanthropist-network",
+   {
+        option: "Advisory Board",
+        link: "/about/advisory-board",
       },
     ],
   },
-  {
-    id: "people-of-aip/founders",
-    label: "People of AIP",
-    options: [
-      { option: "Our Core Founders", link: "/people-of-aip/core-founder" },
-      { option: "Founders", link: "/people-of-aip/founders" },
-      {
-        option: "Our Advisory Board",
-        link: "/people-of-aip/advisory-board",
-      },
-      { option: "Team AIP", link: "/people-of-aip/team-aip" },
-      // { option: "Experts", link: "/people-of-aip/experts" },
-    ],
-  },
+    { id: "people-of-aip", name: "People of AIP", link: "/people-aip" },
   {
     label: "Our Work",
     id: "our-work",
@@ -233,55 +220,26 @@ const Footer = () => {
                   <ButtonAnimation>Financial Reports</ButtonAnimation>
                 </Link>
                 <Link
-                  href="/about/aip-founder-network"
+                  href="/about/aip-founders-network"
                   className=" text-h9Copy5 font-inter text-white/60"
                 >
-                  <ButtonAnimation> AIP Founder Network</ButtonAnimation>
+                  <ButtonAnimation> AIP Founders Network</ButtonAnimation>
                 </Link>
                 <Link
                   href="/about/philanthropist-network"
                   className=" text-h9Copy5 font-inter text-white/60"
                 >
-                  <ButtonAnimation>Philanthropist Network</ButtonAnimation>
+                  <ButtonAnimation>Advisory Board</ButtonAnimation>
                 </Link>
               </div>
             </div>
             <div className="hidden lg:block">
-              <p className="pt-[0.75rem] text-h9Copy5 font-inter font-bold text-white">
-                People of AIP
-              </p>
-              <div className="flex flex-col gap-4 ~pt-[0.75rem]/[1rem]">
-                <Link
-                  href="/people-of-aip/core-founder"
-                  className=" text-h9Copy5 font-inter text-white/60"
-                >
-                  <ButtonAnimation>Core Founders</ButtonAnimation>
-                </Link>
-                <Link
-                  href="/people-of-aip/founders"
-                  className=" text-h9Copy5 font-inter text-white/60"
-                >
-                  <ButtonAnimation>Founders</ButtonAnimation>
-                </Link>
-                <Link
-                  href="/people-of-aip/advisory-board"
-                  className=" text-h9Copy5 font-inter text-white/60"
-                >
-                  <ButtonAnimation>Advisory Board</ButtonAnimation>
-                </Link>
-                <Link
-                  href="/people-of-aip/team-aip"
-                  className=" text-h9Copy5 font-inter text-white/60"
-                >
-                  <ButtonAnimation>Team AIP</ButtonAnimation>
-                </Link>
-                {/* <Link
-                  href="/people-of-aip/experts"
-                  className=" text-h9Copy5 font-inter text-white/60"
-                >
-                  <ButtonAnimation>Experts</ButtonAnimation>
-                </Link> */}
-              </div>
+             <Link href={"/people-aip"}>
+                <p className="pt-[0.75rem] text-h9Copy5 font-inter font-bold text-white">
+                  People of AIP
+                </p>
+               
+             </Link>
 
               <p className="pt-[2.25rem] text-h9Copy5 font-inter font-bold text-white">
                 Our Work

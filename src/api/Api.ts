@@ -221,6 +221,17 @@ export const Api = {
       return null;
     }
   },
+
+  getPeopleAip: async () => {
+    try {
+      const response = await axiosClient.get(`aip-team`);
+      return response.data;
+    } catch (error) {
+      console.log(error);
+      return null;
+    }
+  },
+
   getCollaborations: async (data: {
     c_type?: string;
     p_id?: string;

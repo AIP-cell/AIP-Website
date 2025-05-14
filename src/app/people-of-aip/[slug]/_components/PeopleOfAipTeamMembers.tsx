@@ -4,17 +4,26 @@ import Image from "next/image";
 import Bg1 from "@public/svg/people-of-aip/peachCurveRightTeamAip.svg";
 import OvalPeach from "@public/svg/ovalPeach.svg";
 import Bg2 from "@public/svg/people-of-aip/peachCurveLeftTeamAip.svg";
-import { TTeamMembers } from "@/api/type";
+import { TteamAIP, TTeamMembers } from "@/api/type";
 import WordStaggerAnimation from "@/components/animations/WordStaggerAnimation";
 import TextStaggerAnimation from "@/components/animations/TextStaggerAnimation";
 
 type Props = {
-  teamMembers?: TTeamMembers[];
+  teamMembers?: Array<{
+    _id: string;
+    name?: string;
+    designation?: string;
+    quote?: string;
+    linkedln?: string;
+    linkOrVideo?: string;
+    slug?: string;
+    image?: string;
+  }>;
   urlSlug: string;
 };
 const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
   return (
-    <div className="w-full relative min-h-[90vh]">
+    <div className="w-full relative min-h-[90vh] pt-[5rem]">
       <div className="pt-[3rem] pb-[7rem] ">
         <div className="flex flex-col  justify-center ~px-[1.25rem]/[20.9rem] ~pb-[1.83rem]/[3.875rem] container mx-auto">
           {urlSlug === "experts" && (

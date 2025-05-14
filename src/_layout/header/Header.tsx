@@ -18,27 +18,32 @@ const headerData = [
       { option: "AIP Impact", link: "/about/aip-impact" },
       { option: "Giving Roadmap", link: "/about/giving-roadmap" },
       { option: "Financial Reports", link: "/about/financials" },
-      { option: "AIP Founder Network", link: "/about/aip-founder-network" },
+      { option: "AIP Founders Network", link: "/about/aip-founders-network" },
       {
-        option: "Philanthropist Network",
-        link: "/about/philanthropist-network",
+        option: "Advisory Board",
+        link: "/about/advisory-board",
       },
+      // {
+      //   option: "Philanthropist Network",
+      //   link: "/about/philanthropist-network",
+      // },
     ],
   },
-  {
-    id: "people-of-aip",
-    label: "People of AIP",
-    options: [
-      { option: "Our Core Founders", link: "/people-of-aip/core-founder" },
-      { option: "Founders", link: "/people-of-aip/founders" },
-      {
-        option: "Our Advisory Board",
-        link: "/people-of-aip/advisory-board",
-      },
-      { option: "Team AIP", link: "/people-of-aip/team-aip" },
-      // { option: "Experts", link: "/people-of-aip/experts" },
-    ],
-  },
+   { id: "people-of-aip", name: "People of AIP", link: "/people-aip" },
+  // {
+  //   id: "people-of-aip",
+  //   label: "People of AIP",
+  //   options: [
+  //     { option: "Our Core Founders", link: "/people-of-aip/core-founder" },
+  //     { option: "Founders", link: "/people-of-aip/founders" },
+  //     {
+  //       option: "Our Advisory Board",
+  //       link: "/people-of-aip/advisory-board",
+  //     },
+  //     { option: "Team AIP", link: "/people-of-aip/team-aip" },
+  //     // { option: "Experts", link: "/people-of-aip/experts" },
+  //   ],
+  // },
   {
     width: " w-[10.5rem] ",
     label: "Our Work",

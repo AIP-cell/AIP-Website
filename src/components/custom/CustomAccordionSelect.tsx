@@ -14,7 +14,7 @@ import { useRouter } from "next-nprogress-bar";
 
 type Props = {
   ArrayData: {
-    label: string;
+    label?: string;
     id: string;
     link?: string;
     options?: { option: string; link: string }[];
