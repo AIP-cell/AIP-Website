@@ -29,7 +29,7 @@ export default function CustomModal({
         onClose={() => setIsOpen(false)}
         __demoMode
       >
-        <div className="fixed inset-0 z-10 w-full  overflow-y-auto pt-[5.6rem]">
+        <div className="fixed inset-0 z-10 w-full  overflow-y-auto pt-[5.6rem]  bg-black/50">
           <div className="flex h-full items-center justify-center ~p-2/4 ">
             <DialogPanel
               transition

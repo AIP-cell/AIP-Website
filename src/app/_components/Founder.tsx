@@ -20,6 +20,7 @@ import { THomePageTeam } from "@/api/type";
 import { AnimatePresence } from "framer-motion";
 import WordStaggerAnimation from "@/components/animations/WordStaggerAnimation";
 import FadeInAnimation from "@/components/animations/FadeInAnimation";
+import TextAnimation from "@/components/animations/TextAnimation";
 const founderData = [
   {
     image: "/images/pSample.png",
@@ -45,9 +46,6 @@ const founderData = [
     post: "The Convergence Foundation",
     desc: "I believe a lot more needs to be done particularly to encourage first-time givers. AIP aims to fill this gap and spur philanthropy in a very structured manner.",
   },
-  
-  
-  
 ];
 type Props = {
   teamData: THomePageTeam[];
@@ -101,18 +99,26 @@ const Founder = ({ teamData }: Props) => {
                     </span>
                   </h3> */}
 
-                  <div className=" sm:flex ~text-h4/h2  ~leading-[2.6rem]/[3.3rem] relative font-playFair">
-                    <WordStaggerAnimation
+                  <div className=" sm:flex gap-3 ~text-h4/h2  ~leading-[2.6rem]/[3.3rem] relative font-playFair">
+                    <TextAnimation delay={0.2} >
+                      <p className="text-white/70">From our </p>
+                    </TextAnimation>
+                   <TextAnimation delay={0.2} >
+                      <p className="text-white font-playFairItalic block md:inline-block">
+                        Core-Founders
+                      </p>
+                   </TextAnimation >
+                    {/* <WordStaggerAnimation
                       text="From our "
                       className="text-white/70"
                     />
                     <WordStaggerAnimation
                       text="Core-Founders"
                       className="text-white font-playFairItalic block md:inline-block"
-                    />
+                    /> */}
                   </div>
 
-                  <div className=" flex gap-[1.25rem] relative">
+                  <div className=" flex gap-[1.25rem] relative lg:hidden">
                     <ButtonAnimation
                       onClick={previous}
                       className="  text-darkPurple leading-[22.4px] font-inter bg-white rounded-tl-3xl rounded-bl-3xl rounded-tr-xl rounded-br-xl py-[1.15rem] px-[0.92rem] h-fit"

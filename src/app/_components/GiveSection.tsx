@@ -2,7 +2,7 @@ import ImgTitleDescVer from "@/components/cards/ImgTitleDescVer";
 import Image from "next/image";
 import Bg from "../../../public/svg/give-section/giveBg.svg";
 import React from "react";
-import CardAnimation from "@/components/animations/CardAnimation";
+import CardAnimation from "@/components/animations/FadeInAnimation";
 const giveData = [
   {
     src: "/svg/give-section/giveMore.svg",

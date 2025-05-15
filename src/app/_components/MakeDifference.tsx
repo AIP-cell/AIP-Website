@@ -1,4 +1,5 @@
 import CardAnimation from "@/components/animations/CardAnimation";
+import TextAnimation from "@/components/animations/TextAnimation";
 import WordStaggerAnimation from "@/components/animations/WordStaggerAnimation";
 import ImgTitleDescHor from "@/components/cards/ImgTitleDescHor";
 import LeftHomePagePeachCurve from "@public/svg/leftHomePagePeach.svg";
@@ -28,16 +29,27 @@ const MakeDifference = () => {
         {/* <h3 className="~text-h4/h2 text-gray80 ~leading-[2.6rem]/[3.3rem] font-playFair">
           How we are trying to
         </h3> */}
-        <WordStaggerAnimation
+        <TextAnimation>
+          <p className="~text-h4/h2 text-gray80 ~leading-[2.6rem]/[3.3rem] font-playFair">
+            How we are trying to
+          </p>
+        </TextAnimation>
+        {/* <WordStaggerAnimation
           text="How we are trying to"
           duration={1.1}
           staggerChildren={0.25}
           className="~text-h4/h2 text-gray80 ~leading-[2.6rem]/[3.3rem] font-playFair"
-        />
-        <WordStaggerAnimation
+        /> */}
+        <TextAnimation>
+          {" "}
+          <p className="~text-h4/h2 text-textPurple ~leading-[2.6rem]/[3.3rem] font-playFairItalic">
+            make a difference
+          </p>
+        </TextAnimation>
+        {/* <WordStaggerAnimation
           text="make a difference"
           className="~text-h4/h2 text-textPurple ~leading-[2.6rem]/[3.3rem] font-playFairItalic"
-        />
+        /> */}
         {/* <p className="~text-h4/h2 text-textPurple ~leading-[2.6rem]/[3.3rem] font-playFairItalic">
           make a difference
         </p> */}

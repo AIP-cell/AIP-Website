@@ -63,7 +63,7 @@ const PCardWithPlaySign = ({
           <Link
             href={`/people-of-aip/coreFounder/${slug}`}
             className={cn(
-              "!text-h4 leading-[2.6rem] text-[#DFE0E5] font-playFair underline underline-offset-4 decoration-[1px]",
+              "!text-h4 leading-[2.6rem] text-[#DFE0E5] font-playFair hover:underline underline-offset-4 decoration-[1px] transition-all duration-500",
               { "text-gray80": darkText }
             )}
           >

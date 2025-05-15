@@ -7,7 +7,7 @@ type Props = {
 };
 const ImgTitleDescHor = ({ src, title, desc }: Props) => {
   return (
-    <div className="col-span-2 md:col-span-1 flex flex-col md:flex-row justify-center items-center ~gap-[0.5rem]/[1.25rem]">
+    <div className="col-span-2 md:col-span-1 flex flex-col md:flex-row flex-grow justify-center items-center ~gap-[0.5rem]/[1.25rem]">
       <div className="relative shrink-0 ~w-[10.3rem]/[11.87rem] ~h-[7.5rem]/[8.75rem]">
         <Image src={src} alt="" fill />
       </div>

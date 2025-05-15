@@ -99,9 +99,9 @@ const Sidebar = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ x: "100%", opacity: 1 }}
+            initial={{ x: "-100%", opacity: 1 }}
             animate={{ x: 0, opacity: 1 }}
-            exit={{ x: "100%", opacity: 0 }}
+            exit={{ x: "-100%", opacity: 0 }}
             transition={{ duration: 0.7, ease: "easeInOut" }}
             className="xl:hidden fixed  top-0 left-0 h-[100dvh] no-scrollbar flex w-full bg-[#979796]"
           >
@@ -153,9 +153,11 @@ const Sidebar = () => {
               </div>
               <div className="">
                 <ButtonAnimation className="mt-[2.5rem] w-full bg-white rounded-full">
-                  <p className="py-[0.75rem] text-h9Copy5 leading-[1.225rem] text-textPurple">
-                    Get Involved
-                  </p>
+                  <Link href="/contact">
+                    <p className="py-[0.75rem] text-h9Copy5 leading-[1.225rem] text-textPurple">
+                      Get Involved
+                    </p>
+                  </Link>
                 </ButtonAnimation>
               </div>
               <Image src={Jelly} alt="" />
