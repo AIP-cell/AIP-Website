@@ -34,7 +34,7 @@ const GiveSection = () => {
       <div className="container mx-auto  ~pt-[3.2rem]/[3.5rem] ~px-[2.8rem]/[7rem] relative">
         <div className=" flex flex-col lg:flex-row justify-center xl:justify-normal ~gap-[1.25rem]/[3rem]">
           {giveData.map((item, i) => (
-            <CardAnimation delay={0.2} index={i} key={i}>
+            <CardAnimation delay={0.2}  key={i}>
               <ImgTitleDescVer
                 src={item.src}
                 title={item.title}

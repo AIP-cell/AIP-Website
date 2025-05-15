@@ -96,7 +96,7 @@ const Footer = () => {
                   Philanthropy, a section 8 company under Indian Companies Act
                   2013. it has valid registration under section 80G and 12A of
                   Income-tax Act,196. AIP is authorised to receive CSR funding
-                  and funding under FCRA."
+                  and funding under FCRA.&quot;
                 </p>
               </div>
               <div className="flex lg:hidden flex-col w-full pt-[1rem]">

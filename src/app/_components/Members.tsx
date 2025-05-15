@@ -27,7 +27,7 @@ const Members = ({ countData }: Props) => {
           <div className=" w-full xl:w-[65%] ~pl-[1.25rem]/[7rem] ~/md:~pr-[1.25rem]/[2rem] xl:pr-0 z-40">
            <TextAnimation delay={0.2}>
               <div className="hidden md:block ~text-h4/h3  font-playFair text-gray50 ~leading-[2.6rem]/[3.3rem] z-40">
-                We believe Philanthropy can <br /> catalyse India's
+                We believe Philanthropy can <br /> catalyse India &apos; s
                 transformation; <br /> Philanthropists are keen to make a <br />{" "}
                 difference; and Philanthropists are <br /> best at inspiring each
                 other.
@@ -35,7 +35,7 @@ const Members = ({ countData }: Props) => {
            </TextAnimation>
           <TextAnimation  delay={0.2}>
               <div className="block md:hidden ~text-h4/h3  font-playFair text-gray50 ~leading-[2.6rem]/[3.3rem] z-40">
-                We believe Philanthropy can catalyse India's transformation;
+                We believe Philanthropy can catalyse India &apos;s transformation;
                 Philanthropists are keen to make a difference; and Philanthropists
                 are best at inspiring each other.
               </div>

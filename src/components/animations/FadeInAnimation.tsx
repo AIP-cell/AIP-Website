@@ -10,6 +10,7 @@ type Props = {
   x2?: number | string;
   y1?: number;
   y2?: number;
+ 
   className?: string;
   duration?: number;
 };
@@ -18,6 +19,7 @@ const FadeInAnimation = ({
   children,
   className,
   duration,
+ 
   delay,
   x1,
   x2,
@@ -32,6 +34,7 @@ const FadeInAnimation = ({
       }}
       initial="hidden"
       //   animate="visible"
+     
       whileInView="visible"
       viewport={{ once: true }}
       transition={{
