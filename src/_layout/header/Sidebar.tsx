@@ -31,20 +31,21 @@ const headerData = [
       // },
     ],
   },
-  {
-    label: "People of AIP",
-    id: "people-of-aip",
-    options: [
-      { option: "Our Core Founders", link: "/people-of-aip/core-founder" },
-      { option: "Founders", link: "/people-of-aip/founders" },
-      {
-        option: "Our Advisory Board",
-        link: "/people-of-aip/advisory-board",
-      },
-      { option: "Team AIP", link: "/people-of-aip/team-aip" },
-      // { option: "Experts", link: "/people-of-aip/experts" },
-    ],
-  },
+  // {
+  //   label: "People of AIP",
+  //   id: "people-of-aip",
+  //   options: [
+  //     { option: "Our Core Founders", link: "/people-of-aip/core-founder" },
+  //     { option: "Founders", link: "/people-of-aip/founders" },
+  //     {
+  //       option: "Our Advisory Board",
+  //       link: "/people-of-aip/advisory-board",
+  //     },
+  //     { option: "Team AIP", link: "/people-of-aip/team-aip" },
+  //     // { option: "Experts", link: "/people-of-aip/experts" },
+  //   ],
+  // },
+  //  { id: "people-of-aip", name: "People of AIP", link: "/people-aip" },
   {
     label: "Our Work",
     id: "our-work",
@@ -122,6 +123,15 @@ const Sidebar = () => {
                   accordionItemClassName="!border-[#B861B3]"
                   accordionTriggerClassName="!py-[1.25rem]"
                 />
+                <Link
+                  href="/people-aip"
+                  onClick={() => setIsOpen(!isOpen)}
+                  className={cn(
+                    " border-b-[1.7px] text-h9Copy5 leading-[1.225rem]  w-full border-[#B861B3] py-[1.25rem] "
+                  )}
+                >
+                 People of AIP
+                </Link>
                 <Link
                   href="/careers"
                   onClick={() => setIsOpen(!isOpen)}

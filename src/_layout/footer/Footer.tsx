@@ -27,7 +27,7 @@ const footerData = [
       },
     ],
   },
-    { id: "people-of-aip", name: "People of AIP", link: "/people-aip" },
+    // { id: "people-of-aip", name: "People of AIP", link: "/people-aip" },
   {
     label: "Our Work",
     id: "our-work",
@@ -102,16 +102,18 @@ const Footer = () => {
                   ArrayData={footerData}
                   accordionTriggerClassName="!text-white"
                 />
+                 <div className="!text-white pt-[1rem] text-h9Copy5 leading-[1.225rem] flex-wrap "> <Link href="/people-aip">People of AIP</Link></div>
                 <div className="flex text-h9Copy5 leading-[1.225rem] flex-wrap gap-[1rem] text-white pt-[1rem]">
+                  
                   <Link href="/careers">Careers</Link>|
                   {/* <Link href="/faq">FAQs</Link>| */}
                   <Link href="/about/aip-impact/foundation-fact-sheet">
                     Foundation Fact Sheet
                   </Link>
                   |
-                  <Link href="/join-our-learning-circle">
+                  {/* <Link href="/join-our-learning-circle">
                     Join our learning circle
-                  </Link>
+                  </Link> */}
                 </div>
                 <div className=" md:basis-3/4 flex w-full md:justify-start pt-[2.5rem] max-md:order-2">
                   <div className="w-full md:~w-[21rem]/[25rem] h-[2.8rem] bg-white flex rounded-full relative rounded-br-full   items-center justify-end">
@@ -316,11 +318,11 @@ const Footer = () => {
                   <ButtonAnimation>Foundation Fact Sheet</ButtonAnimation>
                 </Link>
               </div>
-              <div className="pt-[2.25rem] text-h9Copy5 font-inter font-bold text-white">
+              {/* <div className="pt-[2.25rem] text-h9Copy5 font-inter font-bold text-white">
                 <Link href="/join-our-learning-circle">
                   <ButtonAnimation>Join our learning circle</ButtonAnimation>
                 </Link>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
