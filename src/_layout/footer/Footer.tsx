@@ -21,13 +21,13 @@ const footerData = [
       { option: "Giving Roadmap", link: "/about/giving-roadmap" },
       { option: "Financial Reports", link: "/about/financials" },
       { option: "AIP Founders Network", link: "/about/aip-founders-network" },
-   {
+      {
         option: "Advisory Board",
         link: "/about/advisory-board",
       },
     ],
   },
-    // { id: "people-of-aip", name: "People of AIP", link: "/people-aip" },
+  // { id: "people-of-aip", name: "People of AIP", link: "/people-aip" },
   {
     label: "Our Work",
     id: "our-work",
@@ -92,9 +92,11 @@ const Footer = () => {
                   <Image src={Logo} alt="" fill />
                 </div>
                 <p className=" ~text-h10Copy6/h9Copy5 font-inter text-white ~pt-0/8 ~pr-0/[6.625rem]">
-                  Accelerate Indian Philanthropy is a peer network set up by
-                  philanthropists for philanthropists to support their giving
-                  efforts
+                 AIP is registered as Foundation for Accelerating 
+                  Philanthropy, a section 8 company under Indian Companies Act
+                  2013. it has valid registration under section 80G and 12A of
+                  Income-tax Act,196. AIP is authorised to receive CSR funding
+                  and funding under FCRA."
                 </p>
               </div>
               <div className="flex lg:hidden flex-col w-full pt-[1rem]">
@@ -102,15 +104,16 @@ const Footer = () => {
                   ArrayData={footerData}
                   accordionTriggerClassName="!text-white"
                 />
-                 <div className="!text-white pt-[1rem] text-h9Copy5 leading-[1.225rem] flex-wrap "> <Link href="/people-aip">People of AIP</Link></div>
+                <div className="!text-white pt-[1rem] text-h9Copy5 leading-[1.225rem] flex-wrap ">
+                  {" "}
+                  <Link href="/people-aip">People of AIP</Link>
+                </div>
                 <div className="flex text-h9Copy5 leading-[1.225rem] flex-wrap gap-[1rem] text-white pt-[1rem]">
-                  
                   <Link href="/careers">Careers</Link>|
                   {/* <Link href="/faq">FAQs</Link>| */}
                   <Link href="/about/aip-impact/foundation-fact-sheet">
                     Foundation Fact Sheet
                   </Link>
-                 
                   {/* <Link href="/join-our-learning-circle">
                     Join our learning circle
                   </Link> */}
@@ -193,55 +196,70 @@ const Footer = () => {
               <div className="flex flex-col gap-4 ~pt-[0.75rem]/[1rem]">
                 <Link
                   href="/about/aip-journey"
-                  className=" text-h9Copy5 font-inter text-white/60  " 
+                  className=" text-h9Copy5 font-inter text-white/60  "
                 >
-                  <ButtonAnimation className="hover:underline underline-offset-2 transition-all duration-700">The AIP Journey</ButtonAnimation>
+                  <ButtonAnimation className="hover:underline underline-offset-2 transition-all duration-700">
+                    The AIP Journey
+                  </ButtonAnimation>
                 </Link>
                 <Link
                   href="/about/our-approach"
                   className=" text-h9Copy5 font-inter text-white/60"
                 >
-                  <ButtonAnimation className="hover:underline underline-offset-2 transition-all duration-700">Our Approach</ButtonAnimation>
+                  <ButtonAnimation className="hover:underline underline-offset-2 transition-all duration-700">
+                    Our Approach
+                  </ButtonAnimation>
                 </Link>
                 <Link
                   href="/about/aip-impact"
                   className=" text-h9Copy5 font-inter text-white/60"
                 >
-                  <ButtonAnimation className="hover:underline underline-offset-2 transition-all duration-700"> AIP Impact</ButtonAnimation>
+                  <ButtonAnimation className="hover:underline underline-offset-2 transition-all duration-700">
+                    {" "}
+                    AIP Impact
+                  </ButtonAnimation>
                 </Link>
                 <Link
                   href="/about/giving-roadmap"
                   className=" text-h9Copy5 font-inter text-white/60"
                 >
-                  <ButtonAnimation className="hover:underline underline-offset-2 transition-all duration-700">Giving Roadmap</ButtonAnimation>
+                  <ButtonAnimation className="hover:underline underline-offset-2 transition-all duration-700">
+                    Giving Roadmap
+                  </ButtonAnimation>
                 </Link>
                 <Link
                   href="/about/financials"
                   className=" text-h9Copy5 font-inter text-white/60"
                 >
-                  <ButtonAnimation className="hover:underline underline-offset-2 transition-all duration-700">Financial Reports</ButtonAnimation>
+                  <ButtonAnimation className="hover:underline underline-offset-2 transition-all duration-700">
+                    Financial Reports
+                  </ButtonAnimation>
                 </Link>
                 <Link
                   href="/about/aip-founders-network"
                   className=" text-h9Copy5 font-inter text-white/60"
                 >
-                  <ButtonAnimation className="hover:underline underline-offset-2 transition-all duration-700"> AIP Founders Network</ButtonAnimation>
+                  <ButtonAnimation className="hover:underline underline-offset-2 transition-all duration-700">
+                    {" "}
+                    AIP Founders Network
+                  </ButtonAnimation>
                 </Link>
                 <Link
                   href="/about/philanthropist-network"
                   className=" text-h9Copy5 font-inter text-white/60"
                 >
-                  <ButtonAnimation className="hover:underline underline-offset-2 transition-all duration-700">Advisory Board</ButtonAnimation>
+                  <ButtonAnimation className="hover:underline underline-offset-2 transition-all duration-700">
+                    Advisory Board
+                  </ButtonAnimation>
                 </Link>
               </div>
             </div>
             <div className="hidden lg:block">
-             <Link href={"/people-aip"}>
+              <Link href={"/people-aip"}>
                 <p className="pt-[0.75rem] text-h9Copy5 font-inter font-bold text-white hover:underline underline-offset-2 transition-all duration-700">
                   People of AIP
                 </p>
-               
-             </Link>
+              </Link>
 
               <p className="pt-[2.25rem] text-h9Copy5 font-inter font-bold text-white">
                 Our Work
@@ -251,13 +269,18 @@ const Footer = () => {
                   href="/our-work/what-we-do"
                   className=" text-h9Copy5 font-inter text-white/60"
                 >
-                  <ButtonAnimation className="hover:underline underline-offset-2 transition-all duration-700">What We Do</ButtonAnimation>
+                  <ButtonAnimation className="hover:underline underline-offset-2 transition-all duration-700">
+                    What We Do
+                  </ButtonAnimation>
                 </Link>
                 <Link
                   href="/our-work/npo"
                   className=" text-h9Copy5 font-inter text-white/60"
                 >
-                  <ButtonAnimation className="hover:underline underline-offset-2 transition-all duration-700"> Non-Profit Organizations</ButtonAnimation>
+                  <ButtonAnimation className="hover:underline underline-offset-2 transition-all duration-700">
+                    {" "}
+                    Non-Profit Organizations
+                  </ButtonAnimation>
                 </Link>
                 {/* <Link
                   href="/our-work/projects-and-programs"
@@ -269,7 +292,9 @@ const Footer = () => {
                   href="/our-work/collaborations"
                   className=" text-h9Copy5 font-inter text-white/60"
                 >
-                  <ButtonAnimation className="hover:underline underline-offset-2 transition-all duration-700">Collaborations</ButtonAnimation>
+                  <ButtonAnimation className="hover:underline underline-offset-2 transition-all duration-700">
+                    Collaborations
+                  </ButtonAnimation>
                 </Link>
               </div>
             </div>
@@ -282,7 +307,9 @@ const Footer = () => {
                   href="/resource-center/aip-resources/aip-updates"
                   className=" text-h9Copy5 font-inter text-white/60"
                 >
-                  <ButtonAnimation className="hover:underline underline-offset-2 transition-all duration-700">AIP Resources</ButtonAnimation>
+                  <ButtonAnimation className="hover:underline underline-offset-2 transition-all duration-700">
+                    AIP Resources
+                  </ButtonAnimation>
                 </Link>
                 {/* <Link
                   href="/resource-center/curated-resources/featured"
@@ -294,18 +321,24 @@ const Footer = () => {
                   href="/resource-center/blogs"
                   className=" text-h9Copy5 font-inter text-white/60"
                 >
-                  <ButtonAnimation className="hover:underline underline-offset-2 transition-all duration-700">Blogs</ButtonAnimation>
+                  <ButtonAnimation className="hover:underline underline-offset-2 transition-all duration-700">
+                    Blogs
+                  </ButtonAnimation>
                 </Link>
               </div>
 
               <div className="pt-[2.25rem] text-h9Copy5 font-inter font-bold text-white">
                 <Link href="/careers">
-                  <ButtonAnimation className="hover:underline underline-offset-2 transition-all duration-700">Careers</ButtonAnimation>
+                  <ButtonAnimation className="hover:underline underline-offset-2 transition-all duration-700">
+                    Careers
+                  </ButtonAnimation>
                 </Link>
               </div>
               <div className="pt-[2.25rem] text-h9Copy5 font-inter font-bold text-white">
                 <Link href="/contact">
-                  <ButtonAnimation className="hover:underline underline-offset-2 transition-all duration-700">Contact</ButtonAnimation>
+                  <ButtonAnimation className="hover:underline underline-offset-2 transition-all duration-700">
+                    Contact
+                  </ButtonAnimation>
                 </Link>
               </div>
               {/* <div className="pt-[2.25rem] text-h9Copy5 font-inter font-bold text-white">
@@ -315,7 +348,9 @@ const Footer = () => {
               </div> */}
               <div className="pt-[2.25rem] text-h9Copy5 font-inter font-bold text-white">
                 <Link href="/about/aip-impact/foundation-fact-sheet">
-                  <ButtonAnimation className="hover:underline underline-offset-2 transition-all duration-700">Foundation Fact Sheet</ButtonAnimation>
+                  <ButtonAnimation className="hover:underline underline-offset-2 transition-all duration-700">
+                    Foundation Fact Sheet
+                  </ButtonAnimation>
                 </Link>
               </div>
               {/* <div className="pt-[2.25rem] text-h9Copy5 font-inter font-bold text-white">
