@@ -1,6 +1,7 @@
 import BgButton from "@/components/buttons/BgButton";
 import Image from "next/image";
 import ShapelessBrown from "@public/svg/shapelessBrown.svg";
+import Link from "next/link";
 // import Upcoming from "@public/images/upcoming.png";
 import React from "react";
 import { THomePageEvent } from "@/api/type";
@@ -41,10 +42,12 @@ const Spotlight = ({ eventData }: Props) => {
 
         {eventData && (
           <div className="pt-[1.25rem]">
-            <BgButton
-              text="Read More"
-              className="px-[2rem] py-[0.75rem] ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]"
-            />
+         <Link href={`our-work/collaborations/${eventData?.slug}`}>
+              <BgButton
+                text="Read More"
+                className="px-[2rem] py-[0.75rem] ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]"
+              />
+         </Link>
           </div>
         )}
       </div>

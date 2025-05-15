@@ -11,6 +11,7 @@ export type THomePageEvent = {
   title: string;
   description: string;
   image: string;
+  slug: string;
 };
 export type THomePageTeam = {
   _id: string;
