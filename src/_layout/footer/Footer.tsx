@@ -92,11 +92,11 @@ const Footer = () => {
                   <Image src={Logo} alt="" fill />
                 </div>
                 <p className=" ~text-h10Copy6/h9Copy5 font-inter text-white ~pt-0/8 ~pr-0/[6.625rem]">
-                 AIP is registered as Foundation for Accelerating 
-                  Philanthropy, a section 8 company under Indian Companies Act
-                  2013. it has valid registration under section 80G and 12A of
+                  AIP is registered as Foundation for Accelerating Philanthropy,
+                  a section 8 company under Indian Companies Act 2013.
+                  <br /> It has valid registration under section 80G and 12A of
                   Income-tax Act,196. AIP is authorised to receive CSR funding
-                  and funding under FCRA.&quot;
+                  and funding under FCRA.
                 </p>
               </div>
               <div className="flex lg:hidden flex-col w-full pt-[1rem]">

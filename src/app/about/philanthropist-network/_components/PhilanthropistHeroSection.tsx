@@ -36,27 +36,29 @@ const PhilanthropistHeroSection = () => {
                 </p> */}
                 <p className="hidden md:block ">
                   AIP has created an enabling support structure for wealth
-                  creators throughout their personal philanthropic journey. We are
+                  creators throughout their personal philanthropic journey. We
+                  are supported by our Core Founders and Founders who believe in
+                  the movement and in the potential for philanthropy to make a
+                  deep impact.
+                </p>
+              </FadeInAnimation>
+              <FadeInAnimation delay={0.1} x1={-20} x2={0}>
+                <p className="block md:hidden">
+                  We work with philanthropist on a project level. AIP has
+                  created an enabling support structure for wealth creators
+                  throughout their personal philanthropic journey. We are
                   supported by our Core Founders and Founders who believe in the
                   movement and in the potential for philanthropy to make a deep
                   impact.
                 </p>
               </FadeInAnimation>
-              <FadeInAnimation delay={0.1} x1={-20} x2={0}>
-                <p className="block md:hidden">
-                  We work with philanthropist on a project level. AIP has created
-                  an enabling support structure for wealth creators throughout
-                  their personal philanthropic journey. We are supported by our
-                  Core Founders and Founders who believe in the movement and in
-                  the potential for philanthropy to make a deep impact.
-                </p>
-              </FadeInAnimation>
             </div>
             <FadeInAnimation delay={0.2} x1={-20} x2={0}>
               <div className="  ~text-h5/h7 text-gray80 ~leading-[1.75rem]/[2.6rem] font-playFair ~pt-[2rem]/[3rem]">
-                We pride ourselves on providing pro-bono support. This ensures our
-                engagement remains neutral, unbiased, and devoid of conflicts. You
-                don&apos;t need to be a founder to engage with us.
+                We pride ourselves on providing pro-bono support. This ensures
+                our engagement remains neutral, unbiased, and devoid of
+                conflicts. You don&apos;t need to be a founder to engage with
+                us.
               </div>
             </FadeInAnimation>
           </div>
