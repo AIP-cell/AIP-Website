@@ -32,6 +32,7 @@ const Form = () => {
   } = useForm<TContactSchema>({
     resolver: zodResolver(contactSchema),
   });
+
   const { mutate, error } = useMutation({
     mutationFn: (formData: TContactSchema) =>
       Api.postContact({ ...formData, type }),

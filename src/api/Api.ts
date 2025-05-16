@@ -163,8 +163,7 @@ export const Api = {
       return null;
     }
   },
-  getPeopleOfAip: async (slug:string) => {
-
+  getPeopleOfAip: async (slug: string) => {
     try {
       const response = await axiosClient.get(`aip-team/${slug}`);
       return response.data;
@@ -337,6 +336,7 @@ export const Api = {
   },
   postContact: async (body: object) => {
     try {
+      console.log("first", body);
       const response = await axiosClient.post(`contact-form`, body);
       return response.data;
     } catch (error) {

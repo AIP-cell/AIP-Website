@@ -25,28 +25,28 @@ const Members = ({ countData }: Props) => {
       <div className=" container mx-auto ~pt-[5rem]/[13.25rem]">
         <div className="relative flex flex-col xl:flex-row w-full ~h-[45rem]/[49rem]  ~gap-[2rem]/0">
           <div className=" w-full xl:w-[65%] ~pl-[1.25rem]/[7rem] ~/md:~pr-[1.25rem]/[2rem] xl:pr-0 z-40">
-           <TextAnimation delay={0.2}>
+            <TextAnimation delay={0.2}>
               <div className="hidden md:block ~text-h4/h3  font-playFair text-gray50 ~leading-[2.6rem]/[3.3rem] z-40">
-                We believe Philanthropy can <br /> catalyse India &apos; s
+                We believe Philanthropy can <br /> catalyse India&apos;s
                 transformation; <br /> Philanthropists are keen to make a <br />{" "}
-                difference; and Philanthropists are <br /> best at inspiring each
-                other.
+                difference; and Philanthropists are <br /> best at inspiring
+                each other.
               </div>
-           </TextAnimation>
-          <TextAnimation  delay={0.2}>
+            </TextAnimation>
+            <TextAnimation delay={0.2}>
               <div className="block md:hidden ~text-h4/h3  font-playFair text-gray50 ~leading-[2.6rem]/[3.3rem] z-40">
-                We believe Philanthropy can catalyse India &apos;s transformation;
-                Philanthropists are keen to make a difference; and Philanthropists
-                are best at inspiring each other.
+                We believe Philanthropy can catalyse India&apos;s
+                transformation; Philanthropists are keen to make a difference;
+                and Philanthropists are best at inspiring each other.
               </div>
-          </TextAnimation>
-           <TextAnimation delay={0.2}>
+            </TextAnimation>
+            <TextAnimation delay={0.2}>
               <div className="text-midGray ~leading-[1.22rem]/[1.4rem] pt-[0.7875rem] ~pr-[1rem]/[18rem] z-40">
                 With our Core Founders, Founders and purposefully engaged
                 philanthropists, the AIP network is growing and shaping personal
                 giving by UHNIs and helping catalyse strategic giving.
               </div>
-           </TextAnimation>
+            </TextAnimation>
             {/* <WordStaggerAnimation
               text="We believe Philanthropy can <br> catalyse India's transformation;<br>
               Philanthropists are keen to make a <br> difference; and Philanthropists are <br> best at inspiring each other."

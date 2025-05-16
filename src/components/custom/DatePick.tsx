@@ -66,7 +66,7 @@ const DateFilter = ({ searchParams }: Props) => {
                 setStartDate(date);
                 const query = generatingSearchParam({
                   ...searchParams,
-                  date: dayjs(date).format("DD MM YY"),
+                  date: dayjs(date).format("DD-MM-YY"),
                 });
                 router.push(`?${query.toString()}`, {
                   scroll: false,
