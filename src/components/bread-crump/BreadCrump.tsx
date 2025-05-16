@@ -40,7 +40,7 @@ const BreadCrump = ({
         </div>
         {/* <Image src={BreadCrumpSvg} alt="bread-crump-Svg" /> */}
         <ButtonAnimation className="text-left">{textOne}</ButtonAnimation>
-        <ButtonAnimation className="text-left">{textTwo && <p>&nbsp;/&nbsp;</p>}</ButtonAnimation>
+        <ButtonAnimation className="text-left">{textTwo && <p>/&nbsp;</p>}</ButtonAnimation>
       </Link>
       {linkTwo && (
         <Link

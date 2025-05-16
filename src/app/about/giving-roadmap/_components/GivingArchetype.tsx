@@ -48,14 +48,21 @@ const GivingArchetype = () => {
           </h2> */}
         </div>
 
-        <p className=" ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]  ~px-[1.563rem]/[11rem] text-midGray ~pt-[1rem]/[2.5rem]">
+        <TextStaggerAnimation text=" Our Wealth with Purpose report identifies six distinct archetypes
+          among Indian philanthropists, each representing unique values and
+          approaches to giving. These archetypes are fluid, evolving as you
+          progress in your philanthropic journey. Which one resonates with you?
+          Where do you see yourself? AIP can support you in navigating the
+          giving landscape and elevating your impact in philanthropy." className=" ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]  ~px-[1.563rem]/[11rem] text-midGray ~pt-[1rem]/[2.5rem]"/>
+
+        {/* <p className=" ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]  ~px-[1.563rem]/[11rem] text-midGray ~pt-[1rem]/[2.5rem]">
           Our Wealth with Purpose report identifies six distinct archetypes
           among Indian philanthropists, each representing unique values and
           approaches to giving. These archetypes are fluid, evolving as you
           progress in your philanthropic journey. Which one resonates with you?
           Where do you see yourself? AIP can support you in navigating the
           giving landscape and elevating your impact in philanthropy.
-        </p>
+        </p> */}
         <div className="grid lg:grid-cols-2 xl:grid-cols-3 ~gap-x-0/[2.5rem] ~gap-y-[0.75rem]/[3.781rem] ~py-[2rem]/[3.5rem] w-full justify-center px-[1.563rem] md:~px-[4rem]/0">
           {itemsArray.map((items, i) => (
             <CardAnimation index={i} delay={0.1} key={i}>

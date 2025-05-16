@@ -152,14 +152,14 @@ const Footer = () => {
                 <span className="text-white"> CIN:</span> U85300DL202INPL384351
               </p>
               <div className="flex gap-[1.25rem] ~pt-[1rem]/[2rem]">
-                <ButtonAnimation className="relative size-[2.5rem]">
-                  <Image src={X} alt="" />
+                <ButtonAnimation className="relative size-[2.5rem] ">
+                  <Image src={X} alt="" className="hover:scale-110 transition-all duration-300" />
                 </ButtonAnimation>
                 <ButtonAnimation className="relative size-[2.5rem]">
-                  <Image src={In} alt="" />
+                  <Image src={In} alt="" className="hover:scale-110 transition-all duration-300"  />
                 </ButtonAnimation>
                 <ButtonAnimation className="relative size-[2.5rem]">
-                  <Image src={Youtube} alt="" />
+                  <Image src={Youtube} alt="" className="hover:scale-110 transition-all duration-300"  />
                 </ButtonAnimation>
               </div>
               <div className="hidden  lg:basis-3/4 lg:flex w-full lg:justify-start ~pt-10/[2rem] max-md:order-2">

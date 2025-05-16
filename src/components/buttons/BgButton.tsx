@@ -6,7 +6,7 @@ type Props = {
 };
 const BgButton = ({ text, className }: Props) => {
   return (
-    <ButtonAnimation className="bg-darkPurple hover:bg-white text-white hover:text-darkPurple rounded-full ">
+    <ButtonAnimation className=" z-30 bg-darkPurple hover:bg-white text-white hover:text-darkPurple rounded-full transition-all duration-500 ">
       <p className={`${className} `}>{text}</p>
     </ButtonAnimation>
   );

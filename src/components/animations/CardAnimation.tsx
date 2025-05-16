@@ -4,7 +4,7 @@ import { type ReactNode } from "react";
 
 type Props = {
   children: ReactNode;
-  index: number;
+  index?: number;
   delay: number;
   className?: string;
 };
@@ -22,7 +22,7 @@ const CardAnimation = ({ children, className, index, delay }: Props) => {
           opacity: 1,
           y: 0,
           transition: {
-            delay: delay * index,
+            delay: delay,
             ease: "easeInOut",
             // duration: 0.8,
             // ease: [0.8, 0.5, 0.22, 1],

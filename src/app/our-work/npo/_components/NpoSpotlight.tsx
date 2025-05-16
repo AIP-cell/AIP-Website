@@ -1,5 +1,5 @@
 import { TCaseStudies } from "@/api/type";
-import CardSlideAnimation from "@/components/animations/CardSlideAnimation";
+import CardSlideAnimation from "@/components/animations/CardAnimation";
 import TextStaggerAnimation from "@/components/animations/TextStaggerAnimation";
 import CaseStudy from "@/components/cards/CaseStudy";
 import CurveBg from "@public/svg/about/aip-impact/caseStudyPeachCurve.svg";

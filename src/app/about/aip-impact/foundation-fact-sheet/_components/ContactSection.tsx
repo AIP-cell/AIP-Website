@@ -48,13 +48,15 @@ const ContactSection = () => {
           ))}
         </div>
       </div>
-      <div className="~pt-[2rem]/[5rem]">
-        <Link href="/contact">
-          <BgButton
-            text="Join The Flow"
-            className="text-h9Copy5 leading-[1.225rem] px-[1.75rem] py-[0.75rem]"
-          />
+      <div className="~pt-[2rem]/[5rem] z-50">
+        
+        <Link href={"/contact"}>
+            <BgButton
+              text="Join The Flow"
+              className="text-h9Copy5 leading-[1.225rem] px-[1.75rem] py-[0.75rem] "
+            />
         </Link>
+       
       </div>
     </div>
   );

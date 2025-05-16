@@ -57,12 +57,14 @@ const GivingJourney = ({ response }: Props) => {
             className=""
           />
         </div>
-
-        <p className="~leading-[1.225rem]/[1.4rem] ~text-h9Copy5/h9Copy4 ~px-[1.563rem]/[11rem] text-midGray ~pt-[2rem]/[2.5rem]">
+<TextStaggerAnimation className="~leading-[1.225rem]/[1.4rem] ~text-h9Copy5/h9Copy4 ~px-[1.563rem]/[11rem] text-midGray ~pt-[2rem]/[2.5rem]" text=" Embark on a transformative journey with the TIE Model of Philanthropy.
+          At AIP, we categorise your philanthropic inputs into three impactful
+          areas:"/>
+        {/* <p className="~leading-[1.225rem]/[1.4rem] ~text-h9Copy5/h9Copy4 ~px-[1.563rem]/[11rem] text-midGray ~pt-[2rem]/[2.5rem]">
           Embark on a transformative journey with the TIE Model of Philanthropy.
           At AIP, we categorise your philanthropic inputs into three impactful
           areas:
-        </p>
+        </p> */}
         <div className="flex flex-col md:flex-row ~gap-[0.75rem]/[2.5rem] ~py-[2rem]/[3.5rem] w-full justify-center ~px-[1.563rem]/0">
           {itemsArray.map((items, i) => (
             <CardAnimation index={i} delay={0.2} key={i}>
@@ -71,16 +73,13 @@ const GivingJourney = ({ response }: Props) => {
           ))}
         </div>
         <div className="~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] text-center ~px-[1.56rem]/[11rem] text-midGray ">
-          <p className=" ">
-            Understanding where you stand is the first step towards a purposeful
+        <TextStaggerAnimation text="  Understanding where you stand is the first step towards a purposeful
             journey in giving. Are you just starting to explore? Or are you
-            looking to organise and elevate your philanthropic efforts?
-          </p>
-          <p className=" pt-[1rem]">
-            Discover your unique path through our questionnaire. Download it
+            looking to organise and elevate your philanthropic efforts?"/>
+            <TextStaggerAnimation className="pt-4" text=" Discover your unique path through our questionnaire. Download it
             here to dive deeper into how AIP can support you in channelling your
-            drive for impact.
-          </p>
+            drive for impact."/>
+         
         </div>
         <div className="~pt-[2rem]/[2.5rem] flex w-full flex-col items-center gap-[1rem] justify-center">
           <h2 className="~text-h9Copy5/h9Copy4 text-darkPurple font-playFair text-center">Discover your path</h2>

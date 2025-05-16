@@ -66,7 +66,7 @@ const BlogCard = ({
       <div className="flex flex-col w-full gap-[0.75rem]">
         <Link
           href={`/resource-center/blogs/${slug}`}
-          className=" w-full text-h6M text-gray80 line-clamp-2 text-ellipsis font-inter font-semibold leading-[1.575rem] underline underline-offset-4 decoration-[1.5px]"
+          className=" w-full text-h6M text-gray80 line-clamp-2 text-ellipsis font-inter font-semibold leading-[1.575rem] hover:underline underline-offset-4  decoration-[1.5px] transition-all duration-300"
         >
           {title}
         </Link>

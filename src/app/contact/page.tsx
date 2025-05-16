@@ -10,7 +10,7 @@ import BreadCrump from "@/components/bread-crump/BreadCrump";
 import LocationSvg from "@/components/svg/LocationSvg";
 import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 import WordStaggerAnimation from "@/components/animations/WordStaggerAnimation";
-import FadeInAnimation from "@/components/animations/FadeInAnimation";
+import CardAnimation from "@/components/animations/CardAnimation";
 import { Api } from "@/api/Api";
 import { notFound } from "next/navigation";
 import { TGetInTouch } from "@/api/type";
@@ -42,20 +42,24 @@ const page = async () => {
                 text="Get in Touch"
                 className="font-playFair ~text-h4/h3 leading-[3.3rem]"
               />
-              <FadeInAnimation delay={0.1} x1={-20} x2={0}>
+                <WordStaggerAnimation className="font-inter text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] pt-[1.25rem]  text-midGray md:text-gray60" text=" Please fill the form below to connect with a specific office
+                  or department that can best meet your needs. Need to talk to
+                  our team, please use the below information to connect with
+                  them."/>
+                  {/* <FadeInAnimation delay={0.1} x1={-20} x2={0}>
                 <p className="font-inter text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] pt-[1.25rem]  text-midGray md:text-gray60">
                   Please fill the form below to connect with a specific office
                   or department that can best meet your needs. Need to talk to
                   our team, please use the below information to connect with
                   them.
                 </p>
-              </FadeInAnimation>
+              </FadeInAnimation> */}
             </div>
           </div>
           <div className="~pt-[2.5rem]/[1.813rem]">
-            <FadeInAnimation x1={-20} x2={0} delay={0.1}>
+            <CardAnimation delay={0.1} >
               <Form />
-            </FadeInAnimation>
+            </CardAnimation>
           </div>
 
           <div className=" grid lg:grid-cols-2 ~py-[5rem]/[7.106rem] ~gap-[2.5rem]/0">
@@ -106,11 +110,11 @@ const page = async () => {
               </div>
             </div>
             <div className="lg:pl-[7.875rem] flex flex-col gap-5 ~pt-20/14 justify-end">
-              <FadeInAnimation delay={0.1} x1={20} x2={0}>
+              <CardAnimation delay={0.1} >
                 <h2 className=" font-playFairItalic text-h4 leading-[2.6rem] text-gray50">
                   Reach us at
                 </h2>
-              </FadeInAnimation>
+              </CardAnimation>
               <div className="~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] flex flex-col text-midGray">
                 <span className="font-bold">
                   Foundation For Accelerating Philanthropy
@@ -130,7 +134,7 @@ const page = async () => {
                     <LocationSvg className="size-[1.313rem] " />
                   </div>
 
-                  <p className="text-gray80 group-hover:text-white ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]">
+                  <p className="text-gray80 group-hover:text-white transition-all duration-500 ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]">
                     Open Link on Maps
                   </p>
                 </Link>

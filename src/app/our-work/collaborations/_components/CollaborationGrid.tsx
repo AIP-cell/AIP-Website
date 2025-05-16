@@ -53,7 +53,7 @@ const CollaborationGrid = ({ collaborationData }: Props) => {
               </div>
               <div className="w-full md:w-[80%]">
                 <Link href={`/our-work/collaborations/${item.slug}`}>
-                  <ButtonAnimation className="font-playFair ~text-h4a/h4 text-left text-gray80 ~leading-[2.113rem]/[2.6rem] underline underline-offset-4 decoration-[1px]">
+                  <ButtonAnimation className="font-playFair ~text-h4a/h4 text-left text-gray80 ~leading-[2.113rem]/[2.6rem] hover:underline underline-offset-4 decoration-[1px]">
                     {item?.title}
                   </ButtonAnimation>
                 </Link>

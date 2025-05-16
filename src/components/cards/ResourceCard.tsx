@@ -87,14 +87,14 @@ const ResourceCard = ({
             href={link ?? ""}
             target="_blank"
             download={toDownload}
-            className=" w-full text-h6M text-gray80 font-inter font-semibold leading-[1.575rem] underline underline-offset-4 decoration-[1.5px]"
+            className=" w-full text-h6M text-gray80 font-inter font-semibold leading-[1.575rem] hover:underline underline-offset-4 decoration-[1.5px]"
           >
             {title}
           </Link>
         ) : (
           <Link
             href={link ?? ""}
-            className=" w-full text-h6M text-gray80 font-inter font-semibold leading-[1.575rem] underline underline-offset-4 decoration-[1.5px]"
+            className=" w-full text-h6M text-gray80 font-inter font-semibold leading-[1.575rem] hover:underline underline-offset-4 decoration-[1.5px]"
           >
             {title}
           </Link>

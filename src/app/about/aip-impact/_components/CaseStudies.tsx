@@ -1,5 +1,5 @@
 import { TCaseStudies } from "@/api/type";
-import CardSlideAnimation from "@/components/animations/CardSlideAnimation";
+import CardSlideAnimation from "@/components/animations/CardAnimation";
 import TextStaggerAnimation from "@/components/animations/TextStaggerAnimation";
 import CaseStudy from "@/components/cards/CaseStudy";
 import CurveBg from "@public/svg/about/aip-impact/caseStudyPeachCurve.svg";
@@ -63,10 +63,10 @@ const CaseStudies = ({
         />
         <div className="~pt-[2.5rem]/[6.56rem] flex flex-col ~gap-[3.5rem]/[5.5rem] ~px-[1.25rem]/[7.8rem]">
           {caseStudyData.map((item, i: number) => (
-            <CardSlideAnimation index={i} delay={0.3} key={i}>
+            <CardSlideAnimation  delay={0.3} key={i}>
               <CaseStudy
                 key={i}
-                index={i}
+               index={i}
                 isReadMoreButton={isReadMoreButton}
                 slug={item?.slug}
                 foundationName={item?.foundationName}
