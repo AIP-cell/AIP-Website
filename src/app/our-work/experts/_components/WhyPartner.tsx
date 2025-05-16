@@ -42,11 +42,14 @@ const WhyPartner = () => {
         text="<color>Why</color> Partner"
         className="~text-h4/h2 ~leading-[2.6rem]/[3.3rem] text-gray80 font-playFair text-center"
       />
-      <p className="text-midGray ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] ~pt-[0.75rem]/[1.5rem] text-center">
+      <TextStaggerAnimation className="text-midGray ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] ~pt-[0.75rem]/[1.5rem] text-center" text=" As an expert engaged with AIP, you will experience a range of
+        opportunities that extend beyond the immediate ones for knowledge
+        sharing."/>
+      {/* <p className="text-midGray ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] ~pt-[0.75rem]/[1.5rem] text-center">
         As an expert engaged with AIP, you will experience a range of
         opportunities that extend beyond the immediate ones for knowledge
         sharing.
-      </p>
+      </p> */}
       <div className="pt-[4rem] flex flex-wrap justify-center gap-x-[4.563rem] gap-y-[3rem]  ">
         {datas.map((items, i) => (
           <CardAnimation index={i} delay={0.2} key={i}>
@@ -62,7 +65,7 @@ const WhyPartner = () => {
           </CardAnimation>
         ))}
       </div>
-      <ButtonAnimation className=" ~mt-[2rem]/[3rem] text-darkPurple border-2 border-darkPurple hover:text-white bg-white hover:bg-darkPurple rounded-full  py-[0.75rem] px-[1.75rem]">
+      <ButtonAnimation className=" ~mt-[2rem]/[3rem] text-darkPurple border-2 border-darkPurple hover:text-white bg-white hover:bg-darkPurple transition-all duration-500 rounded-full  py-[0.75rem] px-[1.75rem]">
         <Link
           href="/contact"
           className=" flex items-center text-h9Copy5 gap-[0.5rem]"

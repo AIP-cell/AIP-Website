@@ -53,19 +53,26 @@ const AipAndExperts = () => {
         </h1> */}
         <TextStaggerAnimation text="AIP <color>&</color> Experts" className="~text-h4/h2 ~leading-[2.6rem]/[3.3rem] font-playFair text-center w-full"/>
         <div className="~px-[1.25rem]/[14.375rem] flex flex-col w-full items-center ~gap-[0.7rem]/[1rem] ~pt-[0.75rem]/[2.5rem] text-center">
-          <p className="text-midGray ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]">
+        <TextStaggerAnimation text=" Experts play a vital role in AIP’s mission by contributing their
+            wealth of experience across various touchpoints. Their engagement
+            spans multiple activities that help our network members understand
+            the complexities of social issues, develop strategic giving
+            frameworks, and identify high-impact interventions. Here are some of
+            the key ways experts contribute to AIP’s work." className="text-midGray ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]"/>
+            <TextStaggerAnimation text=" Experts engage with AIP across a variety of platforms and activities
+                       designed to maximise their impact." className="text-midGray ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]"/>
+          {/* <p className="text-midGray ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]">
             Experts play a vital role in AIP’s mission by contributing their
             wealth of experience across various touchpoints. Their engagement
             spans multiple activities that help our network members understand
             the complexities of social issues, develop strategic giving
             frameworks, and identify high-impact interventions. Here are some of
             the key ways experts contribute to AIP’s work.
-          </p>
-
-          <p className="text-midGray ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]">
+          </p> */}
+          {/* <p className="text-midGray ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]">
             Experts engage with AIP across a variety of platforms and activities
             designed to maximise their impact.
-          </p>
+          </p> */}
         </div>
         <div className="flex flex-col ~gap-[0.5rem]/0">
           {datas.map((items, i) => (

@@ -295,12 +295,13 @@ export const Api = {
     field?: string;
     type?: string;
     date?: string;
+    pageparam?: number;
   }) => {
     try {
       const query = generatingSearchParam({
         ...data,
       });
-      const response = await axiosClient.get(`search?${query.toString()}`);
+      const response = await axiosClient.get(`search?${query.toString()}&page=${data.pageparam}`);
 
       return response.data;
     } catch (error) {

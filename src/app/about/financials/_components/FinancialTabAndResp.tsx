@@ -40,7 +40,7 @@ const FinancialTabAndResp = ({
                 });
               }}
               className={cn(
-                "~px-4/[2.4rem] md:flex justify-center cursor-pointer w-full items-center py-[.75rem] text-h9Copy5 leading-[1.22rem] font-inter ",
+                "~px-4/[2.4rem] md:flex justify-center cursor-pointer w-full items-center py-[.75rem] text-h9Copy5 leading-[1.22rem] font-inter  ",
                 {
                   "bg-darkPurple text-white rounded-full outline-none":
                     items?.year === currentYear,

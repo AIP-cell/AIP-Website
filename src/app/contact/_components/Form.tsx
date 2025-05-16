@@ -87,7 +87,7 @@ const Form = () => {
 
           <ButtonAnimation
             type="submit"
-            className="text-white hover:text-darkPurple leading-[1.225rem] bg-darkPurple hover:bg-white w-[8.0625rem] h-[2.75rem] rounded-[1.5rem] cursor-pointer text-h9Copy5 "
+            className="text-white hover:text-darkPurple leading-[1.225rem] bg-darkPurple hover:bg-white transition-all duration-500 w-[8.0625rem] h-[2.75rem] rounded-[1.5rem] cursor-pointer text-h9Copy5 "
           >
             Send Email
           </ButtonAnimation>

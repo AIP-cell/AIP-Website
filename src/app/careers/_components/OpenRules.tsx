@@ -31,12 +31,9 @@ const OpenRules = ({ jobs }: Props) => {
             className="~pt-[5rem]/[12.5rem] font-playFair tracking-[-.04rem] ~text-h4/h2 text-gray80 ~leading-[2.6rem]/[3.3rem] ~pb-[1rem]/5"
           />
           <div className="~px-[3.8rem]/[4rem]">
-            <p className="font-inter text-midGray text-center ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]">
-              Join the movement to bring about
-            </p>
-            <p className="font-inter text-midGray text-center ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]">
-              strategic philanthropy impact India’s transformation.
-            </p>
+          <TextStaggerAnimation text="Join the movement to bring about" className="font-inter text-midGray text-center ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]"/>
+          <TextStaggerAnimation text="strategic philanthropy impact India’s transformation." className="font-inter text-midGray text-center ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]"/>
+        
           </div>
           {jobs.length != 0 && <PositionsGrid data={jobs} />}
         </div>

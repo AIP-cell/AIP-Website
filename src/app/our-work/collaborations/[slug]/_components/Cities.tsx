@@ -130,7 +130,7 @@ const Cities = ({ collaboration, slug }: Props) => {
                         ? StorageUrl + collaboration.image
                         : "/images/news/newsDemo.png"
                     }
-                    className="  object-cover"
+                    className="  object-fill"
                     fill
                     alt="Systemic-image"
                   />

@@ -4,7 +4,7 @@ import React from "react";
 import CurvePurple from "@public/svg/purpleCurveCaseStudy.svg";
 import CurveBg from "@public/svg/about/aip-impact/caseStudyPeachCurve.svg";
 import { TCaseStudies } from "@/api/type";
-import CardSlideAnimation from "@/components/animations/CardSlideAnimation";
+import CardSlideAnimation from "@/components/animations/CardAnimation";
 import TextStaggerAnimation from "@/components/animations/TextStaggerAnimation";
 
 type Props = {

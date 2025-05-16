@@ -21,9 +21,9 @@ const FoundationFacts = ({ button, foundationFacts, className }: Props) => {
       <Image
         src={Bg}
         alt=""
-        className="block h-[95rem] object-cover  absolute ~top-[-22rem]/[-19rem] w-[500rem]"
+        className="block h-[95rem] object-cover  absolute ~top-[-22rem]/[-19rem] w-[500rem] z-20"
       />
-      <div className="relative container mx-auto ">
+      <div className="relative container mx-auto z-30">
         {/* <h2 className=" ~text-h4/h2 text-center font-playFair ~leading-[2.6rem]/[3.3rem]">
           Foundation{" "}
           <span className="text-textPurple font-playFairItalic">Facts</span>
@@ -87,7 +87,7 @@ const FoundationFacts = ({ button, foundationFacts, className }: Props) => {
           {foundationFacts?.foundersCount > 0 && (
             <OvalPeachCount
               mainClass="absolute flex md:w-full justify-center  top-[34rem] md:~top-[30rem]/[27rem] !right-0 md:right-auto"
-              countEnd={foundationFacts?.foundersCount}
+              countEnd={foundationFacts?.knowledgeResourcesCount}
               sizeClass="~size-[14.2rem]/[17.38rem]"
               text2="Knowledge"
               textClass2=" ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] !text-black"
@@ -100,7 +100,7 @@ const FoundationFacts = ({ button, foundationFacts, className }: Props) => {
         {button && (
           <div className="flex justify-center absolute ~bottom-[-2rem]/0 w-full ">
             <Link href="/about/aip-impact/foundation-fact-sheet">
-              <ButtonAnimation className="bg-darkPurple hover:bg-white text-white hover:text-darkPurple rounded-full">
+              <ButtonAnimation className="bg-darkPurple hover:bg-white text-white hover:text-darkPurple transition-all duration-500 rounded-full">
                 <p className="px-[1.75rem] py-[0.75rem] leading-[1.4rem]">
                   {button}
                 </p>

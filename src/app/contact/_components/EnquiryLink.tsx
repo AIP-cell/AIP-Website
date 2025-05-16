@@ -27,9 +27,9 @@ const EnquiryLink = ({ image, alt, data, name, type }: Props) => {
         {data && (
           <Link
             href={link ?? ""}
-            className="font-inter ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] text-gray80"
+            className="font-inter ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] text-gray80 "
           >
-            <ButtonAnimation>{data}</ButtonAnimation>
+            <ButtonAnimation className="hover:underline underline-offset-4 transition-all duration-500">{data}</ButtonAnimation>
           </Link>
         )}
       </div>

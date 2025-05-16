@@ -11,7 +11,7 @@ const ImgTitleDescHor = ({ src, title, desc }: Props) => {
       <div className="relative shrink-0 ~w-[10.3rem]/[11.87rem] ~h-[7.5rem]/[8.75rem]">
         <Image src={src} alt="" fill />
       </div>
-      <div className="flex flex-col gap-[0.75rem] text-center md:text-start">
+      <div className="flex flex-col gap-[0.75rem] text-center md:text-start grow ">
           <h3 className="~text-h4a/h3 text-gray80 font-playFair">{title}</h3>
           <h4 className="~text-h9Copy5/h9Copy4 text-midGray">{desc}</h4>
       </div>
