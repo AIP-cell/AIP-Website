@@ -7,6 +7,7 @@ import BottomImage from "@public/images/fivePBottomSection.png";
 import Image from "next/image";
 import WordStaggerAnimation from "@/components/animations/WordStaggerAnimation";
 import CardAnimation from "@/components/animations/CardAnimation";
+import TextAnimation from "@/components/animations/TextAnimation";
 const threeP = [
   {
     src: "/svg/about/our-approach/perspectiveModel.svg",
@@ -48,10 +49,13 @@ const FivePModel = () => {
                   text="<color>Partnering</color> The Flow"
                   className="~text-h4/h3 text-center text-gray80 ~leading-[2.6rem]/[3.1rem] font-playFair"
                 />
-                <WordStaggerAnimation className="text-midGray ~pt-[0.75rem]/[1.25rem] ~px-[2.8rem]/[21rem] ~text-h9Copy5/h9Copy4 text-center ~leading-[1.225rem]/[1.4rem]" text="  At AIP, we help philanthropists move from Inspiration to
+                <WordStaggerAnimation
+                  className="text-midGray ~pt-[0.75rem]/[1.25rem] ~px-[2.8rem]/[21rem] ~text-h9Copy5/h9Copy4 text-center ~leading-[1.225rem]/[1.4rem]"
+                  text="  At AIP, we help philanthropists move from Inspiration to
                   Impact through our proprietary 5P Framework. This structured
                   approach guides strategic giving, ensuring that every act of
-                  philanthropy is thoughtful, effective, and transformative."/>
+                  philanthropy is thoughtful, effective, and transformative."
+                />
                 {/* <p className="text-midGray ~pt-[0.75rem]/[1.25rem] ~px-[2.8rem]/[21rem] ~text-h9Copy5/h9Copy4 text-center ~leading-[1.225rem]/[1.4rem]">
                   At AIP, we help philanthropists move from Inspiration to
                   Impact through our proprietary 5P Framework. This structured
@@ -80,14 +84,17 @@ const FivePModel = () => {
         </div>
         <Image src={BottomImage} alt="" className="w-full " />
       </div>
-      <div>
-        <WordStaggerAnimation
-          text="Since AIP is financially supported by its core founders and founders,<br/>
-  we are able to provide pro-bono support to philanthropists. This 
-  ensures our engagement remains neutral, unbiased, and devoid of 
-  conflicts.<br/> You don't need to be a founder to engage with us."
-          className="~px-4/[14rem] font-light text-center ~text-h4a/h4 pb-20 ~leading-[2.6rem]/[2.8rem] font-playFair tracking-[-1px]"
-        />
+      <div className="px-[2rem]">
+        <TextAnimation>
+          <p className="max-w-[59rem] mx-auto font-light text-center ~text-h4a/h4 pb-20 ~leading-[2.6rem]/[2.8rem] font-playFair tracking-[-1px]">
+            Since AIP is financially supported by its core founders and
+            founders, we are able to provide pro-bono support to
+            philanthropists. This ensures our engagement remains neutral,
+            unbiased, and devoid of conflicts. You don&apos;t need to be a
+            founder to engage with us, but of course we would be delighted to
+            have you join our Founders Network.
+          </p>
+        </TextAnimation>
       </div>
     </>
   );

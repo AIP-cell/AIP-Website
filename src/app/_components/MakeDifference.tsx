@@ -30,7 +30,7 @@ const MakeDifference = () => {
           How we are trying to
         </h3> */}
         <TextAnimation>
-          <p className="~text-h4/h2 text-gray80 ~leading-[2.6rem]/[3.3rem] font-playFair">
+          <p className="~text-h4/h2 text-gray80 ~leading-[2.6rem]/[4rem] font-playFair">
             How we are trying to
           </p>
         </TextAnimation>
@@ -41,7 +41,6 @@ const MakeDifference = () => {
           className="~text-h4/h2 text-gray80 ~leading-[2.6rem]/[3.3rem] font-playFair"
         /> */}
         <TextAnimation>
-         
           <p className="~text-h4/h2 text-textPurple ~leading-[2.6rem]/[3.3rem] font-playFairItalic">
             make a difference
           </p>

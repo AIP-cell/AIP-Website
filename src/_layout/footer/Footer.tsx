@@ -92,8 +92,9 @@ const Footer = () => {
                   <Image src={Logo} alt="" fill />
                 </div>
                 <p className=" ~text-h10Copy6/h9Copy5 font-inter text-white ~pt-0/8 ~pr-0/[6.625rem]">
-                  AIP is registered as Foundation for Accelerating Philanthropy,
-                  a section 8 company under Indian Companies Act 2013.
+                  AIP is registered as &quot;Foundation for Accelerating
+                  Philanthropy&quot;, a section 8 company under Indian Companies
+                  Act 2013.
                   <br /> It has valid registration under section 80G and 12A of
                   Income-tax Act,196. AIP is authorised to receive CSR funding
                   and funding under FCRA.
@@ -153,13 +154,25 @@ const Footer = () => {
               </p>
               <div className="flex gap-[1.25rem] ~pt-[1rem]/[2rem]">
                 <ButtonAnimation className="relative size-[2.5rem] ">
-                  <Image src={X} alt="" className="hover:scale-110 transition-all duration-300" />
+                  <Image
+                    src={X}
+                    alt=""
+                    className="hover:scale-110 transition-all duration-300"
+                  />
                 </ButtonAnimation>
                 <ButtonAnimation className="relative size-[2.5rem]">
-                  <Image src={In} alt="" className="hover:scale-110 transition-all duration-300"  />
+                  <Image
+                    src={In}
+                    alt=""
+                    className="hover:scale-110 transition-all duration-300"
+                  />
                 </ButtonAnimation>
                 <ButtonAnimation className="relative size-[2.5rem]">
-                  <Image src={Youtube} alt="" className="hover:scale-110 transition-all duration-300"  />
+                  <Image
+                    src={Youtube}
+                    alt=""
+                    className="hover:scale-110 transition-all duration-300"
+                  />
                 </ButtonAnimation>
               </div>
               <div className="hidden  lg:basis-3/4 lg:flex w-full lg:justify-start ~pt-10/[2rem] max-md:order-2">

@@ -19,8 +19,6 @@ const geFounderNetworkApi = async (): Promise<TFounderNetwork> => {
   return response?.data;
 };
 
-
-
 const page = async () => {
   const response = await geFounderNetworkApi();
   if (!response) {
@@ -43,11 +41,11 @@ const page = async () => {
         <TestimonialsFromFounders testimonials={testimonials} />
       )} */}
 
-     <CoreFoundersAndFounders/>
+      <CoreFoundersAndFounders />
 
       <NetworkContactSection />
       <JoinTheFlow />
-      {caseStudyData.length != 0 && (
+      {/* {caseStudyData.length != 0 && (
         <CaseStudies
           isReadMoreButton={true}
           bottomCaseStudyCurveSvg={CurvePeach}
@@ -56,7 +54,7 @@ const page = async () => {
       )}
       {peopleData && peopleData.length != 0 && (
         <PeopleWeWorkWith peopleData={peopleData} />
-      )}
+      )} */}
     </div>
   );
 };
