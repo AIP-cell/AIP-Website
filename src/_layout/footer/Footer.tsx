@@ -296,7 +296,7 @@ const Footer = () => {
                   </ButtonAnimation>
                 </Link>
                 <Link
-                  href="/about/philanthropist-network"
+                  href="/about/advisory-board"
                   className=" text-h9Copy5 font-inter text-white/60"
                 >
                   <ButtonAnimation className="hover:underline underline-offset-2 transition-all duration-700">

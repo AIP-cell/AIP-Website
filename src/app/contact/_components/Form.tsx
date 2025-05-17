@@ -34,7 +34,7 @@ const Form = () => {
     resolver: zodResolver(contactSchema),
   });
 
-  const { mutate, error } = useMutation({
+  const { mutate, error} = useMutation({
     mutationFn: (formData: TContactSchema & { recaptchaToken?: string }) =>
       Api.postContact({ ...formData, type }),
     onSuccess: () => {
@@ -101,7 +101,7 @@ const Form = () => {
             type="submit"
             className="text-white hover:text-darkPurple leading-[1.225rem] bg-darkPurple hover:bg-white transition-all duration-500 w-[8.0625rem] h-[2.75rem] rounded-[1.5rem] cursor-pointer text-h9Copy5 "
           >
-            Send Email
+          {  isSubmitting ?"Submitting Email..." : "Submit Email"}
           </ButtonAnimation>
         </div>
       </div>

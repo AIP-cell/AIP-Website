@@ -340,6 +340,7 @@ export const Api = {
     try {
       console.log("first:::::::body", body);
       const response = await axiosClient.post(`contact-form`, body);
+      console.log("response:::::::", response);
       return response.data;
     } catch (error) {
       console.log(error);
