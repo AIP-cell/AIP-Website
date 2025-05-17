@@ -601,6 +601,7 @@ export type TSearch = {
   slug: string;
   key: string;
 };
+
 // End Search
 export type TJob = {
   id: number;

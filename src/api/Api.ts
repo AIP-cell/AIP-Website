@@ -300,7 +300,8 @@ export const Api = {
       const query = generatingSearchParam({
         ...data,
       });
-      const response = await axiosClient.get(`search?${query.toString()}&page=${data.pageparam}`);
+      const queryString = new URLSearchParams(query).toString();
+      const response = await axiosClient.get(`search?${queryString}&page=${data.pageparam}`);
 
       return response.data;
     } catch (error) {

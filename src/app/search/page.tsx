@@ -9,6 +9,7 @@ import ContentOne from "./_components/ContentOne";
 import ContentGallery from "./_components/ContentGallery";
 import CardAnimation from "@/components/animations/CardAnimation";
 import NoData from "@/components/NoData";
+import Search from "./_components/Search";
 
 const searchFilter = [
   {
@@ -107,10 +108,12 @@ const page = async ({
               &quot;Search result for {key}&quot;
             </p>
           )}
+
+          <Search/>
           {/* {response && response.length != 0 && (
             <AllTabContent searchData={response} />
           )} */}
-          {response && response.length != 0 ? (
+          {/* {response && response.length != 0 ? (
             <div className="pt-[1rem] pb-[7.46rem]">
               <div className="flex flex-col ">
                 {response.map((content, i) => {
@@ -167,7 +170,7 @@ const page = async ({
           ) : (
             // </div>
             <NoData />
-          )}
+          )} */}
         </div>
       </div>
     </div>
