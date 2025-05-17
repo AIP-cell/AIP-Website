@@ -1,3 +1,4 @@
+'use client';
 import Image from "next/image";
 import React from "react";
 import Logo from "@public/svg/footer/footerLogo.svg";
@@ -9,6 +10,9 @@ import Link from "next/link";
 import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 import FooterFishes from "./FooterFishes";
 import CustomAccordionSelect from "@/components/custom/CustomAccordionSelect";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
 
 const footerData = [
   {
@@ -64,7 +68,28 @@ const footerData = [
     ],
   },
 ];
+
+export const newsletterSchema = z.object({
+  email: z
+    .string()
+    .min(1, "Email is required")
+    .email("Invalid email address"),
+});
+
+export type NewsletterSchema = z.infer<typeof newsletterSchema>;
 const Footer = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<NewsletterSchema>({
+    resolver: zodResolver(newsletterSchema),
+  });
+
+  const onSubmit = (data: NewsletterSchema) => {
+    console.log("Submitted data:", data);
+    // Handle actual API call here
+  };
   return (
     <div className="">
       <div className="relative w-full z-[5000] overflow-hidden">
@@ -175,18 +200,31 @@ const Footer = () => {
                   />
                 </ButtonAnimation>
               </div>
-              <div className="hidden  lg:basis-3/4 lg:flex w-full lg:justify-start ~pt-10/[2rem] max-md:order-2">
-                <div className="w-full md:~w-[21rem]/[25rem] h-[2.8rem] bg-white flex rounded-full relative rounded-br-full   items-center justify-end">
+              <form
+                onSubmit={handleSubmit(onSubmit)}
+                className="hidden lg:basis-3/4 lg:flex w-full lg:justify-start pt-10 max-md:order-2"
+              >
+                <div className="w-full md:max-w-[25rem] h-[2.8rem] bg-white flex rounded-full relative items-center justify-end">
                   <input
                     type="text"
-                    placeholder=" Sign up for our newsletter"
-                    className="outline-none rounded-full text-footerGray w-[75%]  bg-[#5a4a9a] absolute top-0 left-0 z-[100] flex items-center border-2 border-footerGray pl-[1.5rem] text-h9Copy5  h-full "
-                  ></input>
-                  <button className="absolute w-[25%] pr-[2.56rem] z-[50] ~pl-[3rem]/[4rem] text-textPurple flex items-center justify-center md:justify-end bg-white h-full rounded-full text-right text-h9Copy5 font-inter">
+                    placeholder="Sign up for our newsletter"
+                    {...register("email")}
+                    className="outline-none rounded-full text-footerGray w-[75%] bg-[#5a4a9a] absolute top-0 left-0 z-[100] flex items-center border-2 border-footerGray pl-[1.5rem] text-h9Copy5 h-full"
+                  />
+                  <button
+                    type="submit"
+                    className="absolute w-[25%] pr-[2.56rem] z-[50] text-textPurple flex items-center justify-center md:justify-end bg-white h-full rounded-full text-right text-h9Copy5 font-inter"
+                  >
                     Join
                   </button>
+
+                  {errors.email && (
+                    <p className="absolute -bottom-6 left-4 text-red-500 text-sm">
+                      {errors.email.message}
+                    </p>
+                  )}
                 </div>
-              </div>
+              </form>
               <div className=" text-h10Copy6 ~pt-[1rem]/[2.875rem] font-inter text-white/60">
                 <span className="pr-2">
                   ©2024-25 Accelerate Indian Philanthropy

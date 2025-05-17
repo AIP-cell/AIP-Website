@@ -6,75 +6,77 @@ import ContentGallery from "./ContentGallery";
 import NoData from "@/components/NoData";
 import { TSearch } from "@/api/type";
 import { Api } from "@/api/Api";
-import { useInfiniteQuery } from "@tanstack/react-query";
+import { useInfiniteQuery, InfiniteData, QueryFunctionContext } from "@tanstack/react-query";
+import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 
 export const dynamic = "force-dynamic";
 
-const fetchData = async ({
-  pageParam = 1,
-  key,
-  field,
-  type,
-  date,
-}: {
-  key: string;
-  field: string;
-  type: string;
-  date: string;
-  pageParam: number;
-}): Promise<TSearch[]> => {
-  {
-    const response = await Api.getSearch({
-      key,
-      field,
-      type,
-      date,
-      pageparam: pageParam,
-    });
-
-    return response?.data;
-  }
+type SearchProps = {
+  searchParams: {
+    key: string;
+    field: string;
+    type: string;
+    date: string;
+  };
 };
 
-const Search = () => {
+const fetchData = async (
+  context: QueryFunctionContext<[string, SearchProps["searchParams"]]>
+): Promise<TSearch[]> => {
+  const { pageParam = 1, queryKey } = context;
+  const [, params] = queryKey;
+  const { key, field, type, date } = params;
+  const response = await Api.getSearch({
+    key,
+    field,
+    type,
+    date,
+    pageparam: Number(pageParam),
+  });
+  return response?.data ?? [];
+};
+
+const Search: React.FC<SearchProps> = ({ searchParams }) => {
   const [currentPage, setCurrentPage] = useState(0);
 
-  const {
-    data, // InfiniteQueryData<Page>
-    error, // Error
-    fetchNextPage,
-    hasNextPage, // boolean
-    isError,
-    isFetching, // boolean
-    isFetchingNextPage,
-  } = useInfiniteQuery<TSearch[], Error>({
-    queryKey: ["search"],
+const {
+  data,
+  error,
+  fetchNextPage,
+  hasNextPage,
+  isError,
+  isFetching,
+  isFetchingNextPage,
+} = useInfiniteQuery<TSearch[], Error, InfiniteData<TSearch[]>, [string, SearchProps["searchParams"]]>(
+  {
+    queryKey: ["search", searchParams],
     queryFn: fetchData,
+    initialPageParam: 1,
     getNextPageParam: (lastPage, allPages) => {
-      // If the last page returned less than 10 items, no more pages
       if (!lastPage || lastPage.length < 10) return undefined;
       return allPages.length + 1;
     },
-  });
+  }
+);
 
   const handleNextPage = () => {
     fetchNextPage();
     setCurrentPage((prev) => prev + 1);
   };
 
-  const paginatedResults = data
+  const response = data
     ? data.pages.flatMap((page) => page ?? [])
-    : null;
+    : [];
 
   if (isFetching && !data) return <div>Loading...</div>;
   if (isError) return <div>Error: {error?.message}</div>;
 
   return (
     <div>
-      {paginatedResults && paginatedResults.length !== 0 ? (
+      {response && response.length !== 0 ? (
         <div className="pt-[1rem] pb-[7.46rem]">
           <div className="flex flex-col ">
-            {paginatedResults.map((content, i) => {
+            {response.map((content, i) => {
               const keyPresent =
                 content.key === "curatedResource" ||
                 content.key === "aipImpactCasestudies" ||
@@ -96,7 +98,7 @@ const Search = () => {
                     <ContentOne
                       index={i}
                       key={i}
-                      searchData={paginatedResults}
+                      searchData={response}
                       title={content.title}
                       description={content.description}
                       designation={content.designation}
@@ -129,16 +131,17 @@ const Search = () => {
         // </div>
         <NoData />
       )}
-    {hasNextPage && (
-      <button
-        onClick={handleNextPage}
-        disabled={isFetchingNextPage}
-        className="mt-4 bg-black text-white px-4 py-2 rounded"  
-      >
-        Next Page
-      </button>
-    )}
-
+      {hasNextPage && (
+        <div className="flex justify-end w-full pb-16">
+          <ButtonAnimation
+            onClick={handleNextPage}
+            disabled={isFetchingNextPage}
+            className=" bg-darkPurple hover:bg-white text-white hover:text-darkPurple transition-all duration-500  px-[1.75rem] py-[0.75rem] leading-[1.4rem] border-white hover:border hover:border-darkPurple rounded-full  "
+          >
+            View More
+          </ButtonAnimation>
+        </div>
+      )}
     </div>
   );
 };

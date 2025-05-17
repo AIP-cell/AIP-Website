@@ -118,21 +118,21 @@ const Header = () => {
           ))}
         </div>
         <div className="hidden xl:flex rounded-full border-2 border-darkPurple relative">
-          <div className="rounded-full bg-darkPurple  px-[1.75rem] py-[0.75rem] ">
             <Link
               href="/contact"
-              className="text-white text-h9Copy5 leading-[1.225rem] "
+              className=" text-h9Copy5 leading-[1.225rem] "
             >
+          <div className="rounded-full bg-darkPurple text-white hover:underline underline-offset-4  transition-all duration-500  px-[1.75rem] py-[0.75rem] ">
               Get Involved
-            </Link>
           </div>
-          <div className="bg-white rounded-tr-full rounded-br-full flex items-center justify-center">
+            </Link>
             <Link href="/search" className="flex items-center justify-center">
+          <div className="bg-white rounded-tr-full rounded-br-full flex items-center justify-center">
               <ButtonAnimation className="px-[1.46rem]">
                 <SearchHeaderSvg />
               </ButtonAnimation>
-            </Link>
           </div>
+            </Link>
         </div>
       </div>
     </div>

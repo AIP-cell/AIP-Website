@@ -600,6 +600,7 @@ export type TSearch = {
   name: string;
   slug: string;
   key: string;
+  pages: {}
 };
 
 // End Search

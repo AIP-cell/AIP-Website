@@ -13,13 +13,15 @@ import { ButtonAnimation } from "../animations/ButtonAnimation";
 import cn from "@/utils/tailwind";
 import useClient from "@/hooks/useClient";
 import { TTestimonials } from "@/api/type";
-import { usePathname } from "next/navigation";
+import { usePathname } from "next/navigation"; 
 import ACardWithPlaySign from "../cards/aCards/ACardWithPlaySign";
 import PCardWithPlaySign from "../cards/pCards/PCardWithPlaySign";
 type Props = {
   slickArray: TTestimonials[];
 };
 const TestimonialSlick = ({ slickArray }: Props) => {
+
+  console.log( "slickArray::::::",slickArray);
   const [change, setChange] = useState<number>(0);
   const pathname = usePathname();
   const playtestimonialCard =
@@ -82,7 +84,17 @@ const TestimonialSlick = ({ slickArray }: Props) => {
                         ))}
                       {actualIndex % 2 == 1 &&
                         (playtestimonialCard ? (
-                          <PCardWithPlaySign
+                         <PCard
+                            key={i}
+                            image={items?.image}
+                            name={items?.name}
+                            work={items?.designation}
+                            desc={items?.description}
+                          />
+
+                        ) : (
+                         
+                            <PCardWithPlaySign
                             key={i}
                             darkText={playtestimonialCard}
                             linkOrVideo={items?.linkOrVideo}
@@ -91,14 +103,6 @@ const TestimonialSlick = ({ slickArray }: Props) => {
                             image={items?.image}
                             name={items?.name}
                             post={items?.designation}
-                            desc={items?.description}
-                          />
-                        ) : (
-                          <PCard
-                            key={i}
-                            image={items?.image}
-                            name={items?.name}
-                            work={items?.designation}
                             desc={items?.description}
                           />
                         ))}

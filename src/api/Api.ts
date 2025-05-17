@@ -338,7 +338,7 @@ export const Api = {
   },
   postContact: async (body: object) => {
     try {
-      console.log("first", body);
+      console.log("first:::::::body", body);
       const response = await axiosClient.post(`contact-form`, body);
       return response.data;
     } catch (error) {
