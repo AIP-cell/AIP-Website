@@ -1,16 +1,14 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { type ReactNode } from "react";
 
 type Props = {
   children: ReactNode;
-  index?: number;
   delay: number;
   className?: string;
 };
 
-const CardAnimation = ({ children, className, index, delay }: Props) => {
-  // const [value, setValue] = useState()
+const CardAnimation = ({ children, className, delay }: Props) => {
   return (
     <motion.div
       variants={{
@@ -24,8 +22,6 @@ const CardAnimation = ({ children, className, index, delay }: Props) => {
           transition: {
             delay: delay,
             ease: "easeInOut",
-            // duration: 0.8,
-            // ease: [0.8, 0.5, 0.22, 1],
           },
         }),
       }}
@@ -33,6 +29,7 @@ const CardAnimation = ({ children, className, index, delay }: Props) => {
       whileInView="animate"
       viewport={{ once: true }}
       className={`${className}`}
+      style={{ willChange: "transform, opacity" }}
     >
       {children}
     </motion.div>

@@ -4,13 +4,14 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import FilterDownArrowSvg from "../svg/FilterDownArrowSvg";
 import { generatingSearchParam } from "@/utils/UrlHelper";
-import { useRouter } from "next-nprogress-bar";
-import { useEffect, useRef, useState } from "react";
+import { useRouter } from "@bprogress/next/app";
+import { useState } from "react";
 import dayjs from "dayjs";
 import useClient from "@/hooks/useClient";
 import CrossSvg from "../svg/CrossSvg";
 
 type Props = {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   searchParams: Record<string, any>;
 };
 const DateFilter = ({ searchParams }: Props) => {
@@ -57,7 +58,6 @@ const DateFilter = ({ searchParams }: Props) => {
       </div>
       {showDatePicker && (
         <div className="relative z-[6000] ">
-          {/* sm:right-[-4.5rem] sm:left-auto right-auto */}
           <div className="absolute  top-1 left-0 z-[6000]">
             <DatePicker
               selected={startDate}
@@ -73,7 +73,6 @@ const DateFilter = ({ searchParams }: Props) => {
                 });
                 setShowDatePicker(false);
               }}
-              // minDate={new Date()}
               dateFormat="dd/MM/yyyy"
               placeholderText="DD/MM/YY"
               inline

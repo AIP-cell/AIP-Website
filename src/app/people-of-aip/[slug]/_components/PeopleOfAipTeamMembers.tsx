@@ -4,7 +4,6 @@ import Image from "next/image";
 import Bg1 from "@public/svg/people-of-aip/peachCurveRightTeamAip.svg";
 import OvalPeach from "@public/svg/ovalPeach.svg";
 import Bg2 from "@public/svg/people-of-aip/peachCurveLeftTeamAip.svg";
-import { TteamAIP, TTeamMembers } from "@/api/type";
 import WordStaggerAnimation from "@/components/animations/WordStaggerAnimation";
 import TextStaggerAnimation from "@/components/animations/TextStaggerAnimation";
 
@@ -27,9 +26,6 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
       <div className="pt-[3rem] pb-[7rem] ">
         <div className="flex flex-col  justify-center ~px-[1.25rem]/[20.9rem] ~pb-[1.83rem]/[3.875rem] container mx-auto">
           {urlSlug === "experts" && (
-            // <h2 className=" text-center ~text-h4/h2 ~leading-[2.6rem]/[3.3rem] text-textPurple font-playFairItalic">
-            //   Experts
-            // </h2>
             <WordStaggerAnimation
               text="<color>Experts</color>"
               className="text-center ~text-h4/h2 ~leading-[2.6rem]/[3.3rem] text-textPurple font-playFairItalic"
@@ -42,20 +38,12 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
             />
           )}
           {urlSlug === "team-aip" && (
-            // <h2 className=" text-center ~text-h4/h2 text-gray80 ~leading-[2.6rem]/[3.3rem] font-playFair">
-            //   Team{" "}
-            //   <span className="text-textPurple font-playFairItalic">AIP</span>
-            // </h2>
             <WordStaggerAnimation
               text="Team <color>AIP</color>"
               className="text-center ~text-h4/h2 text-gray80 ~leading-[2.6rem]/[3.3rem] font-playFair"
             />
           )}
           {urlSlug === "advisory-board" && (
-            // <h2 className=" text-center ~text-h4/h2 text-gray80 ~leading-[2.6rem]/[3.3rem] font-playFair">
-            //   Advisory{" "}
-            //   <span className="text-textPurple font-playFairItalic">Board</span>
-            // </h2>
             <WordStaggerAnimation
               text="Advisory <color>Board</color>"
               className=" text-center ~text-h4/h2 text-gray80 ~leading-[2.6rem]/[3.3rem] font-playFair"
@@ -96,8 +84,6 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
                 {position === 0 && (
                   <div className="flex ~gap-[1.25rem]/[5.6rem] ~px-[1.25rem]/[7.8rem] relative container mx-auto ">
                     <ATeamCard
-                      // slug={items?.slug}
-                      // link={`/people-of-aip/${urlSlug}/${items.slug}`}
                       image={items?.image}
                       title={items?.name}
                       desc={items?.designation}
@@ -105,10 +91,6 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
                     />
                     {teamMembers[i + 1] && (
                       <PTeamCard
-                        // slug={items?.slug}
-                        // link={`/people-of-aip/${urlSlug}/${
-                        //   teamMembers[i + 1].slug
-                        // }`}
                         image={teamMembers[i + 1]?.image}
                         title={teamMembers[i + 1]?.name}
                         desc={teamMembers[i + 1]?.designation}
@@ -133,8 +115,6 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
                     </>
                     <div className=" flex ~gap-[1.25rem]/[5.6rem] ~px-[1.25rem]/[7.8rem] relative container mx-auto ">
                       <ATeamCard
-                        // slug={items?.slug}
-                        // link={`/people-of-aip/${urlSlug}/${items.slug}`}
                         image={items?.image}
                         desc={items?.designation}
                         title={items?.name}
@@ -158,20 +138,14 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
                 {position === 4 && (
                   <div className="justify-center flex flex-wrap ~gap-[1.25rem]/[5.6rem] ~px-[1.25rem]/[7.8rem] relative container mx-auto">
                     <ATeamCard
-                      // slug={items?.slug}
                       image={items?.image}
-                      // link={`/people-of-aip/${urlSlug}/${items.slug}`}
                       title={items?.name}
                       desc={items?.designation}
                       linkedin={true}
                     />
                     {teamMembers[i + 1] && (
                       <PTeamCard
-                        // slug={teamMembers[i + 1]?.slug}
                         image={teamMembers[i + 1]?.image}
-                        // link={`/people-of-aip/${urlSlug}/${
-                        //   teamMembers[i + 1].slug
-                        // }`}
                         title={teamMembers[i + 1]?.name}
                         desc={teamMembers[i + 1]?.designation}
                         linkedin={true}
@@ -179,11 +153,7 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
                     )}
                     {teamMembers[i + 2] && (
                       <ATeamCard
-                        // slug={teamMembers[i + 2]?.slug}
                         image={teamMembers[i + 2]?.image}
-                        // link={`/people-of-aip/${urlSlug}/${
-                        //   teamMembers[i + 2].slug
-                        // }`}
                         title={teamMembers[i + 2]?.name}
                         desc={teamMembers[i + 2]?.designation}
                         linkedin={true}
@@ -191,11 +161,7 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
                     )}
                     {teamMembers[i + 3] && (
                       <PTeamCard
-                        // slug={teamMembers[i + 3]?.slug}
                         image={teamMembers[i + 3]?.image}
-                        // link={`/people-of-aip/${urlSlug}/${
-                        //   teamMembers[i + 3].slug
-                        // }`}
                         title={teamMembers[i + 3]?.name}
                         desc={teamMembers[i + 3]?.designation}
                         linkedin={true}
@@ -206,20 +172,14 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
                 {position === 8 && (
                   <div className=" flex justify-start md:justify-end ~gap-[1.25rem]/[5.6rem]  ~px-[1.25rem]/[7.8rem] relative container mx-auto">
                     <ATeamCard
-                      // slug={items?.slug}
                       image={items?.image}
-                      // link={`/people-of-aip/${urlSlug}/${items.slug}`}
                       title={items?.name}
                       desc={items?.designation}
                       linkedin={true}
                     />
                     {teamMembers[i + 1] && (
                       <PTeamCard
-                        // slug={teamMembers[i + 1]?.slug}
                         image={teamMembers[i + 1]?.image}
-                        // link={`/people-of-aip/${urlSlug}/${
-                        //   teamMembers[i + 1].slug
-                        // }`}
                         title={teamMembers[i + 1]?.name}
                         desc={teamMembers[i + 1]?.designation}
                         linkedin={true}
@@ -243,20 +203,14 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
                     </>
                     <div className=" flex justify-start md:justify-end ~gap-[1.25rem]/[5.6rem] ~px-[1.25rem]/[7.8rem] relative container mx-auto">
                       <ATeamCard
-                        // slug={items?.slug}
                         image={items?.image}
-                        // link={`/people-of-aip/${urlSlug}/${items.slug}`}
                         title={items?.name}
                         desc={items?.designation}
                         linkedin={true}
                       />
                       {teamMembers[i + 1] && (
                         <PTeamCard
-                          // slug={items?.slug}
                           image={teamMembers[i + 1]?.image}
-                          // link={`/people-of-aip/${urlSlug}/${
-                          //   teamMembers[i + 1]?.slug
-                          // }`}
                           title={teamMembers[i + 1]?.name}
                           desc={teamMembers[i + 1]?.designation}
                           linkedin={true}

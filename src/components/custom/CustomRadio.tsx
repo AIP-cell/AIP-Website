@@ -11,14 +11,13 @@ export default function CustomRadio({ type, setType, radioArray }: Props) {
   return (
     <div className="max-[23rem]:w-[18.5rem] ~w-[21.8rem]/[25.875rem] ">
       <RadioGroup
-        //   by="name"
         value={type}
         onChange={setType}
         aria-label="Server size"
         className="flex flex-col gap-[0.75rem]"
       >
         {radioArray.map((items, index) => (
-          <CardAnimation index={index} delay={0.2} key={index}>
+          <CardAnimation delay={0.2} key={index}>
             <Radio
               key={items}
               value={items}

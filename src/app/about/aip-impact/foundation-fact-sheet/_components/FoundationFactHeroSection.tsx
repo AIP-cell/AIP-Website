@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import Oval from "@public/svg/ovalPeach.svg";
 import HeroBg from "@public/svg/about/aip-impact/foundationFactHeroSvg.svg";
 import React from "react";
@@ -40,15 +39,6 @@ const FoundationFactHeroSection = () => {
               and Vishal Tulsyan (Motilal Oswal)."
               className="~pt-[4.313rem]/[7.5rem]  ~px-[1.25rem]/[7rem] text-left  md:text-center font-playFair  ~text-h4a/h4 text-gray80 tracking-[-1.4px] ~leading-[2.6rem]/[3.25rem]"
             />
-            {/* <div className="~pt-[4.313rem]/[7.5rem]  ~px-[1.25rem]/[7.8rem] text-left  md:text-center font-playFair  ~text-h4a/h3 text-gray80 tracking-[-1.4px] ~leading-[2.6rem]/[3.25rem]">
-              AIP works to see strategic philanthropy impact India’s
-              transformation. AIP is by and for philanthropists – to inspire,
-              influence and inform strategic giving. AIP’s Core Founders are some
-              of India’s leading philanthropists—Ashish and Manisha Dhawan (The
-              Convergence Foundation), Rohini Nilekani (Rohini Nilekani
-              Philanthropies), Amit and Archana Chandra (ATE Chandra Foundation)
-              and Vishal Tulsyan (Motilal Oswal).
-            </div> */}
           </div>
         </div>
       </div>

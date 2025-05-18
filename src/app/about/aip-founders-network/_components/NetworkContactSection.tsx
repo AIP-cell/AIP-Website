@@ -1,7 +1,6 @@
 import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 import CardAnimation from "@/components/animations/CardAnimation";
 import TextStaggerAnimation from "@/components/animations/TextStaggerAnimation";
-import BgButton from "@/components/buttons/BgButton";
 import TitleDescCard from "@/components/cards/TitleDescCard";
 import MailSvg from "@/components/svg/MailSvg";
 import Link from "next/link";
@@ -32,23 +31,19 @@ const itemsArray = [
 const NetworkContactSection = () => {
   return (
     <div className="flex flex-col items-center pt-[6rem] pb-[1rem] container mx-auto">
-      {/* <h2 className="~text-h4/h2 text-center ~leading-[2.6rem]/[3.3rem] text-gray80 font-playFair">
-        Reason to
-        <span className="text-textPurple font-playFairItalic">
-          &nbsp;Connect
-        </span>
-      </h2> */}
       <TextStaggerAnimation
-          text="Reason to <color>Connect</color>"
-          className="~text-h4/h2 text-center ~leading-[2.6rem]/[3.3rem] text-gray80 font-playFair"
-        />
+        text="Reason to <color>Connect</color>"
+        className="~text-h4/h2 text-center ~leading-[2.6rem]/[3.3rem] text-gray80 font-playFair"
+      />
       <p className="~leading-[1.225rem]/[1.4rem] ~text-h9Copy5/h9Copy4 text-midGray ~pt-[2rem]/[2.5rem] ~px-[2.813rem]/[15.813rem] text-center">
-      We believe in an independent, sector agnostic, and deeply focused approach. Valuing long-lasting relationships built on a strong legacy and an inspiring network.
+        We believe in an independent, sector agnostic, and deeply focused
+        approach. Valuing long-lasting relationships built on a strong legacy
+        and an inspiring network.
       </p>
       <div className="~pt-[2rem]/[2.5rem] flex justify-center ">
         <div className="grid  md:grid-cols-2 ~gap-x-[3rem]/[5rem] ~gap-y-[1.75rem]/[3.5rem]">
           {itemsArray.map((item, i) => (
-            <CardAnimation index={i} delay={0.1} key={i}>
+            <CardAnimation delay={0.1} key={i}>
               <TitleDescCard
                 key={i}
                 title1={item.title1}
@@ -64,7 +59,6 @@ const NetworkContactSection = () => {
         <ButtonAnimation className="text-white hover:text-darkPurple bg-darkPurple hover:bg-white rounded-full transition-all duration-500  py-[0.75rem] px-[1.75rem]">
           <Link
             href="/contact"
-
             className=" flex items-center text-h9Copy5 leading-[1.225rem] gap-[0.5rem]"
           >
             <p className="">Contact Us</p>

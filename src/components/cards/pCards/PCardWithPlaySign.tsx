@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import Src from "@public/images/pSample.png";
 import PlayButtonPurple from "@public/svg/playButtonPurple.svg";
 import Linkedin from "@public/svg/grayLinkedin.svg";
 

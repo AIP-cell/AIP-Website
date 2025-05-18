@@ -1,15 +1,12 @@
 "use client";
 
 import * as React from "react";
-import { ArrowLeftIcon, ArrowRightIcon } from "@radix-ui/react-icons";
 import useEmblaCarousel, {
   type UseEmblaCarouselType,
 } from "embla-carousel-react";
 
 import { Button } from "@/components/ui/button";
 import cn from "@/utils/tailwind";
-import RightSlickArrowSvg from "../svg/RightSlickArrowSvg";
-import LeftSlickArrowSvg from "../svg/LeftSlickArrowSvg";
 import SquareSizedArrow from "../svg/SquareSizedArrow";
 
 type CarouselApi = UseEmblaCarouselType[1];
@@ -201,7 +198,7 @@ const CarouselPrevious = React.forwardRef<
   HTMLButtonElement,
   React.ComponentProps<typeof Button>
 >(({ className, variant = "outline", size = "icon", ...props }, ref) => {
-  const { orientation, scrollPrev, canScrollPrev } = useCarousel();
+  const { scrollPrev, canScrollPrev } = useCarousel();
 
   return (
     <Button
@@ -209,13 +206,7 @@ const CarouselPrevious = React.forwardRef<
       variant={variant}
       size={size}
       className={cn(
-        // "absolute text-white leading-[22.4px] font-inter bg-darkPurple rounded-tl-3xl rounded-bl-3xl rounded-tr-xl rounded-br-xl p-[0.75rem]",
         "hover:text-white hover:scale-110 duration-150 transition-all text-darkPurple leading-[22.4px] font-inter hover:bg-darkPurple bg-white rounded-tl-3xl rounded-bl-3xl rounded-tr-xl rounded-br-xl p-[0.75rem] h-fit",
-        // orientation === "horizontal"
-        //   ? // -left-12
-        //     // -translate-y-1/2
-        //     "flex justify-center bottom-[-4rem] "
-        //   : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
         className
       )}
       disabled={!canScrollPrev}
@@ -223,9 +214,6 @@ const CarouselPrevious = React.forwardRef<
       {...props}
     >
       <SquareSizedArrow className="size-[1.25rem]" />
-      {/* <LeftSlickArrowSvg className="w-[1rem] h-[0.57rem] " /> */}
-      {/* <ArrowLeftIcon className="h-4 w-4" /> */}
-      {/* <LeftSlickArrowSvg className="h-4 w-4" /> */}
     </Button>
   );
 });
@@ -235,7 +223,7 @@ const CarouselNext = React.forwardRef<
   HTMLButtonElement,
   React.ComponentProps<typeof Button>
 >(({ className, variant = "outline", size = "icon", ...props }, ref) => {
-  const { orientation, scrollNext, canScrollNext } = useCarousel();
+  const { scrollNext, canScrollNext } = useCarousel();
 
   return (
     <Button
@@ -243,13 +231,7 @@ const CarouselNext = React.forwardRef<
       variant={variant}
       size={size}
       className={cn(
-        // "absolute h-8 w-8 text-white leading-[22.4px] font-inter bg-darkPurple rounded-tr-3xl rounded-br-3xl rounded-tl-xl rounded-bl-xl p-[0.75rem]",
         "hover:text-white  text-darkPurple leading-[22.4px] font-inter hover:bg-darkPurple bg-white rounded-tr-3xl rounded-br-3xl  p-[0.75rem] h-fit",
-        // orientation === "horizontal"
-        //   ? // -right-12 top-1/2
-        //     // -translate-y-1/2
-        //     "flex justify-center bottom-[-4rem] "
-        //   : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
         className
       )}
       disabled={!canScrollNext}
@@ -257,8 +239,6 @@ const CarouselNext = React.forwardRef<
       {...props}
     >
       <SquareSizedArrow className="size-[1.25rem] rotate-180" />
-      {/* <RightSlickArrowSvg className="w-[1rem] h-[0.57rem]" /> */}
-      {/* <ArrowRightIcon className="h-4 w-4" /> */}
       <span className="sr-only">Next slide</span>
     </Button>
   );

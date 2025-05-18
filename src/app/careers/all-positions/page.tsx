@@ -58,7 +58,7 @@ const page = async ({
               All Positions
             </p>
           </FadeInAnimation>
-          <FadeInAnimation delay={0.1} x1={-20} x2={0}>
+          <FadeInAnimation delay={0.1} y1={20} y2={0}>
             <p className="~leading-[2.113rem]/[2.6rem] font-playFair ~text-h4a/h4 text-gray80 pt-5 tracking-[0.02rem]">
               See where you fit into the movement!{" "}
             </p>

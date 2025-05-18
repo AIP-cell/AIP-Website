@@ -1,7 +1,6 @@
 import cn from "@/utils/tailwind";
 import Image from "next/image";
 import React from "react";
-import { ButtonAnimation } from "../animations/ButtonAnimation";
 import { StorageUrl } from "@/utils/BaseUrl";
 import Link from "next/link";
 import CaseStudyDescSection from "../CaseStudyDescSection";
@@ -17,7 +16,6 @@ type Props = {
   isLinkOrPdf?: string;
   file?: string;
   fileLink?: string;
-  isReadMoreButton?: boolean;
 };
 const CaseStudy = ({
   title,
@@ -31,7 +29,6 @@ const CaseStudy = ({
   isLinkOrPdf,
   file,
   fileLink,
-  isReadMoreButton,
 }: Props) => {
   const link = isLinkOrPdf === "pdf" ? StorageUrl + file : fileLink;
   const toDownload = isLinkOrPdf === "pdf" ? true : false;
@@ -80,14 +77,6 @@ const CaseStudy = ({
         )}
 
         <CaseStudyDescSection desc={desc} index={index} />
-        {/* <div
-          className={cn(
-            "text-midGray ~pt-[1rem]/[1.25rem] ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] relative"
-          )}
-        >
-          {desc}
-        </div> */}
-        {/* {!isReadMoreButton && ( */}
         <>
           {slug ? (
             <Link
@@ -95,11 +84,11 @@ const CaseStudy = ({
               download={toDownload}
               className="~pt-[2rem]/[2.5rem]"
             >
-              <ButtonAnimation className=" rounded-full  border-2 border-darkPurple hover:bg-darkPurple ">
+              <div className=" rounded-full  border-2 border-darkPurple hover:bg-darkPurple ">
                 <h3 className="text-darkPurple hover:text-white font-medium text-h9Copy5 leading-[1.225rem] py-[0.75rem] px-[1.75rem]">
                   Read More
                 </h3>
-              </ButtonAnimation>
+              </div>
             </Link>
           ) : (
             isLinkOrPdf != "" && (
@@ -109,16 +98,15 @@ const CaseStudy = ({
                 download={toDownload}
                 className="~pt-[2rem]/[2.5rem]"
               >
-                <ButtonAnimation className=" rounded-full  border-2 border-darkPurple hover:bg-darkPurple ">
+                <div className=" rounded-full  border-2 border-darkPurple hover:bg-darkPurple ">
                   <h3 className="text-darkPurple hover:text-white font-medium text-h9Copy5 leading-[1.225rem] py-[0.75rem] px-[1.75rem]">
                     Read More
                   </h3>
-                </ButtonAnimation>
+                </div>
               </Link>
             )
           )}
         </>
-        {/* )} */}
       </div>
     </div>
   );

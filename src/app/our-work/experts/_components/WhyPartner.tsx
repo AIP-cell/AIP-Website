@@ -35,24 +35,19 @@ const datas = [
 const WhyPartner = () => {
   return (
     <div className="~px-[2.84rem]/[18.656rem] ~pt-[7.5rem]/[12.5rem] ~pb-[7.5rem]/[8rem] container mx-auto flex flex-col items-center w-full">
-      {/* <h2 className="~text-h4/h2 ~leading-[2.6rem]/[3.3rem] text-gray80 font-playFair text-center">
-        <span className="text-textPurple font-playFairItalic">Why</span> Partner
-      </h2> */}
       <TextStaggerAnimation
         text="<color>Why</color> Partner"
         className="~text-h4/h2 ~leading-[2.6rem]/[3.3rem] text-gray80 font-playFair text-center"
       />
-      <TextStaggerAnimation className="text-midGray ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] ~pt-[0.75rem]/[1.5rem] text-center" text=" As an expert engaged with AIP, you will experience a range of
+      <TextStaggerAnimation
+        className="text-midGray ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] ~pt-[0.75rem]/[1.5rem] text-center"
+        text=" As an expert engaged with AIP, you will experience a range of
         opportunities that extend beyond the immediate ones for knowledge
-        sharing."/>
-      {/* <p className="text-midGray ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] ~pt-[0.75rem]/[1.5rem] text-center">
-        As an expert engaged with AIP, you will experience a range of
-        opportunities that extend beyond the immediate ones for knowledge
-        sharing.
-      </p> */}
+        sharing."
+      />
       <div className="pt-[4rem] flex flex-wrap justify-center gap-x-[4.563rem] gap-y-[3rem]  ">
         {datas.map((items, i) => (
-          <CardAnimation index={i} delay={0.2} key={i}>
+          <CardAnimation delay={0.2} key={i}>
             <ImgTitleDescVer
               titleClassName="!text-h4 !leading-[2.6rem]"
               totalWidth="!w-[19rem]"

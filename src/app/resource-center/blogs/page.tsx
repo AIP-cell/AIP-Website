@@ -1,8 +1,4 @@
-import React from "react";
 import BreadCrump from "@/components/bread-crump/BreadCrump";
-// import ResourcesSm from "../_components/ResourcesSm";
-// import TabListAndRespSelect from "../_components/TabListAndRespSelect";
-import ResourceCard from "@/components/cards/ResourceCard";
 import WordStaggerAnimation from "@/components/animations/WordStaggerAnimation";
 import CardAnimation from "@/components/animations/CardAnimation";
 import { Api } from "@/api/Api";
@@ -10,34 +6,8 @@ import { notFound } from "next/navigation";
 import { TAipResourcesCategory } from "@/api/type";
 import BlogCard from "@/components/cards/BlogCard";
 
-// export const dynamic = "force-dynamic";
-// const dummyArray = [
-//   {
-//     title: "title",
-//     description: "description",
-//     domain: "domain",
-//     date: "",
-//   },
-//   {
-//     title: "title",
-//     description: "description",
-//     domain: "domain",
-//     date: "",
-//   },
-//   {
-//     title: "title",
-//     description: "description",
-//     domain: "domain",
-//     date: "",
-//   },
-//   {
-//     title: "title",
-//     description: "description",
-//     domain: "domain",
-//     date: "",
-//   },
-// ];
 export const dynamic = "force-dynamic";
+
 const getAllBlogApi = async (): Promise<TAipResourcesCategory[]> => {
   const response = await Api.getAllBlog();
   return response?.data;
@@ -67,15 +37,9 @@ const page = async () => {
 
         <div className=" grid md:grid-cols-2 lg:grid-cols-3 gap-[4.5rem]">
           {response?.map((item, i) => (
-            <CardAnimation index={i} delay={0.1} key={i}>
+            <CardAnimation delay={0.1} key={i}>
               <BlogCard
-                //   city={item.city}
-                //   linkKey={item?.key}
-                index={i}
                 slug={item?.slug}
-                //   isLinkOrPdf={item?.isLinkOrPdf}
-                //   file={item?.file}
-                //   fileLink={item?.fileLink}
                 name={item?.author}
                 readTime={item?.readingTime}
                 key={i}

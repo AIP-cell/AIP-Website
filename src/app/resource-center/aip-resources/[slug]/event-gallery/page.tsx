@@ -1,7 +1,4 @@
-import React from "react";
 import projectBg from "@public/svg/projects-page/projectBg.svg";
-import Link from "next/link";
-import SampleImage from "@public/images/sample.png";
 
 import Image from "next/image";
 import BreadCrump from "@/components/bread-crump/BreadCrump";

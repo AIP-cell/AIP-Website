@@ -3,16 +3,16 @@ import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 import CrossSvg from "@/components/svg/CrossSvg";
 import SearchSvg from "@/components/svg/SearchSvg";
 import { generatingSearchParam } from "@/utils/UrlHelper";
-import { useRouter } from "next-nprogress-bar";
+import { useRouter } from "@bprogress/next/app";
 import React, { useState } from "react";
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const SearchBar = (props: { searchParams: Record<string, any> }) => {
   const router = useRouter();
-  const [searchKey, setSearchKey] = useState(props.searchParams.key ?? ""); // Avoid using 'key' as a state variable
+  const [searchKey, setSearchKey] = useState(props.searchParams.key ?? "");
 
   const handleSearch = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-
     const query = generatingSearchParam({
       ...props.searchParams,
       key: searchKey,
@@ -34,7 +34,6 @@ const SearchBar = (props: { searchParams: Record<string, any> }) => {
         className="text-h4 leading-[2.6rem] w-full font-playFair pb-[0.625rem] outline-none"
       />
       <div className="absolute right-0 flex gap-[1.5rem] text-textPurple">
-        {/* Clear input */}
         <ButtonAnimation
           className="cursor-pointer"
           type="button"
@@ -50,7 +49,6 @@ const SearchBar = (props: { searchParams: Record<string, any> }) => {
           <CrossSvg className="size-[1.5rem]" />
         </ButtonAnimation>
 
-        {/* Submit button (NO onClick needed, form handles submission) */}
         <ButtonAnimation className="cursor-pointer" type="submit">
           <SearchSvg className="size-[1.5rem]" />
         </ButtonAnimation>

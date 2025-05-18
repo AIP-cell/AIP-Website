@@ -1,7 +1,6 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
 import InputField from "./InputField";
-import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 import CustomRadio from "@/components/custom/CustomRadio";
 import { useMutation } from "@tanstack/react-query";
 import { z } from "zod";
@@ -34,9 +33,19 @@ const Form = () => {
     resolver: zodResolver(contactSchema),
   });
 
-  const { mutate, error} = useMutation({
-    mutationFn: (formData: TContactSchema & { recaptchaToken?: string }) =>
-      Api.postContact({ ...formData, type }),
+  const { mutateAsync, error } = useMutation({
+    mutationFn: async (formData: TContactSchema) => {
+      const key = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+
+      const recaptcha = await load(key || "");
+      const token = await recaptcha?.execute("formSubmit");
+      const response = Api.postContact({
+        ...formData,
+        type,
+        recaptcha_token: token,
+      });
+      return response;
+    },
     onSuccess: () => {
       toast.success("Successfully Send");
       reset();
@@ -48,18 +57,8 @@ const Form = () => {
   });
 
   const onSubmit = async (formData: TContactSchema) => {
-
-     const key = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY 
-
-    
-    const recaptcha = await load(key || "");
-    const token = await recaptcha?.execute("formSubmit");
-    
-    // console.log("formData::", formData);
-    mutate(formData);
+    await mutateAsync(formData);
   };
-  
-
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col  ">
@@ -97,12 +96,13 @@ const Form = () => {
             )}
           </div>
 
-          <ButtonAnimation
+          <button
             type="submit"
+            disabled={isSubmitting}
             className="text-white hover:text-darkPurple leading-[1.225rem] bg-darkPurple hover:bg-white transition-all duration-500 w-[8.0625rem] h-[2.75rem] rounded-[1.5rem] cursor-pointer text-h9Copy5 "
           >
-          {  isSubmitting ?"Submitting Email..." : "Submit Email"}
-          </ButtonAnimation>
+            {isSubmitting ? "Submitting Email..." : "Submit Email"}
+          </button>
         </div>
       </div>
     </form>

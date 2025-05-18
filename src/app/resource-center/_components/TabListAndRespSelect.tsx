@@ -1,7 +1,5 @@
 "use client";
 
-import React, { useState } from "react";
-
 import { Tab, TabList } from "@headlessui/react";
 
 import {
@@ -12,15 +10,14 @@ import {
 } from "@headlessui/react";
 import DownTagSvg from "@/components/svg/DownTagSvg";
 import { generatingSearchParam } from "@/utils/UrlHelper";
-import { useRouter } from "next-nprogress-bar";
+import { useRouter } from "@bprogress/next/app";
 
 type Props = {
-  tabArray: any;
+  tabArray: { tab: string; tabNo: number; key: string }[];
   textClassName?: string;
   listClassName?: string;
   listboxButtonClassName?: string;
-  selectedIndex?: number;
-  // setSelected: (value: string) => void;
+  selectedIndex: number;
   setSelectedIndex: (value: number) => void;
 };
 const TabListAndRespSelect = ({
@@ -38,13 +35,12 @@ const TabListAndRespSelect = ({
       <TabList
         className={`hidden lg:flex bg-[#F0F0F2] rounded-full w-fit p-[.25rem] ${listClassName}`}
       >
-        {tabArray.map((items: any, i: number) => (
+        {tabArray.map((items, i: number) => (
           <div key={i}>
             <Tab
               onClick={() => {
                 const query = generatingSearchParam({
-                  selected: items.tab ? items.tab : items.year && items.year,
-                  // domain,
+                  selected: items.tab,
                 });
                 router.push(`?${query.toString()}`, {
                   scroll: false,
@@ -52,14 +48,14 @@ const TabListAndRespSelect = ({
               }}
               className={` ~px-4/[2.4rem] md:flex justify-center w-full items-center py-[.75rem] data-[selected]:bg-darkPurple data-[selected]:text-white data-[selected]:rounded-full text-h9Copy5 leading-[1.22rem] font-inter data-[selected]:outline-none ${textClassName}`}
             >
-              {items.tab ? items?.tab : items.year && items?.year}
+              {items.tab}
             </Tab>
           </div>
         ))}
       </TabList>
 
       <Listbox
-        value={tabArray?.at(selectedIndex)}
+        value={selectedIndex}
         onChange={setSelectedIndex}
         as="div"
         className="block lg:hidden w-full"
@@ -82,13 +78,12 @@ const TabListAndRespSelect = ({
           className=" w-[var(--button-width)] mt-[0.4rem] z-[10000] bg-bgGray5 border-2  flex flex-col gap-[0.625rem] rounded-xl  outline-none"
         >
           {tabArray?.map(
-            (items: any, i: number) =>
+            (items, i: number) =>
               items?.tab != tabArray?.at(selectedIndex)?.tab && (
                 <ListboxOption
                   onClick={() => {
                     const query = generatingSearchParam({
                       selected: items?.tab,
-                      // domain: domain,
                     });
                     router.push(`?${query.toString()}`, {
                       scroll: false,

@@ -1,7 +1,5 @@
 "use client";
 import Image from "next/image";
-import React from "react";
-// import OvalPeachSvg from "@public/svg/ovalPeach.svg";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 type Props = {
@@ -25,7 +23,7 @@ const OvalPurpleCount = ({
   sizeClass,
 }: Props) => {
   const { ref, inView } = useInView({
-    triggerOnce: false,
+    triggerOnce: true,
   });
   return (
     <div ref={ref} className={` ${mainClass} `}>
@@ -33,7 +31,6 @@ const OvalPurpleCount = ({
         className={` ${sizeClass} relative shrink-0   flex flex-col justify-center items-center`}
       >
         <Image src="/svg/ovalPurple.svg" alt="image" fill />
-        {/* <OvalPurpleSvg /> */}
         <div className={`text-black z-50 ${countClass}`}>
           {inView && (
             <CountUp

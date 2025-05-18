@@ -23,10 +23,7 @@ const ImgTitleDescVer = ({
   totalWidth,
 }: Props) => {
   return (
-    // justify-center
-    <div
-      className={`flex flex-col  items-center gap-[0.75rem] ${totalWidth}`}
-    >
+    <div className={`flex flex-col  items-center gap-[0.75rem] ${totalWidth}`}>
       <div
         className={` ${imageWidth} relative ~w-[10rem]/[20rem] ~h-[7.5rem]/[8.75rem]`}
       >

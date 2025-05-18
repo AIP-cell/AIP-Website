@@ -1,7 +1,6 @@
 "use client";
 import cn from "@/utils/tailwind";
-import { motion, useInView, Variants } from "motion/react";
-import { useRef } from "react";
+import { motion, Variants } from "motion/react";
 
 type Props = {
   text: string;
@@ -19,8 +18,6 @@ const WordStaggerAnimation = ({
   duration,
   staggerChildren,
 }: Props) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: false, margin: "0% 0% -50px 0%" });
   const words = text
     .replaceAll("<br>", " <br> ")
     .replaceAll("<br/>", " <br> ")
@@ -58,11 +55,12 @@ const WordStaggerAnimation = ({
       variants={container}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false, margin: "0% 0% -50px 0%" }}
+      viewport={{ once: true, margin: "0% 0% -50px 0%" }}
       className={cn(className)}
+      style={{ willChange: "transform, opacity" }}
     >
       {words.map((word: string, index: number) => {
-         if (word == "<br>") {
+        if (word == "<br>") {
           return <span className="block" key={index}></span>;
         }
         if (word == "<color>") {
@@ -84,6 +82,7 @@ const WordStaggerAnimation = ({
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
+              style={{ willChange: "transform" }}
             >
               {word.split("").map((letter, letterIndex) => (
                 <motion.span
@@ -106,6 +105,7 @@ const WordStaggerAnimation = ({
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   className="leading-[1.1] inline-block"
+                  style={{ willChange: "transform, opacity" }}
                 >
                   {letter}
                 </motion.span>

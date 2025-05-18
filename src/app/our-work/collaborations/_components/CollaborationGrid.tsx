@@ -1,5 +1,3 @@
-import React from "react";
-// import bcgSvg from "@public/svg/projects-page/bcg.svg";
 import Image from "next/image";
 import Link from "next/link";
 import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
@@ -8,24 +6,6 @@ import dayjs from "dayjs";
 import { StorageUrl } from "@/utils/BaseUrl";
 import CardAnimation from "@/components/animations/CardAnimation";
 
-const datas = [
-  {
-    title: "Systemic Impact Exemplars ",
-    desc: "A short description on the what it is about. Giving has lagged behind despite a growing pool of first-generation wealth creators who have the ability to give forward.",
-  },
-  {
-    title: "Lorem ipsum dolor sit ",
-    desc: "A short description on the what it is about. Giving has lagged behind despite a growing pool of first-generation wealth creators who have the ability to give forward. Giving has lagged behind despite a growing pool of first-generation wealth creators who have the ability to give forward.",
-  },
-  {
-    title: "Lorem ipsum dolor sit ",
-    desc: "A short description on the what it is about. Giving has lagged behind despite a growing pool of first-generation wealth creators who have the ability to give forward. Giving has lagged behind despite a growing pool of first-generation wealth creators who have the ability to give forward.",
-  },
-  {
-    title: "Lorem ipsum dolor sit ",
-    desc: "A short description on the what it is about. Giving has lagged behind despite a growing pool of first-generation wealth creators who have the ability to give forward. Giving has lagged behind despite a growing pool of first-generation wealth creators who have the ability to give forward.",
-  },
-];
 type Props = {
   collaborationData: TCollaborationsArray[];
 };
@@ -37,7 +17,7 @@ const CollaborationGrid = ({ collaborationData }: Props) => {
   return (
     <div>
       {collaborationData.map((item, i) => (
-        <CardAnimation index={i} delay={0.1} key={i}>
+        <CardAnimation delay={0.1} key={i}>
           <div
             key={i}
             className="relative flex flex-col justify-between ~pt-[2.5rem]/8 w-full  ~pb-[1.25rem]/9 border-b border-gray10"

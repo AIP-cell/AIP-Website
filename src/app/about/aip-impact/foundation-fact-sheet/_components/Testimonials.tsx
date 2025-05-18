@@ -16,12 +16,6 @@ const Testimonials = ({ testimonialsData }: Props) => {
         className="hidden lg:block left-0 absolute top-0"
       />
       <div className="relative container mx-auto">
-        {/* <h2 className="font-playFair text-gray80 ~text-h4/h2 ~leading-[2.6rem]/[3.3rem] text-center">
-          Philanthropist
-          <span className="font-playFairItalic text-textPurple">
-            &nbsp;Speak
-          </span>
-        </h2> */}
         <TextStaggerAnimation
           text="Philanthropist <color>Speak</color>"
           className="font-playFair text-gray80 ~text-h4/h2 ~leading-[2.6rem]/[3.3rem] text-center"

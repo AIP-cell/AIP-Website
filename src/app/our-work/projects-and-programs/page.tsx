@@ -103,7 +103,6 @@ const page = async ({
   if (!response) {
     notFound();
   }
-  // console.log("searchParams::", searchParams);
   return (
     <div className="~pt-[4.4rem]/[5rem] ">
       <div className=" relative w-full  ">
@@ -124,7 +123,7 @@ const page = async ({
               Projects and Programs
             </p>
           </FadeInAnimation>
-          <FadeInAnimation delay={0.1} x1={-20} x2={0}>
+          <FadeInAnimation delay={0.1} y1={20} y2={0}>
             <p className="~leading-[2.113rem]/[2.6rem] font-playFair ~text-h4a/h4 text-gray80 pt-5  md:tracking-[-0.02rem]">
               Through our projects and programs, we inspire and influence each
               other by sharing their motivations, knowledge, ideas and
@@ -155,17 +154,14 @@ const page = async ({
           {response.length != 0 && (
             <div className=" pb-[5rem] grid sm:grid-cols-2 lg:grid-cols-3 ~gap-[2.5rem]/[4.5rem]">
               {response?.map((item, i) => (
-                <CardAnimation index={i} delay={0.2} key={i}>
+                <CardAnimation delay={0.2} key={i}>
                   <ResourceCard
                     key={i}
-                    index={i}
-                    // link={`/our-work/projects-and-programs/${item.slug}`}
                     projectsAndProgram
                     slug={item.slug}
                     src={item.image}
                     title={item.title}
                     desc={item.description}
-                    // category={item.category}
                     date={item.date}
                   />
                 </CardAnimation>

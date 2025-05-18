@@ -1,9 +1,8 @@
 "use client";
 import cn from "@/utils/tailwind";
-import Link from "next/link";
 import React from "react";
 import ResourcesSm from "./ResourcesSm";
-import { useRouter } from "next-nprogress-bar";
+import { useRouter } from "@bprogress/next/app";
 
 type Props = {
   currentTab?: string;

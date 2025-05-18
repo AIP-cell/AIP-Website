@@ -1,10 +1,7 @@
-import ACardWithButton from "@/components/cards/aCards/ACardWithButton";
-import PCardWithButton from "@/components/cards/pCards/PCardWithButton";
 import Image from "next/image";
 import Bg from "@public/svg/peach-bg-curve-founders.svg";
 import React from "react";
 import ACard from "@/components/cards/aCards/ACard";
-import SampleImage from "@public/images/sample.png";
 import PCard from "@/components/cards/pCards/PCard";
 import { TTeamMembers } from "@/api/type";
 import cn from "@/utils/tailwind";
@@ -20,11 +17,6 @@ const OurCoreFoundersContent = ({ coreFounderMembers }: Props) => {
     <div className="w-full relative">
       <div className="~pt-[2.125rem]/[3rem]  relative">
         <div className="flex flex-col items-center justify-center ~px-[1.25rem]/[20.938rem] container mx-auto">
-          {/* <h2 className="~text-h4/h2 text-center text-gray80 ~leading-[2.6rem]/[3.2rem] font-playFair">
-            <span className="text-textPurple font-playFairItalic">
-              &nbsp;Core-Founders
-            </span>
-          </h2> */}
           <WordStaggerAnimation
             text="<color>Our Core Founders</color>"
             className="~text-h4/h2 text-center text-gray80 ~leading-[2.6rem]/[3.2rem]"
@@ -40,7 +32,7 @@ const OurCoreFoundersContent = ({ coreFounderMembers }: Props) => {
             const isFirstDesign = Math.floor(i / 2) % 2 === 0;
             if (i % 2 == 0) {
               return (
-                <CardAnimation index={i} delay={0.1} key={i}>
+                <CardAnimation delay={0.1} key={i}>
                   <div key={i} className="relative h-full">
                     {i % 2 == 0 && (
                       <Image

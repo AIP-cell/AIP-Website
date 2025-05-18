@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React, { useState } from "react";
-import Src from "@public/images/aSample.png";
 import Linkedin from "@public/svg/grayLinkedin.svg";
 
 import PlayButtonPurple from "@public/svg/playButtonPurple.svg";
@@ -21,7 +20,7 @@ type Props = {
   linkedinLink?: string;
   darkText?: boolean;
 };
-// "  "
+
 const ACardWithPlaySign = ({
   image,
   name,

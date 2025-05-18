@@ -17,13 +17,12 @@ const page = async () => {
   if (!response) {
     notFound();
   }
-  const ourValueData=response.ourValues
+  const ourValueData = response.ourValues;
   return (
     <div className="pt-[5rem] overflow-hidden">
       <JourneyHeroSection />
       <JourneySoFar />
-      <OurValueUsingCarousel ourValueData={ourValueData}/>
-      {/* <OurValueSectionUsingRef /> */}
+      <OurValueUsingCarousel ourValueData={ourValueData} />
     </div>
   );
 };

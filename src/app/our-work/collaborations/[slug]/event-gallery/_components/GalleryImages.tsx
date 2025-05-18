@@ -39,9 +39,6 @@ const GalleryImages = ({ galleryImages }: Props) => {
   };
   return (
     <div className="~pb-[5rem]/0 ~pt-[6rem]/[6.175rem]">
-      {/* <h2 className="text-gray80 w-full !text-center ~leading-[2.6rem]/[3.3rem] ~pb-[1.25rem]/[5rem] ~text-h4/h2 font-playFair">
-        Images
-      </h2> */}
       <TextStaggerAnimation
         text="Images"
         className="text-gray80 w-full !text-center ~leading-[2.6rem]/[3.3rem] ~pb-[1.25rem]/[5rem] ~text-h4/h2 font-playFair"
@@ -99,7 +96,7 @@ const GalleryImages = ({ galleryImages }: Props) => {
           {galleryImages?.map(
             (items, i) =>
               i != selectedIndex && (
-                <CardAnimation index={i} delay={0.2} key={i}>
+                <CardAnimation delay={0.2} key={i}>
                   <div
                     key={i}
                     onClick={() => setSelectedIndex(i)}

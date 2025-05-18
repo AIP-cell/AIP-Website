@@ -7,16 +7,14 @@ import {
   ListboxOption,
   ListboxOptions,
 } from "@headlessui/react";
-import { useRouter } from "next-nprogress-bar";
+import { useRouter } from "@bprogress/next/app";
 
 export default function ResourcesSm({
   selected,
   listArray,
-}: //   setSelected,
-{
-  selected: any;
+}: {
+  selected?: string;
   listArray: { name: string; link: string }[];
-  //   setSelected: any;
 }) {
   const router = useRouter();
   return (
@@ -35,7 +33,6 @@ export default function ResourcesSm({
           <ListboxOptions
             anchor="bottom"
             className={cn(
-              // w-[var(--button-width)]
               " w-[var(--button-width)] rounded-2xl border border-white/5 bg-white/5 mt-1  [--anchor-gap:var(--spacing-1)] focus:outline-none ",
               "transition duration-100 ease-in "
             )}

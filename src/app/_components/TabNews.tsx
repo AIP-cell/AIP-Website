@@ -1,10 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { TabGroup, TabPanel, TabPanels } from "@headlessui/react";
-// import NewsCard from "@/components/cards/NewsCard";
-// import CarouselNews from "./CarouselNews";
 import TabListAndRespSelect from "../resource-center/_components/TabListAndRespSelect";
-import CarouselRespNews from "./CarouselRespNews";
 import { CarouselNews } from "./CarouselNews";
 import { THomePageNews } from "@/api/type";
 import NoData from "@/components/NoData";
@@ -25,7 +22,7 @@ const TabNews = ({ newsData, searchParams }: Props) => {
   );
 
   const [selectedIndex, setSelectedIndex] = useState(
-    searchParams ? SelectedData?.tabNo : 0
+    (searchParams ? SelectedData?.tabNo : 0) ?? 0
   );
 
   return (

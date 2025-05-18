@@ -1,8 +1,6 @@
 import React from "react";
-import { ButtonAnimation } from "../../../../../components/animations/ButtonAnimation";
-import MailSvg from "../../../../../components/svg/MailSvg";
-import BgButton from "../../../../../components/buttons/BgButton";
-import TitleDescCard from "../../../../../components/cards/TitleDescCard";
+import BgButton from "@/components/buttons/BgButton";
+import TitleDescCard from "@/components/cards/TitleDescCard";
 import CardAnimation from "@/components/animations/CardAnimation";
 import Link from "next/link";
 
@@ -26,7 +24,6 @@ const itemsArray = [
 ];
 const ContactSection = () => {
   return (
-    // ~pb-[5rem]/[7.5rem]
     <div className="flex flex-col items-center ~pt-[5rem]/[13.5rem] ">
       <h2 className="~text-h4/h2 ~leading-[2.6rem]/[3.3rem] text-center text-gray80 font-playFair">
         Reason to
@@ -37,7 +34,7 @@ const ContactSection = () => {
       <div className="~pt-[3rem]/[5rem] flex justify-center ~px-[1.25rem]/[19rem]">
         <div className="grid md:grid-cols-2 ~gap-x-[3rem]/[5rem] ~gap-y-[1.75rem]/[2.5rem]">
           {itemsArray.map((item, i) => (
-            <CardAnimation key={i} index={i} delay={0.1}>
+            <CardAnimation key={i} delay={0.1}>
               <TitleDescCard
                 key={i}
                 title1={item.title1}
@@ -49,14 +46,12 @@ const ContactSection = () => {
         </div>
       </div>
       <div className="~pt-[2rem]/[5rem] z-50">
-        
         <Link href={"/contact"}>
-            <BgButton
-              text="Join The Flow"
-              className="text-h9Copy5 leading-[1.225rem] px-[1.75rem] py-[0.75rem] "
-            />
+          <BgButton
+            text="Join The Flow"
+            className="text-h9Copy5 leading-[1.225rem] px-[1.75rem] py-[0.75rem] "
+          />
         </Link>
-       
       </div>
     </div>
   );

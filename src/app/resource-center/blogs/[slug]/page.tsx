@@ -1,15 +1,9 @@
 import React from "react";
 import BreadCrump from "@/components/bread-crump/BreadCrump";
-// import ResourcesSm from "../_components/ResourcesSm";
-// import TabListAndRespSelect from "../_components/TabListAndRespSelect";
-import ResourceCard from "@/components/cards/ResourceCard";
 import WordStaggerAnimation from "@/components/animations/WordStaggerAnimation";
-import CardAnimation from "@/components/animations/CardAnimation";
 import Image from "next/image";
-import CrossSvg from "@/components/svg/CrossSvg";
 import XSvg from "@/components/svg/XSvg";
 import LinkedinSvg from "@/components/svg/LinkedinSvg";
-import YoutubeSvg from "@/components/svg/YoutubeSvg";
 import LinkSvg from "@/components/svg/LinkSvg";
 import FilledYoutubeSvg from "@/components/svg/FilledYoutubeSvg";
 import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
@@ -21,34 +15,8 @@ import { TInnerBlog } from "@/api/type";
 import Link from "next/link";
 import Tags from "./_components/Tags";
 
-// export const dynamic = "force-dynamic";
-const dummyArray = [
-  {
-    title: "title",
-    description: "description",
-    domain: "domain",
-    date: "",
-  },
-  {
-    title: "title",
-    description: "description",
-    domain: "domain",
-    date: "",
-  },
-  {
-    title: "title",
-    description: "description",
-    domain: "domain",
-    date: "",
-  },
-  {
-    title: "title",
-    description: "description",
-    domain: "domain",
-    date: "",
-  },
-];
 export const dynamic = "force-dynamic";
+
 const getOneBlogApi = async (slug: string): Promise<TInnerBlog> => {
   const response = await Api.getOneBlog(slug);
   return response?.data;
@@ -62,9 +30,7 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const dateFormat = dayjs(response.date).format("D MMMM");
   const UpdateDateFormat = dayjs(response.updatedAt).format("D MMMM");
   const processedDescription = response?.description
-    // remove all inline styles
     ?.replace(/style="[^"]*"/g, "")
-    // ensure all <a> tags open in new tab with safe attributes
     .replace(
       /<a(?![^>]*target=)/g,
       '<a target="_blank" rel="noopener noreferrer" '
@@ -98,7 +64,6 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
               {dateFormat} | {response.readingTime}
             </p>
             <p className="leading-[1.4rem] text-midGray pt-[0.5rem] ">
-              Updated: Nov 26, 2024
               {UpdateDateFormat}
             </p>
           </div>
@@ -116,13 +81,6 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
             className="blog-description-section ~pt-[2rem]/[2.5rem] ~text-h9Copy5/[1rem] ~leading-[1.22rem]/[1.4rem] text-midGray font-sans text-base
              [&_a]:text-blue-400 [&_a]:underline "
           ></div>
-          {/* <p className="text-h9Copy5  leading-[1.225rem] py-[2.5rem] italic text-midGray">
-            Radhika and Bhavana&apos;s interview was originally published in
-            <span className="text-textPurple underline underline-offset-2">
-              {" "}
-              The CSR Universe
-            </span>
-          </p> */}
           <div className="flex ~gap-[1rem]/[1.25rem]  text-midGray ~pt-[2rem]/[2.5rem] ">
             <Tags tagArray={response.tags} />
           </div>

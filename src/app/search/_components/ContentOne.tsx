@@ -1,5 +1,3 @@
-import React from "react";
-import audio from "@public/images/aSample.png";
 import cn from "@/utils/tailwind";
 import PlaySvg from "@/components/svg/PlaySvg";
 import { TSearch } from "@/api/type";
@@ -29,7 +27,7 @@ const ContentOne = ({
   video,
 }: Props) => {
   const arrayLength = searchData.length;
-  const isOnlyEmptyParagraph =  /^\s*<p>\s*<\/p>\s*$/i.test(description!);
+  const isOnlyEmptyParagraph = /^\s*<p>\s*<\/p>\s*$/i.test(description!);
 
   return (
     <div
@@ -97,7 +95,7 @@ const ContentOne = ({
             </div>
           </div>
         )}
-        {description && description != "" && !isOnlyEmptyParagraph  && (
+        {description && description != "" && !isOnlyEmptyParagraph && (
           <div
             dangerouslySetInnerHTML={{
               __html: description,

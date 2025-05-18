@@ -9,7 +9,6 @@ type Props = {
   title?: string;
   desc?: string;
   linkKey?: string;
-  index?: number;
   category?: string;
   name?: string;
   date?: string;
@@ -18,41 +17,16 @@ type Props = {
   file?: string;
   fileLink?: string;
   slug?: string;
-  projectsAndProgram?: Boolean;
-  collaboration?: Boolean;
-  gallery?: Boolean;
+  projectsAndProgram?: boolean;
+  collaboration?: boolean;
+  gallery?: boolean;
   city?: string;
   readTime?: string;
 };
-const BlogCard = ({
-  src,
-  title,
-  desc,
-  category,
-  linkKey,
-  name,
-  date,
-  file,
-  index,
-  fileLink,
-  domain,
-  isLinkOrPdf,
-  projectsAndProgram,
-  collaboration,
-  gallery,
-  slug,
-  city,
-  readTime,
-}: Props) => {
-  //
-
-  // const link = isLinkOrPdf === "pdf" ? file : fileLink;
-  const toDownload = isLinkOrPdf === "pdf" ? true : false;
+const BlogCard = ({ src, title, desc, name, date, slug, readTime }: Props) => {
   const dateFormat = dayjs(date).format("D MMMM YYYY");
-  // console.log("dateFormat:::,",dateFormat)
 
   return (
-    // justify-center
     <div className="flex flex-col  items-center ~gap-[1.25rem]/[0.75rem]">
       <div className="relative w-full ~h-[19.688rem]/[16.594rem]">
         <Image
@@ -75,15 +49,11 @@ const BlogCard = ({
             {name}
           </p>
         )}
-        <ResourceDescSection desc={desc} index={index} />
-        {/* <p className="line-clamp-6 text-ellipsis text-h9Copy5 text-gray50 font-inter leading-[1.225rem]">
-          {desc}
-        </p> */}
+        <ResourceDescSection desc={desc} />
       </div>
       <div className="h-px bg-footerGray w-full"></div>
       <div className="flex justify-between w-full text-h9Copy5 text-gray50 font-inter leading-[1.225rem]">
         {date && <p>{dateFormat}</p>}
-        {/* {domain && <p>{domain}</p>} */}
         {readTime && <p>{readTime}</p>}
       </div>
     </div>

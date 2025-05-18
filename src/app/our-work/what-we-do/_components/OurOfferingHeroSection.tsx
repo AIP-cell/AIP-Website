@@ -42,9 +42,6 @@ const OurOfferingHeroSection = () => {
           </linearGradient>
         </Wave>
       </div>
-      {/* <HeroBgSVg className="absolute "/> */}
-      {/* <Image src={HeroBg1} alt="" fill className="z-40 " />
-      <Image src={HeroBg2} alt="" fill className="z-10 " /> */}
       <div className="relative container mx-auto">
         <BreadCrump
           textOne="Our Work"
@@ -65,25 +62,12 @@ const OurOfferingHeroSection = () => {
             points: 3,
           }}
         />
-        {/* ~pt-[5.5rem]/[11rem] */}
-
         <div className=" bg-[#faecc894] ~pt-[3rem]/[6.25rem] ~pb-[3rem]/[7.6rem] w-full ">
           <div className="container mx-auto flex justify-center flex-col items-center relative z-50 ~px-5/[14.375rem] ">
             <TextStaggerAnimation
               text="Philanthropy is what it does."
               className="~leading-[1.129rem]/[1.29rem] ~text-h9Copy5/h9Copy4 uppercase font-inter text-lightPeach/60 font-semibold"
             />
-            {/* <h2 className="pt-[1.25rem] md:tracking-[-1px] text-center ~text-h7Copy3/h3 ~leading-[1.788rem]/[2.6rem] font-playFair text-gray80">
-              AIP is a sector-agnostic organization, meaning we do not
-              specialize in any one sector but instead offer our expertise
-              across a wide range of fields. We work in any sector that aligns
-              with the philanthropists goals, ensuring that their contributions
-              are strategically guided and effectively implemented. By not being
-              confined to a specific sector, we are able to tailor our approach
-              to meet the unique needs and aspirations of each philanthropist,
-              empowering them to create meaningful change wherever their passion
-              lies.
-            </h2> */}
             <WordStaggerAnimation
               text="AIP is sector, organisation and method agnostic.<br> We work across a range of causes and methods <br> which align with philanthropists' goals. This <br> tailored approach allows us to meet the unique <br> needs of each philanthropist and empower them <br> to create meaningful change."
               className="hidden md:block pt-[1.25rem] md:tracking-[-1px] text-center ~text-h7Copy3/h4 ~leading-[1.788rem]/[2.6rem] font-playFair text-gray80"

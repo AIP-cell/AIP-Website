@@ -1,8 +1,5 @@
 import Image from "next/image";
-import React from "react";
-import audio from "@public/images/aSample.png";
 import cn from "@/utils/tailwind";
-import PlaySvg from "@/components/svg/PlaySvg";
 import { TGalleryImages, TSearch } from "@/api/type";
 import { StorageUrl } from "@/utils/BaseUrl";
 
@@ -21,7 +18,6 @@ const ContentGallery = ({
   description,
 }: Props) => {
   const arrayLength = searchData.length;
-  // const isEmptyParagraph = /^\s*<p>\s*<\/p>\s*$/i.test(description);
   return (
     <div className="pt-[1rem] ">
       <div className="flex flex-col ">
@@ -35,7 +31,7 @@ const ContentGallery = ({
               {title}
             </h3>
           )}
-          {description &&  description != "" && (
+          {description && description != "" && (
             <div
               dangerouslySetInnerHTML={{
                 __html: description || "",

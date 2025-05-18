@@ -1,9 +1,5 @@
 "use client";
 import React, { useState } from "react";
-// import LeftArrow from "@public/svg/leftArrow.svg";
-// import RightArrow from "@public/svg/rightArrow.svg";
-// import Image from "next/image";
-// import ASrc from "@public/images/aSample.png";
 import { useMediaQuery } from "react-responsive";
 import ACard from "@/components/cards/aCards/ACard";
 import PCard from "@/components/cards/pCards/PCard";
@@ -13,15 +9,13 @@ import { ButtonAnimation } from "../animations/ButtonAnimation";
 import cn from "@/utils/tailwind";
 import useClient from "@/hooks/useClient";
 import { TTestimonials } from "@/api/type";
-import { usePathname } from "next/navigation"; 
+import { usePathname } from "next/navigation";
 import ACardWithPlaySign from "../cards/aCards/ACardWithPlaySign";
 import PCardWithPlaySign from "../cards/pCards/PCardWithPlaySign";
 type Props = {
   slickArray: TTestimonials[];
 };
 const TestimonialSlick = ({ slickArray }: Props) => {
-
-  console.log( "slickArray::::::",slickArray);
   const [change, setChange] = useState<number>(0);
   const pathname = usePathname();
   const playtestimonialCard =
@@ -31,7 +25,6 @@ const TestimonialSlick = ({ slickArray }: Props) => {
   const arrayLength = slickArray.length;
   const previous = () => {
     if (change <= 0) {
-      // setChange(arrayLength - itemsPerSlide);
       const remainder = arrayLength % itemsPerSlide;
       const lastIndex =
         remainder === 0 ? arrayLength - itemsPerSlide : arrayLength - remainder;
@@ -84,17 +77,15 @@ const TestimonialSlick = ({ slickArray }: Props) => {
                         ))}
                       {actualIndex % 2 == 1 &&
                         (playtestimonialCard ? (
-                         <PCard
+                          <PCard
                             key={i}
                             image={items?.image}
                             name={items?.name}
                             work={items?.designation}
                             desc={items?.description}
                           />
-
                         ) : (
-                         
-                            <PCardWithPlaySign
+                          <PCardWithPlaySign
                             key={i}
                             darkText={playtestimonialCard}
                             linkOrVideo={items?.linkOrVideo}
@@ -129,7 +120,7 @@ const TestimonialSlick = ({ slickArray }: Props) => {
       </div>
       <div className="md:hidden flex justify-center w-full  pt-[3.25rem]">
         <div className=" w-[4.5rem] flex gap-[0.5rem] ">
-          {slickArray?.map((items: any, index: number) => (
+          {slickArray?.map((_, index: number) => (
             <div
               key={index}
               className={cn(

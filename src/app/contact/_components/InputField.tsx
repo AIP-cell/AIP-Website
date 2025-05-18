@@ -1,9 +1,5 @@
 import React from "react";
-import {
-  FieldError,
-  FieldErrors,
-  UseFormRegisterReturn,
-} from "react-hook-form";
+import { FieldError, UseFormRegisterReturn } from "react-hook-form";
 type Props = {
   type: string;
   label: string;
@@ -23,9 +19,7 @@ const InputField = ({ type, label, placeholder, register, error }: Props) => {
         placeholder={placeholder}
         className="w-full h-[3.25rem] font-inter p-5 border border-gray-300 rounded-md text-gray80"
       />
-      {error && (
-        <p className=" text-red-500 ">{`${error?.message}`}</p>
-      )}
+      {error && <p className=" text-red-500 ">{`${error?.message}`}</p>}
     </div>
   );
 };

@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "@/_layout/header/Header";
-import Footer from "@/_layout/footer/Footer";
+import Header from "@/app/_layout/header/Header";
+import Footer from "@/app/_layout/footer/Footer";
 import localFont from "next/font/local";
-import QueryProvider from "./providers/QueryProviderClient";
+import QueryProvider from "../providers/QueryProviderClient";
 import { Toaster } from "react-hot-toast";
-import ProgressProvider from "./providers/ProgressProvider";
+import ProgressProvider from "../providers/ProgressProvider";
 
 const inter = Inter({ subsets: ["latin"], variable: "--inter" });
 const playfairDisplay = localFont({

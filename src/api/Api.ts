@@ -127,15 +127,6 @@ export const Api = {
       return null;
     }
   },
-  // getFinancialDownloadAll: async (year: string) => {
-  //   try {
-  //     console.log("year:::",year)
-  //     await axiosClient.get(`financial-reports/download?year=${year}`);
-  //   } catch (error) {
-  //     console.log(error);
-  //     return null;
-  //   }
-  // },
   getNpos: async () => {
     try {
       const response = await axiosClient.get(`npos`);
@@ -301,7 +292,9 @@ export const Api = {
         ...data,
       });
       const queryString = new URLSearchParams(query).toString();
-      const response = await axiosClient.get(`search?${queryString}&page=${data.pageparam}`);
+      const response = await axiosClient.get(
+        `search?${queryString}&page=${data.pageparam}`
+      );
 
       return response.data;
     } catch (error) {
@@ -338,9 +331,7 @@ export const Api = {
   },
   postContact: async (body: object) => {
     try {
-      console.log("first:::::::body", body);
       const response = await axiosClient.post(`contact-form`, body);
-      console.log("response:::::::", response);
       return response.data;
     } catch (error) {
       console.log(error);

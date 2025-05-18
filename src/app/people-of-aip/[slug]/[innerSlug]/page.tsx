@@ -1,5 +1,4 @@
 import Link from "next/link";
-import React from "react";
 import Bg from "@public/svg/people-of-aip/peachCurveRightDetailsPage.svg";
 import Linkedin from "@public/svg/linkedinPurple.svg";
 import LinkSvg from "@public/svg/linkingPurple.svg";
@@ -11,8 +10,6 @@ import PSvg from "@/components/svg/PSvg";
 import InnerCollaborationsVideo from "@/app/our-work/collaborations/[slug]/_components/InnerCollaborationsVideo";
 import { Api } from "@/api/Api";
 import { TPeopleOfAipGetOne } from "@/api/type";
-import { StorageUrl } from "@/utils/BaseUrl";
-import SelectedWorks from "./_components/SelectedWorks";
 import { notFound } from "next/navigation";
 import FadeInAnimation from "@/components/animations/FadeInAnimation";
 
@@ -68,7 +65,7 @@ const InnerTeamPage = async ({
             <div className="~pt-[4.3rem]/[5rem] flex flex-col-reverse lg:grid grid-cols-3 gap-[1.238rem]">
               <div className="col-span-2  relative">
                 <div className=" hidden md:block">
-                  <FadeInAnimation delay={0.1} x1={-20} x2={0}>
+                  <FadeInAnimation delay={0.1} y1={20} y2={0}>
                     <h2 className="~text-h4/h2 text-midGray leading-[3.3rem] font-playFair">
                       {team?.name}
                     </h2>
@@ -90,7 +87,6 @@ const InnerTeamPage = async ({
                       {team?.linkedln && (
                         <Link href={team.linkedln} target="_blank">
                           <ButtonAnimation className="rounded-full ~p-[0.5rem]/[0.875rem] bg-bgGray5">
-                            {/* <LinkedinSvg className="size-[1.5rem]"/> */}
                             <Image
                               src={Linkedin}
                               alt=""
@@ -103,7 +99,6 @@ const InnerTeamPage = async ({
                         <Link href={team.twitter} target="_blank">
                           <ButtonAnimation className="rounded-full flex justify-center items-center text-textPurple hover:text-white p-[0.93rem] bg-bgGray5 hover:bg-textPurple">
                             <XSvg className="size-[1.063rem]" />
-                            {/* <Image src={X} alt="" className="" /> */}
                           </ButtonAnimation>
                         </Link>
                       )}
@@ -129,7 +124,7 @@ const InnerTeamPage = async ({
                 </div>
               </div>
               <div className="col-span-1 relative">
-                <FadeInAnimation delay={0.1} x1={20} x2={0}>
+                <FadeInAnimation delay={0.1} y1={20} y2={0}>
                   <PSvg
                     src={team?.image}
                     className="relative z-10 ~w-[18.438rem]/[25rem]"
@@ -144,7 +139,7 @@ const InnerTeamPage = async ({
                   </h4>
                 </div>
                 {team?.quote && (
-                  <FadeInAnimation delay={0.1} x1={20} x2={0}>
+                  <FadeInAnimation delay={0.1} y1={20} y2={0}>
                     <p className="text-h5 pt-[2rem] text-gray90 font-playFair font-medium leading-[1.75rem]">
                       {team?.quote}
                     </p>
@@ -163,9 +158,6 @@ const InnerTeamPage = async ({
             )}
           </div>
         </div>
-        {/* {team.selectedWorks?.length != 0 && (
-          <SelectedWorks works={team.selectedWorks} />
-        )} */}
       </div>
     </div>
   );

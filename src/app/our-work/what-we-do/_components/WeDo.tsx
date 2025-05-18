@@ -40,15 +40,14 @@ const WeDo = () => {
             className="font-playFair text-gray80 ~text-h4/h2 ~leading-[2.6rem]/[3.3rem] text-center"
           />
 
-          <TextStaggerAnimation text="AIP has four core pillars of work supporting the journey of
-            Philanthropy" className="~leading-[1.225rem]/[1.4rem] ~text-h9Copy5/h9Copy4 text-gray80 text-center ~pt-[0.75rem]/[1.25rem]"/>
-          {/* <p className="~leading-[1.225rem]/[1.4rem] ~text-h9Copy5/h9Copy4 text-gray80 text-center ~pt-[0.75rem]/[1.25rem]">
-            AIP has four core pillars of work supporting the journey of
-            Philanthropy
-          </p> */}
+          <TextStaggerAnimation
+            text="AIP has four core pillars of work supporting the journey of
+            Philanthropy"
+            className="~leading-[1.225rem]/[1.4rem] ~text-h9Copy5/h9Copy4 text-gray80 text-center ~pt-[0.75rem]/[1.25rem]"
+          />
         </div>
         <div className=" relative">
-          <FadeInAnimation delay={0.2} x1={-20} x2={0}>
+          <FadeInAnimation delay={0.2} y1={20} y2={0}>
             <Image
               src={TopLeftCurve}
               alt=""
@@ -72,13 +71,12 @@ const WeDo = () => {
           />
           <div className="~px-[1rem]/[7.8rem] ~pt-[1.5rem]/[5rem] flex flex-col justify-center ~gap-[3.5rem]/0 relative container mx-auto">
             {offeringsData.map((items, i) => (
-              <CardAnimation index={i} delay={0.1} key={i}>
+              <CardAnimation delay={0.1} key={i}>
                 <OfferingCard
                   index={i}
                   desc={items.desc}
                   text1={items.text1}
                   text2={items.text2}
-                  // text3={items.text3}
                 />
               </CardAnimation>
             ))}

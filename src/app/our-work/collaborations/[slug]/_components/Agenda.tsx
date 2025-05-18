@@ -19,13 +19,13 @@ const Agenda = ({ agendaArray }: Props) => {
   };
   return (
     <>
-      {/* <p className="text-center font-playFair ~pb-[1rem]/20 ~leading-[2.6rem]/[3.3rem] tracking-[-.04rem] ~text-h4/h2 text-gray80">
-        Agenda
-      </p> */}
-      <WordStaggerAnimation text="Agenda" className="text-center font-playFair ~pb-[1rem]/20 ~leading-[2.6rem]/[3.3rem] tracking-[-.04rem] ~text-h4/h2 text-gray80"/>
+      <WordStaggerAnimation
+        text="Agenda"
+        className="text-center font-playFair ~pb-[1rem]/20 ~leading-[2.6rem]/[3.3rem] tracking-[-.04rem] ~text-h4/h2 text-gray80"
+      />
       <div className="~pb-[3rem]/0 ">
         {agendaArray?.map((item, i: number) => (
-          <CardAnimation index={i} delay={0.1} key={i}>
+          <CardAnimation delay={0.1} key={i}>
             <div
               key={i}
               className="flex flex-col lg:flex-row border-b ~gap-[1.25rem]/[3.5rem] border-gray10 ~py-[1rem]/6"
@@ -35,10 +35,11 @@ const Agenda = ({ agendaArray }: Props) => {
                   {dateFormat(item?.date)}
                 </p>
                 <p className=" leading-[1.4rem] font-inter font-bold text-midGray">
-                  {fromTimeFormat(item?.fromTime)} - {toTimeFormat(item?.toTime)}
+                  {fromTimeFormat(item?.fromTime)} -{" "}
+                  {toTimeFormat(item?.toTime)}
                 </p>
               </div>
-  
+
               <div className="w-full lg:w-[53.375rem]">
                 <p className=" font-playFair ~text-h5/h4 text-gray80  ~leading-[1.75rem]/[2.6rem] tracking-[-0.02rem]">
                   {item?.title}

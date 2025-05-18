@@ -9,7 +9,7 @@ const CrossSvg = (props: SVGProps<SVGSVGElement>) => (
     {...props}
   >
     <path
-      stroke="#323538"
+      stroke="#ffffff"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2}

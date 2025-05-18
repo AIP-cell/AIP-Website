@@ -1,7 +1,7 @@
 "use client";
 import type { MouseEventHandler } from "react";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 export const ButtonAnimation = ({
   children,
@@ -18,16 +18,10 @@ export const ButtonAnimation = ({
 }) => {
   return (
     <motion.button
-      type={type}
+      type={type ?? "button"}
       disabled={disabled}
       onClick={onClick}
       className={className ?? ""}
-    //   whileHover="hover"
-    //   whileTap="tap"
-    //   variants={{
-    //     hover: { textDecoration: "underline" },
-    //     tap: { textDecoration: "underline" },
-    //   }}
     >
       {children}
     </motion.button>

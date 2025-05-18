@@ -1,5 +1,4 @@
 import CardAnimation from "@/components/animations/CardAnimation";
-import TextStaggerAnimation from "@/components/animations/TextStaggerAnimation";
 import WordStaggerAnimation from "@/components/animations/WordStaggerAnimation";
 import ImgTitleDescVer from "@/components/cards/ImgTitleDescVer";
 import React from "react";
@@ -27,13 +26,13 @@ const ShapeTheFlow = () => {
         text="Helping <color>Shape </color>  The Flow"
         className="~text-h4/h2 font-playFair text-center text-gray80"
       />
-        <WordStaggerAnimation
+      <WordStaggerAnimation
         text=" Our commitment towards philanthropy that define our role in the journey"
         className="~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] text-center text-midGray ~pt-[0.75rem]/[1rem]"
       />
       <div className="~pt-10/[5rem] flex flex-col lg:flex-row  ~gap-[1.25rem]/[4.56rem]">
         {threeIs.map((item, i) => (
-          <CardAnimation delay={0.2} index={i} key={i}>
+          <CardAnimation delay={0.2} key={i}>
             <ImgTitleDescVer
               key={i}
               src={item.src}

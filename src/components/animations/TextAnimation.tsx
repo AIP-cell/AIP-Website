@@ -8,10 +8,11 @@ import { cn } from "@/lib/utils";
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
-
+// eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
 function debounce(func: Function, wait: number) {
   let timeout: ReturnType<typeof setTimeout>;
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   return function (...args: any[]) {
     clearTimeout(timeout);
     timeout = setTimeout(() => func(...args), wait);
@@ -175,6 +176,6 @@ export default function TextAnimation({
   return (
     <div ref={containerRef} data-copy-wrapper="true" className={cn(className)}>
       {memoizedChildren}
-    </div>
-  );
+    </div>
+  );
 }

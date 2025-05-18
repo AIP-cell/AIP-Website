@@ -16,7 +16,7 @@ const TextStaggerAnimation = ({
   delay,
 }: Props) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false, margin: "0% 0% -50px 0%" });
+  const isInView = useInView(ref, { once: true, margin: "0% 0% -50px 0%" });
   const words = text
     .replaceAll("<color>", " <color> ")
     .replaceAll("</color>", " </color> ")
@@ -57,6 +57,7 @@ const TextStaggerAnimation = ({
               className={cn(`inline-block`, splitTextClassName, {
                 "text-textPurple font-playFairItalic": isColor,
               })}
+              style={{ willChange: "transform, opacity" }}
             >
               {word}&nbsp;
             </motion.span>

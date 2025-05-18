@@ -11,24 +11,11 @@ type Props = {
   link?: string;
   ddmmyy?: string;
   image?: string;
-  index: number;
-  mediaArrayLength: number;
 };
-const MediaCard = ({
-  title,
-  ddmmyy,
-  image,
-  desc,
-  index,
-  mediaArrayLength,
-  link,
-}: Props) => {
+const MediaCard = ({ title, ddmmyy, image, desc, link }: Props) => {
   const dateFormat = dayjs(ddmmyy).format("D MMMM");
   return (
-    <div
-      // ~w-[16.125rem]/[18.438rem]
-      className={cn("  flex flex-col gap-[0.75rem] w-full")}
-    >
+    <div className={cn("  flex flex-col gap-[0.75rem] w-full")}>
       <div className="relative w-full ~h-[14.51rem]/[16.563rem] overflow-hidden rounded-2xl cursor-pointer">
         <Image
           src={image ? StorageUrl + image : "/images/resourceCardThumbnail.png"}

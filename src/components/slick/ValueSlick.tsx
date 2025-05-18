@@ -1,14 +1,11 @@
 "use client";
-import React, { useState } from "react";
-import LeftArrow from "@public/svg/leftArrow.svg";
-import RightArrow from "@public/svg/rightArrow.svg";
-import Image from "next/image";
+import { useState } from "react";
 import { ButtonAnimation } from "../animations/ButtonAnimation";
 import LeftSlickArrowSvg from "../svg/LeftSlickArrowSvg";
 import RightSlickArrowSvg from "../svg/RightSlickArrowSvg";
 
 type Props = {
-  slickArray: any[];
+  slickArray: { desc: string }[];
 };
 const ValueSlick = ({ slickArray }: Props) => {
   const arrayLength = slickArray.length;
@@ -30,7 +27,7 @@ const ValueSlick = ({ slickArray }: Props) => {
     <div className="pt-[5rem] container mx-auto pb-[9.25rem]">
       <div className="relative  flex justify-center items-center">
         <p className="~w-[16.1rem]/[38rem] text-center text-midGray ~leading-[1.225rem]/[1.4rem]">
-          {slickArray.at(change).desc}
+          {slickArray.at(change)?.desc}
         </p>
         <ButtonAnimation
           onClick={previous}

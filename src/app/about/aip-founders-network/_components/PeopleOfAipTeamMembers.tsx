@@ -16,17 +16,15 @@ const PeopleOfAipTeamMembers = ({ teamMembers }: Props) => {
     <div className="w-full relative min-h-[90vh]">
       <div className="pt-[3rem] pb-[7rem] ">
         <div className="flex flex-col  justify-center ~px-[1.25rem]/[20.9rem] ~pb-[1.83rem]/[3.875rem] container mx-auto">
+          <WordStaggerAnimation
+            text="<color>Founders</color>"
+            className="text-center ~text-h4/h2 ~leading-[2.6rem]/[3.3rem] text-textPurple font-playFairItalic"
+          />
 
-        <WordStaggerAnimation
-          text="<color>Founders</color>"
-          className="text-center ~text-h4/h2 ~leading-[2.6rem]/[3.3rem] text-textPurple font-playFairItalic"
-        />
-         
           <div className="~pt-[2rem]/[1.25rem]  text-midGray text-center ~text-h9Copy5/h9Copy4 !leading-[1.225rem]/[1.4rem] max-[21rem]:px-[0.5rem]">
             <TextStaggerAnimation
               text={
                 "Our Founders are eminent philanthropists and experts who support our vision and mission  of catalyzing strategic giving in India. They come from diverse backgrounds and champion various causes, organisations and methods of giving. Each is an inspiration in their own way."
-                 
               }
               className="font-inter ~leading-[1.225rem]/[1.4rem] ~text-h9Copy5/h9Copy4 text-center text-gray80 ~pt-[2rem]/[1.25rem] ~px-[1rem]/0"
             />
@@ -50,8 +48,6 @@ const PeopleOfAipTeamMembers = ({ teamMembers }: Props) => {
                 {position === 0 && (
                   <div className="flex ~gap-[1.25rem]/[5.6rem] ~px-[1.25rem]/[7.8rem] relative container mx-auto ">
                     <ATeamCard
-                      // slug={items?.slug}
-                      // link={`/people-of-aip/${urlSlug}/${items.slug}`}
                       image={items?.image}
                       title={items?.name}
                       desc={items?.designation}
@@ -59,10 +55,6 @@ const PeopleOfAipTeamMembers = ({ teamMembers }: Props) => {
                     />
                     {teamMembers[i + 1] && (
                       <PTeamCard
-                        // slug={items?.slug}
-                        // link={`/people-of-aip/${urlSlug}/${
-                        //   teamMembers[i + 1].slug
-                        // }`}
                         image={teamMembers[i + 1]?.image}
                         title={teamMembers[i + 1]?.name}
                         desc={teamMembers[i + 1]?.designation}
@@ -87,8 +79,6 @@ const PeopleOfAipTeamMembers = ({ teamMembers }: Props) => {
                     </>
                     <div className=" flex ~gap-[1.25rem]/[5.6rem] ~px-[1.25rem]/[7.8rem] relative container mx-auto ">
                       <ATeamCard
-                        // slug={items?.slug}
-                        // link={`/people-of-aip/${urlSlug}/${items.slug}`}
                         image={items?.image}
                         desc={items?.designation}
                         title={items?.name}
@@ -96,11 +86,7 @@ const PeopleOfAipTeamMembers = ({ teamMembers }: Props) => {
                       />
                       {teamMembers[i + 1] && (
                         <PTeamCard
-                          // slug={teamMembers[i + 1]?.slug}
                           image={teamMembers[i + 1]?.image}
-                          // link={`/people-of-aip/${urlSlug}/${
-                          //   teamMembers[i + 1].slug
-                          // }`}
                           title={teamMembers[i + 1]?.name}
                           desc={teamMembers[i + 1]?.designation}
                           linkedin={true}

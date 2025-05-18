@@ -18,7 +18,6 @@ const GalleryVideos = ({ galleryVideos }: Props) => {
 
   const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
   const itemsPerSlide = isDesktop ? 2 : 1;
-  const arrayLength = galleryVideos?.length;
   const previous = () => {
     if (galleryVideos) {
       if (change <= 0) {
@@ -63,7 +62,7 @@ const GalleryVideos = ({ galleryVideos }: Props) => {
         {galleryVideos
           ?.slice(change, change + itemsPerSlide)
           ?.map((video, index) => (
-            <CardAnimation index={index} delay={0.2} key={index} className="w-full">
+            <CardAnimation delay={0.2} key={index} className="w-full">
               <GalleryVideo
                 linkOrVideo={video.linkOrVideo}
                 link={video.link}
@@ -71,7 +70,6 @@ const GalleryVideos = ({ galleryVideos }: Props) => {
                 key={index}
                 title={video?.title}
                 date={video?.date}
-                // desc2={video.desc2}
               />
             </CardAnimation>
           ))}

@@ -5,12 +5,10 @@ import {
   ListboxOption,
   ListboxOptions,
 } from "@headlessui/react";
-import { CheckIcon, ChevronDownIcon } from "@heroicons/react/20/solid";
-import { useState } from "react";
+
 import DownTagSvg from "../svg/DownTagSvg";
-import { useRouter } from "next-nprogress-bar";
+import { useRouter } from "@bprogress/next/app";
 import cn from "@/utils/tailwind";
-// import { useRouter } from "next/navigation";
 
 export default function CustomGraySelect({
   selected,
@@ -18,15 +16,15 @@ export default function CustomGraySelect({
   setSelected,
   mainClassName,
 }: {
-  selected: any;
+  selected: number;
   data: { tabNo: number; key: string; name: string }[];
   mainClassName?: string;
-  setSelected: (value: any) => void;
+  setSelected: (value: number) => void;
 }) {
   const router = useRouter();
   return (
     <div className={`mx-auto w-full ${mainClassName}`}>
-      <Listbox value={data.at(selected)} onChange={setSelected}>
+      <Listbox value={selected} onChange={setSelected}>
         <ListboxButton
           className={cn(
             "relative  flex items-center justify-between w-full rounded-full bg-[#F0F0F2] py-[1rem] pr-[1.25rem] pl-[1.75rem] text-left text-h9Copy4 text-darkPurple",

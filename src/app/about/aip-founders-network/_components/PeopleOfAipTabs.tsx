@@ -1,8 +1,4 @@
 import cn from "@/utils/tailwind";
-import Link from "next/link";
-import React from "react";
-import PeopleOfAipRespTab from "./PeopleOfAipRespTab";
-import { useRouter } from "next/navigation";
 
 type Props = {
   currentTab: string;
@@ -10,17 +6,16 @@ type Props = {
   mainClassName?: string;
   filteredName?: string;
   tabListClassName?: string;
-  setOpentab: (value: string) => void;
+  setOpenTab: (value: string) => void;
   tabList: { slug: string; key: string; name: string }[];
 };
 const PeopleOfAipTabs = ({
   currentTab,
-  filteredName,
   tabList,
   tabListClassName,
   tabClassName,
   mainClassName,
-  setOpentab,
+  setOpenTab,
 }: Props) => {
   return (
     <>
@@ -40,9 +35,8 @@ const PeopleOfAipTabs = ({
             {tabList.map((items, i) => (
               <div
                 onClick={() => {
-                  setOpentab(items.slug);
-                 
-                }} // Set the active tab slug
+                  setOpenTab(items.slug);
+                }}
                 key={i}
                 className={cn(
                   "~px-[1.5rem]/[2.5rem] py-[0.75rem] flex justify-center items-center ~text-h10Copy6/h9Copy5 ~leading-[1rem]/[1.22rem] font-inter ",
@@ -59,7 +53,6 @@ const PeopleOfAipTabs = ({
           </div>
         </div>
       </div>
-      {/* <PeopleOfAipRespTab selected={filteredName ?? ""} listArray={tabList} /> */}
     </>
   );
 };

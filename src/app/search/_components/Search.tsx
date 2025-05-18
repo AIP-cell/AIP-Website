@@ -1,13 +1,15 @@
 "use client";
 import CardAnimation from "@/components/animations/CardAnimation";
-import React, { useState } from "react";
 import ContentOne from "./ContentOne";
 import ContentGallery from "./ContentGallery";
 import NoData from "@/components/NoData";
 import { TSearch } from "@/api/type";
 import { Api } from "@/api/Api";
-import { useInfiniteQuery, InfiniteData, QueryFunctionContext } from "@tanstack/react-query";
-import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
+import {
+  useInfiniteQuery,
+  InfiniteData,
+  QueryFunctionContext,
+} from "@tanstack/react-query";
 
 export const dynamic = "force-dynamic";
 
@@ -37,18 +39,20 @@ const fetchData = async (
 };
 
 const Search: React.FC<SearchProps> = ({ searchParams }) => {
-  const [currentPage, setCurrentPage] = useState(0);
-
-const {
-  data,
-  error,
-  fetchNextPage,
-  hasNextPage,
-  isError,
-  isFetching,
-  isFetchingNextPage,
-} = useInfiniteQuery<TSearch[], Error, InfiniteData<TSearch[]>, [string, SearchProps["searchParams"]]>(
-  {
+  const {
+    data,
+    error,
+    fetchNextPage,
+    hasNextPage,
+    isError,
+    isFetching,
+    isFetchingNextPage,
+  } = useInfiniteQuery<
+    TSearch[],
+    Error,
+    InfiniteData<TSearch[]>,
+    [string, SearchProps["searchParams"]]
+  >({
     queryKey: ["search", searchParams],
     queryFn: fetchData,
     initialPageParam: 1,
@@ -56,17 +60,13 @@ const {
       if (!lastPage || lastPage.length < 10) return undefined;
       return allPages.length + 1;
     },
-  }
-);
+  });
 
   const handleNextPage = () => {
     fetchNextPage();
-    setCurrentPage((prev) => prev + 1);
   };
 
-  const response = data
-    ? data.pages.flatMap((page) => page ?? [])
-    : [];
+  const response = data ? data.pages.flatMap((page) => page ?? []) : [];
 
   if (isFetching && !data) return <div>Loading...</div>;
   if (isError) return <div>Error: {error?.message}</div>;
@@ -94,7 +94,7 @@ const {
               const galleryImage = content.key === "galleryImages";
               if (keyPresent) {
                 return (
-                  <CardAnimation delay={0.03} index={i} key={i}>
+                  <CardAnimation delay={0.03} key={i}>
                     <ContentOne
                       index={i}
                       key={i}
@@ -112,7 +112,7 @@ const {
               }
               if (galleryImage) {
                 return (
-                  <CardAnimation index={i} delay={0.03} key={i}>
+                  <CardAnimation delay={0.03} key={i}>
                     <ContentGallery
                       key={i}
                       title={content.title}
@@ -128,18 +128,18 @@ const {
           </div>
         </div>
       ) : (
-        // </div>
         <NoData />
       )}
       {hasNextPage && (
         <div className="flex justify-end w-full pb-16">
-          <ButtonAnimation
+          <button
+            type="button"
             onClick={handleNextPage}
             disabled={isFetchingNextPage}
             className=" bg-darkPurple hover:bg-white text-white hover:text-darkPurple transition-all duration-500  px-[1.75rem] py-[0.75rem] leading-[1.4rem] border-white hover:border hover:border-darkPurple rounded-full  "
           >
             View More
-          </ButtonAnimation>
+          </button>
         </div>
       )}
     </div>

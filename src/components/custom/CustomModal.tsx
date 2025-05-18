@@ -1,6 +1,5 @@
-import { Button, Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
+import { Dialog, DialogPanel } from "@headlessui/react";
 import Image from "next/image";
-import { useState } from "react";
 import videoPlaySvg from "@public/svg/playButtonPurple.svg";
 import { StorageUrl } from "@/utils/BaseUrl";
 import ReactPlayer from "react-player";
@@ -50,37 +49,14 @@ export default function CustomModal({
                       }
                       controls
                     />
-                    {/* <video className="z-10 border-2 absolute inset-0 w-full h-full ">
-                      <source src={StorageUrl + video} type="video/mp4" />
-                    </video> */}
-                    {/* <Image
-                      src={videoPlaySvg}
-                      alt="play-svg"
-                      className="z-50 cursor-pointer"
-                    /> */}
                   </div>
                 ) : (
                   <div className="~w-[18rem]/[64.375rem] relative flex justify-center items-center ~h-[12.313rem]/[25.313rem] overflow-hidden rounded-lg">
                     <ReactPlayer
                       className="z-10 border-2 absolute inset-0 !w-full !h-full flex justify-center items-center cursor-pointer"
                       url={StorageUrl + videoLink}
-                      // light="/images/upcoming.png"
-                      // playing
-                      // playIcon={
-                      //   <ButtonAnimation>
-                      //     <Image src={videoPlaySvg} alt="" className="" />
-                      //   </ButtonAnimation>
-                      // }
                       controls
                     />
-                    {/* <video className="z-10 border-2 absolute inset-0 w-full h-full ">
-                      <source src={StorageUrl + video} type="video/mp4" />
-                    </video> */}
-                    {/* <Image
-                      src={videoPlaySvg}
-                      alt="play-svg"
-                      className="z-50 cursor-pointer"
-                    /> */}
                   </div>
                 )}
               </div>

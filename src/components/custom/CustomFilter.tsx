@@ -5,17 +5,18 @@ import {
   ListboxOption,
   ListboxOptions,
 } from "@headlessui/react";
-// import DownArrow from "@public/svg/downArrow.svg";
 
 import React, { useState } from "react";
 import FilterDownArrowSvg from "../svg/FilterDownArrowSvg";
 import { ApplyFilterResp } from "@/app/resource-center/_components/ApplyFilterResp";
 import { generatingSearchParam } from "@/utils/UrlHelper";
-import { useRouter } from "next-nprogress-bar";
+import { useRouter } from "@bprogress/next/app";
 import CrossSvg from "../svg/CrossSvg";
 type Props = {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   optionsArray: any[];
   type: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   searchParams: Record<string, any>;
   filterKey: string;
 };
@@ -27,13 +28,6 @@ const CustomFilter = ({
 }: Props) => {
   const router = useRouter();
   const [selected, setSelected] = useState(
-    // type === "c_type"
-    //   ? searchParams.c_type
-    //   : type === "o_type"
-    //   ? searchParams.o_type
-    //   : type === "p_id"
-    //   ? searchParams.p_id
-    //   : ""
     type === "domain"
       ? searchParams.domain || ""
       : type === "c_type"
@@ -46,7 +40,6 @@ const CustomFilter = ({
   );
   return (
     <>
-      {/* {isOpen && ( */}
       <div className="md:hidden block">
         <ApplyFilterResp
           type={type}
@@ -57,7 +50,6 @@ const CustomFilter = ({
           selected={selected}
         />
       </div>
-      {/* )} */}
       <div className="hidden md:block">
         <Listbox value={selected} onChange={setSelected}>
           <ListboxButton className={`border-2 border-[#DFE0E5] rounded-lg`}>
@@ -98,12 +90,12 @@ const CustomFilter = ({
               </div>
             </div>
           </ListboxButton>
-          {/* w-[var(--button-width)] */}
           <ListboxOptions
             data-lenis-prevent
             anchor="bottom"
             className="hidden  w-[10.25rem] !max-h-[14.5rem] no-scrollbar mt-[0.4rem] z-[10000] bg-white border-2 border-[#DFE0E5] md:flex flex-col gap-[0.75rem] rounded-md   px-[0.863rem] py-[0.8rem]"
           >
+            {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
             {optionsArray?.map((items: any, i: number) => {
               return (
                 <ListboxOption

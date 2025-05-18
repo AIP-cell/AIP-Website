@@ -9,7 +9,6 @@ type Props = {
   text2?: string;
   text3?: string;
   mainClass?: string;
-  countEndClass?: string;
   textClass2?: string;
   textClass3?: string;
   sizeClass: string;
@@ -19,13 +18,12 @@ const OvalPeachCount = ({
   text2,
   text3,
   mainClass,
-  countEndClass,
   textClass2,
   textClass3,
   sizeClass,
 }: Props) => {
   const { ref, inView } = useInView({
-    triggerOnce: false,
+    triggerOnce: true,
   });
   return (
     <div ref={ref} className={` ${mainClass} `}>
@@ -33,7 +31,6 @@ const OvalPeachCount = ({
         className={` ${sizeClass} relative shrink-0   flex flex-col justify-center items-center`}
       >
         <Image src={OvalPeachSvg} alt="image" fill />
-        {/* <OvalPurpleSvg /> */}
         <div className="text-black z-50">
           {inView && (
             <CountUp
@@ -47,9 +44,7 @@ const OvalPeachCount = ({
             +
           </span>
         </div>
-        <div
-          className={`text-center pt-[0.25rem] z-50 text-gray80 `}
-        >
+        <div className={`text-center pt-[0.25rem] z-50 text-gray80 `}>
           <div className={` ${textClass2} `}>{text2}</div>
           <div className={` ${textClass3} `}>{text3}</div>
         </div>

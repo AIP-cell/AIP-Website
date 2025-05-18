@@ -1,27 +1,15 @@
 "use client";
 import React, { useState } from "react";
 import DownloadFileSvg from "@/components/svg/DowloadFileSvg";
-import EyeSvg from "@/components/svg/EyeSvg";
 import XSvg from "@/components/svg/XSvg";
 import YoutubeSvg from "@/components/svg/YoutubeSvg";
 import Image from "next/image";
-import Foundation1 from "@public/svg/projects-page/foundation1.png";
-import Foundation2 from "@public/svg/projects-page/foundation2.png";
-import Foundation3 from "@public/svg/projects-page/foundation3.png";
-import Foundation4 from "@public/svg/projects-page/foundation4.png";
-import PurpleTopSvg from "@public/svg/products-and-services/project-and-programs/topRightPurpleCurve.svg";
 import BottomBg from "@public/svg/products-and-services/project-and-programs/bottomBgHeroSection.svg";
 
-import Systemic from "@public/svg/projects-page/systemic.png";
-
-import Impact from "@public/svg/projects-page/impact.png";
-
 import Link from "next/link";
-import BreadCrump from "@/components/bread-crump/BreadCrump";
 import LocationTabs from "./LocationTab";
-import { TabGroup, TabPanel, TabPanels } from "@headlessui/react";
+import { TabGroup } from "@headlessui/react";
 import { TOneCollaboration } from "@/api/type";
-import TabListAndRespSelect from "@/app/resource-center/_components/TabListAndRespSelect";
 import Agenda from "./Agenda";
 import InnerCollaborationsVideo from "./InnerCollaborationsVideo";
 import InnerCollaborationTestimonials from "./InnerCollaborationTestimonials";
@@ -32,44 +20,6 @@ import Gallery from "@/app/our-work/projects-and-programs/[slug]/_components/Gal
 import Media from "@/app/our-work/projects-and-programs/[slug]/_components/Media";
 import FadeInAnimation from "@/components/animations/FadeInAnimation";
 import CardAnimation from "@/components/animations/CardAnimation";
-
-const agendaArray = [
-  {
-    title: "Registration + Tea and Coffee",
-    date: "11 Jul 2024  ",
-    time: "14:00 - 16:00 ",
-  },
-  {
-    title: "Welcome Address by Vikram Bhalla ",
-    date: "11 Jul 2024  ",
-    time: "14:00 - 16:00 ",
-    desc: "Managing Director & Senior Partner, BCG",
-  },
-  {
-    title: "Unveiling of the report",
-    date: "11 Jul 2024  ",
-    time: "14:00 - 16:00 ",
-    desc: "“Wealth with Purpose: A Report on Private Indian Philanthropy” by AIP Core Founders, NCR Advisory Council Members and BCG Leaders.",
-  },
-  {
-    title: "Presentation on the report",
-    date: "11 Jul 2024  ",
-    time: "14:00 - 16:00 ",
-    desc: "By Abhishek Gopalka, Managing Director and Partner, BCG and Amitabh Jaipuria, CEO, AIP",
-  },
-  {
-    title: "Conversation",
-    date: "11 Jul 2024  ",
-    time: "14:00 - 16:00 ",
-    desc: "“Navigating Philanthropy in India” featuring:",
-  },
-  {
-    title: "Closing remarks",
-    date: "11 Jul 2024  ",
-    time: "14:00 - 16:00 ",
-    desc: "By Ashish Dhawan, Founder-CEO,The Convergence Foundation; Core Founder, AIP",
-  },
-];
 
 type Props = {
   collaboration: TOneCollaboration;
@@ -91,17 +41,17 @@ const Cities = ({ collaboration, slug }: Props) => {
       <div className="relative grid lg:grid-cols-3 gap-5 container mx-auto ~px-[1.25rem]/[7.8rem] z-50">
         <div className="lg:col-span-2 flex flex-col gap-10  ~pr-0/[6.563rem]">
           <div className="font-playFair">
-            <FadeInAnimation delay={0.1} x1={-20} x2={0}>
+            <FadeInAnimation delay={0.1} y1={20}>
               <p className="leading-[3.25rem] tracking-[-.04rem] text-h3 text-midGray">
                 {collaboration?.title}
               </p>
             </FadeInAnimation>
-            <FadeInAnimation delay={0.2} x1={-20} x2={0}>
+            <FadeInAnimation delay={0.2} y1={20}>
               <p className=" leading-[1.75rem] tracking-[-.02rem] font-playFairItalic text-h5 text-gray40 font-medium pt-[1rem]">
                 {collaboration?.category}
               </p>
             </FadeInAnimation>
-            <FadeInAnimation delay={0.3} y1={20} y2={0}>
+            <FadeInAnimation delay={0.3} y1={20}>
               <p className="font-inter leading-[1.4rem]  text-midGray  ~pt-[2rem]/[1.25rem] ~pr-0/[3rem]">
                 {collaboration?.description}
               </p>
@@ -122,7 +72,7 @@ const Cities = ({ collaboration, slug }: Props) => {
               />
             </TabGroup>
             <div className="block md:hidden pt-[2rem]">
-              <FadeInAnimation delay={0.1} x1={-20} x2={0}>
+              <FadeInAnimation delay={0.1} y1={20}>
                 <div className="relative w-full h-[30.89rem]">
                   <Image
                     src={
@@ -162,7 +112,6 @@ const Cities = ({ collaboration, slug }: Props) => {
                 {fromDate}th - {toDate}
                 <span className="font-normal">&nbsp;|&nbsp;</span>
                 {timeFormate}
-                {/* 16:00 Hrs IST */}
               </p>
             </div>
           </div>
@@ -177,7 +126,7 @@ const Cities = ({ collaboration, slug }: Props) => {
                     {cities
                       ?.at(selectedIndex)
                       ?.organisationDetails?.map((items, i) => (
-                        <CardAnimation index={i} delay={0.1} key={i}>
+                        <CardAnimation delay={0.1} key={i}>
                           <div className=" flex items-center bg-white border border-1 border-gray10 rounded-xl ~w-[9.46rem]/[11.813rem] ~h-[4rem]/20 overflow-hidden">
                             <div className="relative ~w-[9.46rem]/[11.813rem] ~h-[4rem]/20">
                               <Image
@@ -190,13 +139,6 @@ const Cities = ({ collaboration, slug }: Props) => {
                           </div>
                         </CardAnimation>
                       ))}
-                    {/* <div className="flex items-center border border-1 bg-white border-gray10 rounded-xl ~w-[5.49rem]/[6.863rem] ~h-[4rem]/20 overflow-hidden">
-                  <Image
-                    src={Impact}
-                    className="object-contain   "
-                    alt="foundation"
-                  />
-                </div> */}
                   </div>
                 </div>
               )}
@@ -209,9 +151,8 @@ const Cities = ({ collaboration, slug }: Props) => {
                   {cities
                     ?.at(selectedIndex)
                     ?.collaborations?.map((items, i) => (
-                      <CardAnimation index={i} delay={0.1} key={i}>
+                      <CardAnimation delay={0.1} key={i}>
                         <div className="~w-[7.75rem]/[9.688rem] bg-white flex items-center ~h-[4rem]/[5rem] border border-1 border-gray10 rounded-xl overflow-hidden">
-                          {/* ~py-[0.7rem]/[0.89rem] px-[0.3rem] */}
                           <div className="relative ~w-[7.75rem]/[9.688rem] ~h-[4rem]/[5rem]">
                             <Image
                               src={StorageUrl + items?.image}
@@ -258,7 +199,7 @@ const Cities = ({ collaboration, slug }: Props) => {
           </div>
         </div>
         <div className="hidden md:block pt-[5rem]">
-          <FadeInAnimation delay={0.1} x1={20} x2={0}>
+          <FadeInAnimation delay={0.1} y1={20} y2={0}>
             <div className="relative w-[25rem] h-[30.89rem]">
               <Image
                 src={

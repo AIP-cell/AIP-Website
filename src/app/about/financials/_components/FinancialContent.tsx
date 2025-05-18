@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import DownloadFileSvg from "@/components/svg/DowloadFileSvg";
-import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 import { TReports } from "@/api/type";
 import Link from "next/link";
 import { BaseUrl, StorageUrl } from "@/utils/BaseUrl";
@@ -26,20 +25,16 @@ const FinancialContent = ({
           financialArray={response}
           currentYear={currentYear}
           listClassName=""
-          textClassName="!px-[1.394rem]"
         />
         <div className=" w-full ~pt-[2.5rem]/[5rem]">
           <div className="flex flex-col gap-[3rem] ~px-[1.25rem]/[14.375rem] ~pb-[3.875rem]/[7.5rem]">
-            {/* <p className="text-center font-playFair ~text-h4a/h2 ~leading-[2.113rem]/[2.6rem] tracking-[-0.02rem] text-gray80">
-              FY {currentYear}
-            </p> */}
             <TextStaggerAnimation
               text={`FY ${currentYear}`}
               className="text-center font-playFair ~text-h4a/h2 ~leading-[2.113rem]/[2.6rem] tracking-[-0.02rem] text-gray80"
             />
             <div>
               {filterDataByYear?.financialReports.map((data, index) => (
-                <CardAnimation key={index} index={index} delay={0.1}>
+                <CardAnimation key={index} delay={0.1}>
                   <div
                     key={index}
                     className="flex justify-between text-textPurple py-[2.063rem] w-full px-[1.25rem] border-b-2 border-footerGray "
@@ -50,9 +45,7 @@ const FinancialContent = ({
                       target="_blank"
                       download
                     >
-                      <ButtonAnimation className="">
-                        <DownloadFileSvg className="size-[2rem]" />
-                      </ButtonAnimation>
+                      <DownloadFileSvg className="size-[2rem]" />
                     </Link>
                   </div>
                 </CardAnimation>
@@ -65,18 +58,12 @@ const FinancialContent = ({
                     BaseUrl +
                     `financial-reports/download?year=${filterDataByYear?.originalYear}`
                   }
+                  className=" flex gap-2 0 rounded-3xl items-center text-darkPurple hover:text-white bg-white hover:bg-darkPurple py-[0.75rem] px-[1.75rem] border-2 bottom-2 border-darkPurple w-fit"
                 >
-                  <ButtonAnimation
-                    // onClick={() =>
-                    //   downloadAllFunction(filterDataByYear?.originalYear ?? "")
-                    // }
-                    className=" flex gap-2 0 rounded-3xl items-center text-darkPurple hover:text-white bg-white hover:bg-darkPurple py-[0.75rem] px-[1.75rem] border-2 bottom-2 border-darkPurple w-fit"
-                  >
-                    <p className="text-h9Copy5 font-medium leading-[1.225rem]  ">
-                      Download All
-                    </p>
-                    <DownloadFileSvg className="size-[1.25rem]" />
-                  </ButtonAnimation>
+                  <p className="text-h9Copy5 font-medium leading-[1.225rem]  ">
+                    Download All
+                  </p>
+                  <DownloadFileSvg className="size-[1.25rem]" />
                 </Link>
               </div>
             )}

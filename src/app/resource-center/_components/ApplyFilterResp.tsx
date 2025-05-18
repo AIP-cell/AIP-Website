@@ -1,18 +1,19 @@
-import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 import CrossSvg from "@/components/svg/CrossSvg";
 import FilterDownArrowSvg from "@/components/svg/FilterDownArrowSvg";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { generatingSearchParam } from "@/utils/UrlHelper";
-import { useRouter } from "next-nprogress-bar";
+import { useRouter } from "@bprogress/next/app";
 import { useState } from "react";
 
 type Props = {
   type: string;
   filterKey: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   optionsArray: any[];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   searchParams: Record<string, any>;
   setSelected: (value: string) => void;
-  // setIsOpen: (value: boolean) => void;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   selected: any;
 };
 export function ApplyFilterResp({
@@ -22,13 +23,10 @@ export function ApplyFilterResp({
   searchParams,
   selected,
   setSelected,
-}: // isOpen,
-// setIsOpen,
-Props) {
+}: Props) {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
   const handleSubmit = () => {
-    // e.preventDefault();
     const query = generatingSearchParam({
       ...searchParams,
       [filterKey]: selected.name ? selected._id : selected,
@@ -124,13 +122,12 @@ Props) {
             </RadioGroup>
           </div>
           <div className=" absolute bottom-[1.25rem] inset-x-0 px-[1.25rem]">
-            <ButtonAnimation
-              // type="submit"
+            <button
               onClick={handleSubmit}
               className="py-[0.75rem] w-full rounded-full text-h9Copy5 leading-[1.225rem] text-white bg-darkPurple text-center"
             >
               Apply Filter
-            </ButtonAnimation>
+            </button>
           </div>
         </div>
       )}

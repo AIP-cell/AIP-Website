@@ -1,8 +1,7 @@
 "use client";
-import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 import useClient from "@/hooks/useClient";
 import cn from "@/utils/tailwind";
-import React, { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 
 type Props = {
   desc: string;
@@ -48,21 +47,21 @@ const OpenRoleDescSection = ({ desc, index }: Props) => {
       {currentIndex !== index && (
         <span className="absolute bottom-[-0.8rem] left-0 text-darkPurple z-10">
           ...{""}
-          <ButtonAnimation
+          <button
             onClick={() => toggle(index)}
             className="inline text-darkPurple ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] font-semibold"
           >
             read more
-          </ButtonAnimation>
+          </button>
         </span>
       )}
       {currentIndex === index && (
-        <ButtonAnimation
+        <button
           onClick={() => toggle(index)}
           className="text-darkPurple ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] font-semibold"
         >
           show less
-        </ButtonAnimation>
+        </button>
       )}
     </div>
   );

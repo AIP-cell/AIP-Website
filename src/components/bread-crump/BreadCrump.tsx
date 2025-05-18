@@ -1,11 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
-import BreadCrumpSvg from "@public/svg/breadCrumps.svg";
-
-import React from "react";
 import cn from "@/utils/tailwind";
 import LeftOPenSvg from "../svg/LeftOpenSvg";
-import { ButtonAnimation } from "../animations/ButtonAnimation";
 type Props = {
   textOne: string;
   linkOne: string;
@@ -38,9 +33,8 @@ const BreadCrump = ({
         <div className="text-[#6A6D75]">
           <LeftOPenSvg className="~size-[0.8rem]/[1rem]" />
         </div>
-        {/* <Image src={BreadCrumpSvg} alt="bread-crump-Svg" /> */}
-        <ButtonAnimation className="text-left">{textOne}</ButtonAnimation>
-        <ButtonAnimation className="text-left">{textTwo && <p>/&nbsp;</p>}</ButtonAnimation>
+        <p className="text-left">{textOne}</p>
+        <p className="text-left">{textTwo && <span>/&nbsp;</span>}</p>
       </Link>
       {linkTwo && (
         <Link
@@ -50,11 +44,13 @@ const BreadCrump = ({
             { "!text-gray50 ": textThree }
           )}
         >
-          <ButtonAnimation
-            className={cn("text-left",{ "underline underline-offset-4": textThree })}
+          <p
+            className={cn("text-left", {
+              "underline underline-offset-4": textThree,
+            })}
           >
             {textTwo}
-          </ButtonAnimation>
+          </p>
           {textThree && <p>&nbsp;/&nbsp;</p>}
         </Link>
       )}
@@ -68,11 +64,13 @@ const BreadCrump = ({
             }
           )}
         >
-          <ButtonAnimation
-            className={cn("text-left",{ "underline underline-offset-4 ": textFour })}
+          <p
+            className={cn("text-left", {
+              "underline underline-offset-4 ": textFour,
+            })}
           >
             {textThree}
-          </ButtonAnimation>
+          </p>
           {textFour && <p>&nbsp;/&nbsp;</p>}
         </Link>
       )}
@@ -81,7 +79,7 @@ const BreadCrump = ({
           href={linkFour}
           className="text-black ~text-h10Copy6/h9Copy5 leading-[1.225rem] text-left"
         >
-          <ButtonAnimation className="text-left">{textFour}</ButtonAnimation>
+          <p className="text-left">{textFour}</p>
         </Link>
       )}
     </div>

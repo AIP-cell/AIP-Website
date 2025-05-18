@@ -1,19 +1,15 @@
 import { StorageUrl } from "@/utils/BaseUrl";
-import * as React from "react";
-import { SVGProps } from "react";
+import { useId } from "react";
 
 type Props = {
   src?: string;
   className?: string;
 };
 const ASvg = ({ src, ...props }: Props) => {
-  const id = React.useId();
+  const id = useId();
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      // viewBox="0 0 300 345"
-      // width={300}
-      // height={345}
       viewBox="0 0 296 345"
       fill="none"
       {...props}

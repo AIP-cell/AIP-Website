@@ -1,7 +1,6 @@
 import ImpactHeroSection from "./_components/ImpactHeroSection";
 import CaseStudies from "./_components/CaseStudies";
 import FoundationFacts from "./_components/FoundationFacts";
-// import PeopleWeWorkWith from "./_components/PeopleWeWorkWith";
 import CurvePeach from "@public/svg/peach-bg-curve-founders.svg";
 import { Api } from "@/api/Api";
 import { TAipImpact } from "@/api/type";
@@ -27,7 +26,6 @@ const page = async () => {
       <ImpactHeroSection />
       {caseStudyData.length != 0 && (
         <CaseStudies
-          isReadMoreButton={true}
           bottomCaseStudyCurveSvg={CurvePeach}
           caseStudyData={caseStudyData}
         />

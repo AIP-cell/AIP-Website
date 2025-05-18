@@ -1,9 +1,3 @@
-import Image from "next/image";
-import Link from "next/link";
-import React from "react";
-import HeroBg1 from "@public/svg/about/aip-journey/heroBg1.svg";
-import HeroBg2 from "@public/svg/about/aip-journey/heroBg2.svg";
-import HeroBgSVg from "@/components/svg/HeroBgSVg";
 import Wave from "react-wavify";
 import BreadCrump from "@/components/bread-crump/BreadCrump";
 import FadeInAnimation from "@/components/animations/FadeInAnimation";
@@ -18,7 +12,6 @@ const JourneyHeroSection = () => {
           paused={false}
           className="h-[--h] !block "
           options={{
-            // height:40,
             amplitude: 60,
             speed: 0.15,
             points: 2,
@@ -35,7 +28,6 @@ const JourneyHeroSection = () => {
           paused={false}
           className="h-[--h] rotate-180 !block "
           options={{
-            // height:40,
             amplitude: 60,
             speed: 0.15,
             points: 3,
@@ -83,11 +75,6 @@ const JourneyHeroSection = () => {
                     And AIP helps channel the flow. "
               className="pt-[1.25rem] text-center ~text-h4/h3 ~leading-[2.563rem]/[3.25rem] font-playFair text-gray80"
             />
-            {/* <h2 className="pt-[1.25rem] text-center ~text-h4/h3 ~leading-[2.563rem]/[3.25rem] font-playFair text-gray80">
-              A philanthropist’s wealth is the origin. Philanthropy is the
-              river. No two rivers are the same; No two philanthropists are the
-              same; No two journeys are alike. And AIP helps channel the flow.
-            </h2> */}
           </div>
         </div>
         <Wave

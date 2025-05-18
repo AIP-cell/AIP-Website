@@ -1,5 +1,4 @@
 import React from "react";
-import Bg from "@public/svg/about/our-approach/fivePModelBg.svg";
 import ImgTitleDescVer from "@/components/cards/ImgTitleDescVer";
 import TopImage from "@public/images/fivePTopSection.png";
 import BottomImage from "@public/images/fivePBottomSection.png";
@@ -56,15 +55,9 @@ const FivePModel = () => {
                   approach guides strategic giving, ensuring that every act of
                   philanthropy is thoughtful, effective, and transformative."
                 />
-                {/* <p className="text-midGray ~pt-[0.75rem]/[1.25rem] ~px-[2.8rem]/[21rem] ~text-h9Copy5/h9Copy4 text-center ~leading-[1.225rem]/[1.4rem]">
-                  At AIP, we help philanthropists move from Inspiration to
-                  Impact through our proprietary 5P Framework. This structured
-                  approach guides strategic giving, ensuring that every act of
-                  philanthropy is thoughtful, effective, and transformative.
-                </p> */}
                 <div className="~pt-[5.68rem]/[5rem] flex flex-wrap justify-center ~gap-x-5/[3.8rem] ~gap-y-5/[3rem] max-[20rem]:px-[0.5rem] ~px-[2.7rem]/[6.43rem] max-md:bg-[#fcf5e3]">
                   {threeP.map((item, i) => (
-                    <CardAnimation index={i} delay={0.2} key={i}>
+                    <CardAnimation delay={0.2} key={i}>
                       <ImgTitleDescVer
                         totalWidth="!w-[18.7rem] md:!~w-[15rem]/[19.8rem]"
                         imageWidth="!w-[11.875rem]"

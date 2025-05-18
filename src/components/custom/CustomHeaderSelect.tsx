@@ -9,12 +9,14 @@ import { ButtonAnimation } from "../animations/ButtonAnimation";
 import DownTagSvg from "../svg/DownTagSvg";
 import { usePathname } from "next/navigation";
 import cn from "@/utils/tailwind";
-import { useRouter } from "next-nprogress-bar";
+import { useRouter } from "@bprogress/next/app";
 
 type Props = {
-  items: any;
-  // isOpen: boolean;
-  // setIsOpen: (value: boolean) => void;
+  items: {
+    id: string;
+    label: string;
+    options: { option: string; link: string }[];
+  };
 };
 const CustomHeaderSelect = ({ items }: Props) => {
   const router = useRouter();
@@ -64,7 +66,7 @@ const CustomHeaderSelect = ({ items }: Props) => {
           "ml-[5.6rem] no-scrollbar mt-[1rem] z-[10000] bg-purpleToBlue flex flex-col rounded-2xl w-[16.625rem] p-[0.5rem]"
         )}
       >
-        {options?.map((items: any, i: number) => (
+        {options?.map((items: { option: string; link: string }, i: number) => (
           <ListboxOption
             key={i}
             value={items.option}

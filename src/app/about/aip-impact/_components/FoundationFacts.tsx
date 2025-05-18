@@ -24,10 +24,6 @@ const FoundationFacts = ({ button, foundationFacts, className }: Props) => {
         className="block h-[95rem] object-cover  absolute ~top-[-22rem]/[-19rem] w-[500rem] z-20"
       />
       <div className="relative container mx-auto z-30">
-        {/* <h2 className=" ~text-h4/h2 text-center font-playFair ~leading-[2.6rem]/[3.3rem]">
-          Foundation{" "}
-          <span className="text-textPurple font-playFairItalic">Facts</span>
-        </h2> */}
         <TextStaggerAnimation
           text="Foundation <color>Facts</color>"
           className="~text-h4/h2 text-center font-playFair ~leading-[2.6rem]/[3.3rem]"
@@ -51,8 +47,6 @@ const FoundationFacts = ({ button, foundationFacts, className }: Props) => {
               text1={foundationFacts?.researchReportsCount}
               textClass1="~text-h4/h3 ~leading-[2.6rem]/[3.25rem] font-semibold !text-black"
               sizeClass="~size-[14.2rem]/[17.38rem]"
-              // text2="Countries"
-              // textClass2=" font-bold text-h6Copy1 leading-[2.1rem]  "
               text3="Research Reports"
               textClass3=" ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]"
               textParentClass="!pt-0"
@@ -62,26 +56,22 @@ const FoundationFacts = ({ button, foundationFacts, className }: Props) => {
             <OvalPurpleCount
               mainClass="absolute ~top-[19rem]/[21rem] md:~left-0/[8.93rem] left-auto right-0 md:right-auto"
               countEnd={foundationFacts?.networkMembersCount}
-              // textClass1="~text-h4/h3 ~leading-[2.6rem]/[3.25rem]  font-semibold !text-white"
               sizeClass="~size-[14.2rem]/[17.38rem]"
               text2="Network"
               textClass2="~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] "
               text3="Members"
               textClass3="~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] "
-
             />
           )}
           {foundationFacts?.purposefulEngagementsCount > 0 && (
             <OvalPurpleCount
               mainClass="absolute top-[27rem] md:~top-[22rem]/[25rem]  left-0 md:left-auto md:~right-0/[8rem] "
               countEnd={foundationFacts?.purposefulEngagementsCount}
-              // textClass1="~text-h4/h3 ~leading-[2.6rem]/[3.25rem] font-semibold"
               sizeClass="~size-[14.2rem]/[17.38rem]"
               text2="Purposeful"
               textClass2=" ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] "
               text3="Engagements"
               textClass3=" ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem] "
-
             />
           )}
           {foundationFacts?.foundersCount > 0 && (
@@ -96,7 +86,7 @@ const FoundationFacts = ({ button, foundationFacts, className }: Props) => {
             />
           )}
         </div>
-        {/* pt-[47rem] */}
+
         {button && (
           <div className="flex justify-center absolute ~bottom-[-2rem]/0 w-full ">
             <Link href="/about/aip-impact/foundation-fact-sheet">

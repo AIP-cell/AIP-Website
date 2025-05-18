@@ -1,7 +1,4 @@
-import React from "react";
 import BreadCrump from "@/components/bread-crump/BreadCrump";
-// import ResourcesSm from "../_components/ResourcesSm";
-// import TabListAndRespSelect from "../_components/TabListAndRespSelect";
 import ResourceCard from "@/components/cards/ResourceCard";
 import { Api } from "@/api/Api";
 import { TAipResourcesCategory } from "@/api/type";
@@ -344,11 +341,10 @@ const AipResourcesInnerPage = async ({
         {response.length != 0 ? (
           <div className="pt-[3.25rem] grid md:grid-cols-2 lg:grid-cols-3 gap-[4.5rem]">
             {response?.map((item, i) => (
-              <CardAnimation index={i} delay={0.1} key={i}>
+              <CardAnimation delay={0.1} key={i}>
                 <ResourceCard
                   city={item.city}
                   linkKey={item?.key}
-                  index={i}
                   slug={item?.slug}
                   isLinkOrPdf={item?.isLinkOrPdf}
                   file={item?.file}

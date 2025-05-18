@@ -1,8 +1,4 @@
-import Link from "next/link";
-import React from "react";
 import Wave from "react-wavify";
-import BreadCrumpSvg from "@public/svg/breadCrumps.svg";
-import Image from "next/image";
 import BreadCrump from "@/components/bread-crump/BreadCrump";
 import TextStaggerAnimation from "@/components/animations/TextStaggerAnimation";
 import WordStaggerAnimation from "@/components/animations/WordStaggerAnimation";
@@ -24,7 +20,6 @@ const ImpactHeroSection = () => {
             paused={false}
             className="h-[--h] !block"
             options={{
-              // height:40,
               amplitude: 60,
               speed: 0.15,
               points: 2,
@@ -41,7 +36,6 @@ const ImpactHeroSection = () => {
             paused={false}
             className="h-[--h] rotate-180 !block "
             options={{
-              // height:40,
               amplitude: 60,
               speed: 0.15,
               points: 3,
@@ -68,14 +62,10 @@ const ImpactHeroSection = () => {
 
           <div className=" bg-[#b861b4a6] ~pt-[3rem]/[6rem] ~pb-[3rem]/[7rem] w-full ">
             <div className="container mx-auto flex justify-center flex-col items-center relative z-50 ~px-5/[14rem] ">
-              {/* <h3 className=" ~leading-[1.129rem]/[1.29rem] ~text-h9Copy5/h9Copy4 font-inter text-white/60 font-semibold">
-                IMPACT BEGINS AT HOME
-              </h3> */}
               <TextStaggerAnimation
                 text="IMPACT BEGINS AT HOME"
                 className=" ~leading-[1.129rem]/[1.29rem] ~text-h9Copy5/h9Copy4 font-inter text-white/60 font-semibold"
               />
-
               <WordStaggerAnimation
                 text="India has made significant progress yet more needs to be done.
                 Philanthropy is clearly one of the means than can augment impact

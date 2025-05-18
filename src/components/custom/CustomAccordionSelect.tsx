@@ -1,6 +1,5 @@
 "use client";
 
-import DownTagSvg from "../svg/DownTagSvg";
 import { usePathname } from "next/navigation";
 import cn from "@/utils/tailwind";
 import {
@@ -10,7 +9,6 @@ import {
   AccordionTrigger,
 } from "../layout/FooterAccordian";
 import Link from "next/link";
-import { useRouter } from "next-nprogress-bar";
 
 type Props = {
   ArrayData: {
@@ -29,9 +27,6 @@ const CustomAccordionSelect = ({
   accordionTriggerClassName,
   setIsOpen,
 }: Props) => {
-  // const [isOpen, setIsOpen] = useState(true);
-  // const [isPathname, setIsPathname] = useState(false);
-  const router = useRouter();
   const pathname = usePathname();
   let isPathname = "";
   if (pathname.startsWith("/about")) {

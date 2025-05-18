@@ -1,6 +1,4 @@
 "use client";
-import React from "react";
-import StoryBg from "@public/svg/home/aipWayBg.svg";
 import LeftHomePagePeachCurve from "@public/svg/leftHomePagePeach.svg";
 import OvalPeachSvg from "@public/svg/ovalPeach.svg";
 import Image from "next/image";
@@ -18,20 +16,13 @@ const AipWay = () => {
         />
         <FadeInAnimation
           delay={0.1}
-          x1={-20}
-          x2={0}
+          y1={20}
           duration={1}
           className="block absolute ~left-[-2rem]/0 ~top-[2rem]/[2rem]  ~w-[16rem]/[26rem] ~h-[25rem]/[37.5rem]"
         >
           <AipWaySvg className="block absolute ~left-[-4rem]/0 ~top-[2rem]/[2rem] ~w-[16rem]/[26rem] ~h-[25rem]/[37.5rem]" />
         </FadeInAnimation>
-        {/* <Image
-          src={StoryBg}
-          alt="bg-image"
-          className="block absolute ~left-[-6rem]/0 ~top-[2rem]/[2rem] ~w-[16rem]/[26rem] ~h-[25rem]/[37.5rem]"
-        /> */}
 
-        {/* <FadeInAnimation delay={0.1} y1={-20} y2={0} duration={1} className="absolute ~top-[7.75rem]/[5rem] flex justify-center w-full md:w-auto md:block"> */}
         <OvalPeach
           mainClass="absolute ~top-[7.75rem]/[5rem] flex justify-center w-full md:w-auto sm:block ~md:~left-0/[14.093rem]"
           text1="The"
@@ -40,7 +31,6 @@ const AipWay = () => {
           text2="AIP Way"
           textClass2=" ~text-h4/h2 ~leading-[2.6rem]/[3.3rem] !text-textPurple !font-playFairItalic"
         />
-        {/* </FadeInAnimation> */}
         <div className="hidden sm:block absolute bottom-[3.125rem] right-[14.366rem]">
           <Image src={OvalPeachSvg} alt="" className="size-[8.726rem]" />
         </div>

@@ -5,7 +5,6 @@ import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import { ChevronDownIcon } from "@radix-ui/react-icons";
 import cn from "@/utils/tailwind";
 
-import Image from "next/image";
 import PlusSvg from "../svg/PlusSvg";
 import MinusSvg from "../svg/MinusSvg";
 
@@ -37,8 +36,6 @@ const AccordionTrigger = React.forwardRef<
       {...props}
     >
       {children}
-      {/* <Image src={MinusSvg} alt="Minus Image" className="data-[state=open]:hidden data-[state=closed]:block transition-transform duration-200"/>
-      <Image src={PlusSvg} alt="Plus Image" className="data-[state=open]:block data-[state=closed]:hidden transition-transform duration-200" /> */}
       <ChevronDownIcon className="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200" />
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
@@ -58,7 +55,6 @@ const AccordionTriggerFaq = React.forwardRef<
       {...props}
     >
       {children}
-      {/* <Image src={MinusSvg} alt="Minus Image" className="data-[state=open]:hidden data-[state=closed]:block transition-transform duration-200"/> */}
       <PlusSvg className="h-4 w-4 block group-data-[state=open]:hidden text-muted-foreground  transition-transform duration-200" />
       <MinusSvg className="h-4 w-4 hidden group-data-[state=open]:block text-muted-foreground  transition-transform duration-200" />
     </AccordionPrimitive.Trigger>

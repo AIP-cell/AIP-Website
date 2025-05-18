@@ -4,10 +4,6 @@ import * as React from "react";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import { ChevronDownIcon } from "@radix-ui/react-icons";
 import cn from "@/utils/tailwind";
-import PlusSvg from "@public/svg/faq/plus.svg";
-import MinusSvg from "@public/svg/faq/minus.svg";
-import Image from "next/image";
-import { ButtonAnimation } from "../animations/ButtonAnimation";
 
 const Accordion = AccordionPrimitive.Root;
 

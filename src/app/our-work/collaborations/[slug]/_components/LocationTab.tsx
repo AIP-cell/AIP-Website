@@ -1,6 +1,6 @@
 "use client";
-import React, { useState } from "react";
-import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
+import React from "react";
+import { Tab, TabList } from "@headlessui/react";
 import {
   Listbox,
   ListboxButton,
@@ -9,14 +9,13 @@ import {
 } from "@headlessui/react";
 import DownTagSvg from "@/components/svg/DownTagSvg";
 import { TCities } from "@/api/type";
-import TabListAndRespSelect from "@/app/resource-center/_components/TabListAndRespSelect";
-import { useRouter } from "next-nprogress-bar";
+
 type Props = {
   tabArray: TCities[];
   textClassName?: string;
   listClassName?: string;
   selectedIndex: number;
-  setSelectedIndex: (value: any) => void;
+  setSelectedIndex: (value: number) => void;
 };
 const LocationTabs = ({
   tabArray,
@@ -25,9 +24,6 @@ const LocationTabs = ({
   selectedIndex,
   setSelectedIndex,
 }: Props) => {
-  const router = useRouter();
-  // const [selectedIndex, setSelectedIndex] = useState(0);
-
   return (
     <>
       <TabList
@@ -36,11 +32,6 @@ const LocationTabs = ({
         {tabArray.map((resources, i: number) => (
           <Tab
             key={i}
-            // onClick={() => {
-            //   router.push(`?city=${resources.name}`, {
-            //     scroll: false,
-            //   });
-            // }}
             className={`~px-4/[2.4rem] flex justify-center w-full items-center py-[.75rem] data-[selected]:bg-darkPurple data-[selected]:text-white data-[selected]:rounded-full text-h9Copy5 leading-[1.22rem] font-inter data-[selected]:outline-none ${textClassName}`}
           >
             {resources.name}
@@ -48,7 +39,7 @@ const LocationTabs = ({
         ))}
       </TabList>
       <Listbox
-        value={tabArray.at(selectedIndex)}
+        value={selectedIndex}
         onChange={setSelectedIndex}
         as="div"
         className="block lg:hidden"

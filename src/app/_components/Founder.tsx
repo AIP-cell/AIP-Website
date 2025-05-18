@@ -1,52 +1,22 @@
 "use client";
 import React, { useState } from "react";
-// import FounderBg from "../../../public/svg/foundersBg.svg";
 import PurPleCurveSvg from "../../../public/svg/purpleBgCurve.svg";
 import BlueCurveSvg from "../../../public/svg/blueBgCurve.svg";
 import TopImage from "@public/images/founderTopCurve.png";
 import BottomImage from "@public/images/founderBottomCurve.png";
-// import Ex from "../../../public/";
 import Image from "next/image";
 import ACardWithPlaySign from "@/components/cards/aCards/ACardWithPlaySign";
 import PCardWithPlaySign from "@/components/cards/pCards/PCardWithPlaySign";
 import RightSlickArrowSvg from "@/components/svg/RightSlickArrowSvg";
 import LeftSlickArrowSvg from "@/components/svg/LeftSlickArrowSvg";
 import cn from "@/utils/tailwind";
-import { motion } from "framer-motion";
 import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 import { useMediaQuery } from "react-responsive";
 import useClient from "@/hooks/useClient";
 import { THomePageTeam } from "@/api/type";
-import { AnimatePresence } from "framer-motion";
-import WordStaggerAnimation from "@/components/animations/WordStaggerAnimation";
 import FadeInAnimation from "@/components/animations/FadeInAnimation";
 import TextAnimation from "@/components/animations/TextAnimation";
-const founderData = [
-  {
-    image: "/images/pSample.png",
-    name: "0Rohini Nilekani",
-    post: "Rohini Nilekani Philanthropies",
-    desc: "I believe those who are already in philanthropy and enjoying it and making a difference have a responsibility to share their stories widely, and to be very transparent about their giving. By promoting such accountability, AIP is playing an essential role in building trust with the communities we serve.",
-  },
-  {
-    image: "/images/pSample.png",
-    name: "1Amit Chandra",
-    post: "ATE Chandra Foundation",
-    desc: "“I believe those who are already in philanthropy and enjoying it and making a difference have a responsibility to share their stories widely, and to be very transparent about their giving. By promoting such accountability, AIP is playing an essential role in building trust with the communities we serve.”",
-  },
-  {
-    image: "/images/aSample.png",
-    name: "2Vishal Tulsyan",
-    post: "Abhiyan Bharat Foundation India",
-    desc: "Effective philanthropy is not just about the act of giving, but a commitment to social transformation. Like in businesses and in professional life, it is time that we think about philanthropy in terms of scale with a lasting and sustainable long term impact. AIP brings together a strong group of changemakers to enable this change in thought process.",
-  },
-  {
-    image: "/images/aSample.png",
-    name: "3Ashish Dhawan",
-    post: "The Convergence Foundation",
-    desc: "I believe a lot more needs to be done particularly to encourage first-time givers. AIP aims to fill this gap and spur philanthropy in a very structured manner.",
-  },
-];
+
 type Props = {
   teamData: THomePageTeam[];
 };
@@ -77,7 +47,7 @@ const Founder = ({ teamData }: Props) => {
       <div className="w-full bg-founderGradient ~/md:~h-[50rem]/[37rem] lg:~h-[77rem]/[68rem] relative mt-[-1px]">
         <div className="absolute top-0 w-full">
           <div className="w-full  relative">
-            <FadeInAnimation duration={1.2} delay={0.15} x1={30} x2={0}>
+            <FadeInAnimation duration={1.2} delay={0.15} y1={30} y2={0}>
               <Image
                 src={PurPleCurveSvg}
                 alt=""
@@ -100,14 +70,14 @@ const Founder = ({ teamData }: Props) => {
                   </h3> */}
 
                   <div className=" sm:flex gap-3 ~text-h4/h2  ~leading-[2.6rem]/[3.3rem] relative font-playFair">
-                    <TextAnimation delay={0.2} >
+                    <TextAnimation delay={0.2}>
                       <p className="text-white/70">From our </p>
                     </TextAnimation>
-                   <TextAnimation delay={0.2} >
+                    <TextAnimation delay={0.2}>
                       <p className="text-white font-playFairItalic block md:inline-block">
                         Core-Founders
                       </p>
-                   </TextAnimation >
+                    </TextAnimation>
                     {/* <WordStaggerAnimation
                       text="From our "
                       className="text-white/70"
@@ -175,7 +145,7 @@ const Founder = ({ teamData }: Props) => {
                 </div>
                 <div className="md:hidden flex justify-center w-full  pt-[2.5rem]">
                   <div className=" w-[4.5rem] flex gap-[0.5rem] ">
-                    {teamData.map((items: any, index: number) => (
+                    {teamData.map((_, index: number) => (
                       <div
                         key={index}
                         className={cn(

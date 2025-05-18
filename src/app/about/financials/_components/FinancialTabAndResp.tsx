@@ -9,11 +9,10 @@ import {
 import DownTagSvg from "@/components/svg/DownTagSvg";
 import { TReports } from "@/api/type";
 import cn from "@/utils/tailwind";
-import { useRouter } from "next-nprogress-bar";
+import { useRouter } from "@bprogress/next/app";
 
 type Props = {
   financialArray: TReports[];
-  textClassName?: string;
   listClassName?: string;
   listboxButtonClassName?: string;
   currentYear?: string;
@@ -21,7 +20,6 @@ type Props = {
 const FinancialTabAndResp = ({
   financialArray,
   currentYear,
-  textClassName,
   listClassName,
   listboxButtonClassName,
 }: Props) => {

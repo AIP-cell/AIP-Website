@@ -16,12 +16,6 @@ const TestimonialsProjectProgram = ({ testimonials }: Props) => {
         className="hidden lg:block absolute top-[-1rem] right-0"
       />
       <div className="py-[7.53rem] relative container mx-auto">
-        {/* <h2 className="font-playFair text-gray80 ~text-h4/h2 ~leading-[2.6rem]/[3.3rem] text-center">
-          <span className="text-textPurple font-playFairItalic">
-            Gallery
-          </span>
-          &nbsp;Of Voices
-        </h2> */}
         <TextStaggerAnimation
           text="<color>Gallery</color> Of Voices"
           className="font-playFair text-gray80 ~text-h4/h2 ~leading-[2.6rem]/[3.3rem] text-center"
@@ -30,9 +24,6 @@ const TestimonialsProjectProgram = ({ testimonials }: Props) => {
           text="Some words from the launch."
           className="~leading-[1.225rem]/[1.4rem] ~text-h9Copy5/h9Copy4 text-center ~pt-[0.75rem]/[1.25rem] text-midGray"
         />
-        {/* <p className="~leading-[1.225rem]/[1.4rem] ~text-h9Copy5/h9Copy4 text-center ~pt-[0.75rem]/[1.25rem] text-midGray">
-          Some words from the launch.
-        </p> */}
         <TestimonialSlick slickArray={testimonials} />
       </div>
     </div>

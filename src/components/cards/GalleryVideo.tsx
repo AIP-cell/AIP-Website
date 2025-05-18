@@ -25,7 +25,6 @@ const GalleryVideo = ({
   const format = dayjs(date).format("D MMMM YYYY");
   return (
     <div className="w-full">
-      {/* ~w-[21.8rem]/[31.5rem] */}
       <div className="relative shrink-0 w-full ~h-[14.3rem]/[20.698rem] rounded-xl overflow-hidden flex items-center justify-center">
         {linkOrVideo === "video" ? (
           <ReactPlayer

@@ -7,7 +7,6 @@ import OvalPurple from "@public/svg/ovalPurple.svg";
 
 import Image from "next/image";
 import BreadCrump from "@/components/bread-crump/BreadCrump";
-import FadeInAnimation from "@/components/animations/FadeInAnimation";
 import { notFound } from "next/navigation";
 import { Api } from "@/api/Api";
 import { TRoadMap } from "@/api/type";
@@ -26,7 +25,6 @@ const page = async () => {
   return (
     <div className="pt-[5rem]">
       <div className="relative w-full">
-        {/* top-[9rem] */}
         <Image
           src={Bg}
           alt=""
@@ -51,26 +49,17 @@ const page = async () => {
                 alt=""
                 className="absolute ~bottom-[4rem]/[2rem] ~w-[10rem]/[11.875rem] ~right-0/[7.8rem]"
               />
-              <WordStaggerAnimation className="~px-[1.25rem]/[7rem] ~pt-[4.313rem]/[7.4rem] ~pb-[15rem]/[21rem] ~text-h4a/h4 text-gray80 font-playFair md:tracking-[-0.4px] ~leading-[2.113rem]/[2.6rem] " text="  At AIP, we believe in the transformative power of
+              <WordStaggerAnimation
+                className="~px-[1.25rem]/[7rem] ~pt-[4.313rem]/[7.4rem] ~pb-[15rem]/[21rem] ~text-h4a/h4 text-gray80 font-playFair md:tracking-[-0.4px] ~leading-[2.113rem]/[2.6rem] "
+                text="  At AIP, we believe in the transformative power of
                   philanthropy. Philanthropists can make a difference.
                   Philanthropists want to make a difference, and philanthropists
                   are the best at inspiring each other. We want to channel this
                   drive and vision to create lasting change, and ignite a ripple
                   effect of impact. Together, we craft a tailored roadmap to
                   guide your journey—identifying key sectors, clarifying your
-                  purpose, and shaping a legacy of meaningful giving."/>
-              {/* <FadeInAnimation delay={0.1} x1={-20} x2={0}>
-                <p className="~px-[1.25rem]/[7rem] ~pt-[4.313rem]/[7.4rem] ~pb-[15rem]/[21rem] ~text-h4a/h4 text-gray80 font-playFair md:tracking-[-0.4px] ~leading-[2.113rem]/[2.6rem] ">
-                  At AIP, we believe in the transformative power of
-                  philanthropy. Philanthropists can make a difference.
-                  Philanthropists want to make a difference, and philanthropists
-                  are the best at inspiring each other. We want to channel this
-                  drive and vision to create lasting change, and ignite a ripple
-                  effect of impact. Together, we craft a tailored roadmap to
-                  guide your journey—identifying key sectors, clarifying your
-                  purpose, and shaping a legacy of meaningful giving.
-                </p>
-              </FadeInAnimation> */}
+                  purpose, and shaping a legacy of meaningful giving."
+              />
             </div>
           </div>
           <GivingJourney response={response} />

@@ -1,14 +1,9 @@
 import BreadCrump from "@/components/bread-crump/BreadCrump";
-import EyeSvg from "@/components/svg/EyeSvg";
 import Image from "next/image";
 import Link from "next/link";
-import WealthView from "@public/svg/projects-page/wealthView.png";
 import PurpleTopSvg from "@public/svg/products-and-services/project-and-programs/topRightPurpleCurve.svg";
-import bcgSvg from "@public/svg/projects-page/bcg.svg";
 import DownloadFileSvg from "@/components/svg/DowloadFileSvg";
-import XSvg from "@/components/svg/XSvg";
-import YoutubeSvg from "@/components/svg/YoutubeSvg";
-import { TOneProjectPrograms, TProjectPrograms } from "@/api/type";
+import { TOneProjectPrograms } from "@/api/type";
 import { StorageUrl } from "@/utils/BaseUrl";
 import FadeInAnimation from "@/components/animations/FadeInAnimation";
 
@@ -35,7 +30,7 @@ const InnerSectionOne = ({ heroSectionData }: Props) => {
         <div className="grid md:grid-cols-3 gap-5">
           <div className="col-span-2 flex flex-col ~gap-[2rem]/[2.5rem]  ~pr-0/[6.563rem]">
             <div className="font-playFair">
-              <FadeInAnimation delay={0.1} x1={-20} x2={0}>
+              <FadeInAnimation delay={0.1} y1={20} y2={0}>
                 <p className="~leading-[2.6rem]/[3.3rem] tracking-[-.04rem] ~text-h4/h2 text-midGray">
                   {heroSectionData?.title}
                 </p>
@@ -77,7 +72,6 @@ const InnerSectionOne = ({ heroSectionData }: Props) => {
             )}
             <div className="h-px bg-gray10 w-full md:w-[31.563rem]"></div>
             <div className="flex gap-5">
-              {/* <button className=""> */}
               <Link
                 href={StorageUrl + heroSectionData?.report}
                 target="_blank"

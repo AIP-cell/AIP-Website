@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Linkedin from "@public/svg/grayLinkedin.svg";
-import Src from "@public/images/pTeamSample.png";
 import PMediumSizeSvg from "@/components/svg/PMediumSizeSvg";
 import Link from "next/link";
 type Props = {
@@ -8,13 +7,11 @@ type Props = {
   linkedinLink?: string;
   title?: string;
   slug?: string;
-  title2?: string;
   image?: string;
   location?: string;
   email?: string;
   desc?: string;
   titleClassName?: string;
-  title2ClassName?: string;
   locationClassName?: string;
   link?: string;
 };
@@ -24,12 +21,10 @@ const PTeamCard = ({
   slug,
   image,
   title,
-  title2,
   location,
   email,
   desc,
   titleClassName,
-  title2ClassName,
   locationClassName,
   link,
 }: Props) => {
@@ -39,7 +34,7 @@ const PTeamCard = ({
         src={image}
         className="max-[23rem]:w-[8rem] ~w-[10.3rem]/[11.87rem]"
       />
-      {linkedinLink && linkedin && (
+      {!!linkedinLink && !!linkedin && (
         <Link
           target="_blank"
           href={linkedinLink}
@@ -48,7 +43,7 @@ const PTeamCard = ({
           <Image src={Linkedin} alt="" />
         </Link>
       )}
-      <div className="flex flex-col grow justify-between gap-[0.5rem]">
+      <div className="flex flex-col grow gap-[0.5rem]">
         {slug ? (
           <Link
             href={`${link}`}
@@ -57,28 +52,26 @@ const PTeamCard = ({
             {title}
           </Link>
         ) : (
-          <div
+          <h3
             className={`~text-h4a/h4 ~leading-[2.1rem]/[2.6rem] text-gray80 font-playFair ${titleClassName}`}
           >
             {title}
-          </div>
+          </h3>
         )}
-        <h3
-          className={`~text-h4a/h4 ~leading-[2.1rem]/[2.6rem] text-gray80 font-playFair ${title2ClassName}`}
-        >
-          {title2}
-        </h3>
-        {location && (
+
+        {!!location && (
           <p
             className={`~text-h4a/h5 ~leading-[2.113rem]/[1.75rem] text-gray80 font-playFair font-medium ${locationClassName}`}
           >
             {location}
           </p>
         )}
-        <p className="~text-h6M/h5 font-playFairItalic  text-gray40 ~leading-[1.575rem]/[1.75rem]  ">
-          {desc}
-        </p>
-        {email && (
+        {!!desc && (
+          <p className="~text-h6M/h5 font-playFairItalic  text-gray40 ~leading-[1.575rem]/[1.75rem]  ">
+            {desc}
+          </p>
+        )}
+        {!!email && (
           <Link
             href=""
             className="break-words break-all ~text-h9Copy5/h8Copy3 text-textPurple italic  ~leading-[1.225rem]/[1.575rem] underline decoration-[1px] "

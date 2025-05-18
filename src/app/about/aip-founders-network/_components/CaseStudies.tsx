@@ -5,39 +5,11 @@ import CaseStudy from "@/components/cards/CaseStudy";
 import CurveBg from "@public/svg/about/aip-impact/caseStudyPeachCurve.svg";
 import Image from "next/image";
 
-// const caseStudyData = [
-//   {
-//     title: "Philanthropist Name",
-//     foundationName: "Foundation Name",
-//     initiativeName: "Initiative Name",
-//     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec lacus vitae urna tincidunt aliquet. Nullam scelerisque urna ut lacus accumsan, ac porttitor nisi tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum imperdiet, velit id euismod vehicula, nulla elit malesuada libero, in posuere est justo id lorem. Aliquam erat volutpat. Sed pharetra augue ut felis fermentum, nec aliquam risus tincidunt. Donec bibendum sapien eget mauris lacinia, ut pellentesque justo luctus. Duis vehicula odio in risus sagittis, sit amet viverra mauris facilisis.",
-//     image: "/images/case-studies/caseStudy1.png",
-//   },
-//   {
-//     title: "Philanthropist Name",
-//     foundationName: "Foundation Name",
-//     initiativeName: "Initiative Name",
-//     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec lacus vitae urna tincidunt aliquet. Nullam scelerisque urna ut lacus accumsan, ac porttitor nisi tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum imperdiet, velit id euismod vehicula, nulla elit malesuada libero, in posuere est justo id lorem. Aliquam erat volutpat. Sed pharetra augue ut felis fermentum, nec aliquam risus tincidunt. Donec bibendum sapien eget mauris lacinia, ut pellentesque justo luctus. Duis vehicula odio in risus sagittis, sit amet viverra mauris facilisis.",
-//     image: "/images/case-studies/caseStudy1.png",
-//   },
-//   {
-//     title: "Philanthropist Name",
-//     foundationName: "Foundation Name",
-//     initiativeName: "Initiative Name",
-//     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec lacus vitae urna tincidunt aliquet. Nullam scelerisque urna ut lacus accumsan, ac porttitor nisi tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum imperdiet, velit id euismod vehicula, nulla elit malesuada libero, in posuere est justo id lorem. Aliquam erat volutpat. Sed pharetra augue ut felis fermentum, nec aliquam risus tincidunt. Donec bibendum sapien eget mauris lacinia, ut pellentesque justo luctus. Duis vehicula odio in risus sagittis, sit amet viverra mauris facilisis.",
-//     image: "/images/case-studies/caseStudy1.png",
-//   },
-// ];
 type Props = {
   bottomCaseStudyCurveSvg: string;
   caseStudyData: TCaseStudies[];
-  isReadMoreButton?: boolean;
 };
-const CaseStudies = ({
-  bottomCaseStudyCurveSvg,
-  caseStudyData,
-  isReadMoreButton,
-}: Props) => {
+const CaseStudies = ({ bottomCaseStudyCurveSvg, caseStudyData }: Props) => {
   return (
     <div className="relative w-full">
       <Image
@@ -51,23 +23,16 @@ const CaseStudies = ({
         className="hidden lg:block absolute  bottom-[-2rem]  right-0"
       />
       <div className=" relative container mx-auto ~pt-[4.7rem]/[12.5rem]">
-        {/* <h2 className="text-center ~text-h4/h2 ~leading-[2.6rem]/[3.3rem] text-darkBrown font-playFair">
-          Case
-          <span className="text-textPurple font-playFairItalic">
-            &nbsp;Studies
-          </span>
-        </h2> */}
         <TextStaggerAnimation
           text="Case <color>Studies</color>"
           className="text-center ~text-h4/h2 ~leading-[2.6rem]/[3.3rem] text-darkBrown font-playFair"
         />
         <div className="~pt-[2.5rem]/[6.56rem] flex flex-col ~gap-[3.5rem]/[5.5rem] ~px-[1.25rem]/[7.8rem]">
           {caseStudyData.map((item, i: number) => (
-            <CardSlideAnimation index={i} delay={0.3} key={i}>
+            <CardSlideAnimation delay={0.3} key={i}>
               <CaseStudy
                 key={i}
                 index={i}
-                isReadMoreButton={isReadMoreButton}
                 slug={item?.slug}
                 foundationName={item?.organisation}
                 initiativeName={item?.initiativeName}
