@@ -10,7 +10,7 @@ import { TCoreFoundersAndFounders, TTeamMembers } from "@/api/type";
 
 const tabList = [
   {
-    slug: "core-founder",
+    slug: "core-founders",
     key: "coreFounder",
     name: "Our Core Founders",
   },
@@ -31,7 +31,7 @@ const getPeopleOfAip = async (
 };
 
 const CoreFoundersAndFounders = () => {
-  const [currentTab, setCurrentTab] = useState<string>("core-founder");
+  const [currentTab, setCurrentTab] = useState<string>("core-founders");
 
   const { data: response } = useQuery({
     queryKey: ["peopleOfAip", currentTab],
@@ -53,7 +53,7 @@ const CoreFoundersAndFounders = () => {
         currentTab={currentTab}
       />
 
-      {currentTab === "core-founder" && (
+      {currentTab === "core-founders" && (
         <OurCoreFoundersContent coreFounderMembers={members} />
       )}
       {currentTab === "founders" && (

@@ -57,7 +57,7 @@ const OurCoreFoundersContent = ({ coreFounderMembers }: Props) => {
                     >
                       <ACard
                         slug={item?.slug}
-                        link={`/people-of-aip/coreFounder/${item.slug}`}
+                        link={`/people-of-aip/core-founders/${item.slug}`}
                         linkedin
                         linkedinLink={item?.linkedin}
                         nameClass=" underline decoration-[1px] underline-offset-4 "
@@ -70,7 +70,7 @@ const OurCoreFoundersContent = ({ coreFounderMembers }: Props) => {
                       {coreFounderMembers[i + 1] && (
                         <PCard
                           slug={item?.slug}
-                          link={`/people-of-aip/coreFounder/${
+                          link={`/people-of-aip/core-founders/${
                             coreFounderMembers[i + 1]?.slug
                           }`}
                           linkedin

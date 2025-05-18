@@ -34,7 +34,7 @@ const headerData = [
   //   id: "people-of-aip",
   //   label: "People of AIP",
   //   options: [
-  //     { option: "Our Core Founders", link: "/people-of-aip/core-founder" },
+  //     { option: "Our Core Founders", link: "/people-of-aip/core-founders" },
   //     { option: "Founders", link: "/people-of-aip/founders" },
   //     {
   //       option: "Our Advisory Board",

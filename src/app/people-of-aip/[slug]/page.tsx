@@ -10,16 +10,15 @@ import NoData from "@/components/NoData";
 
 export const dynamic = "force-dynamic";
 const getPeopleOfAipApi = async (slug: string): Promise<TTeamMembers[]> => {
- 
   const response = await Api.getPeopleOfAip(slug);
   return response?.data;
 };
 const tabList = [
   {
-    slug: "core-founder",
+    slug: "core-founders",
     key: "coreFounder",
     name: "Our Core Founders",
-    link: "/people-of-aip/core-founder",
+    link: "/people-of-aip/core-founders",
   },
   {
     slug: "founders",
@@ -46,13 +45,12 @@ const InnerPage = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const urlSlug = urlParams.slug;
   const filtered = tabList.find((item) => item.slug === urlSlug);
   const response = await getPeopleOfAipApi(
-    filtered?.key ? filtered?.key : "core-founder"
+    filtered?.key ? filtered?.key : "core-founders"
   );
   if (!response) {
     notFound();
   }
   const members = response;
-  // const innerName = tabList.find((item)=>item.key)
   return (
     <div className="pt-[5rem] overflow-hidden">
       <div className="relative container mx-auto">
@@ -68,7 +66,7 @@ const InnerPage = async ({ params }: { params: Promise<{ slug: string }> }) => {
         currentTab={urlSlug}
         filteredName={filtered?.name}
       />
-      {urlSlug === "core-founder" ? (
+      {urlSlug === "core-founders" ? (
         members && members.length != 0 ? (
           <OurCoreFoundersContent coreFounderMembers={members} />
         ) : (

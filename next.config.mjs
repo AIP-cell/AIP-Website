@@ -15,7 +15,7 @@ const nextConfig = {
       },
       {
         source: "/people-of-aip",
-        destination: "/people-of-aip/core-founder",
+        destination: "/people-of-aip/core-founders",
         permanent: true,
       },
       {

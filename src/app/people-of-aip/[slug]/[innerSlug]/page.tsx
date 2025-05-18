@@ -34,7 +34,7 @@ const InnerTeamPage = async ({
   let textTwoBreadCrump;
   if (urlParams.slug === "team-aip") {
     textTwoBreadCrump = "Team AIP";
-  } else if (urlParams.slug === "core-founder") {
+  } else if (urlParams.slug === "core-founders") {
     textTwoBreadCrump = "Our Core Founders";
   } else if (urlParams.slug === "founders") {
     textTwoBreadCrump = "Founders";
@@ -86,7 +86,7 @@ const InnerTeamPage = async ({
                     <div className="flex gap-[1rem]">
                       {team?.linkedln && (
                         <Link href={team.linkedln} target="_blank">
-                          <ButtonAnimation className="rounded-full ~p-[0.5rem]/[0.875rem] bg-bgGray5">
+                          <ButtonAnimation className="rounded-full ~p-[0.5rem]/[0.875rem] bg-bgGray5 hover:scale-110 transition-all duration-300 ease-out">
                             <Image
                               src={Linkedin}
                               alt=""
@@ -97,7 +97,7 @@ const InnerTeamPage = async ({
                       )}
                       {team?.twitter && (
                         <Link href={team.twitter} target="_blank">
-                          <ButtonAnimation className="rounded-full flex justify-center items-center text-textPurple hover:text-white p-[0.93rem] bg-bgGray5 hover:bg-textPurple">
+                          <ButtonAnimation className="rounded-full flex justify-center items-center text-textPurple  p-[0.93rem] bg-bgGray5 hover:scale-110 transition-all duration-300 ease-out">
                             <XSvg className="size-[1.063rem]" />
                           </ButtonAnimation>
                         </Link>
@@ -108,7 +108,7 @@ const InnerTeamPage = async ({
                         key={i}
                         href={link?.link}
                         target="_blank"
-                        className="flex w-[17.375rem] gap-[0.98rem] ~pl-[1rem]/[1.25rem] ~pr-[2.813rem]/[1.25rem] ~py-[0.87rem]/[0.76rem] bg-bgGray5 rounded-full"
+                        className="flex w-fit gap-[0.98rem] ~pl-[1rem]/[1.25rem] ~pr-[2.813rem]/[1.25rem] ~py-[0.87rem]/[0.76rem] bg-bgGray5 rounded-full hover:scale-105 transition-all duration-300 ease-out"
                       >
                         <Image
                           src={LinkSvg}
