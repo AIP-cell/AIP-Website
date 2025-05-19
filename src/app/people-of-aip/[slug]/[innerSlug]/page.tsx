@@ -31,18 +31,18 @@ const InnerTeamPage = async ({
     notFound();
   }
   const team = response?.teams;
-  let textTwoBreadCrump;
-  if (urlParams.slug === "team-aip") {
-    textTwoBreadCrump = "Team AIP";
-  } else if (urlParams.slug === "core-founders") {
-    textTwoBreadCrump = "Our Core Founders";
-  } else if (urlParams.slug === "founders") {
-    textTwoBreadCrump = "Founders";
-  } else if (urlParams.slug === "advisory-board") {
-    textTwoBreadCrump = "Our Advisory Board";
-  } else if (urlParams.slug === "experts") {
-    textTwoBreadCrump = "Experts";
-  }
+  // let textTwoBreadCrump;
+  // if (urlParams.slug === "team-aip") {
+  //   textTwoBreadCrump = "Team AIP";
+  // } else if (urlParams.slug === "core-founders") {
+  //   textTwoBreadCrump = "Our Core Founders";
+  // } else if (urlParams.slug === "founders") {
+  //   textTwoBreadCrump = "Founders";
+  // } else if (urlParams.slug === "advisory-board") {
+  //   textTwoBreadCrump = "Our Advisory Board";
+  // } else if (urlParams.slug === "experts") {
+  //   textTwoBreadCrump = "Experts";
+  // }
 
   return (
     <div className="pt-[5rem]">
@@ -57,10 +57,10 @@ const InnerTeamPage = async ({
             <BreadCrump
               textOne="People of AIP"
               linkOne="/people-of-aip"
-              textTwo={textTwoBreadCrump}
-              linkTwo={`/people-of-aip/${urlParams.slug}`}
-              textThree={`${team?.name}`}
-              linkThree={`/people-of-aip/${urlParams.slug}/${urlParams.innerSlug}`}
+              // textTwo={textTwoBreadCrump}
+              // linkTwo={`/people-of-aip/${urlParams.slug}`}
+              textTwo={`${team?.name}`}
+              linkTwo="#"
             />
             <div className="~pt-[4.3rem]/[5rem] flex flex-col-reverse lg:grid grid-cols-3 gap-[1.238rem]">
               <div className="col-span-2  relative">

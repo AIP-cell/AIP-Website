@@ -158,39 +158,53 @@ const Footer = () => {
               <p className=" ~text-h10Copy6/h9Copy5 font-inter text-white/60">
                 Phase III, New Delhi, India 110020
               </p>
-              <ButtonAnimation className="">
-                <Link
-                  href="mailto:info@indianphilanthropy.org"
-                  className=" ~text-h10Copy6/h9Copy5 font-inter text-white/60 hover:underline underline-offset-2 transition-all duration-700"
-                >
-                  info@indianphilanthropy.org
-                </Link>
-              </ButtonAnimation>
+
+              <Link
+                href="mailto:info@indianphilanthropy.org"
+                className=" ~text-h10Copy6/h9Copy5 font-inter text-white/60 hover:underline underline-offset-2 transition-all duration-700"
+              >
+                info@indianphilanthropy.org
+              </Link>
               <p className="~pt-[1rem]/[1.75rem] ~text-h10Copy6/h9Copy5 font-inter text-white/60">
                 <span className="text-white"> CIN:</span> U85300DL202INPL384351
               </p>
               <div className="flex gap-[1.25rem] ~pt-[1rem]/[2rem]">
-                <ButtonAnimation className="relative size-[2.5rem] ">
+                <Link
+                  href="https://x.com/aip_ind?lang=en"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative size-[2.5rem] "
+                >
                   <Image
                     src={X}
                     alt=""
-                    className="hover:scale-110 transition-all duration-300"
+                    className="hover:scale-110 transition-all duration-300 ease-out"
                   />
-                </ButtonAnimation>
-                <ButtonAnimation className="relative size-[2.5rem]">
+                </Link>
+                <Link
+                  href="https://www.linkedin.com/company/a-ip/posts/?feedView=all"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative size-[2.5rem]"
+                >
                   <Image
                     src={In}
                     alt=""
-                    className="hover:scale-110 transition-all duration-300"
+                    className="hover:scale-110 transition-all duration-300 ease-out"
                   />
-                </ButtonAnimation>
-                <ButtonAnimation className="relative size-[2.5rem]">
+                </Link>
+                <Link
+                  href="https://www.youtube.com/@AccelerateIndianPhilanthropy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative size-[2.5rem]"
+                >
                   <Image
                     src={Youtube}
                     alt=""
-                    className="hover:scale-110 transition-all duration-300"
+                    className="hover:scale-110 transition-all duration-300 ease-out"
                   />
-                </ButtonAnimation>
+                </Link>
               </div>
               <form
                 onSubmit={handleSubmit(onSubmit)}

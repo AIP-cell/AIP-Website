@@ -2,7 +2,6 @@
 const nextConfig = {
   async redirects() {
     return [
-      // Basic redirect
       {
         source: "/resource-center/aip-resources",
         destination: "/resource-center/aip-resources/aip-updates",
@@ -11,11 +10,6 @@ const nextConfig = {
       {
         source: "/resource-center/curated-resources",
         destination: "/resource-center/curated-resources/featured",
-        permanent: true,
-      },
-      {
-        source: "/people-of-aip",
-        destination: "/people-of-aip/core-founders",
         permanent: true,
       },
       {
