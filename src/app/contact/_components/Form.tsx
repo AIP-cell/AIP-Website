@@ -8,7 +8,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import { Api } from "@/api/Api";
-import { load } from "recaptcha-v3";
+// import { load } from "recaptcha-v3";
 
 const radioArray = [
   "I'm a Philanthropist/Foundation",
@@ -35,14 +35,14 @@ const Form = () => {
 
   const { mutateAsync, error } = useMutation({
     mutationFn: async (formData: TContactSchema) => {
-      const key = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+      // const key = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
-      const recaptcha = await load(key || "");
-      const token = await recaptcha?.execute("formSubmit");
+      // const recaptcha = await load(key || "");
+      // const token = await recaptcha?.execute("formSubmit");
       const response = Api.postContact({
         ...formData,
         type,
-        recaptcha_token: token,
+        // recaptcha_token: token,
       });
       return response;
     },
