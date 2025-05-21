@@ -76,9 +76,8 @@ export const newsletterSchema = z.object({
 export type NewsletterSchema = z.infer<typeof newsletterSchema>;
 const Footer = () => {
   const {
-    register,
     handleSubmit,
-    formState: { errors },
+    formState: {},
   } = useForm<NewsletterSchema>({
     resolver: zodResolver(newsletterSchema),
   });
@@ -136,16 +135,17 @@ const Footer = () => {
                     Foundation Fact Sheet
                   </Link>
                 </div>
-                <div className=" md:basis-3/4 flex w-full md:justify-start pt-[2.5rem] max-md:order-2">
-                  <div className="w-full md:~w-[21rem]/[25rem] h-[2.8rem] bg-white flex rounded-full relative rounded-br-full   items-center justify-end">
-                    <input
-                      type="text"
-                      placeholder=" Sign up for our newsletter"
-                      className="outline-none rounded-full text-footerGray w-[75%]  bg-[#5a4a9a] absolute top-0 left-0 z-[100] flex items-center border-2 border-footerGray pl-[1.5rem] text-h9Copy5  h-full "
-                    ></input>
-                    <button className="absolute w-[25%] pr-[2.56rem] z-[50] ~pl-[3rem]/[4rem] text-textPurple flex items-center justify-center md:justify-end bg-white h-full rounded-full text-right ~text-h10Copy6/h9Copy5 font-inter">
-                      Join
-                    </button>
+                <div className="md:basis-3/4 flex w-full md:justify-start pt-[1.6rem] max-md:order-2">
+                  <div className="md:~w-[13rem]/[16rem] h-[2.8rem] bg-white rounded-full rounded-br-full">
+                    <Link
+                      href="http://eepurl.com/hZEvlb"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <button className="pr-[2.56rem] md:~w-[15rem]/[19rem] h-[2.8rem] z-[50] ~pl-[2rem]/[3rem] text-textPurple bg-white rounded-full ~text-h10Copy6/h9Copy5 font-inter">
+                        Subscribe To Our Newsletter
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -210,26 +210,31 @@ const Footer = () => {
                 onSubmit={handleSubmit(onSubmit)}
                 className="hidden lg:basis-3/4 lg:flex w-full lg:justify-start pt-10 max-md:order-2"
               >
-                <div className="w-full md:max-w-[25rem] h-[2.8rem] bg-white flex rounded-full relative items-center justify-end">
-                  <input
-                    type="text"
-                    placeholder="Sign up for our newsletter"
-                    {...register("email")}
-                    className="outline-none rounded-full text-footerGray w-[75%] bg-[#5a4a9a] absolute top-0 left-0 z-[100] flex items-center border-2 border-footerGray pl-[1.5rem] text-h9Copy5 h-full"
-                  />
-                  <button
-                    type="submit"
-                    className="absolute w-[25%] pr-[2.56rem] z-[50] text-textPurple flex items-center justify-center md:justify-end bg-white h-full rounded-full text-right text-h9Copy5 font-inter"
+                <div className="w-full md:max-w-[16.5rem] h-[2.8rem] bg-white rounded-full">
+                  <Link
+                    href="http://eepurl.com/hZEvlb"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    Join
-                  </button>
-
-                  {errors.email && (
-                    <p className="absolute -bottom-6 left-4 text-red-500 text-sm">
-                      {errors.email.message}
-                    </p>
-                  )}
+                    <button
+                      type="button"
+                      className="w-full h-[2.8rem] px-[2rem] z-[50] text-textPurple bg-white rounded-full text-h9Copy5 font-inter"
+                    >
+                      Subscribe To Our Newsletter
+                    </button>
+                  </Link>
                 </div>
+                {/* <div className="~pt-10/[2rem] ">
+                  <ButtonAnimation className="w-full lg:w-fit">
+                    <Link
+                      href={"http://eepurl.com/iIsVhA "}
+                      target="_blank"
+                      className="outline-none rounded-full text-black ~text-mc1/c2  bg-white hover:bg-black border border-black hover:text-white  justify-center flex items-center ~px-[1.25rem]/[2rem] lg:~lg:~py-[0.75rem]/[1rem] ~py-[0.70rem]/[1rem] text-ultralight w-full lg:w-fit  h-fit z-50"
+                    >
+                      Subscribe To Our Newsletter
+                    </Link>
+                  </ButtonAnimation>
+                </div> */}
               </form>
               <div className=" text-h10Copy6 ~pt-[1rem]/[2.875rem] font-inter text-white/60">
                 <span className="pr-2">
