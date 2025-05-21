@@ -142,7 +142,7 @@ const Footer = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <button className="pr-[2.56rem] md:~w-[15rem]/[19rem] h-[2.8rem] z-[50] ~pl-[2rem]/[3rem] text-textPurple bg-white rounded-full ~text-h10Copy6/h9Copy5 font-inter">
+                      <button className="pr-[2.56rem] md:~w-[15rem]/[19rem] h-[2.8rem] z-[50] ~pl-[2rem]/[3rem] text-textPurple bg-white rounded-full ~text-h10Copy6/h9Copy5 font-inter border-transparent border-[1px] hover:border-white hover:bg-[#224193] hover:text-white transition-all duration-300 ease-out">
                         Subscribe To Our Newsletter
                       </button>
                     </Link>
@@ -210,7 +210,7 @@ const Footer = () => {
                 onSubmit={handleSubmit(onSubmit)}
                 className="hidden lg:basis-3/4 lg:flex w-full lg:justify-start pt-10 max-md:order-2"
               >
-                <div className="w-full md:max-w-[16.5rem] h-[2.8rem] bg-white rounded-full">
+                <div className="w-full md:max-w-[16.5rem] h-[2.8rem] rounded-full">
                   <Link
                     href="http://eepurl.com/hZEvlb"
                     target="_blank"
@@ -218,7 +218,7 @@ const Footer = () => {
                   >
                     <button
                       type="button"
-                      className="w-full h-[2.8rem] px-[2rem] z-[50] text-textPurple bg-white rounded-full text-h9Copy5 font-inter"
+                      className="w-full h-[2.8rem] px-[2rem] z-[50] text-textPurple bg-white rounded-full text-h9Copy5 font-inter border-transparent border-[1px] hover:border-white hover:bg-[#224193] hover:text-white transition-all duration-300 ease-out"
                     >
                       Subscribe To Our Newsletter
                     </button>
