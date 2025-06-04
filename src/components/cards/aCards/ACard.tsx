@@ -38,12 +38,23 @@ const ACard = ({
         </Link>
       )}
       <div className="w-[18.43rem] h-[21.56rem] relative">
-        <ASvg
-          src={image}
-          className={cn("", {
-            "cursor-pointer": slug,
-          })}
-        />
+        {slug ? (
+          <Link href={`${link}`}>
+            <ASvg
+              src={image}
+              className={cn("", {
+                "cursor-pointer": slug,
+              })}
+            />
+          </Link>
+        ) : (
+          <ASvg
+            src={image}
+            className={cn("", {
+              "cursor-pointer": slug,
+            })}
+          />
+        )}
       </div>
       <div className="flex flex-col gap-[0.75rem]">
         {slug ? (

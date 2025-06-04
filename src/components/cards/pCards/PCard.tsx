@@ -39,12 +39,23 @@ const PCard = ({
       )}
       <div className="w-[18.43rem] h-[21.56rem] relative">
         <div className="w-[18.43rem] h-[21.56rem] relative">
-          <PSvg
-            src={image}
-            className={cn(" w-[18.43rem] h-[21.56rem]  ", {
-              "cursor-pointer": slug,
-            })}
-          />
+          {slug ? (
+            <Link href={`${link}`}>
+              <PSvg
+                src={image}
+                className={cn("", {
+                  "cursor-pointer": slug,
+                })}
+              />
+            </Link>
+          ) : (
+            <PSvg
+              src={image}
+              className={cn("", {
+                "cursor-pointer": slug,
+              })}
+            />
+          )}
           {/* <Image src={image} alt="" fill /> */}
         </div>
       </div>

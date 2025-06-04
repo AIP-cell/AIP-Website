@@ -42,12 +42,18 @@ export type THomePageNews = {
 export type THomePageNewsInTheMedia = {
   _id: string;
   description: string;
+  fileLink: string;
+  linkOrFile: string;
+  file: string;
   image: string;
 };
 export type THomePageNewsAipUpdates = {
   _id: string;
   description: string;
   image: string;
+  fileLink: string;
+  linkOrFile: string;
+  file: string;
 };
 export type THomePageNewsPartner = {
   _id: string;

@@ -1,16 +1,20 @@
-"use client"
+"use client";
 import { StorageUrl } from "@/utils/BaseUrl";
 import cn from "@/utils/tailwind";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 
 type Props = {
   src?: string;
   text: string;
   index: number;
+  linkOrFile?: string;
+  fileLink?: string;
+  file?: string;
 };
 
-const NewsCard = ({ src, text, index }: Props) => {
+const NewsCard = ({ src, text, linkOrFile, fileLink, file, index }: Props) => {
   const [currentIndex, setCurrentIndex] = useState<number | null>(null);
   const [isClamped, setIsClamped] = useState(false);
   const textRef = useRef<HTMLDivElement>(null);
@@ -31,15 +35,22 @@ const NewsCard = ({ src, text, index }: Props) => {
     }
   }, [text]);
 
+  let link;
+  if (linkOrFile) {
+    link = linkOrFile === "pdf" ? StorageUrl + file : fileLink;
+  }
+
   return (
     <div className="flex flex-col w-full gap-[1.25rem] shrink-0 grow-0">
       <div className="relative w-full ~h-[14.8rem]/[22.5rem] rounded-2xl overflow-hidden">
-        <Image
-          src={src ? StorageUrl + src : "/images/news/newsDemo.png"}
-          alt="news-image"
-          fill
-          className="object-cover"
-        />
+        <Link href={link ?? ""} target="_blank">
+          <Image
+            src={src ? StorageUrl + src : "/images/news/newsDemo.png"}
+            alt="news-image"
+            fill
+            className="object-cover"
+          />
+        </Link>
       </div>
       <div>
         <div
@@ -52,7 +63,9 @@ const NewsCard = ({ src, text, index }: Props) => {
             }
           )}
         >
-          {text}
+          <Link href={link ?? ""} target="_blank">
+            {text}
+          </Link>
         </div>
         {isClamped && (
           <button

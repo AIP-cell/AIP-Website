@@ -206,7 +206,7 @@ const CarouselPrevious = React.forwardRef<
       variant={variant}
       size={size}
       className={cn(
-        "hover:text-white hover:scale-110 duration-150 transition-all text-darkPurple leading-[22.4px] font-inter hover:bg-darkPurple bg-white rounded-tl-3xl rounded-bl-3xl rounded-tr-xl rounded-br-xl p-[0.75rem] h-fit",
+        "hover:text-darkPurple text-white  hover:scale-110 duration-150 transition-all  leading-[22.4px] font-inter hover:bg-white bg-darkPurple rounded-tl-3xl rounded-bl-3xl rounded-tr-xl rounded-br-xl p-[0.75rem] h-fit",
         className
       )}
       disabled={!canScrollPrev}
@@ -231,7 +231,7 @@ const CarouselNext = React.forwardRef<
       variant={variant}
       size={size}
       className={cn(
-        "hover:text-white  text-darkPurple leading-[22.4px] font-inter hover:bg-darkPurple bg-white rounded-tr-3xl rounded-br-3xl  p-[0.75rem] h-fit",
+        "hover:text-darkPurple text-white  leading-[22.4px] font-inter hover:bg-white bg-darkPurple rounded-tr-3xl rounded-br-3xl  p-[0.75rem] h-fit",
         className
       )}
       disabled={!canScrollNext}
