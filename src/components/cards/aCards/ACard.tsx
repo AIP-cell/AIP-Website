@@ -4,6 +4,7 @@ import Linkedin from "@public/svg/grayLinkedin.svg";
 import React from "react";
 import Link from "next/link";
 import cn from "@/utils/tailwind";
+
 type Props = {
   slug?: string;
   image?: string;

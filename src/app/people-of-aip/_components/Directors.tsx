@@ -10,6 +10,7 @@ type Props = {
 };
 
 const Directors = ({ teamMembers }: Props) => {
+  console.log(teamMembers);
   return (
     <div>
       <div className="flex flex-col items-center justify-center ~px-[1.25rem]/[20.938rem] container mx-auto ~pt-[3rem]/[7rem]">
@@ -35,6 +36,7 @@ const Directors = ({ teamMembers }: Props) => {
                     image={items?.image}
                     title={items?.name}
                     linkedin
+                    linkedinLink={items?.linkedln}
                   />
                 </div>
               </CardAnimation>
@@ -47,6 +49,7 @@ const Directors = ({ teamMembers }: Props) => {
                     image={items?.image}
                     title={items?.name}
                     linkedin
+                    linkedinLink={items?.linkedln}
                   />
                 </div>
               </CardAnimation>

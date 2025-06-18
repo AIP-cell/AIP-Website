@@ -88,6 +88,7 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
                       title={items?.name}
                       desc={items?.designation}
                       linkedin={true}
+                      linkedinLink={items?.linkedln}
                     />
                     {teamMembers[i + 1] && (
                       <PTeamCard
@@ -95,6 +96,7 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
                         title={teamMembers[i + 1]?.name}
                         desc={teamMembers[i + 1]?.designation}
                         linkedin={true}
+                        linkedinLink={teamMembers[i + 1]?.linkedln}
                       />
                     )}
                   </div>
@@ -119,6 +121,7 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
                         desc={items?.designation}
                         title={items?.name}
                         linkedin={true}
+                        linkedinLink={items?.linkedln}
                       />
                       {teamMembers[i + 1] && (
                         <PTeamCard
@@ -130,6 +133,7 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
                           title={teamMembers[i + 1]?.name}
                           desc={teamMembers[i + 1]?.designation}
                           linkedin={true}
+                          linkedinLink={teamMembers[i + 1]?.linkedln}
                         />
                       )}
                     </div>
@@ -142,6 +146,7 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
                       title={items?.name}
                       desc={items?.designation}
                       linkedin={true}
+                      linkedinLink={items?.linkedln}
                     />
                     {teamMembers[i + 1] && (
                       <PTeamCard
@@ -149,6 +154,7 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
                         title={teamMembers[i + 1]?.name}
                         desc={teamMembers[i + 1]?.designation}
                         linkedin={true}
+                        linkedinLink={teamMembers[i + 1]?.linkedln}
                       />
                     )}
                     {teamMembers[i + 2] && (
@@ -157,6 +163,7 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
                         title={teamMembers[i + 2]?.name}
                         desc={teamMembers[i + 2]?.designation}
                         linkedin={true}
+                        linkedinLink={teamMembers[i + 2]?.linkedln}
                       />
                     )}
                     {teamMembers[i + 3] && (
@@ -165,6 +172,7 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
                         title={teamMembers[i + 3]?.name}
                         desc={teamMembers[i + 3]?.designation}
                         linkedin={true}
+                        linkedinLink={teamMembers[i + 3]?.linkedln}
                       />
                     )}
                   </div>
@@ -176,6 +184,7 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
                       title={items?.name}
                       desc={items?.designation}
                       linkedin={true}
+                      linkedinLink={items?.linkedln}
                     />
                     {teamMembers[i + 1] && (
                       <PTeamCard
@@ -183,6 +192,7 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
                         title={teamMembers[i + 1]?.name}
                         desc={teamMembers[i + 1]?.designation}
                         linkedin={true}
+                        linkedinLink={teamMembers[i + 1]?.linkedln}
                       />
                     )}
                   </div>
@@ -207,6 +217,7 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
                         title={items?.name}
                         desc={items?.designation}
                         linkedin={true}
+                        linkedinLink={items?.linkedln}
                       />
                       {teamMembers[i + 1] && (
                         <PTeamCard
@@ -214,6 +225,7 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
                           title={teamMembers[i + 1]?.name}
                           desc={teamMembers[i + 1]?.designation}
                           linkedin={true}
+                          linkedinLink={teamMembers[i + 1]?.linkedln}
                         />
                       )}
                     </div>
