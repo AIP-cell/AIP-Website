@@ -2,8 +2,9 @@ import { TboardOfDirectors } from "@/api/type";
 import CardAnimation from "@/components/animations/CardAnimation";
 import TextStaggerAnimation from "@/components/animations/TextStaggerAnimation";
 import WordStaggerAnimation from "@/components/animations/WordStaggerAnimation";
-import ATeamCard from "@/components/cards/aCards/ATeamCard";
-import PTeamCard from "@/components/cards/pCards/PTeamCard";
+import ATeamCardWithPlayButton from "@/components/cards/aCards/ACardWithSmallPlayButton";
+
+import PTeamCardWithPlayButton from "@/components/cards/pCards/PTeamCardWithPlayButton";
 
 type Props = {
   teamMembers?: TboardOfDirectors[];
@@ -32,11 +33,14 @@ const Directors = ({ teamMembers }: Props) => {
             return (
               <CardAnimation delay={0.1} key={i}>
                 <div>
-                  <ATeamCard
+                  <ATeamCardWithPlayButton
+                    titleClassName=" hover:underline decoration-[1px] underline-offset-4 transition-all duration-200 "
+                    slug={items?.slug}
                     image={items?.image}
                     title={items?.name}
                     linkedin
                     linkedinLink={items?.linkedln}
+                    link={`/people-of-aip/advisory-board/${items.slug}`}
                   />
                 </div>
               </CardAnimation>
@@ -45,11 +49,14 @@ const Directors = ({ teamMembers }: Props) => {
             return (
               <CardAnimation delay={0.1} key={i}>
                 <div>
-                  <PTeamCard
+                  <PTeamCardWithPlayButton
+                    titleClassName=" hover:underline decoration-[1px] underline-offset-4 transition-all duration-200 "
+                    slug={items?.slug}
                     image={items?.image}
                     title={items?.name}
                     linkedin
                     linkedinLink={items?.linkedln}
+                    link={`/people-of-aip/advisory-board/${items.slug}`}
                   />
                 </div>
               </CardAnimation>

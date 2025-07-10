@@ -59,6 +59,15 @@ export const Api = {
       return null;
     }
   },
+  getGallery: async (slug: string) => {
+    try {
+      const response = await axiosClient.get(`galleries?category=${slug}`);
+      return response.data;
+    } catch (error) {
+      console.log(error);
+      return null;
+    }
+  },
   getCuratedResources: async (
     slug: string,
     data: {

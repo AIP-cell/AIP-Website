@@ -8,6 +8,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import { Api } from "@/api/Api";
+import { Turnstile } from "@marsidev/react-turnstile";
 // import { load } from "recaptcha-v3";
 
 const radioArray = [
@@ -33,8 +34,10 @@ const Form = () => {
     resolver: zodResolver(contactSchema),
   });
 
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
+
   const { mutateAsync, error } = useMutation({
-    mutationFn: async (formData: TContactSchema) => {
+    mutationFn: async (formData: TContactSchema & { captchaToken: string }) => {
       // const key = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
       // const recaptcha = await load(key || "");
@@ -57,7 +60,7 @@ const Form = () => {
   });
 
   const onSubmit = async (formData: TContactSchema) => {
-    await mutateAsync(formData);
+    await mutateAsync({ ...formData, captchaToken });
   };
 
   return (
@@ -95,7 +98,14 @@ const Form = () => {
               <p className=" text-red-500 ">{`${errors.message.message}`}</p>
             )}
           </div>
-
+          <Turnstile
+            siteKey={
+              process.env.CLOUDFLARE_SITE_KEY || "0x4AAAAAABfxnn3acb9_jlcJ"
+            }
+            onSuccess={(token) => setCaptchaToken(token)}
+            onError={() => toast.error("Captcha validation failed")}
+            onExpire={() => setCaptchaToken(null)}
+          />
           <button
             type="submit"
             disabled={isSubmitting}
