@@ -77,6 +77,10 @@ const headerData = [
         option: "Blogs",
         link: "/resource-center/blogs",
       },
+      {
+        option: "Gallery",
+        link: "/resource-center/gallery/voices-of-the-ecosystem",
+      },
     ],
   },
 ];
