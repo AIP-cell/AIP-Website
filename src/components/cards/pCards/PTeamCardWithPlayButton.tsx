@@ -82,7 +82,7 @@ const PTeamCardWithPlayButton = ({
           />
         </>
       )}
-      <div className="flex flex-col grow gap-[0.5rem] items-center mt-[2.5rem]">
+      <div className="flex flex-col grow gap-[0.5rem] items-start mt-[2.5rem] w-full">
         {slug ? (
           <Link
             href={`${link}`}

@@ -75,7 +75,7 @@ const ATeamCardWithPlayButton = ({
         <>
           <button
             type="button"
-            className="absolute left-1/2 -translate-x-1/2 top-[calc(11.87rem-1.75rem)] z-50 bg-[#A08CC9] rounded-full w-[3.5rem] h-[3.5rem] flex items-center justify-center shadow-lg"
+            className="absolute left-1/2 -translate-x-1/2 ~top-[7.5rem]/[10.5rem] z-50 bg-[#A08CC9] rounded-full ~w-[3rem]/[3.5rem] ~h-[3rem]/[3.5rem] flex items-center justify-center shadow-lg"
             onClick={() => setIsOpen(true)}
             aria-label="Play Video"
             style={{ marginTop: "-.25rem" }}
@@ -91,7 +91,8 @@ const ATeamCardWithPlayButton = ({
           />
         </>
       )}
-      <div className="flex flex-col grow gap-[0.5rem] items-center mt-[2.5rem]">
+      <div className="flex flex-col grow gap-[0.5rem] items-start mt-[2.5rem] w-full">
+        {" "}
         {slug ? (
           <Link
             href={`${link}`}
