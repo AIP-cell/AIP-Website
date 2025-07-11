@@ -41,12 +41,6 @@ const tabList = [
     name: "In the Media",
     link: "/resource-center/aip-resources/in-the-media",
   },
-  {
-    slug: "gallery",
-    toSend: "gallery",
-    name: "Gallery",
-    link: "/resource-center/aip-resources/gallery",
-  },
 ];
 const aipResourcesFilter = [
   {
