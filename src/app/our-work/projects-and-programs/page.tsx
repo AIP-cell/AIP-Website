@@ -11,6 +11,14 @@ import DateFilter from "@/components/custom/DatePick";
 import CardAnimation from "@/components/animations/CardAnimation";
 import FadeInAnimation from "@/components/animations/FadeInAnimation";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/our-work/projects-and-programs",
+  },
+};
+
 const filterDatas = [
   {
     type: "domain",

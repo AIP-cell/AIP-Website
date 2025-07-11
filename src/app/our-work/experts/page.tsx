@@ -8,6 +8,14 @@ import { Api } from "@/api/Api";
 import { TOurWorkExpertsData } from "@/api/type";
 import { notFound } from "next/navigation";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/our-work/experts",
+  },
+};
+
 export const dynamic = "force-dynamic";
 const getOurWorkExpertsApi = async (): Promise<TOurWorkExpertsData> => {
   const response = await Api.getOurWorkExperts();

@@ -7,6 +7,14 @@ import { Api } from "@/api/Api";
 import { TNpos } from "@/api/type";
 import { notFound } from "next/navigation";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/our-work/npo",
+  },
+};
+
 export const dynamic = "force-dynamic";
 const getNpoApi = async (): Promise<TNpos> => {
   const response = await Api.getNpos();

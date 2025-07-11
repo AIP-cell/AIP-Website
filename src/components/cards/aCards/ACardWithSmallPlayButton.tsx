@@ -70,27 +70,37 @@ const ATeamCardWithPlayButton = ({
             <Image src={Linkedin} alt="LinkedIn" />
           </Link>
         )}
+        <div className="absolute inset-0">
+          <div className="w-full relative" style={{ paddingBottom: "100%" }}>
+            <div className="absolute inset-0 flex items-end justify-center">
+              {showVideoButton && linkOrVideo && (
+                <div className="translate-y-1/2  ">
+                  <button
+                    type="button"
+                    className="z-50  ~size-[3rem]/[3.5rem] flex items-center justify-center "
+                    onClick={() => setIsOpen(true)}
+                    aria-label="Play Video"
+                  >
+                    <Image
+                      src={PlayButtonPurple}
+                      alt="Play"
+                      className="size-full object-fill"
+                    />
+                  </button>
+                  <CustomModal
+                    isOpen={isOpen}
+                    setIsOpen={setIsOpen}
+                    linkOrVideo={linkOrVideo}
+                    video={video}
+                    videoLink={videoLink}
+                  />
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
       </div>
-      {showVideoButton && linkOrVideo && (
-        <>
-          <button
-            type="button"
-            className="absolute left-1/2 -translate-x-1/2 ~top-[7.5rem]/[10.5rem] z-50 bg-[#A08CC9] rounded-full ~w-[3rem]/[3.5rem] ~h-[3rem]/[3.5rem] flex items-center justify-center shadow-lg"
-            onClick={() => setIsOpen(true)}
-            aria-label="Play Video"
-            style={{ marginTop: "-.25rem" }}
-          >
-            <Image src={PlayButtonPurple} alt="Play" width={32} height={32} />
-          </button>
-          <CustomModal
-            isOpen={isOpen}
-            setIsOpen={setIsOpen}
-            linkOrVideo={linkOrVideo}
-            video={video}
-            videoLink={videoLink}
-          />
-        </>
-      )}
+
       <div className="flex flex-col grow gap-[0.5rem] items-start mt-[2.5rem] w-full">
         {" "}
         {slug ? (

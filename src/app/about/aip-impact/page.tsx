@@ -7,6 +7,14 @@ import { TAipImpact } from "@/api/type";
 import { notFound } from "next/navigation";
 import PeopleWeWorkWith from "./_components/PeopleWeWorkWith";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/about/aip-impact",
+  },
+};
+
 export const dynamic = "force-dynamic";
 const geAipImpactApi = async (): Promise<TAipImpact> => {
   const response = await Api.getAipImpact();

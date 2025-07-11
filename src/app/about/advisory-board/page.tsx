@@ -4,6 +4,13 @@ import { TTeamMembers } from "@/api/type";
 import { Api } from "@/api/Api";
 import { notFound } from "next/navigation";
 import PeopleOfAipTeamMembers from "@/app/people-of-aip/[slug]/_components/PeopleOfAipTeamMembers";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/about/advisory-board",
+  },
+};
 
 export const dynamic = "force-dynamic";
 const getPeopleOfAipApi = async (slug: string): Promise<TTeamMembers[]> => {

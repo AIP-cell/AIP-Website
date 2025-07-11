@@ -5,6 +5,14 @@ import SearchBar from "./_components/SearchBar";
 import DateFilter from "@/components/custom/DatePick";
 import Search from "./_components/Search";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/search",
+  },
+};
+
 const searchFilter = [
   {
     type: "field",
@@ -54,7 +62,6 @@ const page = async ({
 }) => {
   const asyncSearchParam = await searchParams;
   const { key, field, type, date } = await searchParams;
-
 
   return (
     <div className="pt-[5rem]">

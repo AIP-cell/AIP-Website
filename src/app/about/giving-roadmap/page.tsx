@@ -12,6 +12,14 @@ import { Api } from "@/api/Api";
 import { TRoadMap } from "@/api/type";
 import WordStaggerAnimation from "@/components/animations/WordStaggerAnimation";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/about/giving-roadmap",
+  },
+};
+
 export const dynamic = "force-dynamic";
 const getAipJourneyApi = async (): Promise<TRoadMap> => {
   const response = await Api.getRoadMap();

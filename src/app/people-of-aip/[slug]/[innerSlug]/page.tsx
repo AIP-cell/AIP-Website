@@ -14,6 +14,7 @@ import { notFound } from "next/navigation";
 import FadeInAnimation from "@/components/animations/FadeInAnimation";
 
 export const dynamic = "force-dynamic";
+
 const getPeopleOfAipGetOneApi = async (
   slug: string
 ): Promise<TPeopleOfAipGetOne> => {

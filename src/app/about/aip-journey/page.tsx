@@ -7,6 +7,14 @@ import { Api } from "@/api/Api";
 import { notFound } from "next/navigation";
 import { TAipJourney } from "@/api/type";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/about/aip-journey",
+  },
+};
+
 export const dynamic = "force-dynamic";
 const getAipJourneyApi = async (): Promise<TAipJourney> => {
   const response = await Api.getAipJourney();

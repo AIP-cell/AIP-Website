@@ -8,7 +8,7 @@ import ATeamCardWithPlayButton from "@/components/cards/aCards/ACardWithSmallPla
 import PTeamCardWithPlayButton from "@/components/cards/pCards/PTeamCardWithPlayButton";
 
 type Props = {
-  teamMembers?: Array<{
+  teamMembers: Array<{
     _id: string;
     name?: string;
     designation?: string;
@@ -23,6 +23,11 @@ type Props = {
   urlSlug: string;
 };
 const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
+  if (teamMembers?.length % 2 !== 0) {
+    teamMembers.push({
+      _id: "empty",
+    });
+  }
   return (
     <div className="w-full relative min-h-[90vh] pt-[5rem]">
       <div className="pt-[3rem] pb-[7rem] ">
@@ -81,12 +86,12 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
             return (
               <div
                 key={i}
-                className="~pt-[3.5rem]/[4rem] flex md:block flex-col items-center "
+                className="~pt-[3.5rem]/[4rem] flex flex-col items-center "
               >
                 {position === 0 && (
                   <div className="flex ~gap-[1.25rem]/[5.6rem] ~px-[1.25rem]/[7.8rem] relative container mx-auto ">
                     <ATeamCardWithPlayButton
-                      titleClassName=" hover:underline decoration-[1px] underline-offset-4 transition-all duration-200 "
+                      titleClassName="hover:underline decoration-[1px] underline-offset-4 transition-all duration-200 "
                       slug={items?.slug}
                       link={`/people-of-aip/${urlSlug}/${items.slug}`}
                       image={items?.image}
@@ -99,28 +104,31 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
                       videoLink={items?.videoLink}
                       showVideoButton={true}
                     />
-                    {teamMembers[i + 1] && (
-                      <PTeamCardWithPlayButton
-                        titleClassName=" hover:underline decoration-[1px] underline-offset-4 transition-all duration-200 "
-                        slug={teamMembers[i + 1]?.slug}
-                        link={`/people-of-aip/${urlSlug}/${
-                          teamMembers[i + 1].slug
-                        }`}
-                        image={teamMembers[i + 1]?.image}
-                        title={teamMembers[i + 1]?.name}
-                        desc={teamMembers[i + 1]?.designation}
-                        linkedin={true}
-                        linkedinLink={teamMembers[i + 1]?.linkedln}
-                        linkOrVideo={teamMembers[i + 1]?.linkOrVideo}
-                        video={teamMembers[i + 1]?.video}
-                        videoLink={teamMembers[i + 1]?.videoLink}
-                        showVideoButton={true}
-                      />
-                    )}
+                    {teamMembers[i + 1] &&
+                      (teamMembers[i + 1]._id == "empty" ? (
+                        <div className=" max-[23rem]:w-[8rem]  ~w-[10rem]/[11.87rem] "></div>
+                      ) : (
+                        <PTeamCardWithPlayButton
+                          titleClassName=" hover:underline decoration-[1px] underline-offset-4 transition-all duration-200 "
+                          slug={teamMembers[i + 1]?.slug}
+                          link={`/people-of-aip/${urlSlug}/${
+                            teamMembers[i + 1].slug
+                          }`}
+                          image={teamMembers[i + 1]?.image}
+                          title={teamMembers[i + 1]?.name}
+                          desc={teamMembers[i + 1]?.designation}
+                          linkedin={true}
+                          linkedinLink={teamMembers[i + 1]?.linkedln}
+                          linkOrVideo={teamMembers[i + 1]?.linkOrVideo}
+                          video={teamMembers[i + 1]?.video}
+                          videoLink={teamMembers[i + 1]?.videoLink}
+                          showVideoButton={true}
+                        />
+                      ))}
                   </div>
                 )}
                 {position === 2 && (
-                  <div className="relative">
+                  <div className="relative w-full">
                     <>
                       <Image
                         src={Bg1}
@@ -148,24 +156,27 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
                         videoLink={items?.videoLink}
                         showVideoButton={true}
                       />
-                      {teamMembers[i + 1] && (
-                        <PTeamCardWithPlayButton
-                          titleClassName=" hover:underline decoration-[1px] underline-offset-4 transition-all duration-200 "
-                          slug={teamMembers[i + 1]?.slug}
-                          image={teamMembers[i + 1]?.image}
-                          link={`/people-of-aip/${urlSlug}/${
-                            teamMembers[i + 1].slug
-                          }`}
-                          title={teamMembers[i + 1]?.name}
-                          desc={teamMembers[i + 1]?.designation}
-                          linkedin={true}
-                          linkedinLink={teamMembers[i + 1]?.linkedln}
-                          linkOrVideo={teamMembers[i + 1]?.linkOrVideo}
-                          video={teamMembers[i + 1]?.video}
-                          videoLink={teamMembers[i + 1]?.videoLink}
-                          showVideoButton={true}
-                        />
-                      )}
+                      {teamMembers[i + 1] &&
+                        (teamMembers[i + 1]._id == "empty" ? (
+                          <div className=" max-[23rem]:w-[8rem]  ~w-[10rem]/[11.87rem] "></div>
+                        ) : (
+                          <PTeamCardWithPlayButton
+                            titleClassName=" hover:underline decoration-[1px] underline-offset-4 transition-all duration-200 "
+                            slug={teamMembers[i + 1]?.slug}
+                            image={teamMembers[i + 1]?.image}
+                            link={`/people-of-aip/${urlSlug}/${
+                              teamMembers[i + 1].slug
+                            }`}
+                            title={teamMembers[i + 1]?.name}
+                            desc={teamMembers[i + 1]?.designation}
+                            linkedin={true}
+                            linkedinLink={teamMembers[i + 1]?.linkedln}
+                            linkOrVideo={teamMembers[i + 1]?.linkOrVideo}
+                            video={teamMembers[i + 1]?.video}
+                            videoLink={teamMembers[i + 1]?.videoLink}
+                            showVideoButton={true}
+                          />
+                        ))}
                     </div>
                   </div>
                 )}
@@ -185,24 +196,27 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
                       videoLink={items?.videoLink}
                       showVideoButton={true}
                     />
-                    {teamMembers[i + 1] && (
-                      <PTeamCardWithPlayButton
-                        titleClassName=" hover:underline decoration-[1px] underline-offset-4 transition-all duration-200 "
-                        image={teamMembers[i + 1]?.image}
-                        title={teamMembers[i + 1]?.name}
-                        desc={teamMembers[i + 1]?.designation}
-                        linkedin={true}
-                        linkedinLink={teamMembers[i + 1]?.linkedln}
-                        slug={teamMembers[i + 1]?.slug}
-                        link={`/people-of-aip/${urlSlug}/${
-                          teamMembers[i + 1].slug
-                        }`}
-                        linkOrVideo={teamMembers[i + 1]?.linkOrVideo}
-                        video={teamMembers[i + 1]?.video}
-                        videoLink={teamMembers[i + 1]?.videoLink}
-                        showVideoButton={true}
-                      />
-                    )}
+                    {teamMembers[i + 1] &&
+                      (teamMembers[i + 1]._id == "empty" ? (
+                        <div className=" max-[23rem]:w-[8rem]  ~w-[10rem]/[11.87rem] "></div>
+                      ) : (
+                        <PTeamCardWithPlayButton
+                          titleClassName=" hover:underline decoration-[1px] underline-offset-4 transition-all duration-200 "
+                          image={teamMembers[i + 1]?.image}
+                          title={teamMembers[i + 1]?.name}
+                          desc={teamMembers[i + 1]?.designation}
+                          linkedin={true}
+                          linkedinLink={teamMembers[i + 1]?.linkedln}
+                          slug={teamMembers[i + 1]?.slug}
+                          link={`/people-of-aip/${urlSlug}/${
+                            teamMembers[i + 1].slug
+                          }`}
+                          linkOrVideo={teamMembers[i + 1]?.linkOrVideo}
+                          video={teamMembers[i + 1]?.video}
+                          videoLink={teamMembers[i + 1]?.videoLink}
+                          showVideoButton={true}
+                        />
+                      ))}
                     {teamMembers[i + 2] && (
                       <ATeamCardWithPlayButton
                         titleClassName=" hover:underline decoration-[1px] underline-offset-4 transition-all duration-200 "
@@ -221,24 +235,27 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
                         showVideoButton={true}
                       />
                     )}
-                    {teamMembers[i + 3] && (
-                      <PTeamCardWithPlayButton
-                        titleClassName=" hover:underline decoration-[1px] underline-offset-4 transition-all duration-200 "
-                        image={teamMembers[i + 3]?.image}
-                        title={teamMembers[i + 3]?.name}
-                        desc={teamMembers[i + 3]?.designation}
-                        linkedin={true}
-                        linkedinLink={teamMembers[i + 3]?.linkedln}
-                        slug={teamMembers[i + 3]?.slug}
-                        link={`/people-of-aip/${urlSlug}/${
-                          teamMembers[i + 3].slug
-                        }`}
-                        linkOrVideo={teamMembers[i + 3]?.linkOrVideo}
-                        video={teamMembers[i + 3]?.video}
-                        videoLink={teamMembers[i + 3]?.videoLink}
-                        showVideoButton={true}
-                      />
-                    )}
+                    {teamMembers[i + 3] &&
+                      (teamMembers[i + 3]._id == "empty" ? (
+                        <div className=" max-[23rem]:w-[8rem]  ~w-[10rem]/[11.87rem] "></div>
+                      ) : (
+                        <PTeamCardWithPlayButton
+                          titleClassName=" hover:underline decoration-[1px] underline-offset-4 transition-all duration-200 "
+                          image={teamMembers[i + 3]?.image}
+                          title={teamMembers[i + 3]?.name}
+                          desc={teamMembers[i + 3]?.designation}
+                          linkedin={true}
+                          linkedinLink={teamMembers[i + 3]?.linkedln}
+                          slug={teamMembers[i + 3]?.slug}
+                          link={`/people-of-aip/${urlSlug}/${
+                            teamMembers[i + 3].slug
+                          }`}
+                          linkOrVideo={teamMembers[i + 3]?.linkOrVideo}
+                          video={teamMembers[i + 3]?.video}
+                          videoLink={teamMembers[i + 3]?.videoLink}
+                          showVideoButton={true}
+                        />
+                      ))}
                   </div>
                 )}
                 {position === 8 && (
@@ -257,28 +274,31 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
                       videoLink={items?.videoLink}
                       showVideoButton={true}
                     />
-                    {teamMembers[i + 1] && (
-                      <PTeamCardWithPlayButton
-                        titleClassName=" hover:underline decoration-[1px] underline-offset-4 transition-all duration-200 "
-                        slug={teamMembers[i + 1]?.slug}
-                        link={`/people-of-aip/${urlSlug}/${
-                          teamMembers[i + 1].slug
-                        }`}
-                        image={teamMembers[i + 1]?.image}
-                        title={teamMembers[i + 1]?.name}
-                        desc={teamMembers[i + 1]?.designation}
-                        linkedin={true}
-                        linkedinLink={teamMembers[i + 1]?.linkedln}
-                        linkOrVideo={teamMembers[i + 1]?.linkOrVideo}
-                        video={teamMembers[i + 1]?.video}
-                        videoLink={teamMembers[i + 1]?.videoLink}
-                        showVideoButton={true}
-                      />
-                    )}
+                    {teamMembers[i + 1] &&
+                      (teamMembers[i + 1]._id == "empty" ? (
+                        <div className=" max-[23rem]:w-[8rem]  ~w-[10rem]/[11.87rem] "></div>
+                      ) : (
+                        <PTeamCardWithPlayButton
+                          titleClassName=" hover:underline decoration-[1px] underline-offset-4 transition-all duration-200 "
+                          slug={teamMembers[i + 1]?.slug}
+                          link={`/people-of-aip/${urlSlug}/${
+                            teamMembers[i + 1].slug
+                          }`}
+                          image={teamMembers[i + 1]?.image}
+                          title={teamMembers[i + 1]?.name}
+                          desc={teamMembers[i + 1]?.designation}
+                          linkedin={true}
+                          linkedinLink={teamMembers[i + 1]?.linkedln}
+                          linkOrVideo={teamMembers[i + 1]?.linkOrVideo}
+                          video={teamMembers[i + 1]?.video}
+                          videoLink={teamMembers[i + 1]?.videoLink}
+                          showVideoButton={true}
+                        />
+                      ))}
                   </div>
                 )}
                 {position === 10 && (
-                  <div className="relative">
+                  <div className="relative w-full">
                     <>
                       <Image
                         src={Bg2}
@@ -306,24 +326,28 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
                         videoLink={items?.videoLink}
                         showVideoButton={true}
                       />
-                      {teamMembers[i + 1] && (
-                        <PTeamCardWithPlayButton
-                          titleClassName=" hover:underline decoration-[1px] underline-offset-4 transition-all duration-200 "
-                          slug={teamMembers[i + 1]?.slug}
-                          link={`/people-of-aip/${urlSlug}/${
-                            teamMembers[i + 1].slug
-                          }`}
-                          image={teamMembers[i + 1]?.image}
-                          title={teamMembers[i + 1]?.name}
-                          desc={teamMembers[i + 1]?.designation}
-                          linkedin={true}
-                          linkedinLink={teamMembers[i + 1]?.linkedln}
-                          linkOrVideo={teamMembers[i + 1]?.linkOrVideo}
-                          video={teamMembers[i + 1]?.video}
-                          videoLink={teamMembers[i + 1]?.videoLink}
-                          showVideoButton={true}
-                        />
-                      )}
+
+                      {teamMembers[i + 1] &&
+                        (teamMembers[i + 1]._id == "empty" ? (
+                          <div className=" max-[23rem]:w-[8rem]  ~w-[10rem]/[11.87rem] "></div>
+                        ) : (
+                          <PTeamCardWithPlayButton
+                            titleClassName=" hover:underline decoration-[1px] underline-offset-4 transition-all duration-200 "
+                            slug={teamMembers[i + 1]?.slug}
+                            link={`/people-of-aip/${urlSlug}/${
+                              teamMembers[i + 1].slug
+                            }`}
+                            image={teamMembers[i + 1]?.image}
+                            title={teamMembers[i + 1]?.name}
+                            desc={teamMembers[i + 1]?.designation}
+                            linkedin={true}
+                            linkedinLink={teamMembers[i + 1]?.linkedln}
+                            linkOrVideo={teamMembers[i + 1]?.linkOrVideo}
+                            video={teamMembers[i + 1]?.video}
+                            videoLink={teamMembers[i + 1]?.videoLink}
+                            showVideoButton={true}
+                          />
+                        ))}
                     </div>
                   </div>
                 )}

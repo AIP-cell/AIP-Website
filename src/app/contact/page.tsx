@@ -14,6 +14,13 @@ import CardAnimation from "@/components/animations/CardAnimation";
 import { Api } from "@/api/Api";
 import { notFound } from "next/navigation";
 import { TGetInTouch } from "@/api/type";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/contact",
+  },
+};
 
 export const dynamic = "force-dynamic";
 const getContactApi = async (): Promise<TGetInTouch> => {

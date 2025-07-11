@@ -11,6 +11,14 @@ import DateFilter from "@/components/custom/DatePick";
 import NoData from "@/components/NoData";
 import WordStaggerAnimation from "@/components/animations/WordStaggerAnimation";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/our-work/collaborations",
+  },
+};
+
 export const dynamic = "force-dynamic";
 const getCollaborationsApi = async ({
   c_type,

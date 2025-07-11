@@ -12,6 +12,14 @@ import { notFound } from "next/navigation";
 import FadeInAnimation from "@/components/animations/FadeInAnimation";
 import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/careers/all-positions",
+  },
+};
+
 export const dynamic = "force-dynamic";
 const getCareersApi = async (page: string): Promise<TAllPositions> => {
   const response = await Api.getCareers(page);

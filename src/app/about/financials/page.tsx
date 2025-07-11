@@ -8,6 +8,14 @@ import { TReports } from "@/api/type";
 import { notFound } from "next/navigation";
 import WordStaggerAnimation from "@/components/animations/WordStaggerAnimation";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/about/financials",
+  },
+};
+
 const getFinancialReportApi = async (): Promise<TReports[]> => {
   const response = await Api.getFinancialReport();
   return response?.data;

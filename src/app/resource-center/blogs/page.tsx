@@ -8,6 +8,14 @@ import BlogCard from "@/components/cards/BlogCard";
 
 export const dynamic = "force-dynamic";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/resource-center/blogs",
+  },
+};
+
 const getAllBlogApi = async (): Promise<TAipResourcesCategory[]> => {
   const response = await Api.getAllBlog();
   return response?.data;

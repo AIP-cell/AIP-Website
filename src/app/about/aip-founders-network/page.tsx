@@ -6,6 +6,14 @@ import NetworkContactSection from "./_components/NetworkContactSection";
 import JoinTheFlow from "./_components/JoinTheFlow";
 import CoreFoundersAndFounders from "./_components/CoreFoundersAndFounders";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/about/aip-founders-network",
+  },
+};
+
 export const dynamic = "force-dynamic";
 const geFounderNetworkApi = async (): Promise<TFounderNetwork> => {
   const response = await Api.getFounderNetwork();

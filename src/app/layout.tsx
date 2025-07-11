@@ -23,6 +23,7 @@ export const metadata: Metadata = {
     "Empowering Indian Philanthropy | Give More, Give Faster, Give Smarter",
   description:
     "Empowering Indian Philanthropy (AIP) is a collaborative network created by philanthropists to enhance and support impactful giving.",
+  metadataBase: new URL("https://www.indianphilanthropy.org/"),
 };
 
 export default function RootLayout({
