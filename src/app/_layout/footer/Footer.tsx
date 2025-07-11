@@ -65,6 +65,10 @@ const footerData = [
         option: "Blogs",
         link: "/blogs",
       },
+      {
+        option: "Gallery",
+        link: "/resource-center/gallery/voices-of-the-ecosystem",
+      },
     ],
   },
 ];
@@ -381,6 +385,14 @@ const Footer = () => {
                 >
                   <ButtonAnimation className="hover:underline underline-offset-2 transition-all duration-700">
                     Blogs
+                  </ButtonAnimation>
+                </Link>
+                <Link
+                  href="/resource-center/gallery/voices-of-the-ecosystem"
+                  className=" text-h9Copy5 font-inter text-white/60"
+                >
+                  <ButtonAnimation className="hover:underline underline-offset-2 transition-all duration-700">
+                    Gallery
                   </ButtonAnimation>
                 </Link>
               </div>

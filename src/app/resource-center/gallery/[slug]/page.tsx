@@ -53,9 +53,9 @@ const getAipResourcesData = async (
 const GalleryCategoryPage = async ({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) => {
-  const { slug } = params;
+  const { slug } = await params;
 
   const filterBySlug = tabList.find((item) => item.slug === slug);
 

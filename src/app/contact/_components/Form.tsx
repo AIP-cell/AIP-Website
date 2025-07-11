@@ -60,7 +60,7 @@ const Form = () => {
   });
 
   const onSubmit = async (formData: TContactSchema) => {
-    await mutateAsync({ ...formData, captchaToken });
+    await mutateAsync({ ...formData, captchaToken: captchaToken ?? "" });
   };
 
   return (
