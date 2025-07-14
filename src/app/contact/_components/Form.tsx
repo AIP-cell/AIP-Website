@@ -100,7 +100,8 @@ const Form = () => {
           </div>
           <Turnstile
             siteKey={
-              process.env.CLOUDFLARE_SITE_KEY || "0x4AAAAAABfxnn3acb9_jlcJ"
+              process.env.NEXT_PUBLIC_CLOUDFLARE_SITE_KEY ||
+              "0x4AAAAAABfxnn3acb9_jlcJ"
             }
             onSuccess={(token) => setCaptchaToken(token)}
             onError={() => toast.error("Captcha validation failed")}
