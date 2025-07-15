@@ -41,9 +41,6 @@ const ResourceCard = ({
   city,
   readTime,
 }: Props) => {
-  console.log("catettt:::", category);
-  console.log("slugg:::", slug);
-  console.log("linkeyy:::", linkKey);
   let link;
   if (category === "experts") {
     link = `/resource-center/curated-resources/experts/${slug}`;

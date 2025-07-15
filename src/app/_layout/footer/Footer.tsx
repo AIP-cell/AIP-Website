@@ -87,7 +87,6 @@ const Footer = () => {
   });
 
   const onSubmit = (data: NewsletterSchema) => {
-    console.log("Submitted data:", data);
     // Handle actual API call here
   };
   return (

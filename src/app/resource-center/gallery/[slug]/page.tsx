@@ -7,6 +7,8 @@ import WordStaggerAnimation from "@/components/animations/WordStaggerAnimation";
 import CardAnimation from "@/components/animations/CardAnimation";
 import NoData from "@/components/NoData";
 import ResourcesTabAndSelect from "../../_components/ResourcesTabAndSelect";
+import CustomFilter from "@/components/custom/CustomFilter";
+import DateFilter from "@/components/custom/DatePick";
 
 export const dynamic = "force-dynamic";
 
@@ -43,17 +45,64 @@ const tabList = [
   },
 ];
 
+const aipGalleryFilter = [
+  {
+    filterBy: "gallery",
+    filter: [
+      {
+        type: "domain",
+        options: [
+          "All",
+          "Art and Culture",
+          "Education",
+          "Environment",
+          "Health and Nutrition",
+          "Legal and Judiciary",
+          "Livelihood",
+          "Disability",
+          "Rural Development",
+          "Sports",
+          "WASH",
+          "Philanthrophy",
+          "Women & Child",
+        ],
+      },
+      {
+        type: "c_type",
+        options: [
+          "Sector primers",
+          "Giving Journey",
+          "Research Study",
+          "Philanthropist Speak",
+          "Books",
+          "Articles",
+          "PoV",
+          "White paper",
+          "Newsletter",
+        ],
+      },
+    ],
+  },
+];
+
 const getAipResourcesData = async (
-  category: string
+  category: string,
+  { domain, c_type, date }: { domain: string; c_type: string; date: string }
 ): Promise<TAipResourcesCategory[]> => {
-  const response = await Api.getGallery(category);
+  const response = await Api.getGallery(category, { domain, c_type, date });
   return response?.data;
 };
 
 const GalleryCategoryPage = async ({
   params,
+  searchParams,
 }: {
   params: Promise<{ slug: string }>;
+  searchParams: Promise<{
+    domain: string;
+    c_type: string;
+    date: string;
+  }>;
 }) => {
   const { slug } = await params;
 
@@ -61,8 +110,19 @@ const GalleryCategoryPage = async ({
 
   if (!filterBySlug) return notFound();
 
-  const response = await getAipResourcesData(filterBySlug.toSend);
+  const SearchParam = await searchParams;
+  const { domain, c_type, date } = await searchParams;
+  const response = await getAipResourcesData(filterBySlug!.toSend, {
+    domain,
+    c_type,
+    date,
+  });
+
   if (!response) return notFound();
+
+  const filterData = aipGalleryFilter.find(
+    (item) => item.filterBy === "gallery"
+  );
 
   return (
     <div className="pt-[5rem] overflow-x-hidden min-h-screen">
@@ -89,6 +149,25 @@ const GalleryCategoryPage = async ({
           tabClassName="!w-full  !px-0"
           tabListClassName="!w-full"
         />
+        {filterData && (
+          <div className="flex flex-col md:flex-row md:items-center pt-[2rem]  ~gap-0/[0.75rem] ">
+            <p className="~pb-[1.25rem]/0 text-gray40  ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]">
+              Filter by:
+            </p>
+            <div className="relative flex flex-wrap gap-[.75rem]">
+              {filterData?.filter.map((data, i) => (
+                <CustomFilter
+                  key={i}
+                  searchParams={{ ...SearchParam }}
+                  filterKey={data?.type}
+                  type={data?.type}
+                  optionsArray={data?.options}
+                />
+              ))}
+              {<DateFilter searchParams={{ ...SearchParam }} />}
+            </div>
+          </div>
+        )}
         {response.length !== 0 ? (
           <div className="pt-[3.25rem] grid md:grid-cols-2 lg:grid-cols-3 gap-[4.5rem]">
             {response.map((item, i) => (

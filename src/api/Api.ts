@@ -59,9 +59,21 @@ export const Api = {
       return null;
     }
   },
-  getGallery: async (slug: string) => {
+  getGallery: async (
+    slug: string,
+    data: {
+      domain?: string;
+      c_type?: string;
+      date?: string;
+    }
+  ) => {
     try {
-      const response = await axiosClient.get(`galleries?category=${slug}`);
+      const query = generatingSearchParam({
+        ...data,
+      });
+      const response = await axiosClient.get(
+        `galleries?category=${slug}&${query.toString()}`
+      );
       return response.data;
     } catch (error) {
       console.log(error);

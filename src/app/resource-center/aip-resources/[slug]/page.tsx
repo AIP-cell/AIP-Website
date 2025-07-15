@@ -200,43 +200,6 @@ const aipResourcesFilter = [
       },
     ],
   },
-  // {
-  //   filterBy: "gallery",
-  //   filter: [
-  //     {
-  //       type: "domain",
-  //       options: [
-  //         "All",
-  //         "Art and Culture",
-  //         "Education",
-  //         "Environment",
-  //         "Health and Nutrition",
-  //         "Legal and Judiciary",
-  //         "Livelihood",
-  //         "Disability",
-  //         "Rural Development",
-  //         "Sports",
-  //         "WASH",
-  //         "Philanthrophy",
-  //         "Women & Child",
-  //       ],
-  //     },
-  //     {
-  //       type: "c_type",
-  //       options: [
-  //         "Sector primers",
-  //         "Giving Journey",
-  //         "Research Study",
-  //         "Philanthropist Speak",
-  //         "Books",
-  //         "Articles",
-  //         "PoV",
-  //         "White paper",
-  //         "Newsletter",
-  //       ],
-  //     },
-  //   ],
-  // },
 ];
 
 export const dynamic = "force-dynamic";
