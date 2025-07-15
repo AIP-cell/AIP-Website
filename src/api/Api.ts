@@ -65,6 +65,7 @@ export const Api = {
       domain?: string;
       c_type?: string;
       date?: string;
+      q?: string;
     }
   ) => {
     try {

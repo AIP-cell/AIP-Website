@@ -1,6 +1,6 @@
 "use client";
 import cn from "@/utils/tailwind";
-import { motion, useInView } from "motion/react";
+import { motion, useInView, Variants } from "motion/react";
 import { useRef } from "react";
 
 type Props = {
@@ -23,7 +23,7 @@ const TextStaggerAnimation = ({
     .split(" ")
     .filter(Boolean);
   let isColor = false;
-  const variants = {
+  const variants: Variants = {
     initial: {
       y: 40,
     },

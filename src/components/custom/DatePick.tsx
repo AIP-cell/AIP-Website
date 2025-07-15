@@ -39,7 +39,8 @@ const DateFilter = ({ searchParams }: Props) => {
           <div className="flex gap-[0.5rem] items-center">
             {searchParams.date && (
               <CrossSvg
-                className="size-[0.8rem] fill-black"
+                role="button"
+                className="size-[0.8rem] fill-black cursor-pointer"
                 onClick={() => {
                   setStartDate(null);
                   const query = generatingSearchParam({

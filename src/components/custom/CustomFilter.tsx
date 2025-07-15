@@ -73,7 +73,8 @@ const CustomFilter = ({
               <div className="flex gap-[0.5rem] items-center">
                 {selected && (
                   <CrossSvg
-                    className="size-[0.8rem]"
+                    role="button"
+                    className="size-[0.8rem] cursor-pointer"
                     onClick={() => {
                       setSelected("");
                       const query = generatingSearchParam({

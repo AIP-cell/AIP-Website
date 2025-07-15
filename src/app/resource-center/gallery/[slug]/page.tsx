@@ -9,6 +9,9 @@ import NoData from "@/components/NoData";
 import ResourcesTabAndSelect from "../../_components/ResourcesTabAndSelect";
 import CustomFilter from "@/components/custom/CustomFilter";
 import DateFilter from "@/components/custom/DatePick";
+import SearchSvg from "@/components/svg/SearchSvg";
+import CrossSvg from "@/components/svg/CrossSvg";
+import CustomSearch from "@/components/custom/CustomSearch";
 
 export const dynamic = "force-dynamic";
 
@@ -87,9 +90,14 @@ const aipGalleryFilter = [
 
 const getAipResourcesData = async (
   category: string,
-  { domain, c_type, date }: { domain: string; c_type: string; date: string }
+  {
+    domain,
+    c_type,
+    date,
+    q,
+  }: { domain: string; c_type: string; date: string; q: string }
 ): Promise<TAipResourcesCategory[]> => {
-  const response = await Api.getGallery(category, { domain, c_type, date });
+  const response = await Api.getGallery(category, { domain, c_type, date, q });
   return response?.data;
 };
 
@@ -102,6 +110,7 @@ const GalleryCategoryPage = async ({
     domain: string;
     c_type: string;
     date: string;
+    q: string;
   }>;
 }) => {
   const { slug } = await params;
@@ -111,11 +120,12 @@ const GalleryCategoryPage = async ({
   if (!filterBySlug) return notFound();
 
   const SearchParam = await searchParams;
-  const { domain, c_type, date } = await searchParams;
+  const { domain, c_type, date, q } = await searchParams;
   const response = await getAipResourcesData(filterBySlug!.toSend, {
     domain,
     c_type,
     date,
+    q,
   });
 
   if (!response) return notFound();
@@ -150,21 +160,31 @@ const GalleryCategoryPage = async ({
           tabListClassName="!w-full"
         />
         {filterData && (
-          <div className="flex flex-col md:flex-row md:items-center pt-[2rem]  ~gap-0/[0.75rem] ">
-            <p className="~pb-[1.25rem]/0 text-gray40  ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]">
-              Filter by:
-            </p>
-            <div className="relative flex flex-wrap gap-[.75rem]">
-              {filterData?.filter.map((data, i) => (
-                <CustomFilter
-                  key={i}
-                  searchParams={{ ...SearchParam }}
-                  filterKey={data?.type}
-                  type={data?.type}
-                  optionsArray={data?.options}
-                />
-              ))}
-              {<DateFilter searchParams={{ ...SearchParam }} />}
+          <div className="flex flex-col md:flex-row md:justify-between ">
+            <div className="flex flex-col md:flex-row md:items-center pt-[2rem]  ~gap-0/[0.75rem] ">
+              <p className="~pb-[1.25rem]/0 text-gray40  ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]">
+                Filter by:
+              </p>
+              <div className="relative flex flex-wrap gap-[.75rem]">
+                {filterData?.filter.map((data, i) => (
+                  <CustomFilter
+                    key={i}
+                    searchParams={{ ...SearchParam }}
+                    filterKey={data?.type}
+                    type={data?.type}
+                    optionsArray={data?.options}
+                  />
+                ))}
+                {<DateFilter searchParams={{ ...SearchParam }} />}
+              </div>
+            </div>
+
+            {/* Create a search bar */}
+            <div className="mt-[2rem]">
+              <CustomSearch
+                searchParams={{ ...SearchParam }}
+                q={SearchParam.q}
+              />
             </div>
           </div>
         )}
