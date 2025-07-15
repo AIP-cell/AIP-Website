@@ -39,6 +39,14 @@ export type THomePageNews = {
   partner: THomePageNewsPartner[];
   worldOfPhilanthropy: THomePageNewsWorldOfPhilanthropy[];
 };
+
+export type Tlifevideos = {
+  title: string;
+  image: string;
+  video: string;
+  linkOrVideo: string;
+  link: string;
+};
 export type THomePageNewsInTheMedia = {
   _id: string;
   description: string;
@@ -381,6 +389,7 @@ export type TPeopleOfAipTeams = {
   videoLink: string;
   slug: string;
   links: TLinks[];
+  videos: Tlifevideos[];
   selectedWorks: TSelectedWorks[];
 };
 

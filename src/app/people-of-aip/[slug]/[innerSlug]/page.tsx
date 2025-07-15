@@ -7,11 +7,12 @@ import BreadCrump from "@/components/bread-crump/BreadCrump";
 import XSvg from "@/components/svg/XSvg";
 import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 import PSvg from "@/components/svg/PSvg";
-import InnerCollaborationsVideo from "@/app/our-work/collaborations/[slug]/_components/InnerCollaborationsVideo";
+// import InnerCollaborationsVideo from "@/app/our-work/collaborations/[slug]/_components/InnerCollaborationsVideo";
 import { Api } from "@/api/Api";
 import { TPeopleOfAipGetOne } from "@/api/type";
 import { notFound } from "next/navigation";
 import FadeInAnimation from "@/components/animations/FadeInAnimation";
+import Video from "../../_components/Video";
 
 export const dynamic = "force-dynamic";
 
@@ -148,7 +149,7 @@ const InnerTeamPage = async ({
                 )}
               </div>
             </div>
-            {team.linkOrVideo && (
+            {/* {team.linkOrVideo && (
               <div className="">
                 <InnerCollaborationsVideo
                   linkOrVideo={team.linkOrVideo}
@@ -156,7 +157,8 @@ const InnerTeamPage = async ({
                   videoLink={team?.videoLink}
                 />
               </div>
-            )}
+            )} */}
+            {team.videos && <Video videos={team.videos} />}
           </div>
         </div>
       </div>
