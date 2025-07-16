@@ -48,6 +48,9 @@ const PeopleOfAipTeamMembers = ({ teamMembers }: Props) => {
                 {position === 0 && (
                   <div className="flex ~gap-[1.25rem]/[5.6rem] ~px-[1.25rem]/[7.8rem] relative container mx-auto ">
                     <ATeamCard
+                      titleClassName=" hover:underline decoration-[1px] underline-offset-4 transition-all duration-200 "
+                      slug={items?.slug}
+                      link={`/people-of-aip/founders/${items.slug}`}
                       image={items?.image}
                       title={items?.name}
                       desc={items?.designation}
@@ -55,6 +58,11 @@ const PeopleOfAipTeamMembers = ({ teamMembers }: Props) => {
                     />
                     {teamMembers[i + 1] && (
                       <PTeamCard
+                        titleClassName=" hover:underline decoration-[1px] underline-offset-4 transition-all duration-200 "
+                        slug={teamMembers[i + 1]?.slug}
+                        link={`/people-of-aip/founders/${
+                          teamMembers[i + 1].slug
+                        }`}
                         image={teamMembers[i + 1]?.image}
                         title={teamMembers[i + 1]?.name}
                         desc={teamMembers[i + 1]?.designation}
@@ -79,6 +87,9 @@ const PeopleOfAipTeamMembers = ({ teamMembers }: Props) => {
                     </>
                     <div className=" flex ~gap-[1.25rem]/[5.6rem] ~px-[1.25rem]/[7.8rem] relative container mx-auto ">
                       <ATeamCard
+                        titleClassName=" hover:underline decoration-[1px] underline-offset-4 transition-all duration-200 "
+                        slug={items?.slug}
+                        link={`/people-of-aip/founders/${items.slug}`}
                         image={items?.image}
                         desc={items?.designation}
                         title={items?.name}
@@ -86,6 +97,11 @@ const PeopleOfAipTeamMembers = ({ teamMembers }: Props) => {
                       />
                       {teamMembers[i + 1] && (
                         <PTeamCard
+                          titleClassName=" hover:underline decoration-[1px] underline-offset-4 transition-all duration-200 "
+                          slug={teamMembers[i + 1]?.slug}
+                          link={`/people-of-aip/founders/${
+                            teamMembers[i + 1].slug
+                          }`}
                           image={teamMembers[i + 1]?.image}
                           title={teamMembers[i + 1]?.name}
                           desc={teamMembers[i + 1]?.designation}
@@ -98,7 +114,10 @@ const PeopleOfAipTeamMembers = ({ teamMembers }: Props) => {
                 {position === 4 && (
                   <div className="justify-center flex flex-wrap ~gap-[1.25rem]/[5.6rem] ~px-[1.25rem]/[7.8rem] relative container mx-auto">
                     <ATeamCard
+                      titleClassName=" hover:underline decoration-[1px] underline-offset-4 transition-all duration-200 "
                       // slug={items?.slug}
+                      slug={items?.slug}
+                      link={`/people-of-aip/founders/${items.slug}`}
                       image={items?.image}
                       // link={`/people-of-aip/${urlSlug}/${items.slug}`}
                       title={items?.name}
@@ -107,6 +126,11 @@ const PeopleOfAipTeamMembers = ({ teamMembers }: Props) => {
                     />
                     {teamMembers[i + 1] && (
                       <PTeamCard
+                        titleClassName=" hover:underline decoration-[1px] underline-offset-4 transition-all duration-200 "
+                        slug={teamMembers[i + 1]?.slug}
+                        link={`/people-of-aip/founders/${
+                          teamMembers[i + 1].slug
+                        }`}
                         // slug={teamMembers[i + 1]?.slug}
                         image={teamMembers[i + 1]?.image}
                         // link={`/people-of-aip/${urlSlug}/${
@@ -119,11 +143,16 @@ const PeopleOfAipTeamMembers = ({ teamMembers }: Props) => {
                     )}
                     {teamMembers[i + 2] && (
                       <ATeamCard
+                        titleClassName=" hover:underline decoration-[1px] underline-offset-4 transition-all duration-200 "
                         // slug={teamMembers[i + 2]?.slug}
                         image={teamMembers[i + 2]?.image}
                         // link={`/people-of-aip/${urlSlug}/${
                         //   teamMembers[i + 2].slug
                         // }`}
+                        slug={teamMembers[i + 2]?.slug}
+                        link={`/people-of-aip/founders/${
+                          teamMembers[i + 2].slug
+                        }`}
                         title={teamMembers[i + 2]?.name}
                         desc={teamMembers[i + 2]?.designation}
                         linkedin={true}
@@ -131,6 +160,11 @@ const PeopleOfAipTeamMembers = ({ teamMembers }: Props) => {
                     )}
                     {teamMembers[i + 3] && (
                       <PTeamCard
+                        titleClassName=" hover:underline decoration-[1px] underline-offset-4 transition-all duration-200 "
+                        slug={teamMembers[i + 3]?.slug}
+                        link={`/people-of-aip/founders/${
+                          teamMembers[i + 3].slug
+                        }`}
                         // slug={teamMembers[i + 3]?.slug}
                         image={teamMembers[i + 3]?.image}
                         // link={`/people-of-aip/${urlSlug}/${
@@ -146,8 +180,11 @@ const PeopleOfAipTeamMembers = ({ teamMembers }: Props) => {
                 {position === 8 && (
                   <div className=" flex justify-start md:justify-end ~gap-[1.25rem]/[5.6rem]  ~px-[1.25rem]/[7.8rem] relative container mx-auto">
                     <ATeamCard
+                      titleClassName=" hover:underline decoration-[1px] underline-offset-4 transition-all duration-200 "
                       // slug={items?.slug}
                       image={items?.image}
+                      slug={items?.slug}
+                      link={`/people-of-aip/founders/${items.slug}`}
                       // link={`/people-of-aip/${urlSlug}/${items.slug}`}
                       title={items?.name}
                       desc={items?.designation}
@@ -155,6 +192,11 @@ const PeopleOfAipTeamMembers = ({ teamMembers }: Props) => {
                     />
                     {teamMembers[i + 1] && (
                       <PTeamCard
+                        titleClassName=" hover:underline decoration-[1px] underline-offset-4 transition-all duration-200 "
+                        slug={teamMembers[i + 1]?.slug}
+                        link={`/people-of-aip/founders/${
+                          teamMembers[i + 1].slug
+                        }`}
                         // slug={teamMembers[i + 1]?.slug}
                         image={teamMembers[i + 1]?.image}
                         // link={`/people-of-aip/${urlSlug}/${
@@ -183,8 +225,11 @@ const PeopleOfAipTeamMembers = ({ teamMembers }: Props) => {
                     </>
                     <div className=" flex justify-start md:justify-end ~gap-[1.25rem]/[5.6rem] ~px-[1.25rem]/[7.8rem] relative container mx-auto">
                       <ATeamCard
+                        titleClassName=" hover:underline decoration-[1px] underline-offset-4 transition-all duration-200 "
                         // slug={items?.slug}
                         image={items?.image}
+                        slug={items?.slug}
+                        link={`/people-of-aip/founders/${items.slug}`}
                         // link={`/people-of-aip/${urlSlug}/${items.slug}`}
                         title={items?.name}
                         desc={items?.designation}
@@ -192,6 +237,11 @@ const PeopleOfAipTeamMembers = ({ teamMembers }: Props) => {
                       />
                       {teamMembers[i + 1] && (
                         <PTeamCard
+                          titleClassName=" hover:underline decoration-[1px] underline-offset-4 transition-all duration-200 "
+                          slug={teamMembers[i + 1]?.slug}
+                          link={`/people-of-aip/founders/${
+                            teamMembers[i + 1].slug
+                          }`}
                           // slug={items?.slug}
                           image={teamMembers[i + 1]?.image}
                           // link={`/people-of-aip/${urlSlug}/${
