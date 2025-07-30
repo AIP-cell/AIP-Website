@@ -52,10 +52,10 @@ const headerData = [
       { option: "What We Do", link: "/our-work/what-we-do" },
       { option: "Non-Profit Organizations", link: "/our-work/npo" },
       { option: "Experts", link: "/our-work/experts" },
-      // {
-      //   option: "Projects and Programs",
-      //   link: "/our-work/projects-and-programs",
-      // },
+      {
+        option: "Projects and Programs",
+        link: "/our-work/projects-and-programs",
+      },
       {
         option: "Collaborations",
         link: "/our-work/collaborations",

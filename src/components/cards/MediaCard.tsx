@@ -27,7 +27,7 @@ const MediaCard = ({ title, ddmmyy, image, desc, link }: Props) => {
       <Link
         href={link ?? ""}
         target="_blank"
-        className="font-semibold line-clamp-2 text-ellipsis md:line-clamp-none  text-gray80  pt-[0.75rem] underline decoration-[2px] underline-offset-4"
+        className="font-semibold w-full line-clamp-2 text-ellipsis md:line-clamp-none  text-gray80  pt-[0.75rem] underline decoration-[2px] underline-offset-4"
       >
         {title}
       </Link>

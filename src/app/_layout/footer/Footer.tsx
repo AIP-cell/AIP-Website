@@ -356,7 +356,15 @@ const Footer = () => {
                   </ButtonAnimation>
                 </Link>
                 <Link
-                  href="/our-work/collaborations"
+                  href="/our-work/projects-and-programs"
+                  className=" text-h9Copy5 font-inter text-white/60"
+                >
+                  <ButtonAnimation className="hover:underline underline-offset-2 transition-all duration-700">
+                    Projects and Programs
+                  </ButtonAnimation>
+                </Link>
+                <Link
+                  href="/our-work/project-programs"
                   className=" text-h9Copy5 font-inter text-white/60"
                 >
                   <ButtonAnimation className="hover:underline underline-offset-2 transition-all duration-700">
