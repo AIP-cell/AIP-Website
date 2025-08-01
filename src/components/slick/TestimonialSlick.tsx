@@ -77,14 +77,6 @@ const TestimonialSlick = ({ slickArray }: Props) => {
                         ))}
                       {actualIndex % 2 == 1 &&
                         (playtestimonialCard ? (
-                          <PCard
-                            key={i}
-                            image={items?.image}
-                            name={items?.name}
-                            work={items?.designation}
-                            desc={items?.description}
-                          />
-                        ) : (
                           <PCardWithPlaySign
                             key={i}
                             darkText={true}
@@ -94,6 +86,14 @@ const TestimonialSlick = ({ slickArray }: Props) => {
                             image={items?.image}
                             name={items?.name}
                             post={items?.designation}
+                            desc={items?.description}
+                          />
+                        ) : (
+                          <PCard
+                            key={i}
+                            image={items?.image}
+                            name={items?.name}
+                            work={items?.designation}
                             desc={items?.description}
                           />
                         ))}
