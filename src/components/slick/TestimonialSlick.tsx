@@ -87,7 +87,7 @@ const TestimonialSlick = ({ slickArray }: Props) => {
                         ) : (
                           <PCardWithPlaySign
                             key={i}
-                            darkText={playtestimonialCard}
+                            darkText={true}
                             linkOrVideo={items?.linkOrVideo}
                             video={items?.video}
                             videoLink={items?.videoLink}
