@@ -7,7 +7,7 @@ import WordStaggerAnimation from "@/components/animations/WordStaggerAnimation";
 
 const FoundationFactHeroSection = () => {
   return (
-    <div className="pt-[5rem]">
+    <div className="~pt-[5rem]/[10rem]">
       <div className="relative">
         <Image
           src={HeroBg}

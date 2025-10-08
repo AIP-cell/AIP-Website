@@ -81,6 +81,10 @@ const headerData = [
         option: "Gallery",
         link: "/resource-center/gallery/voices-of-the-ecosystem",
       },
+      {
+        option: "Books",
+        link: "/resource-center/books/love-to-give",
+      },
     ],
   },
 ];

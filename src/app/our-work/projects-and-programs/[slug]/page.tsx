@@ -26,7 +26,7 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const media = response?.projectAndProgram?.media;
   const testimonials = response?.projectAndProgram?.testimonials;
   return (
-    <div className="pt-[5rem]">
+    <div className="~pt-[5rem]/[10rem]">
       {heroSectionData && <InnerSectionOne heroSectionData={heroSectionData} />}
       {gallery?.galleryImages && gallery?.galleryImages.length != 0 && (
         <Gallery

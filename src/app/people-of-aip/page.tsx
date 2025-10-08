@@ -24,7 +24,7 @@ const page = async () => {
   }
   const members = response;
   return (
-    <div className="pt-[5rem] overflow-hidden">
+    <div className="~pt-[5rem]/[10rem] overflow-hidden">
       {members.boardOfDirectors && members.boardOfDirectors.length !== 0 && (
         <Directors teamMembers={members.boardOfDirectors} />
       )}

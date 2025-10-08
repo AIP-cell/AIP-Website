@@ -88,6 +88,7 @@ const Footer = () => {
 
   const onSubmit = (data: NewsletterSchema) => {
     // Handle actual API call here
+    console.log(data);
   };
   return (
     <div className="">
@@ -400,6 +401,14 @@ const Footer = () => {
                 >
                   <ButtonAnimation className="hover:underline underline-offset-2 transition-all duration-700">
                     Gallery
+                  </ButtonAnimation>
+                </Link>
+                <Link
+                  href="/resource-center/books/love-to-give"
+                  className=" text-h9Copy5 font-inter text-white/60"
+                >
+                  <ButtonAnimation className="hover:underline underline-offset-2 transition-all duration-700">
+                    Books
                   </ButtonAnimation>
                 </Link>
               </div>

@@ -52,7 +52,7 @@ const InnerPage = async ({ params }: { params: Promise<{ slug: string }> }) => {
   }
   const members = response;
   return (
-    <div className="pt-[5rem] overflow-hidden">
+    <div className="~pt-[5rem]/[10rem] overflow-hidden">
       <div className="relative container mx-auto">
         <BreadCrump
           textOne="People of AIP"

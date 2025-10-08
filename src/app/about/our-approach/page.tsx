@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 const page = () => {
   return (
-    <div className="pt-[5rem]">
+    <div className="~pt-[5rem]/[10rem]">
       <div className="relative w-full">
         <Image
           src={Bg}

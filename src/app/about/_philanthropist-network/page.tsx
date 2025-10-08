@@ -22,7 +22,7 @@ const page = async () => {
   const casestudies = response?.casestudies;
   const peopleData = response?.people;
   return (
-    <div className="pt-[5rem]">
+    <div className="~pt-[5rem]/[10rem]">
       <PhilanthropistHeroSection />
       <HelpingRivers />
       <NetworkContactSection />

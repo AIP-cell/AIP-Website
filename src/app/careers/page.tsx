@@ -27,7 +27,7 @@ const CareerPage = async () => {
   const jobs = response.jobs;
   const testimonials = response.testimonials;
   return (
-    <div className="pt-[5rem]">
+    <div className="~pt-[5rem]/[10rem]">
       <CareersHeroSection />
       <WhyWorkWithAip />
 

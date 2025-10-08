@@ -32,7 +32,7 @@ const page = async ({
   const newsData = response?.newsAndUpdates;
 
   return (
-    <div className="bg-bgLightPeach pt-[5rem] overflow-hidden">
+    <div className="bg-bgLightPeach ~pt-[5rem]/[10rem] overflow-hidden">
       <HeroSection />
       <GiveSection />
       {eventData && <Spotlight eventData={eventData} />}

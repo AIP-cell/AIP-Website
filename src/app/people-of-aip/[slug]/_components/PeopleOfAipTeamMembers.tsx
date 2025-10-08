@@ -29,7 +29,7 @@ const PeopleOfAipTeamMembers = ({ teamMembers, urlSlug }: Props) => {
     });
   }
   return (
-    <div className="w-full relative min-h-[90vh] pt-[5rem]">
+    <div className="w-full relative min-h-[90vh] ~pt-[5rem]/[10rem]">
       <div className="pt-[3rem] pb-[7rem] ">
         <div className="flex flex-col  justify-center ~px-[1.25rem]/[20.9rem] ~pb-[1.83rem]/[3.875rem] container mx-auto">
           {urlSlug === "experts" && (

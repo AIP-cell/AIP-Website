@@ -24,7 +24,7 @@ const ValueSlick = ({ slickArray }: Props) => {
     }
   };
   return (
-    <div className="pt-[5rem] container mx-auto pb-[9.25rem]">
+    <div className="~pt-[5rem]/[10rem] container mx-auto pb-[9.25rem]">
       <div className="relative  flex justify-center items-center">
         <p className="~w-[16.1rem]/[38rem] text-center text-midGray ~leading-[1.225rem]/[1.4rem]">
           {slickArray.at(change)?.desc}

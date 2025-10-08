@@ -20,7 +20,7 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
 
   const galleryImages = response?.galleryImages;
   return (
-    <div className="pt-[5rem]">
+    <div className="~pt-[5rem]/[10rem]">
       {response && (
         <InnerExpertsSectionOne innerData={response} params={asyncInnerSlug} />
       )}

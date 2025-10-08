@@ -7,7 +7,7 @@ import React from "react";
 
 const ThankYouPage = () => {
   return (
-    <div className="pt-[5rem]">
+    <div className="~pt-[5rem]/[10rem]">
       <div className="relative">
         <BreadCrump textOne="home" linkOne="/" />
       </div>

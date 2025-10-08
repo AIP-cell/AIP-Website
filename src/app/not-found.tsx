@@ -7,7 +7,7 @@ import TextStaggerAnimation from "@/components/animations/TextStaggerAnimation";
 
 const NotFound = () => {
   return (
-    <div className="pt-[5rem]  container mx-auto h-screen">
+    <div className="~pt-[5rem]/[10rem] container mx-auto h-screen">
       <div className="relative">
         <BreadCrump textOne="Home" linkOne="/" />
       </div>

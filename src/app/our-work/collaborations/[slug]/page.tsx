@@ -18,7 +18,7 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   }
   const collaboration = response?.collaboration;
   return (
-    <div className="pt-[5rem]">
+    <div className="~pt-[5rem]/[10rem]">
       {collaboration && (
         <InnerCollaborations collaboration={collaboration} slug={asyncParam} />
       )}

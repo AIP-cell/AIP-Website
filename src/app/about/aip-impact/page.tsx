@@ -30,7 +30,7 @@ const page = async () => {
   const foundationFacts = response.foundationFacts;
 
   return (
-    <div className="relative pt-[5rem] overflow-hidden">
+    <div className="relative ~pt-[5rem]/[10rem] overflow-hidden">
       <ImpactHeroSection />
       {caseStudyData.length != 0 && (
         <CaseStudies

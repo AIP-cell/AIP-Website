@@ -23,7 +23,7 @@ const FaqPage = async ({
     return;
   }
   return (
-    <div className="pt-[5rem]">
+    <div className="~pt-[5rem]/[10rem]">
       <div className=" relative min-h-screen ">
         <Image
           src={BgFaq}

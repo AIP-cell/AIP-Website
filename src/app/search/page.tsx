@@ -64,7 +64,7 @@ const page = async ({
   const { key, field, type, date } = await searchParams;
 
   return (
-    <div className="pt-[5rem]">
+    <div className="~pt-[5rem]/[10rem]">
       <div className="relative container mx-auto ~pt-[4.313rem]/[5.5rem] ~px-[1.25rem]/[7.8rem]">
         <BreadCrump textOne="Search" linkOne="/search" />
         <SearchBar key={key} searchParams={{ ...asyncSearchParam }} />

@@ -37,7 +37,7 @@ const page = async ({
   const totalPages = response?.pageCount;
   const totalCount = response?.totalCount;
   return (
-    <div className="pt-[5rem]">
+    <div className="~pt-[5rem]/[10rem]">
       <div className=" relative bg-container mx-auto ">
         <Image
           src={careerBg}

@@ -24,7 +24,7 @@ const FaqTabGroup = ({ faqData, category }: Props) => {
     <TabGroup
       selectedIndex={selected}
       onChange={setSelected}
-      className="relative container mx-auto ~px-[1.25rem]/[7.75rem] pt-[5rem] grid md:grid-cols-3 ~gap-[3.375rem]/[3.75rem]"
+      className="relative container mx-auto ~px-[1.25rem]/[7.75rem] ~pt-[5rem]/[10rem] grid md:grid-cols-3 ~gap-[3.375rem]/[3.75rem]"
     >
       <BreadCrump textOne="FAQ's" linkOne="/faq" />
       <div className="col-span-1">

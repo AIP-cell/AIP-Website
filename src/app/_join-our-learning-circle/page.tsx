@@ -3,7 +3,7 @@ import React from "react";
 
 const page = () => {
   return (
-    <div className="pt-[5rem]">
+    <div className="~pt-[5rem]/[10rem]">
       <div className=" relative container mx-auto h-screen">
         <BreadCrump
           textOne="Join our learning circle"

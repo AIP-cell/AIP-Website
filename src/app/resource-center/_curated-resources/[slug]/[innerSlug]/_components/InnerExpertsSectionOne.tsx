@@ -21,7 +21,7 @@ const InnerExpertsSectionOne = ({ innerData, params }: Props) => {
         alt="purple-curve"
         className="hidden md:block absolute top-[8rem] right-0"
       />
-      <div className="container mx-auto relative ~px-[1.25rem]/[7.8rem] pt-[5rem]">
+      <div className="container mx-auto relative ~px-[1.25rem]/[7.8rem] ~pt-[5rem]/[10rem]">
         {innerData?.expertName && (
           <BreadCrump
             textOne="Resource Center"
@@ -122,7 +122,7 @@ const InnerExpertsSectionOne = ({ innerData, params }: Props) => {
               </div>
             )}
           </div>
-          <div className="hidden xl:block pt-[5rem]">
+          <div className="hidden xl:block ~pt-[5rem]/[10rem]">
             <FadeInAnimation delay={0.1} y1={20} y2={0}>
               <div className="relative  w-[25rem] h-[35.313rem]">
                 <Image

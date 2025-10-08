@@ -25,7 +25,7 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const galleryImages = response?.gallery?.galleryImages;
   const galleryVideos = response?.gallery?.galleryVideos;
   return (
-    <div className="pt-[5rem]">
+    <div className="~pt-[5rem]/[10rem]">
       <div className=" relative w-full overflow-hidden">
         <Image
           src={projectBg}

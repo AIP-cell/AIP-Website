@@ -35,7 +35,7 @@ const page = async ({
     : response.at(0)?.year;
   const filterDataByYear = response.find((year) => year.year === currentYear);
   return (
-    <div className="pt-[5rem]">
+    <div className="~pt-[5rem]/[10rem]">
       <div className="w-full relative">
         <Image
           src={BgFaq}

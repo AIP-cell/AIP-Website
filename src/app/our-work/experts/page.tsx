@@ -29,7 +29,7 @@ const page = async () => {
   const people = response?.experts;
   const expertShelves = response?.selectedWorks;
   return (
-    <div className="pt-[5rem]">
+    <div className="~pt-[5rem]/[10rem]">
       <ExpertHeroSection />
       <AipAndExperts />
       <AsAnExperts />

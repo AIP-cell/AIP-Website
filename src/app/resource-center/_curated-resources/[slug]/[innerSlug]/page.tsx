@@ -24,7 +24,7 @@ const page = async ({
   const curatedResource = response?.curatedResource;
   const galleryImages = response.curatedResource.galleryImages;
   return (
-    <div className="pt-[5rem]">
+    <div className="~pt-[5rem]/[10rem]">
       {curatedResource && (
         <InnerExpertsSectionOne
           innerData={curatedResource}

@@ -28,7 +28,7 @@ const page = async () => {
 
   const desc1 = response?.description1;
   return (
-    <div className="pt-[5rem]">
+    <div className="~pt-[5rem]/[10rem]">
       {desc1 && <FounderNetworkHeroSection desc1={desc1} />}
 
       <CoreFoundersAndFounders />

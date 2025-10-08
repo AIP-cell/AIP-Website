@@ -7,6 +7,7 @@ import localFont from "next/font/local";
 import QueryProvider from "../providers/QueryProviderClient";
 import { Toaster } from "react-hot-toast";
 import ProgressProvider from "../providers/ProgressProvider";
+import Disclaimer from "./_layout/Disclaimer";
 
 const inter = Inter({ subsets: ["latin"], variable: "--inter" });
 const playfairDisplay = localFont({
@@ -42,6 +43,7 @@ export default function RootLayout({
             <Header />
             {children}
             <Footer />
+            <Disclaimer />
           </QueryProvider>
         </ProgressProvider>
       </body>

@@ -9,8 +9,7 @@ import NoData from "@/components/NoData";
 import ResourcesTabAndSelect from "../../_components/ResourcesTabAndSelect";
 import CustomFilter from "@/components/custom/CustomFilter";
 import DateFilter from "@/components/custom/DatePick";
-import SearchSvg from "@/components/svg/SearchSvg";
-import CrossSvg from "@/components/svg/CrossSvg";
+
 import CustomSearch from "@/components/custom/CustomSearch";
 
 export const dynamic = "force-dynamic";
@@ -100,7 +99,6 @@ const getAipResourcesData = async (
   const response = await Api.getGallery(category, { domain, c_type, date, q });
   return response?.data;
 };
-
 const GalleryCategoryPage = async ({
   params,
   searchParams,
@@ -135,7 +133,7 @@ const GalleryCategoryPage = async ({
   );
 
   return (
-    <div className="pt-[5rem] overflow-x-hidden min-h-screen">
+    <div className="~pt-[5rem]/[10rem] overflow-x-hidden min-h-screen">
       <div className="container mx-auto relative ~px-5/[7.5rem] pb-[7.5rem]">
         <div className="~px-5/flex ~pt-0/[1.25rem] gap-[.75rem][7.8rem]">
           <BreadCrump

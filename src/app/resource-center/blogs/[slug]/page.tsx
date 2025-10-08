@@ -36,7 +36,7 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
       '<a target="_blank" rel="noopener noreferrer" '
     );
   return (
-    <div className="pt-[5rem] overflow-x-hidden min-h-screen">
+    <div className="~pt-[5rem]/[10rem] overflow-x-hidden min-h-screen">
       <div className="container mx-auto relative ~pl-5/[7.5rem] ~pr-5/[19rem] ~pb-[3rem]/[7.5rem]">
         <div className=" ~pt-0/[1.25rem] gap-[.75rem][7.8rem]">
           <BreadCrump
