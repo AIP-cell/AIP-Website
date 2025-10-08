@@ -37,7 +37,11 @@ const Disclaimer = () => {
               onClick={() => setIsOpen(false)}
               className="~size-[1.25rem]/[1.5rem] z-[50] shrink-0 absolute cursor-pointer hover:scale-110 transition-all duration-500 ease-in-out right-[1.5rem] top-[1.5rem] "
             />
-            <div className="overflow-y-auto flex md:flex-row flex-col-reverse justify-center gap-[1rem] items-center grow no-scrollbar ~p-[1.5rem]/[3.9375rem]">
+            <Link
+              onClick={() => setIsOpen(false)}
+              href={"/resource-center/books/love-to-give"}
+              className="overflow-y-auto flex md:flex-row flex-col-reverse justify-center gap-[1rem] items-center grow no-scrollbar ~p-[1.5rem]/[3.9375rem]"
+            >
               <div className="md:w-[65%] shrink-0">
                 <WordStaggerAnimation
                   text="AIP brings you <br>
@@ -55,7 +59,8 @@ const Disclaimer = () => {
                 />
                 <Link
                   onClick={() => setIsOpen(false)}
-                  href={`/resource-center/books/love-to-give`}
+                  href={`https://www.amazon.in/`}
+                  target="_blank"
                   className="~pt-[1rem]/[2.8125rem] block"
                 >
                   <ButtonAnimation className=" z-30 bg-darkPurple border border-darkPurple  hover:bg-transparent text-white hover:text-darkPurple rounded-full transition-all duration-500 ">
@@ -75,7 +80,7 @@ const Disclaimer = () => {
                   className="object-contain ~p-[1.5rem]/[0]"
                 />
               </div>
-            </div>
+            </Link>
 
             <ModalSvg className=" absolute  md:flex hidden bottom-0 right-0 w-[21.0625rem]" />
           </DialogPanel>

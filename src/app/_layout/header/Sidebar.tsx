@@ -100,18 +100,18 @@ const Sidebar = () => {
               onClick={() => {
                 setIsOpen((open) => !open);
               }}
-              className="xl:hidden fixed  inset-0 size-full bg-black/50"
+              className="xl:hidden fixed z-[99999]  inset-0 size-full bg-black/50"
             ></motion.div>
             <motion.div
               initial={{ x: "-100%", opacity: 1 }}
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: "-100%", opacity: 0 }}
               transition={{ duration: 0.7, ease: "easeInOut" }}
-              className="xl:hidden fixed  inset-y-0 left-0 no-scrollbar"
+              className="xl:hidden fixed  z-[99999] inset-y-0 left-0 no-scrollbar"
             >
               <div
                 data-lenis-prevent
-                className="relative w-[70vw] h-[100dvh] overflow-y-auto no-scrollbar pt-[2.5rem] px-[1.25rem] rounded-tr-lg  rounded-br-lg overflow-hidden bg-purpleToBlue xl:hidden gap-[2.5rem] "
+                className="relative z-[99999] w-[70vw] h-[100dvh] overflow-y-auto no-scrollbar pt-[2.5rem] px-[1.25rem] rounded-tr-lg  rounded-br-lg overflow-hidden bg-purpleToBlue xl:hidden gap-[2.5rem] "
               >
                 <div className="flex flex-col text-white items-start">
                   <Link

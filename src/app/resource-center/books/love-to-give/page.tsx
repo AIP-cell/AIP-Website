@@ -7,6 +7,7 @@ import second from "@public/images/love-give.png";
 import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 import BuySvg from "@/components/svg/BuySvg";
 import BooksSvg from "@/components/svg/BooksSvg";
+import Link from "next/link";
 // import Gallery from "./_components/Gallery";
 // import Video from "./_components/Video";
 
@@ -61,13 +62,15 @@ const page = async () => {
                 lessons on how philanthropy can shape communities and society at
                 large.
               </div>
-              <ButtonAnimation className=" z-30 bg-darkPurple ~mt-[1.25rem]/[2.5rem] border border-darkPurple  hover:bg-transparent text-white hover:text-darkPurple rounded-full transition-all duration-500 ">
-                <p
-                  className={`~px-[1rem]/[2rem] flex gap-[0.75rem] items-center ~py-[0.625rem]/[0.75rem] ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]`}
-                >
-                  Buy Book <BuySvg className="size-[0.9375rem]" />
-                </p>
-              </ButtonAnimation>
+              <Link href={"https://www.amazon.in/"} target="_blank">
+                <ButtonAnimation className=" z-30 bg-darkPurple ~mt-[1.25rem]/[2.5rem] border border-darkPurple  hover:bg-transparent text-white hover:text-darkPurple rounded-full transition-all duration-500 ">
+                  <p
+                    className={`~px-[1rem]/[2rem] flex gap-[0.75rem] items-center ~py-[0.625rem]/[0.75rem] ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]`}
+                  >
+                    Buy Book <BuySvg className="size-[0.9375rem]" />
+                  </p>
+                </ButtonAnimation>
+              </Link>
             </div>
             <div className="lg:w-[40%]">
               <div className="relative w-full ~h-[20.8926620483rem]/[39.0306129456rem]">
