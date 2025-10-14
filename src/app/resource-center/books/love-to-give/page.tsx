@@ -44,14 +44,17 @@ const page = async () => {
 
               <p className="font-medium leading-[1.75rem] font-playFair text-h5 text-gray80 ">
                 By{" "}
-                <span className="underline underline-offset-3 decoration-[1.5px]">
+                <span
+
+                // className="underline underline-offset-3 decoration-[1.5px]"
+                >
                   Rashmi Bansal
                 </span>
               </p>
-              <div className="text-[#81848F] ~text-h9Copy4/h7Copy2 ~py-[0.75rem]/[1rem] ~leading-[1.4rem]/[1.75rem] font-playFairItalic ">
+              {/* <div className="text-[#81848F] ~text-h9Copy4/h7Copy2 ~py-[0.75rem]/[1rem] ~leading-[1.4rem]/[1.75rem] font-playFairItalic ">
                 Know
-              </div>
-              <div className=" ~text-h9Copy5/h9Copy4 lg:max-w-[50ch] ~leading-[1.225rem]/[1.4rem] text-midGray/70 ">
+              </div> */}
+              <div className=" ~text-h9Copy5/h9Copy4 lg:max-w-[50ch] ~pt-[0.75rem]/[1rem] ~leading-[1.225rem]/[1.4rem] text-midGray/70 ">
                 Live to Give by Rashmi Bansal is an upcoming book that
                 chronicles the journeys of philanthropists in India. Through a
                 collection of inspiring stories, it explores the motivations,
@@ -67,7 +70,7 @@ const page = async () => {
                   <p
                     className={`~px-[1rem]/[2rem] flex gap-[0.75rem] items-center ~py-[0.625rem]/[0.75rem] ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]`}
                   >
-                    Buy Book <BuySvg className="size-[0.9375rem]" />
+                    Order Here <BuySvg className="size-[0.9375rem]" />
                   </p>
                 </ButtonAnimation>
               </Link>
