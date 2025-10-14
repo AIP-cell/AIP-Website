@@ -28,10 +28,10 @@ const Disclaimer = () => {
       onClose={() => setIsOpen(false)}
     >
       <div className="fixed bg-black/20 backdrop-blur-sm inset-0 z-50 overflow-y-auto">
-        <div className="md:flex md:min-h-full items-center justify-center  md:~px-[0]/[3rem]">
+        <div className="flex min-h-full items-center justify-center ~px-[1rem]/[3rem]">
           <DialogPanel
             transition
-            className="w-full ~rounded-[0]/[1.75rem] max-w-[51.25rem] relative max-md:h-[100svh] max-md:flex max-md:flex-col max-md:grow max-md:shrink-0  md:min-h-fit bg-[#FFFDF7]   duration-300 ease-out data-closed:transform-[scale(50%)] data-closed:opacity-0"
+            className="w-full ~rounded-[1.25rem]/[1.75rem] max-w-[51.25rem] relative max-md:flex max-md:flex-col max-md:grow max-md:shrink-0  bg-[#FFFDF7]   duration-300 ease-out data-closed:transform-[scale(50%)] data-closed:opacity-0"
           >
             <CloseSvg
               onClick={() => setIsOpen(false)}
@@ -49,13 +49,13 @@ const Disclaimer = () => {
     latest book,<br>
      <color>'Live to Give' <br> 
     "
-                  className=" relative tracking-[-1px] shrink-0 w-auto z-[1000] ~text-[1.75rem]/h1 font-playFair ~leading-[2.6rem]/[3.1rem]  text-gray80"
+                  className=" relative tracking-[-1px] shrink-0 w-auto z-[1000] max-md:text-center ~text-[1.5rem]/h1 font-playFair ~leading-[2rem]/[3.1rem]  text-gray80"
                 />
                 <WordStaggerAnimation
                   text="with 16 inspiring stories 
     of Wealth with Purpose
     "
-                  className=" relative tracking-[-1px] pt-2 shrink-0 w-auto z-[1000] font-playFair ~text-[1.5rem]/h3 ~leading-[2.6rem]/[3.3rem]    text-gray80"
+                  className=" relative tracking-[-1px] pt-2 shrink-0 w-auto z-[1000] font-playFair max-md:text-center ~text-[1rem]/h3 ~leading-[1.25rem]/[3.3rem]    text-gray80"
                 />
                 <Link
                   onClick={() => setIsOpen(false)}
@@ -63,9 +63,9 @@ const Disclaimer = () => {
                   target="_blank"
                   className="~pt-[1rem]/[2.8125rem] block"
                 >
-                  <ButtonAnimation className=" z-30 bg-darkPurple border border-darkPurple  hover:bg-transparent text-white hover:text-darkPurple rounded-full transition-all duration-500 ">
+                  <ButtonAnimation className=" z-30 max-md:w-full relative bg-darkPurple border border-darkPurple  hover:bg-transparent text-white hover:text-darkPurple rounded-full transition-all duration-500 ">
                     <p
-                      className={`~px-[1rem]/[2rem] flex gap-[1rem] items-center ~py-[0.625rem]/[0.75rem] ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]`}
+                      className={`~px-[1rem]/[2rem] max-md:w-full flex ~gap-[0.75rem]/[1rem] justify-center items-center ~py-[0.625rem]/[0.75rem] ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]`}
                     >
                       Know More{" "}
                       <DownTagSvg className="w-[0.6rem] rotate-[-90deg] h-[0.4rem]" />
@@ -73,16 +73,12 @@ const Disclaimer = () => {
                   </ButtonAnimation>
                 </Link>
               </div>
-              <div className=" relative flex justify-center w-full z-10">
-                <Image
-                  src={love}
-                  alt="love"
-                  className="object-contain ~p-[1.5rem]/[0]"
-                />
+              <div className=" relative flex justify-center ~h-[11.3831253052rem]/[21.25rem] w-full z-10">
+                <Image src={love} alt="love" className="object-contain " />
               </div>
             </Link>
 
-            <ModalSvg className=" absolute  md:flex hidden bottom-0 right-0 w-[21.0625rem]" />
+            <ModalSvg className=" absolute  bottom-0 right-0 ~w-[8.9721679688rem]/[21.0625rem]" />
           </DialogPanel>
         </div>
       </div>
