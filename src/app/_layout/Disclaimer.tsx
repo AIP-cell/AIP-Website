@@ -40,27 +40,23 @@ const Disclaimer = () => {
               className="overflow-y-auto flex md:flex-row flex-col-reverse justify-center gap-[1rem] items-center grow no-scrollbar ~p-[1.5rem]/[3.9375rem]"
             >
               <div className="md:w-[65%] shrink-0">
-                <Link href={"/resource-center/books/love-to-give"}>
-                  <WordStaggerAnimation
-                    text="AIP brings you <br>
+                <WordStaggerAnimation
+                  text="AIP brings you <br>
       Rashmi Bansal's <br>
       latest book,<br>
        <color>'Live to Give' <br> 
       "
-                    className=" relative tracking-[-1px] shrink-0 w-auto z-[1000] max-md:text-center ~text-[1.5rem]/h1 font-playFair ~leading-[2rem]/[3.1rem]  text-gray80"
-                  />
-                </Link>
-                <Link href={"/resource-center/books/love-to-give"}>
-                  <WordStaggerAnimation
-                    text="with 16 inspiring stories 
+                  className=" relative tracking-[-1px] shrink-0 w-auto z-[1000] max-md:text-center ~text-[1.5rem]/h1 font-playFair ~leading-[2rem]/[3.1rem]  text-gray80"
+                />
+                <WordStaggerAnimation
+                  text="with 16 inspiring stories 
       of Wealth with Purpose
       "
-                    className=" relative tracking-[-1px] pt-2 shrink-0 w-auto z-[1000] font-playFair max-md:text-center ~text-[1rem]/h3 ~leading-[1.25rem]/[3.3rem]    text-gray80"
-                  />
-                </Link>
+                  className=" relative tracking-[-1px] pt-2 shrink-0 w-auto z-[1000] font-playFair max-md:text-center ~text-[1rem]/h3 ~leading-[1.25rem]/[3.3rem]    text-gray80"
+                />
                 <Link
                   onClick={() => setIsOpen(false)}
-                  href={` https://www.amazon.in/dp/8194767970`}
+                  href={` /resource-center/books/love-to-give`}
                   target="_blank"
                   className="~pt-[1rem]/[2.8125rem] block md:w-fit"
                 >
