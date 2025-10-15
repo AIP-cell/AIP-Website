@@ -65,7 +65,10 @@ const page = async () => {
                 lessons on how philanthropy can shape communities and society at
                 large.
               </div>
-              <Link href={"https://www.amazon.in/"} target="_blank">
+              <Link
+                href={" https://www.amazon.in/dp/8194767970"}
+                target="_blank"
+              >
                 <ButtonAnimation className=" z-30 bg-darkPurple ~mt-[1.25rem]/[2.5rem] border border-darkPurple  hover:bg-transparent text-white hover:text-darkPurple rounded-full transition-all duration-500 ">
                   <p
                     className={`~px-[1rem]/[2rem] flex gap-[0.75rem] items-center ~py-[0.625rem]/[0.75rem] ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]`}

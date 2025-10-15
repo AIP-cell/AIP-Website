@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import WordStaggerAnimation from "@/components/animations/WordStaggerAnimation";
 import Link from "next/link";
@@ -11,7 +11,6 @@ import Image from "next/image";
 import love from "../../../public/images/love-to-give.png";
 const Disclaimer = () => {
   const [isOpen, setIsOpen] = useState(false);
-
   useEffect(() => {
     const hasAgreed = sessionStorage.getItem("disclaimerAgreed") === "true";
 
@@ -19,7 +18,6 @@ const Disclaimer = () => {
       setIsOpen(true);
     }
   }, []);
-
   return (
     <Dialog
       open={isOpen}
@@ -37,31 +35,34 @@ const Disclaimer = () => {
               onClick={() => setIsOpen(false)}
               className="~size-[1.25rem]/[1.5rem] z-[50] shrink-0 absolute cursor-pointer hover:scale-110 transition-all duration-500 ease-in-out right-[1.5rem] top-[1.5rem] "
             />
-            <Link
+            <div
               onClick={() => setIsOpen(false)}
-              href={"/resource-center/books/love-to-give"}
               className="overflow-y-auto flex md:flex-row flex-col-reverse justify-center gap-[1rem] items-center grow no-scrollbar ~p-[1.5rem]/[3.9375rem]"
             >
               <div className="md:w-[65%] shrink-0">
-                <WordStaggerAnimation
-                  text="AIP brings you <br>
-    Rashmi Bansal's <br>
-    latest book,<br>
-     <color>'Live to Give' <br> 
-    "
-                  className=" relative tracking-[-1px] shrink-0 w-auto z-[1000] max-md:text-center ~text-[1.5rem]/h1 font-playFair ~leading-[2rem]/[3.1rem]  text-gray80"
-                />
-                <WordStaggerAnimation
-                  text="with 16 inspiring stories 
-    of Wealth with Purpose
-    "
-                  className=" relative tracking-[-1px] pt-2 shrink-0 w-auto z-[1000] font-playFair max-md:text-center ~text-[1rem]/h3 ~leading-[1.25rem]/[3.3rem]    text-gray80"
-                />
+                <Link href={"/resource-center/books/love-to-give"}>
+                  <WordStaggerAnimation
+                    text="AIP brings you <br>
+      Rashmi Bansal's <br>
+      latest book,<br>
+       <color>'Live to Give' <br> 
+      "
+                    className=" relative tracking-[-1px] shrink-0 w-auto z-[1000] max-md:text-center ~text-[1.5rem]/h1 font-playFair ~leading-[2rem]/[3.1rem]  text-gray80"
+                  />
+                </Link>
+                <Link href={"/resource-center/books/love-to-give"}>
+                  <WordStaggerAnimation
+                    text="with 16 inspiring stories 
+      of Wealth with Purpose
+      "
+                    className=" relative tracking-[-1px] pt-2 shrink-0 w-auto z-[1000] font-playFair max-md:text-center ~text-[1rem]/h3 ~leading-[1.25rem]/[3.3rem]    text-gray80"
+                  />
+                </Link>
                 <Link
                   onClick={() => setIsOpen(false)}
-                  href={`https://www.amazon.in/`}
+                  href={` https://www.amazon.in/dp/8194767970`}
                   target="_blank"
-                  className="~pt-[1rem]/[2.8125rem] block"
+                  className="~pt-[1rem]/[2.8125rem] block w-fit"
                 >
                   <ButtonAnimation className=" z-30 max-md:w-full relative bg-darkPurple border border-darkPurple  hover:bg-transparent text-white hover:text-darkPurple rounded-full transition-all duration-500 ">
                     <p
@@ -73,10 +74,13 @@ const Disclaimer = () => {
                   </ButtonAnimation>
                 </Link>
               </div>
-              <div className=" relative flex justify-center ~h-[11.3831253052rem]/[21.25rem] w-full z-10">
+              <Link
+                href={"/resource-center/books/love-to-give"}
+                className=" relative flex justify-center ~h-[11.3831253052rem]/[21.25rem] w-full z-10"
+              >
                 <Image src={love} alt="love" className="object-contain " />
-              </div>
-            </Link>
+              </Link>
+            </div>
 
             <ModalSvg className=" absolute  bottom-0 right-0 ~w-[8.9721679688rem]/[21.0625rem]" />
           </DialogPanel>
