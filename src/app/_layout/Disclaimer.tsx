@@ -57,7 +57,6 @@ const Disclaimer = () => {
                 <Link
                   onClick={() => setIsOpen(false)}
                   href={` /resource-center/books/love-to-give`}
-                  target="_blank"
                   className="~pt-[1rem]/[2.8125rem] block md:w-fit"
                 >
                   <ButtonAnimation className=" z-30 max-md:w-full relative bg-darkPurple border border-darkPurple  hover:bg-transparent text-white hover:text-darkPurple rounded-full transition-all duration-500 ">
@@ -70,12 +69,9 @@ const Disclaimer = () => {
                   </ButtonAnimation>
                 </Link>
               </div>
-              <Link
-                href={"/resource-center/books/love-to-give"}
-                className=" relative flex justify-center ~h-[11.3831253052rem]/[21.25rem] w-full z-10"
-              >
+              <div className=" relative flex justify-center ~h-[11.3831253052rem]/[21.25rem] w-full z-10">
                 <Image src={love} alt="love" className="object-contain " />
-              </Link>
+              </div>
             </div>
 
             <ModalSvg className=" absolute  bottom-0 right-0 ~w-[8.9721679688rem]/[21.0625rem]" />
