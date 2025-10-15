@@ -62,7 +62,7 @@ const Disclaimer = () => {
                   onClick={() => setIsOpen(false)}
                   href={` https://www.amazon.in/dp/8194767970`}
                   target="_blank"
-                  className="~pt-[1rem]/[2.8125rem] block w-fit"
+                  className="~pt-[1rem]/[2.8125rem] block md:w-fit"
                 >
                   <ButtonAnimation className=" z-30 max-md:w-full relative bg-darkPurple border border-darkPurple  hover:bg-transparent text-white hover:text-darkPurple rounded-full transition-all duration-500 ">
                     <p
