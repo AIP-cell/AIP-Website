@@ -73,7 +73,7 @@ const page = async () => {
                   <p
                     className={`~px-[1rem]/[2rem] flex gap-[0.75rem] items-center ~py-[0.625rem]/[0.75rem] ~text-h9Copy5/h9Copy4 ~leading-[1.225rem]/[1.4rem]`}
                   >
-                    Order Here <BuySvg className="size-[0.9375rem]" />
+                    Pre-Order Now <BuySvg className="size-[0.9375rem]" />
                   </p>
                 </ButtonAnimation>
               </Link>
