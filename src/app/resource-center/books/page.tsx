@@ -22,7 +22,7 @@ const response = [
     shortDescription:
       "Live to Give by Rashmi Bansal is an upcoming book that chronicles the journeys of philanthropists in India. Through a collection of inspiring stories, it explores the motivations, challenges, and impact of individuals who chose to dedicate their wealth and energy toward creating social change. Blending narrative storytelling with real-world insights, the book captures both the personal journeys of givers and the broader lessons on how philanthropy can shape communities and society at large.",
     image: "AIP/public/images/love-give.png",
-    slug: "love-to-give",
+    slug: "live-to-give",
     date: "2022-12-02 00:00:00",
   },
 ];

@@ -83,7 +83,7 @@ const headerData = [
       },
       {
         option: "Books",
-        link: "/resource-center/books/love-to-give",
+        link: "/resource-center/books/live-to-give",
       },
     ],
   },

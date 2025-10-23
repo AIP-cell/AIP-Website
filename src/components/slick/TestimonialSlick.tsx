@@ -104,12 +104,6 @@ const TestimonialSlick = ({ slickArray }: Props) => {
           </div>
           <div className="flex gap-[1.25rem] absolute ~/md:~bottom-[-8rem]/[-6rem] lg:bottom-auto lg:top-[9.375rem] justify-center lg:justify-between w-full ~px-0/[7.813rem] z-20">
             <ButtonAnimation
-              onClick={previous}
-              className=" text-white hover:bg-white  hover:text-darkPurple  leading-[22.4px] font-inter bg-darkPurple rounded-tl-3xl rounded-bl-3xl rounded-tr-xl rounded-br-xl py-[1.15rem] px-[0.92rem]"
-            >
-              <LeftSlickArrowSvg className="w-[1rem] h-[0.57rem]" />
-            </ButtonAnimation>
-            <ButtonAnimation
               onClick={next}
               className=" text-white hover:bg-white bg-darkPurple hover:text-darkPurple rounded-tr-3xl rounded-br-3xl rounded-tl-xl rounded-bl-xl py-[1.15rem] px-[0.92rem]"
             >

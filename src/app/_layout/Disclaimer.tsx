@@ -56,7 +56,7 @@ const Disclaimer = () => {
                 />
                 <Link
                   onClick={() => setIsOpen(false)}
-                  href={` /resource-center/books/love-to-give`}
+                  href={` /resource-center/books/live-to-give`}
                   className="~pt-[1rem]/[2.8125rem] block md:w-fit"
                 >
                   <ButtonAnimation className=" z-30 max-md:w-full relative bg-darkPurple border border-darkPurple  hover:bg-transparent text-white hover:text-darkPurple rounded-full transition-all duration-500 ">

@@ -15,7 +15,7 @@ const MarqueeComponent = () => {
       <div className=" text-black w-full ~text-h9Copy5/h9Copy4">
         <Marquee className=" relative z-40 ">
           <Link
-            href={"/resource-center/books/love-to-give"}
+            href={"/resource-center/books/live-to-give"}
             className="mx-[0.75rem] hover:underline "
           >
             AIP brings you Rashmi Bansal&apos;s latest book, &apos;Live to
