@@ -23,6 +23,7 @@ const page = async ({
 }) => {
   const asyncSearchParams = await searchParams;
   const response = await getHomePageApi();
+  console.log(response);
   if (!response) {
     notFound();
   }

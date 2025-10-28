@@ -8,6 +8,9 @@ import QueryProvider from "../providers/QueryProviderClient";
 import { Toaster } from "react-hot-toast";
 import ProgressProvider from "../providers/ProgressProvider";
 import Disclaimer from "./_layout/Disclaimer";
+import { THomePageData } from "@/api/type";
+import { Api } from "@/api/Api";
+import { notFound } from "next/navigation";
 
 const inter = Inter({ subsets: ["latin"], variable: "--inter" });
 const playfairDisplay = localFont({
@@ -26,12 +29,21 @@ export const metadata: Metadata = {
     "Empowering Indian Philanthropy (AIP) is a collaborative network created by philanthropists to enhance and support impactful giving.",
   metadataBase: new URL("https://www.indianphilanthropy.org/"),
 };
-
-export default function RootLayout({
+const getHomePageApi = async (): Promise<THomePageData> => {
+  const response = await Api.getHomePage();
+  return response?.data;
+};
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const response = await getHomePageApi();
+  if (!response) {
+    notFound();
+  }
+
+  const marquee = response.book;
   return (
     <html lang="en">
       <body
@@ -40,10 +52,10 @@ export default function RootLayout({
         <ProgressProvider>
           <QueryProvider>
             <Toaster position="top-right" containerClassName="mt-4" />
-            <Header />
+            <Header marquee={marquee} />
             {children}
             <Footer />
-            <Disclaimer />
+            <Disclaimer marquee={marquee} />
           </QueryProvider>
         </ProgressProvider>
       </body>

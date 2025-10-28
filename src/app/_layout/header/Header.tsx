@@ -8,6 +8,10 @@ import SearchSvg from "@/components/svg/SearchSvg";
 import NormalLinks from "./NormalLinks";
 import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
 import MarqueeComponent from "./MarqueeComponent";
+import { Tbook } from "@/api/type";
+type Props = {
+  marquee: Tbook;
+};
 
 const headerData = [
   {
@@ -87,14 +91,14 @@ const headerData = [
       },
       {
         option: "Books",
-        link: "/resource-center/books/live-to-give",
+        link: "/resource-center/books",
       },
     ],
   },
   { id: "careers", name: "Careers", link: "/careers" },
   { id: "contact", name: "Contact", link: "/contact" },
 ];
-const Header = () => {
+const Header = ({ marquee }: Props) => {
   return (
     <div className=" z-[10000] fixed right-0 left-0 top-0 max-xl:bg-toRightPurpleToBlue xl:bg-white  ">
       <div className="container mx-auto flex justify-between items-center ~pt-[0.875rem]/[1rem] ~pb-[0.75rem]/[0.9rem] px-[1.25rem]">
@@ -142,7 +146,7 @@ const Header = () => {
           </Link>
         </div>
       </div>
-      <MarqueeComponent />
+      <MarqueeComponent marquee={marquee} />
     </div>
   );
 };

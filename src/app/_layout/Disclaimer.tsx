@@ -8,8 +8,19 @@ import DownTagSvg from "@/components/svg/DownTagSvg";
 import ModalSvg from "@/components/svg/ModalSvg";
 import CloseSvg from "@/components/svg/CloseSvg";
 import Image from "next/image";
-import love from "../../../public/images/love-to-give.png";
-const Disclaimer = () => {
+import { Tbook } from "@/api/type";
+import { StorageUrl } from "@/utils/BaseUrl";
+type Props = {
+  marquee: Tbook;
+};
+
+const Disclaimer = ({ marquee }: Props) => {
+  const modalText = marquee?.modalDescription
+    ?.replace(/<\/?p>/g, "")
+    ?.replace(/\r?\n|\r/g, "")
+    ?.trim()
+    .replaceAll("<em>", "<br/><color>")
+    .replaceAll("</em>", "</color><br/>");
   const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
     const hasAgreed = sessionStorage.getItem("disclaimerAgreed") === "true";
@@ -40,23 +51,21 @@ const Disclaimer = () => {
               className="overflow-y-auto flex md:flex-row flex-col-reverse justify-center gap-[1rem] items-center grow no-scrollbar ~p-[1.5rem]/[3.9375rem]"
             >
               <div className="md:w-[65%] shrink-0">
-                <WordStaggerAnimation
-                  text="AIP brings you <br>
-      Rashmi Bansal's <br>
+                {/* <WordStaggerAnimation
+                  text="AIP brings you
+      Rashmi Bansal's 
       latest book,<br>
        <color>'Live to Give' <br> 
       "
                   className=" relative tracking-[-1px] shrink-0 w-auto z-[1000] max-md:text-center ~text-[1.5rem]/h1 font-playFair ~leading-[2rem]/[3.1rem]  text-gray80"
-                />
+                /> */}
                 <WordStaggerAnimation
-                  text="with 16 inspiring stories 
-      of Wealth with Purpose
-      "
+                  text={modalText}
                   className=" relative tracking-[-1px] pt-2 shrink-0 w-auto z-[1000] font-playFair max-md:text-center ~text-[1rem]/h3 ~leading-[1.25rem]/[3.3rem]    text-gray80"
                 />
                 <Link
                   onClick={() => setIsOpen(false)}
-                  href={` /resource-center/books/live-to-give`}
+                  href={` /resource-center/books/${marquee.slug}`}
                   className="~pt-[1rem]/[2.8125rem] block md:w-fit"
                 >
                   <ButtonAnimation className=" z-30 max-md:w-full relative bg-darkPurple border border-darkPurple  hover:bg-transparent text-white hover:text-darkPurple rounded-full transition-all duration-500 ">
@@ -70,7 +79,12 @@ const Disclaimer = () => {
                 </Link>
               </div>
               <div className=" relative flex justify-center ~h-[11.3831253052rem]/[21.25rem] w-full z-10">
-                <Image src={love} alt="love" className="object-contain " />
+                <Image
+                  src={StorageUrl + marquee.modalImage}
+                  alt={marquee.title}
+                  fill
+                  className="object-contain "
+                />
               </div>
             </div>
 

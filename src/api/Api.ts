@@ -378,4 +378,22 @@ export const Api = {
       return null;
     }
   },
+  getBooks: async () => {
+    try {
+      const response = await axiosClient.get("books");
+      return response.data;
+    } catch (error) {
+      console.log(error);
+      return null;
+    }
+  },
+  getBookInner: async (slug: string) => {
+    try {
+      const response = await axiosClient.get(`books/${slug}`);
+      return response.data;
+    } catch (error) {
+      console.log(error);
+      return null;
+    }
+  },
 };

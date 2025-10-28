@@ -4,7 +4,6 @@ import { useMediaQuery } from "react-responsive";
 import ACard from "@/components/cards/aCards/ACard";
 import PCard from "@/components/cards/pCards/PCard";
 import RightSlickArrowSvg from "../svg/RightSlickArrowSvg";
-import LeftSlickArrowSvg from "../svg/LeftSlickArrowSvg";
 import { ButtonAnimation } from "../animations/ButtonAnimation";
 import cn from "@/utils/tailwind";
 import useClient from "@/hooks/useClient";
@@ -23,14 +22,14 @@ const TestimonialSlick = ({ slickArray }: Props) => {
   const isDesktop = useMediaQuery({ query: "(min-width: 768px)" });
   const itemsPerSlide = isDesktop ? 2 : 1;
   const arrayLength = slickArray.length;
-  const previous = () => {
-    if (change <= 0) {
-      const remainder = arrayLength % itemsPerSlide;
-      const lastIndex =
-        remainder === 0 ? arrayLength - itemsPerSlide : arrayLength - remainder;
-      setChange(lastIndex);
-    } else setChange(change - itemsPerSlide);
-  };
+  // const previous = () => {
+  //   if (change <= 0) {
+  //     const remainder = arrayLength % itemsPerSlide;
+  //     const lastIndex =
+  //       remainder === 0 ? arrayLength - itemsPerSlide : arrayLength - remainder;
+  //     setChange(lastIndex);
+  //   } else setChange(change - itemsPerSlide);
+  // };
   const next = () => {
     if (change >= arrayLength - itemsPerSlide) {
       setChange(0);

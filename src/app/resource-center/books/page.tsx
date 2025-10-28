@@ -5,29 +5,26 @@ export const dynamic = "force-dynamic";
 
 import { Metadata } from "next";
 import ResourceCard from "@/components/cards/ResourceCard";
+import { Api } from "@/api/Api";
+import { notFound } from "next/navigation";
+import { Tbook } from "@/api/type";
 
 export const metadata: Metadata = {
   alternates: {
     canonical: "/resource-center/books",
   },
 };
-const response = [
-  {
-    _id: "67d5f7471c738dff81025c94",
-    title: "Live to Give",
-    readingTime: "4 minutes",
-    author: "Rashmi Bansal",
-    description:
-      "Live to Give by Rashmi Bansal is an upcoming book that chronicles the journeys of philanthropists in India. Through a collection of inspiring stories, it explores the motivations, challenges, and impact of individuals who chose to dedicate their wealth and energy toward creating social change. Blending narrative storytelling with real-world insights, the book captures both the personal journeys of givers and the broader lessons on how philanthropy can shape communities and society at large.",
-    shortDescription:
-      "Live to Give by Rashmi Bansal is an upcoming book that chronicles the journeys of philanthropists in India. Through a collection of inspiring stories, it explores the motivations, challenges, and impact of individuals who chose to dedicate their wealth and energy toward creating social change. Blending narrative storytelling with real-world insights, the book captures both the personal journeys of givers and the broader lessons on how philanthropy can shape communities and society at large.",
-    image: "AIP/public/images/love-give.png",
-    slug: "live-to-give",
-    date: "2022-12-02 00:00:00",
-  },
-];
+
+const getAllBooksApi = async (): Promise<Tbook[]> => {
+  const response = await Api.getBooks();
+  return response.data;
+};
 
 const page = async () => {
+  const response = await getAllBooksApi();
+  if (!response) {
+    notFound();
+  }
   return (
     <div className="~pt-[5rem]/[10rem] overflow-x-hidden min-h-screen">
       <div className="container mx-auto relative ~px-5/[7.5rem] pb-[7.5rem]">
@@ -47,18 +44,24 @@ const page = async () => {
         </div>
 
         <div className=" grid md:grid-cols-2 lg:grid-cols-3 gap-[4.5rem]">
-          {response?.map((item, i) => (
-            <CardAnimation delay={0.1} key={i}>
-              <ResourceCard
-                linkKey={"books"}
-                slug={item?.slug}
-                key={i}
-                src={item?.image}
-                title={item?.title}
-                desc={item?.description}
-              />
-            </CardAnimation>
-          ))}
+          {response?.map((item, i) => {
+            const modalText = item?.description
+              ?.replace(/<\/?p>/g, "")
+              ?.replace(/\r?\n|\r/g, "")
+              ?.trim();
+            return (
+              <CardAnimation delay={0.1} key={i}>
+                <ResourceCard
+                  linkKey={"books"}
+                  slug={item?.slug}
+                  key={i}
+                  src={item?.image}
+                  title={item?.title}
+                  desc={modalText}
+                />
+              </CardAnimation>
+            );
+          })}
         </div>
       </div>
     </div>

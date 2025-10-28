@@ -404,7 +404,7 @@ const Footer = () => {
                   </ButtonAnimation>
                 </Link>
                 <Link
-                  href="/resource-center/books/live-to-give"
+                  href="/resource-center/books"
                   className=" text-h9Copy5 font-inter text-white/60"
                 >
                   <ButtonAnimation className="hover:underline underline-offset-2 transition-all duration-700">

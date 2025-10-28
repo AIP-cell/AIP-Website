@@ -1,11 +1,15 @@
 "use client";
+import { Tbook } from "@/api/type";
 import CircleArrow from "@/components/svg/CircleArrow";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 import Marquee from "react-fast-marquee";
+type Props = {
+  marquee: Tbook;
+};
 
-const MarqueeComponent = () => {
+const MarqueeComponent = ({ marquee }: Props) => {
   const pathname = usePathname();
 
   // show only on home page
@@ -15,11 +19,10 @@ const MarqueeComponent = () => {
       <div className=" text-black w-full ~text-h9Copy5/h9Copy4">
         <Marquee className=" relative z-40 ">
           <Link
-            href={"/resource-center/books/live-to-give"}
+            href={`/resource-center/books/${marquee.slug}`}
             className="mx-[0.75rem] hover:underline "
           >
-            AIP brings you Rashmi Bansal&apos;s latest book, &apos;Live to
-            Give&apos; with 16 inspiring stories of Wealth with Purpose
+            {marquee.marque}
           </Link>
           <CircleArrow className="size-[1.25rem]" />
         </Marquee>
