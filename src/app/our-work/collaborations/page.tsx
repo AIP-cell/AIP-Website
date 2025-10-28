@@ -14,6 +14,9 @@ import WordStaggerAnimation from "@/components/animations/WordStaggerAnimation";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
+  title: "Collaborations | Accelerate Indian Philanthropy (AIP)",
+  description:
+    "Collaborative philanthropy is a powerful catalyst for change. At AIP, we unite resources and expertise to create resilient, high-impact interventions and drive India’s transformative growth.",
   alternates: {
     canonical: "/our-work/collaborations",
   },

@@ -10,6 +10,9 @@ import { notFound } from "next/navigation";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
+  title: "Non-Profit Organizations | Accelerate Indian Philanthropy (AIP)",
+  description:
+    "India has over 30 lakh non-profit organizations, making it challenging for philanthropists to find credible and impactful partners. AIP bridges this gap by connecting philanthropists with trusted NPOs aligned to their strategic giving goals.",
   alternates: {
     canonical: "/our-work/npo",
   },

@@ -10,8 +10,11 @@ import { notFound } from "next/navigation";
 import { Tbook } from "@/api/type";
 
 export const metadata: Metadata = {
+  title: "Books | Accelerate Indian Philanthropy (AIP)",
+  description:
+    "Discover curated books and resources that inspire strategic giving and deepen your understanding of philanthropy in India. Explore AIP’s recommended reads on leadership, impact, and social change.",
   alternates: {
-    canonical: "/resource-center/books",
+    canonical: "resource-center/books",
   },
 };
 

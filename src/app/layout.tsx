@@ -11,6 +11,7 @@ import Disclaimer from "./_layout/Disclaimer";
 import { THomePageData } from "@/api/type";
 import { Api } from "@/api/Api";
 import { notFound } from "next/navigation";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 const inter = Inter({ subsets: ["latin"], variable: "--inter" });
 const playfairDisplay = localFont({
@@ -43,19 +44,23 @@ export default async function RootLayout({
     notFound();
   }
 
-  const marquee = response.book;
+  const marquee = response.marque;
+
+  const modal = response.modal;
   return (
     <html lang="en">
       <body
         className={`${inter.variable} ${playfairDisplay.variable} ${playfairDisplayItalic.variable} !overflow-y-auto bg-bgLightPeach font-inter no-scrollbar overflow-x-hidden  `}
       >
+        <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID || ""} />
+
         <ProgressProvider>
           <QueryProvider>
             <Toaster position="top-right" containerClassName="mt-4" />
             <Header marquee={marquee} />
             {children}
             <Footer />
-            <Disclaimer marquee={marquee} />
+            <Disclaimer marquee={modal} />
           </QueryProvider>
         </ProgressProvider>
       </body>

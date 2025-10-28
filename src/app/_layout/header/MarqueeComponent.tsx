@@ -18,10 +18,7 @@ const MarqueeComponent = ({ marquee }: Props) => {
     <div className="~py-[0.5rem]/[0.75rem] bg-gradient-to-r flex w-screen from-[#F2CE6B] to-[#FF8A9D]">
       <div className=" text-black w-full ~text-h9Copy5/h9Copy4">
         <Marquee className=" relative z-40 ">
-          <Link
-            href={`/resource-center/books/${marquee.slug}`}
-            className="mx-[0.75rem] hover:underline "
-          >
+          <Link href={marquee.link} className="mx-[0.75rem] hover:underline ">
             {marquee.marque}
           </Link>
           <CircleArrow className="size-[1.25rem]" />

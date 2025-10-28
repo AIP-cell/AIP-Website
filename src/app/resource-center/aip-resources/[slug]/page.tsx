@@ -203,6 +203,7 @@ const aipResourcesFilter = [
 ];
 
 export const dynamic = "force-dynamic";
+
 const getAipResourcesData = async (
   slug: string,
   { domain, c_type, date }: { domain: string; c_type: string; date: string }

@@ -7,8 +7,26 @@ import TestimonialsProjectProgram from "./_components/TestimonialsProjectProgram
 import { Api } from "@/api/Api";
 import { TOneProjectProgramsPage } from "@/api/type";
 import { notFound } from "next/navigation";
+import { Metadata } from "next";
 
 export const dynamic = "force-dynamic";
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const response = await Api.getOneProjectsPrograms(slug);
+  const seo = response?.data.projectAndProgram ?? {};
+
+  return {
+    ...seo,
+    alternates: {
+      canonical: `/our-work/projects-and-programs/${slug}`,
+    },
+  };
+}
+
 const getOneProjectsProgramsApi = async (
   slug: string
 ): Promise<TOneProjectProgramsPage> => {

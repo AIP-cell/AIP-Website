@@ -14,6 +14,9 @@ import FadeInAnimation from "@/components/animations/FadeInAnimation";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
+  title: "Projects and Programs | Accelerate Indian Philanthropy (AIP)",
+  description:
+    "Through our projects and programs, AIP inspires collaboration and shared learning among philanthropists—exchanging insights, experiences, and ideas across sectors to enable effective and impactful giving.",
   alternates: {
     canonical: "/our-work/projects-and-programs",
   },

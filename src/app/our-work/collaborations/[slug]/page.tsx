@@ -1,9 +1,26 @@
 import InnerCollaborations from "./_components/InnerCollaborations";
 import { Api } from "@/api/Api";
 import { TOneCollaborationPageData } from "@/api/type";
+import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 export const dynamic = "force-dynamic";
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const response = await Api.getOneCollaborations(slug);
+  const seo = response?.data.collaboration ?? {};
+  return {
+    ...seo,
+    alternates: {
+      canonical: `/our-work/collaborations/${slug}`,
+    },
+  };
+}
+
 const getOneCollaborationsApi = async (
   slug: string
 ): Promise<TOneCollaborationPageData> => {

@@ -15,6 +15,9 @@ import WordStaggerAnimation from "@/components/animations/WordStaggerAnimation";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
+  title: "Giving Roadmap | AIP’s Approach to Purposeful Philanthropy",
+  description:
+    "At AIP, we believe in the transformative power of philanthropy. We help philanthropists channel their drive and vision to create lasting impact through a tailored roadmap that shapes a meaningful legacy of giving.",
   alternates: {
     canonical: "/about/giving-roadmap",
   },

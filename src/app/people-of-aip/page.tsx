@@ -6,8 +6,11 @@ import Directors from "./_components/Directors";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
+  title: "People of AIP | Board of Directors and Team",
+  description:
+    "Meet the people behind AIP — our Board of Directors and dedicated team. United by shared purpose and diverse expertise, they guide AIP’s mission, uphold its values, and drive meaningful change in the philanthropic ecosystem.",
   alternates: {
-    canonical: "/people-of-aip",
+    canonical: "/about/people-of-aip",
   },
 };
 

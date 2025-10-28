@@ -11,6 +11,10 @@ import WordStaggerAnimation from "@/components/animations/WordStaggerAnimation";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
+  title:
+    "Financial Reports & Certificates | AIP Transparency and Accountability",
+  description:
+    "Explore AIP’s audited financial reports, certificates, and compliance documents. We are committed to maintaining the highest standards of transparency and accountability in our philanthropic work.",
   alternates: {
     canonical: "/about/financials",
   },

@@ -11,11 +11,13 @@ import { notFound } from "next/navigation";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
+  title: "Experts | Accelerate Indian Philanthropy (AIP)",
+  description:
+    "At AIP, informed philanthropy drives meaningful change. We collaborate with subject-matter experts who provide insights, host workshops, and guide strategic giving aligned with India's development priorities.",
   alternates: {
     canonical: "/our-work/experts",
   },
 };
-
 export const dynamic = "force-dynamic";
 const getOurWorkExpertsApi = async (): Promise<TOurWorkExpertsData> => {
   const response = await Api.getOurWorkExperts();

@@ -11,10 +11,27 @@ import { Api } from "@/api/Api";
 import { notFound } from "next/navigation";
 import { StorageUrl } from "@/utils/BaseUrl";
 import { Tbook } from "@/api/type";
+import { Metadata } from "next";
 // import Gallery from "./_components/Gallery";
 // import Video from "./_components/Video";
 
 export const dynamic = "force-dynamic";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const response = await Api.getBookInner(slug);
+  const seo = response?.data ?? {};
+  return {
+    ...seo,
+    alternates: {
+      canonical: `/resource-center/books/${slug}`,
+    },
+  };
+}
 
 const getBookInner = async (slug: string): Promise<Tbook> => {
   const response = await Api.getBookInner(slug);
@@ -24,7 +41,6 @@ const getBookInner = async (slug: string): Promise<Tbook> => {
 const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const param = await params;
   const response = await getBookInner(param.slug);
-  console.log(response);
   if (!response) {
     notFound();
   }

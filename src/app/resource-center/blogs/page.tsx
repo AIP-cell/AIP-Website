@@ -11,8 +11,11 @@ export const dynamic = "force-dynamic";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
+  title: "Blogs | Accelerate Indian Philanthropy (AIP)",
+  description:
+    "Explore insights, ideas, and stories from Accelerate Indian Philanthropy (AIP). Our blogs highlight lessons in strategic giving, sectoral trends, and the journeys shaping India’s philanthropic landscape.",
   alternates: {
-    canonical: "/resource-center/blogs",
+    canonical: "resource-center/blogs",
   },
 };
 
@@ -23,7 +26,6 @@ const getAllBlogApi = async (): Promise<TAipResourcesCategory[]> => {
 
 const page = async () => {
   const response = await getAllBlogApi();
-  console.log(response);
   if (!response) {
     notFound();
   }

@@ -11,6 +11,9 @@ import { TCareersPage } from "@/api/type";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
+  title: "Careers | Accelerate Indian Philanthropy (AIP)",
+  description:
+    "Inspiring. Supportive. Inclusive. Innovative. Growing. Join Accelerate Indian Philanthropy (AIP) and be part of a dynamic team driving transformative change through strategic giving and collaboration.",
   alternates: {
     canonical: "/careers",
   },

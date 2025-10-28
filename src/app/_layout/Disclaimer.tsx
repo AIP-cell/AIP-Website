@@ -15,7 +15,7 @@ type Props = {
 };
 
 const Disclaimer = ({ marquee }: Props) => {
-  const modalText = marquee?.modalDescription
+  const modalText = marquee?.description
     ?.replace(/<\/?p>/g, "")
     ?.replace(/\r?\n|\r/g, "")
     ?.trim()
@@ -61,11 +61,11 @@ const Disclaimer = ({ marquee }: Props) => {
                 /> */}
                 <WordStaggerAnimation
                   text={modalText}
-                  className=" relative tracking-[-1px] pt-2 shrink-0 w-auto z-[1000] font-playFair max-md:text-center ~text-[1rem]/h3 ~leading-[1.25rem]/[3.3rem]    text-gray80"
+                  className=" relative max-w-[17ch] tracking-[-1px] pt-2 shrink-0 w-auto z-[1000] font-playFair max-md:text-center ~text-[1rem]/h3 ~leading-[1.25rem]/[3.3rem]    text-gray80"
                 />
                 <Link
                   onClick={() => setIsOpen(false)}
-                  href={` /resource-center/books/${marquee.slug}`}
+                  href={marquee.link}
                   className="~pt-[1rem]/[2.8125rem] block md:w-fit"
                 >
                   <ButtonAnimation className=" z-30 max-md:w-full relative bg-darkPurple border border-darkPurple  hover:bg-transparent text-white hover:text-darkPurple rounded-full transition-all duration-500 ">

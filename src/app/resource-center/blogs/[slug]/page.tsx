@@ -14,8 +14,25 @@ import dayjs from "dayjs";
 import { TInnerBlog } from "@/api/type";
 import Link from "next/link";
 import Tags from "./_components/Tags";
+import { Metadata } from "next";
 
 export const dynamic = "force-dynamic";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const response = await Api.getOneBlog(slug);
+  const seo = response?.data ?? {};
+  return {
+    ...seo,
+    alternates: {
+      canonical: `/resource-center/blogs/${slug}`,
+    },
+  };
+}
 
 const getOneBlogApi = async (slug: string): Promise<TInnerBlog> => {
   const response = await Api.getOneBlog(slug);
@@ -28,7 +45,7 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
     notFound();
   }
   const dateFormat = dayjs(response.date).format("D MMMM");
-  const UpdateDateFormat = dayjs(response.updatedAt).format("D MMMM");
+  // const UpdateDateFormat = dayjs(response.updatedAt).format("D MMMM");
   const processedDescription = response?.description
     ?.replace(/style="[^"]*"/g, "")
     .replace(
@@ -63,9 +80,9 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
             <p className="leading-[1.4rem] text-midGray pt-[0.5rem] ">
               {dateFormat} | {response.readingTime}
             </p>
-            <p className="leading-[1.4rem] text-midGray pt-[0.5rem] ">
+            {/* <p className="leading-[1.4rem] text-midGray pt-[0.5rem] ">
               {UpdateDateFormat}
-            </p>
+            </p> */}
           </div>
           <div className="w-full h-[1.5px] bg-gray10 ~my-[2rem]/[2.5rem] "></div>
           <div className="w-full h-[25rem] relative overflow-hidden">

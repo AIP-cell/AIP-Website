@@ -9,6 +9,9 @@ import CoreFoundersAndFounders from "./_components/CoreFoundersAndFounders";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
+  title: "AIP Founders Network | A Movement by and for Philanthropists",
+  description:
+    "AIP is by and for philanthropists — to inspire, influence, and inform strategic giving. Led by visionary founders including Ashish Dhawan, Rohini Nilekani, Amit Chandra, and Vishal Tulsyan, AIP brings together over 200 philanthropists driving India’s transformation.",
   alternates: {
     canonical: "/about/aip-founders-network",
   },

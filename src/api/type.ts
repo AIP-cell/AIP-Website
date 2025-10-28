@@ -4,7 +4,8 @@ export type THomePageData = {
   team: THomePageTeam[];
   count: THomePageCount;
   newsAndUpdates: THomePageNews;
-  book: Tbook;
+  marque: Tbook;
+  modal: Tbook;
 };
 export type THomePageEvent = {
   _id: string;
@@ -18,6 +19,7 @@ export type Tbook = {
   _id: string;
   title: string;
   author: string;
+  link: string;
   description: string;
   image: string;
   modalDescription: string;

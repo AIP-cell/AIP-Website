@@ -7,6 +7,9 @@ import PeopleOfAipTeamMembers from "@/app/people-of-aip/[slug]/_components/Peopl
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
+  title: "Advisory Board | AIP’s Strategic Guidance and Vision",
+  description:
+    "AIP’s Advisory Board comprises leading experts and distinguished philanthropists who guide our strategy, uphold our values, and ensure we stay true to our mission of inspiring meaningful philanthropy in India.",
   alternates: {
     canonical: "/about/advisory-board",
   },

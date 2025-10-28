@@ -10,6 +10,9 @@ import PeopleWeWorkWith from "./_components/PeopleWeWorkWith";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
+  title: "AIP Impact | Strategic Philanthropy for India's Transformation",
+  description:
+    "India has made remarkable progress, yet more needs to be done. AIP believes strategic personal philanthropy can amplify impact and accelerate India’s transformation.",
   alternates: {
     canonical: "/about/aip-impact",
   },

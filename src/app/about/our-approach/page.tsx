@@ -9,6 +9,9 @@ import FourPillars from "./_components/FourPillars";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
+  title: "The AIP Approach | Channeling Philanthropy with Purpose",
+  description:
+    "Personal philanthropy is rarely linear — it evolves through exploration, conviction, and joy. AIP helps channel this flow, guiding wealth creators to make meaningful and fulfilling contributions toward causes that create lasting impact.",
   alternates: {
     canonical: "/about/our-approach",
   },

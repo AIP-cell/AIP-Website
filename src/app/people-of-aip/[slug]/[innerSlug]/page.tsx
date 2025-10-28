@@ -20,6 +20,7 @@ const getPeopleOfAipGetOneApi = async (
   slug: string
 ): Promise<TPeopleOfAipGetOne> => {
   const response = await Api.getPeopleOfAipGetOne(slug);
+
   return response?.data;
 };
 const InnerTeamPage = async ({
