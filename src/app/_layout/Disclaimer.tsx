@@ -80,7 +80,7 @@ const Disclaimer = ({ marquee }: Props) => {
               </div>
               <div className=" relative flex justify-center ~h-[11.3831253052rem]/[21.25rem] w-full z-10">
                 <Image
-                  src={StorageUrl + marquee.modalImage}
+                  src={StorageUrl + marquee.image}
                   alt={marquee.title}
                   fill
                   className="object-contain "
