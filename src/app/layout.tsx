@@ -11,8 +11,7 @@ import Disclaimer from "./_layout/Disclaimer";
 import { THomePageData } from "@/api/type";
 import { Api } from "@/api/Api";
 import { notFound } from "next/navigation";
-import { GoogleTagManager } from "@next/third-parties/google";
-
+import { GoogleAnalytics } from "@next/third-parties/google";
 const inter = Inter({ subsets: ["latin"], variable: "--inter" });
 const playfairDisplay = localFont({
   src: "./../fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf",
@@ -52,7 +51,7 @@ export default async function RootLayout({
       <body
         className={`${inter.variable} ${playfairDisplay.variable} ${playfairDisplayItalic.variable} !overflow-y-auto bg-bgLightPeach font-inter no-scrollbar overflow-x-hidden  `}
       >
-        <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID || ""} />
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GTM_ID || ""} />
 
         <ProgressProvider>
           <QueryProvider>
