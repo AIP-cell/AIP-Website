@@ -51,7 +51,7 @@ const WordStaggerAnimation = ({
     },
   };
   return (
-    <motion.h6
+    <motion.span
       variants={container}
       initial="hidden"
       whileInView="visible"
@@ -115,7 +115,7 @@ const WordStaggerAnimation = ({
           </span>
         );
       })}
-    </motion.h6>
+    </motion.span>
   );
 };
 

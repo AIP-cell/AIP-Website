@@ -29,18 +29,22 @@ const HeroSection = () => {
           </FadeInAnimation>
         </div>
         <div className="flex flex-col xl:flex-row ~gap-[3.25rem]/[1rem] items-center  ~pt-[2.5rem]/[5.2rem] ~pl-[1rem]/[7.8rem] ~pr-[1rem]/[5rem] relative">
-          <WordStaggerAnimation
-            text="Accelerate Indian 
-Philanthropy is a <br>peer network set up <br> <color>by philanthropists,<br> 
-for philanthropists </color> <br> to support their giving efforts."
-            className="hidden md:block relative tracking-[-1px] shrink-0 w-auto xl:w-[38.125rem] z-[1000] ~text-h4/h1 font-playFair ~leading-[2.6rem]/[3.7rem] px-[0.6rem] md:px-0  text-gray80"
-          />
-          <WordStaggerAnimation
-            text="Accelerate Indian 
-Philanthropy is a peer network set up <color>by philanthropists,
-for philanthropists </color> to support their giving efforts."
-            className="block md:hidden relative tracking-[-1px] shrink-0 w-auto xl:w-[38.125rem] z-[1000] ~text-h4/h1 font-playFair ~leading-[2.6rem]/[3.7rem] px-[0.6rem] md:px-0  text-gray80"
-          />
+          <h1>
+            <WordStaggerAnimation
+              text="Accelerate Indian 
+  Philanthropy is a <br>peer network set up <br> <color>by philanthropists,<br> 
+  for philanthropists </color> <br> to support their giving efforts."
+              className="hidden md:block relative tracking-[-1px] shrink-0 w-auto xl:w-[38.125rem] z-[1000] ~text-h4/h1 font-playFair ~leading-[2.6rem]/[3.7rem] px-[0.6rem] md:px-0  text-gray80"
+            />
+          </h1>
+          <h1>
+            <WordStaggerAnimation
+              text="Accelerate Indian 
+  Philanthropy is a peer network set up <color>by philanthropists,
+  for philanthropists </color> to support their giving efforts."
+              className="block md:hidden relative tracking-[-1px] shrink-0 w-auto xl:w-[38.125rem] z-[1000] ~text-h4/h1 font-playFair ~leading-[2.6rem]/[3.7rem] px-[0.6rem] md:px-0  text-gray80"
+            />
+          </h1>
           <FadeInAnimation
             delay={0.1}
             y1={20}
