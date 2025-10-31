@@ -91,7 +91,7 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
                 className=" ~text-h9Copy5/h9Copy4 lg:max-w-[50ch] ~pt-[0.75rem]/[1rem] ~leading-[1.225rem]/[1.4rem] text-midGray/70 "
               ></div>
               <div className="flex flex-wrap  ~gap-[0.5rem]/[1rem]">
-                {response.buttons.map((item, i) => (
+                {response?.buttons?.map((item, i) => (
                   <Link key={i} href={item.link} target="_blank">
                     <ButtonAnimation className=" z-30 bg-darkPurple ~mt-[1.25rem]/[2.5rem] border border-darkPurple  hover:bg-transparent text-white hover:text-darkPurple rounded-full transition-all duration-500 ">
                       <p
