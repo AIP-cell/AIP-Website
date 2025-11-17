@@ -33,7 +33,9 @@ const InnerTeamPage = async ({
   if (!response) {
     notFound();
   }
+
   const team = response?.teams;
+
   // let textTwoBreadCrump;
   // if (urlParams.slug === "team-aip") {
   //   textTwoBreadCrump = "Team AIP";
@@ -159,7 +161,7 @@ const InnerTeamPage = async ({
                 />
               </div>
             )} */}
-            {team.videos && <Video videos={team.videos} />}
+            {team.videos?.length > 0 && <Video videos={team.videos} />}
           </div>
         </div>
       </div>

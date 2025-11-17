@@ -166,7 +166,7 @@ const Video = () => {
                 )}
 
                 <h2 className="text-black ~text-msh2/sh2 font-bold ~leading-[1.219rem]/[1.8rem] ~pt-[0.5rem]/[1.25rem]">
-                  {videos[activeVideoIndex].title}
+                  {videos[activeVideoIndex]?.title}
                 </h2>
                 {/* <h2 className="text-greylight ~text-mc1/c2  ~leading-[1.056rem]/[1.463rem] ~pt-[0.25rem]/[0.5rem]">
                   {videos[activeVideoIndex].affiliation}
