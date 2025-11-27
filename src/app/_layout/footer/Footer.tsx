@@ -121,7 +121,7 @@ const Footer = () => {
                   Philanthropy&quot;, a section 8 company under Indian Companies
                   Act 2013.
                   <br /> It has valid registration under section 80G and 12A of
-                  Income-tax Act,196. AIP is authorised to receive CSR funding
+                  Income-tax Act,1961. AIP is authorised to receive CSR funding
                   and funding under FCRA.
                 </p>
               </div>
