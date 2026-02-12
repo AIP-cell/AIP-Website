@@ -1,0 +1,15 @@
+meta {
+  name: Get careers
+  type: http
+  seq: 24
+}
+
+get {
+  url: http://localhost:4800/api/frontend/careers
+  body: json
+  auth: none
+}
+
+headers {
+  ~Authorization: Token 13b045bdde7c72db3162225b04f49c3782b25a44
+}

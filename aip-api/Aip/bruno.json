@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Aip",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

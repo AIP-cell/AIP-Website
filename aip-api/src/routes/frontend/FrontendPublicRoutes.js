@@ -1,0 +1,51 @@
+import express from 'express';
+
+import homePageRouter from './main-routes/HomePageRouter.js';
+import aipImpactRouter from './main-routes/AipImpactRouter.js';
+import aipTeamRouter from './main-routes/AipTeamRouter.js';
+import faqRouter from './main-routes/FaqRouter.js';
+import aipFounderRouter from './main-routes/AipFounderRouter.js';
+import philanthropistNetworkRouter from './main-routes/PhilanthropistNetworkRouter.js';
+import npoRouter from './main-routes/NpoRouter.js';
+import aipResourceRouter from './main-routes/AipResourceRouter.js';
+import curatedResourceRouter from './main-routes/AipCuratedRouter.js';
+import projectAndProgramRouter from './main-routes/ProjectAndProgramRouter.js';
+import collaborationRouter from './main-routes/CollaborationRouter.js';
+import expertRouter from './main-routes/ExpertRouter.js';
+import searchRouter from './main-routes/SearchRouter.js';
+import financialReportRouter from './main-routes/FinancialReportRouter.js';
+import careerRouter from './main-routes/CarreerRouter.js';
+import contactFormRouter from './main-routes/ContactFormRouter.js';
+import getInTouchRouter from './main-routes/GetInTouchRouter.js';
+import aipJourneyRouter from './main-routes/AipJourneryRouter.js';
+import givingRoadMapRouter from './main-routes/GivingRoadmapRouter.js';
+import blogRouter from './main-routes/BlogRouter.js';
+import galleryRouter from './main-routes/GalleryRouter.js';
+import bookRouter from './main-routes/BookRouter.js';
+
+const frontendPublicRoutes = express.Router();
+
+frontendPublicRoutes.use('/home-page', homePageRouter);
+frontendPublicRoutes.use('/aip-impact', aipImpactRouter);
+frontendPublicRoutes.use('/financial-reports', financialReportRouter);
+frontendPublicRoutes.use('/philanthropist-networks', philanthropistNetworkRouter);
+frontendPublicRoutes.use('/aip-team', aipTeamRouter);
+frontendPublicRoutes.use('/founder-networks', aipFounderRouter);
+frontendPublicRoutes.use('/faqs', faqRouter);
+frontendPublicRoutes.use('/npos', npoRouter);
+frontendPublicRoutes.use('/aip-resources', aipResourceRouter);
+frontendPublicRoutes.use('/curated-resources', curatedResourceRouter);
+frontendPublicRoutes.use('/projects-programs', projectAndProgramRouter);
+frontendPublicRoutes.use('/collaborations', collaborationRouter);
+frontendPublicRoutes.use('/experts', expertRouter);
+frontendPublicRoutes.use('/careers', careerRouter);
+frontendPublicRoutes.use('/search', searchRouter);
+frontendPublicRoutes.use('/contact-form', contactFormRouter);
+frontendPublicRoutes.use('/get-in-touch', getInTouchRouter);
+frontendPublicRoutes.use('/aip-journey', aipJourneyRouter);
+frontendPublicRoutes.use('/giving-roadmap', givingRoadMapRouter);
+frontendPublicRoutes.use('/blogs', blogRouter);
+frontendPublicRoutes.use('/galleries', galleryRouter);
+frontendPublicRoutes.use('/books', bookRouter);
+
+export default frontendPublicRoutes;

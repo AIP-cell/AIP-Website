@@ -1,0 +1,20 @@
+meta {
+  name: Create contact form
+  type: http
+  seq: 23
+}
+
+post {
+  url: http://localhost:4800/api/frontend/contact-form
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name":"devana",
+    "email":"devanaj2000@gmail.com",
+    "message":"haii",
+    "type":"heyy"
+  }
+}

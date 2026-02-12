@@ -1,0 +1,15 @@
+meta {
+  name: Home Page
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://localhost:4800/api/frontend/financial-reports/download?year=2023-12-31T18:30:00.000Z
+  body: none
+  auth: none
+}
+
+params:query {
+  year: 2023-12-31T18:30:00.000Z
+}
