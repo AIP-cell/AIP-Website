@@ -5,6 +5,7 @@ import Logo from "@public/svg/footer/footerLogo.svg";
 import X from "@public/svg/footer/x.svg";
 import In from "@public/svg/footer/in.svg";
 import Youtube from "@public/svg/footer/youtube.svg";
+import Instagram from "@public/svg/footer/instagram.svg";
 import Wave from "react-wavify";
 import Link from "next/link";
 import { ButtonAnimation } from "@/components/animations/ButtonAnimation";
@@ -205,6 +206,18 @@ const Footer = () => {
                 >
                   <Image
                     src={Youtube}
+                    alt=""
+                    className="hover:scale-110 transition-all duration-300 ease-out"
+                  />
+                </Link>
+                <Link
+                  href="https://www.instagram.com/accelerateindianphilanthropy/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative size-[2.5rem]"
+                >
+                  <Image
+                    src={Instagram}
                     alt=""
                     className="hover:scale-110 transition-all duration-300 ease-out"
                   />

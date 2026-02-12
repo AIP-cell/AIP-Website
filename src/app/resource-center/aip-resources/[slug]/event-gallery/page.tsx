@@ -46,12 +46,15 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
           <p className="font-inter  font-semibold uppercase ~text-h9Copy5/h9Copy4 ~leading-[1.138rem]/[1.3rem] text-purple40">
             {response?.title}
           </p>
-          <p className="~leading-[2.113rem]/[2.6rem] font-playFair ~text-h4a/h4 text-gray80 pt-5 ~pb-0/[5rem] md:tracking-[-0.02rem]">
-            {response?.description}
-          </p>
+          {/* REORDERED: Videos moved to top, before description */}
           {galleryVideos && galleryVideos?.length != 0 && (
             <GalleryVideos galleryVideos={galleryVideos} />
           )}
+          {/* Description now appears between videos and images */}
+          <p className="~leading-[2.113rem]/[2.6rem] font-playFair ~text-h4a/h4 text-gray80 pt-5 ~pb-0/[5rem] md:tracking-[-0.02rem]">
+            {response?.description}
+          </p>
+          {/* Images appear last */}
           {galleryImages && galleryImages?.length != 0 && (
             <GalleryImages galleryImages={galleryImages} />
           )}

@@ -23,6 +23,22 @@ const GalleryVideo = ({
   link,
 }: Props) => {
   const format = dayjs(date).format("D MMMM YYYY");
+
+  // Convert YouTube embed URL to watch URL for ReactPlayer light mode
+  const getYouTubeUrl = (url?: string) => {
+    if (!url) return url;
+
+    // If it's a YouTube embed URL, convert to watch URL for better thumbnail support
+    if (url.includes('youtube.com/embed/')) {
+      const videoId = url.split('/embed/')[1]?.split('?')[0];
+      if (videoId) {
+        return `https://www.youtube.com/watch?v=${videoId}`;
+      }
+    }
+
+    return url;
+  };
+
   return (
     <div className="w-full">
       <div className="relative shrink-0 w-full ~h-[14.3rem]/[20.698rem] rounded-xl overflow-hidden flex items-center justify-center">
@@ -30,7 +46,7 @@ const GalleryVideo = ({
           <ReactPlayer
             className="z-10 border-2 absolute inset-0 !w-full !h-full flex justify-center items-center"
             url={StorageUrl + video}
-            light="/images/upcoming.png"
+            light={true}
             playing
             playIcon={
               <ButtonAnimation>
@@ -46,8 +62,10 @@ const GalleryVideo = ({
         ) : (
           <ReactPlayer
             className="z-10 border-2 absolute inset-0 !w-full !h-full flex justify-center items-center"
-            url={StorageUrl + link}
-            light="/images/upcoming.png"
+            // OLD: url={StorageUrl + link} - This was adding storage URL to YouTube links
+            // FIXED: Convert YouTube embed URLs to watch URLs for proper thumbnail display
+            url={getYouTubeUrl(link)}
+            light={true}
             playing
             playIcon={
               <ButtonAnimation>
