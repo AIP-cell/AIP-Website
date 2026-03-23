@@ -161,13 +161,23 @@ export const EditTeamAipPage = (values: any) => {
       image: values.values.image,
       tags: values.values.searchKeywords,
       organisation: values.values.organisation,
-      videos: values?.values.videos?.map((video: any) => ({
-        title: video.title,
-        link: video?.link,
-        linkOrVideo: video?.linkOrVideo,
-        video: video.video,
-        image: video.image,
-      })),
+      videos: values?.values.videos?.length > 0
+        ? values.values.videos.map((video: any) => ({
+            title: video.title,
+            link: video?.link,
+            linkOrVideo: video?.linkOrVideo,
+            video: video.video,
+            image: video.image,
+          }))
+        : values?.values.videoLink
+        ? [{
+            title: "",
+            linkOrVideo: "link",
+            link: values.values.videoLink,
+            video: null,
+            image: null,
+          }]
+        : [],
       links: values.values.links,
       coreFounder: values.values.coreFounder,
       boardOfDirectors: values.values.boardOfDirectors,

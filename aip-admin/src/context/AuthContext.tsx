@@ -127,7 +127,7 @@ const AuthProvider = ({ children }: Props) => {
         );
         Cookies.set("userData", response.data.userData);
 
-        router.push("/admin/home/count/add");
+        router.push("/admin/home/count");
       })
 
       .catch((err: any) => {

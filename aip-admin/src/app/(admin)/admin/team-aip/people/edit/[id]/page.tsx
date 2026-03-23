@@ -1,12 +1,11 @@
 "use client";
 
-import EditFinancialYearPage from "@/app/(admin)/_shared/components/financial-year/EditPage";
-import EditTeamAipPage from "@/app/(admin)/_shared/components/team-aip/EditPage";
 import AipTeamApi from "@/axios/AipTeamApi";
-import YearApi from "@/axios/YearApi";
 import { reqAuthHeader } from "@/utils/reqAuthHeader";
 import { useQuery } from "@tanstack/react-query";
 import { ClipLoader } from "react-spinners";
+import EditTeamAipPage from "@/app/(admin)/_shared/components/team-aip/EditPage";
+
 export const dynamic = "force-dynamic";
 
 const defaultValues = async (id: string) => {
